@@ -5,8 +5,8 @@
     "counts": {
       "persons": 31,
       "orgs": 27,
-      "edges": 79,
-      "statements": 75,
+      "edges": 80,
+      "statements": 77,
       "photos": 25,
       "logos": 19,
       "videos": 14,
@@ -476,6 +476,14 @@
           "date": "2022-02-14",
           "medium": "Cité par franceinfo (à propos du « grand remplacement »)",
           "url": "https://www.franceinfo.fr/politique/valerie-pecresse/presidentielle-2022-valerie-pecresse-radicalise-son-discours_4961262.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "des hordes de barbares maghrébins et africains qui rentrent dans les villes",
+          "date": "2026-10-18",
+          "medium": "LCI, au lendemain de la journée de mobilisation du 17 octobre 2026, cité par Le HuffPost avec AFP ; propos signalés au parquet par l'Arcom (annonce du 03/11/2026), aucune décision de justice à ce stade",
+          "url": "https://www.huffingtonpost.fr/france/article/l-arcom-a-directement-saisi-la-justice-pour-ces-sorties-d-eric-zemmour-apres-le-17-octobre_351273.html",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
         }
@@ -1874,6 +1882,14 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20251006121119/https://www.franceinfo.fr/economie/medias/c8-et-nrj12-en-voie-de-perdre-leur-frequence-tnt-cinq-questions-sur-la-decision-de-l-arcom_6684051.html",
           "archived": "2025-10-06"
+        },
+        {
+          "quote": "En tant qu'autorité publique, nous pouvons être conduits à signaler aux procureurs de la République des propos lorsqu'ils nous paraissent être attentatoires par exemple aux lois en matière d'appel à la discrimination. Cela a été fait par les services de l'Arcom la semaine dernière au sujet de propos tenus sur différentes antennes",
+          "date": "2026-11-03",
+          "medium": "Martin Ajdari, président de l'Arcom, sur France Inter (L'invité du 13/14), cité par Le HuffPost avec AFP ; signalement au parquet visant des propos d'Éric Zemmour tenus sur LCI, BFMTV et CNews après la journée du 17 octobre 2026 ; à propos d'une telle saisine, M. Ajdari a déclaré : « ce n'est pas inédit mais c'est relativement rare »",
+          "url": "https://www.huffingtonpost.fr/france/article/l-arcom-a-directement-saisi-la-justice-pour-ces-sorties-d-eric-zemmour-apres-le-17-octobre_351273.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -2768,6 +2784,14 @@
       "section": "france",
       "archive_url": "https://web.archive.org/web/20251228193526/https://www.conseil-constitutionnel.fr/actualites/communique/decision-n-2023-863-dc-du-25-janvier-2024-communique-de-presse",
       "archived": "2025-12-28"
+    },
+    {
+      "source": "arcom",
+      "target": "eric-zemmour",
+      "relation": "signalement au parquet de propos tenus après la journée du 17 octobre 2026 sur LCI, BFMTV et CNews (annoncé le 03/11/2026)",
+      "url": "https://www.huffingtonpost.fr/france/article/l-arcom-a-directement-saisi-la-justice-pour-ces-sorties-d-eric-zemmour-apres-le-17-octobre_351273.html",
+      "date": "2026-11-03",
+      "section": "france"
     }
   ]
 }
