@@ -4,13 +4,13 @@
     "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-03 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : fichiers Wikimedia Commons sous licence libre, avec auteur, licence et lien ; logos reproduits à seule fin d'identification. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
       "persons": 31,
-      "orgs": 27,
+      "orgs": 28,
       "edges": 83,
-      "statements": 80,
+      "statements": 83,
       "photos": 25,
       "logos": 19,
       "videos": 14,
-      "france_nodes": 29
+      "france_nodes": 30
     },
     "category_order": [
       "Responsables politiques",
@@ -2033,6 +2033,44 @@
       "role": "Événement législatif",
       "description": "Loi « pour contrôler l'immigration, améliorer l'intégration ». Texte adopté par le Parlement le 19 décembre 2023 après accord en commission mixte paritaire, avec le vote des députés RN ; partiellement censuré par le Conseil constitutionnel le 25 janvier 2024.",
       "statements": [],
+      "sections": [
+        "france"
+      ],
+      "category": "Événements",
+      "subcategory": "Événements"
+    },
+    {
+      "id": "proces-nantes-menaces-2026",
+      "name": "Condamnation pour menaces de mort racistes sur Facebook, Nantes (novembre 2026)",
+      "type": "org",
+      "role": "Événement judiciaire",
+      "description": "Le lundi 2 novembre 2026 (audience tenue vers minuit selon Ouest-France ; France 3 date le jugement du 3 novembre), le tribunal correctionnel de Nantes, en comparution immédiate, a condamné un technicien de maintenance de 45 ans habitant Legé (Loire-Atlantique), interpellé après un signalement sur la plateforme PHAROS le 30 octobre 2026, à six mois d'emprisonnement avec sursis probatoire pour des menaces de mort à caractère raciste publiées sur Facebook visant des musulmans et Emmanuel Macron. Obligations : soins pendant deux ans, stage de citoyenneté ; interdiction de détenir une arme pendant cinq ans. Son avocate a présenté le compte Facebook comme « un exutoire ». Personne privée, non nommée ici. Sources : France 3 Pays de la Loire (3 novembre 2026) ; également rapporté par Le Parisien et Ouest-France (ce dernier indique un âge de 44 ans).",
+      "statements": [
+        {
+          "quote": "Cramer toute cette merde de musulmans [...] comme Hitler l'a fait pour les Juifs.",
+          "date": "2026-11-02",
+          "medium": "Propos publiés sur Facebook par le prévenu en octobre 2026, cités par France 3 Pays de la Loire ; jugement du tribunal correctionnel de Nantes (comparution immédiate) : six mois d'emprisonnement avec sursis probatoire pour menaces de mort à caractère raciste, visant aussi Emmanuel Macron",
+          "url": "https://france3-regions.franceinfo.fr/pays-de-la-loire/loire-atlantique/nantes/menaces-racistes-armes-factices-telespectateur-de-cnews-un-habitant-de-lege-condamne-a-six-mois-de-prison-pour-vouloir-cramer-des-musulmans-3443592.html",
+          "theme": "France – montée des violences",
+          "section": "france"
+        },
+        {
+          "quote": "Ça me monte un peu trop au cerveau, je suis une éponge",
+          "date": "2026-11-02",
+          "medium": "Le prévenu, à l'audience du tribunal correctionnel de Nantes, au sujet de l'alcool qu'il consomme devant CNews pour « tromper sa solitude », cité par France 3 Pays de la Loire",
+          "url": "https://france3-regions.franceinfo.fr/pays-de-la-loire/loire-atlantique/nantes/menaces-racistes-armes-factices-telespectateur-de-cnews-un-habitant-de-lege-condamne-a-six-mois-de-prison-pour-vouloir-cramer-des-musulmans-3443592.html",
+          "theme": "France – montée des violences",
+          "section": "france"
+        },
+        {
+          "quote": "alimenté quotidiennement par des chaînes d'information en continu",
+          "date": "2026-11-02",
+          "medium": "La procureure de la République, à l'audience, à propos du prévenu, citée par France 3 Pays de la Loire ; le tribunal a suivi les réquisitions du parquet",
+          "url": "https://france3-regions.franceinfo.fr/pays-de-la-loire/loire-atlantique/nantes/menaces-racistes-armes-factices-telespectateur-de-cnews-un-habitant-de-lege-condamne-a-six-mois-de-prison-pour-vouloir-cramer-des-musulmans-3443592.html",
+          "theme": "France – montée des violences",
+          "section": "france"
+        }
+      ],
       "sections": [
         "france"
       ],

@@ -3,9 +3,10 @@
   "use strict";
 
   var THEME_FR = "France – normalisation de l'extrême droite";
-  var THEME_ORDER = ["Gaza – déclarations", THEME_FR, "Proximité extrême droite", "Nuance / contexte"];
+  var THEME_FV = "France – montée des violences";
+  var THEME_ORDER = ["Gaza – déclarations", THEME_FR, THEME_FV, "Proximité extrême droite", "Nuance / contexte"];
   var THEME_CLASS = { "Gaza – déclarations": "t-gaza", "Proximité extrême droite": "t-ed", "Nuance / contexte": "t-nuance" };
-  THEME_CLASS[THEME_FR] = "t-fr";
+  THEME_CLASS[THEME_FR] = "t-fr"; THEME_CLASS[THEME_FV] = "t-fv";
   var SECTIONS = { gaza: "Gaza", france: "France – normalisation de l'extrême droite" };
   var CFG = window.SITE_CONFIG || {};
   var NO_STATEMENT = "__none__";
@@ -20,7 +21,7 @@
     org:         { label: "Organisation (autre)", cssVar: "--c-org",        shape: "box",      size: 12 }
   };
   var THEME_VAR = { "Gaza – déclarations": "--t-gaza", "Proximité extrême droite": "--t-ed", "Nuance / contexte": "--t-nuance" };
-  THEME_VAR[THEME_FR] = "--t-fr";
+  THEME_VAR[THEME_FR] = "--t-fr"; THEME_VAR[THEME_FV] = "--t-fv";
   var FONT = "-apple-system, BlinkMacSystemFont, SF Pro Text, Inter, system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif";
   var MQ_MOBILE = window.matchMedia("(max-width: 860px)");
   var MQ_DARK = window.matchMedia("(prefers-color-scheme: dark)");
@@ -233,7 +234,9 @@
         if (n.type === "person" || vis[n.id] || !state.types[n._sub]) return;
         var linked = edgesOf[n.id].some(function (e) { var o = e.source === n.id ? e.target : e.source; return vis[o]; });
         var noPeopleShown = !Object.keys(vis).length;
-        if (linked || noPeopleShown) { vis[n.id] = true; changed = true; }
+        // événement sans lien (ex. fait judiciaire) : visible selon le thème de ses propres déclarations
+        var standalone = !edgesOf[n.id].length && (n.statements || []).length && personVisibleByTheme(n);
+        if (linked || noPeopleShown || standalone) { vis[n.id] = true; changed = true; }
       });
     }
     return vis;
