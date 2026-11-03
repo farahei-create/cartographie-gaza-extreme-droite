@@ -692,13 +692,14 @@ body{padding-bottom:var(--nav-total)}
 .hero h1.onrecord{
   margin:0 auto;max-width:none;color:#fff;
   font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Rounded",system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  font-weight:800;font-size:clamp(3rem, 15.5vw, 6.5rem);line-height:.98;letter-spacing:-.055em;
+  font-weight:800;font-size:clamp(3.6rem, 19vw, 8rem);line-height:.96;letter-spacing:-.055em;
   white-space:nowrap;text-wrap:nowrap;
   background:linear-gradient(180deg,#ffffff 30%,#f8d7e8 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
   text-shadow:none;filter:drop-shadow(0 6px 22px rgba(20,0,40,.35));
-  padding:0 .04em .06em;
+  /* l'espacement négatif s'applique aussi après la dernière lettre : on le compense à droite pour que le centre visuel soit exact */
+  display:block;width:fit-content;padding:0 .055em .06em 0;
 }
-.tagline{margin:10px 0 0;font-size:clamp(1.02rem, 4.4vw, 1.3rem);font-weight:600;letter-spacing:-.012em;color:rgba(255,255,255,.92)}
+.tagline{margin:12px auto 0;width:fit-content;max-width:100%;padding-right:.012em;text-align:center;font-size:clamp(1.02rem, 4.4vw, 1.3rem);font-weight:600;letter-spacing:-.012em;color:rgba(255,255,255,.92)}
 @media (forced-colors:active){ .hero h1.onrecord{-webkit-text-fill-color:currentColor;background:none} }
 .lead{margin:0 0 22px;max-width:68ch;font-size:1rem;line-height:1.55;color:rgba(255,255,255,.9);text-wrap:pretty}
 .lead strong{color:#fff}
