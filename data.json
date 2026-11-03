@@ -1,0 +1,1155 @@
+{
+  "meta": {
+    "generated": "2026-11-03",
+    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-03 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés.",
+    "counts": {
+      "persons": 25,
+      "orgs": 20,
+      "edges": 56,
+      "statements": 52
+    }
+  },
+  "nodes": [
+    {
+      "id": "caroline-yadan",
+      "name": "Caroline Yadan",
+      "type": "person",
+      "role": "Députée (groupe EPR / Renaissance), 8e circonscription des Français établis hors de France",
+      "description": "Élue en 2024 dans la circonscription précédemment représentée par Meyer Habib. Autrice d'une proposition de loi (nov. 2024) sur les formes renouvelées de l'antisémitisme, soutenue par Aurore Bergé.",
+      "statements": [
+        {
+          "quote": "Qualifier de génocide l'opération menée par Tsahal relève de la manipulation politique qui met en danger les juifs de France",
+          "date": "2024-09-09",
+          "medium": "Le Point (tribune)",
+          "url": "https://www.lepoint.fr/debats/qualifier-de-genocide-l-operation-menee-par-l-armee-israelienne-releve-de-la-manipulation-politique-09-09-2024-2569814_2.php",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "Un génocide ne dépend pas du nombre mais de l'intention.",
+          "date": "2024-09-09",
+          "medium": "Le Point (tribune)",
+          "url": "https://www.lepoint.fr/debats/qualifier-de-genocide-l-operation-menee-par-l-armee-israelienne-releve-de-la-manipulation-politique-09-09-2024-2569814_2.php",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "l'armée israélienne, qui prévient les populations civiles avant les bombardements, ce que, sauf omission de ma part, aucune autre armée au monde ne fait, ne commet aucun massacre.",
+          "date": "2024-09-09",
+          "medium": "Le Point (tribune)",
+          "url": "https://www.lepoint.fr/debats/qualifier-de-genocide-l-operation-menee-par-l-armee-israelienne-releve-de-la-manipulation-politique-09-09-2024-2569814_2.php",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "je n'ai pu, en conscience, laisser parler d'un « génocide » en cours à Gaza […] C'est ce qu'a été la Shoah. Ce n'est pas ce que nous voyons à Gaza.",
+          "date": "2025-07-02",
+          "medium": "LinkedIn (publication de l'intéressée)",
+          "url": "https://fr.linkedin.com/posts/caroline-yadan-05259625a_dans-le-cadre-de-lexamen-des-r%C3%A9solutions-activity-7346234799956615168-muNj",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "[sa proposition de loi] ne vient pas interdire l'emploi du mot génocide (qui n'en est pas un) à Gaza…",
+          "date": "2025-07-23",
+          "medium": "Message sur X, cité par Marianne",
+          "url": "https://www.marianne.net/politique/lrem/la-deputee-caroline-yadan-essaie-t-elle-vraiment-de-faire-interdire-toute-mention-de-genocide-a-gaza",
+          "theme": "Gaza – déclarations"
+        }
+      ]
+    },
+    {
+      "id": "aurore-berge",
+      "name": "Aurore Bergé",
+      "type": "person",
+      "role": "Ministre déléguée chargée de l'Égalité femmes-hommes et de la Lutte contre les discriminations (Renaissance)",
+      "description": "Membre du gouvernement. A soutenu la proposition de loi de Caroline Yadan.",
+      "statements": [
+        {
+          "quote": "[dénoncer un génocide à Gaza] c'est une falsification historique",
+          "date": "2025-07-22",
+          "medium": "franceinfo",
+          "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "on ne peut pas accepter les falsifications historiques",
+          "date": "2025-07-22",
+          "medium": "franceinfo",
+          "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
+          "theme": "Gaza – déclarations"
+        }
+      ]
+    },
+    {
+      "id": "patrick-klugman",
+      "name": "Patrick Klugman",
+      "type": "person",
+      "role": "Avocat, président du Comité français pour Yad Vashem",
+      "description": "Le Comité qu'il préside a publié en juillet 2025 un communiqué sur l'usage du terme « génocide » à propos de Gaza.",
+      "statements": [
+        {
+          "quote": "afin que l'abus de l'accusation de génocide puisse entrer dans les cas possibles de contestation de crime contre l'humanité",
+          "date": "2025-07-22",
+          "medium": "Communiqué du Comité français pour Yad Vashem, cité par franceinfo (date de l'article)",
+          "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
+          "theme": "Gaza – déclarations"
+        }
+      ]
+    },
+    {
+      "id": "meyer-habib",
+      "name": "Meyer Habib",
+      "type": "person",
+      "role": "Ancien député apparenté LR (8e circonscription des Français établis hors de France, jusqu'en 2024)",
+      "description": "Ancien député, visé par une enquête ouverte en 2024 après une plainte de la LDH pour des propos tenus sur Radio J ; il affirme que ses propos ont été « sciemment dénaturés ».",
+      "statements": [
+        {
+          "quote": "La grande solidarité arabe ! Parce qu'ils savent aujourd'hui le cancer qu'est cette population. A qui on a tout donné. Israël est sorti de la bande de Gaza",
+          "date": "2023-10-20",
+          "medium": "Radio J, cité par 20 Minutes / AFP",
+          "url": "https://www.20minutes.fr/justice/4118457-20241029-guerre-israel-hamas-meyer-habib-compare-population-gaza-cancer-enquete-ouverte",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "Mes propos ont été sciemment dénaturés… [il n'a] jamais visé l'ensemble de la population",
+          "date": "2024-10-29",
+          "medium": "Réponse de l'intéressé, citée par 20 Minutes",
+          "url": "https://www.20minutes.fr/justice/4118457-20241029-guerre-israel-hamas-meyer-habib-compare-population-gaza-cancer-enquete-ouverte",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "Son discours est irréprochable, à la différence de celui d'Emmanuel Macron et de ses amis",
+          "date": "2025-05-15",
+          "medium": "i24NEWS, cité par Le HuffPost (à propos de Marine Le Pen)",
+          "url": "https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
+          "theme": "Proximité extrême droite"
+        }
+      ]
+    },
+    {
+      "id": "marine-le-pen",
+      "name": "Marine Le Pen",
+      "type": "person",
+      "role": "Présidente du groupe RN à l'Assemblée nationale, députée du Pas-de-Calais",
+      "description": "Figure principale du Rassemblement national.",
+      "statements": [
+        {
+          "quote": "[Israël] fait ce qu'il peut dans une situation extrêmement difficile",
+          "date": "2025-05-15",
+          "medium": "i24NEWS, cité par Le HuffPost",
+          "url": "https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "Quand Israël veut déplacer des populations, on lui dit que c'est horrible et honteux. Mais j'imagine que ces déplacements servent à éradiquer le Hamas sans avoir une population civile qui sert de bouclier",
+          "date": "2025-05-15",
+          "medium": "i24NEWS, cité par Le HuffPost",
+          "url": "https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "Israël ne refuse pas de livrer de l'alimentation et des biens de première nécessité à Gaza, il ne veut simplement pas que ce soit le Hamas qui les distribue",
+          "date": "2025-05-15",
+          "medium": "i24NEWS, cité par Le HuffPost",
+          "url": "https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
+          "theme": "Gaza – déclarations"
+        }
+      ]
+    },
+    {
+      "id": "jordan-bardella",
+      "name": "Jordan Bardella",
+      "type": "person",
+      "role": "Président du Rassemblement national",
+      "description": "S'est rendu en Israël en mars 2025 à l'invitation du ministre israélien Amichai Chikli pour une conférence sur l'antisémitisme.",
+      "statements": [
+        {
+          "quote": "la civilisation contre la barbarie",
+          "date": "2025-03-26",
+          "medium": "AFP, cité par France 24",
+          "url": "https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "Je n'y vais pas pour commenter les opérations militaires",
+          "date": "2025-03-19",
+          "medium": "RMC",
+          "url": "https://rmc.bfmtv.com/actualites/politique/jordan-bardella-en-israel-je-n-y-vais-pas-pour-parler-du-conflit-assure-le-president-du-rn_AV-202503190364.html",
+          "theme": "Gaza – déclarations"
+        }
+      ]
+    },
+    {
+      "id": "marion-marechal",
+      "name": "Marion Maréchal",
+      "type": "person",
+      "role": "Députée européenne, fondatrice d'Identité-Libertés (ex-vice-présidente de Reconquête)",
+      "description": "Tête de liste Reconquête aux européennes 2024, exclue du parti après avoir appelé à une alliance avec le RN ; a lancé Identité-Libertés en octobre 2024 pour une « coalition » avec Marine Le Pen, Jordan Bardella et Éric Ciotti.",
+      "statements": [
+        {
+          "quote": "Il n'y a pas de génocide à Gaza, sinon il n'y aurait pas des évacuations de population ou la livraison de matériels humanitaires",
+          "date": "2024-05-21",
+          "medium": "CNews",
+          "url": "https://www.cnews.fr/monde/2024-05-21/marion-marechal-il-ny-pas-de-genocide-gaza-sinon-il-ny-aurait-pas-des-evacuations",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "J'ai décidé de lancer un mouvement politique pour contribuer à la victoire du camp national",
+          "date": "2024-10-07",
+          "medium": "Le Figaro, cité par franceinfo",
+          "url": "https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
+          "theme": "Proximité extrême droite"
+        }
+      ]
+    },
+    {
+      "id": "eric-zemmour",
+      "name": "Éric Zemmour",
+      "type": "person",
+      "role": "Président de Reconquête",
+      "description": "Ancien chroniqueur de « Face à l'info » sur CNews jusqu'en septembre 2021, candidat à la présidentielle 2022.",
+      "statements": [
+        {
+          "quote": "L'important pour Israël est de rétablir son rapport de force, quel que soit le cas. Et ce, peu importe le prix",
+          "date": "2023-10-29",
+          "medium": "Le Grand Rendez-Vous Europe 1 / CNews / Les Echos",
+          "url": "https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "Une vie vaut une vie",
+          "date": "2023-10-29",
+          "medium": "Le Grand Rendez-Vous Europe 1 / CNews / Les Echos",
+          "url": "https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "Donc non, je ne suis pas d'accord avec la trêve humanitaire",
+          "date": "2023-10-29",
+          "medium": "Le Grand Rendez-Vous Europe 1 / CNews / Les Echos",
+          "url": "https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
+          "theme": "Gaza – déclarations"
+        }
+      ]
+    },
+    {
+      "id": "eric-ciotti",
+      "name": "Éric Ciotti",
+      "type": "person",
+      "role": "Député, ancien président des Républicains",
+      "description": "A annoncé le 11 juin 2024, alors président de LR, une alliance avec le RN pour les législatives anticipées.",
+      "statements": [
+        {
+          "quote": "La Cour pénale internationale s'est définitivement décrédibilisée, elle n'existera plus",
+          "date": "2024-05-22",
+          "medium": "BFMTV",
+          "url": "https://www.bfmtv.com/politique/les-republicains/elle-s-est-decredibilisee-eric-ciotti-souhaite-que-la-france-quitte-la-cour-penale-internationale_AV-202405220346.html",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "Il faut une alliance, c'est le sens de la cinquième République",
+          "date": "2024-06-11",
+          "medium": "TF1, cité par franceinfo",
+          "url": "https://www.franceinfo.fr/politique/legislatives-anticipees-eric-ciotti-dit-oui-a-une-alliance-des-republicains-avec-le-rn_6598017.html",
+          "theme": "Proximité extrême droite"
+        },
+        {
+          "quote": "Serge Klarsfeld ne se trompe pas d'ennemi !",
+          "date": "2024-06-16",
+          "medium": "Message sur X, cité par franceinfo",
+          "url": "https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
+          "theme": "Proximité extrême droite"
+        }
+      ]
+    },
+    {
+      "id": "yael-braun-pivet",
+      "name": "Yaël Braun-Pivet",
+      "type": "person",
+      "role": "Présidente de l'Assemblée nationale (Renaissance)",
+      "description": "S'est rendue en Israël les 21-22 octobre 2023 avec Éric Ciotti, Meyer Habib et Mathieu Lefèvre. A reconnu en avril 2025 avoir eu « tort » d'employer le mot « inconditionnel ».",
+      "statements": [
+        {
+          "quote": "Ce qui est important, c'est que les populations civiles qui se trouvent à Gaza soient le moins possible victimes de ce conflit. Mais on sait aussi qu'elles servent souvent de bouclier humain. Il faut les préserver bien sûr, mais rien ne doit empêcher Israël de se défendre. Il y a un attaquant et des attaqués",
+          "date": "2023-10-22",
+          "medium": "Déclaration en Israël, citée par France 24",
+          "url": "https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "Je vois bien que j'ai eu tort de choisir ce mot, parce qu'il ne reflétait pas ma pensée et il a été compris de telle sorte que ça ne correspond pas à ce que je voulais dire",
+          "date": "2025-04-10",
+          "medium": "France Inter, cité par BFMTV",
+          "url": "https://www.bfmtv.com/politique/parlement/soutien-inconditionnel-a-israel-yael-braun-pivet-reconnait-avoir-eu-tort-de-choisir-ce-mot_AD-202504100354.html",
+          "theme": "Nuance / contexte"
+        }
+      ]
+    },
+    {
+      "id": "robert-menard",
+      "name": "Robert Ménard",
+      "type": "person",
+      "role": "Maire de Béziers",
+      "description": "Élu maire de Béziers en 2014 avec le soutien du Front national. Qualifie la situation à Gaza de « massacre » tout en récusant le terme de génocide.",
+      "statements": [
+        {
+          "quote": "Non, ce n'est pas un génocide qui se passe à Gaza. Un génocide, c'est la volonté affichée de détruire un peuple",
+          "date": "2025-05-22",
+          "medium": "RTL",
+          "url": "https://www.rtl.fr/actu/international/une-ignominie-robert-menard-tance-eric-coquerel-sur-rtl-et-refute-le-terme-de-genocide-a-gaza-7900507815",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "C'est un massacre, c'est quelque chose de terrible, mais c'est pas un génocide",
+          "date": "2025-05-22",
+          "medium": "RTL",
+          "url": "https://www.rtl.fr/actu/international/une-ignominie-robert-menard-tance-eric-coquerel-sur-rtl-et-refute-le-terme-de-genocide-a-gaza-7900507815",
+          "theme": "Gaza – déclarations"
+        }
+      ]
+    },
+    {
+      "id": "manuel-valls",
+      "name": "Manuel Valls",
+      "type": "person",
+      "role": "Ancien Premier ministre",
+      "description": "A accompagné une délégation de parlementaires en Israël en octobre 2023. Déclare par ailleurs combattre le Rassemblement national.",
+      "statements": [
+        {
+          "quote": "La responsabilité de cette guerre, avec ses morts, ses victimes, ses souffrances, elle incombe d'abord et avant tout au Hamas.",
+          "date": "2025-01-16",
+          "medium": "Europe 1 / CNews (transcription vie-publique.fr)",
+          "url": "https://www.vie-publique.fr/discours/296889-manuel-valls-16012025-europe-1-israel-hamas-cessez-le-feu-et-mayotte",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "je combats le Rassemblement National",
+          "date": "2025-01-16",
+          "medium": "Europe 1 / CNews (transcription vie-publique.fr)",
+          "url": "https://www.vie-publique.fr/discours/296889-manuel-valls-16012025-europe-1-israel-hamas-cessez-le-feu-et-mayotte",
+          "theme": "Nuance / contexte"
+        }
+      ]
+    },
+    {
+      "id": "bernard-henri-levy",
+      "name": "Bernard-Henri Lévy",
+      "type": "person",
+      "role": "Philosophe, essayiste, chroniqueur au Point",
+      "description": "Auteur de « Solitude d'Israël » (2024). A annulé sa participation à la conférence de Jérusalem de mars 2025 en raison de l'invitation de Jordan Bardella, et s'est dit méfiant à l'égard du soutien de l'extrême droite.",
+      "statements": [
+        {
+          "quote": "Israël fait tout ce qu'il peut pour qu'il y ait le moins possible de victimes civiles. Il n'y a pas de génocide à Gaza, il n'y a pas de massacre délibéré des populations civiles à Gaza, tout cela est faux.",
+          "date": "2024-04-02",
+          "medium": "France 3 Côte d'Azur (entretien publié le 04/04/2024)",
+          "url": "https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/alpes-maritimes/nice/entretien-bernard-henri-levy-il-n-y-a-pas-de-genocide-a-gaza-il-n-y-a-pas-de-massacre-delibere-des-populations-civiles-2949686.html",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "Eh oui. Je le répéterai sur tous les tons s'il le faut. Il n'y a pas de genocide à Gaza.",
+          "date": "2026-10-15",
+          "medium": "X (@BHL)",
+          "url": "https://x.com/BHL/status/2110817601270231314",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "Et l'extrême droite qui nous dit qu'elle s'est convertie, qu'elle était antisémite, qu'elle ne l'est plus, quelle merveille si c'est vrai. Mais si c'est vrai : il faut des preuves.",
+          "date": "2024-04-02",
+          "medium": "France 3 Côte d'Azur",
+          "url": "https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/alpes-maritimes/nice/entretien-bernard-henri-levy-il-n-y-a-pas-de-genocide-a-gaza-il-n-y-a-pas-de-massacre-delibere-des-populations-civiles-2949686.html",
+          "theme": "Nuance / contexte"
+        }
+      ]
+    },
+    {
+      "id": "raphael-enthoven",
+      "name": "Raphaël Enthoven",
+      "type": "person",
+      "role": "Philosophe, membre du comité de rédaction de Franc-Tireur",
+      "description": "Déprogrammé du festival « Livres dans la boucle » en 2025 après des messages sur X concernant les journalistes à Gaza. A publiquement corrigé une affirmation chiffrée en octobre 2026.",
+      "statements": [
+        {
+          "quote": "Il n'y a AUCUN journaliste à Gaza. Uniquement des tueurs, des combattants ou des preneurs d'otages avec une carte de presse.",
+          "date": "2025-08-15",
+          "medium": "X, cité par franceinfo",
+          "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/on-vous-explique-la-polemique-autour-de-raphael-enthoven-deprogramme-du-festival-livres-dans-la-boucle-apres-ses-messages-sur-gaza_7480282.html",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "Je persiste. A mon sens, il n'y a aucun journaliste à Gaza, car je refuse la qualité de journaliste à quiconque travaille pour une organisation terroriste.",
+          "date": "2025-08-17",
+          "medium": "X, cité par franceinfo",
+          "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/on-vous-explique-la-polemique-autour-de-raphael-enthoven-deprogramme-du-festival-livres-dans-la-boucle-apres-ses-messages-sur-gaza_7480282.html",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "Je n'en peux plus, de ce \"génocide\" commis par une nation agressée sur une population qui a augmenté depuis le début des combats, […]",
+          "date": "2026-10-10",
+          "medium": "X (@Enthoven_R)",
+          "url": "https://x.com/Enthoven_R/status/2108828983693373510",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "J'ai tort sur un point. La population de Gaza n'a pas augmenté, mais légèrement diminué en valeur absolue depuis le 7 octobre 2023. Mais ça ne change rien sur le fond. Une guerre n'est pas un génocide.",
+          "date": "2026-10-11",
+          "medium": "X (@Enthoven_R)",
+          "url": "https://x.com/Enthoven_R/status/2109306896901361749",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "il propage le mythe du « génocide à Gaza » dont la raison d'être est de rendre digeste le 7 octobre en lui opposant un crime encore plus grave.",
+          "date": "2026-10-07",
+          "medium": "X (@Enthoven_R)",
+          "url": "https://x.com/Enthoven_R/status/2107851573879832611",
+          "theme": "Gaza – déclarations"
+        }
+      ]
+    },
+    {
+      "id": "caroline-fourest",
+      "name": "Caroline Fourest",
+      "type": "person",
+      "role": "Journaliste, essayiste, directrice éditoriale de Franc-Tireur",
+      "description": "Ses propos sur BFMTV en octobre 2023 ont conduit des députés LFI à saisir l'Arcom ; elle a maintenu sa position tout en qualifiant de « grave » la mort d'innocents.",
+      "statements": [
+        {
+          "quote": "on ne peut pas comparer le fait d'avoir tué des enfants délibérément comme le Hamas, et le fait de les tuer involontairement comme Israël",
+          "date": "2023-10-29",
+          "medium": "BFMTV, cité par Le HuffPost",
+          "url": "https://www.huffingtonpost.fr/politique/article/guerre-israel-hamas-apres-les-propos-de-fourest-sur-les-morts-de-gaza-les-deputes-lfi-saisissent-l-arcom_225122.html",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "Je maintiens, malgré la meute, qu'il existe une différence d'intention fondamentale entre cibler des enfants pour les décapiter et perdre la tête au point de bombarder le Hamas au milieu d'enfants. Comme je maintiens que c'est grave et tuer des innocents.",
+          "date": "2023-10-30",
+          "medium": "X, cité par Le HuffPost",
+          "url": "https://www.huffingtonpost.fr/politique/article/guerre-israel-hamas-apres-les-propos-de-fourest-sur-les-morts-de-gaza-les-deputes-lfi-saisissent-l-arcom_225122.html",
+          "theme": "Gaza – déclarations"
+        }
+      ]
+    },
+    {
+      "id": "gilles-william-goldnadel",
+      "name": "Gilles-William Goldnadel",
+      "type": "person",
+      "role": "Avocat, essayiste, chroniqueur sur CNews et au Figaro, président d'Avocats sans frontières",
+      "description": "Intervient régulièrement sur CNews et Europe 1.",
+      "statements": [
+        {
+          "quote": "Jamais Israël n'a voulu cibler un civil",
+          "date": "2024-10-07",
+          "medium": "CNews",
+          "url": "https://www.cnews.fr/videos/monde/2024-10-07/jamais-israel-na-voulu-cibler-un-civil-soutient-gilles-william-goldnadel",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "il n'y a pas de génocide à Gaza. Il n'y a aucun élément juridique, aucun jugement qui a vu un génocide.",
+          "date": "2025-10-01",
+          "medium": "« Pascal Praud et vous » (Europe 1 / CNews), cité par Télé 7 Jours",
+          "url": "https://www.programme-television.org/news/people/polemique/pascal-praud-sen-prend-a-nagui-apres-lusage-du-mot-genocide-pour-qualifier-la-guerre-a-gaza-6643",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "énième reportage à Gaza ( jamais au Soudan ou au Nigeria) où l'on prononce 12 fois le terme « génocide » . Le mensonge répété se transforme en mythe incrusté.",
+          "date": "2026-10-10",
+          "medium": "X (@GWGoldnadel)",
+          "url": "https://x.com/GWGoldnadel/status/2108986735938220224",
+          "theme": "Gaza – déclarations"
+        }
+      ]
+    },
+    {
+      "id": "jules-torres",
+      "name": "Jules Torres",
+      "type": "person",
+      "role": "Journaliste au JDD, intervenant sur CNews",
+      "description": "Son affirmation sur l'évolution de la population de Gaza a été vérifiée et jugée fausse par 20 Minutes et France 24 ; Pascal Praud l'a contredit en direct. Il dit préférer le terme de « crimes de guerre ».",
+      "statements": [
+        {
+          "quote": "s'il s'agissait d'un génocide, ce serait le premier génocide de l'Histoire où la population augmente",
+          "date": "2025-05-27",
+          "medium": "CNews, « L'Heure des Pros 2 », cité par 20 Minutes",
+          "url": "https://www.20minutes.fr/monde/israel/4155846-20250528-gaza-population-augmente-enclave-palestinienne-pourquoi-idee-tient",
+          "theme": "Gaza – déclarations"
+        }
+      ]
+    },
+    {
+      "id": "gerard-carreyrou",
+      "name": "Gérard Carreyrou",
+      "type": "person",
+      "role": "Journaliste, intervenant sur Europe 1",
+      "description": "Intervenant de l'émission « Pascal Praud et vous » sur Europe 1.",
+      "statements": [
+        {
+          "quote": "Pour moi, le mot génocide ne correspond pas. C'est une guerre difficile, atroce (...) mais c'est la guerre",
+          "date": "2025-10-01",
+          "medium": "Europe 1, « Pascal Praud et vous »",
+          "url": "https://www.europe1.fr/international/pascal-praud-et-vous-conflit-israel-hamas-le-mot-genocide-ne-correspond-pas-a-la-realite-estime-gerard-carreyrou-774797",
+          "theme": "Gaza – déclarations"
+        }
+      ]
+    },
+    {
+      "id": "joseph-thouvenel",
+      "name": "Joseph Thouvenel",
+      "type": "person",
+      "role": "Éditorialiste intervenant sur CNews",
+      "description": "Syndicaliste et éditorialiste invité sur CNews.",
+      "statements": [
+        {
+          "quote": "Un génocide, c'est faire disparaître volontairement un peuple, ce n'est absolument pas ce qu'il se passe à Gaza",
+          "date": "2025-08-03",
+          "medium": "CNews",
+          "url": "https://www.cnews.fr/monde/2025-08-03/guerre-au-proche-orient-un-genocide-cest-faire-disparaitre-volontairement-un",
+          "theme": "Gaza – déclarations"
+        }
+      ]
+    },
+    {
+      "id": "elisabeth-levy",
+      "name": "Élisabeth Lévy",
+      "type": "person",
+      "role": "Fondatrice et directrice de la rédaction de Causeur, éditorialiste sur Sud Radio",
+      "description": "Chroniqueuse sur Sud Radio et intervenante régulière de « L'Heure des pros » (CNews) depuis 2017.",
+      "statements": [
+        {
+          "quote": "Le Hamas voulait des milliers de morts palestiniens pour alimenter la haine d'Israël et des juifs.",
+          "date": "2024-04-08",
+          "medium": "Sud Radio, « Le regard d'Élisabeth Lévy » (transcription automatique)",
+          "url": "https://www.sudradio.fr/emission/le-regard-delisabeth-levy-566",
+          "theme": "Gaza – déclarations"
+        },
+        {
+          "quote": "on accuse Tsahal d'organiser une famine, ce qui est évidemment faux pour ce qui est de l'organisation. Il y a bien effectivement des éléments de famine, malheureusement.",
+          "date": "2024-04-08",
+          "medium": "Sud Radio, « Le regard d'Élisabeth Lévy » (transcription automatique)",
+          "url": "https://www.sudradio.fr/emission/le-regard-delisabeth-levy-566",
+          "theme": "Gaza – déclarations"
+        }
+      ]
+    },
+    {
+      "id": "yonathan-arfi",
+      "name": "Yonathan Arfi",
+      "type": "person",
+      "role": "Président du CRIF",
+      "description": "S'exprimait lors du 38e dîner du CRIF en mai 2024.",
+      "statements": [
+        {
+          "quote": "L'accusation de génocide ne vise pas à protéger les Palestiniens, mais résonne comme un cri de ralliement pour stigmatiser les juifs",
+          "date": "2024-05-06",
+          "medium": "BFMTV (discours au dîner du CRIF)",
+          "url": "https://www.bfmtv.com/politique/yonathan-arfi-president-du-crif-l-accusation-de-genocide-ne-vise-pas-a-proteger-les-palestiniens-mais-resonne-comme-un-cri-de-ralliement-pour-stigmatiser-les-juifs_VN-202405060963.html",
+          "theme": "Gaza – déclarations"
+        }
+      ]
+    },
+    {
+      "id": "jean-dominique-merchet",
+      "name": "Jean-Dominique Merchet",
+      "type": "person",
+      "role": "Journaliste (L'Express, LCI, selon sa biographie X)",
+      "description": "Journaliste spécialiste des questions de défense.",
+      "statements": [
+        {
+          "quote": "Accuser Israël de génocide, c'est nazifier l'Etat juif. C'est, à mes yeux, la revanche d'Hitler.",
+          "date": "2026-10-07",
+          "medium": "X (@jdomerchet)",
+          "url": "https://x.com/jdomerchet/status/2107742270753558671",
+          "theme": "Gaza – déclarations"
+        }
+      ]
+    },
+    {
+      "id": "serge-klarsfeld",
+      "name": "Serge Klarsfeld",
+      "type": "person",
+      "role": "Historien et avocat",
+      "description": "A déclaré en juin 2024 qu'il voterait RN en cas de duel RN–LFI, tout en votant pour le centre dans sa propre circonscription. Pas de déclaration retenue sur Gaza.",
+      "statements": [
+        {
+          "quote": "[en cas de duel RN-LFI, il voterait RN sans] hésitation",
+          "date": "2024-06-15",
+          "medium": "LCI, cité par franceinfo",
+          "url": "https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
+          "theme": "Proximité extrême droite"
+        },
+        {
+          "quote": "[le RN] a fait sa mue",
+          "date": "2024-06-15",
+          "medium": "LCI, cité par franceinfo",
+          "url": "https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
+          "theme": "Proximité extrême droite"
+        }
+      ]
+    },
+    {
+      "id": "vincent-bollore",
+      "name": "Vincent Bolloré",
+      "type": "person",
+      "role": "Industriel, actionnaire de référence de Vivendi / Canal+",
+      "description": "Son groupe contrôle Canal+ (dont CNews) et, via l'OPA sur Lagardère, Europe 1, le JDD et Paris Match. Il s'est toujours défendu d'utiliser ces médias pour promouvoir ses opinions (franceinfo).",
+      "statements": []
+    },
+    {
+      "id": "geoffroy-lejeune",
+      "name": "Geoffroy Lejeune",
+      "type": "person",
+      "role": "Directeur de la rédaction du JDD (depuis 2023), ancien directeur de Valeurs actuelles",
+      "description": "Sa nomination à la tête du JDD en 2023 a provoqué une longue grève de la rédaction.",
+      "statements": []
+    },
+    {
+      "id": "rn",
+      "name": "Rassemblement national (ex-Front national)",
+      "type": "org",
+      "role": "Parti politique",
+      "description": "Parti présidé par Jordan Bardella.",
+      "statements": []
+    },
+    {
+      "id": "reconquete",
+      "name": "Reconquête",
+      "type": "org",
+      "role": "Parti politique",
+      "description": "Parti fondé et présidé par Éric Zemmour.",
+      "statements": []
+    },
+    {
+      "id": "identite-libertes",
+      "name": "Identité-Libertés",
+      "type": "org",
+      "role": "Mouvement politique",
+      "description": "Mouvement lancé par Marion Maréchal en octobre 2024.",
+      "statements": []
+    },
+    {
+      "id": "lr",
+      "name": "Les Républicains",
+      "type": "org",
+      "role": "Parti politique",
+      "description": "Parti de droite, présidé par Éric Ciotti jusqu'en 2024.",
+      "statements": []
+    },
+    {
+      "id": "renaissance-epr",
+      "name": "Renaissance / groupe EPR",
+      "type": "org",
+      "role": "Parti / groupe parlementaire",
+      "description": "Parti et groupe parlementaire de la majorité présidentielle.",
+      "statements": []
+    },
+    {
+      "id": "vivendi-canal",
+      "name": "Vivendi / Groupe Canal+",
+      "type": "org",
+      "role": "Groupe de médias",
+      "description": "Groupe dont Vincent Bolloré préside le conseil de surveillance depuis 2014.",
+      "statements": []
+    },
+    {
+      "id": "lagardere",
+      "name": "Lagardère",
+      "type": "org",
+      "role": "Groupe de médias",
+      "description": "Groupe ayant fait l'objet d'une OPA de Vivendi (Europe 1, JDD, Paris Match).",
+      "statements": []
+    },
+    {
+      "id": "cnews",
+      "name": "CNews",
+      "type": "org",
+      "role": "Chaîne d'information (Groupe Canal+)",
+      "description": "Ex-i-Télé, renommée CNews.",
+      "statements": []
+    },
+    {
+      "id": "europe1",
+      "name": "Europe 1",
+      "type": "org",
+      "role": "Radio (Lagardère / Vivendi)",
+      "description": "Rapprochée de CNews en 2021.",
+      "statements": []
+    },
+    {
+      "id": "jdd",
+      "name": "Le Journal du dimanche (JDD)",
+      "type": "org",
+      "role": "Hebdomadaire (Lagardère / Vivendi)",
+      "description": "Dirigé par Geoffroy Lejeune depuis 2023.",
+      "statements": []
+    },
+    {
+      "id": "valeurs-actuelles",
+      "name": "Valeurs actuelles",
+      "type": "org",
+      "role": "Hebdomadaire",
+      "description": "Ancien employeur de Geoffroy Lejeune.",
+      "statements": []
+    },
+    {
+      "id": "franc-tireur",
+      "name": "Franc-Tireur",
+      "type": "org",
+      "role": "Hebdomadaire (CMI France)",
+      "description": "Lancé en 2021 ; Caroline Fourest directrice éditoriale, Raphaël Enthoven au comité de rédaction.",
+      "statements": []
+    },
+    {
+      "id": "causeur",
+      "name": "Causeur",
+      "type": "org",
+      "role": "Magazine",
+      "description": "Fondé et dirigé par Élisabeth Lévy.",
+      "statements": []
+    },
+    {
+      "id": "sud-radio",
+      "name": "Sud Radio",
+      "type": "org",
+      "role": "Radio",
+      "description": "",
+      "statements": []
+    },
+    {
+      "id": "le-point",
+      "name": "Le Point",
+      "type": "org",
+      "role": "Hebdomadaire",
+      "description": "",
+      "statements": []
+    },
+    {
+      "id": "crif",
+      "name": "CRIF",
+      "type": "org",
+      "role": "Organisation représentative",
+      "description": "Conseil représentatif des institutions juives de France.",
+      "statements": []
+    },
+    {
+      "id": "yad-vashem-fr",
+      "name": "Comité français pour Yad Vashem",
+      "type": "org",
+      "role": "Association",
+      "description": "",
+      "statements": []
+    },
+    {
+      "id": "conf-jerusalem-2025",
+      "name": "Conférence sur l'antisémitisme, Jérusalem (mars 2025)",
+      "type": "org",
+      "role": "Événement",
+      "description": "Conférence organisée à l'invitation du ministre israélien Amichai Chikli.",
+      "statements": []
+    },
+    {
+      "id": "avocats-sans-frontieres",
+      "name": "Avocats sans frontières",
+      "type": "org",
+      "role": "Association",
+      "description": "",
+      "statements": []
+    },
+    {
+      "id": "lexpress",
+      "name": "L'Express",
+      "type": "org",
+      "role": "Hebdomadaire",
+      "description": "",
+      "statements": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "jordan-bardella",
+      "target": "rn",
+      "relation": "président du parti",
+      "url": "https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
+      "date": "2025-03-26"
+    },
+    {
+      "source": "marine-le-pen",
+      "target": "rn",
+      "relation": "présidente du groupe des députés RN",
+      "url": "https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
+      "date": "2025-05-16"
+    },
+    {
+      "source": "eric-zemmour",
+      "target": "reconquete",
+      "relation": "président du parti",
+      "url": "https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
+      "date": "2023-10-29"
+    },
+    {
+      "source": "eric-zemmour",
+      "target": "cnews",
+      "relation": "ancien chroniqueur de « Face à l'info » (fin en septembre 2021)",
+      "url": "https://www.franceinfo.fr/politique/eric-zemmour/presidentielle-cnews-met-fin-aux-chroniques-du-possible-candidat-eric-zemmour-apres-la-decision-du-csa-de-decompter-son-temps-de-parole_4769613.html",
+      "date": "2021-09-13"
+    },
+    {
+      "source": "eric-zemmour",
+      "target": "europe1",
+      "relation": "invité du Grand Rendez-Vous Europe 1 / CNews / Les Echos",
+      "url": "https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
+      "date": "2023-10-29"
+    },
+    {
+      "source": "marion-marechal",
+      "target": "reconquete",
+      "relation": "ancienne vice-présidente, exclue après les législatives 2024",
+      "url": "https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
+      "date": "2024-10-07"
+    },
+    {
+      "source": "marion-marechal",
+      "target": "identite-libertes",
+      "relation": "fondatrice",
+      "url": "https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
+      "date": "2024-10-07"
+    },
+    {
+      "source": "marion-marechal",
+      "target": "marine-le-pen",
+      "relation": "a annoncé qu'elle la soutiendrait à la présidentielle 2027 (« candidate légitime du camp national »)",
+      "url": "https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
+      "date": "2024-10-07"
+    },
+    {
+      "source": "marion-marechal",
+      "target": "rn",
+      "relation": "a négocié un accord législatif avec le RN (refusé par le RN le 11/06/2024)",
+      "url": "https://www.franceinfo.fr/elections/legislatives/elections-legislatives-2024-marion-marechal-deplore-un-changement-de-position-du-rn-qui-refuse-le-principe-d-un-accord-avec-reconquete_6598065.html",
+      "date": "2024-06-11"
+    },
+    {
+      "source": "marion-marechal",
+      "target": "conf-jerusalem-2025",
+      "relation": "invitée",
+      "url": "https://rmc.bfmtv.com/actualites/politique/jordan-bardella-en-israel-je-n-y-vais-pas-pour-parler-du-conflit-assure-le-president-du-rn_AV-202503190364.html",
+      "date": "2025-03-19"
+    },
+    {
+      "source": "marion-marechal",
+      "target": "cnews",
+      "relation": "invitée (déclaration du 21/05/2024)",
+      "url": "https://www.cnews.fr/monde/2024-05-21/marion-marechal-il-ny-pas-de-genocide-gaza-sinon-il-ny-aurait-pas-des-evacuations",
+      "date": "2024-05-21"
+    },
+    {
+      "source": "jordan-bardella",
+      "target": "conf-jerusalem-2025",
+      "relation": "invité et participant",
+      "url": "https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
+      "date": "2025-03-26"
+    },
+    {
+      "source": "bernard-henri-levy",
+      "target": "conf-jerusalem-2025",
+      "relation": "a annulé sa participation en raison de l'invitation de Jordan Bardella",
+      "url": "https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
+      "date": "2025-03-26"
+    },
+    {
+      "source": "eric-ciotti",
+      "target": "lr",
+      "relation": "président du parti (en 2024)",
+      "url": "https://www.bfmtv.com/politique/les-republicains/elle-s-est-decredibilisee-eric-ciotti-souhaite-que-la-france-quitte-la-cour-penale-internationale_AV-202405220346.html",
+      "date": "2024-05-22"
+    },
+    {
+      "source": "eric-ciotti",
+      "target": "rn",
+      "relation": "a annoncé une alliance électorale pour les législatives 2024",
+      "url": "https://www.franceinfo.fr/politique/legislatives-anticipees-eric-ciotti-dit-oui-a-une-alliance-des-republicains-avec-le-rn_6598017.html",
+      "date": "2024-06-11"
+    },
+    {
+      "source": "identite-libertes",
+      "target": "rn",
+      "relation": "propose une « coalition » avec Marine Le Pen, Jordan Bardella et Éric Ciotti",
+      "url": "https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
+      "date": "2024-10-07"
+    },
+    {
+      "source": "serge-klarsfeld",
+      "target": "rn",
+      "relation": "a déclaré qu'il voterait RN en cas de duel RN–LFI",
+      "url": "https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
+      "date": "2024-06-15"
+    },
+    {
+      "source": "marine-le-pen",
+      "target": "serge-klarsfeld",
+      "relation": "a salué ses propos sur X",
+      "url": "https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
+      "date": "2024-06-16"
+    },
+    {
+      "source": "eric-ciotti",
+      "target": "serge-klarsfeld",
+      "relation": "a salué ses propos sur X",
+      "url": "https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
+      "date": "2024-06-16"
+    },
+    {
+      "source": "meyer-habib",
+      "target": "marine-le-pen",
+      "relation": "a qualifié son discours sur Israël d'« irréprochable »",
+      "url": "https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
+      "date": "2025-05-15"
+    },
+    {
+      "source": "meyer-habib",
+      "target": "lr",
+      "relation": "ancien député apparenté LR",
+      "url": "https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
+      "date": "2023-10-22"
+    },
+    {
+      "source": "yael-braun-pivet",
+      "target": "eric-ciotti",
+      "relation": "voyage commun en Israël (21-22 octobre 2023)",
+      "url": "https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
+      "date": "2023-10-22"
+    },
+    {
+      "source": "yael-braun-pivet",
+      "target": "meyer-habib",
+      "relation": "voyage commun en Israël (21-22 octobre 2023)",
+      "url": "https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
+      "date": "2023-10-22"
+    },
+    {
+      "source": "yael-braun-pivet",
+      "target": "renaissance-epr",
+      "relation": "membre",
+      "url": "https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
+      "date": "2023-10-22"
+    },
+    {
+      "source": "manuel-valls",
+      "target": "europe1",
+      "relation": "invité (Europe 1 / CNews, 16/01/2025)",
+      "url": "https://www.vie-publique.fr/discours/296889-manuel-valls-16012025-europe-1-israel-hamas-cessez-le-feu-et-mayotte",
+      "date": "2025-01-16"
+    },
+    {
+      "source": "caroline-yadan",
+      "target": "renaissance-epr",
+      "relation": "députée du groupe EPR",
+      "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
+      "date": "2025-07-22"
+    },
+    {
+      "source": "caroline-yadan",
+      "target": "meyer-habib",
+      "relation": "lui a succédé comme députée de la 8e circonscription des Français de l'étranger",
+      "url": "https://www.marianne.net/politique/lrem/la-deputee-caroline-yadan-essaie-t-elle-vraiment-de-faire-interdire-toute-mention-de-genocide-a-gaza",
+      "date": "2025-07-23"
+    },
+    {
+      "source": "caroline-yadan",
+      "target": "le-point",
+      "relation": "autrice d'une tribune",
+      "url": "https://www.lepoint.fr/debats/qualifier-de-genocide-l-operation-menee-par-l-armee-israelienne-releve-de-la-manipulation-politique-09-09-2024-2569814_2.php",
+      "date": "2024-09-09"
+    },
+    {
+      "source": "aurore-berge",
+      "target": "caroline-yadan",
+      "relation": "soutient sa proposition de loi",
+      "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
+      "date": "2025-07-22"
+    },
+    {
+      "source": "aurore-berge",
+      "target": "renaissance-epr",
+      "relation": "membre du gouvernement (Renaissance)",
+      "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
+      "date": "2025-07-22"
+    },
+    {
+      "source": "patrick-klugman",
+      "target": "yad-vashem-fr",
+      "relation": "président",
+      "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
+      "date": "2025-07-22"
+    },
+    {
+      "source": "robert-menard",
+      "target": "rn",
+      "relation": "élu maire de Béziers en 2014 avec le soutien du Front national",
+      "url": "https://www.france24.com/fr/20140328-municipales-robert-menard-beziers-fn-rsf-liberte-presse-le-pen-mairie",
+      "date": "2014-03-28"
+    },
+    {
+      "source": "vincent-bollore",
+      "target": "vivendi-canal",
+      "relation": "président du conseil de surveillance de Vivendi (depuis 2014)",
+      "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "date": "2023-06-25"
+    },
+    {
+      "source": "vivendi-canal",
+      "target": "cnews",
+      "relation": "propriétaire (i-Télé renommée CNews)",
+      "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "date": "2023-06-25"
+    },
+    {
+      "source": "vivendi-canal",
+      "target": "lagardere",
+      "relation": "OPA sur Lagardère",
+      "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "date": "2023-06-25"
+    },
+    {
+      "source": "lagardere",
+      "target": "europe1",
+      "relation": "propriétaire",
+      "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "date": "2023-06-25"
+    },
+    {
+      "source": "lagardere",
+      "target": "jdd",
+      "relation": "propriétaire",
+      "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "date": "2023-06-25"
+    },
+    {
+      "source": "europe1",
+      "target": "cnews",
+      "relation": "rapprochement éditorial (2021)",
+      "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "date": "2023-06-25"
+    },
+    {
+      "source": "geoffroy-lejeune",
+      "target": "jdd",
+      "relation": "directeur de la rédaction",
+      "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "date": "2023-06-25"
+    },
+    {
+      "source": "geoffroy-lejeune",
+      "target": "valeurs-actuelles",
+      "relation": "ancien directeur",
+      "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "date": "2023-06-25"
+    },
+    {
+      "source": "gilles-william-goldnadel",
+      "target": "cnews",
+      "relation": "chroniqueur",
+      "url": "https://x.com/GWGoldnadel",
+      "date": "2026-11-03"
+    },
+    {
+      "source": "gilles-william-goldnadel",
+      "target": "avocats-sans-frontieres",
+      "relation": "président",
+      "url": "https://x.com/GWGoldnadel",
+      "date": "2026-11-03"
+    },
+    {
+      "source": "gilles-william-goldnadel",
+      "target": "europe1",
+      "relation": "intervenant dans « Pascal Praud et vous »",
+      "url": "https://www.programme-television.org/news/people/polemique/pascal-praud-sen-prend-a-nagui-apres-lusage-du-mot-genocide-pour-qualifier-la-guerre-a-gaza-6643",
+      "date": "2025-10-01"
+    },
+    {
+      "source": "jules-torres",
+      "target": "jdd",
+      "relation": "journaliste",
+      "url": "https://www.20minutes.fr/monde/israel/4155846-20250528-gaza-population-augmente-enclave-palestinienne-pourquoi-idee-tient",
+      "date": "2025-05-28"
+    },
+    {
+      "source": "jules-torres",
+      "target": "cnews",
+      "relation": "intervenant dans « L'Heure des Pros 2 »",
+      "url": "https://www.20minutes.fr/monde/israel/4155846-20250528-gaza-population-augmente-enclave-palestinienne-pourquoi-idee-tient",
+      "date": "2025-05-27"
+    },
+    {
+      "source": "joseph-thouvenel",
+      "target": "cnews",
+      "relation": "éditorialiste invité",
+      "url": "https://www.cnews.fr/monde/2025-08-03/guerre-au-proche-orient-un-genocide-cest-faire-disparaitre-volontairement-un",
+      "date": "2025-08-03"
+    },
+    {
+      "source": "gerard-carreyrou",
+      "target": "europe1",
+      "relation": "journaliste intervenant",
+      "url": "https://www.europe1.fr/international/pascal-praud-et-vous-conflit-israel-hamas-le-mot-genocide-ne-correspond-pas-a-la-realite-estime-gerard-carreyrou-774797",
+      "date": "2025-10-01"
+    },
+    {
+      "source": "elisabeth-levy",
+      "target": "causeur",
+      "relation": "fondatrice et directrice de la rédaction",
+      "url": "https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
+      "date": ""
+    },
+    {
+      "source": "elisabeth-levy",
+      "target": "sud-radio",
+      "relation": "éditorialiste et chroniqueuse",
+      "url": "https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
+      "date": ""
+    },
+    {
+      "source": "elisabeth-levy",
+      "target": "cnews",
+      "relation": "intervenante dans « L'Heure des pros » (depuis 2017)",
+      "url": "https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
+      "date": ""
+    },
+    {
+      "source": "elisabeth-levy",
+      "target": "robert-menard",
+      "relation": "co-autrice d'ouvrages",
+      "url": "https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
+      "date": ""
+    },
+    {
+      "source": "caroline-fourest",
+      "target": "franc-tireur",
+      "relation": "directrice éditoriale et éditorialiste",
+      "url": "https://www.strategies.fr/medias/caroline-fourest-directrice-editoriale-et-editorialiste-de-franc-tireur",
+      "date": "2022-04-07"
+    },
+    {
+      "source": "raphael-enthoven",
+      "target": "franc-tireur",
+      "relation": "membre du comité de rédaction",
+      "url": "https://www.strategies.fr/medias/caroline-fourest-directrice-editoriale-et-editorialiste-de-franc-tireur",
+      "date": "2022-04-07"
+    },
+    {
+      "source": "yonathan-arfi",
+      "target": "crif",
+      "relation": "président",
+      "url": "https://www.bfmtv.com/politique/yonathan-arfi-president-du-crif-l-accusation-de-genocide-ne-vise-pas-a-proteger-les-palestiniens-mais-resonne-comme-un-cri-de-ralliement-pour-stigmatiser-les-juifs_VN-202405060963.html",
+      "date": "2024-05-06"
+    },
+    {
+      "source": "jean-dominique-merchet",
+      "target": "lexpress",
+      "relation": "journaliste (biographie X)",
+      "url": "https://x.com/jdomerchet",
+      "date": "2026-11-03"
+    },
+    {
+      "source": "bernard-henri-levy",
+      "target": "le-point",
+      "relation": "chroniqueur",
+      "url": "https://bernard-henri-levy.com/fr/il-ny-a-pas-de-genocide-a-gaza-2/",
+      "date": "2026-10-05"
+    }
+  ]
+}
