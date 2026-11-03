@@ -2,10 +2,13 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <title>Gaza et extrême droite : cartographie des déclarations publiques en France</title>
 <meta name="description" content="Cartographie sourcée de déclarations publiques sur Gaza et de liens publics entre personnalités et organisations en France. Chaque élément renvoie à sa source.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Ccircle cx=%228%22 cy=%228%22 r=%227%22 fill=%22%233b5b7a%22/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Ccircle cx=%228%22 cy=%228%22 r=%227%22 fill=%22%23007AFF%22/%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,66 +17,100 @@
   <div class="wrap">
     <h1>Gaza et extrême droite : cartographie des déclarations publiques en France</h1>
     <p class="subtitle">Déclarations publiques datées et liens publics entre personnalités et organisations, chacun accompagné de sa source.</p>
+  </div>
+</header>
+<div class="tabbar">
+  <div class="wrap">
     <nav class="tabs" role="tablist" aria-label="Sections">
+      <span class="seg-thumb" aria-hidden="true"></span>
       <a role="tab" href="#graphe" data-tab="graphe" id="tab-graphe">Arbre des relations</a>
       <a role="tab" href="#liste" data-tab="liste" id="tab-liste">Liste</a>
       <a role="tab" href="#methodologie" data-tab="methodologie" id="tab-methodologie">Méthodologie</a>
     </nav>
   </div>
-</header>
+</div>
 
 <main id="main">
   <!-- GRAPHE -->
   <section id="view-graphe" class="view" role="tabpanel" aria-labelledby="tab-graphe">
-    <div class="toolbar">
-      <div class="field search">
-        <label for="graph-search">Rechercher</label>
-        <input id="graph-search" type="search" placeholder="Nom, rôle, organisation…" autocomplete="off" list="node-names">
-        <datalist id="node-names"></datalist>
+    <div class="graph-shell">
+      <div class="toolbar">
+        <div class="toolbar-top">
+          <div class="field search">
+            <label for="graph-search" class="sr-only">Rechercher</label>
+            <div class="search-box">
+              <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg>
+              <input id="graph-search" type="search" placeholder="Nom, rôle, organisation…" autocomplete="off" list="node-names" enterkeyhint="search">
+            </div>
+            <datalist id="node-names"></datalist>
+          </div>
+          <button type="button" id="filters-toggle" class="icon-btn filters-toggle" aria-expanded="false" aria-controls="filters" aria-label="Filtres">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M7 12h10M10 17h4"/></svg>
+            <span class="dot" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="filters" id="filters">
+          <div class="filters-inner">
+            <fieldset class="field">
+              <legend>Thèmes des déclarations</legend>
+              <div id="theme-filters" class="checks"></div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Types</legend>
+              <div id="type-filters" class="checks"></div>
+            </fieldset>
+          </div>
+        </div>
       </div>
-      <fieldset class="field">
-        <legend>Thèmes des déclarations</legend>
-        <div id="theme-filters" class="checks"></div>
-      </fieldset>
-      <fieldset class="field">
-        <legend>Types</legend>
-        <div id="type-filters" class="checks"></div>
-      </fieldset>
-      <div class="field actions">
-        <button type="button" id="btn-fit" class="btn">Recentrer</button>
-        <button type="button" id="btn-reset" class="btn btn-ghost">Réinitialiser</button>
+      <div class="graph-layout">
+        <div class="graph-wrap">
+          <div id="graph" aria-label="Graphe interactif des relations. Une version textuelle est disponible dans l'onglet Liste."></div>
+          <div class="field actions graph-controls">
+            <button type="button" id="btn-fit" class="btn">
+              <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/><circle cx="12" cy="12" r="2.5"/></svg>
+              <span>Recentrer</span>
+            </button>
+            <button type="button" id="btn-reset" class="btn btn-ghost">
+              <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3"/><path d="M4 4v4h4"/></svg>
+              <span>Réinitialiser</span>
+            </button>
+          </div>
+          <div id="legend" class="legend" aria-label="Légende"></div>
+          <p class="hint">Survolez un lien pour lire la relation ; cliquez sur un nœud pour afficher ses déclarations et ses sources. Molette ou pincement pour zoomer, glisser pour se déplacer.</p>
+        </div>
+        <aside id="panel" class="panel" hidden aria-live="polite">
+          <div class="panel-head">
+            <span class="grabber" aria-hidden="true"></span>
+            <button type="button" class="panel-close" id="panel-close" aria-label="Fermer le panneau">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg>
+            </button>
+          </div>
+          <div id="panel-body"></div>
+        </aside>
       </div>
-    </div>
-    <div class="graph-layout">
-      <div class="graph-wrap">
-        <div id="graph" aria-label="Graphe interactif des relations. Une version textuelle est disponible dans l'onglet Liste."></div>
-        <div id="legend" class="legend" aria-label="Légende"></div>
-        <p class="hint">Survolez un lien pour lire la relation ; cliquez sur un nœud pour afficher ses déclarations et ses sources. Molette ou pincement pour zoomer, glisser pour se déplacer.</p>
-      </div>
-      <aside id="panel" class="panel" hidden aria-live="polite">
-        <button type="button" class="panel-close" id="panel-close" aria-label="Fermer le panneau">×</button>
-        <div id="panel-body"></div>
-      </aside>
     </div>
   </section>
 
   <!-- LISTE -->
   <section id="view-liste" class="view" role="tabpanel" aria-labelledby="tab-liste" hidden>
     <div class="wrap">
-      <div class="toolbar list-toolbar">
+      <div class="list-toolbar">
         <div class="field search">
           <label for="list-search">Rechercher dans la liste</label>
-          <input id="list-search" type="search" placeholder="Nom, rôle, citation, média…" autocomplete="off">
+          <div class="search-box">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg>
+            <input id="list-search" type="search" placeholder="Nom, rôle, citation, média…" autocomplete="off" enterkeyhint="search">
+          </div>
         </div>
         <div class="field">
           <label for="list-theme">Thème</label>
           <select id="list-theme"><option value="">Tous les thèmes</option></select>
         </div>
-        <p class="count" id="list-count" aria-live="polite"></p>
       </div>
+      <p class="count" id="list-count" aria-live="polite"></p>
       <table class="people" id="people-table">
         <caption class="sr-only">Personnes, déclarations et sources</caption>
-        <thead><tr><th scope="col">Personne</th><th scope="col">Déclarations publiques</th><th scope="col">Relations</th></tr></thead>
+        <thead class="sr-only"><tr><th scope="col">Personne</th><th scope="col">Déclarations publiques</th><th scope="col">Relations</th></tr></thead>
         <tbody id="people-body"></tbody>
       </table>
     </div>
@@ -81,7 +118,7 @@
 
   <!-- METHODOLOGIE -->
   <section id="view-methodologie" class="view" role="tabpanel" aria-labelledby="tab-methodologie" hidden>
-    <div class="wrap prose">
+    <div class="wrap"><article class="prose card">
       <h2>Méthodologie</h2>
       <h3>Objet</h3>
       <p>Ce site documente des <strong>propos publics</strong> tenus en France au sujet de la guerre à Gaza, ainsi que des <strong>liens publics</strong> (appartenance, fonction, collaboration éditoriale, soutien déclaré, événement commun) entre des personnalités et des organisations. Il ne constitue pas une accusation : il rassemble des éléments publiés et vérifiables.</p>
@@ -112,7 +149,7 @@
       <blockquote id="meta-methodology"></blockquote>
       <h3>Contact et droit de réponse</h3>
       <p class="contact">Pour signaler une erreur ou demander un droit de réponse : ouvrir une issue sur le dépôt GitHub.</p>
-    </div>
+    </article></div>
   </section>
 </main>
 
@@ -122,6 +159,7 @@
     <p>Pour signaler une erreur ou demander un droit de réponse : ouvrir une issue sur le dépôt GitHub.</p>
   </div>
 </footer>
+<div class="sheet-scrim" id="sheet-scrim" aria-hidden="true"></div>
 
 <script src="vendor/vis-network.min.js"></script>
 <script src="app.js"></script>
