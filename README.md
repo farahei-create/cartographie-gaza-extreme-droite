@@ -2,11 +2,13 @@
 
 Site statique (HTML/CSS/JavaScript, **sans étape de build**) qui présente :
 
-- un **arbre des relations** interactif entre personnalités et organisations (partis, médias, associations, événements) ;
-- pour chaque personne, ses **déclarations publiques** datées, avec le média et un **lien vers la source** ;
-- pour chaque relation, un **lien vers la source** qui l'établit ;
-- une **liste** consultable et filtrable (accessible et adaptée au mobile) ;
-- une section **Méthodologie** (critères d'inclusion, neutralité, absence de qualification juridique, droit de réponse).
+- une page d'**Accueil** (présentation, chiffres clés calculés depuis les données, recherche, dernières déclarations) ;
+- une vue **Sections** (Gaza / France / communs) organisée par **catégories** et **sous-catégories** ;
+- une **fiche** par personne ou organisation (`#/personne/<id>`, `#/organisation/<id>`) : photo et crédit, fonction, frise datée des déclarations (citation, média, thème, source, copie archivée, vidéo), relations, bouton Partager ;
+- une **Chronologie** de toutes les déclarations et de tous les liens datés, filtrable par section, catégorie, thème et année ;
+- le **Réseau** interactif des relations (avec plein écran) ;
+- une section **Méthodologie** (critères d'inclusion, neutralité, archivage, citation, absence de qualification juridique, droit de réponse) ;
+- un format **application installable** (manifeste + service worker : écran d'accueil iPhone via Safari › Partager › « Sur l'écran d'accueil »).
 
 Les citations sont reproduites telles que publiées. Le site ne porte aucune qualification juridique sur les personnes citées.
 
@@ -14,9 +16,11 @@ Les citations sont reproduites telles que publiées. Le site ne porte aucune qua
 
 | Fichier | Rôle |
 |---|---|
-| `index.html` | Page unique (onglets : Arbre des relations, Liste, Méthodologie) |
+| `index.html` | Page unique (vues : Accueil, Sections, fiche, Chronologie, Réseau, Méthodologie) |
 | `style.css` | Mise en forme (sobre, responsive) |
-| `app.js` | Chargement de `data.json`, graphe, filtres, panneau latéral, liste |
+| `app.js` | Chargement de `data.json`, routage `#/…`, accueil, sections, fiches, chronologie, graphe |
+| `manifest.webmanifest`, `icons/` | Application installable (nom, couleurs, icônes 180/192/512 et « maskable ») |
+| `sw.js` | Service worker : coque + données + images en cache (réseau d'abord pour `data.json`) |
 | `data.json` | Jeu de données (seule source de contenu) |
 | `vendor/vis-network.min.js` | Bibliothèque [vis-network](https://github.com/visjs/vis-network) 9.1.9 embarquée localement (licence Apache-2.0 / MIT), aucune dépendance à un CDN |
 
@@ -44,8 +48,9 @@ Structure :
       "type": "person | org",
       "role": "Fonction publique (pour une organisation : « Parti politique », « Hebdomadaire », « Association », « Événement »…)",
       "description": "Description neutre et factuelle",
+      "category": "Responsables politiques", "subcategory": "Parlementaires & élus",
       "statements": [
-        { "quote": "Citation exacte, telle que publiée", "date": "AAAA-MM-JJ", "medium": "Média / support", "url": "https://…", "theme": "Gaza – déclarations" }
+        { "quote": "Citation exacte, telle que publiée", "date": "AAAA-MM-JJ", "medium": "Média / support", "url": "https://…", "theme": "Gaza – déclarations", "section": "gaza | france", "archive_url": "https://web.archive.org/web/…", "archived": "AAAA-MM-JJ" }
       ]
     }
   ],

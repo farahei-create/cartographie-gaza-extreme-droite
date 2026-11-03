@@ -11,6 +11,18 @@
       "logos": 19,
       "videos": 14,
       "france_nodes": 29
+    },
+    "category_order": [
+      "Responsables politiques",
+      "Médias & propriétaires",
+      "Journalistes & éditorialistes",
+      "Intellectuels & essayistes",
+      "Organisations & institutions",
+      "Événements"
+    ],
+    "sections": {
+      "gaza": "Gaza",
+      "france": "France – normalisation de l'extrême droite"
     }
   },
   "nodes": [
@@ -26,35 +38,50 @@
           "date": "2024-09-09",
           "medium": "Le Point (tribune)",
           "url": "https://www.lepoint.fr/debats/qualifier-de-genocide-l-operation-menee-par-l-armee-israelienne-releve-de-la-manipulation-politique-09-09-2024-2569814_2.php",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20260502000330/https://www.lepoint.fr/debats/qualifier-de-genocide-l-operation-menee-par-l-armee-israelienne-releve-de-la-manipulation-politique-09-09-2024-2569814_2.php",
+          "archived": "2026-05-02"
         },
         {
           "quote": "Un génocide ne dépend pas du nombre mais de l'intention.",
           "date": "2024-09-09",
           "medium": "Le Point (tribune)",
           "url": "https://www.lepoint.fr/debats/qualifier-de-genocide-l-operation-menee-par-l-armee-israelienne-releve-de-la-manipulation-politique-09-09-2024-2569814_2.php",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20260502000330/https://www.lepoint.fr/debats/qualifier-de-genocide-l-operation-menee-par-l-armee-israelienne-releve-de-la-manipulation-politique-09-09-2024-2569814_2.php",
+          "archived": "2026-05-02"
         },
         {
           "quote": "l'armée israélienne, qui prévient les populations civiles avant les bombardements, ce que, sauf omission de ma part, aucune autre armée au monde ne fait, ne commet aucun massacre.",
           "date": "2024-09-09",
           "medium": "Le Point (tribune)",
           "url": "https://www.lepoint.fr/debats/qualifier-de-genocide-l-operation-menee-par-l-armee-israelienne-releve-de-la-manipulation-politique-09-09-2024-2569814_2.php",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20260502000330/https://www.lepoint.fr/debats/qualifier-de-genocide-l-operation-menee-par-l-armee-israelienne-releve-de-la-manipulation-politique-09-09-2024-2569814_2.php",
+          "archived": "2026-05-02"
         },
         {
           "quote": "je n'ai pu, en conscience, laisser parler d'un « génocide » en cours à Gaza […] C'est ce qu'a été la Shoah. Ce n'est pas ce que nous voyons à Gaza.",
           "date": "2025-07-02",
           "medium": "LinkedIn (publication de l'intéressée)",
           "url": "https://fr.linkedin.com/posts/caroline-yadan-05259625a_dans-le-cadre-de-lexamen-des-r%C3%A9solutions-activity-7346234799956615168-muNj",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261103044119/https://fr.linkedin.com/posts/caroline-yadan-05259625a_dans-le-cadre-de-lexamen-des-r%C3%A9solutions-activity-7346234799956615168-muNj",
+          "archived": "2026-11-03"
         },
         {
           "quote": "[sa proposition de loi] ne vient pas interdire l'emploi du mot génocide (qui n'en est pas un) à Gaza…",
           "date": "2025-07-23",
           "medium": "Message sur X, cité par Marianne",
           "url": "https://www.marianne.net/politique/lrem/la-deputee-caroline-yadan-essaie-t-elle-vraiment-de-faire-interdire-toute-mention-de-genocide-a-gaza",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20251112193659/https://www.marianne.net/politique/lrem/la-deputee-caroline-yadan-essaie-t-elle-vraiment-de-faire-interdire-toute-mention-de-genocide-a-gaza",
+          "archived": "2025-11-12"
         }
       ],
       "sections": [
@@ -67,7 +94,9 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:20240708-P1020183_Caroline_Yadan_Wikipedia.jpg",
         "file": "20240708-P1020183_Caroline_Yadan_Wikipedia.jpg"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus"
     },
     {
       "id": "aurore-berge",
@@ -82,20 +111,26 @@
           "medium": "franceinfo",
           "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
           "theme": "Gaza – déclarations",
+          "section": "gaza",
           "video": {
             "url": "https://www.youtube.com/watch?v=kmpRKPSrlI4",
             "platform": "youtube",
             "id": "kmpRKPSrlI4",
             "title": "Dénoncer un génocide à Gaza, \"c'est une falsification historique\", estime Aurore Bergé",
             "source": "franceinfo (chaîne YouTube officielle)"
-          }
+          },
+          "archive_url": "https://web.archive.org/web/20260407021925/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
+          "archived": "2026-04-07"
         },
         {
           "quote": "on ne peut pas accepter les falsifications historiques",
           "date": "2025-07-22",
           "medium": "franceinfo",
           "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20260407021925/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
+          "archived": "2026-04-07"
         }
       ],
       "sections": [
@@ -108,7 +143,9 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:AURORE_BERG%C3%89_04_(cropped).jpg",
         "file": "AURORE_BERGÉ_04_(cropped).jpg"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Gouvernement & exécutif"
     },
     {
       "id": "patrick-klugman",
@@ -122,12 +159,17 @@
           "date": "2025-07-22",
           "medium": "Communiqué du Comité français pour Yad Vashem, cité par franceinfo (date de l'article)",
           "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20260407021925/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
+          "archived": "2026-04-07"
         }
       ],
       "sections": [
         "gaza"
-      ]
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Associations & représentants"
     },
     {
       "id": "meyer-habib",
@@ -141,21 +183,30 @@
           "date": "2023-10-20",
           "medium": "Radio J, cité par 20 Minutes / AFP",
           "url": "https://www.20minutes.fr/justice/4118457-20241029-guerre-israel-hamas-meyer-habib-compare-population-gaza-cancer-enquete-ouverte",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20260115195953/https://www.20minutes.fr/justice/4118457-20241029-guerre-israel-hamas-meyer-habib-compare-population-gaza-cancer-enquete-ouverte",
+          "archived": "2026-01-15"
         },
         {
           "quote": "Mes propos ont été sciemment dénaturés… [il n'a] jamais visé l'ensemble de la population",
           "date": "2024-10-29",
           "medium": "Réponse de l'intéressé, citée par 20 Minutes",
           "url": "https://www.20minutes.fr/justice/4118457-20241029-guerre-israel-hamas-meyer-habib-compare-population-gaza-cancer-enquete-ouverte",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20260115195953/https://www.20minutes.fr/justice/4118457-20241029-guerre-israel-hamas-meyer-habib-compare-population-gaza-cancer-enquete-ouverte",
+          "archived": "2026-01-15"
         },
         {
           "quote": "Son discours est irréprochable, à la différence de celui d'Emmanuel Macron et de ses amis",
           "date": "2025-05-15",
           "medium": "i24NEWS, cité par Le HuffPost (à propos de Marine Le Pen)",
           "url": "https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
-          "theme": "Proximité extrême droite"
+          "theme": "Proximité extrême droite",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20250914072232/https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
+          "archived": "2025-09-14"
         }
       ],
       "sections": [
@@ -168,7 +219,9 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:OSCE_Parliamentary_Assembly_-_Meyer_Habib_(MP,_France),_Meeting_of_the_First_Committee,_Winter_Meeting,_Vienna,_22_February_2024_(53545444699)_(cropped).jpg",
         "file": "OSCE_Parliamentary_Assembly_-_Meyer_Habib_(MP,_France),_Meeting_of_the_First_Committee,_Winter_Meeting,_Vienna,_22_February_2024_(53545444699)_(cropped).jpg"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus"
     },
     {
       "id": "marine-le-pen",
@@ -182,21 +235,30 @@
           "date": "2025-05-15",
           "medium": "i24NEWS, cité par Le HuffPost",
           "url": "https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20250914072232/https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
+          "archived": "2025-09-14"
         },
         {
           "quote": "Quand Israël veut déplacer des populations, on lui dit que c'est horrible et honteux. Mais j'imagine que ces déplacements servent à éradiquer le Hamas sans avoir une population civile qui sert de bouclier",
           "date": "2025-05-15",
           "medium": "i24NEWS, cité par Le HuffPost",
           "url": "https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20250914072232/https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
+          "archived": "2025-09-14"
         },
         {
           "quote": "Israël ne refuse pas de livrer de l'alimentation et des biens de première nécessité à Gaza, il ne veut simplement pas que ce soit le Hamas qui les distribue",
           "date": "2025-05-15",
           "medium": "i24NEWS, cité par Le HuffPost",
           "url": "https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20250914072232/https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
+          "archived": "2025-09-14"
         },
         {
           "quote": "On peut se réjouir d'une avancée idéologique (...), puisqu'il est inscrit maintenant dans cette loi la priorité nationale…",
@@ -210,14 +272,18 @@
             "id": "eRw6gUoGSu8",
             "title": "Loi immigration : le RN votera pour, annonce Marine Le Pen qui revendique une \"victoire idéologique\"",
             "source": "FRANCE 24 (chaîne YouTube officielle)"
-          }
+          },
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260911131429/https://www.franceinfo.fr/societe/immigration/loi-immigration-le-rn-votera-pour-annonce-marine-le-pen-qui-revendique-une-victoire-ideologique_6254361.html",
+          "archived": "2026-09-11"
         },
         {
           "quote": "J'aurais pu le signer ce livre",
           "date": "2021-02-11",
           "medium": "France 2, « Vous avez la parole » (à propos d'un livre de Gérald Darmanin), cité par franceinfo",
           "url": "https://www.franceinfo.fr/politique/gerald-darmanin/laicite-immigration-violences-policieres-huit-sequences-a-retenir-de-l-emission-vous-avez-la-parole-avec-gerald-darmanin-et-marine-le-pen_4293225.html",
-          "theme": "France – normalisation de l'extrême droite"
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -231,7 +297,9 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "source_url": "https://commons.wikimedia.org/wiki/File:Marine_Le_Pen_2025_(cropped).jpg",
         "file": "Marine_Le_Pen_2025_(cropped).jpg"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus"
     },
     {
       "id": "jordan-bardella",
@@ -245,7 +313,10 @@
           "date": "2025-03-26",
           "medium": "AFP, cité par France 24",
           "url": "https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20260211151040/https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
+          "archived": "2026-02-11"
         },
         {
           "quote": "Je n'y vais pas pour commenter les opérations militaires",
@@ -253,12 +324,17 @@
           "medium": "RMC",
           "url": "https://rmc.bfmtv.com/actualites/politique/jordan-bardella-en-israel-je-n-y-vais-pas-pour-parler-du-conflit-assure-le-president-du-rn_AV-202503190364.html",
           "theme": "Gaza – déclarations",
+          "section": "gaza",
           "video": {
             "url": "https://rmc.bfmtv.com/actualites/politique/jordan-bardella-en-israel-je-n-y-vais-pas-pour-parler-du-conflit-assure-le-president-du-rn_AV-202503190364.html",
             "platform": "rmc.bfmtv.com",
             "title": "Jordan Bardella en Israël : « Je n'y vais pas pour parler du conflit », assure le président du RN",
-            "source": "RMC (site officiel)"
-          }
+            "source": "RMC (site officiel)",
+            "archive_url": "https://web.archive.org/web/20250408160440/https://rmc.bfmtv.com/actualites/politique/jordan-bardella-en-israel-je-n-y-vais-pas-pour-parler-du-conflit-assure-le-president-du-rn_AV-202503190364.html",
+            "archived": "2025-04-08"
+          },
+          "archive_url": "https://web.archive.org/web/20250408160440/https://rmc.bfmtv.com/actualites/politique/jordan-bardella-en-israel-je-n-y-vais-pas-pour-parler-du-conflit-assure-le-president-du-rn_AV-202503190364.html",
+          "archived": "2025-04-08"
         },
         {
           "quote": "La victoire idéologique du Rassemblement national est de plus en plus forte chaque jour",
@@ -272,7 +348,8 @@
             "id": "jzW9e91ZTjo",
             "title": "Jordan Bardella : \"On ne peut pas faire de \"En même temps\" avec l'immigration\" (Grand Entretien, 19/12/2023)",
             "source": "France Inter (chaîne YouTube officielle)"
-          }
+          },
+          "section": "france"
         }
       ],
       "sections": [
@@ -286,7 +363,9 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Jordan_Bardella_-_Strasbourg_European_Parliament_September_2022_(Cropped).jpg",
         "file": "Jordan Bardella - Strasbourg European Parliament September 2022 (Cropped).jpg"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Partis & dirigeants de parti"
     },
     {
       "id": "marion-marechal",
@@ -301,19 +380,27 @@
           "medium": "CNews",
           "url": "https://www.cnews.fr/monde/2024-05-21/marion-marechal-il-ny-pas-de-genocide-gaza-sinon-il-ny-aurait-pas-des-evacuations",
           "theme": "Gaza – déclarations",
+          "section": "gaza",
           "video": {
             "url": "https://www.cnews.fr/monde/2024-05-21/marion-marechal-il-ny-pas-de-genocide-gaza-sinon-il-ny-aurait-pas-des-evacuations",
             "platform": "cnews.fr",
             "title": "Marion Maréchal : « Il n'y a pas de génocide à Gaza… »",
-            "source": "CNews (site officiel)"
-          }
+            "source": "CNews (site officiel)",
+            "archive_url": "https://web.archive.org/web/20240705034513/https://www.cnews.fr/monde/2024-05-21/marion-marechal-il-ny-pas-de-genocide-gaza-sinon-il-ny-aurait-pas-des-evacuations",
+            "archived": "2024-07-05"
+          },
+          "archive_url": "https://web.archive.org/web/20240705034513/https://www.cnews.fr/monde/2024-05-21/marion-marechal-il-ny-pas-de-genocide-gaza-sinon-il-ny-aurait-pas-des-evacuations",
+          "archived": "2024-07-05"
         },
         {
           "quote": "J'ai décidé de lancer un mouvement politique pour contribuer à la victoire du camp national",
           "date": "2024-10-07",
           "medium": "Le Figaro, cité par franceinfo",
           "url": "https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
-          "theme": "Proximité extrême droite"
+          "theme": "Proximité extrême droite",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20250724023204/https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
+          "archived": "2025-07-24"
         }
       ],
       "sections": [
@@ -326,7 +413,9 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Portrait_de_Marion_Mar%C3%A9chal,_avril_2022.jpg",
         "file": "Portrait de Marion Maréchal, avril 2022.jpg"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus"
     },
     {
       "id": "eric-zemmour",
@@ -341,41 +430,54 @@
           "medium": "Le Grand Rendez-Vous Europe 1 / CNews / Les Echos",
           "url": "https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
           "theme": "Gaza – déclarations",
+          "section": "gaza",
           "video": {
             "url": "https://www.youtube.com/watch?v=DBzVOTeT8M4",
             "platform": "youtube",
             "id": "DBzVOTeT8M4",
             "title": "Eric Zemmour dans le Grand Rendez-Vous Europe 1 CNEWS spécial Israël/Hamas (29 octobre 2023)",
             "source": "Europe 1 (chaîne YouTube officielle)"
-          }
+          },
+          "archive_url": "https://web.archive.org/web/20250724222951/https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
+          "archived": "2025-07-24"
         },
         {
           "quote": "Une vie vaut une vie",
           "date": "2023-10-29",
           "medium": "Le Grand Rendez-Vous Europe 1 / CNews / Les Echos",
           "url": "https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20250724222951/https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
+          "archived": "2025-07-24"
         },
         {
           "quote": "Donc non, je ne suis pas d'accord avec la trêve humanitaire",
           "date": "2023-10-29",
           "medium": "Le Grand Rendez-Vous Europe 1 / CNews / Les Echos",
           "url": "https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20250724222951/https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
+          "archived": "2025-07-24"
         },
         {
           "quote": "ils n'ont rien à faire ici, ils sont voleurs, ils sont assassins, ils sont violeurs, c'est tout ce qu'ils sont, il faut les renvoyer et il ne faut même pas qu'ils viennent",
           "date": "2020-09-29",
           "medium": "CNews, « Face à l'info » (à propos des mineurs isolés) ; condamnation définitive par la Cour de cassation le 02/12/2025, selon franceinfo",
           "url": "https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-a-ete-definitivement-condamne-pour-complicite-de-provocation-a-la-haine-apres-ses-propos-tenus-sur-des-mineurs-isoles_7653920.html",
-          "theme": "France – normalisation de l'extrême droite"
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260219163918/https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-a-ete-definitivement-condamne-pour-complicite-de-provocation-a-la-haine-apres-ses-propos-tenus-sur-des-mineurs-isoles_7653920.html",
+          "archived": "2026-02-19"
         },
         {
           "quote": "C'est moi qui ai imposé ce terme dans la campagne présidentielle",
           "date": "2022-02-14",
           "medium": "Cité par franceinfo (à propos du « grand remplacement »)",
           "url": "https://www.franceinfo.fr/politique/valerie-pecresse/presidentielle-2022-valerie-pecresse-radicalise-son-discours_4961262.html",
-          "theme": "France – normalisation de l'extrême droite"
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -389,7 +491,9 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "source_url": "https://commons.wikimedia.org/wiki/File:Portrait_d%27%C3%89ric_Zemmour,_avril_2022.jpg",
         "file": "Portrait_d'Éric_Zemmour,_avril_2022.jpg"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Partis & dirigeants de parti"
     },
     {
       "id": "eric-ciotti",
@@ -404,40 +508,57 @@
           "medium": "BFMTV",
           "url": "https://www.bfmtv.com/politique/les-republicains/elle-s-est-decredibilisee-eric-ciotti-souhaite-que-la-france-quitte-la-cour-penale-internationale_AV-202405220346.html",
           "theme": "Gaza – déclarations",
+          "section": "gaza",
           "video": {
             "url": "https://www.bfmtv.com/politique/les-republicains/elle-s-est-decredibilisee-eric-ciotti-souhaite-que-la-france-quitte-la-cour-penale-internationale_AV-202405220346.html",
             "platform": "bfmtv.com",
             "title": "« Elle s'est décrédibilisée » : Éric Ciotti souhaite que la France quitte la Cour pénale internationale",
-            "source": "BFMTV (site officiel)"
-          }
+            "source": "BFMTV (site officiel)",
+            "archive_url": "https://web.archive.org/web/20240626155550/https://www.bfmtv.com/politique/les-republicains/elle-s-est-decredibilisee-eric-ciotti-souhaite-que-la-france-quitte-la-cour-penale-internationale_AV-202405220346.html",
+            "archived": "2024-06-26"
+          },
+          "archive_url": "https://web.archive.org/web/20240626155550/https://www.bfmtv.com/politique/les-republicains/elle-s-est-decredibilisee-eric-ciotti-souhaite-que-la-france-quitte-la-cour-penale-internationale_AV-202405220346.html",
+          "archived": "2024-06-26"
         },
         {
           "quote": "Il faut une alliance, c'est le sens de la cinquième République",
           "date": "2024-06-11",
           "medium": "TF1, cité par franceinfo",
           "url": "https://www.franceinfo.fr/politique/legislatives-anticipees-eric-ciotti-dit-oui-a-une-alliance-des-republicains-avec-le-rn_6598017.html",
-          "theme": "Proximité extrême droite"
+          "theme": "Proximité extrême droite",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20250608183328/https://www.franceinfo.fr/politique/legislatives-anticipees-eric-ciotti-dit-oui-a-une-alliance-des-republicains-avec-le-rn_6598017.html",
+          "archived": "2025-06-08"
         },
         {
           "quote": "Serge Klarsfeld ne se trompe pas d'ennemi !",
           "date": "2024-06-16",
           "medium": "Message sur X, cité par franceinfo",
           "url": "https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
-          "theme": "Proximité extrême droite"
+          "theme": "Proximité extrême droite",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20260419111603/https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
+          "archived": "2026-04-19"
         },
         {
           "quote": "Je voterais Eric Zemmour, très clairement",
           "date": "2021-09-05",
           "medium": "Grand Jury RTL / LCI / Le Figaro, cité par BFMTV (hypothèse d'un second tour face à Emmanuel Macron)",
           "url": "https://www.bfmtv.com/politique/presidentielle-ciotti-voterait-zemmour-contre-macron-au-deuxieme-tour_AD-202109050141.html",
-          "theme": "France – normalisation de l'extrême droite"
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20250722081009/https://www.bfmtv.com/politique/presidentielle-ciotti-voterait-zemmour-contre-macron-au-deuxieme-tour_AD-202109050141.html",
+          "archived": "2025-07-22"
         },
         {
           "quote": "nous n'avons pas la même histoire",
           "date": "2021-09-05",
           "medium": "Grand Jury RTL / LCI / Le Figaro, cité par BFMTV (à propos d'Éric Zemmour)",
           "url": "https://www.bfmtv.com/politique/presidentielle-ciotti-voterait-zemmour-contre-macron-au-deuxieme-tour_AD-202109050141.html",
-          "theme": "Nuance / contexte"
+          "theme": "Nuance / contexte",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20250722081009/https://www.bfmtv.com/politique/presidentielle-ciotti-voterait-zemmour-contre-macron-au-deuxieme-tour_AD-202109050141.html",
+          "archived": "2025-07-22"
         }
       ],
       "sections": [
@@ -451,7 +572,9 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:%C3%89ric_Ciotti_(cropped).jpg",
         "file": "Éric_Ciotti_(cropped).jpg"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus"
     },
     {
       "id": "yael-braun-pivet",
@@ -465,14 +588,20 @@
           "date": "2023-10-22",
           "medium": "Déclaration en Israël, citée par France 24",
           "url": "https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261025132641/https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
+          "archived": "2026-10-25"
         },
         {
           "quote": "Je vois bien que j'ai eu tort de choisir ce mot, parce qu'il ne reflétait pas ma pensée et il a été compris de telle sorte que ça ne correspond pas à ce que je voulais dire",
           "date": "2025-04-10",
           "medium": "France Inter, cité par BFMTV",
           "url": "https://www.bfmtv.com/politique/parlement/soutien-inconditionnel-a-israel-yael-braun-pivet-reconnait-avoir-eu-tort-de-choisir-ce-mot_AD-202504100354.html",
-          "theme": "Nuance / contexte"
+          "theme": "Nuance / contexte",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20260830215552/https://www.bfmtv.com/politique/parlement/soutien-inconditionnel-a-israel-yael-braun-pivet-reconnait-avoir-eu-tort-de-choisir-ce-mot_AD-202504100354.html",
+          "archived": "2026-08-30"
         }
       ],
       "sections": [
@@ -486,7 +615,9 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Ya%C3%ABl_Braun-Pivet_2023_(cropped).jpg",
         "file": "Yaël_Braun-Pivet_2023_(cropped).jpg"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus"
     },
     {
       "id": "robert-menard",
@@ -500,14 +631,20 @@
           "date": "2025-05-22",
           "medium": "RTL",
           "url": "https://www.rtl.fr/actu/international/une-ignominie-robert-menard-tance-eric-coquerel-sur-rtl-et-refute-le-terme-de-genocide-a-gaza-7900507815",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20251005110802/https://www.rtl.fr/actu/international/une-ignominie-robert-menard-tance-eric-coquerel-sur-rtl-et-refute-le-terme-de-genocide-a-gaza-7900507815",
+          "archived": "2025-10-05"
         },
         {
           "quote": "C'est un massacre, c'est quelque chose de terrible, mais c'est pas un génocide",
           "date": "2025-05-22",
           "medium": "RTL",
           "url": "https://www.rtl.fr/actu/international/une-ignominie-robert-menard-tance-eric-coquerel-sur-rtl-et-refute-le-terme-de-genocide-a-gaza-7900507815",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20251005110802/https://www.rtl.fr/actu/international/une-ignominie-robert-menard-tance-eric-coquerel-sur-rtl-et-refute-le-terme-de-genocide-a-gaza-7900507815",
+          "archived": "2025-10-05"
         }
       ],
       "sections": [
@@ -520,7 +657,9 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Robert_M%C3%A9nard_Meeting_-0664_(cropped).jpg",
         "file": "Robert_Ménard_Meeting_-0664_(cropped).jpg"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus"
     },
     {
       "id": "manuel-valls",
@@ -534,14 +673,20 @@
           "date": "2025-01-16",
           "medium": "Europe 1 / CNews (transcription vie-publique.fr)",
           "url": "https://www.vie-publique.fr/discours/296889-manuel-valls-16012025-europe-1-israel-hamas-cessez-le-feu-et-mayotte",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261103044717/https://www.vie-publique.fr/discours/296889-manuel-valls-16012025-europe-1-israel-hamas-cessez-le-feu-et-mayotte",
+          "archived": "2026-11-03"
         },
         {
           "quote": "je combats le Rassemblement National",
           "date": "2025-01-16",
           "medium": "Europe 1 / CNews (transcription vie-publique.fr)",
           "url": "https://www.vie-publique.fr/discours/296889-manuel-valls-16012025-europe-1-israel-hamas-cessez-le-feu-et-mayotte",
-          "theme": "Nuance / contexte"
+          "theme": "Nuance / contexte",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261103044717/https://www.vie-publique.fr/discours/296889-manuel-valls-16012025-europe-1-israel-hamas-cessez-le-feu-et-mayotte",
+          "archived": "2026-11-03"
         }
       ],
       "sections": [
@@ -554,7 +699,9 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Manuel_Valls_2025_(cropped).jpg",
         "file": "Manuel_Valls_2025_(cropped).jpg"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Gouvernement & exécutif"
     },
     {
       "id": "bernard-henri-levy",
@@ -568,21 +715,28 @@
           "date": "2024-04-02",
           "medium": "France 3 Côte d'Azur (entretien publié le 04/04/2024)",
           "url": "https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/alpes-maritimes/nice/entretien-bernard-henri-levy-il-n-y-a-pas-de-genocide-a-gaza-il-n-y-a-pas-de-massacre-delibere-des-populations-civiles-2949686.html",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261009122544/https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/alpes-maritimes/nice/entretien-bernard-henri-levy-il-n-y-a-pas-de-genocide-a-gaza-il-n-y-a-pas-de-massacre-delibere-des-populations-civiles-2949686.html",
+          "archived": "2026-10-09"
         },
         {
           "quote": "Eh oui. Je le répéterai sur tous les tons s'il le faut. Il n'y a pas de genocide à Gaza.",
           "date": "2026-10-15",
           "medium": "X (@BHL)",
           "url": "https://x.com/BHL/status/2110817601270231314",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
         },
         {
           "quote": "Et l'extrême droite qui nous dit qu'elle s'est convertie, qu'elle était antisémite, qu'elle ne l'est plus, quelle merveille si c'est vrai. Mais si c'est vrai : il faut des preuves.",
           "date": "2024-04-02",
           "medium": "France 3 Côte d'Azur",
           "url": "https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/alpes-maritimes/nice/entretien-bernard-henri-levy-il-n-y-a-pas-de-genocide-a-gaza-il-n-y-a-pas-de-massacre-delibere-des-populations-civiles-2949686.html",
-          "theme": "Nuance / contexte"
+          "theme": "Nuance / contexte",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261009122544/https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/alpes-maritimes/nice/entretien-bernard-henri-levy-il-n-y-a-pas-de-genocide-a-gaza-il-n-y-a-pas-de-massacre-delibere-des-populations-civiles-2949686.html",
+          "archived": "2026-10-09"
         }
       ],
       "sections": [
@@ -595,7 +749,9 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Bernard-Henri_L%C3%A9vy_par_Marc_Roussel_en_2024.jpg",
         "file": "Bernard-Henri_Lévy_par_Marc_Roussel_en_2024.jpg"
-      }
+      },
+      "category": "Intellectuels & essayistes",
+      "subcategory": "Philosophes & essayistes"
     },
     {
       "id": "raphael-enthoven",
@@ -609,35 +765,44 @@
           "date": "2025-08-15",
           "medium": "X, cité par franceinfo",
           "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/on-vous-explique-la-polemique-autour-de-raphael-enthoven-deprogramme-du-festival-livres-dans-la-boucle-apres-ses-messages-sur-gaza_7480282.html",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20251219051636/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/on-vous-explique-la-polemique-autour-de-raphael-enthoven-deprogramme-du-festival-livres-dans-la-boucle-apres-ses-messages-sur-gaza_7480282.html",
+          "archived": "2025-12-19"
         },
         {
           "quote": "Je persiste. A mon sens, il n'y a aucun journaliste à Gaza, car je refuse la qualité de journaliste à quiconque travaille pour une organisation terroriste.",
           "date": "2025-08-17",
           "medium": "X, cité par franceinfo",
           "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/on-vous-explique-la-polemique-autour-de-raphael-enthoven-deprogramme-du-festival-livres-dans-la-boucle-apres-ses-messages-sur-gaza_7480282.html",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20251219051636/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/on-vous-explique-la-polemique-autour-de-raphael-enthoven-deprogramme-du-festival-livres-dans-la-boucle-apres-ses-messages-sur-gaza_7480282.html",
+          "archived": "2025-12-19"
         },
         {
           "quote": "Je n'en peux plus, de ce \"génocide\" commis par une nation agressée sur une population qui a augmenté depuis le début des combats, […]",
           "date": "2026-10-10",
           "medium": "X (@Enthoven_R)",
           "url": "https://x.com/Enthoven_R/status/2108828983693373510",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
         },
         {
           "quote": "J'ai tort sur un point. La population de Gaza n'a pas augmenté, mais légèrement diminué en valeur absolue depuis le 7 octobre 2023. Mais ça ne change rien sur le fond. Une guerre n'est pas un génocide.",
           "date": "2026-10-11",
           "medium": "X (@Enthoven_R)",
           "url": "https://x.com/Enthoven_R/status/2109306896901361749",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
         },
         {
           "quote": "il propage le mythe du « génocide à Gaza » dont la raison d'être est de rendre digeste le 7 octobre en lui opposant un crime encore plus grave.",
           "date": "2026-10-07",
           "medium": "X (@Enthoven_R)",
           "url": "https://x.com/Enthoven_R/status/2107851573879832611",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
         }
       ],
       "sections": [
@@ -650,7 +815,9 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Raphael_Enthoven.jpg",
         "file": "Raphael_Enthoven.jpg"
-      }
+      },
+      "category": "Intellectuels & essayistes",
+      "subcategory": "Philosophes & essayistes"
     },
     {
       "id": "caroline-fourest",
@@ -664,14 +831,20 @@
           "date": "2023-10-29",
           "medium": "BFMTV, cité par Le HuffPost",
           "url": "https://www.huffingtonpost.fr/politique/article/guerre-israel-hamas-apres-les-propos-de-fourest-sur-les-morts-de-gaza-les-deputes-lfi-saisissent-l-arcom_225122.html",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261103045125/https://www.huffingtonpost.fr/politique/article/guerre-israel-hamas-apres-les-propos-de-fourest-sur-les-morts-de-gaza-les-deputes-lfi-saisissent-l-arcom_225122.html",
+          "archived": "2026-11-03"
         },
         {
           "quote": "Je maintiens, malgré la meute, qu'il existe une différence d'intention fondamentale entre cibler des enfants pour les décapiter et perdre la tête au point de bombarder le Hamas au milieu d'enfants. Comme je maintiens que c'est grave et tuer des innocents.",
           "date": "2023-10-30",
           "medium": "X, cité par Le HuffPost",
           "url": "https://www.huffingtonpost.fr/politique/article/guerre-israel-hamas-apres-les-propos-de-fourest-sur-les-morts-de-gaza-les-deputes-lfi-saisissent-l-arcom_225122.html",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261103045125/https://www.huffingtonpost.fr/politique/article/guerre-israel-hamas-apres-les-propos-de-fourest-sur-les-morts-de-gaza-les-deputes-lfi-saisissent-l-arcom_225122.html",
+          "archived": "2026-11-03"
         }
       ],
       "sections": [
@@ -684,7 +857,9 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Caroline_Fourest_-_2025.jpg",
         "file": "Caroline_Fourest_-_2025.jpg"
-      }
+      },
+      "category": "Journalistes & éditorialistes",
+      "subcategory": "Directions de rédaction"
     },
     {
       "id": "gilles-william-goldnadel",
@@ -699,31 +874,42 @@
           "medium": "CNews",
           "url": "https://www.cnews.fr/videos/monde/2024-10-07/jamais-israel-na-voulu-cibler-un-civil-soutient-gilles-william-goldnadel",
           "theme": "Gaza – déclarations",
+          "section": "gaza",
           "video": {
             "url": "https://www.cnews.fr/videos/monde/2024-10-07/jamais-israel-na-voulu-cibler-un-civil-soutient-gilles-william-goldnadel",
             "platform": "cnews.fr",
             "title": "«Jamais Israël n'a voulu cibler un civil», soutient Gilles-William Goldnadel",
-            "source": "CNews (site officiel)"
-          }
+            "source": "CNews (site officiel)",
+            "archive_url": "https://web.archive.org/web/20261103045215/https://www.cnews.fr/videos/monde/2024-10-07/jamais-israel-na-voulu-cibler-un-civil-soutient-gilles-william-goldnadel",
+            "archived": "2026-11-03"
+          },
+          "archive_url": "https://web.archive.org/web/20261103045215/https://www.cnews.fr/videos/monde/2024-10-07/jamais-israel-na-voulu-cibler-un-civil-soutient-gilles-william-goldnadel",
+          "archived": "2026-11-03"
         },
         {
           "quote": "il n'y a pas de génocide à Gaza. Il n'y a aucun élément juridique, aucun jugement qui a vu un génocide.",
           "date": "2025-10-01",
           "medium": "« Pascal Praud et vous » (Europe 1 / CNews), cité par Télé 7 Jours",
           "url": "https://www.programme-television.org/news/people/polemique/pascal-praud-sen-prend-a-nagui-apres-lusage-du-mot-genocide-pour-qualifier-la-guerre-a-gaza-6643",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261103045243/https://www.programme-television.org/news/people/polemique/pascal-praud-sen-prend-a-nagui-apres-lusage-du-mot-genocide-pour-qualifier-la-guerre-a-gaza-6643",
+          "archived": "2026-11-03"
         },
         {
           "quote": "énième reportage à Gaza ( jamais au Soudan ou au Nigeria) où l'on prononce 12 fois le terme « génocide » . Le mensonge répété se transforme en mythe incrusté.",
           "date": "2026-10-10",
           "medium": "X (@GWGoldnadel)",
           "url": "https://x.com/GWGoldnadel/status/2108986735938220224",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
         }
       ],
       "sections": [
         "gaza"
-      ]
+      ],
+      "category": "Journalistes & éditorialistes",
+      "subcategory": "Journalistes & chroniqueurs"
     },
     {
       "id": "jules-torres",
@@ -737,12 +923,17 @@
           "date": "2025-05-27",
           "medium": "CNews, « L'Heure des Pros 2 », cité par 20 Minutes",
           "url": "https://www.20minutes.fr/monde/israel/4155846-20250528-gaza-population-augmente-enclave-palestinienne-pourquoi-idee-tient",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20250729023543/https://www.20minutes.fr/monde/israel/4155846-20250528-gaza-population-augmente-enclave-palestinienne-pourquoi-idee-tient",
+          "archived": "2025-07-29"
         }
       ],
       "sections": [
         "gaza"
-      ]
+      ],
+      "category": "Journalistes & éditorialistes",
+      "subcategory": "Journalistes & chroniqueurs"
     },
     {
       "id": "gerard-carreyrou",
@@ -757,17 +948,24 @@
           "medium": "Europe 1, « Pascal Praud et vous »",
           "url": "https://www.europe1.fr/international/pascal-praud-et-vous-conflit-israel-hamas-le-mot-genocide-ne-correspond-pas-a-la-realite-estime-gerard-carreyrou-774797",
           "theme": "Gaza – déclarations",
+          "section": "gaza",
           "video": {
             "url": "https://www.europe1.fr/international/pascal-praud-et-vous-conflit-israel-hamas-le-mot-genocide-ne-correspond-pas-a-la-realite-estime-gerard-carreyrou-774797",
             "platform": "europe1.fr",
             "title": "Pascal Praud et vous – Conflit Israël-Hamas : « Le mot 'génocide' ne correspond pas » à la réalité, estime Gérard Carreyrou",
-            "source": "Europe 1 (site officiel)"
-          }
+            "source": "Europe 1 (site officiel)",
+            "archive_url": "https://web.archive.org/web/20251002205322/https://www.europe1.fr/international/pascal-praud-et-vous-conflit-israel-hamas-le-mot-genocide-ne-correspond-pas-a-la-realite-estime-gerard-carreyrou-774797",
+            "archived": "2025-10-02"
+          },
+          "archive_url": "https://web.archive.org/web/20251002205322/https://www.europe1.fr/international/pascal-praud-et-vous-conflit-israel-hamas-le-mot-genocide-ne-correspond-pas-a-la-realite-estime-gerard-carreyrou-774797",
+          "archived": "2025-10-02"
         }
       ],
       "sections": [
         "gaza"
-      ]
+      ],
+      "category": "Journalistes & éditorialistes",
+      "subcategory": "Journalistes & chroniqueurs"
     },
     {
       "id": "joseph-thouvenel",
@@ -782,12 +980,17 @@
           "medium": "CNews",
           "url": "https://www.cnews.fr/monde/2025-08-03/guerre-au-proche-orient-un-genocide-cest-faire-disparaitre-volontairement-un",
           "theme": "Gaza – déclarations",
+          "section": "gaza",
           "video": {
             "url": "https://www.cnews.fr/monde/2025-08-03/guerre-au-proche-orient-un-genocide-cest-faire-disparaitre-volontairement-un",
             "platform": "cnews.fr",
             "title": "Guerre au Proche-Orient : « Un génocide, c'est faire disparaître volontairement un peuple… », analyse Joseph Thouvenel",
-            "source": "CNews (site officiel)"
-          }
+            "source": "CNews (site officiel)",
+            "archive_url": "https://web.archive.org/web/20250805071155/https://www.cnews.fr/monde/2025-08-03/guerre-au-proche-orient-un-genocide-cest-faire-disparaitre-volontairement-un",
+            "archived": "2025-08-05"
+          },
+          "archive_url": "https://web.archive.org/web/20250805071155/https://www.cnews.fr/monde/2025-08-03/guerre-au-proche-orient-un-genocide-cest-faire-disparaitre-volontairement-un",
+          "archived": "2025-08-05"
         }
       ],
       "sections": [
@@ -800,7 +1003,9 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:JT_wiki.png",
         "file": "JT_wiki.png"
-      }
+      },
+      "category": "Journalistes & éditorialistes",
+      "subcategory": "Journalistes & chroniqueurs"
     },
     {
       "id": "elisabeth-levy",
@@ -814,14 +1019,20 @@
           "date": "2024-04-08",
           "medium": "Sud Radio, « Le regard d'Élisabeth Lévy » (transcription automatique)",
           "url": "https://www.sudradio.fr/emission/le-regard-delisabeth-levy-566",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20260616153839/https://www.sudradio.fr/emission/le-regard-delisabeth-levy-566",
+          "archived": "2026-06-16"
         },
         {
           "quote": "on accuse Tsahal d'organiser une famine, ce qui est évidemment faux pour ce qui est de l'organisation. Il y a bien effectivement des éléments de famine, malheureusement.",
           "date": "2024-04-08",
           "medium": "Sud Radio, « Le regard d'Élisabeth Lévy » (transcription automatique)",
           "url": "https://www.sudradio.fr/emission/le-regard-delisabeth-levy-566",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20260616153839/https://www.sudradio.fr/emission/le-regard-delisabeth-levy-566",
+          "archived": "2026-06-16"
         }
       ],
       "sections": [
@@ -834,7 +1045,9 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Versailles_-_%C3%89lisabeth_L%C3%A9vy_-_1.jpg",
         "file": "Versailles_-_Élisabeth_Lévy_-_1.jpg"
-      }
+      },
+      "category": "Journalistes & éditorialistes",
+      "subcategory": "Directions de rédaction"
     },
     {
       "id": "yonathan-arfi",
@@ -849,17 +1062,24 @@
           "medium": "BFMTV (discours au dîner du CRIF)",
           "url": "https://www.bfmtv.com/politique/yonathan-arfi-president-du-crif-l-accusation-de-genocide-ne-vise-pas-a-proteger-les-palestiniens-mais-resonne-comme-un-cri-de-ralliement-pour-stigmatiser-les-juifs_VN-202405060963.html",
           "theme": "Gaza – déclarations",
+          "section": "gaza",
           "video": {
             "url": "https://www.bfmtv.com/politique/yonathan-arfi-president-du-crif-l-accusation-de-genocide-ne-vise-pas-a-proteger-les-palestiniens-mais-resonne-comme-un-cri-de-ralliement-pour-stigmatiser-les-juifs_VN-202405060963.html",
             "platform": "bfmtv.com",
             "title": "Yonathan Arfi (président du Crif) : « L'accusation de génocide ne vise pas à protéger les Palestiniens… »",
-            "source": "BFMTV (site officiel)"
-          }
+            "source": "BFMTV (site officiel)",
+            "archive_url": "https://web.archive.org/web/20240514235823/https://www.bfmtv.com/politique/yonathan-arfi-president-du-crif-l-accusation-de-genocide-ne-vise-pas-a-proteger-les-palestiniens-mais-resonne-comme-un-cri-de-ralliement-pour-stigmatiser-les-juifs_VN-202405060963.html",
+            "archived": "2024-05-14"
+          },
+          "archive_url": "https://web.archive.org/web/20240514235823/https://www.bfmtv.com/politique/yonathan-arfi-president-du-crif-l-accusation-de-genocide-ne-vise-pas-a-proteger-les-palestiniens-mais-resonne-comme-un-cri-de-ralliement-pour-stigmatiser-les-juifs_VN-202405060963.html",
+          "archived": "2024-05-14"
         }
       ],
       "sections": [
         "gaza"
-      ]
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Associations & représentants"
     },
     {
       "id": "jean-dominique-merchet",
@@ -873,7 +1093,8 @@
           "date": "2026-10-07",
           "medium": "X (@jdomerchet)",
           "url": "https://x.com/jdomerchet/status/2107742270753558671",
-          "theme": "Gaza – déclarations"
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
         }
       ],
       "sections": [
@@ -886,7 +1107,9 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Jean-Dominique_Merchet_par_Claude_Truong-Ngoc_septembre_2015.jpg",
         "file": "Jean-Dominique_Merchet_par_Claude_Truong-Ngoc_septembre_2015.jpg"
-      }
+      },
+      "category": "Journalistes & éditorialistes",
+      "subcategory": "Journalistes & chroniqueurs"
     },
     {
       "id": "serge-klarsfeld",
@@ -900,14 +1123,20 @@
           "date": "2024-06-15",
           "medium": "LCI, cité par franceinfo",
           "url": "https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
-          "theme": "Proximité extrême droite"
+          "theme": "Proximité extrême droite",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20260419111603/https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
+          "archived": "2026-04-19"
         },
         {
           "quote": "[le RN] a fait sa mue",
           "date": "2024-06-15",
           "medium": "LCI, cité par franceinfo",
           "url": "https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
-          "theme": "Proximité extrême droite"
+          "theme": "Proximité extrême droite",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20260419111603/https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
+          "archived": "2026-04-19"
         }
       ],
       "sections": [
@@ -920,7 +1149,9 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Serge_Klarsfeld_par_Claude_Truong-Ngoc_septembre_2015.jpg",
         "file": "Serge_Klarsfeld_par_Claude_Truong-Ngoc_septembre_2015.jpg"
-      }
+      },
+      "category": "Intellectuels & essayistes",
+      "subcategory": "Historiens"
     },
     {
       "id": "vincent-bollore",
@@ -941,7 +1172,8 @@
             "id": "_vDNinTdQHU",
             "title": "Vincent Bolloré : audition devant la commission d'enquête sur les fréquences TNT",
             "source": "LCP - Assemblée nationale (chaîne YouTube officielle)"
-          }
+          },
+          "section": "france"
         }
       ],
       "sections": [
@@ -955,7 +1187,9 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Festival_automobile_international_2014_-_Photocall_-_103.jpg",
         "file": "Festival_automobile_international_2014_-_Photocall_-_103.jpg"
-      }
+      },
+      "category": "Médias & propriétaires",
+      "subcategory": "Propriétaires, financeurs & groupes"
     },
     {
       "id": "geoffroy-lejeune",
@@ -975,7 +1209,9 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Versailles_-_Geoffroy_Lejeune_-_1.jpg",
         "file": "Versailles_-_Geoffroy_Lejeune_-_1.jpg"
-      }
+      },
+      "category": "Journalistes & éditorialistes",
+      "subcategory": "Directions de rédaction"
     },
     {
       "id": "rn",
@@ -994,7 +1230,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Logo_Rassemblement_National.svg",
         "file": "Logo Rassemblement National.svg",
         "author": "Rassemblement national"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Partis & dirigeants de parti"
     },
     {
       "id": "reconquete",
@@ -1013,7 +1251,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Logo_du_parti_Reconqu%C3%AAte.svg",
         "file": "Logo du parti Reconquête.svg",
         "author": "Reconquête"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Partis & dirigeants de parti"
     },
     {
       "id": "identite-libertes",
@@ -1031,7 +1271,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Identit%C3%A9-Libert%C3%A9s.png",
         "file": "Identité-Libertés.png",
         "author": "Identité-Libertés"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Partis & dirigeants de parti"
     },
     {
       "id": "lr",
@@ -1050,7 +1292,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Les_R%C3%A9publicains_-_logo_(France,_2023).svg",
         "file": "Les Républicains - logo (France, 2023).svg",
         "author": "Les Républicains"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Partis & dirigeants de parti"
     },
     {
       "id": "renaissance-epr",
@@ -1068,7 +1312,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Renaissance-logotype-officiel.svg",
         "file": "Renaissance-logotype-officiel.svg",
         "author": "Original: Stéphane Séjourné Vector: Valo139"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Partis & dirigeants de parti"
     },
     {
       "id": "vivendi-canal",
@@ -1087,7 +1333,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Logo_Canal%2B_1995.svg",
         "file": "Logo Canal+ 1995.svg",
         "author": "Canal+ - Étienne Robial"
-      }
+      },
+      "category": "Médias & propriétaires",
+      "subcategory": "Propriétaires, financeurs & groupes"
     },
     {
       "id": "lagardere",
@@ -1106,7 +1354,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Lagard%C3%A8re.svg",
         "file": "Lagardère.svg",
         "author": "Unknown authorUnknown author"
-      }
+      },
+      "category": "Médias & propriétaires",
+      "subcategory": "Propriétaires, financeurs & groupes"
     },
     {
       "id": "cnews",
@@ -1125,7 +1375,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:CNews_logo.svg",
         "file": "CNews logo.svg",
         "author": "CNews"
-      }
+      },
+      "category": "Médias & propriétaires",
+      "subcategory": "Chaînes, radios & titres"
     },
     {
       "id": "europe1",
@@ -1144,7 +1396,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Europe1_FLAT.png",
         "file": "Europe1 FLAT.png",
         "author": "ONAIR9214"
-      }
+      },
+      "category": "Médias & propriétaires",
+      "subcategory": "Chaînes, radios & titres"
     },
     {
       "id": "jdd",
@@ -1163,7 +1417,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Logo_Journal_du_dimanche.svg",
         "file": "Logo Journal du dimanche.svg",
         "author": "Le Journal du Dimanche"
-      }
+      },
+      "category": "Médias & propriétaires",
+      "subcategory": "Chaînes, radios & titres"
     },
     {
       "id": "valeurs-actuelles",
@@ -1175,7 +1431,9 @@
       "sections": [
         "gaza",
         "france"
-      ]
+      ],
+      "category": "Médias & propriétaires",
+      "subcategory": "Chaînes, radios & titres"
     },
     {
       "id": "franc-tireur",
@@ -1193,7 +1451,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Logo-ft.svg",
         "file": "Logo-ft.svg",
         "author": "Logo du journal Franc Tireur"
-      }
+      },
+      "category": "Médias & propriétaires",
+      "subcategory": "Chaînes, radios & titres"
     },
     {
       "id": "causeur",
@@ -1211,7 +1471,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Logo_causeur.fr.png",
         "file": "Logo causeur.fr.png",
         "author": "Unknown authorUnknown author"
-      }
+      },
+      "category": "Médias & propriétaires",
+      "subcategory": "Chaînes, radios & titres"
     },
     {
       "id": "sud-radio",
@@ -1229,7 +1491,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Logo_Sud_Radio_2014.svg",
         "file": "Logo Sud Radio 2014.svg",
         "author": ""
-      }
+      },
+      "category": "Médias & propriétaires",
+      "subcategory": "Chaînes, radios & titres"
     },
     {
       "id": "le-point",
@@ -1240,7 +1504,9 @@
       "statements": [],
       "sections": [
         "gaza"
-      ]
+      ],
+      "category": "Médias & propriétaires",
+      "subcategory": "Chaînes, radios & titres"
     },
     {
       "id": "crif",
@@ -1258,7 +1524,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:CRIF_logo.svg",
         "file": "CRIF logo.svg",
         "author": "Conseil représentatif des institutions juives de France"
-      }
+      },
+      "category": "Organisations & institutions",
+      "subcategory": "Associations & représentants"
     },
     {
       "id": "yad-vashem-fr",
@@ -1269,7 +1537,9 @@
       "statements": [],
       "sections": [
         "gaza"
-      ]
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Associations & représentants"
     },
     {
       "id": "conf-jerusalem-2025",
@@ -1280,7 +1550,9 @@
       "statements": [],
       "sections": [
         "gaza"
-      ]
+      ],
+      "category": "Événements",
+      "subcategory": "Événements"
     },
     {
       "id": "avocats-sans-frontieres",
@@ -1291,7 +1563,9 @@
       "statements": [],
       "sections": [
         "gaza"
-      ]
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Associations & représentants"
     },
     {
       "id": "lexpress",
@@ -1309,7 +1583,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Logo_L%27Express.svg",
         "file": "Logo L'Express.svg",
         "author": "L'Express"
-      }
+      },
+      "category": "Médias & propriétaires",
+      "subcategory": "Chaînes, radios & titres"
     },
     {
       "id": "gerald-darmanin",
@@ -1323,21 +1599,26 @@
           "date": "2020-07-24",
           "medium": "Le Figaro (entretien), cité par franceinfo",
           "url": "https://www.franceinfo.fr/politique/jean-castex/gouvernement-de-jean-castex/securite-gerald-darmanin-dit-vouloir-stopper-l-ensauvagement-d-une-certaine-partie-de-la-societe_4055715.html",
-          "theme": "France – normalisation de l'extrême droite"
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         },
         {
           "quote": "[le terme résume] la réalité que subissent une partie des Français, notamment des milieux populaires",
           "date": "2020-07-25",
           "medium": "Message sur X, cité par BFMTV",
           "url": "https://www.bfmtv.com/politique/ensauvagement-darmanin-justifie-le-terme-et-se-refere-a-chevenement_AN-202007250131.html",
-          "theme": "Nuance / contexte"
+          "theme": "Nuance / contexte",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20220808005054/https://www.bfmtv.com/politique/ensauvagement-darmanin-justifie-le-terme-et-se-refere-a-chevenement_AN-202007250131.html",
+          "archived": "2022-08-08"
         },
         {
           "quote": "Je trouve qu'en effet vous êtes plus molle que nous pouvons l'être",
           "date": "2021-02-11",
           "medium": "France 2, « Vous avez la parole » (débat avec Marine Le Pen), cité par franceinfo",
           "url": "https://www.franceinfo.fr/politique/gerald-darmanin/laicite-immigration-violences-policieres-huit-sequences-a-retenir-de-l-emission-vous-avez-la-parole-avec-gerald-darmanin-et-marine-le-pen_4293225.html",
-          "theme": "France – normalisation de l'extrême droite"
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -1350,7 +1631,9 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:French_Justice_Minister_G%C3%A9rald_Darmanin_in_2025_(cropped_2).jpg",
         "file": "French_Justice_Minister_Gérald_Darmanin_in_2025_(cropped_2).jpg"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Gouvernement & exécutif"
     },
     {
       "id": "bruno-retailleau",
@@ -1364,7 +1647,10 @@
           "date": "2024-09-29",
           "medium": "Le Journal du dimanche (entretien)",
           "url": "https://www.lejdd.fr/politique/bruno-retailleau-au-jdd-il-faut-renverser-la-table-en-memoire-de-philippine-150010",
-          "theme": "France – normalisation de l'extrême droite"
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20251219014849/https://www.lejdd.fr/politique/bruno-retailleau-au-jdd-il-faut-renverser-la-table-en-memoire-de-philippine-150010",
+          "archived": "2025-12-19"
         },
         {
           "quote": "certes, ce sont des Français mais ce sont des Français par leur identité et malheureusement pour la deuxième, la troisième génération, il y a comme une sorte de régression vers les origines ethniques",
@@ -1378,7 +1664,10 @@
             "id": "lpnv1K6MDZY",
             "title": "Violences urbaines : il y a un \"lien\" avec \"l'immigration\", assure Bruno Retailleau (entretien du 05/07/2023)",
             "source": "franceinfo (chaîne YouTube officielle)"
-          }
+          },
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20240923103213/https://www.bfmtv.com/politique/les-republicains/retailleau-deplore-une-regression-ethnique-des-emeutiers-les-insoumis-denoncent-son-racisme-crasse_AN-202307050457.html",
+          "archived": "2024-09-23"
         }
       ],
       "sections": [
@@ -1391,7 +1680,9 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Bruno_Retailleau_-_Ministre_de_l%27Int%C3%A9rieur_fran%C3%A7ais_(cropped).jpg",
         "file": "Bruno_Retailleau_-_Ministre_de_l'Intérieur_français_(cropped).jpg"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Partis & dirigeants de parti"
     },
     {
       "id": "valerie-pecresse",
@@ -1412,14 +1703,18 @@
             "id": "Jn_egqFvUmQ",
             "title": "Le discours de Valérie Pécresse au Zénith de Paris en intégralité",
             "source": "BFMTV (chaîne YouTube officielle)"
-          }
+          },
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20250604060145/https://www.franceinfo.fr/elections/presidentielle/candidats/presidentielle-comment-valerie-pecresse-a-suscite-la-polemique-en-reprenant-la-theorie-d-extreme-droite-du-grand-remplacement_4960755.html",
+          "archived": "2025-06-04"
         },
         {
           "quote": "ça veut dire 'Je ne me résigne pas, justement, aux théories d'Éric Zemmour et aux théories de l'extrême-droite'",
           "date": "2022-02-14",
           "medium": "RTL, cité par franceinfo",
           "url": "https://www.franceinfo.fr/politique/valerie-pecresse/presidentielle-2022-valerie-pecresse-radicalise-son-discours_4961262.html",
-          "theme": "Nuance / contexte"
+          "theme": "Nuance / contexte",
+          "section": "france"
         }
       ],
       "sections": [
@@ -1432,7 +1727,9 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Val%C3%A9rie_P%C3%A9cresse_at_a_2024_Paralympic_Games_media_conference_in_2024_3_(cropped).jpg",
         "file": "Valérie_Pécresse_at_a_2024_Paralympic_Games_media_conference_in_2024_3_(cropped).jpg"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus"
     },
     {
       "id": "emmanuel-macron",
@@ -1446,7 +1743,8 @@
           "date": "2019-10-30",
           "medium": "Valeurs actuelles (entretien), cité par franceinfo",
           "url": "https://www.franceinfo.fr/politique/emmanuel-macron/dans-valeurs-actuelles-emmanuel-macron-veut-plus-d-efficacite-contre-l-immigration-illegale_3681211.html",
-          "theme": "Nuance / contexte"
+          "theme": "Nuance / contexte",
+          "section": "france"
         }
       ],
       "sections": [
@@ -1459,7 +1757,9 @@
         "license_url": "",
         "source_url": "https://commons.wikimedia.org/wiki/File:Emmanuel_Macron_2025_(cropped).jpg",
         "file": "Emmanuel_Macron_2025_(cropped).jpg"
-      }
+      },
+      "category": "Responsables politiques",
+      "subcategory": "Gouvernement & exécutif"
     },
     {
       "id": "pierre-edouard-sterin",
@@ -1473,12 +1773,17 @@
           "date": "2024-07-20",
           "medium": "Équipes de Pierre-Édouard Stérin, auprès du JDD, cité par franceinfo",
           "url": "https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
-          "theme": "Nuance / contexte"
+          "theme": "Nuance / contexte",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261003121243/https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
+          "archived": "2026-10-03"
         }
       ],
       "sections": [
         "france"
-      ]
+      ],
+      "category": "Médias & propriétaires",
+      "subcategory": "Propriétaires, financeurs & groupes"
     },
     {
       "id": "renaud-camus",
@@ -1492,7 +1797,10 @@
           "date": "2022-02-17",
           "medium": "Propos poursuivis (tweets 2017-2018), cités par Sud Ouest (date de l'arrêt)",
           "url": "https://www.sudouest.fr/justice/le-theoricien-du-grand-remplacement-renaud-camus-condamne-en-appel-pour-provocation-a-la-haine-raciale-9018188.php",
-          "theme": "France – normalisation de l'extrême droite"
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20230717164826/https://www.sudouest.fr/justice/le-theoricien-du-grand-remplacement-renaud-camus-condamne-en-appel-pour-provocation-a-la-haine-raciale-9018188.php",
+          "archived": "2023-07-17"
         }
       ],
       "sections": [
@@ -1505,7 +1813,9 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Autoportrait_de_Renaud_Camus_(mars_2019).jpg",
         "file": "Autoportrait_de_Renaud_Camus_(mars_2019).jpg"
-      }
+      },
+      "category": "Intellectuels & essayistes",
+      "subcategory": "Philosophes & essayistes"
     },
     {
       "id": "conseil-etat",
@@ -1519,14 +1829,20 @@
           "date": "2024-02-13",
           "medium": "Décision du Conseil d'État (communiqué)",
           "url": "https://www.conseil-etat.fr/actualites/pluralisme-et-independance-de-l-information-l-arcom-devra-se-prononcer-a-nouveau-sur-le-respect-par-cnews-de-ses-obligations",
-          "theme": "France – normalisation de l'extrême droite"
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261026111225/https://www.conseil-etat.fr/actualites/pluralisme-et-independance-de-l-information-l-arcom-devra-se-prononcer-a-nouveau-sur-le-respect-par-cnews-de-ses-obligations",
+          "archived": "2026-10-26"
         },
         {
           "quote": "[le Conseil d'État] ne se prononce pas sur le respect par les programmes de la chaîne CNews…",
           "date": "2024-02-13",
           "medium": "Décision du Conseil d'État (communiqué)",
           "url": "https://www.conseil-etat.fr/actualites/pluralisme-et-independance-de-l-information-l-arcom-devra-se-prononcer-a-nouveau-sur-le-respect-par-cnews-de-ses-obligations",
-          "theme": "Nuance / contexte"
+          "theme": "Nuance / contexte",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261026111225/https://www.conseil-etat.fr/actualites/pluralisme-et-independance-de-l-information-l-arcom-devra-se-prononcer-a-nouveau-sur-le-respect-par-cnews-de-ses-obligations",
+          "archived": "2026-10-26"
         }
       ],
       "sections": [
@@ -1538,7 +1854,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Logo_conseil_etat_fr.jpg",
         "file": "Logo conseil etat fr.jpg",
         "author": "Conseil d'Etat"
-      }
+      },
+      "category": "Organisations & institutions",
+      "subcategory": "Institutions publiques"
     },
     {
       "id": "arcom",
@@ -1552,12 +1870,17 @@
           "date": "2024-07-24",
           "medium": "Décision de l'Arcom, citée par franceinfo",
           "url": "https://www.franceinfo.fr/economie/medias/c8-et-nrj12-en-voie-de-perdre-leur-frequence-tnt-cinq-questions-sur-la-decision-de-l-arcom_6684051.html",
-          "theme": "France – normalisation de l'extrême droite"
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20251006121119/https://www.franceinfo.fr/economie/medias/c8-et-nrj12-en-voie-de-perdre-leur-frequence-tnt-cinq-questions-sur-la-decision-de-l-arcom_6684051.html",
+          "archived": "2025-10-06"
         }
       ],
       "sections": [
         "france"
-      ]
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Institutions publiques"
     },
     {
       "id": "conseil-constitutionnel",
@@ -1575,7 +1898,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Conseil_Constitutionnel,_logo_2016.svg",
         "file": "Conseil Constitutionnel, logo 2016.svg",
         "author": "Jean-Michel Wilmotte"
-      }
+      },
+      "category": "Organisations & institutions",
+      "subcategory": "Institutions publiques"
     },
     {
       "id": "c8",
@@ -1593,7 +1918,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Logo_C8_2016.svg",
         "file": "Logo C8 2016.svg",
         "author": "Groupe Canal+ - BETC"
-      }
+      },
+      "category": "Médias & propriétaires",
+      "subcategory": "Chaînes, radios & titres"
     },
     {
       "id": "fayard",
@@ -1611,7 +1938,9 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Fayard_logo.jpg",
         "file": "Fayard logo.jpg",
         "author": "Éditions Fayard"
-      }
+      },
+      "category": "Médias & propriétaires",
+      "subcategory": "Édition"
     },
     {
       "id": "pericles",
@@ -1625,19 +1954,27 @@
           "date": "2024-07-18",
           "medium": "Document « Périclès » (2023) révélé par L'Humanité, cité par franceinfo",
           "url": "https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
-          "theme": "France – normalisation de l'extrême droite"
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261003121243/https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
+          "archived": "2026-10-03"
         },
         {
           "quote": "300 villes à gagner absolument",
           "date": "2024-07-18",
           "medium": "Document « Périclès » (2023), objectif fixé pour le RN aux municipales de 2026, cité par franceinfo",
           "url": "https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
-          "theme": "France – normalisation de l'extrême droite"
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261003121243/https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
+          "archived": "2026-10-03"
         }
       ],
       "sections": [
         "france"
-      ]
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Projets & réseaux"
     },
     {
       "id": "loi-immigration-2023",
@@ -1648,7 +1985,9 @@
       "statements": [],
       "sections": [
         "france"
-      ]
+      ],
+      "category": "Événements",
+      "subcategory": "Événements"
     }
   ],
   "edges": [
@@ -1658,7 +1997,9 @@
       "relation": "président du parti",
       "url": "https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
       "date": "2025-03-26",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20260211151040/https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
+      "archived": "2026-02-11"
     },
     {
       "source": "marine-le-pen",
@@ -1666,7 +2007,9 @@
       "relation": "présidente du groupe des députés RN",
       "url": "https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
       "date": "2025-05-16",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20250914072232/https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
+      "archived": "2025-09-14"
     },
     {
       "source": "eric-zemmour",
@@ -1674,7 +2017,9 @@
       "relation": "président du parti",
       "url": "https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
       "date": "2023-10-29",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20250724222951/https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
+      "archived": "2025-07-24"
     },
     {
       "source": "eric-zemmour",
@@ -1682,7 +2027,9 @@
       "relation": "ancien chroniqueur de « Face à l'info » (fin en septembre 2021)",
       "url": "https://www.franceinfo.fr/politique/eric-zemmour/presidentielle-cnews-met-fin-aux-chroniques-du-possible-candidat-eric-zemmour-apres-la-decision-du-csa-de-decompter-son-temps-de-parole_4769613.html",
       "date": "2021-09-13",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20260824220416/https://www.franceinfo.fr/politique/eric-zemmour/presidentielle-cnews-met-fin-aux-chroniques-du-possible-candidat-eric-zemmour-apres-la-decision-du-csa-de-decompter-son-temps-de-parole_4769613.html",
+      "archived": "2026-08-24"
     },
     {
       "source": "eric-zemmour",
@@ -1690,7 +2037,9 @@
       "relation": "invité du Grand Rendez-Vous Europe 1 / CNews / Les Echos",
       "url": "https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
       "date": "2023-10-29",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20250724222951/https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
+      "archived": "2025-07-24"
     },
     {
       "source": "marion-marechal",
@@ -1698,7 +2047,9 @@
       "relation": "ancienne vice-présidente, exclue après les législatives 2024",
       "url": "https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
       "date": "2024-10-07",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20250724023204/https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
+      "archived": "2025-07-24"
     },
     {
       "source": "marion-marechal",
@@ -1706,7 +2057,9 @@
       "relation": "fondatrice",
       "url": "https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
       "date": "2024-10-07",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20250724023204/https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
+      "archived": "2025-07-24"
     },
     {
       "source": "marion-marechal",
@@ -1714,7 +2067,9 @@
       "relation": "a annoncé qu'elle la soutiendrait à la présidentielle 2027 (« candidate légitime du camp national »)",
       "url": "https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
       "date": "2024-10-07",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20250724023204/https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
+      "archived": "2025-07-24"
     },
     {
       "source": "marion-marechal",
@@ -1730,7 +2085,9 @@
       "relation": "invitée",
       "url": "https://rmc.bfmtv.com/actualites/politique/jordan-bardella-en-israel-je-n-y-vais-pas-pour-parler-du-conflit-assure-le-president-du-rn_AV-202503190364.html",
       "date": "2025-03-19",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20250408160440/https://rmc.bfmtv.com/actualites/politique/jordan-bardella-en-israel-je-n-y-vais-pas-pour-parler-du-conflit-assure-le-president-du-rn_AV-202503190364.html",
+      "archived": "2025-04-08"
     },
     {
       "source": "marion-marechal",
@@ -1738,7 +2095,9 @@
       "relation": "invitée (déclaration du 21/05/2024)",
       "url": "https://www.cnews.fr/monde/2024-05-21/marion-marechal-il-ny-pas-de-genocide-gaza-sinon-il-ny-aurait-pas-des-evacuations",
       "date": "2024-05-21",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20240705034513/https://www.cnews.fr/monde/2024-05-21/marion-marechal-il-ny-pas-de-genocide-gaza-sinon-il-ny-aurait-pas-des-evacuations",
+      "archived": "2024-07-05"
     },
     {
       "source": "jordan-bardella",
@@ -1746,7 +2105,9 @@
       "relation": "invité et participant",
       "url": "https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
       "date": "2025-03-26",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20260211151040/https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
+      "archived": "2026-02-11"
     },
     {
       "source": "bernard-henri-levy",
@@ -1754,7 +2115,9 @@
       "relation": "a annulé sa participation en raison de l'invitation de Jordan Bardella",
       "url": "https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
       "date": "2025-03-26",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20260211151040/https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
+      "archived": "2026-02-11"
     },
     {
       "source": "eric-ciotti",
@@ -1762,7 +2125,9 @@
       "relation": "président du parti (en 2024)",
       "url": "https://www.bfmtv.com/politique/les-republicains/elle-s-est-decredibilisee-eric-ciotti-souhaite-que-la-france-quitte-la-cour-penale-internationale_AV-202405220346.html",
       "date": "2024-05-22",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20240626155550/https://www.bfmtv.com/politique/les-republicains/elle-s-est-decredibilisee-eric-ciotti-souhaite-que-la-france-quitte-la-cour-penale-internationale_AV-202405220346.html",
+      "archived": "2024-06-26"
     },
     {
       "source": "eric-ciotti",
@@ -1770,7 +2135,9 @@
       "relation": "a annoncé une alliance électorale pour les législatives 2024",
       "url": "https://www.franceinfo.fr/politique/legislatives-anticipees-eric-ciotti-dit-oui-a-une-alliance-des-republicains-avec-le-rn_6598017.html",
       "date": "2024-06-11",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20250608183328/https://www.franceinfo.fr/politique/legislatives-anticipees-eric-ciotti-dit-oui-a-une-alliance-des-republicains-avec-le-rn_6598017.html",
+      "archived": "2025-06-08"
     },
     {
       "source": "identite-libertes",
@@ -1778,7 +2145,9 @@
       "relation": "propose une « coalition » avec Marine Le Pen, Jordan Bardella et Éric Ciotti",
       "url": "https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
       "date": "2024-10-07",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20250724023204/https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
+      "archived": "2025-07-24"
     },
     {
       "source": "serge-klarsfeld",
@@ -1786,7 +2155,9 @@
       "relation": "a déclaré qu'il voterait RN en cas de duel RN–LFI",
       "url": "https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
       "date": "2024-06-15",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20260419111603/https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
+      "archived": "2026-04-19"
     },
     {
       "source": "marine-le-pen",
@@ -1794,7 +2165,9 @@
       "relation": "a salué ses propos sur X",
       "url": "https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
       "date": "2024-06-16",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20260419111603/https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
+      "archived": "2026-04-19"
     },
     {
       "source": "eric-ciotti",
@@ -1802,7 +2175,9 @@
       "relation": "a salué ses propos sur X",
       "url": "https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
       "date": "2024-06-16",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20260419111603/https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
+      "archived": "2026-04-19"
     },
     {
       "source": "meyer-habib",
@@ -1810,7 +2185,9 @@
       "relation": "a qualifié son discours sur Israël d'« irréprochable »",
       "url": "https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
       "date": "2025-05-15",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20250914072232/https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
+      "archived": "2025-09-14"
     },
     {
       "source": "meyer-habib",
@@ -1818,7 +2195,9 @@
       "relation": "ancien député apparenté LR",
       "url": "https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
       "date": "2023-10-22",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261025132641/https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
+      "archived": "2026-10-25"
     },
     {
       "source": "yael-braun-pivet",
@@ -1826,7 +2205,9 @@
       "relation": "voyage commun en Israël (21-22 octobre 2023)",
       "url": "https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
       "date": "2023-10-22",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261025132641/https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
+      "archived": "2026-10-25"
     },
     {
       "source": "yael-braun-pivet",
@@ -1834,7 +2215,9 @@
       "relation": "voyage commun en Israël (21-22 octobre 2023)",
       "url": "https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
       "date": "2023-10-22",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261025132641/https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
+      "archived": "2026-10-25"
     },
     {
       "source": "yael-braun-pivet",
@@ -1842,7 +2225,9 @@
       "relation": "membre",
       "url": "https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
       "date": "2023-10-22",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261025132641/https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
+      "archived": "2026-10-25"
     },
     {
       "source": "manuel-valls",
@@ -1850,7 +2235,9 @@
       "relation": "invité (Europe 1 / CNews, 16/01/2025)",
       "url": "https://www.vie-publique.fr/discours/296889-manuel-valls-16012025-europe-1-israel-hamas-cessez-le-feu-et-mayotte",
       "date": "2025-01-16",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261103044717/https://www.vie-publique.fr/discours/296889-manuel-valls-16012025-europe-1-israel-hamas-cessez-le-feu-et-mayotte",
+      "archived": "2026-11-03"
     },
     {
       "source": "caroline-yadan",
@@ -1858,7 +2245,9 @@
       "relation": "députée du groupe EPR",
       "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
       "date": "2025-07-22",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20260407021925/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
+      "archived": "2026-04-07"
     },
     {
       "source": "caroline-yadan",
@@ -1866,7 +2255,9 @@
       "relation": "lui a succédé comme députée de la 8e circonscription des Français de l'étranger",
       "url": "https://www.marianne.net/politique/lrem/la-deputee-caroline-yadan-essaie-t-elle-vraiment-de-faire-interdire-toute-mention-de-genocide-a-gaza",
       "date": "2025-07-23",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20251112193659/https://www.marianne.net/politique/lrem/la-deputee-caroline-yadan-essaie-t-elle-vraiment-de-faire-interdire-toute-mention-de-genocide-a-gaza",
+      "archived": "2025-11-12"
     },
     {
       "source": "caroline-yadan",
@@ -1874,7 +2265,9 @@
       "relation": "autrice d'une tribune",
       "url": "https://www.lepoint.fr/debats/qualifier-de-genocide-l-operation-menee-par-l-armee-israelienne-releve-de-la-manipulation-politique-09-09-2024-2569814_2.php",
       "date": "2024-09-09",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20260502000330/https://www.lepoint.fr/debats/qualifier-de-genocide-l-operation-menee-par-l-armee-israelienne-releve-de-la-manipulation-politique-09-09-2024-2569814_2.php",
+      "archived": "2026-05-02"
     },
     {
       "source": "aurore-berge",
@@ -1882,7 +2275,9 @@
       "relation": "soutient sa proposition de loi",
       "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
       "date": "2025-07-22",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20260407021925/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
+      "archived": "2026-04-07"
     },
     {
       "source": "aurore-berge",
@@ -1890,7 +2285,9 @@
       "relation": "membre du gouvernement (Renaissance)",
       "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
       "date": "2025-07-22",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20260407021925/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
+      "archived": "2026-04-07"
     },
     {
       "source": "patrick-klugman",
@@ -1898,7 +2295,9 @@
       "relation": "président",
       "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
       "date": "2025-07-22",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20260407021925/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
+      "archived": "2026-04-07"
     },
     {
       "source": "robert-menard",
@@ -1906,7 +2305,9 @@
       "relation": "élu maire de Béziers en 2014 avec le soutien du Front national",
       "url": "https://www.france24.com/fr/20140328-municipales-robert-menard-beziers-fn-rsf-liberte-presse-le-pen-mairie",
       "date": "2014-03-28",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20250719101929/https://www.france24.com/fr/20140328-municipales-robert-menard-beziers-fn-rsf-liberte-presse-le-pen-mairie",
+      "archived": "2025-07-19"
     },
     {
       "source": "vincent-bollore",
@@ -1914,7 +2315,9 @@
       "relation": "président du conseil de surveillance de Vivendi (depuis 2014)",
       "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "date": "2023-06-25",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "archived": "2026-10-16"
     },
     {
       "source": "vivendi-canal",
@@ -1922,7 +2325,9 @@
       "relation": "propriétaire (i-Télé renommée CNews)",
       "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "date": "2023-06-25",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "archived": "2026-10-16"
     },
     {
       "source": "vivendi-canal",
@@ -1930,7 +2335,9 @@
       "relation": "OPA sur Lagardère",
       "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "date": "2023-06-25",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "archived": "2026-10-16"
     },
     {
       "source": "lagardere",
@@ -1938,7 +2345,9 @@
       "relation": "propriétaire",
       "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "date": "2023-06-25",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "archived": "2026-10-16"
     },
     {
       "source": "lagardere",
@@ -1946,7 +2355,9 @@
       "relation": "propriétaire",
       "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "date": "2023-06-25",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "archived": "2026-10-16"
     },
     {
       "source": "europe1",
@@ -1954,7 +2365,9 @@
       "relation": "rapprochement éditorial (2021)",
       "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "date": "2023-06-25",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "archived": "2026-10-16"
     },
     {
       "source": "geoffroy-lejeune",
@@ -1962,7 +2375,9 @@
       "relation": "directeur de la rédaction",
       "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "date": "2023-06-25",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "archived": "2026-10-16"
     },
     {
       "source": "geoffroy-lejeune",
@@ -1970,7 +2385,9 @@
       "relation": "ancien directeur",
       "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "date": "2023-06-25",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "archived": "2026-10-16"
     },
     {
       "source": "gilles-william-goldnadel",
@@ -1978,7 +2395,9 @@
       "relation": "chroniqueur",
       "url": "https://x.com/GWGoldnadel",
       "date": "2026-11-03",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20251212162200/https://x.com/GWGoldnadel",
+      "archived": "2025-12-12"
     },
     {
       "source": "gilles-william-goldnadel",
@@ -1986,7 +2405,9 @@
       "relation": "président",
       "url": "https://x.com/GWGoldnadel",
       "date": "2026-11-03",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20251212162200/https://x.com/GWGoldnadel",
+      "archived": "2025-12-12"
     },
     {
       "source": "gilles-william-goldnadel",
@@ -1994,7 +2415,9 @@
       "relation": "intervenant dans « Pascal Praud et vous »",
       "url": "https://www.programme-television.org/news/people/polemique/pascal-praud-sen-prend-a-nagui-apres-lusage-du-mot-genocide-pour-qualifier-la-guerre-a-gaza-6643",
       "date": "2025-10-01",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261103045243/https://www.programme-television.org/news/people/polemique/pascal-praud-sen-prend-a-nagui-apres-lusage-du-mot-genocide-pour-qualifier-la-guerre-a-gaza-6643",
+      "archived": "2026-11-03"
     },
     {
       "source": "jules-torres",
@@ -2002,7 +2425,9 @@
       "relation": "journaliste",
       "url": "https://www.20minutes.fr/monde/israel/4155846-20250528-gaza-population-augmente-enclave-palestinienne-pourquoi-idee-tient",
       "date": "2025-05-28",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20250729023543/https://www.20minutes.fr/monde/israel/4155846-20250528-gaza-population-augmente-enclave-palestinienne-pourquoi-idee-tient",
+      "archived": "2025-07-29"
     },
     {
       "source": "jules-torres",
@@ -2010,7 +2435,9 @@
       "relation": "intervenant dans « L'Heure des Pros 2 »",
       "url": "https://www.20minutes.fr/monde/israel/4155846-20250528-gaza-population-augmente-enclave-palestinienne-pourquoi-idee-tient",
       "date": "2025-05-27",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20250729023543/https://www.20minutes.fr/monde/israel/4155846-20250528-gaza-population-augmente-enclave-palestinienne-pourquoi-idee-tient",
+      "archived": "2025-07-29"
     },
     {
       "source": "joseph-thouvenel",
@@ -2018,7 +2445,9 @@
       "relation": "éditorialiste invité",
       "url": "https://www.cnews.fr/monde/2025-08-03/guerre-au-proche-orient-un-genocide-cest-faire-disparaitre-volontairement-un",
       "date": "2025-08-03",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20250805071155/https://www.cnews.fr/monde/2025-08-03/guerre-au-proche-orient-un-genocide-cest-faire-disparaitre-volontairement-un",
+      "archived": "2025-08-05"
     },
     {
       "source": "gerard-carreyrou",
@@ -2026,7 +2455,9 @@
       "relation": "journaliste intervenant",
       "url": "https://www.europe1.fr/international/pascal-praud-et-vous-conflit-israel-hamas-le-mot-genocide-ne-correspond-pas-a-la-realite-estime-gerard-carreyrou-774797",
       "date": "2025-10-01",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20251002205322/https://www.europe1.fr/international/pascal-praud-et-vous-conflit-israel-hamas-le-mot-genocide-ne-correspond-pas-a-la-realite-estime-gerard-carreyrou-774797",
+      "archived": "2025-10-02"
     },
     {
       "source": "elisabeth-levy",
@@ -2034,7 +2465,9 @@
       "relation": "fondatrice et directrice de la rédaction",
       "url": "https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
       "date": "",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20260828125108/https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
+      "archived": "2026-08-28"
     },
     {
       "source": "elisabeth-levy",
@@ -2042,7 +2475,9 @@
       "relation": "éditorialiste et chroniqueuse",
       "url": "https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
       "date": "",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20260828125108/https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
+      "archived": "2026-08-28"
     },
     {
       "source": "elisabeth-levy",
@@ -2050,7 +2485,9 @@
       "relation": "intervenante dans « L'Heure des pros » (depuis 2017)",
       "url": "https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
       "date": "",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20260828125108/https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
+      "archived": "2026-08-28"
     },
     {
       "source": "elisabeth-levy",
@@ -2058,7 +2495,9 @@
       "relation": "co-autrice d'ouvrages",
       "url": "https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
       "date": "",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20260828125108/https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
+      "archived": "2026-08-28"
     },
     {
       "source": "caroline-fourest",
@@ -2066,7 +2505,9 @@
       "relation": "directrice éditoriale et éditorialiste",
       "url": "https://www.strategies.fr/medias/caroline-fourest-directrice-editoriale-et-editorialiste-de-franc-tireur",
       "date": "2022-04-07",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20241224215451/https://www.strategies.fr/medias/caroline-fourest-directrice-editoriale-et-editorialiste-de-franc-tireur",
+      "archived": "2024-12-24"
     },
     {
       "source": "raphael-enthoven",
@@ -2074,7 +2515,9 @@
       "relation": "membre du comité de rédaction",
       "url": "https://www.strategies.fr/medias/caroline-fourest-directrice-editoriale-et-editorialiste-de-franc-tireur",
       "date": "2022-04-07",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20241224215451/https://www.strategies.fr/medias/caroline-fourest-directrice-editoriale-et-editorialiste-de-franc-tireur",
+      "archived": "2024-12-24"
     },
     {
       "source": "yonathan-arfi",
@@ -2082,7 +2525,9 @@
       "relation": "président",
       "url": "https://www.bfmtv.com/politique/yonathan-arfi-president-du-crif-l-accusation-de-genocide-ne-vise-pas-a-proteger-les-palestiniens-mais-resonne-comme-un-cri-de-ralliement-pour-stigmatiser-les-juifs_VN-202405060963.html",
       "date": "2024-05-06",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20240514235823/https://www.bfmtv.com/politique/yonathan-arfi-president-du-crif-l-accusation-de-genocide-ne-vise-pas-a-proteger-les-palestiniens-mais-resonne-comme-un-cri-de-ralliement-pour-stigmatiser-les-juifs_VN-202405060963.html",
+      "archived": "2024-05-14"
     },
     {
       "source": "jean-dominique-merchet",
@@ -2090,7 +2535,9 @@
       "relation": "journaliste (biographie X)",
       "url": "https://x.com/jdomerchet",
       "date": "2026-11-03",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20240927065941/https://x.com/jdomerchet",
+      "archived": "2024-09-27"
     },
     {
       "source": "bernard-henri-levy",
@@ -2098,7 +2545,9 @@
       "relation": "chroniqueur",
       "url": "https://bernard-henri-levy.com/fr/il-ny-a-pas-de-genocide-a-gaza-2/",
       "date": "2026-10-05",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261016220624/https://bernard-henri-levy.com/fr/il-ny-a-pas-de-genocide-a-gaza-2/",
+      "archived": "2026-10-16"
     },
     {
       "source": "gerald-darmanin",
@@ -2114,7 +2563,9 @@
       "relation": "président du parti (élu le 18/05/2025)",
       "url": "https://www.franceinfo.fr/politique/bruno-retailleau/bruno-retailleau-est-elu-president-du-parti-les-republicains-avec-74-31-des-voix_7247163.html",
       "date": "2025-05-18",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20260305080822/https://www.franceinfo.fr/politique/bruno-retailleau/bruno-retailleau-est-elu-president-du-parti-les-republicains-avec-74-31-des-voix_7247163.html",
+      "archived": "2026-03-05"
     },
     {
       "source": "bruno-retailleau",
@@ -2122,7 +2573,9 @@
       "relation": "entretien publié le 29/09/2024",
       "url": "https://www.lejdd.fr/politique/bruno-retailleau-au-jdd-il-faut-renverser-la-table-en-memoire-de-philippine-150010",
       "date": "2024-09-29",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20251219014849/https://www.lejdd.fr/politique/bruno-retailleau-au-jdd-il-faut-renverser-la-table-en-memoire-de-philippine-150010",
+      "archived": "2025-12-19"
     },
     {
       "source": "yael-braun-pivet",
@@ -2130,7 +2583,9 @@
       "relation": "s'est dite « assez inquiète » de ses propos sur l'État de droit",
       "url": "https://www.lefigaro.fr/politique/l-etat-de-droit-n-est-pas-intangible-ni-sacre-apres-les-declarations-de-retailleau-braun-pivet-se-dit-assez-inquiete-20240930",
       "date": "2024-09-30",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20260115105738/https://www.lefigaro.fr/politique/l-etat-de-droit-n-est-pas-intangible-ni-sacre-apres-les-declarations-de-retailleau-braun-pivet-se-dit-assez-inquiete-20240930",
+      "archived": "2026-01-15"
     },
     {
       "source": "valerie-pecresse",
@@ -2138,7 +2593,9 @@
       "relation": "candidate LR à la présidentielle 2022",
       "url": "https://www.franceinfo.fr/elections/presidentielle/candidats/presidentielle-comment-valerie-pecresse-a-suscite-la-polemique-en-reprenant-la-theorie-d-extreme-droite-du-grand-remplacement_4960755.html",
       "date": "2022-02-13",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20250604060145/https://www.franceinfo.fr/elections/presidentielle/candidats/presidentielle-comment-valerie-pecresse-a-suscite-la-polemique-en-reprenant-la-theorie-d-extreme-droite-du-grand-remplacement_4960755.html",
+      "archived": "2025-06-04"
     },
     {
       "source": "emmanuel-macron",
@@ -2154,7 +2611,9 @@
       "relation": "a déclaré qu'il voterait pour lui dans l'hypothèse d'un second tour face à Emmanuel Macron",
       "url": "https://www.bfmtv.com/politique/presidentielle-ciotti-voterait-zemmour-contre-macron-au-deuxieme-tour_AD-202109050141.html",
       "date": "2021-09-05",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20250722081009/https://www.bfmtv.com/politique/presidentielle-ciotti-voterait-zemmour-contre-macron-au-deuxieme-tour_AD-202109050141.html",
+      "archived": "2025-07-22"
     },
     {
       "source": "eric-zemmour",
@@ -2162,7 +2621,9 @@
       "relation": "met en avant la théorie du « grand remplacement », popularisée par Renaud Camus (selon franceinfo)",
       "url": "https://www.franceinfo.fr/elections/presidentielle/candidats/presidentielle-comment-valerie-pecresse-a-suscite-la-polemique-en-reprenant-la-theorie-d-extreme-droite-du-grand-remplacement_4960755.html",
       "date": "2022-02-14",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20250604060145/https://www.franceinfo.fr/elections/presidentielle/candidats/presidentielle-comment-valerie-pecresse-a-suscite-la-polemique-en-reprenant-la-theorie-d-extreme-droite-du-grand-remplacement_4960755.html",
+      "archived": "2025-06-04"
     },
     {
       "source": "pierre-edouard-sterin",
@@ -2170,7 +2631,9 @@
       "relation": "fondateur et administrateur du projet (selon le document révélé)",
       "url": "https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
       "date": "2024-07-20",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261003121243/https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
+      "archived": "2026-10-03"
     },
     {
       "source": "pericles",
@@ -2178,7 +2641,9 @@
       "relation": "le document vise une « victoire » du RN aux municipales de 2026",
       "url": "https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
       "date": "2024-07-20",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261003121243/https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
+      "archived": "2026-10-03"
     },
     {
       "source": "pericles",
@@ -2186,7 +2651,9 @@
       "relation": "les équipes de P.-É. Stérin ont confirmé le projet auprès du JDD",
       "url": "https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
       "date": "2024-07-20",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261003121243/https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
+      "archived": "2026-10-03"
     },
     {
       "source": "jordan-bardella",
@@ -2194,7 +2661,9 @@
       "relation": "auteur de « Ce que je cherche » (novembre 2024)",
       "url": "https://www.radiofrance.fr/franceculture/podcasts/l-economie-du-livre/les-livres-des-politiques-une-sortie-hors-normes-pour-le-premier-ouvrage-de-jordan-bardella-2577554",
       "date": "2024-11-09",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20250723185327/https://www.radiofrance.fr/franceculture/podcasts/l-economie-du-livre/les-livres-des-politiques-une-sortie-hors-normes-pour-le-premier-ouvrage-de-jordan-bardella-2577554",
+      "archived": "2025-07-23"
     },
     {
       "source": "fayard",
@@ -2202,7 +2671,9 @@
       "relation": "filiale de Hachette Livre, dont l'actionnaire est Vivendi",
       "url": "https://www.radiofrance.fr/franceculture/podcasts/l-economie-du-livre/les-livres-des-politiques-une-sortie-hors-normes-pour-le-premier-ouvrage-de-jordan-bardella-2577554",
       "date": "2024-11-09",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20250723185327/https://www.radiofrance.fr/franceculture/podcasts/l-economie-du-livre/les-livres-des-politiques-une-sortie-hors-normes-pour-le-premier-ouvrage-de-jordan-bardella-2577554",
+      "archived": "2025-07-23"
     },
     {
       "source": "vivendi-canal",
@@ -2210,7 +2681,9 @@
       "relation": "propriétaire (Groupe Canal+)",
       "url": "https://www.franceinfo.fr/economie/medias/c8-et-nrj12-en-voie-de-perdre-leur-frequence-tnt-cinq-questions-sur-la-decision-de-l-arcom_6684051.html",
       "date": "2024-07-24",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20251006121119/https://www.franceinfo.fr/economie/medias/c8-et-nrj12-en-voie-de-perdre-leur-frequence-tnt-cinq-questions-sur-la-decision-de-l-arcom_6684051.html",
+      "archived": "2025-10-06"
     },
     {
       "source": "arcom",
@@ -2218,7 +2691,9 @@
       "relation": "non-renouvellement de la fréquence TNT (décision du 24/07/2024)",
       "url": "https://www.franceinfo.fr/economie/medias/c8-et-nrj12-en-voie-de-perdre-leur-frequence-tnt-cinq-questions-sur-la-decision-de-l-arcom_6684051.html",
       "date": "2024-07-24",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20251006121119/https://www.franceinfo.fr/economie/medias/c8-et-nrj12-en-voie-de-perdre-leur-frequence-tnt-cinq-questions-sur-la-decision-de-l-arcom_6684051.html",
+      "archived": "2025-10-06"
     },
     {
       "source": "arcom",
@@ -2234,7 +2709,9 @@
       "relation": "demande de réexaminer le respect par CNews de ses obligations de pluralisme",
       "url": "https://www.conseil-etat.fr/actualites/pluralisme-et-independance-de-l-information-l-arcom-devra-se-prononcer-a-nouveau-sur-le-respect-par-cnews-de-ses-obligations",
       "date": "2024-02-13",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261026111225/https://www.conseil-etat.fr/actualites/pluralisme-et-independance-de-l-information-l-arcom-devra-se-prononcer-a-nouveau-sur-le-respect-par-cnews-de-ses-obligations",
+      "archived": "2026-10-26"
     },
     {
       "source": "conseil-etat",
@@ -2242,7 +2719,9 @@
       "relation": "décision relative au pluralisme et à l'indépendance de l'information sur CNews",
       "url": "https://www.conseil-etat.fr/actualites/pluralisme-et-independance-de-l-information-l-arcom-devra-se-prononcer-a-nouveau-sur-le-respect-par-cnews-de-ses-obligations",
       "date": "2024-02-13",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261026111225/https://www.conseil-etat.fr/actualites/pluralisme-et-independance-de-l-information-l-arcom-devra-se-prononcer-a-nouveau-sur-le-respect-par-cnews-de-ses-obligations",
+      "archived": "2026-10-26"
     },
     {
       "source": "vincent-bollore",
@@ -2258,7 +2737,9 @@
       "relation": "a annoncé le vote des députés RN et parlé d'« avancée idéologique »",
       "url": "https://www.franceinfo.fr/societe/immigration/loi-immigration-le-rn-votera-pour-annonce-marine-le-pen-qui-revendique-une-victoire-ideologique_6254361.html",
       "date": "2023-12-19",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20260911131429/https://www.franceinfo.fr/societe/immigration/loi-immigration-le-rn-votera-pour-annonce-marine-le-pen-qui-revendique-une-victoire-ideologique_6254361.html",
+      "archived": "2026-09-11"
     },
     {
       "source": "jordan-bardella",
@@ -2274,7 +2755,9 @@
       "relation": "vote des députés RN en faveur du texte issu de la CMP",
       "url": "https://www.franceinfo.fr/societe/immigration/loi-immigration-le-rn-votera-pour-annonce-marine-le-pen-qui-revendique-une-victoire-ideologique_6254361.html",
       "date": "2023-12-19",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20260911131429/https://www.franceinfo.fr/societe/immigration/loi-immigration-le-rn-votera-pour-annonce-marine-le-pen-qui-revendique-une-victoire-ideologique_6254361.html",
+      "archived": "2026-09-11"
     },
     {
       "source": "conseil-constitutionnel",
@@ -2282,7 +2765,9 @@
       "relation": "censure partielle (décision n° 2023-863 DC du 25/01/2024)",
       "url": "https://www.conseil-constitutionnel.fr/actualites/communique/decision-n-2023-863-dc-du-25-janvier-2024-communique-de-presse",
       "date": "2024-01-25",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20251228193526/https://www.conseil-constitutionnel.fr/actualites/communique/decision-n-2023-863-dc-du-25-janvier-2024-communique-de-presse",
+      "archived": "2025-12-28"
     }
   ]
 }

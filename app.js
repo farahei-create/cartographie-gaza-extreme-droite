@@ -68,6 +68,10 @@
     try { host = new URL(url).hostname.replace(/^www\./, ""); } catch (e) { host = url; }
     return '<a class="src" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + esc(text || ("Source : " + host)) + "</a>";
   }
+  function archLink(o) {
+    if (!o || !o.archive_url) return "";
+    return '<a class="arch" href="' + esc(o.archive_url) + '" target="_blank" rel="noopener noreferrer" title="Copie archivée (Wayback Machine)' + (o.archived ? ", " + fmtDate(o.archived) : "") + '">Archive' + (o.archived ? '<span class="arch-d"> · ' + esc(o.archived.slice(0, 4)) + "</span>" : "") + "</a>";
+  }
   function themeTag(t) { return '<span class="theme ' + (THEME_CLASS[t] || "") + '">' + esc(t) + "</span>"; }
   function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); }
   function $(id) { return document.getElementById(id); }
@@ -81,8 +85,8 @@
     .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
     .then(init)
     .catch(function (e) {
-      $("graph").innerHTML = '<p style="padding:20px">Impossible de charger <code>data.json</code> (' + esc(e.message) +
-        "). Ouvrez le site via un serveur web (par exemple <code>python3 -m http.server</code>).</p>";
+      $("main").insertAdjacentHTML("afterbegin", '<p style="padding:20px">Impossible de charger <code>data.json</code> (' + esc(e.message) +
+        "). Ouvrez le site via un serveur web (par exemple <code>python3 -m http.server</code>).</p>");
     });
 
   function init(data) {
@@ -98,15 +102,17 @@
     themes = THEME_ORDER.filter(function (t) { return seen[t]; })
       .concat(Object.keys(seen).filter(function (t) { return THEME_ORDER.indexOf(t) < 0; }).sort());
 
+    computeDerived();
     fillMeta();
     bindDonation();
     bindVideos();
     buildFilters();
-    buildGraph();
-    buildList();
-    document.querySelector(".seg-thumb").style.transition = "none";
-    bindTabs();
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(moveThumb);
+    buildHome();
+    buildSections();
+    buildTimeline();
+    bindFiche();
+    bindRouter();
+    registerSW();
   }
 
   /* Bouton « Soutenir ce travail » : affiché seulement si config.js renseigne DONATION_URL */
@@ -234,6 +240,7 @@
   }
 
   function applyFilters() {
+    if (!nodesDS) return;
     var vis = visibleSet();
     var q = norm(state.search).trim();
     var m = {}; matches().forEach(function (n) { m[n.id] = true; });
@@ -271,15 +278,16 @@
   /* ---------- graphe ---------- */
   function sizeGraph() {
     var shell = document.querySelector(".graph-shell"), gl = document.querySelector(".graph-layout");
-    if (!shell || !gl || $("view-graphe").hidden || shell.classList.contains("is-fs")) return;
+    if (!shell || !gl || $("view-reseau").hidden || shell.classList.contains("is-fs")) return;
     var mobile = MQ_MOBILE.matches;
     var ref = mobile ? gl : shell;
     var top = ref.getBoundingClientRect().top + window.scrollY;
-    var bottomPad = mobile ? 12 : 16;
+    var nav = $("tabnav"), navH = mobile && nav ? nav.offsetHeight : 0;
+    var bottomPad = mobile ? 12 + navH : 16;
     var h = Math.max(mobile ? 360 : 480, window.innerHeight - top - bottomPad - (mobile ? 0 : 6));
     shell.style.setProperty("--graph-h", Math.round(h) + "px");
   }
-  window.addEventListener("resize", function () { sizeGraph(); moveThumb(); });
+  window.addEventListener("resize", function () { sizeGraph(); });
 
   function buildGraph() {
     sizeGraph();
@@ -433,7 +441,7 @@
     return '<ul class="stmts">' + st.map(function (s) {
       return '<li class="stmt"><blockquote>' + quoteHtml(s.quote) + "</blockquote>" +
         '<div class="meta"><span>' + fmtDate(s.date) + "</span><span>· " + esc(s.medium) + "</span>" + (s.theme ? themeTag(s.theme) : "") + "</div>" +
-        '<div class="meta">' + srcLink(s.url, "Lire la source") + "</div>" + videoHtml(s.video) + "</li>";
+        '<div class="meta">' + srcLink(s.url, "Lire la source") + archLink(s) + "</div>" + videoHtml(s.video) + "</li>";
     }).join("") + "</ul>";
   }
   /* ---------- vidéos : intégration « légère », chargée uniquement au clic ---------- */
@@ -491,7 +499,7 @@
       var sentence = out
         ? esc(n.name) + " → " + who + " : " + esc(e.relation)
         : who + " → " + esc(n.name) + " : " + esc(e.relation);
-      return '<li class="rel">' + sentence + '<div class="meta">' + (e.date ? fmtDate(e.date) + " · " : "") + srcLink(e.url) + "</div></li>";
+      return '<li class="rel">' + sentence + '<div class="meta">' + (e.date ? fmtDate(e.date) + " · " : "") + srcLink(e.url) + archLink(e) + "</div></li>";
     }).join("") + "</ul>";
   }
   function openNode(id, fromSearch) {
@@ -502,18 +510,19 @@
       '<span class="badge" style="--tc:var(' + t.cssVar + ')">' + esc(t.label) + "</span>" + '<div class="secs">' + sectionTags(n) + "</div>" +
       "<h2>" + esc(n.name) + "</h2></div></div>" +
       '<p class="role">' + esc(n.role) + "</p>" +
+      '<p class="to-fiche"><a class="btn-pill small" href="' + ficheHref(n) + '">Ouvrir la fiche complète</a></p>' +
       (n.description ? "<p>" + esc(n.description) + "</p>" : "") +
       (n.type === "person" || (n.statements || []).length ? "<h3>Déclarations publiques (" + (n.statements || []).length + ")</h3>" + statementsHtml(n) : "") +
       "<h3>Relations (" + edgesOf[id].length + ")</h3>" + relationsHtml(n, true);
     showPanel();
     if (!fromSearch && network) network.selectNodes([id]);
-    if (location.hash.indexOf("#graphe") === 0 || !location.hash) history.replaceState(null, "", "#graphe/" + encodeURIComponent(id));
+    if (location.hash.indexOf("#/reseau") === 0) history.replaceState(null, "", "#/reseau/" + encodeURIComponent(id));
   }
   function openEdge(eid) {
     var e = DATA.edges.filter(function (x) { return x._id === eid; })[0]; if (!e) return;
     $("panel-body").innerHTML = '<span class="badge">Relation</span><h2>' + esc(byId[e.source].name) + " → " + esc(byId[e.target].name) + "</h2>" +
       '<p class="role">' + esc(e.relation) + "</p>" +
-      '<p class="meta">' + fmtDate(e.date) + "</p><p>" + srcLink(e.url, "Lire la source") + "</p>" +
+      '<p class="meta">' + fmtDate(e.date) + "</p><p class=\"src-row\">" + srcLink(e.url, "Lire la source") + archLink(e) + "</p>" +
       '<h3>Voir</h3><ul class="rels"><li class="rel"><button type="button" class="link" data-node="' + esc(e.source) + '">' + esc(byId[e.source].name) + '</button></li><li class="rel"><button type="button" class="link" data-node="' + esc(e.target) + '">' + esc(byId[e.target].name) + "</button></li></ul>";
     showPanel();
   }
@@ -585,86 +594,7 @@
     p.style.transform = "";
     document.body.classList.remove("panel-open", "sheet-open");
     if (network) network.unselectAll();
-    if (location.hash.indexOf("#graphe/") === 0) history.replaceState(null, "", "#graphe");
-  }
-
-  /* ---------- liste ---------- */
-  function buildList() {
-    var sel = $("list-theme");
-    themes.forEach(function (t) { var o = document.createElement("option"); o.value = t; o.textContent = t; sel.appendChild(o); });
-    var people = DATA.nodes.filter(function (n) { return n.type === "person"; })
-      .sort(function (a, b) { return a.name.split(" ").slice(-1)[0].localeCompare(b.name.split(" ").slice(-1)[0], "fr"); });
-    var body = $("people-body");
-    body.innerHTML = people.map(function (n) {
-      return '<tr data-id="' + esc(n.id) + '">' +
-        '<td data-label="Personne">' + mediaHtml(n, "l-media") + '<p class="name" id="p-' + esc(n.id) + '">' + esc(n.name) + '</p><p class="role">' + esc(n.role) + "</p>" +
-        '<div class="secs">' + sectionTags(n) + "</div>" +
-        (n.description ? '<p class="desc">' + esc(n.description) + "</p>" : "") +
-        '<p class="desc"><a href="#graphe/' + encodeURIComponent(n.id) + '">Voir dans l\'arbre</a></p></td>' +
-        '<td data-label="Déclarations publiques" class="st-cell"></td>' +
-        '<td data-label="Relations">' + relationsHtml(n, false) + "</td></tr>";
-    }).join("");
-    var texts = {};
-    people.forEach(function (n) {
-      texts[n.id] = nodeText(n) + " " + norm(edgesOf[n.id].map(function (e) { return e.relation + " " + byId[e.source].name + " " + byId[e.target].name; }).join(" "));
-    });
-    function render() {
-      var q = norm($("list-search").value).trim(), th = sel.value, sec = $("list-section").value, shown = 0;
-      body.querySelectorAll("tr").forEach(function (tr) {
-        var n = byId[tr.getAttribute("data-id")];
-        var okTheme = !th || (n.statements || []).some(function (s) { return s.theme === th; });
-        var okSec = !sec || (n.sections || []).indexOf(sec) >= 0;
-        var ok = okTheme && okSec && (!q || texts[n.id].indexOf(q) >= 0);
-        tr.hidden = !ok;
-        if (ok) { shown++; tr.querySelector(".st-cell").innerHTML = statementsHtml(n, th); }
-      });
-      $("list-count").textContent = shown + " personne" + (shown > 1 ? "s" : "") + " affichée" + (shown > 1 ? "s" : "") + " sur " + people.length + ".";
-    }
-    $("list-search").addEventListener("input", render);
-    sel.addEventListener("change", render);
-    $("list-section").addEventListener("change", render);
-    render();
-  }
-
-  /* ---------- onglets ---------- */
-  function bindTabs() {
-    function route() {
-      var h = location.hash.replace(/^#/, "");
-      var parts = h.split("/"), tab = parts[0] || "graphe";
-      if (["graphe", "liste", "methodologie"].indexOf(tab) < 0) tab = "graphe";
-      ["graphe", "liste", "methodologie"].forEach(function (t) {
-        $("view-" + t).hidden = t !== tab;
-        $("tab-" + t).setAttribute("aria-selected", t === tab ? "true" : "false");
-      });
-      moveThumb();
-      if (tab !== "graphe") { document.body.classList.remove("sheet-open"); if (fsMode) exitFullscreen(); }
-      else if (!$("panel").hidden) { document.body.classList.toggle("sheet-open", MQ_MOBILE.matches); }
-      if (tab === "graphe" && network) {
-        sizeGraph(); network.redraw();
-        if (parts[1]) {
-          var id = decodeURIComponent(parts[1]);
-          if (byId[id]) setTimeout(function () { focusNode(id); }, 50);
-        }
-      }
-    }
-    window.addEventListener("hashchange", route);
-    route();
-    requestAnimationFrame(function () { document.querySelector(".seg-thumb").style.transition = ""; });
-
-    /* Filtres repliables (mobile) */
-    var ft = $("filters-toggle"), fl = $("filters");
-    ft.addEventListener("click", function () {
-      var open = ft.getAttribute("aria-expanded") !== "true";
-      ft.setAttribute("aria-expanded", open ? "true" : "false");
-      fl.classList.toggle("open", open);
-      sizeGraph();
-    });
-    fl.addEventListener("transitionend", function (e) { if (e.target === fl) { sizeGraph(); } });
-
-    /* Barre d'onglets : filet discret une fois collée en haut */
-    var tb = document.querySelector(".tabbar");
-    var onScroll = function () { tb.classList.toggle("stuck", tb.getBoundingClientRect().top <= 0 && window.scrollY > 4); };
-    window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+    if (location.hash.indexOf("#/reseau/") === 0) history.replaceState(null, "", "#/reseau");
   }
 
   /* ---------- plein écran ---------- */
@@ -734,11 +664,328 @@
     window.__fs = function () { return fsMode; };
   }
 
-  /* Contrôle segmenté : pastille glissante sous l'onglet actif */
-  function moveThumb() {
-    var th = document.querySelector(".seg-thumb"), sel = document.querySelector('.tabs a[aria-selected="true"]');
-    if (!th || !sel) return;
-    th.style.width = sel.offsetWidth + "px";
-    th.style.transform = "translateX(" + sel.offsetLeft + "px)";
+  /* ==========================================================================
+     v5 : accueil, sections / catégories, fiches, chronologie, routage, PWA
+     ========================================================================== */
+  var CAT_ORDER = [], ALL_ST = [], SOURCES = {}, navCount = 0;
+  var SEC_LABEL = { gaza: "Gaza", france: "France – normalisation de l'extrême droite", commun: "Communs aux deux sections", tout: "Toutes les sections" };
+  var SEC_INTRO = {
+    tout: "Toutes les personnalités et organisations, regroupées par catégorie.",
+    gaza: "Déclarations publiques en France au sujet de la guerre à Gaza, et liens publics entre les personnes et organisations concernées.",
+    france: "Propos publics datés et décisions d'institutions portant sur la reprise de termes ou de thèmes associés à l'extrême droite, et liens publics entre partis, médias, éditeurs et financeurs.",
+    commun: "Personnalités et organisations présentes dans les deux sections."
+  };
+  var SUB_ORDER = ["Gouvernement & exécutif", "Parlementaires & élus", "Partis & dirigeants de parti", "Propriétaires, financeurs & groupes", "Chaînes, radios & titres", "Édition",
+    "Directions de rédaction", "Journalistes & chroniqueurs", "Philosophes & essayistes", "Historiens", "Institutions publiques", "Associations & représentants", "Projets & réseaux"];
+  var MONTHS_S = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
+
+  function computeDerived() {
+    CAT_ORDER = (DATA.meta && DATA.meta.category_order) || [];
+    DATA.nodes.forEach(function (n) {
+      if (n.category && CAT_ORDER.indexOf(n.category) < 0) CAT_ORDER.push(n.category);
+      (n.statements || []).forEach(function (s, i) { ALL_ST.push({ s: s, n: n, i: i }); if (s.url) SOURCES[s.url] = 1; });
+    });
+    DATA.edges.forEach(function (e) { if (e.url) SOURCES[e.url] = 1; });
+  }
+  function ficheHref(n) { return "#/" + (n.type === "person" ? "personne" : "organisation") + "/" + encodeURIComponent(n.id); }
+  function initials(name) {
+    var w = String(name).replace(/[«»()]/g, "").split(/[\s-]+/).filter(function (x) { return x && /[A-Za-zÀ-ÿ0-9]/.test(x[0]) && x.length > 1; });
+    return ((w[0] || "?")[0] + (w.length > 1 ? w[w.length - 1][0] : "")).toUpperCase();
+  }
+  function avatar(n, cls) {
+    var url = n.image || n.logo, tv = TYPES[n._sub].cssVar;
+    var ini = '<span class="av-ini" aria-hidden="true">' + esc(initials(n.name)) + "</span>";
+    var c = "av " + (cls || "") + (n.logo && !n.image ? " is-logo" : "") + (url ? "" : " no-img");
+    return '<span class="' + c + '" style="--tc:var(' + tv + ')">' + (url ? '<img src="' + esc(url) + '" alt="" loading="lazy" decoding="async" width="96" height="96" onerror="this.parentNode.classList.add(\'no-img\');this.remove()">' : "") + ini + "</span>";
+  }
+  function catLabel(n) { return n.category ? esc(n.category) + (n.subcategory && n.subcategory !== n.category ? ' <span class="sep">›</span> ' + esc(n.subcategory) : "") : ""; }
+  function shortDate(d) { var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d || ""); return m ? parseInt(m[3], 10) + " " + MONTHS_S[parseInt(m[2], 10) - 1] : esc(d || ""); }
+  function plural(n, a, b) { return n + " " + (n > 1 ? b : a); }
+  function stSection(s, n) { return s.section || (n.sections || [])[0] || "gaza"; }
+  function toast(msg) {
+    var t = $("toast"); t.textContent = msg; t.hidden = false;
+    requestAnimationFrame(function () { t.classList.add("show"); });
+    clearTimeout(toast._t); toast._t = setTimeout(function () { t.classList.remove("show"); setTimeout(function () { t.hidden = true; }, 300); }, 2600);
+  }
+
+  /* ---------- Accueil ---------- */
+  function buildHome() {
+    var persons = DATA.nodes.filter(function (n) { return n.type === "person"; }).length;
+    var vids = ALL_ST.filter(function (x) { return x.s.video; }).length;
+    var arch = {}; ALL_ST.forEach(function (x) { if (x.s.archive_url) arch[x.s.url] = 1; }); DATA.edges.forEach(function (e) { if (e.archive_url) arch[e.url] = 1; });
+    var nsrc = Object.keys(SOURCES).length;
+    var upd = DATA.meta && DATA.meta.generated;
+    var stats = [
+      [persons, "personnalités"], [DATA.nodes.length - persons, "organisations et événements"], [ALL_ST.length, "déclarations datées"],
+      [nsrc, "sources"], [Object.keys(arch).length, "sources archivées"], [vids, "vidéos officielles"]
+    ];
+    $("home-stats").innerHTML = stats.map(function (s) { return '<div class="stat"><dt>' + esc(s[1]) + "</dt><dd>" + s[0] + "</dd></div>"; }).join("") +
+      '<div class="stat stat-date"><dt>dernière mise à jour</dt><dd><time datetime="' + esc(upd || "") + '">' + (upd ? fmtDate(upd) : "—") + "</time></dd></div>";
+    function cnt(sec) {
+      var ns = DATA.nodes.filter(function (n) { return (n.sections || []).indexOf(sec) >= 0; }).length;
+      var st = ALL_ST.filter(function (x) { return stSection(x.s, x.n) === sec; }).length;
+      return plural(ns, "fiche", "fiches") + " · " + plural(st, "déclaration", "déclarations");
+    }
+    var cards = [
+      ["#/sections/gaza", "Section", "Gaza", SEC_INTRO.gaza, cnt("gaza"), "c-gaza"],
+      ["#/sections/france", "Section", "France – normalisation de l'extrême droite", SEC_INTRO.france, cnt("france"), "c-fr"],
+      ["#/chronologie", "Vue", "Chronologie", "Toutes les déclarations et tous les liens datés, filtrables par section, catégorie, thème et année.", plural(ALL_ST.length + DATA.edges.filter(function (e) { return e.date; }).length, "élément daté", "éléments datés"), "c-chrono"],
+      ["#/reseau", "Vue", "Réseau des relations", "Graphe interactif des liens publics entre personnalités et organisations, chacun sourcé.", plural(DATA.edges.length, "relation", "relations"), "c-net"],
+      ["#/methodologie", "À propos", "Méthodologie", "Critères d'inclusion, neutralité, images, vidéos, archivage et réutilisation des données.", "Sources vérifiées et archivées", "c-meth"]
+    ];
+    $("home-entries").innerHTML = cards.map(function (c) {
+      return '<a class="entry ' + c[5] + '" href="' + c[0] + '"><span class="entry-k">' + esc(c[1]) + '</span><span class="entry-t">' + esc(c[2]) + '</span><span class="entry-d">' + esc(c[3]) + '</span><span class="entry-c">' + esc(c[4]) + '</span><span class="entry-go" aria-hidden="true">›</span></a>';
+    }).join("");
+    var latest = ALL_ST.filter(function (x) { return x.s.date; }).sort(function (a, b) { return b.s.date.localeCompare(a.s.date); }).slice(0, 6);
+    $("home-latest").innerHTML = latest.map(function (x) {
+      return '<li><a class="latest-it" href="' + ficheHref(x.n) + '#d' + x.i + '">' + avatar(x.n, "av-sm") + '<span class="latest-txt"><span class="latest-who">' + esc(x.n.name) +
+        '</span><span class="latest-q">' + quoteHtml(x.s.quote) + '</span><span class="latest-m"><time datetime="' + esc(x.s.date) + '">' + fmtDate(x.s.date) + "</time> · " + esc(x.s.medium) + "</span></span></a></li>";
+    }).join("");
+    bindSearch($("home-search"), $("home-results"));
+  }
+  function searchAll(q) {
+    q = norm(q).trim(); if (q.length < 2) return [];
+    var out = [];
+    DATA.nodes.forEach(function (n) {
+      var sc = norm(n.name).indexOf(q) >= 0 ? 3 : (norm(n.role + " " + n.category + " " + n.subcategory).indexOf(q) >= 0 ? 2 : 0);
+      if (sc) out.push({ sc: sc, href: ficheHref(n), n: n, label: n.name, sub: n.role });
+    });
+    ALL_ST.forEach(function (x) {
+      if (norm(x.s.quote + " " + x.s.medium).indexOf(q) >= 0) out.push({ sc: 1, href: ficheHref(x.n) + "#d" + x.i, n: x.n, label: x.n.name + " · " + shortDate(x.s.date) + " " + (x.s.date || "").slice(0, 4), sub: "«\u00a0" + x.s.quote + "\u00a0»" });
+    });
+    out.sort(function (a, b) { return b.sc - a.sc; });
+    return out.slice(0, 10);
+  }
+  function bindSearch(inp, list) {
+    function render() {
+      var r = searchAll(inp.value);
+      if (!inp.value.trim()) { list.hidden = true; list.innerHTML = ""; return; }
+      list.hidden = false;
+      list.innerHTML = r.length ? r.map(function (x) {
+        return '<li><a href="' + x.href + '">' + avatar(x.n, "av-xs") + '<span><span class="r-l">' + esc(x.label) + '</span><span class="r-s">' + esc(x.sub) + "</span></span></a></li>";
+      }).join("") : '<li class="r-none">Aucun résultat.</li>';
+    }
+    inp.addEventListener("input", render);
+    inp.form && inp.form.addEventListener("submit", function (e) {
+      e.preventDefault(); var a = list.querySelector("a"); if (a) { location.hash = a.getAttribute("href"); }
+    });
+    inp.addEventListener("keydown", function (e) { if (e.key === "Escape") { inp.value = ""; render(); } });
+    list.addEventListener("click", function () { setTimeout(function () { inp.value = ""; render(); }, 0); });
+  }
+
+  /* ---------- Sections ---------- */
+  var curSec = "tout";
+  function inSec(n, sec) {
+    var s = n.sections || [];
+    if (sec === "tout") return true;
+    if (sec === "commun") return s.indexOf("gaza") >= 0 && s.indexOf("france") >= 0;
+    return s.indexOf(sec) >= 0;
+  }
+  function buildSections() {
+    $("sec-seg").innerHTML = ["tout", "gaza", "france", "commun"].map(function (k) {
+      var c = DATA.nodes.filter(function (n) { return inSec(n, k); }).length;
+      var lab = { tout: "Tout", gaza: "Gaza", france: "France", commun: "Communs" }[k];
+      return '<a role="tab" class="seg-b" href="#/sections/' + k + '" data-sec="' + k + '" title="' + esc(SEC_LABEL[k]) + '">' + lab + ' <span class="seg-n">' + c + "</span></a>";
+    }).join("");
+    var html = CAT_ORDER.map(function (cat, ci) {
+      var subs = [];
+      DATA.nodes.forEach(function (n) { if (n.category === cat && subs.indexOf(n.subcategory) < 0) subs.push(n.subcategory); });
+      subs.sort(function (x, y) { var i = SUB_ORDER.indexOf(x), j = SUB_ORDER.indexOf(y); return (i < 0 ? 99 : i) - (j < 0 ? 99 : j); });
+      return '<details class="cat" open data-cat="' + esc(cat) + '"><summary><span class="cat-t">' + esc(cat) + '</span><span class="cat-n"></span><svg class="i chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg></summary>' +
+        subs.map(function (sub) {
+          var ns = DATA.nodes.filter(function (n) { return n.category === cat && n.subcategory === sub; })
+            .sort(function (a, b) { return (b.statements || []).length - (a.statements || []).length || a.name.localeCompare(b.name, "fr"); });
+          return '<div class="sub" data-sub="' + esc(sub) + '">' + (sub !== cat ? '<h3 class="sub-t">' + esc(sub) + "</h3>" : "") + '<ul class="ncards">' + ns.map(function (n) {
+            var k = (n.statements || []).length;
+            return '<li data-id="' + esc(n.id) + '" data-q="' + esc(norm(n.name + " " + n.role)) + '"><a class="ncard" href="' + ficheHref(n) + '">' + avatar(n, "av-md") +
+              '<span class="nc-txt"><span class="nc-name">' + esc(n.name) + '</span><span class="nc-role">' + esc(n.role) + '</span><span class="nc-meta">' +
+              (k ? '<span class="nc-k">' + plural(k, "déclaration", "déclarations") + "</span>" : "") + (n.sections || []).map(function (s) { return '<span class="dot-sec ds-' + s + '" title="Section ' + esc(SEC_LABEL[s]) + '"></span>'; }).join("") +
+              '</span></span><span class="chev-r" aria-hidden="true">›</span></a></li>';
+          }).join("") + "</ul></div>";
+        }).join("") + "</details>";
+    }).join("");
+    $("sec-groups").innerHTML = html;
+    $("sec-search").addEventListener("input", renderSections);
+  }
+  function renderSections() {
+    var q = norm($("sec-search").value).trim(), total = 0;
+    document.querySelectorAll("#sec-seg .seg-b").forEach(function (b) { var on = b.getAttribute("data-sec") === curSec; b.setAttribute("aria-selected", on ? "true" : "false"); });
+    $("sec-intro").textContent = SEC_INTRO[curSec];
+    document.querySelectorAll("#sec-groups .cat").forEach(function (d) {
+      var shownCat = 0;
+      d.querySelectorAll(".sub").forEach(function (sb) {
+        var shown = 0;
+        sb.querySelectorAll("li[data-id]").forEach(function (li) {
+          var ok = inSec(byId[li.getAttribute("data-id")], curSec) && (!q || li.getAttribute("data-q").indexOf(q) >= 0);
+          li.hidden = !ok; if (ok) shown++;
+        });
+        sb.hidden = !shown; shownCat += shown;
+      });
+      d.hidden = !shownCat; d.querySelector(".cat-n").textContent = shownCat; total += shownCat;
+    });
+    $("sec-count").textContent = plural(total, "fiche", "fiches") + " · " + SEC_LABEL[curSec];
+  }
+
+  /* ---------- Fiche personne / organisation ---------- */
+  var curFiche = null;
+  function renderFiche(id, anchor) {
+    var n = byId[id], body = $("fiche-body");
+    if (!n) { curFiche = null; body.innerHTML = '<p class="empty">Fiche introuvable.</p><p><a class="btn-pill" href="#/sections">Voir toutes les sections</a></p>'; return; }
+    curFiche = n;
+    var t = TYPES[n._sub];
+    var st = (n.statements || []).map(function (s, i) { return { s: s, i: i }; }).sort(function (a, b) { return (a.s.date || "").localeCompare(b.s.date || ""); });
+    var es = edgesOf[n.id].slice().sort(function (a, b) { return (a.date || "").localeCompare(b.date || ""); });
+    var media = mediaHtml(n, "f-media") || '<figure class="f-media no-photo">' + avatar(n, "av-xl") + "</figure>";
+    body.innerHTML =
+      '<header class="f-head">' + media + '<div class="f-id">' +
+      '<div class="f-badges"><span class="badge" style="--tc:var(' + t.cssVar + ')">' + esc(t.label) + "</span>" + sectionTags(n) + "</div>" +
+      '<h1 class="f-name" tabindex="-1">' + esc(n.name) + "</h1>" + '<p class="f-role">' + esc(n.role) + "</p>" +
+      (n.category ? '<p class="f-cat"><a href="#/sections">' + catLabel(n) + "</a></p>" : "") + "</div></header>" +
+      (n.description ? '<p class="f-desc">' + esc(n.description) + "</p>" : "") +
+      '<div class="f-actions"><a class="btn-pill ghost small" href="#/reseau/' + encodeURIComponent(n.id) + '">Voir dans le réseau</a></div>' +
+      (st.length || n.type === "person" ? '<h2 class="h-sec">Déclarations publiques <span class="h-n">' + st.length + "</span></h2>" +
+        (st.length ? '<ol class="tl">' + st.map(function (x) { return tlItem(x.s, n, x.i, false); }).join("") + "</ol>" : '<p class="empty">Aucune déclaration répertoriée.</p>') : "") +
+      '<h2 class="h-sec">Relations <span class="h-n">' + es.length + "</span></h2>" +
+      (es.length ? '<ul class="rel-list">' + es.map(function (e) { return relItem(e, n); }).join("") + "</ul>" : '<p class="empty">Aucune relation répertoriée.</p>');
+    document.title = n.name + " — Cartographie des déclarations et des liens publics";
+    if (anchor) { var el = document.getElementById(anchor); if (el) setTimeout(function () { el.scrollIntoView({ block: "center", behavior: MQ_RM.matches ? "auto" : "smooth" }); el.classList.add("flash"); }, 60); }
+  }
+  function tlItem(s, n, i, withWho) {
+    return '<li class="tl-item"' + (withWho ? "" : ' id="d' + i + '"') + '><time class="tl-date" datetime="' + esc(s.date || "") + '">' + fmtDate(s.date) + "</time>" +
+      '<article class="tl-card">' + (withWho ? '<a class="tl-who" href="' + ficheHref(n) + '#d' + i + '">' + avatar(n, "av-xs") + "<span>" + esc(n.name) + "</span></a>" : "") +
+      "<blockquote>" + quoteHtml(s.quote) + "</blockquote>" +
+      '<div class="meta"><span class="medium">' + esc(s.medium) + "</span>" + (s.theme ? themeTag(s.theme) : "") + "</div>" +
+      '<div class="meta actions">' + srcLink(s.url, "Lire la source") + archLink(s) + "</div>" + videoHtml(s.video) + "</article></li>";
+  }
+  function relItem(e, n) {
+    var out = e.source === n.id, o = byId[out ? e.target : e.source];
+    var sentence = out ? esc(n.name) + " → <strong>" + esc(o.name) + "</strong>" : "<strong>" + esc(o.name) + "</strong> → " + esc(n.name);
+    return '<li class="rel-card"><a class="rel-main" href="' + ficheHref(o) + '">' + avatar(o, "av-sm") + '<span class="rel-txt"><span class="rel-s">' + sentence + '</span><span class="rel-r">' + esc(e.relation) + '</span></span><span class="chev-r" aria-hidden="true">›</span></a>' +
+      '<div class="meta">' + (e.date ? '<time datetime="' + esc(e.date) + '">' + fmtDate(e.date) + "</time>" : "") + srcLink(e.url, "Source") + archLink(e) + "</div></li>";
+  }
+  function bindFiche() {
+    $("fiche-back").addEventListener("click", function () {
+      if (navCount > 0 && history.length > 1) history.back(); else location.hash = "#/sections";
+    });
+    $("fiche-share").addEventListener("click", function () {
+      if (!curFiche) return;
+      var url = location.href.split("#")[0] + ficheHref(curFiche);
+      var data = { title: curFiche.name + " — Cartographie", text: curFiche.name + " : déclarations publiques et liens, avec leurs sources.", url: url };
+      if (navigator.share) { navigator.share(data).catch(function () {}); return; }
+      copyText(url).then(function () { toast("Lien copié : " + url); }, function () { toast(url); });
+    });
+  }
+  function copyText(t) {
+    if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(t);
+    return new Promise(function (res, rej) {
+      var ta = document.createElement("textarea"); ta.value = t; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy") ? res() : rej(); } catch (e) { rej(e); } ta.remove();
+    });
+  }
+
+  /* ---------- Chronologie ---------- */
+  var TL_ITEMS = [], tlDesc = false, LINKS = "__links__";
+  function buildTimeline() {
+    ALL_ST.forEach(function (x) { if (x.s.date) TL_ITEMS.push({ k: "s", d: x.s.date, x: x, sec: stSection(x.s, x.n), cats: [x.n.category], theme: x.s.theme }); });
+    DATA.edges.forEach(function (e) { if (e.date) TL_ITEMS.push({ k: "e", d: e.date, e: e, sec: e.section || "gaza", cats: [byId[e.source].category, byId[e.target].category], theme: LINKS }); });
+    function opt(sel, v, l) { var o = document.createElement("option"); o.value = v; o.textContent = l; $(sel).appendChild(o); }
+    opt("tl-section", "gaza", "Gaza"); opt("tl-section", "france", "France – normalisation de l'extrême droite");
+    CAT_ORDER.forEach(function (c) { opt("tl-category", c, c); });
+    themes.forEach(function (t) { opt("tl-theme", t, t); }); opt("tl-theme", LINKS, "Liens publics datés (relations)");
+    var years = {}; TL_ITEMS.forEach(function (it) { years[it.d.slice(0, 4)] = 1; });
+    Object.keys(years).sort().reverse().forEach(function (y) { opt("tl-year", y, y); });
+    ["tl-section", "tl-category", "tl-theme", "tl-year"].forEach(function (id) { $(id).addEventListener("change", renderTimeline); });
+    $("tl-order").addEventListener("click", function () {
+      tlDesc = !tlDesc; this.setAttribute("aria-pressed", tlDesc ? "true" : "false");
+      this.textContent = tlDesc ? "Plus ancien d'abord" : "Plus récent d'abord"; renderTimeline();
+    });
+    renderTimeline();
+  }
+  function renderTimeline() {
+    var sec = $("tl-section").value, cat = $("tl-category").value, th = $("tl-theme").value, yr = $("tl-year").value;
+    var items = TL_ITEMS.filter(function (it) {
+      return (!sec || it.sec === sec) && (!cat || it.cats.indexOf(cat) >= 0) && (!th || it.theme === th) && (!yr || it.d.slice(0, 4) === yr);
+    }).sort(function (a, b) { return tlDesc ? b.d.localeCompare(a.d) : a.d.localeCompare(b.d); });
+    var groups = [], cur = null;
+    items.forEach(function (it) { var y = it.d.slice(0, 4); if (!cur || cur.y !== y) { cur = { y: y, it: [] }; groups.push(cur); } cur.it.push(it); });
+    var ns = items.filter(function (i) { return i.k === "s"; }).length;
+    $("tl-count").textContent = plural(ns, "déclaration", "déclarations") + " · " + plural(items.length - ns, "lien daté", "liens datés");
+    $("timeline").innerHTML = groups.length ? groups.map(function (g) {
+      return '<section class="tl-year" data-year="' + g.y + '"><h2 class="year-h"><span>' + g.y + '</span><span class="year-n">' + g.it.length + "</span></h2><ol class=\"tl\">" +
+        g.it.map(function (it) { return it.k === "s" ? tlItem(it.x.s, it.x.n, it.x.i, true).replace('class="tl-item"', 'class="tl-item k-s" data-sec="' + it.sec + '"') : tlEdge(it.e); }).join("") + "</ol></section>";
+    }).join("") : '<p class="empty">Aucun élément ne correspond à ces filtres.</p>';
+  }
+  function tlEdge(e) {
+    var a = byId[e.source], b = byId[e.target];
+    return '<li class="tl-item k-e" data-sec="' + esc(e.section || "") + '"><time class="tl-date" datetime="' + esc(e.date) + '">' + fmtDate(e.date) + '</time><article class="tl-card tl-link">' +
+      '<span class="badge lk">Lien public</span><p class="tl-rel"><a href="' + ficheHref(a) + '">' + esc(a.name) + '</a> → <a href="' + ficheHref(b) + '">' + esc(b.name) + "</a> : " + esc(e.relation) + "</p>" +
+      '<div class="meta actions">' + srcLink(e.url, "Lire la source") + archLink(e) + "</div></article></li>";
+  }
+
+  /* ---------- Routage par ancre (#/…) ---------- */
+  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "methodologie"];
+  var TITLES = { accueil: "Gaza et extrême droite en France : cartographie des déclarations et des liens publics", sections: "Sections", chronologie: "Chronologie", reseau: "Réseau des relations", methodologie: "Méthodologie" };
+  var lastView = null;
+  function ensureGraph(focusId) {
+    if (!network) buildGraph(); else { sizeGraph(); network.redraw(); }
+    if (focusId && byId[focusId]) {
+      (function wait(k) { if (window.__graphReady) focusNode(focusId); else if (k < 200) setTimeout(function () { wait(k + 1); }, 50); })(0);
+    }
+  }
+  function route() {
+    var h = location.hash.replace(/^#/, "");
+    /* anciennes adresses (v1–v4) */
+    var legacy = /^(graphe|liste|methodologie)(?:\/(.*))?$/.exec(h);
+    if (legacy) {
+      var to = legacy[1] === "graphe" ? "/reseau" + (legacy[2] ? "/" + legacy[2] : "") : legacy[1] === "liste" ? "/sections" : "/methodologie";
+      history.replaceState(null, "", "#" + to); h = to;
+    }
+    var parts = h.replace(/^\//, "").split("#")[0].split("/"), v = parts[0] || "accueil";
+    var anchor = (h.split("#")[1]) || null;
+    if (v === "personne" || v === "organisation") v = "fiche";
+    if (VIEWS.indexOf(v) < 0) v = "accueil";
+    VIEWS.forEach(function (k) { $("view-" + k).hidden = k !== v; });
+    var tab = v === "fiche" ? "sections" : v;
+    document.querySelectorAll("#tabnav a").forEach(function (a) {
+      if (a.getAttribute("data-tab") === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+    });
+    document.body.setAttribute("data-view", v);
+    if (v !== "reseau") {
+      if (!$("panel").hidden) closePanel();
+      document.body.classList.remove("sheet-open", "panel-open");
+      if (fsMode) exitFullscreen();
+    }
+    if (v !== "fiche") document.title = v === "accueil" ? TITLES.accueil : TITLES[v] + " — Cartographie des déclarations et des liens publics";
+    if (v === "sections") { curSec = ["tout", "gaza", "france", "commun"].indexOf(parts[1]) >= 0 ? parts[1] : "tout"; renderSections(); }
+    if (v === "fiche") renderFiche(decodeURIComponent(parts[1] || ""), anchor);
+    var key = v + "/" + (v === "fiche" ? parts[1] : "");
+    if (key !== lastView && !(v === "reseau" && lastView && lastView.indexOf("reseau") === 0)) window.scrollTo(0, 0);
+    lastView = key;
+    if (v === "reseau") requestAnimationFrame(function () { ensureGraph(parts[1] ? decodeURIComponent(parts[1]) : null); });
+    window.__route = v;
+  }
+  function bindRouter() {
+    window.addEventListener("hashchange", function () { navCount++; route(); });
+    route();
+    var ft = $("filters-toggle"), fl = $("filters");
+    ft.addEventListener("click", function () {
+      var open = ft.getAttribute("aria-expanded") !== "true";
+      ft.setAttribute("aria-expanded", open ? "true" : "false");
+      fl.classList.toggle("open", open);
+      sizeGraph();
+    });
+    fl.addEventListener("transitionend", function (e) { if (e.target === fl) { sizeGraph(); } });
+    var ab = document.querySelector(".appbar");
+    var onScroll = function () { ab.classList.toggle("stuck", window.scrollY > 4); };
+    window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+  }
+
+  /* ---------- Application installable : service worker ---------- */
+  function registerSW() {
+    if (!("serviceWorker" in navigator) || !/^https?:$/.test(location.protocol)) return;
+    navigator.serviceWorker.register("sw.js", { scope: "./" })
+      .then(function () { window.__swRegistered = true; })
+      .catch(function (e) { window.__swError = String(e); });
   }
 })();

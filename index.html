@@ -4,38 +4,102 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#3b0a57">
 <title>Gaza et extrême droite en France : cartographie des déclarations et des liens publics</title>
 <meta name="description" content="Cartographie sourcée de déclarations publiques sur Gaza et sur la normalisation de l'extrême droite en France, et de liens publics entre personnalités et organisations. Chaque élément renvoie à sa source.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Ccircle cx=%228%22 cy=%228%22 r=%227%22 fill=%22%23007AFF%22/%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="64x64" href="icons/favicon-64.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cartographie">
+<meta name="application-name" content="Cartographie">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <a class="skip" href="#main">Aller au contenu</a>
-<header class="site-header">
-  <div class="wrap">
-    <div class="head-row">
-      <h1>Gaza et extrême droite en France : cartographie des déclarations et des liens publics</h1>
-      <a class="donate donate-head" hidden target="_blank" rel="noopener noreferrer">Soutenir ce travail</a>
-    </div>
-    <p class="subtitle">Déclarations publiques datées (Gaza ; normalisation de l'extrême droite en France) et liens publics entre personnalités et organisations, chacun accompagné de sa source.</p>
+<header class="appbar">
+  <div class="appbar-in">
+    <a class="brand" href="#/" aria-label="Accueil — Cartographie"><img src="icons/favicon-64.png" alt="" width="28" height="28"><span>Cartographie</span></a>
+    <a class="donate donate-head" hidden target="_blank" rel="noopener noreferrer">Soutenir ce travail</a>
   </div>
 </header>
-<div class="tabbar">
-  <div class="wrap">
-    <nav class="tabs" role="tablist" aria-label="Sections">
-      <span class="seg-thumb" aria-hidden="true"></span>
-      <a role="tab" href="#graphe" data-tab="graphe" id="tab-graphe">Arbre des relations</a>
-      <a role="tab" href="#liste" data-tab="liste" id="tab-liste">Liste</a>
-      <a role="tab" href="#methodologie" data-tab="methodologie" id="tab-methodologie">Méthodologie</a>
-    </nav>
-  </div>
-</div>
+<nav class="tabnav" id="tabnav" aria-label="Navigation principale">
+    <a href="#/" data-tab="accueil" id="tab-accueil"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5.5h-5V20H5a1 1 0 0 1-1-1z"/></svg><span>Accueil</span></a>
+    <a href="#/sections" data-tab="sections" id="tab-sections"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/></svg><span>Sections</span></a>
+    <a href="#/chronologie" data-tab="chronologie" id="tab-chronologie"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18"/><circle cx="12" cy="7" r="2"/><circle cx="12" cy="17" r="2"/><path d="M14 7h6M4 17h6"/></svg><span>Chronologie</span></a>
+    <a href="#/reseau" data-tab="reseau" id="tab-reseau"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18" r="2.2"/><circle cx="19" cy="18" r="2.2"/><circle cx="12" cy="12.5" r="2.2"/><path d="M12 7.2v3.1M10.3 14 6.6 16.5M13.7 14l3.7 2.5"/></svg><span>Réseau</span></a>
+    <a href="#/methodologie" data-tab="methodologie" id="tab-methodologie"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h9l3 3v13H6z"/><path d="M9 10h6M9 14h6M9 18h3"/></svg><span>Méthode</span></a>
+</nav>
 
 <main id="main">
-  <!-- GRAPHE -->
-  <section id="view-graphe" class="view" role="tabpanel" aria-labelledby="tab-graphe">
+  <!-- ACCUEIL -->
+  <section id="view-accueil" class="view" aria-labelledby="home-title">
+    <div class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Archive citoyenne · sources vérifiables</p>
+        <h1 id="home-title">Gaza et extrême droite en France : cartographie des déclarations et des liens publics</h1>
+        <p class="lead">Ce site rassemble, pour mémoire, des <strong>déclarations publiques</strong> et des <strong>liens publics</strong> entre personnalités et organisations en France, au sujet de la guerre à Gaza et de la normalisation de l'extrême droite. Chaque citation est reproduite telle que publiée, datée, accompagnée de sa source et, lorsque c'est possible, d'une copie archivée, afin que chacun puisse vérifier qui a dit quoi, quand et où. Le site ne qualifie ni les personnes ni leurs intentions.</p>
+        <form class="home-search" role="search" id="home-search-form" autocomplete="off">
+          <label for="home-search" class="sr-only">Rechercher une personne, une organisation ou une citation</label>
+          <div class="search-box"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><input id="home-search" type="search" placeholder="Rechercher une personne, un média, une citation…" enterkeyhint="search"></div>
+          <ul id="home-results" class="search-results" hidden></ul>
+        </form>
+      </div>
+    </div>
+    <div class="wrap home-body">
+      <dl class="stats" id="home-stats" aria-label="Chiffres clés"></dl>
+      <h2 class="h-sec">Explorer</h2>
+      <div class="entry-cards" id="home-entries"></div>
+      <h2 class="h-sec">Déclarations les plus récentes</h2>
+      <ol class="latest" id="home-latest"></ol>
+      <p class="more"><a href="#/chronologie" class="btn-pill">Toute la chronologie</a> <a href="data.json" download="cartographie-donnees.json" class="btn-pill ghost dl-link">Télécharger les données (JSON)</a></p>
+    </div>
+  </section>
+
+  <!-- SECTIONS -->
+  <section id="view-sections" class="view" aria-labelledby="sections-title" hidden>
+    <div class="wrap page">
+      <h1 class="view-title" id="sections-title">Sections</h1>
+      <div class="seg" role="tablist" aria-label="Choisir une section" id="sec-seg"></div>
+      <p class="sec-intro" id="sec-intro"></p>
+      <div class="field search">
+        <label for="sec-search" class="sr-only">Filtrer les personnes et organisations</label>
+        <div class="search-box"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><input id="sec-search" type="search" placeholder="Filtrer par nom ou fonction…" enterkeyhint="search"></div>
+      </div>
+      <p class="count" id="sec-count" aria-live="polite"></p>
+      <div id="sec-groups" class="groups"></div>
+    </div>
+  </section>
+
+  <!-- FICHE (personne / organisation) -->
+  <section id="view-fiche" class="view" aria-live="polite" hidden>
+    <div class="fiche-bar">
+      <button type="button" class="nav-btn" id="fiche-back"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span>Retour</span></button>
+      <button type="button" class="nav-btn" id="fiche-share"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5"/><path d="M6 11H5v9h14v-9h-1"/></svg><span>Partager</span></button>
+    </div>
+    <div class="wrap page fiche" id="fiche-body"></div>
+  </section>
+
+  <!-- CHRONOLOGIE -->
+  <section id="view-chronologie" class="view" aria-labelledby="chrono-title" hidden>
+    <div class="wrap page">
+      <h1 class="view-title" id="chrono-title">Chronologie</h1>
+      <p class="sec-intro">Toutes les déclarations et tous les liens datés, dans l'ordre chronologique.</p>
+      <div class="chrono-filters" id="chrono-filters">
+        <div class="field"><label for="tl-section">Section</label><select id="tl-section"><option value="">Toutes</option></select></div>
+        <div class="field"><label for="tl-category">Catégorie</label><select id="tl-category"><option value="">Toutes</option></select></div>
+        <div class="field"><label for="tl-theme">Thème / type</label><select id="tl-theme"><option value="">Tout</option></select></div>
+        <div class="field"><label for="tl-year">Année</label><select id="tl-year"><option value="">Toutes</option></select></div>
+      </div>
+      <div class="chrono-bar"><p class="count" id="tl-count" aria-live="polite"></p><button type="button" class="btn-pill ghost small" id="tl-order" aria-pressed="false">Plus récent d'abord</button></div>
+      <div id="timeline" class="timeline-all"></div>
+    </div>
+  </section>
+
+  <!-- RESEAU -->
+  <section id="view-reseau" class="view" aria-label="Réseau des relations" hidden>
     <div class="graph-shell">
       <div class="toolbar">
         <div class="toolbar-top">
@@ -67,7 +131,7 @@
       </div>
       <div class="graph-layout">
         <div class="graph-wrap">
-          <div id="graph" aria-label="Graphe interactif des relations. Une version textuelle est disponible dans l'onglet Liste."></div>
+          <div id="graph" aria-label="Graphe interactif des relations. Une version textuelle est disponible dans la vue Sections et dans la Chronologie."></div>
           <div class="field actions graph-controls">
             <button type="button" id="btn-fit" class="btn">
               <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/><circle cx="12" cy="12" r="2.5"/></svg>
@@ -100,43 +164,14 @@
     </div>
   </section>
 
-  <!-- LISTE -->
-  <section id="view-liste" class="view" role="tabpanel" aria-labelledby="tab-liste" hidden>
-    <div class="wrap">
-      <div class="list-toolbar">
-        <div class="field search">
-          <label for="list-search">Rechercher dans la liste</label>
-          <div class="search-box">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg>
-            <input id="list-search" type="search" placeholder="Nom, rôle, citation, média…" autocomplete="off" enterkeyhint="search">
-          </div>
-        </div>
-        <div class="field">
-          <label for="list-section">Section</label>
-          <select id="list-section"><option value="">Toutes les sections</option><option value="gaza">Gaza</option><option value="france">France – normalisation de l'extrême droite</option></select>
-        </div>
-        <div class="field">
-          <label for="list-theme">Thème</label>
-          <select id="list-theme"><option value="">Tous les thèmes</option></select>
-        </div>
-      </div>
-      <p class="count" id="list-count" aria-live="polite"></p>
-      <table class="people" id="people-table">
-        <caption class="sr-only">Personnes, déclarations et sources</caption>
-        <thead class="sr-only"><tr><th scope="col">Personne</th><th scope="col">Déclarations publiques</th><th scope="col">Relations</th></tr></thead>
-        <tbody id="people-body"></tbody>
-      </table>
-    </div>
-  </section>
-
   <!-- METHODOLOGIE -->
-  <section id="view-methodologie" class="view" role="tabpanel" aria-labelledby="tab-methodologie" hidden>
-    <div class="wrap"><article class="prose card">
+  <section id="view-methodologie" class="view" hidden>
+    <div class="wrap page"><article class="prose card">
       <h2>Méthodologie</h2>
       <h3>Objet</h3>
       <p>Ce site documente des <strong>propos publics</strong> tenus en France au sujet de la guerre à Gaza, ainsi que des <strong>liens publics</strong> (appartenance, fonction, collaboration éditoriale, soutien déclaré, événement commun) entre des personnalités et des organisations. Il ne constitue pas une accusation : il rassemble des éléments publiés et vérifiables.</p>
       <h3>Section « France – normalisation de l'extrême droite »</h3>
-      <p>Cette section rassemble des <strong>propos publics datés</strong> et des <strong>décisions d'institutions</strong> (Conseil d'État, Arcom, Conseil constitutionnel) qui portent sur la reprise, par des responsables politiques ou dans des médias, de termes ou de thèmes associés à l'extrême droite, ainsi que des liens publics entre partis, médias, éditeurs et financeurs. Les mêmes règles s'appliquent : citation exacte, date, support, source consultable, et inclusion des précisions, nuances ou réponses publiées par les personnes concernées. Le classement d'un propos dans cette section décrit son sujet ; il ne qualifie ni la personne ni ses intentions. Un même nœud peut appartenir aux deux sections (Gaza et France) ; l'onglet Liste permet de filtrer par section.</p>
+      <p>Cette section rassemble des <strong>propos publics datés</strong> et des <strong>décisions d'institutions</strong> (Conseil d'État, Arcom, Conseil constitutionnel) qui portent sur la reprise, par des responsables politiques ou dans des médias, de termes ou de thèmes associés à l'extrême droite, ainsi que des liens publics entre partis, médias, éditeurs et financeurs. Les mêmes règles s'appliquent : citation exacte, date, support, source consultable, et inclusion des précisions, nuances ou réponses publiées par les personnes concernées. Le classement d'un propos dans cette section décrit son sujet ; il ne qualifie ni la personne ni ses intentions. Un même nœud peut appartenir aux deux sections (Gaza et France) ; la vue Sections permet de filtrer par section.</p>
       <h3>Critères d'inclusion</h3>
       <ul>
         <li>Seules figurent des <strong>déclarations publiques vérifiables</strong>, accompagnées d'une <strong>date</strong>, du <strong>média</strong> ou support, et d'un <strong>lien vers la source</strong> (source primaire ou média reconnu qui la rapporte).</li>
@@ -167,6 +202,15 @@
         <li>Les vidéos YouTube s'affichent via <code>youtube-nocookie.com</code> et ne sont <strong>chargées qu'après un clic</strong> ; avant ce clic, aucune requête n'est adressée à YouTube. Les autres plateformes sont proposées sous forme de lien vers la page du diffuseur.</li>
         <li>Lorsqu'une vidéo correspond à une émission complète, le moment cité peut se trouver au milieu de l'enregistrement.</li>
       </ul>
+      <h3>Archivage des sources</h3>
+      <ul>
+        <li>Pour assurer la consultation des sources sur le long terme, chaque lien est associé, lorsque c'est possible, à une <strong>copie archivée</strong> sur la Wayback Machine d'Internet Archive (web.archive.org). La date indiquée est celle de la capture.</li>
+        <li>Une copie existante est utilisée en priorité ; à défaut, un archivage a été demandé. Certaines pages ne peuvent pas être archivées (protection anti-robots, réseau social, contenu dynamique) : seul le lien d'origine est alors proposé.</li>
+        <li>En cas de différence entre la source d'origine et sa copie, la source d'origine fait foi à la date de la citation.</li>
+      </ul>
+      <h3>Citer ce site et réutiliser les données</h3>
+      <p>Pour citer un élément, indiquez la personne, la citation, sa date et sa source d'origine, puis l'adresse de la fiche, par exemple : « Cartographie des déclarations et des liens publics, fiche <em>Nom</em>, consultée le <em>date</em>, &lt;adresse de la page&gt; ». Chaque fiche dispose d'un bouton « Partager » qui copie son adresse.</p>
+      <p>L'ensemble des données (personnes, organisations, citations, dates, sources, archives, relations, crédits des images) est téléchargeable au format JSON : <a href="data.json" download="cartographie-donnees.json" class="dl-link">Télécharger les données (JSON)</a>.</p>
       <h3>Absence de qualification juridique</h3>
       <p>Ce site <strong>ne porte aucune qualification juridique</strong> sur les personnes citées et ne leur attribue aucune étiquette. La présence d'une personne ou d'un lien dans la cartographie ne signifie ni adhésion, ni responsabilité, ni infraction.</p>
       <h3>Mise à jour</h3>
@@ -184,10 +228,12 @@
   <div class="wrap">
     <p>Données sourcées, citations reproduites telles que publiées. Aucune qualification juridique des personnes. Dernière mise à jour : <span id="footer-update">—</span>.</p>
     <p>Pour signaler une erreur ou demander un droit de réponse : ouvrir une issue sur le dépôt GitHub.</p>
+    <p><a href="data.json" download="cartographie-donnees.json" class="dl-link">Télécharger les données (JSON)</a></p>
     <p class="donate-wrap"><a class="donate donate-foot" hidden target="_blank" rel="noopener noreferrer">Soutenir ce travail</a></p>
-    <p class="img-note">Photos : Wikimedia Commons (licences libres, crédits dans chaque fiche). Logos reproduits à des fins d'identification.</p>
+    <p class="img-note">Photos : Wikimedia Commons (licences libres, crédits dans chaque fiche). Logos reproduits à des fins d'identification. Copies archivées : Internet Archive (Wayback Machine).</p>
   </div>
 </footer>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
 <script src="vendor/vis-network.min.js"></script>
 <script src="config.js"></script>
