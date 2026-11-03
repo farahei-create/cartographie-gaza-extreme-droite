@@ -2,8 +2,12 @@
 (function () {
   "use strict";
 
-  var THEME_ORDER = ["Gaza – déclarations", "Proximité extrême droite", "Nuance / contexte"];
+  var THEME_FR = "France – normalisation de l'extrême droite";
+  var THEME_ORDER = ["Gaza – déclarations", THEME_FR, "Proximité extrême droite", "Nuance / contexte"];
   var THEME_CLASS = { "Gaza – déclarations": "t-gaza", "Proximité extrême droite": "t-ed", "Nuance / contexte": "t-nuance" };
+  THEME_CLASS[THEME_FR] = "t-fr";
+  var SECTIONS = { gaza: "Gaza", france: "France – normalisation de l'extrême droite" };
+  var CFG = window.SITE_CONFIG || {};
   var NO_STATEMENT = "__none__";
 
   /* Couleurs : lues dans les variables CSS (--c-*) pour suivre le mode clair / sombre. */
@@ -16,6 +20,7 @@
     org:         { label: "Organisation (autre)", cssVar: "--c-org",        shape: "box",      size: 12 }
   };
   var THEME_VAR = { "Gaza – déclarations": "--t-gaza", "Proximité extrême droite": "--t-ed", "Nuance / contexte": "--t-nuance" };
+  THEME_VAR[THEME_FR] = "--t-fr";
   var FONT = "-apple-system, BlinkMacSystemFont, SF Pro Text, Inter, system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif";
   var MQ_MOBILE = window.matchMedia("(max-width: 860px)");
   var MQ_DARK = window.matchMedia("(prefers-color-scheme: dark)");
@@ -94,6 +99,8 @@
       .concat(Object.keys(seen).filter(function (t) { return THEME_ORDER.indexOf(t) < 0; }).sort());
 
     fillMeta();
+    bindDonation();
+    bindVideos();
     buildFilters();
     buildGraph();
     buildList();
@@ -102,6 +109,14 @@
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(moveThumb);
   }
 
+  /* Bouton « Soutenir ce travail » : affiché seulement si config.js renseigne DONATION_URL */
+  function bindDonation() {
+    var url = String(CFG.DONATION_URL || "").trim();
+    var okUrl = /^https:\/\//i.test(url);
+    document.querySelectorAll(".donate").forEach(function (a) {
+      if (okUrl) { a.href = url; a.hidden = false; } else { a.hidden = true; a.removeAttribute("href"); }
+    });
+  }
   function fillMeta() {
     var m = DATA.meta || {};
     var upd = m.generated ? fmtDate(m.generated) : "—";
@@ -238,9 +253,13 @@
 
   function nodeStyle(n, dim) {
     var c = PAL.types[n._sub];
+    /* nœud illustré (photo / logo chargé) : fond clair et anneau coloré selon le type */
+    var col = n._imgReady
+      ? { background: "#ffffff", border: c, highlight: { background: "#ffffff", border: PAL.accent }, hover: { background: "#ffffff", border: c } }
+      : { background: c, border: PAL.border, highlight: { background: c, border: PAL.accent }, hover: { background: c, border: PAL.border } };
     return {
       id: n.id, opacity: dim ? 0.18 : 1,
-      color: { background: c, border: PAL.border, highlight: { background: c, border: PAL.accent }, hover: { background: c, border: PAL.border } },
+      color: col,
       shadow: { enabled: !dim, color: PAL.shadow, size: 10, x: 0, y: 3 },
       font: { face: FONT, size: n.type === "person" ? 19 : 16, color: dim ? PAL.labelDim : PAL.label, strokeWidth: 5, strokeColor: PAL.bg, vadjust: 2 }
     };
@@ -300,7 +319,7 @@
       },
       physics: {
         solver: "forceAtlas2Based",
-        forceAtlas2Based: { gravitationalConstant: -45, centralGravity: 0.015, springLength: 80, springConstant: 0.06, avoidOverlap: 0.6 },
+        forceAtlas2Based: { gravitationalConstant: -75, centralGravity: 0.012, springLength: 100, springConstant: 0.05, avoidOverlap: 0.8 },
         stabilization: { iterations: 400, fit: true }
       },
       layout: { randomSeed: 7, improvedLayout: true }
@@ -309,6 +328,11 @@
       network.setOptions({ physics: { enabled: false } });
       network.fit();
       window.__graphReady = true;
+      window.__graphReadyAt = performance.now();
+      /* aides aux tests automatisés : forme et visibilité des nœuds */
+      window.__nodeShape = function (id) { var o = nodesDS.get(id); return o ? o.shape : null; };
+      window.__visible = function () { return nodesDS.get().filter(function (o) { return !o.hidden; }).map(function (o) { return o.id; }); };
+      loadNodeImages();
       /* aide aux tests automatisés : position DOM d'un nœud */
       window.__nodeDOM = function (id) { var p = network.getPositions([id])[id]; return p ? network.canvasToDOM(p) : null; };
     });
@@ -337,6 +361,49 @@
     if (MQ_DARK.addEventListener) MQ_DARK.addEventListener("change", onScheme); else if (MQ_DARK.addListener) MQ_DARK.addListener(onScheme);
     applyFilters();
   }
+  /* ---------- images des nœuds (chargement différé, repli sur la forme colorée) ---------- */
+  function nodeImageUrl(n) { return n.image || n.logo || null; }
+  function logoDisc(img) {
+    /* compose le logo dans un disque blanc (contenu entièrement visible dans le cercle) */
+    var S = 160, c = document.createElement("canvas"); c.width = c.height = S;
+    var x = c.getContext("2d"); x.fillStyle = "#ffffff"; x.fillRect(0, 0, S, S);
+    var box = S * 0.64, r = Math.min(box / img.naturalWidth, box / img.naturalHeight);
+    var w = img.naturalWidth * r, h = img.naturalHeight * r;
+    x.drawImage(img, (S - w) / 2, (S - h) / 2, w, h);
+    return c.toDataURL("image/png");
+  }
+  function loadNodeImages() {
+    var todo = DATA.nodes.filter(nodeImageUrl), i = 0;
+    window.__imgState = { total: todo.length, loaded: 0, failed: 0 };
+    function next() {
+      /* quelques images à la fois pour ne pas bloquer le rendu */
+      for (var k = 0; k < 4 && i < todo.length; k++) one(todo[i++]);
+    }
+    function one(n) {
+      var img = new Image();
+      img.decoding = "async";
+      img.onload = function () {
+        try {
+          var src = n.image ? img.src : logoDisc(img);
+          n._imgReady = true;
+          var o = nodeStyle(n, false);
+          o.shape = "circularImage"; o.image = src; o.size = TYPES[n._sub].size + Math.min(edgesOf[n.id].length, 12) + 6;
+          o.borderWidth = 3; o.borderWidthSelected = 4.5;
+          o.shapeProperties = { useBorderWithImage: true, interpolation: true };
+          nodesDS.update(o);
+          window.__imgState.loaded++;
+        } catch (e) { n._imgReady = false; window.__imgState.failed++; }
+        done();
+      };
+      img.onerror = function () { window.__imgState.failed++; done(); }; /* repli : la forme colorée reste affichée */
+      img.src = nodeImageUrl(n);
+    }
+    var pending = todo.length;
+    function done() { pending--; if (i < todo.length) next(); if (!pending) { applyFilters(); window.__imagesDone = true; } }
+    if (!todo.length) { window.__imagesDone = true; return; }
+    (window.requestIdleCallback || function (f) { return setTimeout(f, 60); })(next);
+  }
+
   function tooltip(text) {
     var d = document.createElement("div");
     d.textContent = text;
@@ -366,8 +433,54 @@
     return '<ul class="stmts">' + st.map(function (s) {
       return '<li class="stmt"><blockquote>' + quoteHtml(s.quote) + "</blockquote>" +
         '<div class="meta"><span>' + fmtDate(s.date) + "</span><span>· " + esc(s.medium) + "</span>" + (s.theme ? themeTag(s.theme) : "") + "</div>" +
-        '<div class="meta">' + srcLink(s.url, "Lire la source") + "</div></li>";
+        '<div class="meta">' + srcLink(s.url, "Lire la source") + "</div>" + videoHtml(s.video) + "</li>";
     }).join("") + "</ul>";
+  }
+  /* ---------- vidéos : intégration « légère », chargée uniquement au clic ---------- */
+  function videoHtml(v) {
+    if (!v || !v.url) return "";
+    var cap = '<span class="v-title">' + esc(v.title) + '</span><span class="v-src">' + esc(v.source || v.platform) + "</span>";
+    if (v.platform === "youtube" && /^[\w-]{11}$/.test(v.id || "")) {
+      return '<div class="video" data-yt="' + esc(v.id) + '">' +
+        '<button type="button" class="video-btn" aria-label="Voir la vidéo : ' + esc(v.title) + '">' +
+        '<span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span>' +
+        '<span class="v-txt"><span class="v-cta">Voir la vidéo</span>' + cap + "</span></button>" +
+        '<p class="v-note">Lecteur YouTube (youtube-nocookie.com) chargé uniquement après le clic · <a href="' + esc(v.url) + '" target="_blank" rel="noopener noreferrer">Ouvrir sur YouTube ↗</a></p></div>';
+    }
+    return '<a class="video video-link" href="' + esc(v.url) + '" target="_blank" rel="noopener noreferrer">' +
+      '<span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span>' +
+      '<span class="v-txt"><span class="v-cta">Voir la vidéo sur ' + esc(v.platform) + " ↗</span>" + cap + "</span></a>";
+  }
+  function bindVideos() {
+    document.addEventListener("click", function (ev) {
+      var b = ev.target.closest && ev.target.closest(".video-btn"); if (!b) return;
+      var box = b.closest(".video"), id = box.getAttribute("data-yt");
+      var f = document.createElement("iframe");
+      f.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(id) + "?autoplay=1&rel=0";
+      f.title = b.getAttribute("aria-label");
+      f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      f.allowFullscreen = true; f.referrerPolicy = "strict-origin-when-cross-origin";
+      f.setAttribute("loading", "lazy");
+      var wrap = document.createElement("div"); wrap.className = "video-frame"; wrap.appendChild(f);
+      b.replaceWith(wrap); box.classList.add("is-playing");
+    });
+  }
+  /* ---------- photo / logo du panneau, avec crédit ---------- */
+  function mediaHtml(n, cls) {
+    var cr, url, label;
+    if (n.image) { cr = n.image_credit || {}; url = n.image; label = "Photo"; }
+    else if (n.logo) { cr = n.logo_credit || {}; url = n.logo; label = "Logo"; }
+    else return "";
+    var lic = cr.license ? (cr.license_url ? '<a href="' + esc(cr.license_url) + '" target="_blank" rel="noopener noreferrer license">' + esc(cr.license) + "</a>" : esc(cr.license)) : "";
+    var credit = label + " : " + (cr.author ? esc(cr.author) + " · " : "") + (lic ? lic + " · " : "") +
+      (cr.source_url ? '<a href="' + esc(cr.source_url) + '" target="_blank" rel="noopener noreferrer">Wikimedia Commons ↗</a>' : "") +
+      (n.logo && !n.image ? " · reproduit à des fins d'identification" : "");
+    return '<figure class="' + cls + (n.image ? " is-photo" : " is-logo") + '"><img src="' + esc(url) + '" alt="' + esc(label + " : " + n.name) +
+      '" loading="lazy" decoding="async" width="256" height="256" onerror="this.closest(\'figure\').classList.add(\'img-failed\')">' +
+      '<figcaption class="credit">' + credit + "</figcaption></figure>";
+  }
+  function sectionTags(n) {
+    return (n.sections || []).map(function (k) { return '<span class="sec sec-' + esc(k) + '">' + esc(k === "gaza" ? "Section Gaza" : "Section France") + "</span>"; }).join("");
   }
   function relationsHtml(n, asButtons) {
     var es = edgesOf[n.id];
@@ -385,8 +498,9 @@
     var n = byId[id]; if (!n) return;
     var t = TYPES[n._sub];
     $("panel-body").innerHTML =
-      '<span class="badge" style="--tc:var(' + t.cssVar + ')">' + esc(t.label) + "</span>" +
-      "<h2>" + esc(n.name) + "</h2>" +
+      '<div class="panel-id">' + mediaHtml(n, "p-media") + '<div class="p-id-txt">' +
+      '<span class="badge" style="--tc:var(' + t.cssVar + ')">' + esc(t.label) + "</span>" + '<div class="secs">' + sectionTags(n) + "</div>" +
+      "<h2>" + esc(n.name) + "</h2></div></div>" +
       '<p class="role">' + esc(n.role) + "</p>" +
       (n.description ? "<p>" + esc(n.description) + "</p>" : "") +
       (n.type === "person" || (n.statements || []).length ? "<h3>Déclarations publiques (" + (n.statements || []).length + ")</h3>" + statementsHtml(n) : "") +
@@ -483,7 +597,8 @@
     var body = $("people-body");
     body.innerHTML = people.map(function (n) {
       return '<tr data-id="' + esc(n.id) + '">' +
-        '<td data-label="Personne"><p class="name" id="p-' + esc(n.id) + '">' + esc(n.name) + '</p><p class="role">' + esc(n.role) + "</p>" +
+        '<td data-label="Personne">' + mediaHtml(n, "l-media") + '<p class="name" id="p-' + esc(n.id) + '">' + esc(n.name) + '</p><p class="role">' + esc(n.role) + "</p>" +
+        '<div class="secs">' + sectionTags(n) + "</div>" +
         (n.description ? '<p class="desc">' + esc(n.description) + "</p>" : "") +
         '<p class="desc"><a href="#graphe/' + encodeURIComponent(n.id) + '">Voir dans l\'arbre</a></p></td>' +
         '<td data-label="Déclarations publiques" class="st-cell"></td>' +
@@ -494,11 +609,12 @@
       texts[n.id] = nodeText(n) + " " + norm(edgesOf[n.id].map(function (e) { return e.relation + " " + byId[e.source].name + " " + byId[e.target].name; }).join(" "));
     });
     function render() {
-      var q = norm($("list-search").value).trim(), th = sel.value, shown = 0;
+      var q = norm($("list-search").value).trim(), th = sel.value, sec = $("list-section").value, shown = 0;
       body.querySelectorAll("tr").forEach(function (tr) {
         var n = byId[tr.getAttribute("data-id")];
         var okTheme = !th || (n.statements || []).some(function (s) { return s.theme === th; });
-        var ok = okTheme && (!q || texts[n.id].indexOf(q) >= 0);
+        var okSec = !sec || (n.sections || []).indexOf(sec) >= 0;
+        var ok = okTheme && okSec && (!q || texts[n.id].indexOf(q) >= 0);
         tr.hidden = !ok;
         if (ok) { shown++; tr.querySelector(".st-cell").innerHTML = statementsHtml(n, th); }
       });
@@ -506,6 +622,7 @@
     }
     $("list-search").addEventListener("input", render);
     sel.addEventListener("change", render);
+    $("list-section").addEventListener("change", render);
     render();
   }
 
