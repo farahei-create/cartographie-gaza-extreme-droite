@@ -263,6 +263,11 @@ select{
 .btn:active{transform:scale(.95)}
 .btn .i{width:17px;height:17px}
 
+/* bouton plein écran */
+.btn-fs .i-collapse{display:none}
+.is-fs .btn-fs .i-expand{display:none}
+.is-fs .btn-fs .i-collapse{display:block}
+
 /* légende flottante */
 .legend{
   position:absolute;left:14px;bottom:14px;z-index:2;pointer-events:none;
@@ -423,6 +428,24 @@ code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:.88em
 
 .view[hidden]{display:none}
 
+/* ---------- plein écran (API Fullscreen ou repli CSS) ---------- */
+.graph-shell.is-fs{
+  max-width:none;margin:0;width:100%;height:100%;
+  grid-template-rows:minmax(0,1fr);
+  padding:calc(12px + var(--safe-t)) calc(12px + var(--safe-r)) calc(12px + var(--safe-b)) calc(12px + var(--safe-l));
+  background:var(--bg);color:var(--ink);overflow:hidden;
+}
+.graph-shell.is-fs .toolbar,.graph-shell.is-fs .graph-layout{height:auto;min-height:0}
+.graph-shell:fullscreen{background:var(--bg)}
+.graph-shell::backdrop{background:var(--bg)}
+.graph-shell.is-pseudo-fs{
+  position:fixed;inset:0;z-index:2147483000;height:100vh;height:100dvh;
+  animation:fs-in .38s var(--spring);
+}
+@keyframes fs-in{from{opacity:0;transform:scale(.985)}to{opacity:1;transform:none}}
+html.fs-lock,html.fs-lock body{overflow:hidden;overscroll-behavior:none;height:100%}
+html.fs-lock .tabbar{visibility:hidden}
+
 /* ==========================================================================
    Mobile (≤ 860 px) : filtres repliables, feuille inférieure
    ========================================================================== */
@@ -456,6 +479,9 @@ code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:.88em
   }
   .legend::-webkit-scrollbar{display:none}
   .hint{display:none}
+  .btn-fs{width:44px;padding:0;justify-content:center}
+  .btn-fs .btn-fs-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+  .graph-shell.is-fs{grid-template-rows:auto minmax(0,1fr);gap:10px;padding:calc(8px + var(--safe-t)) calc(10px + var(--safe-r)) calc(10px + var(--safe-b)) calc(10px + var(--safe-l))}
 
   /* feuille inférieure */
   .panel{

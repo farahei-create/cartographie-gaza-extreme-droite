@@ -74,6 +74,11 @@
               <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3"/><path d="M4 4v4h4"/></svg>
               <span>Réinitialiser</span>
             </button>
+            <button type="button" id="btn-fs" class="btn btn-fs" aria-pressed="false" title="Plein écran">
+              <svg class="i i-expand" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-6.5 6.5M10 20H4v-6M4 20l6.5-6.5"/></svg>
+              <svg class="i i-collapse" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 10.5h-6v-6M13.5 10.5 20 4M4.5 13.5h6v6M10.5 13.5 4 20"/></svg>
+              <span class="btn-fs-label">Plein écran</span>
+            </button>
           </div>
           <div id="legend" class="legend" aria-label="Légende"></div>
           <p class="hint">Survolez un lien pour lire la relation ; cliquez sur un nœud pour afficher ses déclarations et ses sources. Molette ou pincement pour zoomer, glisser pour se déplacer.</p>
@@ -88,6 +93,7 @@
           <div id="panel-body"></div>
         </aside>
       </div>
+      <div class="sheet-scrim" id="sheet-scrim" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -159,7 +165,6 @@
     <p>Pour signaler une erreur ou demander un droit de réponse : ouvrir une issue sur le dépôt GitHub.</p>
   </div>
 </footer>
-<div class="sheet-scrim" id="sheet-scrim" aria-hidden="true"></div>
 
 <script src="vendor/vis-network.min.js"></script>
 <script src="app.js"></script>

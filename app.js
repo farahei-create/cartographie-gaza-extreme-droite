@@ -252,7 +252,7 @@
   /* ---------- graphe ---------- */
   function sizeGraph() {
     var shell = document.querySelector(".graph-shell"), gl = document.querySelector(".graph-layout");
-    if (!shell || !gl || $("view-graphe").hidden) return;
+    if (!shell || !gl || $("view-graphe").hidden || shell.classList.contains("is-fs")) return;
     var mobile = MQ_MOBILE.matches;
     var ref = mobile ? gl : shell;
     var top = ref.getBoundingClientRect().top + window.scrollY;
@@ -326,7 +326,12 @@
     $("panel-close").addEventListener("click", closePanel);
     /* ignore le « clic fantôme » émis juste après le tap qui a ouvert la feuille */
     $("sheet-scrim").addEventListener("click", function () { if (Date.now() - panelOpenedAt > 450) closePanel(); });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closePanel(); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape") return;
+      if (!$("panel").hidden) closePanel();
+      else if (fsMode === "pseudo") exitFullscreen();
+    });
+    bindFullscreen();
     bindSheet();
     var onScheme = function () { readPalette(); applyFilters(); network.redraw(); };
     if (MQ_DARK.addEventListener) MQ_DARK.addEventListener("change", onScheme); else if (MQ_DARK.addListener) MQ_DARK.addListener(onScheme);
@@ -515,7 +520,7 @@
         $("tab-" + t).setAttribute("aria-selected", t === tab ? "true" : "false");
       });
       moveThumb();
-      if (tab !== "graphe") { document.body.classList.remove("sheet-open"); }
+      if (tab !== "graphe") { document.body.classList.remove("sheet-open"); if (fsMode) exitFullscreen(); }
       else if (!$("panel").hidden) { document.body.classList.toggle("sheet-open", MQ_MOBILE.matches); }
       if (tab === "graphe" && network) {
         sizeGraph(); network.redraw();
@@ -543,6 +548,73 @@
     var tb = document.querySelector(".tabbar");
     var onScroll = function () { tb.classList.toggle("stuck", tb.getBoundingClientRect().top <= 0 && window.scrollY > 4); };
     window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+  }
+
+  /* ---------- plein écran ---------- */
+  var fsMode = null; /* null | "native" | "pseudo" */
+  function fsElement() { return document.fullscreenElement || document.webkitFullscreenElement || null; }
+  function nativeFsAvailable(el) {
+    var req = el.requestFullscreen || el.webkitRequestFullscreen;
+    var enabled = document.fullscreenEnabled !== undefined ? document.fullscreenEnabled : document.webkitFullscreenEnabled;
+    return !!req && enabled !== false;
+  }
+  function setFsUi(on) {
+    var shell = document.querySelector(".graph-shell"), b = $("btn-fs");
+    shell.classList.toggle("is-fs", on);
+    var label = on ? "Quitter le plein écran" : "Plein écran";
+    b.querySelector(".btn-fs-label").textContent = label;
+    b.title = label;
+    b.setAttribute("aria-pressed", on ? "true" : "false");
+  }
+  function afterFsResize() {
+    if (!network) return;
+    var go = function () {
+      network.setSize("100%", "100%");
+      network.redraw();
+      network.fit({ animation: anim(400) });
+    };
+    requestAnimationFrame(function () { requestAnimationFrame(go); });
+    setTimeout(go, MQ_RM.matches ? 50 : 420);
+  }
+  function enterPseudo() {
+    fsMode = "pseudo";
+    document.querySelector(".graph-shell").classList.add("is-pseudo-fs");
+    document.documentElement.classList.add("fs-lock");
+    setFsUi(true); afterFsResize();
+  }
+  function enterFullscreen() {
+    var shell = document.querySelector(".graph-shell");
+    if (nativeFsAvailable(shell)) {
+      fsMode = "native"; setFsUi(true);
+      try {
+        var r = (shell.requestFullscreen || shell.webkitRequestFullscreen).call(shell);
+        if (r && typeof r.then === "function") r.catch(function () { if (!fsElement()) enterPseudo(); });
+        else setTimeout(function () { if (fsMode === "native" && !fsElement()) enterPseudo(); }, 400);
+      } catch (e) { enterPseudo(); }
+    } else enterPseudo();
+  }
+  function exitFullscreen() {
+    var mode = fsMode; fsMode = null;
+    var shell = document.querySelector(".graph-shell");
+    if (mode === "native" && fsElement()) {
+      var ex = document.exitFullscreen || document.webkitExitFullscreen;
+      try { var r = ex && ex.call(document); if (r && r.catch) r.catch(function () {}); } catch (e) {}
+    }
+    shell.classList.remove("is-pseudo-fs");
+    document.documentElement.classList.remove("fs-lock");
+    setFsUi(false);
+    sizeGraph(); afterFsResize();
+  }
+  function bindFullscreen() {
+    $("btn-fs").addEventListener("click", function () { if (fsMode) exitFullscreen(); else enterFullscreen(); });
+    var onChange = function () {
+      var shell = document.querySelector(".graph-shell");
+      if (fsElement() === shell) { fsMode = "native"; setFsUi(true); afterFsResize(); }
+      else if (fsMode === "native") exitFullscreen();
+    };
+    document.addEventListener("fullscreenchange", onChange);
+    document.addEventListener("webkitfullscreenchange", onChange);
+    window.__fs = function () { return fsMode; };
   }
 
   /* Contrôle segmenté : pastille glissante sous l'onglet actif */
