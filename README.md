@@ -1,4 +1,6 @@
-# Gaza et extrême droite : cartographie des déclarations publiques en France
+# Onrecord — Leurs mots, datés et sourcés
+
+*Gaza et extrême droite en France : cartographie des déclarations et des liens publics.*
 
 Site statique (HTML/CSS/JavaScript, **sans étape de build**) qui présente :
 

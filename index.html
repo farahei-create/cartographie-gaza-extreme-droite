@@ -5,23 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#3b0a57">
-<title>Gaza et extrême droite en France : cartographie des déclarations et des liens publics</title>
-<meta name="description" content="Cartographie sourcée de déclarations publiques sur Gaza et sur la normalisation de l'extrême droite en France, et de liens publics entre personnalités et organisations. Chaque élément renvoie à sa source.">
+<title>Onrecord — Leurs mots, datés et sourcés</title>
+<meta name="description" content="Onrecord : cartographie sourcée de déclarations publiques sur Gaza et sur la normalisation de l'extrême droite en France, et de liens publics entre personnalités et organisations. Chaque élément renvoie à sa source.">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="64x64" href="icons/favicon-64.png">
 <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Cartographie">
-<meta name="application-name" content="Cartographie">
+<meta property="og:title" content="Onrecord — Leurs mots, datés et sourcés">
+<meta property="og:description" content="Déclarations publiques et liens publics, datés et sourcés, avec copies archivées.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Onrecord">
+<meta property="og:locale" content="fr_FR">
+<meta name="apple-mobile-web-app-title" content="Onrecord">
+<meta name="application-name" content="Onrecord">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="appbar">
   <div class="appbar-in">
-    <a class="brand" href="#/" aria-label="Accueil — Cartographie"><img src="icons/favicon-64.png" alt="" width="28" height="28"><span>Cartographie</span></a>
+    <a class="brand" href="#/" aria-label="Accueil — Onrecord"><img src="icons/favicon-64.png" alt="" width="28" height="28"><span>Onrecord</span></a>
     <a class="donate donate-head" hidden target="_blank" rel="noopener noreferrer">Soutenir ce travail</a>
   </div>
 </header>
@@ -38,8 +43,12 @@
   <section id="view-accueil" class="view" aria-labelledby="home-title">
     <div class="hero">
       <div class="wrap">
+        <header class="onrecord-head">
+          <h1 class="onrecord" id="onrecord-title">Onrecord</h1>
+          <p class="tagline">Leurs mots, datés et sourcés.</p>
+        </header>
         <p class="eyebrow">Archive citoyenne · sources vérifiables</p>
-        <h1 id="home-title">Gaza et extrême droite en France : cartographie des déclarations et des liens publics</h1>
+        <h2 class="hero-title" id="home-title">Gaza et extrême droite en France : cartographie des déclarations et des liens publics</h2>
         <p class="lead">Ce site rassemble, pour mémoire, des <strong>déclarations publiques</strong> et des <strong>liens publics</strong> entre personnalités et organisations en France, au sujet de la guerre à Gaza et de la normalisation de l'extrême droite. Chaque citation est reproduite telle que publiée, datée, accompagnée de sa source et, lorsque c'est possible, d'une copie archivée, afin que chacun puisse vérifier qui a dit quoi, quand et où. Le site ne qualifie ni les personnes ni leurs intentions.</p>
         <form class="home-search" role="search" id="home-search-form" autocomplete="off">
           <label for="home-search" class="sr-only">Rechercher une personne, une organisation ou une citation</label>
@@ -54,7 +63,7 @@
       <div class="entry-cards" id="home-entries"></div>
       <h2 class="h-sec">Déclarations les plus récentes</h2>
       <ol class="latest" id="home-latest"></ol>
-      <p class="more"><a href="#/chronologie" class="btn-pill">Toute la chronologie</a> <a href="data.json" download="cartographie-donnees.json" class="btn-pill ghost dl-link">Télécharger les données (JSON)</a></p>
+      <p class="more"><a href="#/chronologie" class="btn-pill">Toute la chronologie</a> <a href="data.json" download="onrecord-donnees.json" class="btn-pill ghost dl-link">Télécharger les données (JSON)</a></p>
     </div>
   </section>
 
@@ -209,8 +218,8 @@
         <li>En cas de différence entre la source d'origine et sa copie, la source d'origine fait foi à la date de la citation.</li>
       </ul>
       <h3>Citer ce site et réutiliser les données</h3>
-      <p>Pour citer un élément, indiquez la personne, la citation, sa date et sa source d'origine, puis l'adresse de la fiche, par exemple : « Cartographie des déclarations et des liens publics, fiche <em>Nom</em>, consultée le <em>date</em>, &lt;adresse de la page&gt; ». Chaque fiche dispose d'un bouton « Partager » qui copie son adresse.</p>
-      <p>L'ensemble des données (personnes, organisations, citations, dates, sources, archives, relations, crédits des images) est téléchargeable au format JSON : <a href="data.json" download="cartographie-donnees.json" class="dl-link">Télécharger les données (JSON)</a>.</p>
+      <p>Pour citer un élément, indiquez la personne, la citation, sa date et sa source d'origine, puis l'adresse de la fiche, par exemple : « Onrecord, fiche <em>Nom</em>, consultée le <em>date</em>, &lt;adresse de la page&gt; ». Chaque fiche dispose d'un bouton « Partager » qui copie son adresse.</p>
+      <p>L'ensemble des données (personnes, organisations, citations, dates, sources, archives, relations, crédits des images) est téléchargeable au format JSON : <a href="data.json" download="onrecord-donnees.json" class="dl-link">Télécharger les données (JSON)</a>.</p>
       <h3>Absence de qualification juridique</h3>
       <p>Ce site <strong>ne porte aucune qualification juridique</strong> sur les personnes citées et ne leur attribue aucune étiquette. La présence d'une personne ou d'un lien dans la cartographie ne signifie ni adhésion, ni responsabilité, ni infraction.</p>
       <h3>Mise à jour</h3>
@@ -228,7 +237,7 @@
   <div class="wrap">
     <p>Données sourcées, citations reproduites telles que publiées. Aucune qualification juridique des personnes. Dernière mise à jour : <span id="footer-update">—</span>.</p>
     <p>Pour signaler une erreur ou demander un droit de réponse : ouvrir une issue sur le dépôt GitHub.</p>
-    <p><a href="data.json" download="cartographie-donnees.json" class="dl-link">Télécharger les données (JSON)</a></p>
+    <p><a href="data.json" download="onrecord-donnees.json" class="dl-link">Télécharger les données (JSON)</a></p>
     <p class="donate-wrap"><a class="donate donate-foot" hidden target="_blank" rel="noopener noreferrer">Soutenir ce travail</a></p>
     <p class="img-note">Photos : Wikimedia Commons (licences libres, crédits dans chaque fiche). Logos reproduits à des fins d'identification. Copies archivées : Internet Archive (Wayback Machine).</p>
   </div>

@@ -1,4 +1,4 @@
-/* Cartographie des déclarations publiques — script principal (sans étape de build). */
+/* Onrecord — cartographie des déclarations publiques — script principal (sans étape de build). */
 (function () {
   "use strict";
 
@@ -847,7 +847,7 @@
         (st.length ? '<ol class="tl">' + st.map(function (x) { return tlItem(x.s, n, x.i, false); }).join("") + "</ol>" : '<p class="empty">Aucune déclaration répertoriée.</p>') : "") +
       '<h2 class="h-sec">Relations <span class="h-n">' + es.length + "</span></h2>" +
       (es.length ? '<ul class="rel-list">' + es.map(function (e) { return relItem(e, n); }).join("") + "</ul>" : '<p class="empty">Aucune relation répertoriée.</p>');
-    document.title = n.name + " — Cartographie des déclarations et des liens publics";
+    document.title = n.name + " — Onrecord";
     if (anchor) { var el = document.getElementById(anchor); if (el) setTimeout(function () { el.scrollIntoView({ block: "center", behavior: MQ_RM.matches ? "auto" : "smooth" }); el.classList.add("flash"); }, 60); }
   }
   function tlItem(s, n, i, withWho) {
@@ -870,7 +870,7 @@
     $("fiche-share").addEventListener("click", function () {
       if (!curFiche) return;
       var url = location.href.split("#")[0] + ficheHref(curFiche);
-      var data = { title: curFiche.name + " — Cartographie", text: curFiche.name + " : déclarations publiques et liens, avec leurs sources.", url: url };
+      var data = { title: curFiche.name + " — Onrecord", text: curFiche.name + " : déclarations publiques et liens, avec leurs sources.", url: url };
       if (navigator.share) { navigator.share(data).catch(function () {}); return; }
       copyText(url).then(function () { toast("Lien copié : " + url); }, function () { toast(url); });
     });
@@ -925,7 +925,7 @@
 
   /* ---------- Routage par ancre (#/…) ---------- */
   var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "methodologie"];
-  var TITLES = { accueil: "Gaza et extrême droite en France : cartographie des déclarations et des liens publics", sections: "Sections", chronologie: "Chronologie", reseau: "Réseau des relations", methodologie: "Méthodologie" };
+  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Sections", chronologie: "Chronologie", reseau: "Réseau des relations", methodologie: "Méthodologie" };
   var lastView = null;
   function ensureGraph(focusId) {
     if (!network) buildGraph(); else { sizeGraph(); network.redraw(); }
@@ -956,7 +956,7 @@
       document.body.classList.remove("sheet-open", "panel-open");
       if (fsMode) exitFullscreen();
     }
-    if (v !== "fiche") document.title = v === "accueil" ? TITLES.accueil : TITLES[v] + " — Cartographie des déclarations et des liens publics";
+    if (v !== "fiche") document.title = v === "accueil" ? TITLES.accueil : TITLES[v] + " — Onrecord";
     if (v === "sections") { curSec = ["tout", "gaza", "france", "commun"].indexOf(parts[1]) >= 0 ? parts[1] : "tout"; renderSections(); }
     if (v === "fiche") renderFiche(decodeURIComponent(parts[1] || ""), anchor);
     var key = v + "/" + (v === "fiche" ? parts[1] : "");
