@@ -5,8 +5,8 @@
     "counts": {
       "persons": 31,
       "orgs": 27,
-      "edges": 80,
-      "statements": 77,
+      "edges": 83,
+      "statements": 80,
       "photos": 25,
       "logos": 19,
       "videos": 14,
@@ -485,7 +485,9 @@
           "medium": "LCI, au lendemain de la journée de mobilisation du 17 octobre 2026, cité par Le HuffPost avec AFP ; propos signalés au parquet par l'Arcom (annonce du 03/11/2026), aucune décision de justice à ce stade",
           "url": "https://www.huffingtonpost.fr/france/article/l-arcom-a-directement-saisi-la-justice-pour-ces-sorties-d-eric-zemmour-apres-le-17-octobre_351273.html",
           "theme": "France – normalisation de l'extrême droite",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261103162638/https://www.huffingtonpost.fr/france/article/l-arcom-a-directement-saisi-la-justice-pour-ces-sorties-d-eric-zemmour-apres-le-17-octobre_351273.html",
+          "archived": "2026-11-03"
         }
       ],
       "sections": [
@@ -1889,7 +1891,39 @@
           "medium": "Martin Ajdari, président de l'Arcom, sur France Inter (L'invité du 13/14), cité par Le HuffPost avec AFP ; signalement au parquet visant des propos d'Éric Zemmour tenus sur LCI, BFMTV et CNews après la journée du 17 octobre 2026 ; à propos d'une telle saisine, M. Ajdari a déclaré : « ce n'est pas inédit mais c'est relativement rare »",
           "url": "https://www.huffingtonpost.fr/france/article/l-arcom-a-directement-saisi-la-justice-pour-ces-sorties-d-eric-zemmour-apres-le-17-octobre_351273.html",
           "theme": "France – normalisation de l'extrême droite",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261103162638/https://www.huffingtonpost.fr/france/article/l-arcom-a-directement-saisi-la-justice-pour-ces-sorties-d-eric-zemmour-apres-le-17-octobre_351273.html",
+          "archived": "2026-11-03"
+        },
+        {
+          "quote": "Il en résulte un déséquilibre manifeste et durable qui caractérise un manquement de l'éditeur à l'obligation de respecter le pluralisme des courants de pensée et d'opinion dans les programmes d'information de la chaîne « CNews » sur le mois de mars 2025.",
+          "date": "2026-06-12",
+          "medium": "Décision de l'Arcom du 12 juin 2026 (publiée le 15 juin 2026) mettant en demeure la Société d'exploitation d'un service d'information (SESI), éditrice de CNews, de se conformer à l'avenir à l'exigence d'expression pluraliste des courants de pensée et d'opinion (articles 1er, 3-1 et 13 de la loi du 30 septembre 1986, délibération du 17 juillet 2024) ; décision rendue après une saisine de Reporters sans frontières (janvier 2026) et l'examen de 168 heures de programmes de mars 2025. Une mise en demeure n'est pas une sanction.",
+          "url": "https://www.arcom.fr/se-documenter/espace-juridique/decisions/decision-du-12-juin-2026-mettant-en-demeure-la-societe-dexploitation-dun-service-dinformation",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261015131638/https://www.arcom.fr/se-documenter/espace-juridique/decisions/decision-du-12-juin-2026-mettant-en-demeure-la-societe-dexploitation-dun-service-dinformation",
+          "archived": "2026-10-15"
+        },
+        {
+          "quote": "Une sanction pécuniaire d'un montant de 200 000 euros est prononcée à l'encontre de la Société d'exploitation d'un service d'information (SESI).",
+          "date": "2026-07-24",
+          "medium": "Décision de l'Arcom du 24 juillet 2026 (publiée le 29 juillet 2026), article 1er : manquements à l'article 15 de la loi du 30 septembre 1986 (incitation à la haine) et aux articles 2-3-2 et 2-2-1 des conventions de CNews (comportements discriminatoires, maîtrise de l'antenne), retenus pour deux séquences de « 100% Politique » des 2 juin et 1er septembre 2025 (propos d'Erik Tegnér et extrait d'une vidéo d'Éric Zemmour, selon franceinfo/AFP) ; pas de sanction pour « L'Heure des pros 2 » du 23 octobre 2025. CNews a annoncé un recours devant le Conseil d'État.",
+          "url": "https://www.arcom.fr/se-documenter/espace-juridique/decisions/decision-du-24-juillet-2026-portant-sanction-lencontre-de-la-societe-dexploitation-dun-service-dinformation-sesi",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261015131932/https://www.arcom.fr/se-documenter/espace-juridique/decisions/decision-du-24-juillet-2026-portant-sanction-lencontre-de-la-societe-dexploitation-dun-service-dinformation-sesi",
+          "archived": "2026-10-15"
+        },
+        {
+          "quote": "Les propos selon lesquels « beaucoup » de « migrants sont des violeurs », qui assimilent la présence en France de ce groupe de personnes à un facteur majeur de risque pour la sécurité publique, sont de nature à inciter à la haine et à encourager des comportements discriminatoires à leur égard en raison de leur origine ou de leur nationalité.",
+          "date": "2026-10-21",
+          "medium": "Décision de l'Arcom du 21 octobre 2026 (publiée le 26 octobre 2026) mettant en demeure Europe 1 Télécompagnie, au sujet d'une séquence de l'émission du 26 janvier 2026 présentée par Christine Kelly (« Christine Kelly et vous », selon Le Monde et Le Parisien) (article 15 de la loi du 30 septembre 1986 ; articles 2-4 et 2-10 de la convention du 25 octobre 2023 : non-incitation à la haine, comportements discriminatoires, maîtrise de l'antenne). Une mise en demeure n'est pas une sanction ; Europe 1 a indiqué contester la décision et annoncé un recours gracieux auprès de l'Arcom.",
+          "url": "https://www.arcom.fr/se-documenter/espace-juridique/decisions/decision-du-21-octobre-2026-mettant-en-demeure-la-societe-europe-1-telecompagnie",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261103194234/https://www.arcom.fr/se-documenter/espace-juridique/decisions/decision-du-21-octobre-2026-mettant-en-demeure-la-societe-europe-1-telecompagnie",
+          "archived": "2026-11-03"
         }
       ],
       "sections": [
@@ -2791,7 +2825,39 @@
       "relation": "signalement au parquet de propos tenus après la journée du 17 octobre 2026 sur LCI, BFMTV et CNews (annoncé le 03/11/2026)",
       "url": "https://www.huffingtonpost.fr/france/article/l-arcom-a-directement-saisi-la-justice-pour-ces-sorties-d-eric-zemmour-apres-le-17-octobre_351273.html",
       "date": "2026-11-03",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261103162638/https://www.huffingtonpost.fr/france/article/l-arcom-a-directement-saisi-la-justice-pour-ces-sorties-d-eric-zemmour-apres-le-17-octobre_351273.html",
+      "archived": "2026-11-03"
+    },
+    {
+      "source": "arcom",
+      "target": "cnews",
+      "relation": "mise en demeure de respecter le pluralisme des courants de pensée et d'opinion (décision du 12/06/2026, publiée le 15/06/2026)",
+      "url": "https://www.lefigaro.fr/medias/il-y-a-un-desequilibre-manifeste-et-repete-l-arcom-met-en-demeure-cnews-de-se-conformer-a-ses-obligations-de-pluralisme-des-opinions-20260615",
+      "date": "2026-06-12",
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20260720014225/https://www.lefigaro.fr/medias/il-y-a-un-desequilibre-manifeste-et-repete-l-arcom-met-en-demeure-cnews-de-se-conformer-a-ses-obligations-de-pluralisme-des-opinions-20260615",
+      "archived": "2026-07-20"
+    },
+    {
+      "source": "arcom",
+      "target": "cnews",
+      "relation": "sanction pécuniaire de 200 000 € pour deux séquences de « 100% Politique » de 2025 (décision du 24/07/2026, publiée le 29/07/2026 ; recours annoncé par CNews)",
+      "url": "https://www.franceinfo.fr/economie/medias/l-arcom-inflige-une-sanction-de-200-000-euros-a-cnews-pour-deux-sequences-de-nature-a-inciter-a-la-haine-en-2025_8127374.html",
+      "date": "2026-07-24",
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20260730172153/https://www.franceinfo.fr/economie/medias/l-arcom-inflige-une-sanction-de-200-000-euros-a-cnews-pour-deux-sequences-de-nature-a-inciter-a-la-haine-en-2025_8127374.html",
+      "archived": "2026-07-30"
+    },
+    {
+      "source": "arcom",
+      "target": "europe1",
+      "relation": "mise en demeure pour une séquence de « Christine Kelly et vous » du 26/01/2026 (décision du 21/10/2026, publiée le 26/10/2026 ; contestée par Europe 1)",
+      "url": "https://www.lemonde.fr/economie/article/2026/10/26/europe-1-mise-en-demeure-par-l-arcom-apres-des-propos-de-nature-a-inciter-a-la-haine-tenus-a-l-antenne-par-sa-presentatrice-christine-kelly_6800838_3234.html",
+      "date": "2026-10-21",
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261026211813/https://www.lemonde.fr/economie/article/2026/10/26/europe-1-mise-en-demeure-par-l-arcom-apres-des-propos-de-nature-a-inciter-a-la-haine-tenus-a-l-antenne-par-sa-presentatrice-christine-kelly_6800838_3234.html",
+      "archived": "2026-10-26"
     }
   ]
 }
