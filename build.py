@@ -344,17 +344,6 @@ L("rn","loi-immigration-2023","vote des députés RN en faveur du texte issu de 
 L("conseil-constitutionnel","loi-immigration-2023","censure partielle (décision n° 2023-863 DC du 25/01/2024)",CC_LOI,"2024-01-25")
 for e in E[NE0:]: e["section"]="france"
 
-# ---------- v8 : section « Déclarations et votes » (nœuds) ----------
-# Affiliations vérifiées le 04/11/2026 : scrutins officiels AN (groupe au moment du vote) et fiches députés AN (situation actuelle).
-AN105="https://www.assemblee-nationale.fr/dyn/16/scrutins/105"; AN104="https://www.assemblee-nationale.fr/dyn/16/scrutins/104"; AN3684="https://www.assemblee-nationale.fr/dyn/17/scrutins/3684"
-P("sacha-houlie","Sacha Houlié","Député de la Vienne (2e circonscription) ; groupe RE au moment du vote (2022)",
- "Député de la Vienne. En juillet 2022 : membre du groupe Renaissance (RE) et président de la commission des lois de l'Assemblée nationale. Situation actuelle selon sa fiche sur assemblee-nationale.fr (consultée le 04/11/2026) : apparenté au groupe Socialistes et apparentés.")
-P("stella-dupont","Stella Dupont","Députée de Maine-et-Loire (2e circonscription) ; groupe RE au moment du vote (2022)",
- "Députée de Maine-et-Loire. En juillet 2022 : membre du groupe Renaissance (RE). Situation actuelle selon sa fiche sur assemblee-nationale.fr (consultée le 04/11/2026) : non inscrite.")
-O("lfi","La France insoumise / groupe LFI-NFP","Parti / groupe parlementaire","Parti politique ; son groupe à l'Assemblée nationale est, sous la 17e législature, « La France insoumise - Nouveau Front Populaire » (LFI-NFP).")
-L("sacha-houlie","renaissance-epr","membre du groupe Renaissance (RE) au moment du vote (2022)",AN105,"2022-07-23"); E[-1]["section"]="france"
-L("stella-dupont","renaissance-epr","membre du groupe Renaissance (RE) au moment du vote (2022)",AN104,"2022-07-23"); E[-1]["section"]="france"
-
 # --- appartenance aux sections ---
 FR_ALSO={"eric-zemmour","eric-ciotti","marine-le-pen","jordan-bardella","vincent-bollore","cnews","vivendi-canal","lagardere","jdd",
  "europe1","valeurs-actuelles","rn","lr","reconquete","geoffroy-lejeune","yael-braun-pivet"}
@@ -425,7 +414,6 @@ CAT={
  # Événements
  **{i:(EVT,"Événements") for i in ["conf-jerusalem-2025","loi-immigration-2023"]},
 }
-CAT.update({"sacha-houlie":(POL,"Parlementaires & élus"),"stella-dupont":(POL,"Parlementaires & élus"),"lfi":(POL,"Partis & dirigeants de parti")})
 for _n in N:
     assert _n["id"] in CAT, "catégorie manquante : "+_n["id"]
     _n["category"], _n["subcategory"] = CAT[_n["id"]]
@@ -503,57 +491,12 @@ for _e in E: _arch(_e)
 
 ids={n["id"] for n in N}
 for e in E: assert e["source"] in ids and e["target"] in ids, e
-
-# ---------- v8 : « Déclarations et votes » ----------
-# Source : /workspace/votes-section/votes.json (3 entrées approuvées), revérifiées le 04/11/2026 sur assemblee-nationale.fr
-# (pages des scrutins + données ouvertes). Décomptes du groupe RE omis : la page du scrutin et les données ouvertes divergent.
-NFP_PDF="https://lafranceinsoumise.fr/wp-content/uploads/2024/06/Programme-nouveaufrontpopulaire.pdf"
-BRUT_LFI="https://www.brut.media/fr/articles/pourquoi-la-france-insoumise-a-vote-contre-la-suspension-de-la-reforme-des-retraites"
-MDE_HOULIE="https://www.lemondedelenergie.com/houlie-lrem-favorable-contribution-exceptionnelle-profiteurs-de-crise/2022/07/22/"
-FI_SUPERPROFITS="https://www.franceinfo.fr/economie/pouvoir-achat/les-deputes-rejettent-de-peu-une-taxe-sur-les-superprofits-des-grandes-entreprises_5273725.html"
-AN855="https://www.assemblee-nationale.fr/dyn/16/amendements/0017/AN/855"
-JDD_DUPONT="https://www.lejdd.fr/Politique/taxation-des-super-profits-a-lassemblee-le-consensus-entre-lrem-et-la-nupes-naura-finalement-pas-lieu-4124598"
-VOTES=[
- {"id":"lfi-suspension-reforme-retraites-2025","person_id":None,"group":"lfi","topic":"Réforme des retraites de 2023 (âge légal à 64 ans)",
-  "statement":{"quote":"Abroger immédiatement les décrets d'application de la réforme d'Emmanuel Macron passant l'âge de départ à la retraite à 64 ans, ainsi que les réformes de l'assurance-chômage","date":"2024-06-14",
-   "medium":"Contrat de législature du Nouveau Front populaire (programme commun signé par LFI), PDF publié sur lafranceinsoumise.fr","url":NFP_PDF},
-  "vote":{"chamber":"Assemblée nationale","scrutin_id":"17e législature, scrutin n°3684","date":"2025-11-12",
-   "text_title":"Scrutin public sur l'article 45 bis (examen prioritaire) du projet de loi de financement de la sécurité sociale pour 2026 (première lecture).",
-   "position":"contre","position_label":"Groupe LFI-NFP","url":AN3684,
-   "group_position":"Groupe LFI-NFP : 60 contre, 0 pour, 0 abstention (dont Mathilde Panot, contre).",
-   "result":"Adopté par 255 voix contre 146, 104 abstentions."},
-  "context":"L'article 45 bis suspendait la réforme des retraites de 2023 jusqu'au 1er janvier 2028 ; il a été adopté sans les voix du groupe LFI-NFP. Mathilde Panot a expliqué ce vote ainsi : « Voter pour le décalage de la réforme des retraites, c'est voter pour la retraite à 64 ans. Les Insoumis voteront contre le décalage de la retraite à 64 ans, car nous n'acceptons pas le principe » (Brut, 12/11/2025).",
-  "context_url":BRUT_LFI,"context_source":"Brut"},
- {"id":"houlie-taxe-superprofits-2022","person_id":"sacha-houlie","group":"renaissance-epr","topic":"Taxation des superprofits des grandes entreprises (2022)",
-  "statement":{"quote":"Oui, nous ferons payer les profiteurs de la crise. Parce que je suis opposé aux rentes, j'affirme que les entreprises qui tirent de la crise des profits doivent payer plus. Pour le pouvoir d'achat, pour la justice sociale, pour la transition écologique.","date":"2022-07-21",
-   "medium":"Message de Sacha Houlié sur Twitter, cité par une dépêche AFP reprise par Le Monde de l'Énergie (22/07/2022)","url":MDE_HOULIE},
-  "vote":{"chamber":"Assemblée nationale","scrutin_id":"16e législature, scrutin n°105","date":"2022-07-23",
-   "text_title":"Scrutin public sur l'amendement n° 4 de Mme Pires Beaune et les amendements identiques suivants après l'article premier du projet de loi de finances rectificative pour 2022 (première lecture).",
-   "position":"abstention","position_label":"Sacha Houlié (groupe RE au moment du vote)","url":AN105,
-   "group_position":"Vote nominatif : Sacha Houlié figure parmi les abstentions du groupe Renaissance.",
-   "result":"Rejeté : 96 pour, 114 contre, 9 abstentions."},
-  "context":"L'amendement créait une taxe exceptionnelle de 25 % sur les « superprofits » des sociétés pétrolières et gazières, de transport maritime et des concessionnaires d'autoroutes. Selon franceinfo/AFP (23/07/2022), quatre députés de la majorité se sont abstenus, « parmi lesquels Sacha Houlié et Caroline Janvier, qui avaient défendu le principe de cette taxe » ; aucune explication de vote de Sacha Houlié n'a été trouvée. Le gouvernement s'opposait à la taxe, Bruno Le Maire mettant en avant les gestes annoncés par TotalEnergies et CMA CGM.",
-  "context_url":FI_SUPERPROFITS,"context_source":"franceinfo / AFP"},
- {"id":"dupont-taxe-superprofits-2022","person_id":"stella-dupont","group":"renaissance-epr","topic":"Taxation des superprofits des grandes entreprises (2022)",
-  "statement":{"quote":"Cet amendement vise à opérer une taxation exceptionnelle et ponctuelle pour les sociétés pétrolières et gazières et les sociétés de transport maritime de marchandises dégageant des profits particulièrement importants du fait des diverses crises qui se sont succédées […]. C'est pourquoi cet amendement propose de contraindre ces sociétés à s'engager en faveur du pouvoir d'achat des Français, par le biais d'une taxation sur les bénéfices 2022 de ces sociétés, à hauteur de 15% de leur résultat imposable.","date":"2022-07-18",
-   "medium":"Exposé sommaire de l'amendement n°855 au projet de loi de finances rectificative pour 2022, déposé par Stella Dupont (site de l'Assemblée nationale)","url":AN855},
-  "vote":{"chamber":"Assemblée nationale","scrutin_id":"16e législature, scrutin n°104 (et n°105)","date":"2022-07-23",
-   "text_title":"Scrutin public sur le sous-amendement n° 1002 de M. Coquerel et le sous-amendement identique suivant à l'amendement n° 4 de Mme Pires Beaune et les amendements identiques suivants après l'article premier du projet de loi de finances rectificative pour 2022 (première lecture).",
-   "position":"contre","position_label":"Stella Dupont (groupe RE au moment du vote)","url":AN104,
-   "group_position":"Vote nominatif : Stella Dupont figure parmi les votes contre du groupe Renaissance au scrutin n°104, et à nouveau contre l'amendement principal au scrutin n°105.",
-   "result":"n°104 rejeté : 98 pour, 112 contre, 6 abstentions.","also_url":AN105,"also_label":"Scrutin n°105"},
-  "context":"Le sous-amendement n°1002 (Coquerel) ramenait la taxe proposée à 15 % du résultat imposable, pour la seule année 2022, sur les producteurs de gaz, de pétrole et les sociétés de transport maritime de marchandises, soit le périmètre de l'amendement n°855. Selon le JDD (22/07/2022), Stella Dupont présentait son amendement comme une « expression politique d'appel pour marquer une vigilance et une exigence », puis l'a retiré après les annonces de TotalEnergies et CMA CGM : « Notre appel a été entendu ».",
-  "context_url":JDD_DUPONT,"context_source":"Le JDD"},
-]
-for _v in VOTES:
-    assert _v["group"] in ids and (_v["person_id"] is None or _v["person_id"] in ids), _v["id"]
-    _arch(_v["statement"]); _arch(_v["vote"])
 data={"meta":{"generated":datetime.date.today().isoformat(),
  "methodology":"Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le "+datetime.date.today().isoformat()+" (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : fichiers Wikimedia Commons sous licence libre, avec auteur, licence et lien ; logos reproduits à seule fin d'identification. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
- "counts":{}, "category_order":CATEGORY_ORDER, "sections":{"gaza":"Gaza","france":F}},"nodes":N,"edges":E,"votes":VOTES}
+ "counts":{}, "category_order":CATEGORY_ORDER, "sections":{"gaza":"Gaza","france":F}},"nodes":N,"edges":E}
 data["meta"]["counts"]={"persons":sum(n["type"]=="person" for n in N),"orgs":sum(n["type"]=="org" for n in N),"edges":len(E),"statements":sum(len(n["statements"]) for n in N),
  "photos":sum(1 for n in N if n.get("image")),"logos":sum(1 for n in N if n.get("logo")),
  "videos":sum(1 for n in N for st in n["statements"] if st.get("video")),
- "france_nodes":sum("france" in n["sections"] for n in N),"votes":len(VOTES)}
+ "france_nodes":sum("france" in n["sections"] for n in N)}
 json.dump(data,open("/workspace/gaza-site/data.json","w"),ensure_ascii=False,indent=2)
 print(data["meta"]["counts"])

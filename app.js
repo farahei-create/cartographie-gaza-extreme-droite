@@ -113,7 +113,6 @@
     buildTimeline();
     bindFiche();
     bindCards();
-    bindVotes();
     bindRouter();
     registerSW();
   }
@@ -237,7 +236,7 @@
         var linked = edgesOf[n.id].some(function (e) { var o = e.source === n.id ? e.target : e.source; return vis[o]; });
         var noPeopleShown = !Object.keys(vis).length;
         // événement sans lien (ex. fait judiciaire) : visible selon le thème de ses propres déclarations
-        var standalone = !edgesOf[n.id].length && (((n.statements || []).length && personVisibleByTheme(n)) || ((DATA.votes || []).some(function (v) { return !v.person_id && v.group === n.id; }) && personVisibleByTheme(n)));
+        var standalone = !edgesOf[n.id].length && (n.statements || []).length && personVisibleByTheme(n);
         if (linked || noPeopleShown || standalone) { vis[n.id] = true; changed = true; }
       });
     }
@@ -849,7 +848,6 @@
       (n.description ? '<p class="f-desc">' + esc(n.description) + "</p>" : "") +
       '<div class="f-actions"><a class="btn-pill ghost small" href="#/reseau/' + encodeURIComponent(n.id) + '">Voir dans le réseau</a></div>' +
       amHtml(n) +
-      votesFicheHtml(n) +
       (st.length || n.type === "person" ? '<h2 class="h-sec">Déclarations publiques <span class="h-n">' + st.length + "</span></h2>" +
         (st.length ? '<ol class="tl">' + st.map(function (x) { return tlItem(x.s, n, x.i, false); }).join("") + "</ol>" : '<p class="empty">Aucune déclaration répertoriée.</p>') : "") +
       '<h2 class="h-sec">Relations <span class="h-n">' + es.length + "</span></h2>" +
@@ -1087,74 +1085,6 @@
     else el.textContent = "Le contact sera bientôt disponible.";
   }
 
-  /* ==========================================================================
-     v8 : « Déclarations et votes » (#/votes)
-     ========================================================================== */
-  function votesOf(n) {
-    return (DATA.votes || []).filter(function (v) { return v.person_id ? v.person_id === n.id : v.group === n.id; });
-  }
-  function voteWho(v) { var n = byId[v.person_id || v.group]; return n ? n.name : ""; }
-  function voteHtml(v, inFiche) {
-    var n = byId[v.person_id || v.group], s = v.statement, o = v.vote;
-    return '<article class="vt" id="vote-' + esc(v.id) + '">' +
-      '<header class="vt-head"><p class="vt-topic">' + esc(v.topic) + "</p>" +
-      (inFiche || !n ? "" : '<p class="vt-who"><a href="' + ficheHref(n) + '">' + esc(n.name) + "</a></p>") + "</header>" +
-      '<div class="vt-grid">' +
-      '<section class="vt-b"><h3 class="vt-k">Ce qui a été déclaré</h3><blockquote>' + quoteHtml(s.quote) + "</blockquote>" +
-      '<div class="meta"><time datetime="' + esc(s.date) + '">' + fmtDate(s.date) + '</time><span class="medium">' + esc(s.medium) + "</span></div>" +
-      '<div class="meta actions">' + srcLink(s.url, "Lire la source") + archLink(s) + "</div></section>" +
-      '<section class="vt-b"><h3 class="vt-k">Le vote officiel</h3>' +
-      '<p class="vt-l">' + esc(o.chamber) + " · " + esc(o.scrutin_id) + ' · <time datetime="' + esc(o.date) + '">' + fmtDate(o.date) + "</time></p>" +
-      '<p class="vt-title">' + esc(o.text_title) + "</p>" +
-      '<p class="vt-pos">' + esc(o.position_label) + " : <strong>" + esc(o.position) + "</strong></p>" +
-      '<p class="vt-gp">' + esc(o.group_position) + (o.result ? " " + esc(o.result) : "") + "</p>" +
-      '<div class="meta actions">' + srcLink(o.url, "Voir le scrutin officiel") + (o.also_url ? srcLink(o.also_url, o.also_label) : "") + archLink(o) + "</div></section>" +
-      "</div>" +
-      '<p class="vt-ctx"><strong>Contexte.</strong> ' + esc(v.context) + (v.context_url ? " " + srcLink(v.context_url, "Source : " + v.context_source) : "") + "</p>" +
-      '<div class="meta actions"><button type="button" class="act" data-act="share-vote" data-v="' + esc(v.id) + '">Partager</button>' +
-      '<button type="button" class="act" data-act="copy-vote" data-v="' + esc(v.id) + '">Copier le lien</button></div>' +
-      "</article>";
-  }
-  function votesFicheHtml(n) {
-    var vs = votesOf(n); if (!vs.length) return "";
-    return '<h2 class="h-sec" id="votes-fiche">Déclarations et votes <span class="h-n">' + vs.length + "</span></h2>" +
-      vs.map(function (v) { return voteHtml(v, true); }).join("") + '<p class="vt-reply">' + REPLY_HTML + "</p>";
-  }
-  var REPLY_HTML = 'Une personne ou un groupe cité peut demander une rectification ou ajouter sa réponse : voir la <a href="#/methode" class="vt-reply-link">page Méthode</a>.';
-  function renderVotes() {
-    var vs = DATA.votes || [];
-    $("votes-list").innerHTML = vs.length ? vs.map(function (v) { return voteHtml(v, false); }).join("") : '<p class="empty">Aucune entrée.</p>';
-  }
-  function voteLink(v) { return location.origin + location.pathname + "#/votes#vote-" + v.id; }
-  function renderVoteCard(v) {
-    var c = document.createElement("canvas"); c.width = CARD_W; c.height = CARD_H;
-    var ctx = c.getContext("2d"), W = CARD_W - 2 * CARD_PAD, s = v.statement, o = v.vote, y = 268, tr;
-    cardBase(ctx, "Déclarations et votes");
-    ctx.fillStyle = "#ffffff"; ctx.font = "700 44px " + CARD_FONT; ctx.fillText(clampText(ctx, voteWho(v), W, 1)[0], CARD_PAD, y + 44); y += 76;
-    ctx.fillStyle = "rgba(255,255,255,.9)"; ctx.font = "700 32px " + CARD_FONT; ctx.fillText("Ce qui a été déclaré · " + dmy(s.date), CARD_PAD, y + 32); y += 50;
-    ctx.fillStyle = "#ffffff"; var r = fitQuote(ctx, s.quote, W, 290, 50, 26, "600"); tr = r.truncated;
-    drawLines(ctx, r, CARD_PAD, y); y += 290 + 6;
-    y = drawSource(ctx, s, CARD_PAD, y, W, 1) + 20;
-    ctx.fillStyle = "rgba(255,255,255,.2)"; ctx.fillRect(CARD_PAD, y, W, 2); y += 30;
-    ctx.fillStyle = "rgba(255,255,255,.9)"; ctx.font = "700 32px " + CARD_FONT; ctx.fillText("Le vote officiel · " + dmy(o.date), CARD_PAD, y + 32); y += 50;
-    ctx.fillStyle = "rgba(255,255,255,.8)"; ctx.font = "400 28px " + CARD_FONT;
-    clampText(ctx, o.chamber + " · " + o.scrutin_id, W, 1).forEach(function (l) { ctx.fillText(l, CARD_PAD, y + 28); y += 38; });
-    clampText(ctx, o.text_title, W, 4).forEach(function (l) { ctx.fillText(l, CARD_PAD, y + 28); y += 38; });
-    y += 14; ctx.fillStyle = "#ffffff"; ctx.font = "700 40px " + CARD_FONT;
-    clampText(ctx, "Position" + (v.person_id ? "" : " (" + o.position_label + ")") + " : " + o.position, W, 1).forEach(function (l) { ctx.fillText(l, CARD_PAD, y + 40); y += 50; });
-    var h = hostOf(o.url); if (h) { ctx.fillStyle = "rgba(255,255,255,.72)"; ctx.font = "400 28px " + CARD_FONT; ctx.fillText("Source du vote : " + h, CARD_PAD, y + 30); }
-    c.__truncated = tr; return c;
-  }
-  function bindVotes() {
-    document.addEventListener("click", function (e) {
-      var b = e.target.closest && e.target.closest("button.act[data-v]"); if (!b) return;
-      var v = (DATA.votes || []).filter(function (x) { return x.id === b.getAttribute("data-v"); })[0]; if (!v) return;
-      if (b.getAttribute("data-act") === "copy-vote") return copyLink(voteLink(v));
-      window.__lastShare = shareCanvas(renderVoteCard(v), "onrecord-vote-" + v.id + ".png", voteWho(v) + " — Déclarations et votes — Onrecord", voteLink(v));
-    });
-    window.__renderVoteCard = function (id) { var v = DATA.votes.filter(function (x) { return x.id === id; })[0]; var c = renderVoteCard(v); return { dataUrl: c.toDataURL("image/png"), truncated: c.__truncated }; };
-  }
-
   /* ---------- Chronologie ---------- */
   var TL_ITEMS = [], tlDesc = false, LINKS = "__links__";
   function buildTimeline() {
@@ -1195,8 +1125,8 @@
   }
 
   /* ---------- Routage par ancre (#/…) ---------- */
-  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "methodologie", "methode", "votes"];
-  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Sections", chronologie: "Chronologie", reseau: "Réseau des relations", methodologie: "Méthodologie", methode: "Méthode", votes: "Déclarations et votes" };
+  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "methodologie", "methode"];
+  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Sections", chronologie: "Chronologie", reseau: "Réseau des relations", methodologie: "Méthodologie", methode: "Méthode" };
   var lastView = null;
   function ensureGraph(focusId) {
     if (!network) buildGraph(); else { sizeGraph(); network.redraw(); }
@@ -1217,7 +1147,7 @@
     if (v === "personne" || v === "organisation") v = "fiche";
     if (VIEWS.indexOf(v) < 0) v = "accueil";
     VIEWS.forEach(function (k) { $("view-" + k).hidden = k !== v; });
-    var tab = v === "fiche" ? "sections" : v === "methode" ? "methodologie" : v === "votes" ? "" : v;
+    var tab = v === "fiche" ? "sections" : v === "methode" ? "methodologie" : v;
     document.querySelectorAll("#tabnav a").forEach(function (a) {
       if (a.getAttribute("data-tab") === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
@@ -1230,7 +1160,6 @@
     if (v !== "fiche") document.title = v === "accueil" ? TITLES.accueil : TITLES[v] + " — Onrecord";
     if (v === "sections") { curSec = ["tout", "gaza", "france", "commun"].indexOf(parts[1]) >= 0 ? parts[1] : "tout"; renderSections(); }
     if (v === "methode") renderMethode();
-    if (v === "votes") { renderVotes(); if (anchor) { var ve = document.getElementById(anchor); if (ve) setTimeout(function () { ve.scrollIntoView({ block: "start" }); ve.classList.add("flash"); }, 60); } }
     if (v === "fiche") renderFiche(decodeURIComponent(parts[1] || ""), anchor);
     var key = v + "/" + (v === "fiche" ? parts[1] : "");
     if (key !== lastView && !(v === "reseau" && lastView && lastView.indexOf("reseau") === 0)) window.scrollTo(0, 0);

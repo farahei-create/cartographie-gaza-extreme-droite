@@ -955,27 +955,3 @@ button.act:active,a.act:active{transform:scale(.96)}
 .am-act{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
 @media (max-width:640px){ .am-grid,.am-pick{grid-template-columns:1fr} }
 .site-footer #footer-methode{margin-left:4px}
-
-/* v8 : Déclarations et votes */
-.vt-intro{margin:0 0 18px}
-.vt-intro h2{font-family:var(--font-display);font-size:1.9rem;font-weight:700;letter-spacing:-.03em;margin:0 0 10px}
-.vt-intro p{margin:0 0 8px;line-height:1.55}
-.vt-reply{font-size:.88rem;color:var(--muted)}
-.vt{background:var(--surface);border-radius:var(--r-xl);box-shadow:var(--shadow-1);border:.5px solid var(--hair);padding:16px;margin:0 0 16px;min-width:0;overflow-wrap:anywhere}
-.vt-topic{margin:0;font-weight:700;color:var(--accent);font-size:.82rem;letter-spacing:.02em;text-transform:uppercase}
-.vt-who{margin:4px 0 0;font-weight:650;font-size:1.05rem}
-.vt-head{margin:0 0 12px}
-.vt-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.vt-b{background:var(--surface-2);border-radius:16px;padding:14px;min-width:0}
-.vt-k{margin:0 0 8px;font-size:.8rem;font-weight:700;letter-spacing:.02em;text-transform:uppercase;color:var(--mauve)}
-.vt-b blockquote{margin:0 0 10px;font-size:1rem;line-height:1.55}
-.vt-b .meta{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:.8rem;color:var(--muted)}
-.vt-b .meta + .meta{margin-top:10px}
-.vt-l{margin:0 0 6px;font-size:.85rem;color:var(--muted)}
-.vt-title{margin:0 0 8px;font-size:.92rem;line-height:1.5}
-.vt-pos{margin:0 0 6px;font-size:1rem}
-.vt-gp{margin:0 0 10px;font-size:.85rem;color:var(--muted)}
-.vt-ctx{margin:12px 0 10px;font-size:.88rem;line-height:1.55;color:var(--muted)}
-.vt > .meta{display:flex;flex-wrap:wrap;gap:8px}
-.vt.flash{outline:2px solid var(--accent)}
-@media (max-width:640px){ .vt-grid{grid-template-columns:1fr} .vt{padding:12px} }
