@@ -413,5 +413,50 @@
   "archive_url": null,
   "status": "failed",
   "error": "save:HTTP Error 520: UNKNOWN"
+ },
+ "https://lafranceinsoumise.fr/wp-content/uploads/2024/06/Programme-nouveaufrontpopulaire.pdf": {
+  "archive_url": "https://web.archive.org/web/20261010103230/https://lafranceinsoumise.fr/wp-content/uploads/2024/06/Programme-nouveaufrontpopulaire.pdf",
+  "archived": "2026-10-10",
+  "status": "existing"
+ },
+ "https://www.assemblee-nationale.fr/dyn/17/scrutins/3684": {
+  "archive_url": "https://web.archive.org/web/20261018214859/https://www.assemblee-nationale.fr/dyn/17/scrutins/3684",
+  "archived": "2026-10-18",
+  "status": "existing"
+ },
+ "https://www.brut.media/fr/articles/pourquoi-la-france-insoumise-a-vote-contre-la-suspension-de-la-reforme-des-retraites": {
+  "archive_url": "https://web.archive.org/web/20251123184037/https://www.brut.media/fr/articles/pourquoi-la-france-insoumise-a-vote-contre-la-suspension-de-la-reforme-des-retraites",
+  "archived": "2025-11-23",
+  "status": "existing"
+ },
+ "https://www.lemondedelenergie.com/houlie-lrem-favorable-contribution-exceptionnelle-profiteurs-de-crise/2022/07/22/": {
+  "archive_url": "https://web.archive.org/web/20220729082139/https://www.lemondedelenergie.com/houlie-lrem-favorable-contribution-exceptionnelle-profiteurs-de-crise/2022/07/22/",
+  "archived": "2022-07-29",
+  "status": "existing"
+ },
+ "https://www.assemblee-nationale.fr/dyn/16/scrutins/105": {
+  "archive_url": "https://web.archive.org/web/20261018222342/https://www.assemblee-nationale.fr/dyn/16/scrutins/105",
+  "archived": "2026-10-18",
+  "status": "existing"
+ },
+ "https://www.assemblee-nationale.fr/dyn/16/scrutins/104": {
+  "archive_url": "https://web.archive.org/web/20261018222305/https://www.assemblee-nationale.fr/dyn/16/scrutins/104",
+  "archived": "2026-10-18",
+  "status": "existing"
+ },
+ "https://www.franceinfo.fr/economie/pouvoir-achat/les-deputes-rejettent-de-peu-une-taxe-sur-les-superprofits-des-grandes-entreprises_5273725.html": {
+  "archive_url": "https://web.archive.org/web/20250723184612/https://www.franceinfo.fr/economie/pouvoir-achat/les-deputes-rejettent-de-peu-une-taxe-sur-les-superprofits-des-grandes-entreprises_5273725.html",
+  "archived": "2025-07-23",
+  "status": "existing"
+ },
+ "https://www.assemblee-nationale.fr/dyn/16/amendements/0017/AN/855": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://www.lejdd.fr/Politique/taxation-des-super-profits-a-lassemblee-le-consensus-entre-lrem-et-la-nupes-naura-finalement-pas-lieu-4124598": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
  }
 }

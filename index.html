@@ -63,7 +63,7 @@
       <div class="entry-cards" id="home-entries"></div>
       <h2 class="h-sec">Déclarations les plus récentes</h2>
       <ol class="latest" id="home-latest"></ol>
-      <p class="more"><a href="#/chronologie" class="btn-pill">Toute la chronologie</a> <a href="data.json" download="onrecord-donnees.json" class="btn-pill ghost dl-link">Télécharger les données (JSON)</a> <a href="#/methode" class="btn-pill ghost" id="home-methode">Méthode</a></p>
+      <p class="more"><a href="#/chronologie" class="btn-pill">Toute la chronologie</a> <a href="data.json" download="onrecord-donnees.json" class="btn-pill ghost dl-link">Télécharger les données (JSON)</a> <a href="#/votes" class="btn-pill ghost" id="home-votes">Déclarations et votes</a> <a href="#/methode" class="btn-pill ghost" id="home-methode">Méthode</a></p>
     </div>
   </section>
 
@@ -174,6 +174,17 @@
   </section>
 
   <!-- METHODOLOGIE -->
+  <section id="view-votes" class="view" hidden>
+    <div class="wrap page">
+      <header class="vt-intro">
+        <h2>Déclarations et votes</h2>
+        <p>Des déclarations publiques mises en regard de votes nominatifs officiels sur le même sujet. Le contexte et les explications de vote données par les élus sont indiqués quand ils existent.</p>
+        <p class="vt-reply" id="votes-reply">Une personne ou un groupe cité peut demander une rectification ou ajouter sa réponse : voir la <a href="#/methode" class="vt-reply-link">page Méthode</a>.</p>
+      </header>
+      <div id="votes-list"></div>
+    </div>
+  </section>
+
   <section id="view-methode" class="view" hidden>
     <div class="wrap page">
       <article class="card prose">
@@ -196,6 +207,8 @@
           <li>Aucun lien de causalité que les sources n'établissent pas.</li>
           <li>Aucune personne privée nommée.</li>
         </ul>
+        <h3>Section « Déclarations et votes »</h3>
+        <p id="methode-votes">Seuls des votes nominatifs individuels, relevés dans le scrutin officiel, sont retenus ; un vote de groupe n'est jamais attribué à une personne. Les entrées de niveau groupe indiquent le décompte nominatif du groupe. La déclaration et le texte voté portent sur le même sujet précis.</p>
         <h3>Demander une correction ou un retrait</h3>
         <p id="methode-contact">Le contact sera bientôt disponible.</p>
         <p><a href="#/methodologie">Méthodologie détaillée</a></p>
@@ -265,7 +278,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <p>Données sourcées, citations reproduites telles que publiées. Aucune qualification juridique des personnes. Dernière mise à jour : <span id="footer-update">—</span>.</p>
-    <p>Pour signaler une erreur ou demander un droit de réponse : ouvrir une issue sur le dépôt GitHub. <a href="#/methode" id="footer-methode">Méthode et demandes de correction</a></p>
+    <p>Pour signaler une erreur ou demander un droit de réponse : ouvrir une issue sur le dépôt GitHub. <a href="#/methode" id="footer-methode">Méthode et demandes de correction</a> · <a href="#/votes" id="footer-votes">Déclarations et votes</a></p>
     <p><a href="data.json" download="onrecord-donnees.json" class="dl-link">Télécharger les données (JSON)</a></p>
     <p class="donate-wrap"><a class="donate donate-foot" hidden target="_blank" rel="noopener noreferrer">Soutenir ce travail</a></p>
     <p class="img-note">Photos : Wikimedia Commons (licences libres, crédits dans chaque fiche). Logos reproduits à des fins d'identification. Copies archivées : Internet Archive (Wayback Machine).</p>
