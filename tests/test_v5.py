@@ -148,7 +148,7 @@ async def mobile(b, w, h, scheme, errs):
     ok(f"{T} sections search", await pg.evaluate("[...document.querySelectorAll('#sec-groups li[data-id]')].filter(l=>!l.hidden).map(l=>l.dataset.id)")==["eric-zemmour"])
     await pg.fill("#sec-search","")
     # fiche
-    pid=max((n for n in DATA["nodes"] if n["type"]=="person"), key=lambda n:(len(n.get("statements",[])), bool(n.get("image"))))["id"]
+    pid=max((n for n in DATA["nodes"] if n["type"]=="person"), key=lambda n:(bool(n.get("image")), len(n.get("statements",[]))))["id"]
     await pg.locator(f'#sec-groups li[data-id="{pid}"] a').tap(); await pg.wait_for_timeout(600)
     n=[x for x in DATA["nodes"] if x["id"]==pid][0]
     ok(f"{T} fiche route", await pg.evaluate("location.hash")==f"#/personne/{pid}" and await pg.evaluate("window.__route")=="fiche")

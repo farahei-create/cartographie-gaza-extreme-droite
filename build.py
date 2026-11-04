@@ -477,9 +477,60 @@ N.append({"id":"proces-nantes-menaces-2026","name":"Condamnation pour menaces de
  ],
  "sections":["france"],"category":EVT,"subcategory":"Événements"})
 
+# ---------- v10 (04/11/2026) : Cyril Hanouna, Némésis, ISSEP, M6 — éléments « Solide » uniquement ----------
+AN_CR20="https://www.assemblee-nationale.fr/dyn/16/comptes-rendus/cetnt/l16cetnt2324020_compte-rendu.pdf"
+LP_HAN_BOY="https://www.leparisien.fr/culture-loisirs/tv/guerre-israel-hamas-pour-cyril-hanouna-lappel-au-boycott-de-tpmp-est-un-acte-antisemite-31-10-2023-VQBIXKEHLNCJ7J4YSOI7QMIX5U.php"
+M20_HAN_LFI="https://www.20minutes.fr/arts-stars/medias/4096418-20240615-elections-legislatives-2024-cyril-hanouna-europe-1-pendant-campagne-legislatives"
+M20_HAN_W9="https://www.20minutes.fr/arts-stars/people/4203619-20260226-cyril-hanouna-indigne-propos-bruno-gaccio-quentin-deranque-juge-extremement-graves"
+FIG_HAN_ARCOM="https://www.lefigaro.fr/politique/vous-me-voyez-a-la-tete-de-l-arcom-cyril-hanouna-dement-l-information-selon-laquelle-jordan-bardella-lui-aurait-propose-ce-poste-20260504"
+HUFF_BARD_ARCOM="https://www.huffingtonpost.fr/politique/article/bardella-dement-avoir-propose-la-tete-de-l-arcom-a-hanouna-apres-les-revelations-de-mediapart_263379.html"
+FI_HAN_M6="https://www.franceinfo.fr/culture/tv/cyril-hanouna/l-animateur-cyril-hanouna-annonce-rejoindre-le-groupe-m6-en-septembre_7100610.html"
+FI_E1_MED="https://www.franceinfo.fr/elections/legislatives/legislatives-2024-l-arcom-met-en-demeure-europe-1-pour-manque-de-mesure-et-d-honnetete-dans-l-emission-de-cyril-hanouna_6629991.html"
+ARCOM_E1_2024="https://www.arcom.fr/sites/default/files/2024-06/Arcom%20-%20MED%20Europe%201.pdf"
+FI_C8_BOY="https://www.franceinfo.fr/economie/medias/insultes-de-cyril-hanouna-a-un-depute-la-chaine-c8-ecope-d-une-amende-record-de-3-5-millions-d-euros_5649680.html"
+LD_NEM="https://www.ladepeche.fr/2026/02/16/mort-de-quentin-a-lyon-quel-est-ce-collectif-identitaire-nemesis-proche-de-lextreme-droite-13228324.php"
+FI_ISSEP="https://www.franceinfo.fr/politique/front-national/video-marion-marechal-le-pen-les-petits-secrets-de-son-ecole-de-sciences-politiques_2766371.html"
+def _st(q,d,m,u,t,sec="france"): return {"quote":q,"date":d,"medium":m,"url":u,"theme":t,"section":sec}
+def _node(i,name,typ,role,desc,sts,cat,sub,secs=("france",)):
+    N.append({"id":i,"name":name,"type":typ,"role":role,"description":desc,"statements":sts,"sections":list(secs),"category":cat,"subcategory":sub})
+_node("cyril-hanouna","Cyril Hanouna","person","Animateur de télévision et de radio (TPMP sur C8 jusqu'en février 2025 ; Europe 1 ; W9 et Fun Radio depuis septembre 2025)",
+ "Animateur de « Touche pas à mon poste » (TPMP) sur C8. Auditionné le 14 mars 2024 par la commission d'enquête de l'Assemblée nationale sur les fréquences TNT, dont le président a indiqué que l'Arcom était intervenue 21 fois à propos de ses émissions depuis 2017. Le 9 février 2023, l'Arcom a infligé à C8 une amende de 3,5 millions d'euros pour ses propos envers le député Louis Boyard (TPMP du 10 novembre 2022) (franceinfo). Le 27 juin 2024, l'Arcom a mis en demeure Europe 1 au sujet de son émission « On marche sur la tête » (décision n° 2024-582). Après l'arrêt de C8 sur la TNT le 28 février 2025, il a annoncé rejoindre le groupe M6 (W9 et Fun Radio) à partir du 1er septembre 2025 (franceinfo).",
+ [_st("Quand la semaine dernière, il y a eu un boycott TPMP, vous croyez que c'est pas un acte antisémite ça ? Et bah moi je vous le dis, c'est un acte antisémite","2023-10-31","TPMP (C8), cité par Le Parisien",LP_HAN_BOY,G,"gaza"),
+  _st("Il est vrai qu'à un moment, j'ai très souvent invité Éric Zemmour – même s'il n'est venu que deux fois. Si je l'ai fait, c'est parce qu'il faisait l'événement tous les jours !","2024-03-14","Audition devant la commission d'enquête sur les fréquences TNT, Assemblée nationale (compte rendu officiel n° 20)",AN_CR20,M),
+  _st("Jean-Luc Mélenchon a été mon premier invité politique","2024-03-14","Audition devant la commission d'enquête sur les fréquences TNT, Assemblée nationale (compte rendu officiel n° 20)",AN_CR20,M),
+  _st("j'ai passé autant de bons moments avec Jordan Bardella qu'avec Jean-Luc Mélenchon […] Ça ne veut pas dire que je disais aux spectateurs de voter pour Jean-Luc Mélenchon, ni que je leur conseille maintenant de voter pour Jordan Bardella","2024-03-14","Audition devant la commission d'enquête sur les fréquences TNT, Assemblée nationale (compte rendu officiel n° 20)",AN_CR20,M),
+  _st("Je pense vraiment que C8 fait l'objet d'un acharnement.","2024-03-14","Audition devant la commission d'enquête sur les fréquences TNT, Assemblée nationale (compte rendu officiel n° 20)",AN_CR20,M),
+  _st("Je regrette bien entendu mes propos sur Louis Boyard.","2024-03-14","Audition devant la commission d'enquête sur les fréquences TNT, Assemblée nationale (compte rendu officiel n° 20)",AN_CR20,NU),
+  _st("LFI au pouvoir, je pars","2024-06-12","Europe 1, « On marche sur la tête », cité par 20 Minutes",M20_HAN_LFI,F),
+  _st("Franchement, à un moment, est-ce qu'il n'y a pas des sanctions pour les hommes politiques à force de dire autant de bêtises ?","2026-02-26","W9, « Tout beau, tout n9uf », cité par 20 Minutes (à propos de propos d'un candidat LFI)",M20_HAN_W9,M),
+  _st("C'est une vanne, c'est sûr !","2026-05-04","Réponse à Mediapart, citée par Le Figaro, au sujet d'une proposition de présidence de l'Arcom que Mediapart attribue à Jordan Bardella (été 2024) ; Jordan Bardella a déclaré sur X : « je n'ai jamais proposé “la tête de l'Arcom à Cyril Hanouna” » (Le HuffPost)",FIG_HAN_ARCOM,NU)],
+ MED,"Animateurs & producteurs",("gaza","france"))
+_node("nemesis","Collectif Némésis","org","Collectif identitaire",
+ "Collectif fondé en 2019 par Alice Cordier (un pseudonyme). La Dépêche (16 février 2026) le décrit comme « proche du parti Reconquête et du Rassemblement national ».",[],ORG,"Projets & réseaux")
+_node("issep","ISSEP","org","Établissement privé d'enseignement supérieur (Lyon)",
+ "Institut fondé à Lyon en 2018 par Marion Maréchal. Selon franceinfo : frais d'inscription de 5 500 € par an, diplôme non reconnu par l'État.",[],ORG,"Projets & réseaux")
+_node("m6","Groupe M6 (W9, Fun Radio)","org","Groupe audiovisuel",
+ "Groupe audiovisuel privé, propriétaire notamment de W9 et Fun Radio. Cyril Hanouna y anime une émission quotidienne sur W9 et un programme sur Fun Radio depuis le 1er septembre 2025 (franceinfo).",[],MED,"Chaînes, radios & titres")
+for _a in [("cyril-hanouna","c8","animateur de TPMP (jusqu'à l'arrêt de C8 sur la TNT, le 28/02/2025)",FI_HAN_M6,"2025-02-27"),
+ ("cyril-hanouna","m6","animateur sur W9 et Fun Radio à partir du 01/09/2025 (annoncé le 27/02/2025)",FI_HAN_M6,"2025-02-27"),
+ ("cyril-hanouna","europe1","animateur de « On marche sur la tête »",FI_E1_MED,"2024-06-27"),
+ ("arcom","europe1","mise en demeure pour l'émission « On marche sur la tête » diffusée du 17 au 25/06/2024 (décision n° 2024-582 du 27/06/2024)",ARCOM_E1_2024,"2024-06-27"),
+ ("arcom","c8","amende de 3,5 M€ pour les propos de Cyril Hanouna envers le député Louis Boyard (TPMP du 10/11/2022)",FI_C8_BOY,"2023-02-09"),
+ ("marion-marechal","issep","fondatrice (Lyon, 2018)",FI_ISSEP,"2018"),
+ ("nemesis","reconquete","décrit par La Dépêche comme « proche du parti Reconquête et du Rassemblement national » (16/02/2026)",LD_NEM,"2026-02-16"),
+ ("nemesis","rn","décrit par La Dépêche comme « proche du parti Reconquête et du Rassemblement national » (16/02/2026)",LD_NEM,"2026-02-16")]:
+    L(*_a); E[-1]["section"]="france"
+for _i in ["nemesis","reconquete","rn","cyril-hanouna","c8","europe1","arcom","m6","marion-marechal","issep"]:
+    _n=[x for x in N if x["id"]==_i][0]
+    if "france" not in _n["sections"]: _n["sections"].append("france")
+ARCH_EXTRA={M20_HAN_LFI:("https://web.archive.org/web/20261104122526/"+M20_HAN_LFI,"2026-11-04"),
+ FIG_HAN_ARCOM:("https://web.archive.org/web/20261104123431/"+FIG_HAN_ARCOM,"2026-11-04"),
+ LD_NEM:("https://web.archive.org/web/20261104123458/"+LD_NEM,"2026-11-04")}
+
 # archives Wayback Machine (tools/archive.py -> tools/archives.json)
 _ap="/workspace/gaza-site/tools/archives.json"
 ARCH=json.load(open(_ap)) if os.path.exists(_ap) else {}
+for _u,(_a,_d) in ARCH_EXTRA.items(): ARCH.setdefault(_u,{"archive_url":_a,"archived":_d,"status":"saved"})
 def _arch(o,key="url"):
     a=ARCH.get(o.get(key))
     if a and a.get("archive_url"): o["archive_url"]=a["archive_url"]; o["archived"]=a["archived"]
