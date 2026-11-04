@@ -112,6 +112,7 @@
     buildSections();
     buildTimeline();
     bindFiche();
+    bindCards();
     bindRouter();
     registerSW();
   }
@@ -846,6 +847,7 @@
       (n.category ? '<p class="f-cat"><a href="#/sections">' + catLabel(n) + "</a></p>" : "") + "</div></header>" +
       (n.description ? '<p class="f-desc">' + esc(n.description) + "</p>" : "") +
       '<div class="f-actions"><a class="btn-pill ghost small" href="#/reseau/' + encodeURIComponent(n.id) + '">Voir dans le réseau</a></div>' +
+      amHtml(n) +
       (st.length || n.type === "person" ? '<h2 class="h-sec">Déclarations publiques <span class="h-n">' + st.length + "</span></h2>" +
         (st.length ? '<ol class="tl">' + st.map(function (x) { return tlItem(x.s, n, x.i, false); }).join("") + "</ol>" : '<p class="empty">Aucune déclaration répertoriée.</p>') : "") +
       '<h2 class="h-sec">Relations <span class="h-n">' + es.length + "</span></h2>" +
@@ -858,7 +860,7 @@
       '<article class="tl-card">' + (withWho ? '<a class="tl-who" href="' + ficheHref(n) + '#d' + i + '">' + avatar(n, "av-xs") + "<span>" + esc(n.name) + "</span></a>" : "") +
       "<blockquote>" + quoteHtml(s.quote) + "</blockquote>" +
       '<div class="meta"><span class="medium">' + esc(s.medium) + "</span>" + (s.theme ? themeTag(s.theme) : "") + "</div>" +
-      '<div class="meta actions">' + srcLink(s.url, "Lire la source") + archLink(s) + "</div>" + videoHtml(s.video) + "</article></li>";
+      '<div class="meta actions">' + srcLink(s.url, "Lire la source") + archLink(s) + actionsHtml(n, i) + "</div>" + videoHtml(s.video) + "</article></li>";
   }
   function relItem(e, n) {
     var out = e.source === n.id, o = byId[out ? e.target : e.source];
@@ -885,6 +887,202 @@
       document.body.appendChild(ta); ta.select();
       try { document.execCommand("copy") ? res() : rej(); } catch (e) { rej(e); } ta.remove();
     });
+  }
+
+  /* ==========================================================================
+     v7 : cartes de citation (PNG 1080x1350), « Copier le lien », Avant / maintenant
+     ========================================================================== */
+  var CARD_W = 1080, CARD_H = 1350, CARD_PAD = 96;
+  var CARD_FONT = '-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif';
+  var SITE_HOST = "onrecord-fr.vercel.app";
+  function dmy(d) { var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d || ""); return m ? m[3] + "/" + m[2] + "/" + m[1] : (d || "date non précisée"); }
+  function hostOf(u) { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return ""; } }
+  function stLink(n, i) { return location.origin + location.pathname + ficheHref(n) + "#d" + i; }
+  function duoLink(n) { return location.origin + location.pathname + ficheHref(n) + "#am"; }
+  /* découpe en lignes (les mots trop longs sont coupés par caractère, sans rien retirer) */
+  function wrapLines(ctx, text, maxW) {
+    var words = text.split(/ /), lines = [], cur = "";
+    words.forEach(function (w) {
+      var t = cur ? cur + " " + w : w;
+      if (ctx.measureText(t).width <= maxW) { cur = t; return; }
+      if (cur) lines.push(cur);
+      cur = w;
+      while (ctx.measureText(cur).width > maxW && cur.length > 1) {
+        var k = cur.length; while (k > 1 && ctx.measureText(cur.slice(0, k)).width > maxW) k--;
+        lines.push(cur.slice(0, k)); cur = cur.slice(k);
+      }
+    });
+    if (cur) lines.push(cur);
+    return lines;
+  }
+  /* Ajuste une citation dans une boîte : police décroissante, puis troncature « […] » en dernier recours. */
+  function fitQuote(ctx, quote, maxW, maxH, maxSize, minSize, weight) {
+    var q = String(quote).replace(/\s+/g, " ").trim();
+    function lay(txt, size) { ctx.font = weight + " " + size + "px " + CARD_FONT; var L = wrapLines(ctx, "«\u00a0" + txt + "\u00a0»", maxW); return { lines: L, size: size, lh: Math.round(size * 1.3) }; }
+    for (var s = maxSize; s >= minSize; s -= 2) {
+      var r = lay(q, s); if (r.lines.length * r.lh <= maxH) { r.truncated = false; return r; }
+    }
+    var words = q.split(" "), lo = 1, hi = words.length - 1, best = null;
+    while (lo <= hi) {
+      var mid = (lo + hi) >> 1, t = lay(words.slice(0, mid).join(" ").replace(/[\s,;:.]+$/, "") + " […]", minSize);
+      if (t.lines.length * t.lh <= maxH) { best = t; lo = mid + 1; } else hi = mid - 1;
+    }
+    best = best || lay("[…]", minSize); best.truncated = true; return best;
+  }
+  function clampText(ctx, text, maxW, maxLines) {
+    var L = wrapLines(ctx, text, maxW);
+    if (L.length <= maxLines) return L;
+    var words = text.split(" "), lo = 1, hi = words.length, best = ["[…]"];
+    while (lo <= hi) { var mid = (lo + hi) >> 1, t = wrapLines(ctx, words.slice(0, mid).join(" ").replace(/[\s,;:.]+$/, "") + " […]", maxW); if (t.length <= maxLines) { best = t; lo = mid + 1; } else hi = mid - 1; }
+    return best;
+  }
+  function cardBase(ctx, kicker) {
+    var g = ctx.createLinearGradient(0, 0, CARD_W, CARD_H);
+    g.addColorStop(0, "#3b0a57"); g.addColorStop(0.55, "#5a1a7a"); g.addColorStop(1, "#8e1d5c");
+    ctx.fillStyle = g; ctx.fillRect(0, 0, CARD_W, CARD_H);
+    ctx.textBaseline = "alphabetic"; ctx.textAlign = "left";
+    ctx.fillStyle = "#ffffff"; ctx.font = "800 64px " + CARD_FONT; ctx.fillText("Onrecord", CARD_PAD, 150);
+    ctx.fillStyle = "rgba(255,255,255,.72)"; ctx.font = "500 30px " + CARD_FONT; ctx.fillText(kicker || "Leurs mots, datés et sourcés.", CARD_PAD, 200);
+    ctx.fillStyle = "rgba(255,255,255,.28)"; ctx.fillRect(CARD_PAD, 236, CARD_W - 2 * CARD_PAD, 2);
+    ctx.fillStyle = "rgba(255,255,255,.28)"; ctx.fillRect(CARD_PAD, CARD_H - 140, CARD_W - 2 * CARD_PAD, 2);
+    ctx.fillStyle = "rgba(255,255,255,.9)"; ctx.font = "600 32px " + CARD_FONT; ctx.fillText(SITE_HOST, CARD_PAD, CARD_H - 76);
+  }
+  function drawLines(ctx, r, x, y) { ctx.font = "600 " + r.size + "px " + CARD_FONT; r.lines.forEach(function (l, k) { ctx.fillText(l, x, y + r.size + k * r.lh); }); return y + r.lines.length * r.lh; }
+  function drawSource(ctx, s, x, y, maxW, lines) {
+    ctx.fillStyle = "rgba(255,255,255,.72)"; ctx.font = "400 28px " + CARD_FONT;
+    var t = clampText(ctx, "Support : " + (s.medium || "non précisé"), maxW, lines);
+    t.forEach(function (l, k) { ctx.fillText(l, x, y + 28 + k * 38); });
+    y += t.length * 38;
+    var h = hostOf(s.url); if (h) { ctx.fillText("Source : " + h, x, y + 28 + 6); y += 44; }
+    return y;
+  }
+  function renderCard(n, s) {
+    var c = document.createElement("canvas"); c.width = CARD_W; c.height = CARD_H;
+    var ctx = c.getContext("2d"), W = CARD_W - 2 * CARD_PAD;
+    cardBase(ctx);
+    ctx.fillStyle = "#ffffff";
+    var r = fitQuote(ctx, s.quote, W, 650, 72, 34, "600");
+    drawLines(ctx, r, CARD_PAD, 300);
+    var y = 300 + 650 + 40;
+    ctx.fillStyle = "#ffffff"; ctx.font = "700 44px " + CARD_FONT; ctx.fillText(clampText(ctx, n.name, W, 1)[0], CARD_PAD, y + 44); y += 64;
+    ctx.fillStyle = "rgba(255,255,255,.9)"; ctx.font = "600 32px " + CARD_FONT; ctx.fillText(dmy(s.date), CARD_PAD, y + 32); y += 44;
+    drawSource(ctx, s, CARD_PAD, y, W, 2);
+    c.__truncated = r.truncated; c.__fontSize = r.size;
+    return c;
+  }
+  function renderDuoCard(n, a, b) {
+    var c = document.createElement("canvas"); c.width = CARD_W; c.height = CARD_H;
+    var ctx = c.getContext("2d"), W = CARD_W - 2 * CARD_PAD, tr = false, y = 268;
+    cardBase(ctx, "Avant / maintenant · écart : " + gapText(a.date, b.date));
+    ctx.fillStyle = "#ffffff"; ctx.font = "700 44px " + CARD_FONT; ctx.fillText(clampText(ctx, n.name, W, 1)[0], CARD_PAD, y + 44); y += 76;
+    [a, b].forEach(function (s, k) {
+      ctx.fillStyle = "rgba(255,255,255,.9)"; ctx.font = "700 32px " + CARD_FONT; ctx.fillText((k ? "Maintenant · " : "Avant · ") + dmy(s.date), CARD_PAD, y + 32); y += 50;
+      ctx.fillStyle = "#ffffff";
+      var r = fitQuote(ctx, s.quote, W, 250, 50, 28, "600"); tr = tr || r.truncated;
+      drawLines(ctx, r, CARD_PAD, y); y += 250 + 6;
+      y = drawSource(ctx, s, CARD_PAD, y, W, 1) + (k ? 0 : 24);
+      if (!k) { ctx.fillStyle = "rgba(255,255,255,.2)"; ctx.fillRect(CARD_PAD, y, W, 2); y += 26; }
+    });
+    c.__truncated = tr;
+    return c;
+  }
+  function canvasBlob(c) {
+    /* toDataURL est synchrone : le partage reste lié au geste de l'utilisateur (exigence de Safari iOS) */
+    var u = c.toDataURL("image/png"), bin = atob(u.split(",")[1]), arr = new Uint8Array(bin.length);
+    for (var k = 0; k < bin.length; k++) arr[k] = bin.charCodeAt(k);
+    return { blob: new Blob([arr], { type: "image/png" }), dataUrl: u };
+  }
+  function shareCanvas(c, fname, title, link) {
+    var o = canvasBlob(c); window.__lastCard = { dataUrl: o.dataUrl, size: o.blob.size, w: c.width, h: c.height, truncated: !!c.__truncated, name: fname };
+    var file = null;
+    try { file = new File([o.blob], fname, { type: "image/png" }); } catch (e) { file = null; }
+    if (file && navigator.canShare && navigator.share && navigator.canShare({ files: [file] })) {
+      navigator.share({ files: [file], title: title, text: title + " — " + link }).catch(function () {});
+      return "share";
+    }
+    var a = document.createElement("a"), url = URL.createObjectURL(o.blob);
+    a.href = url; a.download = fname; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+    toast("Image téléchargée : " + fname);
+    return "download";
+  }
+  function slug(s) { return norm(s).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
+  function copyLink(link) { copyText(link).then(function () { toast("Lien copié"); }, function () { toast(link); }); }
+  function actionsHtml(n, i) {
+    return '<button type="button" class="act" data-act="share" data-n="' + esc(n.id) + '" data-i="' + i + '">Partager</button>' +
+      '<button type="button" class="act" data-act="copy" data-n="' + esc(n.id) + '" data-i="' + i + '">Copier le lien</button>';
+  }
+  /* écart neutre entre deux dates */
+  function gapText(d1, d2) {
+    var a = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d1 || ""), b = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d2 || "");
+    if (!a || !b) return "—";
+    if (d1 > d2) { var t = a; a = b; b = t; }
+    var mo = (+b[1] - +a[1]) * 12 + (+b[2] - +a[2]) - (+b[3] < +a[3] ? 1 : 0);
+    if (mo < 1) { var days = Math.round((Date.UTC(+b[1], +b[2] - 1, +b[3]) - Date.UTC(+a[1], +a[2] - 1, +a[3])) / 864e5); return days === 0 ? "même jour" : plural(days, "jour", "jours"); }
+    if (mo < 12) return mo + " mois";
+    var y = Math.floor(mo / 12), m = mo % 12;
+    return plural(y, "an", "ans") + (m ? " et " + m + " mois" : "");
+  }
+  function datedSt(n) { return (n.statements || []).map(function (s, i) { return { s: s, i: i }; }).filter(function (x) { return /^\d{4}-\d{2}-\d{2}$/.test(x.s.date || ""); }).sort(function (a, b) { return a.s.date.localeCompare(b.s.date) || a.i - b.i; }); }
+  function defaultPair(list) {
+    var byT = {}, best = null;
+    list.forEach(function (x) { (byT[x.s.theme || ""] = byT[x.s.theme || ""] || []).push(x); });
+    Object.keys(byT).forEach(function (t) {
+      var g = byT[t]; if (g.length < 2) return;
+      var span = Date.parse(g[g.length - 1].s.date) - Date.parse(g[0].s.date);
+      if (!best || span > best.span) best = { a: g[0], b: g[g.length - 1], span: span };
+    });
+    return best && best.span > 0 ? [best.a.i, best.b.i] : [list[0].i, list[list.length - 1].i];
+  }
+  var amSel = {};
+  function amHtml(n) {
+    var list = datedSt(n);
+    if (n.type !== "person" || list.length < 2) return "";
+    var p = amSel[n.id] || defaultPair(list);
+    function opts(sel) { return list.map(function (x) { return '<option value="' + x.i + '"' + (x.i === sel ? " selected" : "") + ">" + dmy(x.s.date) + " · " + esc(String(x.s.quote).slice(0, 60)) + (String(x.s.quote).length > 60 ? "…" : "") + "</option>"; }).join(""); }
+    var A = n.statements[p[0]], B = n.statements[p[1]];
+    if ((A.date || "") > (B.date || "")) { var t = A; A = B; B = t; p = [p[1], p[0]]; }
+    function col(s, i, lab) {
+      return '<article class="am-card"><p class="am-k">' + lab + ' · <time datetime="' + esc(s.date) + '">' + dmy(s.date) + "</time></p><blockquote>" + quoteHtml(s.quote) + "</blockquote>" +
+        '<div class="meta"><span class="medium">' + esc(s.medium) + "</span></div>" +
+        '<div class="meta actions">' + srcLink(s.url, "Lire la source") + archLink(s) + '<a class="act" href="' + ficheHref(n) + "#d" + i + '">Voir dans la frise</a></div></article>';
+    }
+    return '<section class="am" id="am" aria-labelledby="am-h"><h2 class="h-sec" id="am-h">Avant / maintenant</h2>' +
+      '<div class="am-pick"><label>Avant <select id="am-a">' + opts(p[0]) + '</select></label><label>Maintenant <select id="am-b">' + opts(p[1]) + "</select></label></div>" +
+      '<p class="am-gap">Écart : <strong id="am-gap">' + gapText(A.date, B.date) + "</strong></p>" +
+      '<div class="am-grid">' + col(A, p[0], "Avant") + col(B, p[1], "Maintenant") + "</div>" +
+      '<div class="meta actions am-act"><button type="button" class="act" data-act="share-duo" data-n="' + esc(n.id) + '" data-a="' + p[0] + '" data-b="' + p[1] + '">Partager</button>' +
+      '<button type="button" class="act" data-act="copy-duo" data-n="' + esc(n.id) + '">Copier le lien</button></div></section>';
+  }
+  function bindCards() {
+    document.addEventListener("click", function (e) {
+      var b = e.target.closest && e.target.closest("button.act[data-act]"); if (!b) return;
+      var n = byId[b.getAttribute("data-n")]; if (!n) return;
+      var act = b.getAttribute("data-act");
+      if (act === "share" || act === "copy") {
+        var i = +b.getAttribute("data-i"), s = n.statements[i];
+        if (act === "copy") return copyLink(stLink(n, i));
+        window.__lastShare = shareCanvas(renderCard(n, s), "onrecord-" + slug(n.name) + "-" + (s.date || "sd") + ".png", n.name + " — Onrecord", stLink(n, i));
+      } else if (act === "copy-duo") copyLink(duoLink(n));
+      else if (act === "share-duo") {
+        var A = n.statements[+b.getAttribute("data-a")], B = n.statements[+b.getAttribute("data-b")];
+        window.__lastShare = shareCanvas(renderDuoCard(n, A, B), "onrecord-" + slug(n.name) + "-avant-maintenant.png", n.name + " — Avant / maintenant — Onrecord", duoLink(n));
+      }
+    });
+    document.addEventListener("change", function (e) {
+      if (!curFiche || (e.target.id !== "am-a" && e.target.id !== "am-b")) return;
+      var na = +$("am-a").value, nb = +$("am-b").value;
+      if (na === nb) { toast("Choisissez deux déclarations différentes."); }
+      else amSel[curFiche.id] = [na, nb];
+      var sec = $("am"); var tmp = document.createElement("div"); tmp.innerHTML = amHtml(curFiche); sec.replaceWith(tmp.firstChild);
+    });
+    window.__renderCard = function (id, i) { var c = renderCard(byId[id], byId[id].statements[i]); return { dataUrl: c.toDataURL("image/png"), truncated: c.__truncated, size: c.__fontSize }; };
+    window.__renderCardQuote = function (id, q) { var c = renderCard(byId[id], { quote: q, date: "2026-01-01", medium: "Test", url: "https://example.org/" }); return { dataUrl: c.toDataURL("image/png"), truncated: c.__truncated, size: c.__fontSize }; };
+  }
+  function renderMethode() {
+    var mail = String(CFG.CORRECTION_EMAIL || "").trim(), el = $("methode-contact");
+    if (/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail)) el.innerHTML = 'Écrire à <a href="mailto:' + esc(mail) + '?subject=' + encodeURIComponent("Onrecord : demande de correction ou de retrait") + '">' + esc(mail) + "</a> en indiquant la fiche concernée (lien), l'élément en cause et, si possible, une source.";
+    else el.textContent = "Le contact sera bientôt disponible.";
   }
 
   /* ---------- Chronologie ---------- */
@@ -927,8 +1125,8 @@
   }
 
   /* ---------- Routage par ancre (#/…) ---------- */
-  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "methodologie"];
-  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Sections", chronologie: "Chronologie", reseau: "Réseau des relations", methodologie: "Méthodologie" };
+  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "methodologie", "methode"];
+  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Sections", chronologie: "Chronologie", reseau: "Réseau des relations", methodologie: "Méthodologie", methode: "Méthode" };
   var lastView = null;
   function ensureGraph(focusId) {
     if (!network) buildGraph(); else { sizeGraph(); network.redraw(); }
@@ -949,7 +1147,7 @@
     if (v === "personne" || v === "organisation") v = "fiche";
     if (VIEWS.indexOf(v) < 0) v = "accueil";
     VIEWS.forEach(function (k) { $("view-" + k).hidden = k !== v; });
-    var tab = v === "fiche" ? "sections" : v;
+    var tab = v === "fiche" ? "sections" : v === "methode" ? "methodologie" : v;
     document.querySelectorAll("#tabnav a").forEach(function (a) {
       if (a.getAttribute("data-tab") === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
@@ -961,6 +1159,7 @@
     }
     if (v !== "fiche") document.title = v === "accueil" ? TITLES.accueil : TITLES[v] + " — Onrecord";
     if (v === "sections") { curSec = ["tout", "gaza", "france", "commun"].indexOf(parts[1]) >= 0 ? parts[1] : "tout"; renderSections(); }
+    if (v === "methode") renderMethode();
     if (v === "fiche") renderFiche(decodeURIComponent(parts[1] || ""), anchor);
     var key = v + "/" + (v === "fiche" ? parts[1] : "");
     if (key !== lastView && !(v === "reseau" && lastView && lastView.indexOf("reseau") === 0)) window.scrollTo(0, 0);

@@ -931,3 +931,27 @@ body[data-view="reseau"] .site-footer{display:none}
 @supports not ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
   :root{--glass:var(--surface);--glass-strong:var(--surface)}
 }
+
+/* v7 : boutons Partager / Copier le lien, Avant / maintenant */
+button.act,a.act{
+  display:inline-flex;align-items:center;min-height:32px;padding:6px 12px;border-radius:999px;border:0;cursor:pointer;
+  font:inherit;font-size:.8rem;font-weight:600;color:var(--mauve);background:color-mix(in srgb, var(--mauve) 14%, transparent);text-decoration:none;
+  transition:background .2s var(--ease), transform .2s var(--spring);
+}
+button.act:hover,a.act:hover{text-decoration:none;background:color-mix(in srgb, var(--mauve) 24%, transparent)}
+button.act:active,a.act:active{transform:scale(.96)}
+@media (pointer:coarse){ button.act,a.act{min-height:44px;padding:8px 14px} }
+.am{margin:0 0 22px;min-width:0}
+.am-pick{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 8px}
+.am-pick label{display:flex;flex-direction:column;gap:4px;font-size:.8rem;font-weight:600;color:var(--muted);min-width:0}
+.am-pick select{font:inherit;font-size:.9rem;min-height:40px;width:100%;min-width:0;padding:6px 8px;border-radius:12px;border:.5px solid var(--hair);background:var(--surface);color:var(--ink)}
+.am-gap{font-size:.88rem;color:var(--muted);margin:0 0 10px}
+.am-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.am-card{background:var(--surface);border-radius:18px;padding:14px 16px;box-shadow:var(--shadow-1);border:.5px solid var(--hair);min-width:0;overflow-wrap:anywhere}
+.am-card blockquote{margin:0 0 10px;font-size:1rem;line-height:1.55}
+.am-card .meta{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:.8rem;color:var(--muted)}
+.am-card .meta + .meta{margin-top:10px}
+.am-k{margin:0 0 8px;font-size:.78rem;font-weight:700;letter-spacing:.02em;text-transform:uppercase;color:var(--accent)}
+.am-act{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+@media (max-width:640px){ .am-grid,.am-pick{grid-template-columns:1fr} }
+.site-footer #footer-methode{margin-left:4px}

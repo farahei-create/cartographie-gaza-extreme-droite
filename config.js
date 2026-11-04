@@ -1,6 +1,7 @@
-/* Configuration du site (modifiable sans toucher au code).
-   DONATION_URL : lien https vers une page de soutien (ex. Liberapay, Ko-fi, HelloAsso).
-   Tant que la valeur est vide, le bouton « Soutenir ce travail » reste masqué. */
 window.SITE_CONFIG = {
-  DONATION_URL: ""
+  DONATION_URL: "",
+  /* Adresse pour les demandes de correction ou de retrait (page #/methode).
+     Laisser vide tant qu'aucune adresse n'est choisie : la page affiche alors
+     « Le contact sera bientôt disponible. » */
+  CORRECTION_EMAIL: ""
 };
