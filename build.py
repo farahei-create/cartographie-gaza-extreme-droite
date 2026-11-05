@@ -523,10 +523,80 @@ for _a in [("cyril-hanouna","c8","animateur de TPMP (jusqu'à l'arrêt de C8 sur
 for _i in ["nemesis","reconquete","rn","cyril-hanouna","c8","europe1","arcom","m6","marion-marechal","issep"]:
     _n=[x for x in N if x["id"]==_i][0]
     if "france" not in _n["sections"]: _n["sections"].append("france")
+# ---------- mise à jour du 04/11/2026 : Pnat (RTL, 03/11/2026) ; Arcom → CNews (intervention publiée le 03/11/2026) ----------
+# Personnes privées (suspects, victimes) non nommées. Aucun lien causal ajouté.
+RTL_PNAT="https://www.rtl.fr/actu/justice-faits-divers/23-procedures-sur-rtl-le-procureur-national-antiterroriste-affirme-que-les-menaces-de-l-ultra-droite-radicale-violente-sont-en-croissance-7900692013"
+ARCOM_CN_100PWE="https://www.arcom.fr/se-documenter/espace-juridique/decisions/emission-100-politique-week-end-diffusee-le-3-avril-2026-intervention-aupres-de-cnews"
+_node("pnat","Parquet national antiterroriste (Pnat)","org","Parquet spécialisé (créé en 2019), dirigé par le procureur national antiterroriste Olivier Christen",
+ "Le 3 novembre 2026 sur RTL, après l'attentat commis le 23 octobre 2026 à Trappes et La Verrière (Yvelines), qui a fait un mort et sept blessés et que le Pnat rattache à l'« ultradroite radicale violente », le procureur national antiterroriste Olivier Christen a indiqué que 23 procédures liées à l'ultradroite radicale violente ont été ouvertes depuis la création du Pnat (une à deux par an au départ, six en 2025, six « pour l'instant » en 2026), sur un total de 681 procédures dont 480 en matière djihadiste ; il a précisé que la menace principale reste, selon lui, djihadiste (RTL ; BFMTV). Le suspect, mis en examen et placé en détention provisoire, est présumé innocent ; il n'est pas nommé ici.",
+ [_st("Le nombre de procédures liées à l'ultra-droite radicale violente est en croissance depuis quelques années","2026-11-03",
+   "Olivier Christen, procureur national antiterroriste, invité de Marc-Olivier Fogiel sur RTL ; il a précisé : six procédures ouvertes en 2025, « six pour l'instant en 2026 », 23 au total, sur « 681 procédures dont 480 en djihadisme » (« quatre » en sept ans pour l'ultra-gauche radicale violente) ; selon lui, la menace principale reste djihadiste",
+   RTL_PNAT,FV),
+  _st("c'est pour faire clairement la part des choses entre ce qui sont des partisans d'une idéologie politique, de quelque segment qu'elle soit et des personnes qui se radicalisent dans une idéologie et, au-delà même de la radicalité, vont considérer que la seule façon de porter leur idéologie est de passer à la violence contre les personnes","2026-11-03",
+   "Olivier Christen, procureur national antiterroriste, sur RTL, à propos de la terminologie « ultra-droite radicale violente » employée par son parquet",
+   RTL_PNAT,FV)],
+ ORG,"Institutions publiques")
+_by2["arcom"]["statements"].append(_st("Compte tenu de la sensibilité des termes employés, une telle présentation était susceptible de créer une confusion sur la portée et l'auteur des propos tenus.","2026-10-14",
+ "Arcom, intervention auprès de CNews (délibéré en collège le 14 octobre 2026, publiée le 3 novembre 2026) au sujet de l'émission « 100% Politique Week-end » du 3 avril 2026 consacrée à la situation judiciaire de Rima Hassan : l'Arcom relève que des propos du présentateur (« Donc, c'est vraiment un complot. C'est le complot juif ») sont intervenus après la lecture et la paraphrase d'un message de Jean-Luc Mélenchon sur X, sans marque claire de distanciation entre la citation, sa reformulation et le commentaire du journaliste ; elle a « appelé l'attention de la chaîne sur la nécessité de veiller, en toutes circonstances, au respect des exigences d'honnêteté et de rigueur ». Nuances de l'Arcom : la séquence s'inscrivait « dans le cadre d'une polémique politique, autorisant par nature une liberté de ton accrue » ; le caractère éventuellement diffamatoire relève du juge judiciaire et non de l'Arcom. Une intervention n'est ni une mise en demeure ni une sanction.",
+ ARCOM_CN_100PWE,F))
+L("arcom","cnews","intervention (rappel des exigences d'honnêteté et de rigueur de l'information) au sujet de « 100% Politique Week-end » du 03/04/2026 (délibéré le 14/10/2026, publiée le 03/11/2026 ; ni mise en demeure ni sanction)",ARCOM_CN_100PWE,"2026-10-14"); E[-1]["section"]="france"
+
 ARCH_EXTRA={M20_HAN_LFI:("https://web.archive.org/web/20261104122526/"+M20_HAN_LFI,"2026-11-04"),
  FIG_HAN_ARCOM:("https://web.archive.org/web/20261104123431/"+FIG_HAN_ARCOM,"2026-11-04"),
  LD_NEM:("https://web.archive.org/web/20261104123458/"+LD_NEM,"2026-11-04")}
 
+# ---------- v12 (05/11/2026) : groupes dissous d'extrême droite / ultradroite (décrets, Conseil d'État, presse) ----------
+FI_GI_DISS="https://www.franceinfo.fr/politique/jean-castex/gouvernement-de-jean-castex/le-groupe-d-extreme-droite-generation-identitaire-dissous-en-conseil-des-ministres-annonce-gerald-darmanin_4318225.html"
+FI_LP_GI="https://www.franceinfo.fr/politique/marine-le-pen/video-generation-identitaire-ce-qui-scandalise-m-darmanin-doit-fait-l-objet-d-une-dissolution-ca-ce-n-est-pas-l-etat-de-droit-denonce-marine-le-pen_4273347.html"
+FI_RIEU="https://www.franceinfo.fr/elections/presidentielle/l-ancien-cadre-de-generation-identitaire-et-assistant-parlementaire-rn-damien-rieu-rejoint-eric-zemmour_4924131.html"
+FI_ZOUAVES="https://www.franceinfo.fr/politique/eric-zemmour/le-gouvernement-dissout-le-groupuscule-d-ultradroite-les-zouaves-paris-notamment-soupconne-d-etre-implique-dans-les-violences-lors-du-meeting-de-zemmour-a-villepinte_4905269.html"
+LEGI_ZOUAVES="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000044844463"
+LEGI_CIVITAS="https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000048151580"
+CE_CIVITAS="https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2024-12-30/489498"
+CE_REMPARTS="https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2025-07-31/497252"
+FI_GUD19="https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html"
+FI_GUD="https://www.franceinfo.fr/politique/gouvernement-de-gabriel-attal/le-gouvernement-a-dissous-le-syndicat-etudiant-gud-et-trois-autres-groupes-d-extreme-droite_6627165.html"
+GRP="Groupes dissous (extrême droite / ultradroite)"
+_node("generation-identitaire","Génération identitaire","org","Association d'extrême droite (2012-2021), dissoute",
+ "Créée en 2012, siège historique à Lyon (franceinfo). Dissoute par décret en Conseil des ministres le 3 mars 2021 ; le décret, présenté par le ministre de l'Intérieur Gérald Darmanin, lui reproche un discours incitant à la discrimination, à la haine ou à la violence et la qualifie de possible « milice privée » (franceinfo). L'association a annoncé un recours devant le Conseil d'État (Le Monde, 03/03/2021).",
+ [_st("Cette association et certains de ses militants doivent être regardés comme tenant un discours de haine incitant à la discrimination ou à la violence envers des individus en raison de leur origine, de leur race et de leur religion","2021-03-03","Décret de dissolution du 3 mars 2021, cité par franceinfo",FI_GI_DISS,F)],ORG,GRP)
+_node("zouaves-paris","Les Zouaves Paris","org","Groupement de fait (apparu en 2017), dissous",
+ "Groupement de fait dissous en Conseil des ministres le 5 janvier 2022 (décret du 5 janvier 2022). franceinfo indique que le décret lui reproche « de nombreux et récurrents agissements violents » et de « propager un discours ouvertement raciste », et que le groupe était soupçonné d'être impliqué dans les violences ayant visé des militants de SOS Racisme lors de la réunion électorale d'Éric Zemmour à Villepinte (5 décembre 2021).",
+ [_st("nombreux et récurrents agissements violents","2022-01-05","Décret de dissolution du 5 janvier 2022 (Légifrance), cité par franceinfo",FI_ZOUAVES,F)],ORG,GRP)
+_node("civitas","Civitas","org","Association (constituée en parti politique), dissoute",
+ "Dissoute par décret du 4 octobre 2023. Le Conseil d'État a rejeté le 30 décembre 2024 le recours de l'association (décision n° 489498), retenant notamment des faits d'« exaltation de la collaboration » et des propos à connotation antisémite de responsables ; il relève qu'elle revêt le caractère d'un parti politique. Président : Alain Escada (selon la décision).",
+ [_st("ces éléments, compte tenu de leur caractère précis et concordant, caractérisent l'existence de faits d'exaltation de la collaboration","2024-12-30","Conseil d'État, décision n° 489498 (rejet du recours contre le décret du 4 octobre 2023)",CE_CIVITAS,F)],ORG,GRP)
+_node("les-remparts","Les Remparts (Lyon)","org","Groupement de fait (créé le 7 septembre 2021), dissous",
+ "Groupement de fait lyonnais dissous par décret du 26 juin 2024, avec les associations La Traboule et Top Sport Rhône (franceinfo). Le Conseil d'État a rejeté le recours le 31 juillet 2025 (décision n° 497252) ; le décret se fonde notamment sur un discours « provoquant à la haine, la discrimination et la violence » selon la décision.",
+ [_st("Le groupement de fait \" Les Remparts \", créé le 7 septembre 2021, se présente comme un \" nouveau complexe communautaire, culturel et sportif \".","2025-07-31","Conseil d'État, décision n° 497252",CE_REMPARTS,NU)],ORG,GRP)
+_node("gud","GUD (Groupe union défense)","org","Organisation étudiante d'extrême droite, dissoute",
+ "Dissous en Conseil des ministres le 26 juin 2024, en même temps que Les Remparts, La Traboule et Top Sport Rhône (franceinfo). Après l'annonce, le GUD Paris a dénoncé une « folle politique de répression » (franceinfo).",[],ORG,GRP)
+add_st("gerald-darmanin",
+ ("Ce sont des gens qui pensent qu'il y a une suprématie blanche, qui portent des propos antisémites extrêmement graves","2024-06-19","BFMTV, au sujet du GUD (annonce de la proposition de dissolution), cité par franceinfo",FI_GUD19,F))
+add_st("jordan-bardella",
+ ("Si demain je suis à la tête du pays, je n'aurai aucune forme de tolérance à l'égard de ceux qui se livrent à de la violence dans notre pays","2024-06-19","En réponse à l'annonce de Gérald Darmanin sur le GUD, cité par franceinfo (il a déclaré qu'il dissoudrait « toutes les organisations d'ultragauche et d'ultradroite », y compris le GUD)",FI_GUD19,NU))
+add_st("marine-le-pen",
+ ("Ce qui scandalise Gérald Darmanin doit faire l'objet d'une dissolution ? Ça ce n'est pas l'Etat de droit. J'appelle à faire attention à ça","2021-01-27","franceinfo (radio), au sujet de la dissolution envisagée de Génération identitaire",FI_LP_GI,F))
+for _s in [x for x in N if x["id"] in ("gerald-darmanin","marine-le-pen","jordan-bardella")]:
+    _s["statements"][-1]["section"]="france"
+for _a in [("gerald-darmanin","generation-identitaire","a présenté le décret de dissolution (Conseil des ministres du 03/03/2021)",FI_GI_DISS,"2021-03-03"),
+ ("marine-le-pen","generation-identitaire","s'est opposée sur franceinfo à la dissolution envisagée (27/01/2021)",FI_LP_GI,"2021-01-27"),
+ ("eric-zemmour","generation-identitaire","a accueilli dans Reconquête Damien Rieu, présenté par franceinfo comme ancien cadre de Génération identitaire (« Bienvenue dans la Reconquête, cher Damien ! », 20/01/2022)",FI_RIEU,"2022-01-20"),
+ ("gerald-darmanin","zouaves-paris","a annoncé la dissolution en Conseil des ministres (05/01/2022)",FI_ZOUAVES,"2022-01-05"),
+ ("zouaves-paris","eric-zemmour","groupe soupçonné (franceinfo) d'implication dans les violences contre des militants de SOS Racisme lors de sa réunion électorale de Villepinte (05/12/2021)",FI_ZOUAVES,"2021-12-05"),
+ ("conseil-etat","civitas","rejet du recours contre le décret de dissolution du 04/10/2023 (décision n° 489498)",CE_CIVITAS,"2024-12-30"),
+ ("conseil-etat","les-remparts","rejet du recours contre le décret de dissolution du 26/06/2024 (décision n° 497252)",CE_REMPARTS,"2025-07-31"),
+ ("gerald-darmanin","les-remparts","ministre de l'Intérieur lors de la dissolution du 26/06/2024 (franceinfo)",FI_GUD,"2024-06-26"),
+ ("gerald-darmanin","gud","a proposé la dissolution, prononcée le 26/06/2024",FI_GUD,"2024-06-26"),
+ ("gud","rn","qualifié par Gérald Darmanin de « groupe d'ultradroite très ami » avec « les dirigeants du Rassemblement national » (BFMTV, 19/06/2024, rapporté par franceinfo)",FI_GUD19,"2024-06-19"),
+ ("jordan-bardella","gud","a déclaré qu'il dissoudrait le GUD, comme « toutes les organisations d'ultragauche et d'ultradroite », s'il arrivait à Matignon (19/06/2024)",FI_GUD19,"2024-06-19")]:
+    L(*_a); E[-1]["section"]="france"
+for _i in ["generation-identitaire","zouaves-paris","civitas","les-remparts","gud","gerald-darmanin","marine-le-pen","jordan-bardella","eric-zemmour","conseil-etat","rn"]:
+    _n=[x for x in N if x["id"]==_i][0]
+    if "france" not in _n["sections"]: _n["sections"].append("france")
+
+ARCH_EXTRA['https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2024-12-30/489498']=('https://web.archive.org/web/20261105063042/https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2024-12-30/489498',"2026-11-05")
+ARCH_EXTRA['https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2025-07-31/497252']=('https://web.archive.org/web/20261105063100/https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2025-07-31/497252',"2026-11-05")
 # archives Wayback Machine (tools/archive.py -> tools/archives.json)
 _ap="/workspace/gaza-site/tools/archives.json"
 ARCH=json.load(open(_ap)) if os.path.exists(_ap) else {}

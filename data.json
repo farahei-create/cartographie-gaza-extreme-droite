@@ -1,16 +1,16 @@
 {
   "meta": {
-    "generated": "2026-11-04",
-    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-04 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : fichiers Wikimedia Commons sous licence libre, avec auteur, licence et lien ; logos reproduits à seule fin d'identification. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
+    "generated": "2026-11-05",
+    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-05 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : fichiers Wikimedia Commons sous licence libre, avec auteur, licence et lien ; logos reproduits à seule fin d'identification. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
       "persons": 32,
-      "orgs": 31,
-      "edges": 91,
-      "statements": 92,
+      "orgs": 37,
+      "edges": 103,
+      "statements": 102,
       "photos": 25,
       "logos": 19,
       "videos": 14,
-      "france_nodes": 35
+      "france_nodes": 41
     },
     "category_order": [
       "Responsables politiques",
@@ -284,6 +284,14 @@
           "url": "https://www.franceinfo.fr/politique/gerald-darmanin/laicite-immigration-violences-policieres-huit-sequences-a-retenir-de-l-emission-vous-avez-la-parole-avec-gerald-darmanin-et-marine-le-pen_4293225.html",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "Ce qui scandalise Gérald Darmanin doit faire l'objet d'une dissolution ? Ça ce n'est pas l'Etat de droit. J'appelle à faire attention à ça",
+          "date": "2021-01-27",
+          "medium": "franceinfo (radio), au sujet de la dissolution envisagée de Génération identitaire",
+          "url": "https://www.franceinfo.fr/politique/marine-le-pen/video-generation-identitaire-ce-qui-scandalise-m-darmanin-doit-fait-l-objet-d-une-dissolution-ca-ce-n-est-pas-l-etat-de-droit-denonce-marine-le-pen_4273347.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -349,6 +357,14 @@
             "title": "Jordan Bardella : \"On ne peut pas faire de \"En même temps\" avec l'immigration\" (Grand Entretien, 19/12/2023)",
             "source": "France Inter (chaîne YouTube officielle)"
           },
+          "section": "france"
+        },
+        {
+          "quote": "Si demain je suis à la tête du pays, je n'aurai aucune forme de tolérance à l'égard de ceux qui se livrent à de la violence dans notre pays",
+          "date": "2024-06-19",
+          "medium": "En réponse à l'annonce de Gérald Darmanin sur le GUD, cité par franceinfo (il a déclaré qu'il dissoudrait « toutes les organisations d'ultragauche et d'ultradroite », y compris le GUD)",
+          "url": "https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
+          "theme": "Nuance / contexte",
           "section": "france"
         }
       ],
@@ -1630,6 +1646,14 @@
           "url": "https://www.franceinfo.fr/politique/gerald-darmanin/laicite-immigration-violences-policieres-huit-sequences-a-retenir-de-l-emission-vous-avez-la-parole-avec-gerald-darmanin-et-marine-le-pen_4293225.html",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "Ce sont des gens qui pensent qu'il y a une suprématie blanche, qui portent des propos antisémites extrêmement graves",
+          "date": "2024-06-19",
+          "medium": "BFMTV, au sujet du GUD (annonce de la proposition de dissolution), cité par franceinfo",
+          "url": "https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -1925,6 +1949,16 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261103194234/https://www.arcom.fr/se-documenter/espace-juridique/decisions/decision-du-21-octobre-2026-mettant-en-demeure-la-societe-europe-1-telecompagnie",
           "archived": "2026-11-03"
+        },
+        {
+          "quote": "Compte tenu de la sensibilité des termes employés, une telle présentation était susceptible de créer une confusion sur la portée et l'auteur des propos tenus.",
+          "date": "2026-10-14",
+          "medium": "Arcom, intervention auprès de CNews (délibéré en collège le 14 octobre 2026, publiée le 3 novembre 2026) au sujet de l'émission « 100% Politique Week-end » du 3 avril 2026 consacrée à la situation judiciaire de Rima Hassan : l'Arcom relève que des propos du présentateur (« Donc, c'est vraiment un complot. C'est le complot juif ») sont intervenus après la lecture et la paraphrase d'un message de Jean-Luc Mélenchon sur X, sans marque claire de distanciation entre la citation, sa reformulation et le commentaire du journaliste ; elle a « appelé l'attention de la chaîne sur la nécessité de veiller, en toutes circonstances, au respect des exigences d'honnêteté et de rigueur ». Nuances de l'Arcom : la séquence s'inscrivait « dans le cadre d'une polémique politique, autorisant par nature une liberté de ton accrue » ; le caractère éventuellement diffamatoire relève du juge judiciaire et non de l'Arcom. Une intervention n'est ni une mise en demeure ni une sanction.",
+          "url": "https://www.arcom.fr/se-documenter/espace-juridique/decisions/emission-100-politique-week-end-diffusee-le-3-avril-2026-intervention-aupres-de-cnews",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261104195104/https://www.arcom.fr/se-documenter/espace-juridique/decisions/emission-100-politique-week-end-diffusee-le-3-avril-2026-intervention-aupres-de-cnews",
+          "archived": "2026-11-04"
         }
       ],
       "sections": [
@@ -2091,7 +2125,9 @@
           "medium": "TPMP (C8), cité par Le Parisien",
           "url": "https://www.leparisien.fr/culture-loisirs/tv/guerre-israel-hamas-pour-cyril-hanouna-lappel-au-boycott-de-tpmp-est-un-acte-antisemite-31-10-2023-VQBIXKEHLNCJ7J4YSOI7QMIX5U.php",
           "theme": "Gaza – déclarations",
-          "section": "gaza"
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20250915154540/https://www.leparisien.fr/culture-loisirs/tv/guerre-israel-hamas-pour-cyril-hanouna-lappel-au-boycott-de-tpmp-est-un-acte-antisemite-31-10-2023-VQBIXKEHLNCJ7J4YSOI7QMIX5U.php",
+          "archived": "2025-09-15"
         },
         {
           "quote": "Il est vrai qu'à un moment, j'ai très souvent invité Éric Zemmour – même s'il n'est venu que deux fois. Si je l'ai fait, c'est parce qu'il faisait l'événement tous les jours !",
@@ -2099,7 +2135,9 @@
           "medium": "Audition devant la commission d'enquête sur les fréquences TNT, Assemblée nationale (compte rendu officiel n° 20)",
           "url": "https://www.assemblee-nationale.fr/dyn/16/comptes-rendus/cetnt/l16cetnt2324020_compte-rendu.pdf",
           "theme": "Médias – structure",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260417224438/https://www.assemblee-nationale.fr/dyn/16/comptes-rendus/cetnt/l16cetnt2324020_compte-rendu.pdf",
+          "archived": "2026-04-17"
         },
         {
           "quote": "Jean-Luc Mélenchon a été mon premier invité politique",
@@ -2107,7 +2145,9 @@
           "medium": "Audition devant la commission d'enquête sur les fréquences TNT, Assemblée nationale (compte rendu officiel n° 20)",
           "url": "https://www.assemblee-nationale.fr/dyn/16/comptes-rendus/cetnt/l16cetnt2324020_compte-rendu.pdf",
           "theme": "Médias – structure",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260417224438/https://www.assemblee-nationale.fr/dyn/16/comptes-rendus/cetnt/l16cetnt2324020_compte-rendu.pdf",
+          "archived": "2026-04-17"
         },
         {
           "quote": "j'ai passé autant de bons moments avec Jordan Bardella qu'avec Jean-Luc Mélenchon […] Ça ne veut pas dire que je disais aux spectateurs de voter pour Jean-Luc Mélenchon, ni que je leur conseille maintenant de voter pour Jordan Bardella",
@@ -2115,7 +2155,9 @@
           "medium": "Audition devant la commission d'enquête sur les fréquences TNT, Assemblée nationale (compte rendu officiel n° 20)",
           "url": "https://www.assemblee-nationale.fr/dyn/16/comptes-rendus/cetnt/l16cetnt2324020_compte-rendu.pdf",
           "theme": "Médias – structure",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260417224438/https://www.assemblee-nationale.fr/dyn/16/comptes-rendus/cetnt/l16cetnt2324020_compte-rendu.pdf",
+          "archived": "2026-04-17"
         },
         {
           "quote": "Je pense vraiment que C8 fait l'objet d'un acharnement.",
@@ -2123,7 +2165,9 @@
           "medium": "Audition devant la commission d'enquête sur les fréquences TNT, Assemblée nationale (compte rendu officiel n° 20)",
           "url": "https://www.assemblee-nationale.fr/dyn/16/comptes-rendus/cetnt/l16cetnt2324020_compte-rendu.pdf",
           "theme": "Médias – structure",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260417224438/https://www.assemblee-nationale.fr/dyn/16/comptes-rendus/cetnt/l16cetnt2324020_compte-rendu.pdf",
+          "archived": "2026-04-17"
         },
         {
           "quote": "Je regrette bien entendu mes propos sur Louis Boyard.",
@@ -2131,7 +2175,9 @@
           "medium": "Audition devant la commission d'enquête sur les fréquences TNT, Assemblée nationale (compte rendu officiel n° 20)",
           "url": "https://www.assemblee-nationale.fr/dyn/16/comptes-rendus/cetnt/l16cetnt2324020_compte-rendu.pdf",
           "theme": "Nuance / contexte",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260417224438/https://www.assemblee-nationale.fr/dyn/16/comptes-rendus/cetnt/l16cetnt2324020_compte-rendu.pdf",
+          "archived": "2026-04-17"
         },
         {
           "quote": "LFI au pouvoir, je pars",
@@ -2149,7 +2195,9 @@
           "medium": "W9, « Tout beau, tout n9uf », cité par 20 Minutes (à propos de propos d'un candidat LFI)",
           "url": "https://www.20minutes.fr/arts-stars/people/4203619-20260226-cyril-hanouna-indigne-propos-bruno-gaccio-quentin-deranque-juge-extremement-graves",
           "theme": "Médias – structure",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260720172220/https://www.20minutes.fr/arts-stars/people/4203619-20260226-cyril-hanouna-indigne-propos-bruno-gaccio-quentin-deranque-juge-extremement-graves",
+          "archived": "2026-07-20"
         },
         {
           "quote": "C'est une vanne, c'est sûr !",
@@ -2207,6 +2255,145 @@
       ],
       "category": "Médias & propriétaires",
       "subcategory": "Chaînes, radios & titres"
+    },
+    {
+      "id": "pnat",
+      "name": "Parquet national antiterroriste (Pnat)",
+      "type": "org",
+      "role": "Parquet spécialisé (créé en 2019), dirigé par le procureur national antiterroriste Olivier Christen",
+      "description": "Le 3 novembre 2026 sur RTL, après l'attentat commis le 23 octobre 2026 à Trappes et La Verrière (Yvelines), qui a fait un mort et sept blessés et que le Pnat rattache à l'« ultradroite radicale violente », le procureur national antiterroriste Olivier Christen a indiqué que 23 procédures liées à l'ultradroite radicale violente ont été ouvertes depuis la création du Pnat (une à deux par an au départ, six en 2025, six « pour l'instant » en 2026), sur un total de 681 procédures dont 480 en matière djihadiste ; il a précisé que la menace principale reste, selon lui, djihadiste (RTL ; BFMTV). Le suspect, mis en examen et placé en détention provisoire, est présumé innocent ; il n'est pas nommé ici.",
+      "statements": [
+        {
+          "quote": "Le nombre de procédures liées à l'ultra-droite radicale violente est en croissance depuis quelques années",
+          "date": "2026-11-03",
+          "medium": "Olivier Christen, procureur national antiterroriste, invité de Marc-Olivier Fogiel sur RTL ; il a précisé : six procédures ouvertes en 2025, « six pour l'instant en 2026 », 23 au total, sur « 681 procédures dont 480 en djihadisme » (« quatre » en sept ans pour l'ultra-gauche radicale violente) ; selon lui, la menace principale reste djihadiste",
+          "url": "https://www.rtl.fr/actu/justice-faits-divers/23-procedures-sur-rtl-le-procureur-national-antiterroriste-affirme-que-les-menaces-de-l-ultra-droite-radicale-violente-sont-en-croissance-7900692013",
+          "theme": "France – montée des violences",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261104194954/https://www.rtl.fr/actu/justice-faits-divers/23-procedures-sur-rtl-le-procureur-national-antiterroriste-affirme-que-les-menaces-de-l-ultra-droite-radicale-violente-sont-en-croissance-7900692013",
+          "archived": "2026-11-04"
+        },
+        {
+          "quote": "c'est pour faire clairement la part des choses entre ce qui sont des partisans d'une idéologie politique, de quelque segment qu'elle soit et des personnes qui se radicalisent dans une idéologie et, au-delà même de la radicalité, vont considérer que la seule façon de porter leur idéologie est de passer à la violence contre les personnes",
+          "date": "2026-11-03",
+          "medium": "Olivier Christen, procureur national antiterroriste, sur RTL, à propos de la terminologie « ultra-droite radicale violente » employée par son parquet",
+          "url": "https://www.rtl.fr/actu/justice-faits-divers/23-procedures-sur-rtl-le-procureur-national-antiterroriste-affirme-que-les-menaces-de-l-ultra-droite-radicale-violente-sont-en-croissance-7900692013",
+          "theme": "France – montée des violences",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261104194954/https://www.rtl.fr/actu/justice-faits-divers/23-procedures-sur-rtl-le-procureur-national-antiterroriste-affirme-que-les-menaces-de-l-ultra-droite-radicale-violente-sont-en-croissance-7900692013",
+          "archived": "2026-11-04"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Institutions publiques"
+    },
+    {
+      "id": "generation-identitaire",
+      "name": "Génération identitaire",
+      "type": "org",
+      "role": "Association d'extrême droite (2012-2021), dissoute",
+      "description": "Créée en 2012, siège historique à Lyon (franceinfo). Dissoute par décret en Conseil des ministres le 3 mars 2021 ; le décret, présenté par le ministre de l'Intérieur Gérald Darmanin, lui reproche un discours incitant à la discrimination, à la haine ou à la violence et la qualifie de possible « milice privée » (franceinfo). L'association a annoncé un recours devant le Conseil d'État (Le Monde, 03/03/2021).",
+      "statements": [
+        {
+          "quote": "Cette association et certains de ses militants doivent être regardés comme tenant un discours de haine incitant à la discrimination ou à la violence envers des individus en raison de leur origine, de leur race et de leur religion",
+          "date": "2021-03-03",
+          "medium": "Décret de dissolution du 3 mars 2021, cité par franceinfo",
+          "url": "https://www.franceinfo.fr/politique/jean-castex/gouvernement-de-jean-castex/le-groupe-d-extreme-droite-generation-identitaire-dissous-en-conseil-des-ministres-annonce-gerald-darmanin_4318225.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Groupes dissous (extrême droite / ultradroite)"
+    },
+    {
+      "id": "zouaves-paris",
+      "name": "Les Zouaves Paris",
+      "type": "org",
+      "role": "Groupement de fait (apparu en 2017), dissous",
+      "description": "Groupement de fait dissous en Conseil des ministres le 5 janvier 2022 (décret du 5 janvier 2022). franceinfo indique que le décret lui reproche « de nombreux et récurrents agissements violents » et de « propager un discours ouvertement raciste », et que le groupe était soupçonné d'être impliqué dans les violences ayant visé des militants de SOS Racisme lors de la réunion électorale d'Éric Zemmour à Villepinte (5 décembre 2021).",
+      "statements": [
+        {
+          "quote": "nombreux et récurrents agissements violents",
+          "date": "2022-01-05",
+          "medium": "Décret de dissolution du 5 janvier 2022 (Légifrance), cité par franceinfo",
+          "url": "https://www.franceinfo.fr/politique/eric-zemmour/le-gouvernement-dissout-le-groupuscule-d-ultradroite-les-zouaves-paris-notamment-soupconne-d-etre-implique-dans-les-violences-lors-du-meeting-de-zemmour-a-villepinte_4905269.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Groupes dissous (extrême droite / ultradroite)"
+    },
+    {
+      "id": "civitas",
+      "name": "Civitas",
+      "type": "org",
+      "role": "Association (constituée en parti politique), dissoute",
+      "description": "Dissoute par décret du 4 octobre 2023. Le Conseil d'État a rejeté le 30 décembre 2024 le recours de l'association (décision n° 489498), retenant notamment des faits d'« exaltation de la collaboration » et des propos à connotation antisémite de responsables ; il relève qu'elle revêt le caractère d'un parti politique. Président : Alain Escada (selon la décision).",
+      "statements": [
+        {
+          "quote": "ces éléments, compte tenu de leur caractère précis et concordant, caractérisent l'existence de faits d'exaltation de la collaboration",
+          "date": "2024-12-30",
+          "medium": "Conseil d'État, décision n° 489498 (rejet du recours contre le décret du 4 octobre 2023)",
+          "url": "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2024-12-30/489498",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261105063042/https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2024-12-30/489498",
+          "archived": "2026-11-05"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Groupes dissous (extrême droite / ultradroite)"
+    },
+    {
+      "id": "les-remparts",
+      "name": "Les Remparts (Lyon)",
+      "type": "org",
+      "role": "Groupement de fait (créé le 7 septembre 2021), dissous",
+      "description": "Groupement de fait lyonnais dissous par décret du 26 juin 2024, avec les associations La Traboule et Top Sport Rhône (franceinfo). Le Conseil d'État a rejeté le recours le 31 juillet 2025 (décision n° 497252) ; le décret se fonde notamment sur un discours « provoquant à la haine, la discrimination et la violence » selon la décision.",
+      "statements": [
+        {
+          "quote": "Le groupement de fait \" Les Remparts \", créé le 7 septembre 2021, se présente comme un \" nouveau complexe communautaire, culturel et sportif \".",
+          "date": "2025-07-31",
+          "medium": "Conseil d'État, décision n° 497252",
+          "url": "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2025-07-31/497252",
+          "theme": "Nuance / contexte",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261105063100/https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2025-07-31/497252",
+          "archived": "2026-11-05"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Groupes dissous (extrême droite / ultradroite)"
+    },
+    {
+      "id": "gud",
+      "name": "GUD (Groupe union défense)",
+      "type": "org",
+      "role": "Organisation étudiante d'extrême droite, dissoute",
+      "description": "Dissous en Conseil des ministres le 26 juin 2024, en même temps que Les Remparts, La Traboule et Top Sport Rhône (franceinfo). Après l'annonce, le GUD Paris a dénoncé une « folle politique de répression » (franceinfo).",
+      "statements": [],
+      "sections": [
+        "france"
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Groupes dissous (extrême droite / ultradroite)"
     }
   ],
   "edges": [
@@ -3058,7 +3245,9 @@
       "relation": "mise en demeure pour l'émission « On marche sur la tête » diffusée du 17 au 25/06/2024 (décision n° 2024-582 du 27/06/2024)",
       "url": "https://www.arcom.fr/sites/default/files/2024-06/Arcom%20-%20MED%20Europe%201.pdf",
       "date": "2024-06-27",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261104193832/https://www.arcom.fr/sites/default/files/2024-06/Arcom%20-%20MED%20Europe%201.pdf",
+      "archived": "2026-11-04"
     },
     {
       "source": "arcom",
@@ -3066,7 +3255,9 @@
       "relation": "amende de 3,5 M€ pour les propos de Cyril Hanouna envers le député Louis Boyard (TPMP du 10/11/2022)",
       "url": "https://www.franceinfo.fr/economie/medias/insultes-de-cyril-hanouna-a-un-depute-la-chaine-c8-ecope-d-une-amende-record-de-3-5-millions-d-euros_5649680.html",
       "date": "2023-02-09",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20260516161532/https://www.franceinfo.fr/economie/medias/insultes-de-cyril-hanouna-a-un-depute-la-chaine-c8-ecope-d-une-amende-record-de-3-5-millions-d-euros_5649680.html",
+      "archived": "2026-05-16"
     },
     {
       "source": "marion-marechal",
@@ -3095,6 +3286,108 @@
       "section": "france",
       "archive_url": "https://web.archive.org/web/20261104123458/https://www.ladepeche.fr/2026/02/16/mort-de-quentin-a-lyon-quel-est-ce-collectif-identitaire-nemesis-proche-de-lextreme-droite-13228324.php",
       "archived": "2026-11-04"
+    },
+    {
+      "source": "arcom",
+      "target": "cnews",
+      "relation": "intervention (rappel des exigences d'honnêteté et de rigueur de l'information) au sujet de « 100% Politique Week-end » du 03/04/2026 (délibéré le 14/10/2026, publiée le 03/11/2026 ; ni mise en demeure ni sanction)",
+      "url": "https://www.arcom.fr/se-documenter/espace-juridique/decisions/emission-100-politique-week-end-diffusee-le-3-avril-2026-intervention-aupres-de-cnews",
+      "date": "2026-10-14",
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261104195104/https://www.arcom.fr/se-documenter/espace-juridique/decisions/emission-100-politique-week-end-diffusee-le-3-avril-2026-intervention-aupres-de-cnews",
+      "archived": "2026-11-04"
+    },
+    {
+      "source": "gerald-darmanin",
+      "target": "generation-identitaire",
+      "relation": "a présenté le décret de dissolution (Conseil des ministres du 03/03/2021)",
+      "url": "https://www.franceinfo.fr/politique/jean-castex/gouvernement-de-jean-castex/le-groupe-d-extreme-droite-generation-identitaire-dissous-en-conseil-des-ministres-annonce-gerald-darmanin_4318225.html",
+      "date": "2021-03-03",
+      "section": "france"
+    },
+    {
+      "source": "marine-le-pen",
+      "target": "generation-identitaire",
+      "relation": "s'est opposée sur franceinfo à la dissolution envisagée (27/01/2021)",
+      "url": "https://www.franceinfo.fr/politique/marine-le-pen/video-generation-identitaire-ce-qui-scandalise-m-darmanin-doit-fait-l-objet-d-une-dissolution-ca-ce-n-est-pas-l-etat-de-droit-denonce-marine-le-pen_4273347.html",
+      "date": "2021-01-27",
+      "section": "france"
+    },
+    {
+      "source": "eric-zemmour",
+      "target": "generation-identitaire",
+      "relation": "a accueilli dans Reconquête Damien Rieu, présenté par franceinfo comme ancien cadre de Génération identitaire (« Bienvenue dans la Reconquête, cher Damien ! », 20/01/2022)",
+      "url": "https://www.franceinfo.fr/elections/presidentielle/l-ancien-cadre-de-generation-identitaire-et-assistant-parlementaire-rn-damien-rieu-rejoint-eric-zemmour_4924131.html",
+      "date": "2022-01-20",
+      "section": "france"
+    },
+    {
+      "source": "gerald-darmanin",
+      "target": "zouaves-paris",
+      "relation": "a annoncé la dissolution en Conseil des ministres (05/01/2022)",
+      "url": "https://www.franceinfo.fr/politique/eric-zemmour/le-gouvernement-dissout-le-groupuscule-d-ultradroite-les-zouaves-paris-notamment-soupconne-d-etre-implique-dans-les-violences-lors-du-meeting-de-zemmour-a-villepinte_4905269.html",
+      "date": "2022-01-05",
+      "section": "france"
+    },
+    {
+      "source": "zouaves-paris",
+      "target": "eric-zemmour",
+      "relation": "groupe soupçonné (franceinfo) d'implication dans les violences contre des militants de SOS Racisme lors de sa réunion électorale de Villepinte (05/12/2021)",
+      "url": "https://www.franceinfo.fr/politique/eric-zemmour/le-gouvernement-dissout-le-groupuscule-d-ultradroite-les-zouaves-paris-notamment-soupconne-d-etre-implique-dans-les-violences-lors-du-meeting-de-zemmour-a-villepinte_4905269.html",
+      "date": "2021-12-05",
+      "section": "france"
+    },
+    {
+      "source": "conseil-etat",
+      "target": "civitas",
+      "relation": "rejet du recours contre le décret de dissolution du 04/10/2023 (décision n° 489498)",
+      "url": "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2024-12-30/489498",
+      "date": "2024-12-30",
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261105063042/https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2024-12-30/489498",
+      "archived": "2026-11-05"
+    },
+    {
+      "source": "conseil-etat",
+      "target": "les-remparts",
+      "relation": "rejet du recours contre le décret de dissolution du 26/06/2024 (décision n° 497252)",
+      "url": "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2025-07-31/497252",
+      "date": "2025-07-31",
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261105063100/https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2025-07-31/497252",
+      "archived": "2026-11-05"
+    },
+    {
+      "source": "gerald-darmanin",
+      "target": "les-remparts",
+      "relation": "ministre de l'Intérieur lors de la dissolution du 26/06/2024 (franceinfo)",
+      "url": "https://www.franceinfo.fr/politique/gouvernement-de-gabriel-attal/le-gouvernement-a-dissous-le-syndicat-etudiant-gud-et-trois-autres-groupes-d-extreme-droite_6627165.html",
+      "date": "2024-06-26",
+      "section": "france"
+    },
+    {
+      "source": "gerald-darmanin",
+      "target": "gud",
+      "relation": "a proposé la dissolution, prononcée le 26/06/2024",
+      "url": "https://www.franceinfo.fr/politique/gouvernement-de-gabriel-attal/le-gouvernement-a-dissous-le-syndicat-etudiant-gud-et-trois-autres-groupes-d-extreme-droite_6627165.html",
+      "date": "2024-06-26",
+      "section": "france"
+    },
+    {
+      "source": "gud",
+      "target": "rn",
+      "relation": "qualifié par Gérald Darmanin de « groupe d'ultradroite très ami » avec « les dirigeants du Rassemblement national » (BFMTV, 19/06/2024, rapporté par franceinfo)",
+      "url": "https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
+      "date": "2024-06-19",
+      "section": "france"
+    },
+    {
+      "source": "jordan-bardella",
+      "target": "gud",
+      "relation": "a déclaré qu'il dissoudrait le GUD, comme « toutes les organisations d'ultragauche et d'ultradroite », s'il arrivait à Matignon (19/06/2024)",
+      "url": "https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
+      "date": "2024-06-19",
+      "section": "france"
     }
   ]
 }

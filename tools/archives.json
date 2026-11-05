@@ -47,7 +47,7 @@
  "https://www.franceinfo.fr/politique/gerald-darmanin/laicite-immigration-violences-policieres-huit-sequences-a-retenir-de-l-emission-vous-avez-la-parole-avec-gerald-darmanin-et-marine-le-pen_4293225.html": {
   "archive_url": null,
   "status": "failed",
-  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+  "error": "save:HTTP Error 520: UNKNOWN"
  },
  "https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun": {
   "archive_url": "https://web.archive.org/web/20260211151040/https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
@@ -147,7 +147,7 @@
  "https://x.com/BHL/status/2110817601270231314": {
   "archive_url": null,
   "status": "failed",
-  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+  "error": "save:HTTP Error 523: UNKNOWN"
  },
  "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/on-vous-explique-la-polemique-autour-de-raphael-enthoven-deprogramme-du-festival-livres-dans-la-boucle-apres-ses-messages-sur-gaza_7480282.html": {
   "archive_url": "https://web.archive.org/web/20251219051636/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/on-vous-explique-la-polemique-autour-de-raphael-enthoven-deprogramme-du-festival-livres-dans-la-boucle-apres-ses-messages-sur-gaza_7480282.html",
@@ -187,7 +187,7 @@
  "https://x.com/GWGoldnadel/status/2108986735938220224": {
   "archive_url": null,
   "status": "failed",
-  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+  "error": "save:HTTP Error 523: UNKNOWN"
  },
  "https://www.20minutes.fr/monde/israel/4155846-20250528-gaza-population-augmente-enclave-palestinienne-pourquoi-idee-tient": {
   "archive_url": "https://web.archive.org/web/20250729023543/https://www.20minutes.fr/monde/israel/4155846-20250528-gaza-population-augmente-enclave-palestinienne-pourquoi-idee-tient",
@@ -222,7 +222,7 @@
  "https://www.franceinfo.fr/economie/medias/devant-les-deputes-vincent-bollore-president-du-groupe-canal-assume-sa-foi-et-recuse-tout-projet-ideologique_6422296.html": {
   "archive_url": null,
   "status": "failed",
-  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+  "error": "save:HTTP Error 520: UNKNOWN"
  },
  "https://www.youtube.com/watch?v=_vDNinTdQHU": {
   "archive_url": "https://web.archive.org/web/20260102023258/https://www.youtube.com/watch?v=_vDNinTdQHU",
@@ -352,7 +352,7 @@
  "https://www.franceinfo.fr/monde/europe/migrants/cnews-sanctionnee-d-une-amende-de-200-000-euros-pour-les-propos-d-eric-zemmour-sur-les-migrants-mineurs_4338041.html": {
   "archive_url": null,
   "status": "failed",
-  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+  "error": "save:HTTP Error 520: UNKNOWN"
  },
  "https://www.conseil-constitutionnel.fr/actualites/communique/decision-n-2023-863-dc-du-25-janvier-2024-communique-de-presse": {
   "archive_url": "https://web.archive.org/web/20251228193526/https://www.conseil-constitutionnel.fr/actualites/communique/decision-n-2023-863-dc-du-25-janvier-2024-communique-de-presse",
@@ -458,5 +458,70 @@
   "archive_url": null,
   "status": "failed",
   "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://www.leparisien.fr/culture-loisirs/tv/guerre-israel-hamas-pour-cyril-hanouna-lappel-au-boycott-de-tpmp-est-un-acte-antisemite-31-10-2023-VQBIXKEHLNCJ7J4YSOI7QMIX5U.php": {
+  "archive_url": "https://web.archive.org/web/20250915154540/https://www.leparisien.fr/culture-loisirs/tv/guerre-israel-hamas-pour-cyril-hanouna-lappel-au-boycott-de-tpmp-est-un-acte-antisemite-31-10-2023-VQBIXKEHLNCJ7J4YSOI7QMIX5U.php",
+  "archived": "2025-09-15",
+  "status": "existing"
+ },
+ "https://www.assemblee-nationale.fr/dyn/16/comptes-rendus/cetnt/l16cetnt2324020_compte-rendu.pdf": {
+  "archive_url": "https://web.archive.org/web/20260417224438/https://www.assemblee-nationale.fr/dyn/16/comptes-rendus/cetnt/l16cetnt2324020_compte-rendu.pdf",
+  "archived": "2026-04-17",
+  "status": "existing"
+ },
+ "https://www.20minutes.fr/arts-stars/medias/4096418-20240615-elections-legislatives-2024-cyril-hanouna-europe-1-pendant-campagne-legislatives": {
+  "archive_url": "https://web.archive.org/web/20261104122526/https://www.20minutes.fr/arts-stars/medias/4096418-20240615-elections-legislatives-2024-cyril-hanouna-europe-1-pendant-campagne-legislatives",
+  "archived": "2026-11-04",
+  "status": "existing"
+ },
+ "https://www.20minutes.fr/arts-stars/people/4203619-20260226-cyril-hanouna-indigne-propos-bruno-gaccio-quentin-deranque-juge-extremement-graves": {
+  "archive_url": "https://web.archive.org/web/20260720172220/https://www.20minutes.fr/arts-stars/people/4203619-20260226-cyril-hanouna-indigne-propos-bruno-gaccio-quentin-deranque-juge-extremement-graves",
+  "archived": "2026-07-20",
+  "status": "existing"
+ },
+ "https://www.lefigaro.fr/politique/vous-me-voyez-a-la-tete-de-l-arcom-cyril-hanouna-dement-l-information-selon-laquelle-jordan-bardella-lui-aurait-propose-ce-poste-20260504": {
+  "archive_url": "https://web.archive.org/web/20261104123431/https://www.lefigaro.fr/politique/vous-me-voyez-a-la-tete-de-l-arcom-cyril-hanouna-dement-l-information-selon-laquelle-jordan-bardella-lui-aurait-propose-ce-poste-20260504",
+  "archived": "2026-11-04",
+  "status": "existing"
+ },
+ "https://www.franceinfo.fr/culture/tv/cyril-hanouna/l-animateur-cyril-hanouna-annonce-rejoindre-le-groupe-m6-en-septembre_7100610.html": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 520: UNKNOWN"
+ },
+ "https://www.franceinfo.fr/elections/legislatives/legislatives-2024-l-arcom-met-en-demeure-europe-1-pour-manque-de-mesure-et-d-honnetete-dans-l-emission-de-cyril-hanouna_6629991.html": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 520: UNKNOWN"
+ },
+ "https://www.arcom.fr/sites/default/files/2024-06/Arcom%20-%20MED%20Europe%201.pdf": {
+  "archive_url": "https://web.archive.org/web/20261104193832/https://www.arcom.fr/sites/default/files/2024-06/Arcom%20-%20MED%20Europe%201.pdf",
+  "archived": "2026-11-04",
+  "status": "saved"
+ },
+ "https://www.franceinfo.fr/economie/medias/insultes-de-cyril-hanouna-a-un-depute-la-chaine-c8-ecope-d-une-amende-record-de-3-5-millions-d-euros_5649680.html": {
+  "archive_url": "https://web.archive.org/web/20260516161532/https://www.franceinfo.fr/economie/medias/insultes-de-cyril-hanouna-a-un-depute-la-chaine-c8-ecope-d-une-amende-record-de-3-5-millions-d-euros_5649680.html",
+  "archived": "2026-05-16",
+  "status": "existing"
+ },
+ "https://www.franceinfo.fr/politique/front-national/video-marion-marechal-le-pen-les-petits-secrets-de-son-ecole-de-sciences-politiques_2766371.html": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 520: UNKNOWN"
+ },
+ "https://www.ladepeche.fr/2026/02/16/mort-de-quentin-a-lyon-quel-est-ce-collectif-identitaire-nemesis-proche-de-lextreme-droite-13228324.php": {
+  "archive_url": "https://web.archive.org/web/20261104123458/https://www.ladepeche.fr/2026/02/16/mort-de-quentin-a-lyon-quel-est-ce-collectif-identitaire-nemesis-proche-de-lextreme-droite-13228324.php",
+  "archived": "2026-11-04",
+  "status": "existing"
+ },
+ "https://www.rtl.fr/actu/justice-faits-divers/23-procedures-sur-rtl-le-procureur-national-antiterroriste-affirme-que-les-menaces-de-l-ultra-droite-radicale-violente-sont-en-croissance-7900692013": {
+  "archive_url": "https://web.archive.org/web/20261104194954/https://www.rtl.fr/actu/justice-faits-divers/23-procedures-sur-rtl-le-procureur-national-antiterroriste-affirme-que-les-menaces-de-l-ultra-droite-radicale-violente-sont-en-croissance-7900692013",
+  "archived": "2026-11-04",
+  "status": "saved"
+ },
+ "https://www.arcom.fr/se-documenter/espace-juridique/decisions/emission-100-politique-week-end-diffusee-le-3-avril-2026-intervention-aupres-de-cnews": {
+  "archive_url": "https://web.archive.org/web/20261104195104/https://www.arcom.fr/se-documenter/espace-juridique/decisions/emission-100-politique-week-end-diffusee-le-3-avril-2026-intervention-aupres-de-cnews",
+  "archived": "2026-11-04",
+  "status": "saved"
  }
 }
