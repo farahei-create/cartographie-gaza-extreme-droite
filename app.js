@@ -720,10 +720,10 @@
     var nsrc = Object.keys(SOURCES).length;
     var upd = DATA.meta && DATA.meta.generated;
     var stats = [
-      [persons, "personnalités"], [DATA.nodes.length - persons, "organisations et événements"], [ALL_ST.length, "déclarations datées"],
-      [nsrc, "sources"], [Object.keys(arch).length, "sources archivées"], [vids, "vidéos officielles"]
+      [persons, "personnalités", "#/sections"], [DATA.nodes.length - persons, "organisations et événements", "#/sections"], [ALL_ST.length, "déclarations datées", "#/chronologie"],
+      [nsrc, "sources", "#/methodologie"], [Object.keys(arch).length, "sources archivées", "#/methodologie"], [vids, "vidéos officielles", "#/chronologie"]
     ];
-    $("home-stats").innerHTML = stats.map(function (s) { return '<div class="stat"><dt>' + esc(s[1]) + "</dt><dd>" + s[0] + "</dd></div>"; }).join("") +
+    $("home-stats").innerHTML = stats.map(function (s) { return '<div class="stat stat-tap"><dt>' + esc(s[1]) + '</dt><dd><a class="stat-a" href="' + s[2] + '" aria-label="' + esc(s[0] + " " + s[1]) + '">' + s[0] + "</a></dd></div>"; }).join("") +
       '<div class="stat stat-date"><dt>dernière mise à jour</dt><dd><time datetime="' + esc(upd || "") + '">' + (upd ? fmtDate(upd) : "—") + "</time></dd></div>";
     function cnt(sec) {
       var ns = DATA.nodes.filter(function (n) { return (n.sections || []).indexOf(sec) >= 0; }).length;
@@ -745,7 +745,71 @@
       return '<li><a class="latest-it" href="' + ficheHref(x.n) + '#d' + x.i + '">' + avatar(x.n, "av-sm") + '<span class="latest-txt"><span class="latest-who">' + esc(x.n.name) +
         '</span><span class="latest-q">' + quoteHtml(x.s.quote) + '</span><span class="latest-m"><time datetime="' + esc(x.s.date) + '">' + fmtDate(x.s.date) + "</time> · " + esc(x.s.medium) + "</span></span></a></li>";
     }).join("");
+    renderQotd(); renderResume();
     bindSearch($("home-search"), $("home-results"));
+  }
+  /* v13 : citation du jour (déterministe par date à Paris), reprise de la dernière fiche */
+  function parisDay() {
+    try { return new Intl.DateTimeFormat("fr-CA", { timeZone: "Europe/Paris", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()); }
+    catch (e) { return new Date().toISOString().slice(0, 10); }
+  }
+  function qotdPick(day) {
+    var pool = ALL_ST.filter(function (x) { return x.n.type === "person" && x.s.date && x.s.quote && x.s.quote.length <= 260; })
+      .sort(function (a, b) { return (a.n.id + a.i).localeCompare(b.n.id + b.i); });
+    if (!pool.length) return null;
+    var h = 0; for (var k = 0; k < day.length; k++) h = (h * 31 + day.charCodeAt(k)) >>> 0;
+    return pool[h % pool.length];
+  }
+  window.__qotd = function (d) { var x = qotdPick(d || parisDay()); return x ? { id: x.n.id, i: x.i } : null; };
+  function renderQotd() {
+    var el = $("home-qotd"); if (!el) return;
+    var day = parisDay(), x = qotdPick(day); if (!x) { el.hidden = true; return; }
+    el.hidden = false;
+    el.innerHTML = '<p class="qotd-k">Citation du jour · <time datetime="' + esc(day) + '">' + fmtDate(day) + "</time></p>" +
+      '<blockquote class="qotd-q">' + quoteHtml(x.s.quote) + "</blockquote>" +
+      '<p class="qotd-m"><a class="qotd-who" href="' + ficheHref(x.n) + "#d" + x.i + '">' + avatar(x.n, "av-xs") + "<span>" + esc(x.n.name) + "</span></a> · " +
+      '<time datetime="' + esc(x.s.date) + '">' + fmtDate(x.s.date) + "</time> · " + esc(x.s.medium) + "</p>" +
+      '<div class="meta actions">' + srcLink(x.s.url, "Lire la source") + actionsHtml(x.n, x.i) + "</div>" +
+      '<p class="qotd-note">Une nouvelle citation chaque jour.</p>';
+  }
+  function renderResume() {
+    var el = $("home-resume"); if (!el) return;
+    var id = null; try { id = localStorage.getItem("onrecord:last"); } catch (e) {}
+    var n = id && byId[id];
+    if (!n) { el.hidden = true; el.innerHTML = ""; return; }
+    el.hidden = false;
+    el.innerHTML = '<a class="chip resume-chip" href="' + ficheHref(n) + '">' + avatar(n, "av-xs") + "<span>Reprendre : " + esc(n.name) + "</span></a>";
+  }
+  function exploreHtml(n) {
+    var seen = {}, out = []; seen[n.id] = 1;
+    (edgesOf[n.id] || []).forEach(function (e) {
+      var o = e.source === n.id ? e.target : e.source;
+      if (!seen[o] && byId[o] && byId[o].type === "person") { seen[o] = 1; out.push(byId[o]); }
+    });
+    (edgesOf[n.id] || []).forEach(function (e) {
+      var o = e.source === n.id ? e.target : e.source;
+      if (!seen[o] && byId[o]) { seen[o] = 1; out.push(byId[o]); }
+    });
+    if (out.length < 3) {
+      var others = DATA.nodes.filter(function (x) { return x.type === "person" && !seen[x.id]; });
+      var h = 0; for (var k = 0; k < n.id.length; k++) h = (h * 31 + n.id.charCodeAt(k)) >>> 0;
+      for (var j = 0; j < others.length && out.length < 3; j++) out.push(others[(h + j * 7) % others.length]);
+    }
+    out = out.slice(0, 3);
+    return '<section class="explore" id="explore"><h2 class="h-sec">Continuer à explorer</h2><ul class="explore-list">' + out.map(function (o) {
+      return '<li><a class="explore-it" href="' + ficheHref(o) + '">' + avatar(o, "av-sm") + '<span class="explore-txt"><span class="explore-n">' + esc(o.name) + '</span><span class="explore-r">' + esc(o.role) + '</span></span><span class="chev-r" aria-hidden="true">›</span></a></li>';
+    }).join("") + "</ul></section>";
+  }
+  function donateInvite() {
+    var url = String(CFG.DONATION_URL || "").trim();
+    if (!/^https:\/\//i.test(url) || !curFiche || window.__route !== "fiche") return;
+    var el = $("donate-invite");
+    if (!el) {
+      el = document.createElement("p"); el.id = "donate-invite"; el.className = "donate-invite";
+      el.innerHTML = 'Onrecord vit des dons — <a href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">Soutenir</a>';
+      var ex = $("explore"); if (ex) ex.parentNode.insertBefore(el, ex); else $("fiche-body").appendChild(el);
+    }
+    el.hidden = false;
   }
   function searchAll(q) {
     q = norm(q).trim(); if (q.length < 2) return [];
@@ -851,7 +915,9 @@
       (st.length || n.type === "person" ? '<h2 class="h-sec">Déclarations publiques <span class="h-n">' + st.length + "</span></h2>" +
         (st.length ? '<ol class="tl">' + st.map(function (x) { return tlItem(x.s, n, x.i, false); }).join("") + "</ol>" : '<p class="empty">Aucune déclaration répertoriée.</p>') : "") +
       '<h2 class="h-sec">Relations <span class="h-n">' + es.length + "</span></h2>" +
-      (es.length ? '<ul class="rel-list">' + es.map(function (e) { return relItem(e, n); }).join("") + "</ul>" : '<p class="empty">Aucune relation répertoriée.</p>');
+      (es.length ? '<ul class="rel-list">' + es.map(function (e) { return relItem(e, n); }).join("") + "</ul>" : '<p class="empty">Aucune relation répertoriée.</p>') +
+      exploreHtml(n);
+    try { localStorage.setItem("onrecord:last", n.id); } catch (e) {}
     document.title = n.name + " — Onrecord";
     if (anchor) { var el = document.getElementById(anchor); if (el) setTimeout(function () { el.scrollIntoView({ block: "center", behavior: MQ_RM.matches ? "auto" : "smooth" }); el.classList.add("flash"); }, 60); }
   }
@@ -877,7 +943,7 @@
       var url = location.href.split("#")[0] + ficheHref(curFiche);
       var data = { title: curFiche.name + " — Onrecord", text: curFiche.name + " : déclarations publiques et liens, avec leurs sources.", url: url };
       if (navigator.share) { navigator.share(data).catch(function () {}); return; }
-      copyText(url).then(function () { toast("Lien copié : " + url); }, function () { toast(url); });
+      copyText(url).then(function () { toast("Lien copié : " + url); donateInvite(); }, function () { toast(url); });
     });
   }
   function copyText(t) {
@@ -997,17 +1063,17 @@
     var file = null;
     try { file = new File([o.blob], fname, { type: "image/png" }); } catch (e) { file = null; }
     if (file && navigator.canShare && navigator.share && navigator.canShare({ files: [file] })) {
-      navigator.share({ files: [file], title: title, text: title + " — " + link }).catch(function () {});
+      navigator.share({ files: [file], title: title, text: title + " — " + link }).then(donateInvite).catch(function () {});
       return "share";
     }
     var a = document.createElement("a"), url = URL.createObjectURL(o.blob);
     a.href = url; a.download = fname; document.body.appendChild(a); a.click(); a.remove();
     setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
-    toast("Image téléchargée : " + fname);
+    toast("Image téléchargée : " + fname); donateInvite();
     return "download";
   }
   function slug(s) { return norm(s).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
-  function copyLink(link) { copyText(link).then(function () { toast("Lien copié"); }, function () { toast(link); }); }
+  function copyLink(link) { copyText(link).then(function () { toast("Lien copié"); donateInvite(); }, function () { toast(link); }); }
   function actionsHtml(n, i) {
     return '<button type="button" class="act" data-act="share" data-n="' + esc(n.id) + '" data-i="' + i + '">Partager</button>' +
       '<button type="button" class="act" data-act="copy" data-n="' + esc(n.id) + '" data-i="' + i + '">Copier le lien</button>';
@@ -1160,6 +1226,7 @@
     if (v !== "fiche") document.title = v === "accueil" ? TITLES.accueil : TITLES[v] + " — Onrecord";
     if (v === "sections") { curSec = ["tout", "gaza", "france", "commun"].indexOf(parts[1]) >= 0 ? parts[1] : "tout"; renderSections(); }
     if (v === "methode") renderMethode();
+    if (v === "accueil") { renderResume(); renderQotd(); }
     if (v === "fiche") renderFiche(decodeURIComponent(parts[1] || ""), anchor);
     var key = v + "/" + (v === "fiche" ? parts[1] : "");
     if (key !== lastView && !(v === "reseau" && lastView && lastView.indexOf("reseau") === 0)) window.scrollTo(0, 0);
