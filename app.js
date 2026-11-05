@@ -760,11 +760,12 @@
     var h = 0; for (var k = 0; k < day.length; k++) h = (h * 31 + day.charCodeAt(k)) >>> 0;
     return pool[h % pool.length];
   }
+  window.__renderCard = function (id, i) { var n = byId[id]; return n ? renderCard(n, n.statements[i || 0]) : null; };
   window.__qotd = function (d) { var x = qotdPick(d || parisDay()); return x ? { id: x.n.id, i: x.i } : null; };
   function renderQotd() {
     var el = $("home-qotd"); if (!el) return;
     var day = parisDay(), x = qotdPick(day); if (!x) { el.hidden = true; return; }
-    el.hidden = false;
+    el.hidden = false; preloadImg(x.n.image);
     el.innerHTML = '<p class="qotd-k">Citation du jour · <time datetime="' + esc(day) + '">' + fmtDate(day) + "</time></p>" +
       '<blockquote class="qotd-q">' + quoteHtml(x.s.quote) + "</blockquote>" +
       '<p class="qotd-m"><a class="qotd-who" href="' + ficheHref(x.n) + "#d" + x.i + '">' + avatar(x.n, "av-xs") + "<span>" + esc(x.n.name) + "</span></a> · " +
@@ -918,6 +919,7 @@
       (es.length ? '<ul class="rel-list">' + es.map(function (e) { return relItem(e, n); }).join("") + "</ul>" : '<p class="empty">Aucune relation répertoriée.</p>') +
       exploreHtml(n);
     try { localStorage.setItem("onrecord:last", n.id); } catch (e) {}
+    preloadImg(n.image);
     document.title = n.name + " — Onrecord";
     if (anchor) { var el = document.getElementById(anchor); if (el) setTimeout(function () { el.scrollIntoView({ block: "center", behavior: MQ_RM.matches ? "auto" : "smooth" }); el.classList.add("flash"); }, 60); }
   }
@@ -1002,16 +1004,63 @@
     while (lo <= hi) { var mid = (lo + hi) >> 1, t = wrapLines(ctx, words.slice(0, mid).join(" ").replace(/[\s,;:.]+$/, "") + " […]", maxW); if (t.length <= maxLines) { best = t; lo = mid + 1; } else hi = mid - 1; }
     return best;
   }
-  function cardBase(ctx, kicker) {
+  function cardBase(ctx, kicker, im) {
     var g = ctx.createLinearGradient(0, 0, CARD_W, CARD_H);
     g.addColorStop(0, "#3b0a57"); g.addColorStop(0.55, "#5a1a7a"); g.addColorStop(1, "#8e1d5c");
     ctx.fillStyle = g; ctx.fillRect(0, 0, CARD_W, CARD_H);
+    if (im) { try { drawPortraitBg(ctx, im); } catch (e) {} }
     ctx.textBaseline = "alphabetic"; ctx.textAlign = "left";
     ctx.fillStyle = "#ffffff"; ctx.font = "800 64px " + CARD_FONT; ctx.fillText("Onrecord", CARD_PAD, 150);
     ctx.fillStyle = "rgba(255,255,255,.72)"; ctx.font = "500 30px " + CARD_FONT; ctx.fillText(kicker || "Leurs mots, datés et sourcés.", CARD_PAD, 200);
     ctx.fillStyle = "rgba(255,255,255,.28)"; ctx.fillRect(CARD_PAD, 236, CARD_W - 2 * CARD_PAD, 2);
     ctx.fillStyle = "rgba(255,255,255,.28)"; ctx.fillRect(CARD_PAD, CARD_H - 140, CARD_W - 2 * CARD_PAD, 2);
     ctx.fillStyle = "rgba(255,255,255,.9)"; ctx.font = "600 32px " + CARD_FONT; ctx.fillText(SITE_HOST, CARD_PAD, CARD_H - 76);
+  }
+  /* v15 : portrait sur les cartes (préchargé, dessin synchrone pour rester lié au geste) */
+  window.__imgCache = window.__imgCache || {};
+  function preloadImg(src) {
+    if (!src || window.__imgCache[src]) return;
+    var im = new Image(); im.decoding = "async"; im.src = src; window.__imgCache[src] = im;
+    if (im.decode) im.decode().catch(function () {});
+  }
+  function readyImg(src) {
+    if (!src) return null;
+    var im = window.__imgCache[src];
+    if (im && im.complete && im.naturalWidth) return im;
+    var all = document.images;
+    for (var k = 0; k < all.length; k++) if (all[k].getAttribute("src") === src && all[k].complete && all[k].naturalWidth) return all[k];
+    preloadImg(src); return null;
+  }
+  function coverCrop(im, w, h) {
+    var iw = im.naturalWidth, ih = im.naturalHeight, sc = Math.max(w / iw, h / ih), sw = w / sc, sh = h / sc;
+    return [(iw - sw) / 2, Math.max(0, (ih - sh) * 0.25), sw, sh];
+  }
+  function drawPortraitBg(ctx, im) {
+    var x0 = Math.round(CARD_W * 0.3), w = CARD_W - x0, h = Math.round(CARD_H * 0.8), cr = coverCrop(im, w, h);
+    var o = document.createElement("canvas"); o.width = w; o.height = h;
+    var oc = o.getContext("2d");
+    try { oc.filter = "saturate(.55) contrast(1.05)"; } catch (e) {}
+    oc.drawImage(im, cr[0], cr[1], cr[2], cr[3], 0, 0, w, h);
+    try { oc.filter = "none"; } catch (e) {}
+    oc.fillStyle = "rgba(40,8,64,.32)"; oc.fillRect(0, 0, w, h);
+    /* fondu doux : masque alpha gauche→droite puis haut→bas */
+    oc.globalCompositeOperation = "destination-in";
+    var gl = oc.createLinearGradient(0, 0, w, 0);
+    gl.addColorStop(0, "rgba(0,0,0,0)"); gl.addColorStop(0.45, "rgba(0,0,0,.75)"); gl.addColorStop(1, "rgba(0,0,0,1)");
+    oc.fillStyle = gl; oc.fillRect(0, 0, w, h);
+    var gb = oc.createLinearGradient(0, 0, 0, h);
+    gb.addColorStop(0, "rgba(0,0,0,1)"); gb.addColorStop(0.55, "rgba(0,0,0,1)"); gb.addColorStop(1, "rgba(0,0,0,0)");
+    oc.fillStyle = gb; oc.fillRect(0, 0, w, h);
+    ctx.save(); ctx.globalAlpha = 0.62; ctx.drawImage(o, x0, 0); ctx.restore();
+  }
+  function drawPortraitRing(ctx, im, cx, cy, r) {
+    ctx.save();
+    ctx.shadowColor = "rgba(0,0,0,.45)"; ctx.shadowBlur = 30; ctx.shadowOffsetY = 10;
+    ctx.beginPath(); ctx.arc(cx, cy, r + 5, 0, Math.PI * 2); ctx.fillStyle = "#ffffff"; ctx.fill();
+    ctx.restore(); ctx.save();
+    ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.clip();
+    var cr = coverCrop(im, 2 * r, 2 * r); ctx.drawImage(im, cr[0], cr[1], cr[2], cr[3], cx - r, cy - r, 2 * r, 2 * r);
+    ctx.restore();
   }
   function drawLines(ctx, r, x, y) { ctx.font = "600 " + r.size + "px " + CARD_FONT; r.lines.forEach(function (l, k) { ctx.fillText(l, x, y + r.size + k * r.lh); }); return y + r.lines.length * r.lh; }
   function drawSource(ctx, s, x, y, maxW, lines) {
@@ -1025,22 +1074,28 @@
   function renderCard(n, s) {
     var c = document.createElement("canvas"); c.width = CARD_W; c.height = CARD_H;
     var ctx = c.getContext("2d"), W = CARD_W - 2 * CARD_PAD;
-    cardBase(ctx);
+    var im = readyImg(n.image);
+    cardBase(ctx, null, im);
     ctx.fillStyle = "#ffffff";
-    var r = fitQuote(ctx, s.quote, W, 650, 72, 34, "600");
+    var qh = im ? 560 : 650;
+    var r = fitQuote(ctx, s.quote, W, qh, 72, 34, "600");
     drawLines(ctx, r, CARD_PAD, 300);
-    var y = 300 + 650 + 40;
-    ctx.fillStyle = "#ffffff"; ctx.font = "700 44px " + CARD_FONT; ctx.fillText(clampText(ctx, n.name, W, 1)[0], CARD_PAD, y + 44); y += 64;
-    ctx.fillStyle = "rgba(255,255,255,.9)"; ctx.font = "600 32px " + CARD_FONT; ctx.fillText(dmy(s.date), CARD_PAD, y + 32); y += 44;
-    drawSource(ctx, s, CARD_PAD, y, W, 2);
-    c.__truncated = r.truncated; c.__fontSize = r.size;
+    var y = 300 + qh + 40, tx = CARD_PAD, tw = W;
+    if (im) { var R = 100; drawPortraitRing(ctx, im, CARD_PAD + R, y + R, R); tx = CARD_PAD + 2 * R + 40; tw = W - 2 * R - 40; }
+    ctx.fillStyle = "#ffffff"; ctx.font = "700 44px " + CARD_FONT; ctx.fillText(clampText(ctx, n.name, tw, 1)[0], tx, y + 44); y += 64;
+    ctx.fillStyle = "rgba(255,255,255,.9)"; ctx.font = "600 32px " + CARD_FONT; ctx.fillText(dmy(s.date), tx, y + 32); y += 44;
+    drawSource(ctx, s, tx, y, tw, 2);
+    c.__truncated = r.truncated; c.__fontSize = r.size; c.__portrait = !!im; window.__lastCardHadPortrait = !!im;
     return c;
   }
   function renderDuoCard(n, a, b) {
     var c = document.createElement("canvas"); c.width = CARD_W; c.height = CARD_H;
     var ctx = c.getContext("2d"), W = CARD_W - 2 * CARD_PAD, tr = false, y = 268;
-    cardBase(ctx, "Avant / maintenant · écart : " + gapText(a.date, b.date));
-    ctx.fillStyle = "#ffffff"; ctx.font = "700 44px " + CARD_FONT; ctx.fillText(clampText(ctx, n.name, W, 1)[0], CARD_PAD, y + 44); y += 76;
+    var im = readyImg(n.image);
+    cardBase(ctx, "Avant / maintenant · écart : " + gapText(a.date, b.date), im);
+    if (im) { drawPortraitRing(ctx, im, CARD_PAD + 36, y + 30, 36); }
+    var nx = im ? CARD_PAD + 92 : CARD_PAD;
+    ctx.fillStyle = "#ffffff"; ctx.font = "700 44px " + CARD_FONT; ctx.fillText(clampText(ctx, n.name, W - (nx - CARD_PAD), 1)[0], nx, y + 44); y += 76;
     [a, b].forEach(function (s, k) {
       ctx.fillStyle = "rgba(255,255,255,.9)"; ctx.font = "700 32px " + CARD_FONT; ctx.fillText((k ? "Maintenant · " : "Avant · ") + dmy(s.date), CARD_PAD, y + 32); y += 50;
       ctx.fillStyle = "#ffffff";
@@ -1049,7 +1104,7 @@
       y = drawSource(ctx, s, CARD_PAD, y, W, 1) + (k ? 0 : 24);
       if (!k) { ctx.fillStyle = "rgba(255,255,255,.2)"; ctx.fillRect(CARD_PAD, y, W, 2); y += 26; }
     });
-    c.__truncated = tr;
+    c.__truncated = tr; c.__portrait = !!im; window.__lastCardHadPortrait = !!im;
     return c;
   }
   function canvasBlob(c) {
@@ -1059,7 +1114,7 @@
     return { blob: new Blob([arr], { type: "image/png" }), dataUrl: u };
   }
   function shareCanvas(c, fname, title, link) {
-    var o = canvasBlob(c); window.__lastCard = { dataUrl: o.dataUrl, size: o.blob.size, w: c.width, h: c.height, truncated: !!c.__truncated, name: fname };
+    var o = canvasBlob(c); window.__lastCard = { dataUrl: o.dataUrl, size: o.blob.size, w: c.width, h: c.height, truncated: !!c.__truncated, portrait: !!c.__portrait, name: fname };
     var file = null;
     try { file = new File([o.blob], fname, { type: "image/png" }); } catch (e) { file = null; }
     if (file && navigator.canShare && navigator.share && navigator.canShare({ files: [file] })) {
