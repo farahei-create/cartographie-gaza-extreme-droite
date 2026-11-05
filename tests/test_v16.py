@@ -10,7 +10,7 @@ with sync_playwright() as p:
     pg=br.new_page(viewport={"width":390,"height":844});errs=[]
     pg.on("console",lambda m: m.type=="error" and errs.append(m.text)); pg.on("pageerror",lambda e: errs.append(str(e)))
     pg.goto(B+"#/accueil");pg.wait_for_function("window.__route=='accueil'")
-    chk("onrecord-v16" in open("site/sw.js").read(),"sw v16")
+    chk(int(re.search(r"onrecord-v(\d+)", open("site/sw.js").read()).group(1)) >= 16, "sw >= v16")
     ft=pg.inner_text("footer");chk("GitHub" not in ft and "issue" not in ft,"footer github");chk("Proposer une mise à jour" in ft,"footer link")
     pg.goto(B+"#/methodologie");pg.wait_for_timeout(300)
     t=pg.inner_text("#view-methodologie");chk("GitHub" not in t,"meth github");chk(pg.locator('#view-methodologie a[href="#/contribuer"]').count()==1,"meth link")

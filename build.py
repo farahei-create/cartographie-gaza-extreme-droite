@@ -294,7 +294,7 @@ O("conseil-constitutionnel","Conseil constitutionnel","Juridiction constitutionn
 O("c8","C8","Chaîne de télévision (Groupe Canal+)",
  "Chaîne dont la fréquence TNT n'a pas été renouvelée par l'Arcom en juillet 2024 ; selon franceinfo, elle avait cumulé plus de 7,5 millions d'euros de sanctions.")
 O("fayard","Fayard","Maison d'édition (Hachette Livre)",
- "Filiale de Hachette Livre, dont l'actionnaire est Vivendi (France Culture). A publié en novembre 2024 le livre de Jordan Bardella « Ce que je cherche ».")
+ "Filiale de Hachette Livre, dont l'actionnaire est Vivendi (France Culture). A publié en novembre 2024 le livre de Jordan Bardella « Ce que je cherche ». Le 4 novembre 2026, elle organise au Pavillon Wagram (Paris) la soirée de lancement de son nouveau livre (BFMTV/AFP). StreetPress identifie cet ouvrage sous le titre « Gouverner » et présente Fayard comme détenue par Vincent Bolloré ; BFMTV/AFP qualifie le groupe Bolloré de « maison-mère » de Fayard.")
 P("pericles","Projet « Périclès »","Projet de Pierre-Édouard Stérin (document de 2023)",
  "Plan présenté dans un document de 2023 révélé par L'Humanité le 18 juillet 2024 ; il prévoit environ 150 millions d'euros sur dix ans. Ses auteurs indiquent ne pas vouloir aider exclusivement le RN (franceinfo).",
  [("permettre la victoire idéologique, électorale et politique","2024-07-18","Document « Périclès » (2023) révélé par L'Humanité, cité par franceinfo",FI_PERICLES,F),
@@ -676,8 +676,34 @@ ARCH_EXTRA['https://www.bfmtv.com/politique/gouvernement/reconnaissance-d-un-eta
 ARCH_EXTRA['https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611']=('https://web.archive.org/web/20261105144144/https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611',"2026-11-05")
 ARCH_EXTRA['https://www.20minutes.fr/monde/israel/4166059-20250731-crime-lieu-gaza-crime-genocide-affirme-dominique-villepin']=('https://web.archive.org/web/20260520132306/https://www.20minutes.fr/monde/israel/4166059-20250731-crime-lieu-gaza-crime-genocide-affirme-dominique-villepin',"2026-05-20")
 
+# ---------- mise à jour du 05/11/2026 : « Gouverner », accès presse, pétition CNews ----------
+BFM_GOUV="https://www.bfmtv.com/politique/front-national/mediapart-s-est-vu-refuser-l-acces-a-la-soiree-de-lancement-du-livre-de-jordan-bardella_AD-202611050240.html"
+SP_GOUV="https://www.streetpress.com/1793883196-mediapart-politis-streetpress-rassemblement-national-bardella-tri-journalistes-antisemitisme-extreme-droite-fayard-bollore"
+HUFF_CNEWS_PET="https://www.huffingtonpost.fr/politique/article/le-lr-alexandre-portier-rapporteur-sur-la-petition-anti-cnews-voici-les-prochaines-etapes-qui-attendent-le-texte_352080.html"
+_b={n["id"]:n for n in N}
+_b["jordan-bardella"]["statements"].append(_st(
+ "l'extrême gauche (qui) manifeste contre... un livre […] nostalgie des régimes totalitaires chaque jour plus inquiétante",
+ "2026-11-04",
+ "Deux fragments d'un message sur X, cités par BFMTV/AFP (pas d'URL du message original consultée). BFMTV/AFP écrit qu'il accuse le premier et « développe selon lui » la seconde formule. Réaction, avant son arrivée, à un rassemblement d'une quinzaine de militants du collectif « Nous Vivrons » devant le Pavillon Wagram (Paris), le 4 novembre 2026, en marge de la soirée de lancement de son livre. Les slogans rapportés par BFMTV/AFP ne sont pas reproduits. Contexte indiqué par BFMTV/AFP : depuis la divulgation, fin septembre 2026, d'écrits de jeunesse antisémites attribués à Jordan Bardella, dans un climat de tension avec Mediapart, il nie catégoriquement et a déposé plainte pour diffamation. Ces écrits ne sont pas tenus pour établis ici.",
+ BFM_GOUV, F))
+_b["rn"]["statements"].append(_st(
+ "C'est une soirée privée, ils ont été signifiés qu'ils n'étaient pas accrédités.",
+ "2026-11-04",
+ "Victor Chabert, directeur du service de presse du RN, cité par BFMTV/AFP. Le 4 novembre 2026, peu avant 20h, au Pavillon Wagram (Paris), un journaliste de Mediapart disposant d'un billet nominatif s'est vu refuser l'accès à la soirée de lancement du livre de Jordan Bardella organisée par Fayard. Le RN a invoqué le caractère « privé » de l'événement, auquel de nombreux autres médias étaient accrédités. La quasi-totalité des journalistes inscrits ont alors quitté les lieux, à l'exception notamment des médias du groupe Bolloré, présenté par BFMTV/AFP comme « maison-mère » de Fayard. StreetPress écrit en outre que ses journalistes se sont vu refuser l'entrée, et qu'une demande d'accréditation de Politis est restée sans réponse.",
+ BFM_GOUV, F))
+_b["rn"]["statements"].append(_st(
+ "On fait ce qu'on veut.",
+ "2026-11-04",
+ "Victor Chabert, directeur du service de presse du RN, cité par StreetPress (qui le désigne aussi comme « responsable presse »), le 4 novembre 2026 au pavillon Wagram, devant des journalistes de Mediapart et de StreetPress, lors de la soirée de lancement de « Gouverner ».",
+ SP_GOUV, F))
+L("jordan-bardella","fayard","auteur de « Gouverner » (soirée de lancement le 04/11/2026 au pavillon Wagram). StreetPress présente Fayard, dont le service presse répond aux demandes d'accréditation, comme détenue par Vincent Bolloré, et écrit que des journalistes de Mediapart et de StreetPress se sont vu refuser l'entrée",SP_GOUV,"2026-11-04"); E[-1]["section"]="france"
+L("vincent-bollore","fayard","BFMTV/AFP présente le groupe Bolloré comme « maison-mère » de Fayard ; à la soirée du 04/11/2026 au Pavillon Wagram, les médias de ce groupe sont restés après le départ de la quasi-totalité des autres journalistes inscrits",BFM_GOUV,"2026-11-04"); E[-1]["section"]="france"
+L("rn","fayard","soirée de lancement du livre de Jordan Bardella organisée par Fayard le 04/11/2026 au Pavillon Wagram ; le RN invoque le caractère « privé » pour refuser l'accès à un journaliste de Mediapart muni d'un billet nominatif, alors que d'autres médias sont accrédités (BFMTV/AFP)",BFM_GOUV,"2026-11-04"); E[-1]["section"]="france"
+L("vincent-bollore","cnews","le 04/11/2026, la commission des affaires culturelles et de l'éducation de l'Assemblée nationale désigne son président, le député LR Alexandre Portier, rapporteur de la pétition visant à « supprimer CNews » (plus de 800 000 signatures). Examen des suites envisagé possiblement le 10/11/2026 (LCP, cité par Le HuffPost). Le HuffPost présente CNews comme la « chaîne phare du groupe Bolloré ». Aucune décision de l'Assemblée à cette date",HUFF_CNEWS_PET,"2026-11-04"); E[-1]["section"]="france"
+
 # archives Wayback Machine (tools/archive.py -> tools/archives.json)
-_ap="/workspace/gaza-site/tools/archives.json"
+_root=_here if os.path.isdir(os.path.join(_here,"tools")) else "/workspace/gaza-site"
+_ap=os.path.join(_root,"tools/archives.json")
 ARCH=json.load(open(_ap)) if os.path.exists(_ap) else {}
 for _u,(_a,_d) in ARCH_EXTRA.items(): ARCH.setdefault(_u,{"archive_url":_a,"archived":_d,"status":"saved"})
 def _arch(o,key="url"):
@@ -698,5 +724,5 @@ data["meta"]["counts"]={"persons":sum(n["type"]=="person" for n in N),"orgs":sum
  "photos":sum(1 for n in N if n.get("image")),"logos":sum(1 for n in N if n.get("logo")),
  "videos":sum(1 for n in N for st in n["statements"] if st.get("video")),
  "france_nodes":sum("france" in n["sections"] for n in N)}
-json.dump(data,open("/workspace/gaza-site/data.json","w"),ensure_ascii=False,indent=2)
+json.dump(data,open(os.path.join(_root,"data.json"),"w"),ensure_ascii=False,indent=2)
 print(data["meta"]["counts"])
