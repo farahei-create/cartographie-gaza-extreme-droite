@@ -117,13 +117,57 @@
     registerSW();
   }
 
-  /* Bouton « Soutenir ce travail » : affiché seulement si config.js renseigne DONATION_URL */
+  /* Bouton « Soutenir » : affiché seulement si config.js renseigne DONATION_URL */
   function bindDonation() {
     var url = String(CFG.DONATION_URL || "").trim();
     var okUrl = /^https:\/\//i.test(url);
     document.querySelectorAll(".donate").forEach(function (a) {
       if (okUrl) { a.href = url; a.hidden = false; } else { a.hidden = true; a.removeAttribute("href"); }
+      armDonateTap(a);
     });
+  }
+  /* Rebond court au tap. N'empêche pas l'ouverture (target=_blank) : le lien part pendant l'anim. */
+  function armDonateTap(a) {
+    if (a.getAttribute("data-donate-tap")) return;
+    a.setAttribute("data-donate-tap", "1");
+    var last = 0;
+    function play() {
+      var now = Date.now();
+      if (now - last < 90) return;
+      last = now;
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      a.classList.remove("is-loved");
+      clearDonateSparks(a);
+      void a.offsetWidth;
+      a.classList.add("is-loved");
+      if (!reduce) burstDonate(a);
+      clearTimeout(a._donateT);
+      a._donateT = setTimeout(function () {
+        a.classList.remove("is-loved");
+        clearDonateSparks(a);
+      }, 420);
+    }
+    a.addEventListener("pointerdown", play);
+    a.addEventListener("click", play);
+  }
+  function clearDonateSparks(a) {
+    var old = a.querySelectorAll(".donate-spark");
+    for (var i = 0; i < old.length; i++) old[i].parentNode.removeChild(old[i]);
+  }
+  function burstDonate(a) {
+    var n = 6;
+    for (var i = 0; i < n; i++) {
+      var s = document.createElement("span");
+      s.className = "donate-spark";
+      s.setAttribute("aria-hidden", "true");
+      s.textContent = "\u2665";
+      var ang = (-168 + i * (150 / (n - 1))) * Math.PI / 180;
+      var dist = 14 + (i % 3) * 7;
+      s.style.setProperty("--dx", (Math.cos(ang) * dist).toFixed(1) + "px");
+      s.style.setProperty("--dy", (Math.sin(ang) * dist).toFixed(1) + "px");
+      s.style.animationDelay = ((i % 3) * 16) + "ms";
+      a.appendChild(s);
+    }
   }
   function fillMeta() {
     var m = DATA.meta || {};
