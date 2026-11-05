@@ -39,7 +39,7 @@ with sync_playwright() as p:
     check(pg.is_visible("#home-resume") and "Reprendre" in pg.inner_text("#home-resume"),"chip reprendre")
     pg.screenshot(path="/workspace/v13-home-mobile.png",full_page=True)
     pg.goto(BASE+"#/methode"); pg.wait_for_timeout(400); mt=pg.inner_text("#view-methode")
-    check("dons" in mt and "Leetchi" in mt,"méthode dons/leetchi"); check("Le contact sera bientôt disponible." in mt,"contact bientôt")
+    check("dons" in mt and "Leetchi" in mt,"méthode dons/leetchi"); check("Proposer une mise à jour" in mt,"contact -> contribuer")
     check(pg.is_visible(".donate-methode"),"cta méthode")
     for r in ["", "#/methode", "#/personne/cyril-hanouna"]:
         pg.goto(BASE+r); pg.wait_for_timeout(300); body=pg.inner_text("body").lower()

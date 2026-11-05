@@ -22,7 +22,7 @@ with sync_playwright() as p:
     pg.on("pageerror", lambda e: errs.append(str(e)))
     pg.goto(BASE + "#/methode"); pg.wait_for_function("window.__route==='methode'")
     check(pg.is_visible("#view-methode h2"), "methode visible")
-    check(pg.inner_text("#methode-contact").strip() == "Le contact sera bientôt disponible.", "fallback email")
+    check(pg.locator("#view-methode a[href=\"#/contribuer\"]").count() >= 1 and "GitHub" not in pg.content(), "fallback -> contribuer")
     check(pg.locator("#tabnav a[aria-current=page]").get_attribute("data-tab") == "methodologie", "tab méthode active")
     check("mailto" not in pg.inner_html("#view-methode"), "pas d'adresse inventée")
     pg.screenshot(path="v7-methode-mobile.png", full_page=True)

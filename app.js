@@ -110,7 +110,7 @@
     buildFilters();
     buildHome();
     buildSections();
-    buildTimeline();
+    buildTimeline(); initContrib();
     bindFiche();
     bindCards();
     bindRouter();
@@ -735,7 +735,8 @@
       ["#/sections/france", "Section", "France – normalisation de l'extrême droite", SEC_INTRO.france, cnt("france"), "c-fr"],
       ["#/chronologie", "Vue", "Chronologie", "Toutes les déclarations et tous les liens datés, filtrables par section, catégorie, thème et année.", plural(ALL_ST.length + DATA.edges.filter(function (e) { return e.date; }).length, "élément daté", "éléments datés"), "c-chrono"],
       ["#/reseau", "Vue", "Réseau des relations", "Graphe interactif des liens publics entre personnalités et organisations, chacun sourcé.", plural(DATA.edges.length, "relation", "relations"), "c-net"],
-      ["#/methodologie", "À propos", "Méthodologie", "Critères d'inclusion, neutralité, images, vidéos, archivage et réutilisation des données.", "Sources vérifiées et archivées", "c-meth"]
+      ["#/methodologie", "À propos", "Méthodologie", "Critères d'inclusion, neutralité, images, vidéos, archivage et réutilisation des données.", "Sources vérifiées et archivées", "c-meth"],
+      ["#/contribuer", "Participer", "Proposer une mise à jour", "Une erreur, une précision, une nouvelle déclaration sourcée ? Chaque proposition est vérifiée avant publication.", "Formulaire de contribution", "c-contrib"]
     ];
     $("home-entries").innerHTML = cards.map(function (c) {
       return '<a class="entry ' + c[5] + '" href="' + c[0] + '"><span class="entry-k">' + esc(c[1]) + '</span><span class="entry-t">' + esc(c[2]) + '</span><span class="entry-d">' + esc(c[3]) + '</span><span class="entry-c">' + esc(c[4]) + '</span><span class="entry-go" aria-hidden="true">›</span></a>';
@@ -1203,7 +1204,42 @@
   function renderMethode() {
     var mail = String(CFG.CORRECTION_EMAIL || "").trim(), el = $("methode-contact");
     if (/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail)) el.innerHTML = 'Écrire à <a href="mailto:' + esc(mail) + '?subject=' + encodeURIComponent("Onrecord : demande de correction ou de retrait") + '">' + esc(mail) + "</a> en indiquant la fiche concernée (lien), l'élément en cause et, si possible, une source.";
-    else el.textContent = "Le contact sera bientôt disponible.";
+    else el.textContent = "";
+  }
+  /* ---------- Proposer une mise à jour (#/contribuer) ---------- */
+  var EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+  function contribMessage() {
+    function v(id) { return String($(id).value || "").trim(); }
+    var f = { type: v("cf-type"), who: v("cf-who"), fiche: v("cf-fiche"), date: v("cf-date"), text: v("cf-text"), src: v("cf-src"), mail: v("cf-mail") };
+    var err = [];
+    if (!f.type) err.push("choisir un type de proposition");
+    if (!f.text) err.push("indiquer une citation ou une description");
+    if (!/^https?:\/\/\S+\.\S+/.test(f.src)) err.push("indiquer une URL de source valide (https://…)");
+    if (f.mail && !EMAIL_RE.test(f.mail)) err.push("vérifier l'adresse e-mail");
+    var body = ["Proposition de mise à jour — Onrecord", "",
+      "Type : " + f.type, "Personne ou organisation : " + (f.who || "—"), "Fiche Onrecord : " + (f.fiche || "—"),
+      "Date du propos : " + (f.date ? fmtDate(f.date) : "—"), "", "Citation ou description :", f.text, "",
+      "Source : " + f.src, "E-mail pour le suivi : " + (f.mail || "—")].join("\n");
+    return { err: err, body: body };
+  }
+  function initContrib() {
+    $("contrib-form").addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var r = contribMessage(), e = $("cf-err");
+      if (r.err.length) { e.textContent = "Merci de " + r.err.join(", ") + "."; e.hidden = false; $("cf-out").hidden = true; return; }
+      e.hidden = true;
+      var mail = String(CFG.CORRECTION_EMAIL || "").trim();
+      if (EMAIL_RE.test(mail)) {
+        var href = "mailto:" + mail + "?subject=" + encodeURIComponent("Onrecord : proposition de mise à jour") + "&body=" + encodeURIComponent(r.body);
+        window.__lastMailto = href; $("cf-out").hidden = true;
+        toast("Votre application mail s'ouvre…"); location.href = href;
+      } else {
+        $("cf-msg").value = r.body; $("cf-out").hidden = false; $("cf-out").scrollIntoView({ block: "nearest" });
+      }
+    });
+    $("cf-copy").addEventListener("click", function () {
+      copyText($("cf-msg").value).then(function () { toast("Message copié"); }, function () { $("cf-msg").select(); toast("Sélectionnez puis copiez le message"); });
+    });
   }
 
   /* ---------- Chronologie ---------- */
@@ -1246,8 +1282,8 @@
   }
 
   /* ---------- Routage par ancre (#/…) ---------- */
-  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "methodologie", "methode"];
-  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Sections", chronologie: "Chronologie", reseau: "Réseau des relations", methodologie: "Méthodologie", methode: "Méthode" };
+  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "methodologie", "methode", "contribuer"];
+  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Sections", chronologie: "Chronologie", reseau: "Réseau des relations", methodologie: "Méthodologie", methode: "Méthode", contribuer: "Proposer une mise à jour" };
   var lastView = null;
   function ensureGraph(focusId) {
     if (!network) buildGraph(); else { sizeGraph(); network.redraw(); }
@@ -1268,7 +1304,7 @@
     if (v === "personne" || v === "organisation") v = "fiche";
     if (VIEWS.indexOf(v) < 0) v = "accueil";
     VIEWS.forEach(function (k) { $("view-" + k).hidden = k !== v; });
-    var tab = v === "fiche" ? "sections" : v === "methode" ? "methodologie" : v;
+    var tab = v === "fiche" ? "sections" : (v === "methode" || v === "contribuer") ? "methodologie" : v;
     document.querySelectorAll("#tabnav a").forEach(function (a) {
       if (a.getAttribute("data-tab") === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });

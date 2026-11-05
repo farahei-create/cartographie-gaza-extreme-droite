@@ -982,3 +982,11 @@ button.act:active,a.act:active{transform:scale(.96)}
 .explore-list li,.explore-it{min-width:0;max-width:100%}
 .explore-n,.explore-r{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 #home-qotd.qotd{margin:0 0 20px}
+
+.entry.c-contrib{--ec:var(--pink)}
+.contrib form{display:grid;gap:14px;margin-top:12px}
+.contrib label{display:grid;gap:6px;font-weight:600;font-size:.95rem}
+.contrib input,.contrib select,.contrib textarea{font:inherit;font-weight:400;width:100%;box-sizing:border-box;padding:10px 12px;border-radius:12px;border:1px solid rgba(127,127,160,.4);background:var(--card,#fff);color:inherit}
+.contrib textarea{resize:vertical}
+.cf-err{color:#c2185b;font-weight:600;margin:0}
+#cf-out{margin-top:14px} .cf-note{font-size:.95rem;opacity:.85}

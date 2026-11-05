@@ -96,7 +96,7 @@ async def mobile(b, w, h, scheme, errs):
     ok(f"{T} 5 tabs with big targets", [t[0] for t in tabs]==["Accueil","Sections","Chronologie","Réseau","Méthode"] and all(t[1]>=44 and t[2]>=44 for t in tabs), tabs)
     ok(f"{T} home stats", await pg.locator("#home-stats .stat").count()==7)
     ok(f"{T} home stats values", (await pg.locator("#home-stats .stat").nth(2).locator("dd").inner_text()).strip()==str(NST))
-    ok(f"{T} home entry cards", await pg.locator("#home-entries .entry").count()==5)
+    ok(f"{T} home entry cards", await pg.locator("#home-entries .entry").count()==6)
     ok(f"{T} home latest 6", await pg.locator("#home-latest li").count()==6)
     dates=await pg.evaluate("[...document.querySelectorAll('#home-latest time')].map(t=>t.getAttribute('datetime'))")
     ok(f"{T} latest sorted desc", dates==sorted(dates, reverse=True), dates)

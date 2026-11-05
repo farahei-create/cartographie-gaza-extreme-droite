@@ -6,7 +6,7 @@ def check(c,m):
     global ok,fail
     if c: ok+=1
     else: fail+=1; print("FAIL:",m)
-check("onrecord-v15" in open("site/sw.js").read(),"sw v15")
+import re as _re; check(int(_re.search(r"onrecord-v(\d+)",open("site/sw.js").read()).group(1))>=15,"sw v15+")
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path="/usr/bin/google-chrome")
     pg=b.new_context(viewport={"width":390,"height":844},device_scale_factor=2,accept_downloads=True).new_page()

@@ -202,7 +202,8 @@
         <p id="methode-dons">Onrecord est gratuit et non commercial. Le projet vit uniquement de dons, y compris anonymes, collectés via Leetchi. Ils couvrent l'hébergement, l'archivage des sources et le temps de vérification. Les dons n'ont aucune influence sur le contenu.</p>
         <p class="methode-cta"><a class="donate donate-methode btn-pill ghost" hidden target="_blank" rel="noopener noreferrer">Soutenir Onrecord sur Leetchi</a></p>
         <h3>Demander une correction ou un retrait</h3>
-        <p id="methode-contact">Le contact sera bientôt disponible.</p>
+        <p>Une erreur, une précision, une nouvelle source ou une demande de retrait : utilisez le formulaire <a href="#/contribuer">Proposer une mise à jour</a>. Chaque proposition est vérifiée avant publication.</p>
+        <p id="methode-contact"></p>
         <p><a href="#/methodologie">Méthodologie détaillée</a></p>
       </article>
     </div>
@@ -261,8 +262,38 @@
       <p id="meta-counts"></p>
       <h3>Note méthodologique du jeu de données</h3>
       <blockquote id="meta-methodology"></blockquote>
-      <h3>Contact et droit de réponse</h3>
-      <p class="contact">Pour signaler une erreur ou demander un droit de réponse : ouvrir une issue sur le dépôt GitHub.</p>
+      <h3>Corrections et mises à jour</h3>
+      <p class="contact">Pour signaler une erreur, apporter une précision ou demander un retrait : <a href="#/contribuer">Proposer une mise à jour</a>.</p>
+    </article></div>
+  </section>
+  <section id="view-contribuer" class="view" hidden>
+    <div class="wrap page"><article class="prose card contrib">
+      <h2>Proposer une mise à jour</h2>
+      <p>Onrecord est une archive collaborative de faits sourcés. Toute proposition est vérifiée avant publication. Merci d'indiquer une source consultable.</p>
+      <form id="contrib-form" novalidate>
+        <label>Type de proposition *
+          <select id="cf-type" required>
+            <option value="">— Choisir —</option>
+            <option>Correction d'une citation existante</option>
+            <option>Nouvelle déclaration</option>
+            <option>Nouveau lien ou relation</option>
+            <option>Demande de retrait</option>
+            <option>Autre précision</option>
+          </select></label>
+        <label>Personne ou organisation concernée<input id="cf-who" type="text" autocomplete="off"></label>
+        <label>Lien de la fiche Onrecord (facultatif)<input id="cf-fiche" type="url" placeholder="https://onrecord-fr.vercel.app/#/personne/…"></label>
+        <label>Date du propos (facultatif)<input id="cf-date" type="date"></label>
+        <label>Citation ou description *<textarea id="cf-text" rows="5"></textarea></label>
+        <label>URL de la source *<input id="cf-src" type="url" required placeholder="https://…"></label>
+        <label>Votre e-mail (facultatif, pour un suivi)<input id="cf-mail" type="email" autocomplete="email"></label>
+        <p id="cf-err" class="cf-err" role="alert" hidden></p>
+        <p><button type="submit" class="btn-pill" id="cf-submit">Envoyer la proposition</button></p>
+      </form>
+      <div id="cf-out" hidden>
+        <p class="cf-note">L'adresse de contact sera bientôt disponible ; en attendant, copiez ce message.</p>
+        <textarea id="cf-msg" rows="12" readonly></textarea>
+        <p><button type="button" class="btn-pill ghost" id="cf-copy">Copier le message</button></p>
+      </div>
     </article></div>
   </section>
 </main>
@@ -270,7 +301,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <p>Données sourcées, citations reproduites telles que publiées. Aucune qualification juridique des personnes. Dernière mise à jour : <span id="footer-update">—</span>.</p>
-    <p>Pour signaler une erreur ou demander un droit de réponse : ouvrir une issue sur le dépôt GitHub. <a href="#/methode" id="footer-methode">Méthode et demandes de correction</a></p>
+    <p>Une erreur, une précision ou une nouvelle source ? <a href="#/contribuer" id="footer-contribuer">Proposer une mise à jour</a> · <a href="#/methode" id="footer-methode">Méthode</a></p>
     <p><a href="data.json" download="onrecord-donnees.json" class="dl-link">Télécharger les données (JSON)</a></p>
     <p class="donate-wrap"><a class="donate donate-foot" hidden target="_blank" rel="noopener noreferrer">Soutenir ce travail</a></p>
     <p class="img-note">Photos : Wikimedia Commons (licences libres, crédits dans chaque fiche). Logos reproduits à des fins d'identification. Copies archivées : Internet Archive (Wayback Machine).</p>
