@@ -597,6 +597,85 @@ for _i in ["generation-identitaire","zouaves-paris","civitas","les-remparts","gu
 
 ARCH_EXTRA['https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2024-12-30/489498']=('https://web.archive.org/web/20261105063042/https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2024-12-30/489498',"2026-11-05")
 ARCH_EXTRA['https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2025-07-31/497252']=('https://web.archive.org/web/20261105063100/https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2025-07-31/497252',"2026-11-05")
+# --- v14 : candidats à la présidentielle 2027 ---
+PR27="Candidats à la présidentielle 2027"
+FI_LFI7O="https://www.franceinfo.fr/monde/proche-orient/israel-palestine/attaque-du-hamas-contre-israel-la-position-de-lfi-cree-la-polemique-au-sein-de-la-nupes_6109152.html"
+FI_REAC_PAL="https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html"
+FI_MAC_PAL="https://www.franceinfo.fr/monde/proche-orient/guerre/la-paix-est-possible-emmanuel-macron-annonce-que-la-france-va-reconnaitre-l-etat-de-palestine-en-septembre_7396969.html"
+FIG_GLU="https://www.lefigaro.fr/politique/guerre-hamas-israel-raphael-glucksmann-refuse-le-terme-de-genocide-et-prefere-celui-de-carnage-20240312"
+FI_ROU="https://www.franceinfo.fr/monde/proche-orient/israel-palestine/guerre-entre-israel-et-le-hamas-nous-allons-vers-le-genocide-il-est-en-cours-accuse-fabien-roussel_6416110.html"
+FI_TROCA="https://www.franceinfo.fr/monde/palestine/gaza/guerre-a-gaza-le-ps-le-pcf-et-les-ecologistes-reunis-a-paris-pour-denoncer-le-genocide-commis-par-israel_7274295.html"
+BFM_PHI="https://www.bfmtv.com/politique/est-ce-le-bon-moment-les-doutes-d-edouard-phillipe-quant-a-la-reconnaissance-de-l-etat-de-palestine_AN-202507250488.html"
+BFM_ATT="https://www.bfmtv.com/politique/gouvernement/reconnaissance-d-un-etat-palestinien-gabriel-attal-assure-a-son-tour-que-ce-n-est-pas-un-tabou_AN-202405290686.html"
+PS_ATT="https://www.publicsenat.fr/actualites/parlementaire/gaza-la-reconnaissance-dun-etat-palestinien-nest-pas-un-tabou-mais-doit-etre-utile-au-processus-declare-gabriel-attal"
+FIG_BER="https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611"
+FI_VIL="https://www.franceinfo.fr/monde/proche-orient/israel-palestine/dominique-de-villepin-denonce-un-crime-de-genocide-a-gaza-et-appelle-a-la-mobilisation-internationale_7411846.html"
+M20_VIL="https://www.20minutes.fr/monde/israel/4166059-20250731-crime-lieu-gaza-crime-genocide-affirme-dominique-villepin"
+_REAC="Message sur X, cité par franceinfo (réactions à l'annonce de la reconnaissance de l'État de Palestine)"
+_node("jean-luc-melenchon","Jean-Luc Mélenchon","person","Fondateur de La France insoumise ; candidat déclaré à la présidentielle 2027 (entré en campagne le 03/05/2026, selon France 24)",
+ "Candidat à l'élection présidentielle en 2012, 2017 et 2022. Le 7 octobre 2023, sa réaction et le communiqué du groupe parlementaire LFI-NUPES ont fait l'objet de critiques d'autres responsables politiques, dont la Première ministre Élisabeth Borne (franceinfo).",
+ [_st("toute la violence déchaînée contre Israël et à Gaza ne prouv[ait] qu'une chose : la violence ne produit et ne reproduit qu'elle-même. Horrifiés, nos pensées et notre compassion vont à toutes les populations désemparées victimes de tout cela. Le cessez-le-feu doit s'imposer","2023-10-07","Message sur X, cité par franceinfo",FI_LFI7O,G,"gaza"),
+  _st("La victoire morale est là mais on connaît la technique des annonces différées de Macron. Depuis des mois ce type de comportement encourage la durée du crime à Gaza. Pourquoi en septembre et pas maintenant ?","2025-07-24",_REAC,FI_REAC_PAL,G,"gaza")],POL,PR27,("gaza",))
+_node("raphael-glucksmann","Raphaël Glucksmann","person","Député européen, coprésident de Place publique ; candidat à la présidentielle 2027 (vainqueur de la primaire PS / Place publique / GRS le 11/10/2026)",
+ "Désigné candidat commun du Parti socialiste, de Place publique et de la Gauche républicaine et socialiste avec 66,13 % des voix (Touteleurope).",
+ [_st("J'ai un emploi extrêmement précautionneux du terme génocide","2024-03-11","Quotidien (TMC), cité par Le Figaro",FIG_GLU,G,"gaza"),
+  _st("Les Palestiniens ont le droit de vivre, et de le faire dans leur État. Pareille reconnaissance est un acte fort et juste","2025-07-24",_REAC,FI_REAC_PAL,G,"gaza")],POL,PR27,("gaza",))
+_node("fabien-roussel","Fabien Roussel","person","Secrétaire national du Parti communiste français ; candidat déclaré à la présidentielle 2027 (06/09/2026)",
+ "Le 10 mars 2024, ses propos sur Europe 1 comparant la situation à Gaza à des sièges historiques ont suscité une réaction du président du Crif, Yonathan Arfi (franceinfo).",
+ [_st("On parlait d'un risque génocidaire. Ce que j'ai entendu, ce que je vois, c'est que nous allons vers le génocide. Il est en cours","2024-03-10","Europe 1, cité par franceinfo avec AFP",FI_ROU,G,"gaza"),
+  _st("Non au nettoyage ethnique à Gaza et au génocide du peuple palestinien","2025-05-26","Rassemblement au Trocadéro (Paris), cité par franceinfo avec AFP",FI_TROCA,G,"gaza")],POL,PR27,("gaza",))
+_node("marine-tondelier","Marine Tondelier","person","Secrétaire nationale des Écologistes ; candidate déclarée à la présidentielle 2027",
+ "A participé le 26 mai 2025, avec les dirigeants du PS et du PCF, à un rassemblement au Trocadéro (Paris) sur la situation à Gaza (franceinfo).",
+ [_st("Ce qui se joue à Gaza, c'est l'image que l'humanité se fait d'elle-même","2025-05-26","Rassemblement au Trocadéro (Paris), cité par franceinfo avec AFP",FI_TROCA,G,"gaza"),
+  _st("Espérons que cette annonce aide les Gazaouis victimes d'un génocide en cours dès à présent, dans l'attente de sa concrétisation à la rentrée.","2025-07-24",_REAC,FI_REAC_PAL,G,"gaza")],POL,PR27,("gaza",))
+_node("edouard-philippe","Édouard Philippe","person","Président d'Horizons, ancien Premier ministre (2017-2020) ; candidat déclaré à la présidentielle 2027",
+ "S'est exprimé par communiqué le 25 juillet 2025 sur l'annonce par Emmanuel Macron de la reconnaissance de l'État de Palestine (BFMTV).",
+ [_st("Il faudra reconnaître un État de Palestine et il ne faudra pas attendre qu'il n'y ait plus qu'un cimetière à reconnaître. Mais est-ce le bon moment? C'est pour le moins incertain","2025-07-25","Communiqué, cité par BFMTV",BFM_PHI,G,"gaza")],POL,PR27,("gaza",))
+_node("gabriel-attal","Gabriel Attal","person","Secrétaire général de Renaissance, ancien Premier ministre (2024) ; candidat déclaré à la présidentielle 2027 (22/05/2026)",
+ "Premier ministre lors des questions au gouvernement du 29 mai 2024 au Sénat, où il a été interrogé sur la situation à Gaza (BFMTV, Public Sénat).",
+ [_st("La reconnaissance d'un État palestinien n'est pas un tabou","2024-05-29","Questions au gouvernement, Sénat, cité par BFMTV et Public Sénat",BFM_ATT,G,"gaza"),
+  _st("Reconnaître unilatéralement, sans que ça ne produise aucun impact diplomatique ou sur le front de la guerre, ça ne serait pas participer à trouver une solution","2024-05-29","Questions au gouvernement, Sénat, cité par BFMTV",BFM_ATT,G,"gaza")],POL,PR27,("gaza",))
+_node("xavier-bertrand","Xavier Bertrand","person","Président (LR) de la région Hauts-de-France ; candidat déclaré à la présidentielle 2027 (27/08/2026)",
+ "Invité de TF1 le 11 juin 2024, il a demandé l'exclusion d'Éric Ciotti des Républicains après l'annonce par celui-ci d'un accord avec le Rassemblement national pour les législatives (Le Figaro).",
+ [_st("En passant cet accord avec le Rassemblement national, il a fait le choix de la collaboration avec l'extrême droite","2024-06-11","TF1, cité par Le Figaro",FIG_BER,F),
+  _st("Soit Éric Ciotti part tout de suite, soit il est exclu des Républicains.","2024-06-11","TF1, cité par Le Figaro",FIG_BER,F)],POL,PR27,("france",))
+_node("dominique-de-villepin","Dominique de Villepin","person","Ancien Premier ministre (2005-2007) et ministre des Affaires étrangères ; candidat déclaré à la présidentielle 2027 (La France humaniste)",
+ "A repris le 1er août 2025 sur X sa tribune publiée le 31 juillet 2025 dans Le Monde sur la situation à Gaza (franceinfo, 20 Minutes).",
+ [_st("Un crime a lieu à Gaza, un crime de génocide","2025-07-31","Tribune publiée dans Le Monde, citée par 20 Minutes et franceinfo",M20_VIL,G,"gaza"),
+  _st("Elle honore nos valeurs universelles, mais elle nous oblige immédiatement à agir","2025-07-24","Message sur X au sujet de la décision d'Emmanuel Macron, cité par franceinfo",FI_REAC_PAL,G,"gaza")],POL,PR27,("gaza",))
+_mac=[x for x in N if x["id"]=="emmanuel-macron"][0]
+_mac["statements"].append(_st("Fidèle à son engagement historique pour une paix juste et durable au Proche-Orient, j'ai décidé que la France reconnaîtra l'Etat de Palestine","2025-07-24","Message sur X, cité par franceinfo",FI_MAC_PAL,G,"gaza"))
+_mac["statements"].append(_st("L'urgence est aujourd'hui que cesse la guerre à Gaza et que la population civile soit secourue","2025-07-24","Message sur X, cité par franceinfo",FI_MAC_PAL,G,"gaza"))
+if "gaza" not in _mac["sections"]: _mac["sections"].append("gaza")
+for _a,_sec in [(("xavier-bertrand","eric-ciotti","a demandé son exclusion des Républicains après l'accord avec le RN (TF1, 11/06/2024)",FIG_BER,"2024-06-11"),"france"),
+ (("xavier-bertrand","lr","président LR de la région Hauts-de-France (Le Figaro)",FIG_BER,"2024-06-11"),"france"),
+ (("yonathan-arfi","fabien-roussel","a réagi à sa comparaison de Gaza avec des sièges historiques (franceinfo, 10/03/2024)",FI_ROU,"2024-03-10"),"gaza"),
+ (("gabriel-attal","emmanuel-macron","a repris au Sénat les mots du président sur la reconnaissance d'un État palestinien (BFMTV, 29/05/2024)",BFM_ATT,"2024-05-29"),"gaza"),
+ (("edouard-philippe","emmanuel-macron","s'est interrogé sur le calendrier de la reconnaissance annoncée (communiqué, 25/07/2025)",BFM_PHI,"2025-07-25"),"gaza"),
+ (("jean-luc-melenchon","emmanuel-macron","a réagi sur X à l'annonce de la reconnaissance de l'État de Palestine (24/07/2025)",FI_REAC_PAL,"2025-07-24"),"gaza"),
+ (("raphael-glucksmann","emmanuel-macron","a réagi sur X à l'annonce de la reconnaissance de l'État de Palestine (24/07/2025)",FI_REAC_PAL,"2025-07-24"),"gaza"),
+ (("marine-tondelier","emmanuel-macron","a réagi sur X à l'annonce de la reconnaissance de l'État de Palestine (24/07/2025)",FI_REAC_PAL,"2025-07-24"),"gaza"),
+ (("dominique-de-villepin","emmanuel-macron","a réagi sur X à l'annonce de la reconnaissance de l'État de Palestine (24/07/2025)",FI_REAC_PAL,"2025-07-24"),"gaza"),
+ (("fabien-roussel","marine-tondelier","rassemblement commun au Trocadéro sur la situation à Gaza (26/05/2025)",FI_TROCA,"2025-05-26"),"gaza")]:
+    L(*_a); E[-1]["section"]=_sec
+for _i in ["xavier-bertrand","eric-ciotti","lr"]:
+    _n=[x for x in N if x["id"]==_i][0]
+    if "france" not in _n["sections"]: _n["sections"].append("france")
+for _i in ["yonathan-arfi","emmanuel-macron"]:
+    _n=[x for x in N if x["id"]==_i][0]
+    if "gaza" not in _n["sections"]: _n["sections"].append("gaza")
+
+# v14 : archives Wayback (instantanés existants)
+ARCH_EXTRA['https://www.franceinfo.fr/monde/proche-orient/israel-palestine/attaque-du-hamas-contre-israel-la-position-de-lfi-cree-la-polemique-au-sein-de-la-nupes_6109152.html']=('https://web.archive.org/web/20250822172642/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/attaque-du-hamas-contre-israel-la-position-de-lfi-cree-la-polemique-au-sein-de-la-nupes_6109152.html',"2025-08-22")
+ARCH_EXTRA['https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html']=('https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html',"2026-10-15")
+ARCH_EXTRA['https://www.franceinfo.fr/monde/proche-orient/guerre/la-paix-est-possible-emmanuel-macron-annonce-que-la-france-va-reconnaitre-l-etat-de-palestine-en-septembre_7396969.html']=('https://web.archive.org/web/20251219054155/https://www.franceinfo.fr/monde/proche-orient/guerre/la-paix-est-possible-emmanuel-macron-annonce-que-la-france-va-reconnaitre-l-etat-de-palestine-en-septembre_7396969.html',"2025-12-19")
+ARCH_EXTRA['https://www.lefigaro.fr/politique/guerre-hamas-israel-raphael-glucksmann-refuse-le-terme-de-genocide-et-prefere-celui-de-carnage-20240312']=('https://web.archive.org/web/20240929102111/https://www.lefigaro.fr/politique/guerre-hamas-israel-raphael-glucksmann-refuse-le-terme-de-genocide-et-prefere-celui-de-carnage-20240312',"2024-09-29")
+ARCH_EXTRA['https://www.franceinfo.fr/monde/palestine/gaza/guerre-a-gaza-le-ps-le-pcf-et-les-ecologistes-reunis-a-paris-pour-denoncer-le-genocide-commis-par-israel_7274295.html']=('https://web.archive.org/web/20250917175607/https://www.franceinfo.fr/monde/palestine/gaza/guerre-a-gaza-le-ps-le-pcf-et-les-ecologistes-reunis-a-paris-pour-denoncer-le-genocide-commis-par-israel_7274295.html',"2025-09-17")
+ARCH_EXTRA['https://www.bfmtv.com/politique/est-ce-le-bon-moment-les-doutes-d-edouard-phillipe-quant-a-la-reconnaissance-de-l-etat-de-palestine_AN-202507250488.html']=('https://web.archive.org/web/20261105144054/https://www.bfmtv.com/politique/est-ce-le-bon-moment-les-doutes-d-edouard-phillipe-quant-a-la-reconnaissance-de-l-etat-de-palestine_AN-202507250488.html',"2026-11-05")
+ARCH_EXTRA['https://www.bfmtv.com/politique/gouvernement/reconnaissance-d-un-etat-palestinien-gabriel-attal-assure-a-son-tour-que-ce-n-est-pas-un-tabou_AN-202405290686.html']=('https://web.archive.org/web/20250722000931/https://www.bfmtv.com/politique/gouvernement/reconnaissance-d-un-etat-palestinien-gabriel-attal-assure-a-son-tour-que-ce-n-est-pas-un-tabou_AN-202405290686.html',"2025-07-22")
+ARCH_EXTRA['https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611']=('https://web.archive.org/web/20261105144144/https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611',"2026-11-05")
+ARCH_EXTRA['https://www.20minutes.fr/monde/israel/4166059-20250731-crime-lieu-gaza-crime-genocide-affirme-dominique-villepin']=('https://web.archive.org/web/20260520132306/https://www.20minutes.fr/monde/israel/4166059-20250731-crime-lieu-gaza-crime-genocide-affirme-dominique-villepin',"2026-05-20")
+
 # archives Wayback Machine (tools/archive.py -> tools/archives.json)
 _ap="/workspace/gaza-site/tools/archives.json"
 ARCH=json.load(open(_ap)) if os.path.exists(_ap) else {}

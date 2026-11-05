@@ -3,14 +3,14 @@
     "generated": "2026-11-05",
     "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-05 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : fichiers Wikimedia Commons sous licence libre, avec auteur, licence et lien ; logos reproduits à seule fin d'identification. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
-      "persons": 32,
+      "persons": 40,
       "orgs": 37,
-      "edges": 103,
-      "statements": 102,
+      "edges": 113,
+      "statements": 119,
       "photos": 25,
       "logos": 19,
       "videos": 14,
-      "france_nodes": 41
+      "france_nodes": 42
     },
     "category_order": [
       "Responsables politiques",
@@ -1780,10 +1780,31 @@
           "url": "https://www.franceinfo.fr/politique/emmanuel-macron/dans-valeurs-actuelles-emmanuel-macron-veut-plus-d-efficacite-contre-l-immigration-illegale_3681211.html",
           "theme": "Nuance / contexte",
           "section": "france"
+        },
+        {
+          "quote": "Fidèle à son engagement historique pour une paix juste et durable au Proche-Orient, j'ai décidé que la France reconnaîtra l'Etat de Palestine",
+          "date": "2025-07-24",
+          "medium": "Message sur X, cité par franceinfo",
+          "url": "https://www.franceinfo.fr/monde/proche-orient/guerre/la-paix-est-possible-emmanuel-macron-annonce-que-la-france-va-reconnaitre-l-etat-de-palestine-en-septembre_7396969.html",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20251219054155/https://www.franceinfo.fr/monde/proche-orient/guerre/la-paix-est-possible-emmanuel-macron-annonce-que-la-france-va-reconnaitre-l-etat-de-palestine-en-septembre_7396969.html",
+          "archived": "2025-12-19"
+        },
+        {
+          "quote": "L'urgence est aujourd'hui que cesse la guerre à Gaza et que la population civile soit secourue",
+          "date": "2025-07-24",
+          "medium": "Message sur X, cité par franceinfo",
+          "url": "https://www.franceinfo.fr/monde/proche-orient/guerre/la-paix-est-possible-emmanuel-macron-annonce-que-la-france-va-reconnaitre-l-etat-de-palestine-en-septembre_7396969.html",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20251219054155/https://www.franceinfo.fr/monde/proche-orient/guerre/la-paix-est-possible-emmanuel-macron-annonce-que-la-france-va-reconnaitre-l-etat-de-palestine-en-septembre_7396969.html",
+          "archived": "2025-12-19"
         }
       ],
       "sections": [
-        "france"
+        "france",
+        "gaza"
       ],
       "image": "img/people/emmanuel-macron.webp",
       "image_credit": {
@@ -2394,6 +2415,266 @@
       ],
       "category": "Organisations & institutions",
       "subcategory": "Groupes dissous (extrême droite / ultradroite)"
+    },
+    {
+      "id": "jean-luc-melenchon",
+      "name": "Jean-Luc Mélenchon",
+      "type": "person",
+      "role": "Fondateur de La France insoumise ; candidat déclaré à la présidentielle 2027 (entré en campagne le 03/05/2026, selon France 24)",
+      "description": "Candidat à l'élection présidentielle en 2012, 2017 et 2022. Le 7 octobre 2023, sa réaction et le communiqué du groupe parlementaire LFI-NUPES ont fait l'objet de critiques d'autres responsables politiques, dont la Première ministre Élisabeth Borne (franceinfo).",
+      "statements": [
+        {
+          "quote": "toute la violence déchaînée contre Israël et à Gaza ne prouv[ait] qu'une chose : la violence ne produit et ne reproduit qu'elle-même. Horrifiés, nos pensées et notre compassion vont à toutes les populations désemparées victimes de tout cela. Le cessez-le-feu doit s'imposer",
+          "date": "2023-10-07",
+          "medium": "Message sur X, cité par franceinfo",
+          "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/attaque-du-hamas-contre-israel-la-position-de-lfi-cree-la-polemique-au-sein-de-la-nupes_6109152.html",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20250822172642/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/attaque-du-hamas-contre-israel-la-position-de-lfi-cree-la-polemique-au-sein-de-la-nupes_6109152.html",
+          "archived": "2025-08-22"
+        },
+        {
+          "quote": "La victoire morale est là mais on connaît la technique des annonces différées de Macron. Depuis des mois ce type de comportement encourage la durée du crime à Gaza. Pourquoi en septembre et pas maintenant ?",
+          "date": "2025-07-24",
+          "medium": "Message sur X, cité par franceinfo (réactions à l'annonce de la reconnaissance de l'État de Palestine)",
+          "url": "https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
+          "archived": "2026-10-15"
+        }
+      ],
+      "sections": [
+        "gaza"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Candidats à la présidentielle 2027"
+    },
+    {
+      "id": "raphael-glucksmann",
+      "name": "Raphaël Glucksmann",
+      "type": "person",
+      "role": "Député européen, coprésident de Place publique ; candidat à la présidentielle 2027 (vainqueur de la primaire PS / Place publique / GRS le 11/10/2026)",
+      "description": "Désigné candidat commun du Parti socialiste, de Place publique et de la Gauche républicaine et socialiste avec 66,13 % des voix (Touteleurope).",
+      "statements": [
+        {
+          "quote": "J'ai un emploi extrêmement précautionneux du terme génocide",
+          "date": "2024-03-11",
+          "medium": "Quotidien (TMC), cité par Le Figaro",
+          "url": "https://www.lefigaro.fr/politique/guerre-hamas-israel-raphael-glucksmann-refuse-le-terme-de-genocide-et-prefere-celui-de-carnage-20240312",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20240929102111/https://www.lefigaro.fr/politique/guerre-hamas-israel-raphael-glucksmann-refuse-le-terme-de-genocide-et-prefere-celui-de-carnage-20240312",
+          "archived": "2024-09-29"
+        },
+        {
+          "quote": "Les Palestiniens ont le droit de vivre, et de le faire dans leur État. Pareille reconnaissance est un acte fort et juste",
+          "date": "2025-07-24",
+          "medium": "Message sur X, cité par franceinfo (réactions à l'annonce de la reconnaissance de l'État de Palestine)",
+          "url": "https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
+          "archived": "2026-10-15"
+        }
+      ],
+      "sections": [
+        "gaza"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Candidats à la présidentielle 2027"
+    },
+    {
+      "id": "fabien-roussel",
+      "name": "Fabien Roussel",
+      "type": "person",
+      "role": "Secrétaire national du Parti communiste français ; candidat déclaré à la présidentielle 2027 (06/09/2026)",
+      "description": "Le 10 mars 2024, ses propos sur Europe 1 comparant la situation à Gaza à des sièges historiques ont suscité une réaction du président du Crif, Yonathan Arfi (franceinfo).",
+      "statements": [
+        {
+          "quote": "On parlait d'un risque génocidaire. Ce que j'ai entendu, ce que je vois, c'est que nous allons vers le génocide. Il est en cours",
+          "date": "2024-03-10",
+          "medium": "Europe 1, cité par franceinfo avec AFP",
+          "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/guerre-entre-israel-et-le-hamas-nous-allons-vers-le-genocide-il-est-en-cours-accuse-fabien-roussel_6416110.html",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
+        },
+        {
+          "quote": "Non au nettoyage ethnique à Gaza et au génocide du peuple palestinien",
+          "date": "2025-05-26",
+          "medium": "Rassemblement au Trocadéro (Paris), cité par franceinfo avec AFP",
+          "url": "https://www.franceinfo.fr/monde/palestine/gaza/guerre-a-gaza-le-ps-le-pcf-et-les-ecologistes-reunis-a-paris-pour-denoncer-le-genocide-commis-par-israel_7274295.html",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20250917175607/https://www.franceinfo.fr/monde/palestine/gaza/guerre-a-gaza-le-ps-le-pcf-et-les-ecologistes-reunis-a-paris-pour-denoncer-le-genocide-commis-par-israel_7274295.html",
+          "archived": "2025-09-17"
+        }
+      ],
+      "sections": [
+        "gaza"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Candidats à la présidentielle 2027"
+    },
+    {
+      "id": "marine-tondelier",
+      "name": "Marine Tondelier",
+      "type": "person",
+      "role": "Secrétaire nationale des Écologistes ; candidate déclarée à la présidentielle 2027",
+      "description": "A participé le 26 mai 2025, avec les dirigeants du PS et du PCF, à un rassemblement au Trocadéro (Paris) sur la situation à Gaza (franceinfo).",
+      "statements": [
+        {
+          "quote": "Ce qui se joue à Gaza, c'est l'image que l'humanité se fait d'elle-même",
+          "date": "2025-05-26",
+          "medium": "Rassemblement au Trocadéro (Paris), cité par franceinfo avec AFP",
+          "url": "https://www.franceinfo.fr/monde/palestine/gaza/guerre-a-gaza-le-ps-le-pcf-et-les-ecologistes-reunis-a-paris-pour-denoncer-le-genocide-commis-par-israel_7274295.html",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20250917175607/https://www.franceinfo.fr/monde/palestine/gaza/guerre-a-gaza-le-ps-le-pcf-et-les-ecologistes-reunis-a-paris-pour-denoncer-le-genocide-commis-par-israel_7274295.html",
+          "archived": "2025-09-17"
+        },
+        {
+          "quote": "Espérons que cette annonce aide les Gazaouis victimes d'un génocide en cours dès à présent, dans l'attente de sa concrétisation à la rentrée.",
+          "date": "2025-07-24",
+          "medium": "Message sur X, cité par franceinfo (réactions à l'annonce de la reconnaissance de l'État de Palestine)",
+          "url": "https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
+          "archived": "2026-10-15"
+        }
+      ],
+      "sections": [
+        "gaza"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Candidats à la présidentielle 2027"
+    },
+    {
+      "id": "edouard-philippe",
+      "name": "Édouard Philippe",
+      "type": "person",
+      "role": "Président d'Horizons, ancien Premier ministre (2017-2020) ; candidat déclaré à la présidentielle 2027",
+      "description": "S'est exprimé par communiqué le 25 juillet 2025 sur l'annonce par Emmanuel Macron de la reconnaissance de l'État de Palestine (BFMTV).",
+      "statements": [
+        {
+          "quote": "Il faudra reconnaître un État de Palestine et il ne faudra pas attendre qu'il n'y ait plus qu'un cimetière à reconnaître. Mais est-ce le bon moment? C'est pour le moins incertain",
+          "date": "2025-07-25",
+          "medium": "Communiqué, cité par BFMTV",
+          "url": "https://www.bfmtv.com/politique/est-ce-le-bon-moment-les-doutes-d-edouard-phillipe-quant-a-la-reconnaissance-de-l-etat-de-palestine_AN-202507250488.html",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261105144054/https://www.bfmtv.com/politique/est-ce-le-bon-moment-les-doutes-d-edouard-phillipe-quant-a-la-reconnaissance-de-l-etat-de-palestine_AN-202507250488.html",
+          "archived": "2026-11-05"
+        }
+      ],
+      "sections": [
+        "gaza"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Candidats à la présidentielle 2027"
+    },
+    {
+      "id": "gabriel-attal",
+      "name": "Gabriel Attal",
+      "type": "person",
+      "role": "Secrétaire général de Renaissance, ancien Premier ministre (2024) ; candidat déclaré à la présidentielle 2027 (22/05/2026)",
+      "description": "Premier ministre lors des questions au gouvernement du 29 mai 2024 au Sénat, où il a été interrogé sur la situation à Gaza (BFMTV, Public Sénat).",
+      "statements": [
+        {
+          "quote": "La reconnaissance d'un État palestinien n'est pas un tabou",
+          "date": "2024-05-29",
+          "medium": "Questions au gouvernement, Sénat, cité par BFMTV et Public Sénat",
+          "url": "https://www.bfmtv.com/politique/gouvernement/reconnaissance-d-un-etat-palestinien-gabriel-attal-assure-a-son-tour-que-ce-n-est-pas-un-tabou_AN-202405290686.html",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20250722000931/https://www.bfmtv.com/politique/gouvernement/reconnaissance-d-un-etat-palestinien-gabriel-attal-assure-a-son-tour-que-ce-n-est-pas-un-tabou_AN-202405290686.html",
+          "archived": "2025-07-22"
+        },
+        {
+          "quote": "Reconnaître unilatéralement, sans que ça ne produise aucun impact diplomatique ou sur le front de la guerre, ça ne serait pas participer à trouver une solution",
+          "date": "2024-05-29",
+          "medium": "Questions au gouvernement, Sénat, cité par BFMTV",
+          "url": "https://www.bfmtv.com/politique/gouvernement/reconnaissance-d-un-etat-palestinien-gabriel-attal-assure-a-son-tour-que-ce-n-est-pas-un-tabou_AN-202405290686.html",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20250722000931/https://www.bfmtv.com/politique/gouvernement/reconnaissance-d-un-etat-palestinien-gabriel-attal-assure-a-son-tour-que-ce-n-est-pas-un-tabou_AN-202405290686.html",
+          "archived": "2025-07-22"
+        }
+      ],
+      "sections": [
+        "gaza"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Candidats à la présidentielle 2027"
+    },
+    {
+      "id": "xavier-bertrand",
+      "name": "Xavier Bertrand",
+      "type": "person",
+      "role": "Président (LR) de la région Hauts-de-France ; candidat déclaré à la présidentielle 2027 (27/08/2026)",
+      "description": "Invité de TF1 le 11 juin 2024, il a demandé l'exclusion d'Éric Ciotti des Républicains après l'annonce par celui-ci d'un accord avec le Rassemblement national pour les législatives (Le Figaro).",
+      "statements": [
+        {
+          "quote": "En passant cet accord avec le Rassemblement national, il a fait le choix de la collaboration avec l'extrême droite",
+          "date": "2024-06-11",
+          "medium": "TF1, cité par Le Figaro",
+          "url": "https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261105144144/https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
+          "archived": "2026-11-05"
+        },
+        {
+          "quote": "Soit Éric Ciotti part tout de suite, soit il est exclu des Républicains.",
+          "date": "2024-06-11",
+          "medium": "TF1, cité par Le Figaro",
+          "url": "https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261105144144/https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
+          "archived": "2026-11-05"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Candidats à la présidentielle 2027"
+    },
+    {
+      "id": "dominique-de-villepin",
+      "name": "Dominique de Villepin",
+      "type": "person",
+      "role": "Ancien Premier ministre (2005-2007) et ministre des Affaires étrangères ; candidat déclaré à la présidentielle 2027 (La France humaniste)",
+      "description": "A repris le 1er août 2025 sur X sa tribune publiée le 31 juillet 2025 dans Le Monde sur la situation à Gaza (franceinfo, 20 Minutes).",
+      "statements": [
+        {
+          "quote": "Un crime a lieu à Gaza, un crime de génocide",
+          "date": "2025-07-31",
+          "medium": "Tribune publiée dans Le Monde, citée par 20 Minutes et franceinfo",
+          "url": "https://www.20minutes.fr/monde/israel/4166059-20250731-crime-lieu-gaza-crime-genocide-affirme-dominique-villepin",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20260520132306/https://www.20minutes.fr/monde/israel/4166059-20250731-crime-lieu-gaza-crime-genocide-affirme-dominique-villepin",
+          "archived": "2026-05-20"
+        },
+        {
+          "quote": "Elle honore nos valeurs universelles, mais elle nous oblige immédiatement à agir",
+          "date": "2025-07-24",
+          "medium": "Message sur X au sujet de la décision d'Emmanuel Macron, cité par franceinfo",
+          "url": "https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
+          "archived": "2026-10-15"
+        }
+      ],
+      "sections": [
+        "gaza"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Candidats à la présidentielle 2027"
     }
   ],
   "edges": [
@@ -3388,6 +3669,104 @@
       "url": "https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
       "date": "2024-06-19",
       "section": "france"
+    },
+    {
+      "source": "xavier-bertrand",
+      "target": "eric-ciotti",
+      "relation": "a demandé son exclusion des Républicains après l'accord avec le RN (TF1, 11/06/2024)",
+      "url": "https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
+      "date": "2024-06-11",
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261105144144/https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
+      "archived": "2026-11-05"
+    },
+    {
+      "source": "xavier-bertrand",
+      "target": "lr",
+      "relation": "président LR de la région Hauts-de-France (Le Figaro)",
+      "url": "https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
+      "date": "2024-06-11",
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261105144144/https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
+      "archived": "2026-11-05"
+    },
+    {
+      "source": "yonathan-arfi",
+      "target": "fabien-roussel",
+      "relation": "a réagi à sa comparaison de Gaza avec des sièges historiques (franceinfo, 10/03/2024)",
+      "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/guerre-entre-israel-et-le-hamas-nous-allons-vers-le-genocide-il-est-en-cours-accuse-fabien-roussel_6416110.html",
+      "date": "2024-03-10",
+      "section": "gaza"
+    },
+    {
+      "source": "gabriel-attal",
+      "target": "emmanuel-macron",
+      "relation": "a repris au Sénat les mots du président sur la reconnaissance d'un État palestinien (BFMTV, 29/05/2024)",
+      "url": "https://www.bfmtv.com/politique/gouvernement/reconnaissance-d-un-etat-palestinien-gabriel-attal-assure-a-son-tour-que-ce-n-est-pas-un-tabou_AN-202405290686.html",
+      "date": "2024-05-29",
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20250722000931/https://www.bfmtv.com/politique/gouvernement/reconnaissance-d-un-etat-palestinien-gabriel-attal-assure-a-son-tour-que-ce-n-est-pas-un-tabou_AN-202405290686.html",
+      "archived": "2025-07-22"
+    },
+    {
+      "source": "edouard-philippe",
+      "target": "emmanuel-macron",
+      "relation": "s'est interrogé sur le calendrier de la reconnaissance annoncée (communiqué, 25/07/2025)",
+      "url": "https://www.bfmtv.com/politique/est-ce-le-bon-moment-les-doutes-d-edouard-phillipe-quant-a-la-reconnaissance-de-l-etat-de-palestine_AN-202507250488.html",
+      "date": "2025-07-25",
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261105144054/https://www.bfmtv.com/politique/est-ce-le-bon-moment-les-doutes-d-edouard-phillipe-quant-a-la-reconnaissance-de-l-etat-de-palestine_AN-202507250488.html",
+      "archived": "2026-11-05"
+    },
+    {
+      "source": "jean-luc-melenchon",
+      "target": "emmanuel-macron",
+      "relation": "a réagi sur X à l'annonce de la reconnaissance de l'État de Palestine (24/07/2025)",
+      "url": "https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
+      "date": "2025-07-24",
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
+      "archived": "2026-10-15"
+    },
+    {
+      "source": "raphael-glucksmann",
+      "target": "emmanuel-macron",
+      "relation": "a réagi sur X à l'annonce de la reconnaissance de l'État de Palestine (24/07/2025)",
+      "url": "https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
+      "date": "2025-07-24",
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
+      "archived": "2026-10-15"
+    },
+    {
+      "source": "marine-tondelier",
+      "target": "emmanuel-macron",
+      "relation": "a réagi sur X à l'annonce de la reconnaissance de l'État de Palestine (24/07/2025)",
+      "url": "https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
+      "date": "2025-07-24",
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
+      "archived": "2026-10-15"
+    },
+    {
+      "source": "dominique-de-villepin",
+      "target": "emmanuel-macron",
+      "relation": "a réagi sur X à l'annonce de la reconnaissance de l'État de Palestine (24/07/2025)",
+      "url": "https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
+      "date": "2025-07-24",
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
+      "archived": "2026-10-15"
+    },
+    {
+      "source": "fabien-roussel",
+      "target": "marine-tondelier",
+      "relation": "rassemblement commun au Trocadéro sur la situation à Gaza (26/05/2025)",
+      "url": "https://www.franceinfo.fr/monde/palestine/gaza/guerre-a-gaza-le-ps-le-pcf-et-les-ecologistes-reunis-a-paris-pour-denoncer-le-genocide-commis-par-israel_7274295.html",
+      "date": "2025-05-26",
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20250917175607/https://www.franceinfo.fr/monde/palestine/gaza/guerre-a-gaza-le-ps-le-pcf-et-les-ecologistes-reunis-a-paris-pour-denoncer-le-genocide-commis-par-israel_7274295.html",
+      "archived": "2025-09-17"
     }
   ]
 }

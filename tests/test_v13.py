@@ -10,7 +10,7 @@ cfg=open("site/config.js").read()
 m=re.search(r'DONATION_URL:\s*"([^"]*)"',cfg); url=m.group(1) if m else ""
 check(url.startswith("https://www.leetchi.com/") and "utm_" not in url,"DONATION_URL "+url)
 check(re.search(r'CORRECTION_EMAIL:\s*""',cfg),"CORRECTION_EMAIL vide")
-check("onrecord-v13" in open("site/sw.js").read(),"sw v13")
+import re as _re; check(int(_re.search(r"onrecord-v(\d+)",open("site/sw.js").read()).group(1))>=13,"sw >= v13")
 BAN=["pantin","revirement","complice","contradiction"]
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path="/usr/bin/google-chrome")
