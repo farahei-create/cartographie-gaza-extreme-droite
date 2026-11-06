@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generated": "2026-11-05",
-    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-05 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : fichiers Wikimedia Commons sous licence libre, avec auteur, licence et lien ; logos reproduits à seule fin d'identification. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
+    "generated": "2026-11-06",
+    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-06 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : fichiers Wikimedia Commons sous licence libre, avec auteur, licence et lien ; logos reproduits à seule fin d'identification. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
       "persons": 40,
       "orgs": 37,
-      "edges": 117,
-      "statements": 122,
+      "edges": 119,
+      "statements": 134,
       "photos": 25,
       "logos": 19,
       "videos": 14,
@@ -292,6 +292,14 @@
           "url": "https://www.franceinfo.fr/politique/marine-le-pen/video-generation-identitaire-ce-qui-scandalise-m-darmanin-doit-fait-l-objet-d-une-dissolution-ca-ce-n-est-pas-l-etat-de-droit-denonce-marine-le-pen_4273347.html",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "Quoi qu’on puisse en penser, heureusement que CNEWS existe pour évoquer l’agression de jeunes catholiques à Rouen au cri de « sale blanc » et « sale facho », manifestation d’un racisme anti-Blancs dont quasiment aucun autre média n’a parlé. Refuser de parler et de condamner tous les racismes, c’est refuser de condamner le racisme.",
+          "date": "2026-11-04",
+          "medium": "Message sur X (@MLP_officiel), 4 novembre 2026, 08:30 UTC. Le message publié comporte un saut de paragraphe avant la seconde phrase. Il porte sur la couverture, par CNews, d’une agression que Marine Le Pen situe à Rouen ; ce fait n’est pas documenté ici indépendamment de son message.",
+          "url": "https://x.com/MLP_officiel/status/2117897335271219295",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -365,13 +373,49 @@
           "medium": "En réponse à l'annonce de Gérald Darmanin sur le GUD, cité par franceinfo (il a déclaré qu'il dissoudrait « toutes les organisations d'ultragauche et d'ultradroite », y compris le GUD)",
           "url": "https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
           "theme": "Nuance / contexte",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20250902174618/https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
+          "archived": "2025-09-02"
         },
         {
           "quote": "l'extrême gauche (qui) manifeste contre... un livre […] nostalgie des régimes totalitaires chaque jour plus inquiétante",
           "date": "2026-11-04",
           "medium": "Deux fragments d'un message sur X, cités par BFMTV/AFP (pas d'URL du message original consultée). BFMTV/AFP écrit qu'il accuse le premier et « développe selon lui » la seconde formule. Réaction, avant son arrivée, à un rassemblement d'une quinzaine de militants du collectif « Nous Vivrons » devant le Pavillon Wagram (Paris), le 4 novembre 2026, en marge de la soirée de lancement de son livre. Les slogans rapportés par BFMTV/AFP ne sont pas reproduits. Contexte indiqué par BFMTV/AFP : depuis la divulgation, fin septembre 2026, d'écrits de jeunesse antisémites attribués à Jordan Bardella, dans un climat de tension avec Mediapart, il nie catégoriquement et a déposé plainte pour diffamation. Ces écrits ne sont pas tenus pour établis ici.",
           "url": "https://www.bfmtv.com/politique/front-national/mediapart-s-est-vu-refuser-l-acces-a-la-soiree-de-lancement-du-livre-de-jordan-bardella_AD-202611050240.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261106192006/https://www.bfmtv.com/politique/front-national/mediapart-s-est-vu-refuser-l-acces-a-la-soiree-de-lancement-du-livre-de-jordan-bardella_AD-202611050240.html",
+          "archived": "2026-11-06"
+        },
+        {
+          "quote": "[la France n'est pas] une race [mais] une nation à laquelle on s'agrège",
+          "date": "2026-11-04",
+          "medium": "Livre « Gouverner » (Fayard), sortie le 4 novembre 2026. franceinfo écrit que Jordan Bardella cite Jacques Bainville, qu'elle présente comme auteur nationaliste, royaliste et antisémite, « à qui il fait dire que la France n'est pas \"une race\" mais \"une nation à laquelle on s'agrège\" ». Les crochets reprennent cette liaison ; « une race » et « une nation à laquelle on s'agrège » sont les deux fragments placés entre guillemets par franceinfo.",
+          "url": "https://www.franceinfo.fr/elections/presidentielle/gouverner-que-contient-le-nouveau-livre-de-jordan-bardella_8267120.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "L'aider à gagner cette campagne est ma responsabilité.",
+          "date": "2026-11-04",
+          "medium": "Livre « Gouverner » (Fayard), cité par franceinfo, à propos de Marine Le Pen. franceinfo écrit qu'il reconnaît « avoir peut-être accusé le coup » après l'annonce de la candidature de Marine Le Pen, puis « se reprend » avec cette phrase.",
+          "url": "https://www.franceinfo.fr/elections/presidentielle/gouverner-que-contient-le-nouveau-livre-de-jordan-bardella_8267120.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "On a tenté de me faire chuter",
+          "date": "2026-11-04",
+          "medium": "Postface « Le prix de l'engagement » du livre « Gouverner » (Fayard), citée par franceinfo, qui écrit que Jordan Bardella « répète » cette phrase. franceinfo indique que les révélations de Mediapart sur des messages attribués à l'auteur à 17 ans sont arrivées alors que le livre était quasiment bouclé ; ces messages ne sont pas tenus pour établis ici. Il cite ensuite, selon franceinfo, une phrase attribuée à François Mitterrand : « Toutes les explications du monde ne justifieront pas qu'on ait pu livrer à la meute l'honneur d'un homme. »",
+          "url": "https://www.franceinfo.fr/elections/presidentielle/gouverner-que-contient-le-nouveau-livre-de-jordan-bardella_8267120.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Je sais maintenant que les mois qui viennent seront difficiles.",
+          "date": "2026-11-04",
+          "medium": "Conclusion de la postface « Le prix de l'engagement » du livre « Gouverner » (Fayard), citée par franceinfo.",
+          "url": "https://www.franceinfo.fr/elections/presidentielle/gouverner-que-contient-le-nouveau-livre-de-jordan-bardella_8267120.html",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
         }
@@ -1261,7 +1305,9 @@
           "medium": "Victor Chabert, directeur du service de presse du RN, cité par BFMTV/AFP. Le 4 novembre 2026, peu avant 20h, au Pavillon Wagram (Paris), un journaliste de Mediapart disposant d'un billet nominatif s'est vu refuser l'accès à la soirée de lancement du livre de Jordan Bardella organisée par Fayard. Le RN a invoqué le caractère « privé » de l'événement, auquel de nombreux autres médias étaient accrédités. La quasi-totalité des journalistes inscrits ont alors quitté les lieux, à l'exception notamment des médias du groupe Bolloré, présenté par BFMTV/AFP comme « maison-mère » de Fayard. StreetPress écrit en outre que ses journalistes se sont vu refuser l'entrée, et qu'une demande d'accréditation de Politis est restée sans réponse.",
           "url": "https://www.bfmtv.com/politique/front-national/mediapart-s-est-vu-refuser-l-acces-a-la-soiree-de-lancement-du-livre-de-jordan-bardella_AD-202611050240.html",
           "theme": "France – normalisation de l'extrême droite",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261106192006/https://www.bfmtv.com/politique/front-national/mediapart-s-est-vu-refuser-l-acces-a-la-soiree-de-lancement-du-livre-de-jordan-bardella_AD-202611050240.html",
+          "archived": "2026-11-06"
         },
         {
           "quote": "On fait ce qu'on veut.",
@@ -1269,7 +1315,39 @@
           "medium": "Victor Chabert, directeur du service de presse du RN, cité par StreetPress (qui le désigne aussi comme « responsable presse »), le 4 novembre 2026 au pavillon Wagram, devant des journalistes de Mediapart et de StreetPress, lors de la soirée de lancement de « Gouverner ».",
           "url": "https://www.streetpress.com/1793883196-mediapart-politis-streetpress-rassemblement-national-bardella-tri-journalistes-antisemitisme-extreme-droite-fayard-bollore",
           "theme": "France – normalisation de l'extrême droite",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261106192934/https://www.streetpress.com/1793883196-mediapart-politis-streetpress-rassemblement-national-bardella-tri-journalistes-antisemitisme-extreme-droite-fayard-bollore",
+          "archived": "2026-11-06"
+        },
+        {
+          "quote": "Une pétition réclame la fermeture de CNews. Voilà donc le projet démocratique de certains donneurs de leçons : museler ceux qui ne pensent pas comme eux.",
+          "date": "2026-11-04",
+          "medium": "Frédéric Boccaletti, député RN, questions au gouvernement, Assemblée nationale, 4 novembre 2026 (compte rendu officiel, première séance). Le compte rendu insère, entre les deux phrases, la mention « (Applaudissements sur les bancs du groupe LFI-NFP.) ». Les interruptions d’autres députés figurent au compte rendu et ne sont pas reproduites.",
+          "url": "https://questions.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-mercredi-04-novembre-2026",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261106193008/https://questions.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-mercredi-04-novembre-2026",
+          "archived": "2026-11-06"
+        },
+        {
+          "quote": "Dans une démocratie, on combat des idées avec des arguments, pas avec des pétitions visant à censurer une chaîne de télévision.",
+          "date": "2026-11-04",
+          "medium": "Frédéric Boccaletti, député RN, questions au gouvernement, Assemblée nationale, 4 novembre 2026 (compte rendu officiel). Phrase précédée, dans le même exposé, de : « Une ligne éditoriale se critique ; un journaliste se contredit ; une émission qui déplaît se zappe. »",
+          "url": "https://questions.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-mercredi-04-novembre-2026",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261106193008/https://questions.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-mercredi-04-novembre-2026",
+          "archived": "2026-11-06"
+        },
+        {
+          "quote": "L’Arcom a relevé qu’au premier trimestre 2026, plus de 70 % du temps de parole du Rassemblement national diffusé sur France Info et près de 60 % de celui diffusé sur France Inter l’avaient été entre minuit et 6 heures du matin.",
+          "date": "2026-11-04",
+          "medium": "Frédéric Boccaletti, député RN, questions au gouvernement, Assemblée nationale, 4 novembre 2026 (compte rendu officiel). Phrase tenue par l’orateur au sujet de relevés qu’il attribue à l’Arcom ; le document de l’Arcom n’a pas été consulté pour cette entrée. La suite (« Voilà une conception bien particulière du pluralisme… ») n’est pas reproduite.",
+          "url": "https://questions.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-mercredi-04-novembre-2026",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261106193008/https://questions.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-mercredi-04-novembre-2026",
+          "archived": "2026-11-06"
         }
       ],
       "sections": [
@@ -1678,7 +1756,9 @@
           "medium": "BFMTV, au sujet du GUD (annonce de la proposition de dissolution), cité par franceinfo",
           "url": "https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
           "theme": "France – normalisation de l'extrême droite",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20250902174618/https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
+          "archived": "2025-09-02"
         }
       ],
       "sections": [
@@ -2371,7 +2451,9 @@
           "medium": "Décret de dissolution du 5 janvier 2022 (Légifrance), cité par franceinfo",
           "url": "https://www.franceinfo.fr/politique/eric-zemmour/le-gouvernement-dissout-le-groupuscule-d-ultradroite-les-zouaves-paris-notamment-soupconne-d-etre-implique-dans-les-violences-lors-du-meeting-de-zemmour-a-villepinte_4905269.html",
           "theme": "France – normalisation de l'extrême droite",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260220060254/https://www.franceinfo.fr/politique/eric-zemmour/le-gouvernement-dissout-le-groupuscule-d-ultradroite-les-zouaves-paris-notamment-soupconne-d-etre-implique-dans-les-violences-lors-du-meeting-de-zemmour-a-villepinte_4905269.html",
+          "archived": "2026-02-20"
         }
       ],
       "sections": [
@@ -2467,6 +2549,46 @@
           "section": "gaza",
           "archive_url": "https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
           "archived": "2026-10-15"
+        },
+        {
+          "quote": "autorités françaises […] laissé commettre […] génocide à Gaza",
+          "date": "2026-11-06",
+          "medium": "Trois fragments du programme « L’Avenir en commun » (La Dispute, 160 pages, 4,90 euros), paru le 6 novembre 2026 selon Voice of Freedom. L’article écrit : « Reprochant aux « autorités françaises » d’avoir « laissé commettre » un « génocide à Gaza » ». La France insoumise avait annoncé le 2 novembre 2026 que cette parution serait la 5e édition (1 069 mesures). Le mot « un », entre le deuxième et le troisième fragment, n’est pas dans les guillemets de l’article.",
+          "url": "https://vof-news.fr/post/jean-luc-mlenchon-mise-tout-sur-gaza-au-dtriment-de-lukraine-dans-son-programme-pour-la",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261106193422/https://vof-news.fr/post/jean-luc-mlenchon-mise-tout-sur-gaza-au-dtriment-de-lukraine-dans-son-programme-pour-la",
+          "archived": "2026-11-06"
+        },
+        {
+          "quote": "double standard diplomatique […] ne condamnant pas les guerres d’agression contre le Liban et l’Iran comme la guerre d’agression contre l’Ukraine",
+          "date": "2026-11-06",
+          "medium": "Deux fragments du même programme, cités par Voice of Freedom le 6 novembre 2026. L’article écrit que le texte « accuse Emmanuel Macron d’avoir mené une politique de « double standard diplomatique » en « ne condamnant pas les guerres d’agression contre le Liban et l’Iran comme la guerre d’agression contre l’Ukraine » ».",
+          "url": "https://vof-news.fr/post/jean-luc-mlenchon-mise-tout-sur-gaza-au-dtriment-de-lukraine-dans-son-programme-pour-la",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261106193422/https://vof-news.fr/post/jean-luc-mlenchon-mise-tout-sur-gaza-au-dtriment-de-lukraine-dans-son-programme-pour-la",
+          "archived": "2026-11-06"
+        },
+        {
+          "quote": "un génocide être commis […] deux poids, deux mesures",
+          "date": "2026-11-06",
+          "medium": "Deux fragments rapportés par Euronews le 6 novembre 2026, dans une formulation distincte de celle de Voice of Freedom le même jour. Euronews écrit que le programme de LFI accuse le gouvernement français de laisser « un génocide être commis » à Gaza et dénonce ce qu’il décrit comme des « deux poids, deux mesures » diplomatiques.",
+          "url": "https://fr.euronews.com/2026/11/06/lavenir-en-commun-jean-luc-melenchon-publie-son-programme-avant-un-grand-meeting",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261106193449/https://fr.euronews.com/2026/11/06/lavenir-en-commun-jean-luc-melenchon-publie-son-programme-avant-un-grand-meeting",
+          "archived": "2026-11-06"
+        },
+        {
+          "quote": "prendre en compte les autres possibilités […] État binational égalitaire",
+          "date": "2026-11-06",
+          "medium": "Deux fragments du programme « L’Avenir en commun » (version dévoilée le 6 novembre 2026, 1 069 mesures selon i24NEWS). i24NEWS écrit que La France insoumise « propose désormais de « prendre en compte les autres possibilités » permettant de garantir les droits des Palestiniens, citant notamment l’hypothèse d’un « État binational égalitaire » ». i24NEWS écrit aussi, sans guillemets, que le texte promet des sanctions contre le gouvernement de Benyamin Netanyahou et la suspension de l’accord d’association entre Israël et l’Union européenne ; ces formulations ne sont pas reprises comme citations. Les qualifications éditoriales de l’article ne sont pas reprises.",
+          "url": "https://www.i24news.tv/fr/actu/france/artc-presidentielle-2027-melenchon-veut-voir-israel-devenir-un-etat-binational",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261106193526/https://www.i24news.tv/fr/actu/france/artc-presidentielle-2027-melenchon-veut-voir-israel-devenir-un-etat-binational",
+          "archived": "2026-11-06"
         }
       ],
       "sections": [
@@ -2589,8 +2711,8 @@
           "url": "https://www.bfmtv.com/politique/est-ce-le-bon-moment-les-doutes-d-edouard-phillipe-quant-a-la-reconnaissance-de-l-etat-de-palestine_AN-202507250488.html",
           "theme": "Gaza – déclarations",
           "section": "gaza",
-          "archive_url": "https://web.archive.org/web/20261105144054/https://www.bfmtv.com/politique/est-ce-le-bon-moment-les-doutes-d-edouard-phillipe-quant-a-la-reconnaissance-de-l-etat-de-palestine_AN-202507250488.html",
-          "archived": "2026-11-05"
+          "archive_url": "https://web.archive.org/web/20250805133134/https://www.bfmtv.com/politique/est-ce-le-bon-moment-les-doutes-d-edouard-phillipe-quant-a-la-reconnaissance-de-l-etat-de-palestine_AN-202507250488.html",
+          "archived": "2025-08-05"
         }
       ],
       "sections": [
@@ -2647,8 +2769,8 @@
           "url": "https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france",
-          "archive_url": "https://web.archive.org/web/20261105144144/https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
-          "archived": "2026-11-05"
+          "archive_url": "https://web.archive.org/web/20260831134710/https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
+          "archived": "2026-08-31"
         },
         {
           "quote": "Soit Éric Ciotti part tout de suite, soit il est exclu des Républicains.",
@@ -2657,8 +2779,8 @@
           "url": "https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france",
-          "archive_url": "https://web.archive.org/web/20261105144144/https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
-          "archived": "2026-11-05"
+          "archive_url": "https://web.archive.org/web/20260831134710/https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
+          "archived": "2026-08-31"
         }
       ],
       "sections": [
@@ -3527,7 +3649,9 @@
       "relation": "animateur de TPMP (jusqu'à l'arrêt de C8 sur la TNT, le 28/02/2025)",
       "url": "https://www.franceinfo.fr/culture/tv/cyril-hanouna/l-animateur-cyril-hanouna-annonce-rejoindre-le-groupe-m6-en-septembre_7100610.html",
       "date": "2025-02-27",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20250901233633/https://www.franceinfo.fr/culture/tv/cyril-hanouna/l-animateur-cyril-hanouna-annonce-rejoindre-le-groupe-m6-en-septembre_7100610.html",
+      "archived": "2025-09-01"
     },
     {
       "source": "cyril-hanouna",
@@ -3535,7 +3659,9 @@
       "relation": "animateur sur W9 et Fun Radio à partir du 01/09/2025 (annoncé le 27/02/2025)",
       "url": "https://www.franceinfo.fr/culture/tv/cyril-hanouna/l-animateur-cyril-hanouna-annonce-rejoindre-le-groupe-m6-en-septembre_7100610.html",
       "date": "2025-02-27",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20250901233633/https://www.franceinfo.fr/culture/tv/cyril-hanouna/l-animateur-cyril-hanouna-annonce-rejoindre-le-groupe-m6-en-septembre_7100610.html",
+      "archived": "2025-09-01"
     },
     {
       "source": "cyril-hanouna",
@@ -3543,7 +3669,9 @@
       "relation": "animateur de « On marche sur la tête »",
       "url": "https://www.franceinfo.fr/elections/legislatives/legislatives-2024-l-arcom-met-en-demeure-europe-1-pour-manque-de-mesure-et-d-honnetete-dans-l-emission-de-cyril-hanouna_6629991.html",
       "date": "2024-06-27",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20250919022840/https://www.franceinfo.fr/elections/legislatives/legislatives-2024-l-arcom-met-en-demeure-europe-1-pour-manque-de-mesure-et-d-honnetete-dans-l-emission-de-cyril-hanouna_6629991.html",
+      "archived": "2025-09-19"
     },
     {
       "source": "arcom",
@@ -3625,7 +3753,9 @@
       "relation": "a accueilli dans Reconquête Damien Rieu, présenté par franceinfo comme ancien cadre de Génération identitaire (« Bienvenue dans la Reconquête, cher Damien ! », 20/01/2022)",
       "url": "https://www.franceinfo.fr/elections/presidentielle/l-ancien-cadre-de-generation-identitaire-et-assistant-parlementaire-rn-damien-rieu-rejoint-eric-zemmour_4924131.html",
       "date": "2022-01-20",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20251012122530/https://www.franceinfo.fr/elections/presidentielle/l-ancien-cadre-de-generation-identitaire-et-assistant-parlementaire-rn-damien-rieu-rejoint-eric-zemmour_4924131.html",
+      "archived": "2025-10-12"
     },
     {
       "source": "gerald-darmanin",
@@ -3633,7 +3763,9 @@
       "relation": "a annoncé la dissolution en Conseil des ministres (05/01/2022)",
       "url": "https://www.franceinfo.fr/politique/eric-zemmour/le-gouvernement-dissout-le-groupuscule-d-ultradroite-les-zouaves-paris-notamment-soupconne-d-etre-implique-dans-les-violences-lors-du-meeting-de-zemmour-a-villepinte_4905269.html",
       "date": "2022-01-05",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20260220060254/https://www.franceinfo.fr/politique/eric-zemmour/le-gouvernement-dissout-le-groupuscule-d-ultradroite-les-zouaves-paris-notamment-soupconne-d-etre-implique-dans-les-violences-lors-du-meeting-de-zemmour-a-villepinte_4905269.html",
+      "archived": "2026-02-20"
     },
     {
       "source": "zouaves-paris",
@@ -3641,7 +3773,9 @@
       "relation": "groupe soupçonné (franceinfo) d'implication dans les violences contre des militants de SOS Racisme lors de sa réunion électorale de Villepinte (05/12/2021)",
       "url": "https://www.franceinfo.fr/politique/eric-zemmour/le-gouvernement-dissout-le-groupuscule-d-ultradroite-les-zouaves-paris-notamment-soupconne-d-etre-implique-dans-les-violences-lors-du-meeting-de-zemmour-a-villepinte_4905269.html",
       "date": "2021-12-05",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20260220060254/https://www.franceinfo.fr/politique/eric-zemmour/le-gouvernement-dissout-le-groupuscule-d-ultradroite-les-zouaves-paris-notamment-soupconne-d-etre-implique-dans-les-violences-lors-du-meeting-de-zemmour-a-villepinte_4905269.html",
+      "archived": "2026-02-20"
     },
     {
       "source": "conseil-etat",
@@ -3669,7 +3803,9 @@
       "relation": "ministre de l'Intérieur lors de la dissolution du 26/06/2024 (franceinfo)",
       "url": "https://www.franceinfo.fr/politique/gouvernement-de-gabriel-attal/le-gouvernement-a-dissous-le-syndicat-etudiant-gud-et-trois-autres-groupes-d-extreme-droite_6627165.html",
       "date": "2024-06-26",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20260909064210/https://www.franceinfo.fr/politique/gouvernement-de-gabriel-attal/le-gouvernement-a-dissous-le-syndicat-etudiant-gud-et-trois-autres-groupes-d-extreme-droite_6627165.html",
+      "archived": "2026-09-09"
     },
     {
       "source": "gerald-darmanin",
@@ -3677,7 +3813,9 @@
       "relation": "a proposé la dissolution, prononcée le 26/06/2024",
       "url": "https://www.franceinfo.fr/politique/gouvernement-de-gabriel-attal/le-gouvernement-a-dissous-le-syndicat-etudiant-gud-et-trois-autres-groupes-d-extreme-droite_6627165.html",
       "date": "2024-06-26",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20260909064210/https://www.franceinfo.fr/politique/gouvernement-de-gabriel-attal/le-gouvernement-a-dissous-le-syndicat-etudiant-gud-et-trois-autres-groupes-d-extreme-droite_6627165.html",
+      "archived": "2026-09-09"
     },
     {
       "source": "gud",
@@ -3685,7 +3823,9 @@
       "relation": "qualifié par Gérald Darmanin de « groupe d'ultradroite très ami » avec « les dirigeants du Rassemblement national » (BFMTV, 19/06/2024, rapporté par franceinfo)",
       "url": "https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
       "date": "2024-06-19",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20250902174618/https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
+      "archived": "2025-09-02"
     },
     {
       "source": "jordan-bardella",
@@ -3693,7 +3833,9 @@
       "relation": "a déclaré qu'il dissoudrait le GUD, comme « toutes les organisations d'ultragauche et d'ultradroite », s'il arrivait à Matignon (19/06/2024)",
       "url": "https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
       "date": "2024-06-19",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20250902174618/https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
+      "archived": "2025-09-02"
     },
     {
       "source": "xavier-bertrand",
@@ -3702,8 +3844,8 @@
       "url": "https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
       "date": "2024-06-11",
       "section": "france",
-      "archive_url": "https://web.archive.org/web/20261105144144/https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
-      "archived": "2026-11-05"
+      "archive_url": "https://web.archive.org/web/20260831134710/https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
+      "archived": "2026-08-31"
     },
     {
       "source": "xavier-bertrand",
@@ -3712,8 +3854,8 @@
       "url": "https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
       "date": "2024-06-11",
       "section": "france",
-      "archive_url": "https://web.archive.org/web/20261105144144/https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
-      "archived": "2026-11-05"
+      "archive_url": "https://web.archive.org/web/20260831134710/https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
+      "archived": "2026-08-31"
     },
     {
       "source": "yonathan-arfi",
@@ -3740,8 +3882,8 @@
       "url": "https://www.bfmtv.com/politique/est-ce-le-bon-moment-les-doutes-d-edouard-phillipe-quant-a-la-reconnaissance-de-l-etat-de-palestine_AN-202507250488.html",
       "date": "2025-07-25",
       "section": "gaza",
-      "archive_url": "https://web.archive.org/web/20261105144054/https://www.bfmtv.com/politique/est-ce-le-bon-moment-les-doutes-d-edouard-phillipe-quant-a-la-reconnaissance-de-l-etat-de-palestine_AN-202507250488.html",
-      "archived": "2026-11-05"
+      "archive_url": "https://web.archive.org/web/20250805133134/https://www.bfmtv.com/politique/est-ce-le-bon-moment-les-doutes-d-edouard-phillipe-quant-a-la-reconnaissance-de-l-etat-de-palestine_AN-202507250488.html",
+      "archived": "2025-08-05"
     },
     {
       "source": "jean-luc-melenchon",
@@ -3799,7 +3941,9 @@
       "relation": "auteur de « Gouverner » (soirée de lancement le 04/11/2026 au pavillon Wagram). StreetPress présente Fayard, dont le service presse répond aux demandes d'accréditation, comme détenue par Vincent Bolloré, et écrit que des journalistes de Mediapart et de StreetPress se sont vu refuser l'entrée",
       "url": "https://www.streetpress.com/1793883196-mediapart-politis-streetpress-rassemblement-national-bardella-tri-journalistes-antisemitisme-extreme-droite-fayard-bollore",
       "date": "2026-11-04",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261106192934/https://www.streetpress.com/1793883196-mediapart-politis-streetpress-rassemblement-national-bardella-tri-journalistes-antisemitisme-extreme-droite-fayard-bollore",
+      "archived": "2026-11-06"
     },
     {
       "source": "vincent-bollore",
@@ -3807,7 +3951,9 @@
       "relation": "BFMTV/AFP présente le groupe Bolloré comme « maison-mère » de Fayard ; à la soirée du 04/11/2026 au Pavillon Wagram, les médias de ce groupe sont restés après le départ de la quasi-totalité des autres journalistes inscrits",
       "url": "https://www.bfmtv.com/politique/front-national/mediapart-s-est-vu-refuser-l-acces-a-la-soiree-de-lancement-du-livre-de-jordan-bardella_AD-202611050240.html",
       "date": "2026-11-04",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261106192006/https://www.bfmtv.com/politique/front-national/mediapart-s-est-vu-refuser-l-acces-a-la-soiree-de-lancement-du-livre-de-jordan-bardella_AD-202611050240.html",
+      "archived": "2026-11-06"
     },
     {
       "source": "rn",
@@ -3815,7 +3961,9 @@
       "relation": "soirée de lancement du livre de Jordan Bardella organisée par Fayard le 04/11/2026 au Pavillon Wagram ; le RN invoque le caractère « privé » pour refuser l'accès à un journaliste de Mediapart muni d'un billet nominatif, alors que d'autres médias sont accrédités (BFMTV/AFP)",
       "url": "https://www.bfmtv.com/politique/front-national/mediapart-s-est-vu-refuser-l-acces-a-la-soiree-de-lancement-du-livre-de-jordan-bardella_AD-202611050240.html",
       "date": "2026-11-04",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261106192006/https://www.bfmtv.com/politique/front-national/mediapart-s-est-vu-refuser-l-acces-a-la-soiree-de-lancement-du-livre-de-jordan-bardella_AD-202611050240.html",
+      "archived": "2026-11-06"
     },
     {
       "source": "vincent-bollore",
@@ -3823,7 +3971,27 @@
       "relation": "le 04/11/2026, la commission des affaires culturelles et de l'éducation de l'Assemblée nationale désigne son président, le député LR Alexandre Portier, rapporteur de la pétition visant à « supprimer CNews » (plus de 800 000 signatures). Examen des suites envisagé possiblement le 10/11/2026 (LCP, cité par Le HuffPost). Le HuffPost présente CNews comme la « chaîne phare du groupe Bolloré ». Aucune décision de l'Assemblée à cette date",
       "url": "https://www.huffingtonpost.fr/politique/article/le-lr-alexandre-portier-rapporteur-sur-la-petition-anti-cnews-voici-les-prochaines-etapes-qui-attendent-le-texte_352080.html",
       "date": "2026-11-04",
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261106193931/https://www.huffingtonpost.fr/politique/article/le-lr-alexandre-portier-rapporteur-sur-la-petition-anti-cnews-voici-les-prochaines-etapes-qui-attendent-le-texte_352080.html",
+      "archived": "2026-11-06"
+    },
+    {
+      "source": "marine-le-pen",
+      "target": "cnews",
+      "relation": "message public sur X (@MLP_officiel) le 04/11/2026 prenant la défense de CNews, qu’elle présente comme ayant évoqué une agression de jeunes catholiques à Rouen",
+      "url": "https://x.com/MLP_officiel/status/2117897335271219295",
+      "date": "2026-11-04",
       "section": "france"
+    },
+    {
+      "source": "rn",
+      "target": "cnews",
+      "relation": "Frédéric Boccaletti, député RN, a pris la défense de CNews aux questions au gouvernement du 04/11/2026 face à une pétition réclamant la fermeture de la chaîne (compte rendu officiel). Distinct de la désignation, le même jour, d’Alexandre Portier comme rapporteur de cette pétition",
+      "url": "https://questions.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-mercredi-04-novembre-2026",
+      "date": "2026-11-04",
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261106193008/https://questions.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-mercredi-04-novembre-2026",
+      "archived": "2026-11-06"
     }
   ]
 }

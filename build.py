@@ -701,6 +701,76 @@ L("vincent-bollore","fayard","BFMTV/AFP présente le groupe Bolloré comme « ma
 L("rn","fayard","soirée de lancement du livre de Jordan Bardella organisée par Fayard le 04/11/2026 au Pavillon Wagram ; le RN invoque le caractère « privé » pour refuser l'accès à un journaliste de Mediapart muni d'un billet nominatif, alors que d'autres médias sont accrédités (BFMTV/AFP)",BFM_GOUV,"2026-11-04"); E[-1]["section"]="france"
 L("vincent-bollore","cnews","le 04/11/2026, la commission des affaires culturelles et de l'éducation de l'Assemblée nationale désigne son président, le député LR Alexandre Portier, rapporteur de la pétition visant à « supprimer CNews » (plus de 800 000 signatures). Examen des suites envisagé possiblement le 10/11/2026 (LCP, cité par Le HuffPost). Le HuffPost présente CNews comme la « chaîne phare du groupe Bolloré ». Aucune décision de l'Assemblée à cette date",HUFF_CNEWS_PET,"2026-11-04"); E[-1]["section"]="france"
 
+# ---------- mise à jour du 06/11/2026 : Le Pen et RN (CNews), Bardella/Bainville, Mélenchon (L'Avenir en commun) ----------
+X_LP_CNEWS="https://x.com/MLP_officiel/status/2117897335271219295"
+AN_QG_0411="https://questions.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-mercredi-04-novembre-2026"
+FI_GOUV_LIVRE="https://www.franceinfo.fr/elections/presidentielle/gouverner-que-contient-le-nouveau-livre-de-jordan-bardella_8267120.html"
+VOF_AEC="https://vof-news.fr/post/jean-luc-mlenchon-mise-tout-sur-gaza-au-dtriment-de-lukraine-dans-son-programme-pour-la"
+EUR_AEC="https://fr.euronews.com/2026/11/06/lavenir-en-commun-jean-luc-melenchon-publie-son-programme-avant-un-grand-meeting"
+I24_AEC="https://www.i24news.tv/fr/actu/france/artc-presidentielle-2027-melenchon-veut-voir-israel-devenir-un-etat-binational"
+_b["marine-le-pen"]["statements"].append(_st(
+ "Quoi qu’on puisse en penser, heureusement que CNEWS existe pour évoquer l’agression de jeunes catholiques à Rouen au cri de « sale blanc » et « sale facho », manifestation d’un racisme anti-Blancs dont quasiment aucun autre média n’a parlé. Refuser de parler et de condamner tous les racismes, c’est refuser de condamner le racisme.",
+ "2026-11-04",
+ "Message sur X (@MLP_officiel), 4 novembre 2026, 08:30 UTC. Le message publié comporte un saut de paragraphe avant la seconde phrase. Il porte sur la couverture, par CNews, d’une agression que Marine Le Pen situe à Rouen ; ce fait n’est pas documenté ici indépendamment de son message.",
+ X_LP_CNEWS, F))
+L("marine-le-pen","cnews","message public sur X (@MLP_officiel) le 04/11/2026 prenant la défense de CNews, qu’elle présente comme ayant évoqué une agression de jeunes catholiques à Rouen",X_LP_CNEWS,"2026-11-04"); E[-1]["section"]="france"
+_b["rn"]["statements"].append(_st(
+ "Une pétition réclame la fermeture de CNews. Voilà donc le projet démocratique de certains donneurs de leçons : museler ceux qui ne pensent pas comme eux.",
+ "2026-11-04",
+ "Frédéric Boccaletti, député RN, questions au gouvernement, Assemblée nationale, 4 novembre 2026 (compte rendu officiel, première séance). Le compte rendu insère, entre les deux phrases, la mention « (Applaudissements sur les bancs du groupe LFI-NFP.) ». Les interruptions d’autres députés figurent au compte rendu et ne sont pas reproduites.",
+ AN_QG_0411, F))
+_b["rn"]["statements"].append(_st(
+ "Dans une démocratie, on combat des idées avec des arguments, pas avec des pétitions visant à censurer une chaîne de télévision.",
+ "2026-11-04",
+ "Frédéric Boccaletti, député RN, questions au gouvernement, Assemblée nationale, 4 novembre 2026 (compte rendu officiel). Phrase précédée, dans le même exposé, de : « Une ligne éditoriale se critique ; un journaliste se contredit ; une émission qui déplaît se zappe. »",
+ AN_QG_0411, F))
+_b["rn"]["statements"].append(_st(
+ "L’Arcom a relevé qu’au premier trimestre 2026, plus de 70 % du temps de parole du Rassemblement national diffusé sur France Info et près de 60 % de celui diffusé sur France Inter l’avaient été entre minuit et 6 heures du matin.",
+ "2026-11-04",
+ "Frédéric Boccaletti, député RN, questions au gouvernement, Assemblée nationale, 4 novembre 2026 (compte rendu officiel). Phrase tenue par l’orateur au sujet de relevés qu’il attribue à l’Arcom ; le document de l’Arcom n’a pas été consulté pour cette entrée. La suite (« Voilà une conception bien particulière du pluralisme… ») n’est pas reproduite.",
+ AN_QG_0411, F))
+L("rn","cnews","Frédéric Boccaletti, député RN, a pris la défense de CNews aux questions au gouvernement du 04/11/2026 face à une pétition réclamant la fermeture de la chaîne (compte rendu officiel). Distinct de la désignation, le même jour, d’Alexandre Portier comme rapporteur de cette pétition",AN_QG_0411,"2026-11-04"); E[-1]["section"]="france"
+_b["jordan-bardella"]["statements"].append(_st(
+ "[la France n'est pas] une race [mais] une nation à laquelle on s'agrège",
+ "2026-11-04",
+ "Livre « Gouverner » (Fayard), sortie le 4 novembre 2026. franceinfo écrit que Jordan Bardella cite Jacques Bainville, qu'elle présente comme auteur nationaliste, royaliste et antisémite, « à qui il fait dire que la France n'est pas \"une race\" mais \"une nation à laquelle on s'agrège\" ». Les crochets reprennent cette liaison ; « une race » et « une nation à laquelle on s'agrège » sont les deux fragments placés entre guillemets par franceinfo.",
+ FI_GOUV_LIVRE, F))
+_b["jordan-bardella"]["statements"].append(_st(
+ "L'aider à gagner cette campagne est ma responsabilité.",
+ "2026-11-04",
+ "Livre « Gouverner » (Fayard), cité par franceinfo, à propos de Marine Le Pen. franceinfo écrit qu'il reconnaît « avoir peut-être accusé le coup » après l'annonce de la candidature de Marine Le Pen, puis « se reprend » avec cette phrase.",
+ FI_GOUV_LIVRE, F))
+_b["jordan-bardella"]["statements"].append(_st(
+ "On a tenté de me faire chuter",
+ "2026-11-04",
+ "Postface « Le prix de l'engagement » du livre « Gouverner » (Fayard), citée par franceinfo, qui écrit que Jordan Bardella « répète » cette phrase. franceinfo indique que les révélations de Mediapart sur des messages attribués à l'auteur à 17 ans sont arrivées alors que le livre était quasiment bouclé ; ces messages ne sont pas tenus pour établis ici. Il cite ensuite, selon franceinfo, une phrase attribuée à François Mitterrand : « Toutes les explications du monde ne justifieront pas qu'on ait pu livrer à la meute l'honneur d'un homme. »",
+ FI_GOUV_LIVRE, F))
+_b["jordan-bardella"]["statements"].append(_st(
+ "Je sais maintenant que les mois qui viennent seront difficiles.",
+ "2026-11-04",
+ "Conclusion de la postface « Le prix de l'engagement » du livre « Gouverner » (Fayard), citée par franceinfo.",
+ FI_GOUV_LIVRE, F))
+_b["jean-luc-melenchon"]["statements"].append(_st(
+ "autorités françaises […] laissé commettre […] génocide à Gaza",
+ "2026-11-06",
+ "Trois fragments du programme « L’Avenir en commun » (La Dispute, 160 pages, 4,90 euros), paru le 6 novembre 2026 selon Voice of Freedom. L’article écrit : « Reprochant aux « autorités françaises » d’avoir « laissé commettre » un « génocide à Gaza » ». La France insoumise avait annoncé le 2 novembre 2026 que cette parution serait la 5e édition (1 069 mesures). Le mot « un », entre le deuxième et le troisième fragment, n’est pas dans les guillemets de l’article.",
+ VOF_AEC, G, "gaza"))
+_b["jean-luc-melenchon"]["statements"].append(_st(
+ "double standard diplomatique […] ne condamnant pas les guerres d’agression contre le Liban et l’Iran comme la guerre d’agression contre l’Ukraine",
+ "2026-11-06",
+ "Deux fragments du même programme, cités par Voice of Freedom le 6 novembre 2026. L’article écrit que le texte « accuse Emmanuel Macron d’avoir mené une politique de « double standard diplomatique » en « ne condamnant pas les guerres d’agression contre le Liban et l’Iran comme la guerre d’agression contre l’Ukraine » ».",
+ VOF_AEC, G, "gaza"))
+_b["jean-luc-melenchon"]["statements"].append(_st(
+ "un génocide être commis […] deux poids, deux mesures",
+ "2026-11-06",
+ "Deux fragments rapportés par Euronews le 6 novembre 2026, dans une formulation distincte de celle de Voice of Freedom le même jour. Euronews écrit que le programme de LFI accuse le gouvernement français de laisser « un génocide être commis » à Gaza et dénonce ce qu’il décrit comme des « deux poids, deux mesures » diplomatiques.",
+ EUR_AEC, G, "gaza"))
+_b["jean-luc-melenchon"]["statements"].append(_st(
+ "prendre en compte les autres possibilités […] État binational égalitaire",
+ "2026-11-06",
+ "Deux fragments du programme « L’Avenir en commun » (version dévoilée le 6 novembre 2026, 1 069 mesures selon i24NEWS). i24NEWS écrit que La France insoumise « propose désormais de « prendre en compte les autres possibilités » permettant de garantir les droits des Palestiniens, citant notamment l’hypothèse d’un « État binational égalitaire » ». i24NEWS écrit aussi, sans guillemets, que le texte promet des sanctions contre le gouvernement de Benyamin Netanyahou et la suspension de l’accord d’association entre Israël et l’Union européenne ; ces formulations ne sont pas reprises comme citations. Les qualifications éditoriales de l’article ne sont pas reprises.",
+ I24_AEC, G, "gaza"))
+
 # archives Wayback Machine (tools/archive.py -> tools/archives.json)
 _root=_here if os.path.isdir(os.path.join(_here,"tools")) else "/workspace/gaza-site"
 _ap=os.path.join(_root,"tools/archives.json")

@@ -157,7 +157,7 @@
  "https://x.com/Enthoven_R/status/2108828983693373510": {
   "archive_url": null,
   "status": "failed",
-  "error": "save:HTTP Error 523: UNKNOWN"
+  "error": "save:<urlopen error _ssl.c:983: The handshake operation timed out>"
  },
  "https://x.com/Enthoven_R/status/2109306896901361749": {
   "archive_url": null,
@@ -485,14 +485,14 @@
   "status": "existing"
  },
  "https://www.franceinfo.fr/culture/tv/cyril-hanouna/l-animateur-cyril-hanouna-annonce-rejoindre-le-groupe-m6-en-septembre_7100610.html": {
-  "archive_url": null,
-  "status": "failed",
-  "error": "save:HTTP Error 520: UNKNOWN"
+  "archive_url": "https://web.archive.org/web/20250901233633/https://www.franceinfo.fr/culture/tv/cyril-hanouna/l-animateur-cyril-hanouna-annonce-rejoindre-le-groupe-m6-en-septembre_7100610.html",
+  "archived": "2025-09-01",
+  "status": "existing"
  },
  "https://www.franceinfo.fr/elections/legislatives/legislatives-2024-l-arcom-met-en-demeure-europe-1-pour-manque-de-mesure-et-d-honnetete-dans-l-emission-de-cyril-hanouna_6629991.html": {
-  "archive_url": null,
-  "status": "failed",
-  "error": "save:HTTP Error 520: UNKNOWN"
+  "archive_url": "https://web.archive.org/web/20250919022840/https://www.franceinfo.fr/elections/legislatives/legislatives-2024-l-arcom-met-en-demeure-europe-1-pour-manque-de-mesure-et-d-honnetete-dans-l-emission-de-cyril-hanouna_6629991.html",
+  "archived": "2025-09-19",
+  "status": "existing"
  },
  "https://www.arcom.fr/sites/default/files/2024-06/Arcom%20-%20MED%20Europe%201.pdf": {
   "archive_url": "https://web.archive.org/web/20261104193832/https://www.arcom.fr/sites/default/files/2024-06/Arcom%20-%20MED%20Europe%201.pdf",
@@ -522,6 +522,141 @@
  "https://www.arcom.fr/se-documenter/espace-juridique/decisions/emission-100-politique-week-end-diffusee-le-3-avril-2026-intervention-aupres-de-cnews": {
   "archive_url": "https://web.archive.org/web/20261104195104/https://www.arcom.fr/se-documenter/espace-juridique/decisions/emission-100-politique-week-end-diffusee-le-3-avril-2026-intervention-aupres-de-cnews",
   "archived": "2026-11-04",
+  "status": "saved"
+ },
+ "https://www.franceinfo.fr/politique/marine-le-pen/video-generation-identitaire-ce-qui-scandalise-m-darmanin-doit-fait-l-objet-d-une-dissolution-ca-ce-n-est-pas-l-etat-de-droit-denonce-marine-le-pen_4273347.html": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 520: UNKNOWN"
+ },
+ "https://x.com/MLP_officiel/status/2117897335271219295": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html": {
+  "archive_url": "https://web.archive.org/web/20250902174618/https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
+  "archived": "2025-09-02",
+  "status": "existing"
+ },
+ "https://www.bfmtv.com/politique/front-national/mediapart-s-est-vu-refuser-l-acces-a-la-soiree-de-lancement-du-livre-de-jordan-bardella_AD-202611050240.html": {
+  "archive_url": "https://web.archive.org/web/20261106192006/https://www.bfmtv.com/politique/front-national/mediapart-s-est-vu-refuser-l-acces-a-la-soiree-de-lancement-du-livre-de-jordan-bardella_AD-202611050240.html",
+  "archived": "2026-11-06",
+  "status": "saved"
+ },
+ "https://www.franceinfo.fr/elections/presidentielle/gouverner-que-contient-le-nouveau-livre-de-jordan-bardella_8267120.html": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 520: UNKNOWN"
+ },
+ "https://www.streetpress.com/1793883196-mediapart-politis-streetpress-rassemblement-national-bardella-tri-journalistes-antisemitisme-extreme-droite-fayard-bollore": {
+  "archive_url": "https://web.archive.org/web/20261106192934/https://www.streetpress.com/1793883196-mediapart-politis-streetpress-rassemblement-national-bardella-tri-journalistes-antisemitisme-extreme-droite-fayard-bollore",
+  "archived": "2026-11-06",
+  "status": "saved"
+ },
+ "https://questions.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-mercredi-04-novembre-2026": {
+  "archive_url": "https://web.archive.org/web/20261106193008/https://questions.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-mercredi-04-novembre-2026",
+  "archived": "2026-11-06",
+  "status": "saved"
+ },
+ "https://www.franceinfo.fr/monde/proche-orient/guerre/la-paix-est-possible-emmanuel-macron-annonce-que-la-france-va-reconnaitre-l-etat-de-palestine-en-septembre_7396969.html": {
+  "archive_url": "https://web.archive.org/web/20251219054155/https://www.franceinfo.fr/monde/proche-orient/guerre/la-paix-est-possible-emmanuel-macron-annonce-que-la-france-va-reconnaitre-l-etat-de-palestine-en-septembre_7396969.html",
+  "archived": "2025-12-19",
+  "status": "existing"
+ },
+ "https://www.franceinfo.fr/politique/jean-castex/gouvernement-de-jean-castex/le-groupe-d-extreme-droite-generation-identitaire-dissous-en-conseil-des-ministres-annonce-gerald-darmanin_4318225.html": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 520: UNKNOWN"
+ },
+ "https://www.franceinfo.fr/politique/eric-zemmour/le-gouvernement-dissout-le-groupuscule-d-ultradroite-les-zouaves-paris-notamment-soupconne-d-etre-implique-dans-les-violences-lors-du-meeting-de-zemmour-a-villepinte_4905269.html": {
+  "archive_url": "https://web.archive.org/web/20260220060254/https://www.franceinfo.fr/politique/eric-zemmour/le-gouvernement-dissout-le-groupuscule-d-ultradroite-les-zouaves-paris-notamment-soupconne-d-etre-implique-dans-les-violences-lors-du-meeting-de-zemmour-a-villepinte_4905269.html",
+  "archived": "2026-02-20",
+  "status": "existing"
+ },
+ "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2024-12-30/489498": {
+  "archive_url": "https://web.archive.org/web/20261105063042/https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2024-12-30/489498",
+  "archived": "2026-11-05",
+  "status": "existing"
+ },
+ "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2025-07-31/497252": {
+  "archive_url": "https://web.archive.org/web/20261105063100/https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2025-07-31/497252",
+  "archived": "2026-11-05",
+  "status": "existing"
+ },
+ "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/attaque-du-hamas-contre-israel-la-position-de-lfi-cree-la-polemique-au-sein-de-la-nupes_6109152.html": {
+  "archive_url": "https://web.archive.org/web/20250822172642/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/attaque-du-hamas-contre-israel-la-position-de-lfi-cree-la-polemique-au-sein-de-la-nupes_6109152.html",
+  "archived": "2025-08-22",
+  "status": "existing"
+ },
+ "https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html": {
+  "archive_url": "https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
+  "archived": "2026-10-15",
+  "status": "existing"
+ },
+ "https://vof-news.fr/post/jean-luc-mlenchon-mise-tout-sur-gaza-au-dtriment-de-lukraine-dans-son-programme-pour-la": {
+  "archive_url": "https://web.archive.org/web/20261106193422/https://vof-news.fr/post/jean-luc-mlenchon-mise-tout-sur-gaza-au-dtriment-de-lukraine-dans-son-programme-pour-la",
+  "archived": "2026-11-06",
+  "status": "saved"
+ },
+ "https://fr.euronews.com/2026/11/06/lavenir-en-commun-jean-luc-melenchon-publie-son-programme-avant-un-grand-meeting": {
+  "archive_url": "https://web.archive.org/web/20261106193449/https://fr.euronews.com/2026/11/06/lavenir-en-commun-jean-luc-melenchon-publie-son-programme-avant-un-grand-meeting",
+  "archived": "2026-11-06",
+  "status": "saved"
+ },
+ "https://www.i24news.tv/fr/actu/france/artc-presidentielle-2027-melenchon-veut-voir-israel-devenir-un-etat-binational": {
+  "archive_url": "https://web.archive.org/web/20261106193526/https://www.i24news.tv/fr/actu/france/artc-presidentielle-2027-melenchon-veut-voir-israel-devenir-un-etat-binational",
+  "archived": "2026-11-06",
+  "status": "saved"
+ },
+ "https://www.lefigaro.fr/politique/guerre-hamas-israel-raphael-glucksmann-refuse-le-terme-de-genocide-et-prefere-celui-de-carnage-20240312": {
+  "archive_url": "https://web.archive.org/web/20240929102111/https://www.lefigaro.fr/politique/guerre-hamas-israel-raphael-glucksmann-refuse-le-terme-de-genocide-et-prefere-celui-de-carnage-20240312",
+  "archived": "2024-09-29",
+  "status": "existing"
+ },
+ "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/guerre-entre-israel-et-le-hamas-nous-allons-vers-le-genocide-il-est-en-cours-accuse-fabien-roussel_6416110.html": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 520: UNKNOWN"
+ },
+ "https://www.franceinfo.fr/monde/palestine/gaza/guerre-a-gaza-le-ps-le-pcf-et-les-ecologistes-reunis-a-paris-pour-denoncer-le-genocide-commis-par-israel_7274295.html": {
+  "archive_url": "https://web.archive.org/web/20250917175607/https://www.franceinfo.fr/monde/palestine/gaza/guerre-a-gaza-le-ps-le-pcf-et-les-ecologistes-reunis-a-paris-pour-denoncer-le-genocide-commis-par-israel_7274295.html",
+  "archived": "2025-09-17",
+  "status": "existing"
+ },
+ "https://www.bfmtv.com/politique/est-ce-le-bon-moment-les-doutes-d-edouard-phillipe-quant-a-la-reconnaissance-de-l-etat-de-palestine_AN-202507250488.html": {
+  "archive_url": "https://web.archive.org/web/20250805133134/https://www.bfmtv.com/politique/est-ce-le-bon-moment-les-doutes-d-edouard-phillipe-quant-a-la-reconnaissance-de-l-etat-de-palestine_AN-202507250488.html",
+  "archived": "2025-08-05",
+  "status": "existing"
+ },
+ "https://www.bfmtv.com/politique/gouvernement/reconnaissance-d-un-etat-palestinien-gabriel-attal-assure-a-son-tour-que-ce-n-est-pas-un-tabou_AN-202405290686.html": {
+  "archive_url": "https://web.archive.org/web/20250722000931/https://www.bfmtv.com/politique/gouvernement/reconnaissance-d-un-etat-palestinien-gabriel-attal-assure-a-son-tour-que-ce-n-est-pas-un-tabou_AN-202405290686.html",
+  "archived": "2025-07-22",
+  "status": "existing"
+ },
+ "https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611": {
+  "archive_url": "https://web.archive.org/web/20260831134710/https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
+  "archived": "2026-08-31",
+  "status": "existing"
+ },
+ "https://www.20minutes.fr/monde/israel/4166059-20250731-crime-lieu-gaza-crime-genocide-affirme-dominique-villepin": {
+  "archive_url": "https://web.archive.org/web/20260520132306/https://www.20minutes.fr/monde/israel/4166059-20250731-crime-lieu-gaza-crime-genocide-affirme-dominique-villepin",
+  "archived": "2026-05-20",
+  "status": "existing"
+ },
+ "https://www.franceinfo.fr/elections/presidentielle/l-ancien-cadre-de-generation-identitaire-et-assistant-parlementaire-rn-damien-rieu-rejoint-eric-zemmour_4924131.html": {
+  "archive_url": "https://web.archive.org/web/20251012122530/https://www.franceinfo.fr/elections/presidentielle/l-ancien-cadre-de-generation-identitaire-et-assistant-parlementaire-rn-damien-rieu-rejoint-eric-zemmour_4924131.html",
+  "archived": "2025-10-12",
+  "status": "existing"
+ },
+ "https://www.franceinfo.fr/politique/gouvernement-de-gabriel-attal/le-gouvernement-a-dissous-le-syndicat-etudiant-gud-et-trois-autres-groupes-d-extreme-droite_6627165.html": {
+  "archive_url": "https://web.archive.org/web/20260909064210/https://www.franceinfo.fr/politique/gouvernement-de-gabriel-attal/le-gouvernement-a-dissous-le-syndicat-etudiant-gud-et-trois-autres-groupes-d-extreme-droite_6627165.html",
+  "archived": "2026-09-09",
+  "status": "existing"
+ },
+ "https://www.huffingtonpost.fr/politique/article/le-lr-alexandre-portier-rapporteur-sur-la-petition-anti-cnews-voici-les-prochaines-etapes-qui-attendent-le-texte_352080.html": {
+  "archive_url": "https://web.archive.org/web/20261106193931/https://www.huffingtonpost.fr/politique/article/le-lr-alexandre-portier-rapporteur-sur-la-petition-anti-cnews-voici-les-prochaines-etapes-qui-attendent-le-texte_352080.html",
+  "archived": "2026-11-06",
   "status": "saved"
  }
 }
