@@ -157,7 +157,7 @@
  "https://x.com/Enthoven_R/status/2108828983693373510": {
   "archive_url": null,
   "status": "failed",
-  "error": "save:<urlopen error _ssl.c:983: The handshake operation timed out>"
+  "error": "save:HTTP Error 523: UNKNOWN"
  },
  "https://x.com/Enthoven_R/status/2109306896901361749": {
   "archive_url": null,
@@ -382,7 +382,7 @@
  "https://www.leparisien.fr/culture-loisirs/tv/europe-1-mise-en-demeure-pour-incitation-a-la-haine-apres-les-propos-de-christine-kelly-qui-qualifiait-les-migrants-de-violeurs-26-10-2026-SZFN7ZJZ4BDKXP3ALSARRTZJX4.php": {
   "archive_url": null,
   "status": "failed",
-  "error": "save:HTTP Error 520: UNKNOWN"
+  "error": "save:<urlopen error _ssl.c:983: The handshake operation timed out>"
  },
  "https://www.lefigaro.fr/medias/il-y-a-un-desequilibre-manifeste-et-repete-l-arcom-met-en-demeure-cnews-de-se-conformer-a-ses-obligations-de-pluralisme-des-opinions-20260615": {
   "archive_url": "https://web.archive.org/web/20260720014225/https://www.lefigaro.fr/medias/il-y-a-un-desequilibre-manifeste-et-repete-l-arcom-met-en-demeure-cnews-de-se-conformer-a-ses-obligations-de-pluralisme-des-opinions-20260615",
@@ -400,9 +400,9 @@
   "status": "existing"
  },
  "https://france3-regions.franceinfo.fr/pays-de-la-loire/loire-atlantique/nantes/menaces-racistes-armes-factices-telespectateur-de-cnews-un-habitant-de-lege-condamne-a-six-mois-de-prison-pour-vouloir-cramer-des-musulmans-3443592.html": {
-  "archive_url": null,
-  "status": "failed",
-  "error": "save:HTTP Error 520: UNKNOWN"
+  "archive_url": "https://web.archive.org/web/20261107102313/https://france3-regions.franceinfo.fr/pays-de-la-loire/loire-atlantique/nantes/menaces-racistes-armes-factices-telespectateur-de-cnews-un-habitant-de-lege-condamne-a-six-mois-de-prison-pour-vouloir-cramer-des-musulmans-3443592.html",
+  "archived": "2026-11-07",
+  "status": "existing"
  },
  "https://www.leparisien.fr/faits-divers/alcool-solitude-et-cnews-en-boucle-un-technicien-de-45-ans-condamne-apres-ses-menaces-de-mort-racistes-sur-facebook-03-11-2026-J4YLXBPWUVEEPFJLRLRLUVL22Q.php": {
   "archive_url": null,
@@ -410,9 +410,9 @@
   "error": "save:HTTP Error 520: UNKNOWN"
  },
  "https://www.ouest-france.fr/societe/justice/ce-quon-voit-est-anxiogene-a-nantes-un-homme-condamne-apres-des-menaces-de-mort-a-caractere-raciste-sur-facebook-23d0dcec-d79a-11f1-9911-9179baff22e2": {
-  "archive_url": null,
-  "status": "failed",
-  "error": "save:HTTP Error 520: UNKNOWN"
+  "archive_url": "https://web.archive.org/web/20261107102322/https://www.ouest-france.fr/societe/justice/ce-quon-voit-est-anxiogene-a-nantes-un-homme-condamne-apres-des-menaces-de-mort-a-caractere-raciste-sur-facebook-23d0dcec-d79a-11f1-9911-9179baff22e2",
+  "archived": "2026-11-07",
+  "status": "existing"
  },
  "https://lafranceinsoumise.fr/wp-content/uploads/2024/06/Programme-nouveaufrontpopulaire.pdf": {
   "archive_url": "https://web.archive.org/web/20261010103230/https://lafranceinsoumise.fr/wp-content/uploads/2024/06/Programme-nouveaufrontpopulaire.pdf",
@@ -450,14 +450,14 @@
   "status": "existing"
  },
  "https://www.assemblee-nationale.fr/dyn/16/amendements/0017/AN/855": {
-  "archive_url": null,
-  "status": "failed",
-  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+  "archive_url": "https://web.archive.org/web/20260317030713/https://www.assemblee-nationale.fr/dyn/16/amendements/0017/AN/855",
+  "archived": "2026-03-17",
+  "status": "existing"
  },
  "https://www.lejdd.fr/Politique/taxation-des-super-profits-a-lassemblee-le-consensus-entre-lrem-et-la-nupes-naura-finalement-pas-lieu-4124598": {
-  "archive_url": null,
-  "status": "failed",
-  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+  "archive_url": "https://web.archive.org/web/20230801201321/https://www.lejdd.fr/Politique/taxation-des-super-profits-a-lassemblee-le-consensus-entre-lrem-et-la-nupes-naura-finalement-pas-lieu-4124598",
+  "archived": "2023-08-01",
+  "status": "existing"
  },
  "https://www.leparisien.fr/culture-loisirs/tv/guerre-israel-hamas-pour-cyril-hanouna-lappel-au-boycott-de-tpmp-est-un-acte-antisemite-31-10-2023-VQBIXKEHLNCJ7J4YSOI7QMIX5U.php": {
   "archive_url": "https://web.archive.org/web/20250915154540/https://www.leparisien.fr/culture-loisirs/tv/guerre-israel-hamas-pour-cyril-hanouna-lappel-au-boycott-de-tpmp-est-un-acte-antisemite-31-10-2023-VQBIXKEHLNCJ7J4YSOI7QMIX5U.php",
@@ -658,5 +658,35 @@
   "archive_url": "https://web.archive.org/web/20261106193931/https://www.huffingtonpost.fr/politique/article/le-lr-alexandre-portier-rapporteur-sur-la-petition-anti-cnews-voici-les-prochaines-etapes-qui-attendent-le-texte_352080.html",
   "archived": "2026-11-06",
   "status": "saved"
+ },
+ "https://x.com/JLMelenchon/status/2119116481719882201": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/JLMelenchon/status/2119099501218603276": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://www.bfmtv.com/politique/elections/presidentielle/video-jean-luc-melenchon-veut-agir-frontalement-au-secours-des-palestiniens-contre-le-genocide-a-gaza-et-contre-l-annexion-progressive-de-la-cisjordanie-en-cas-de-victoire-a-l-election-presidentielle_VN-202611070422.html": {
+  "archive_url": "https://web.archive.org/web/20261107191148/https://www.bfmtv.com/politique/elections/presidentielle/video-jean-luc-melenchon-veut-agir-frontalement-au-secours-des-palestiniens-contre-le-genocide-a-gaza-et-contre-l-annexion-progressive-de-la-cisjordanie-en-cas-de-victoire-a-l-election-presidentielle_VN-202611070422.html",
+  "archived": "2026-11-07",
+  "status": "saved"
+ },
+ "https://www.france24.com/fr/info-en-continu/20261106-bardella-accuse-lfi-de-tentation-totalitaire-en-voulant-fermer-cnews": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 520: UNKNOWN"
+ },
+ "https://x.com/CNEWS/status/2118796044427248034": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/J_Bardella/status/2118813222325153989": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
  }
 }

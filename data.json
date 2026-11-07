@@ -1,15 +1,15 @@
 {
   "meta": {
-    "generated": "2026-11-06",
-    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-06 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : fichiers Wikimedia Commons sous licence libre, avec auteur, licence et lien ; logos reproduits à seule fin d'identification. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
+    "generated": "2026-11-07",
+    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-07 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : fichiers Wikimedia Commons sous licence libre, avec auteur, licence et lien ; logos reproduits à seule fin d'identification. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
       "persons": 40,
       "orgs": 37,
-      "edges": 119,
-      "statements": 134,
+      "edges": 120,
+      "statements": 140,
       "photos": 25,
       "logos": 19,
-      "videos": 14,
+      "videos": 15,
       "france_nodes": 42
     },
     "category_order": [
@@ -416,6 +416,36 @@
           "date": "2026-11-04",
           "medium": "Conclusion de la postface « Le prix de l'engagement » du livre « Gouverner » (Fayard), citée par franceinfo.",
           "url": "https://www.franceinfo.fr/elections/presidentielle/gouverner-que-contient-le-nouveau-livre-de-jordan-bardella_8267120.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Quand on veut fermer une chaîne de télévision comme CNews, on est habité d'une tentation totalitaire.",
+          "date": "2026-11-06",
+          "medium": "Invité de Philippe de Villiers sur CNews (« HD Pros 2 WE » / #HDPros2WE), 6 novembre 2026, cité par AFP via France 24. La phrase suivante du même extrait AFP est reproduite séparément. Contexte indiqué par AFP : pétition demandant la fermeture de CNews (plus de 950 000 signatures le soir du 06/11) ; les députés doivent décider dans les prochains jours d’organiser ou non un débat ; le groupe parlementaire LFI est en première ligne. Aucune décision de l’Assemblée n’est documentée à cette date.",
+          "url": "https://www.france24.com/fr/info-en-continu/20261106-bardella-accuse-lfi-de-tentation-totalitaire-en-voulant-fermer-cnews",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "video": {
+            "url": "https://x.com/CNEWS/status/2118796044427248034",
+            "platform": "x.com",
+            "title": "Jordan Bardella sur CNews — « tentation totalitaire »",
+            "source": "CNews (compte officiel @CNEWS)"
+          }
+        },
+        {
+          "quote": "Lorsque, comme le maire de Saint-Denis, on veut empêcher le Rassemblement national de pouvoir s'exprimer, on est pris d'une tentation totalitaire",
+          "date": "2026-11-06",
+          "medium": "Même intervention sur CNews (« HD Pros 2 WE »), 6 novembre 2026, phrase suivant immédiatement la précédente dans la dépêche AFP reprise par France 24. La fonction est citée telle que dans la dépêche ; le nom de l’élu n’est pas repris.",
+          "url": "https://www.france24.com/fr/info-en-continu/20261106-bardella-accuse-lfi-de-tentation-totalitaire-en-voulant-fermer-cnews",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Si je suis chef du gouvernement, je demanderai l'inscription des milices antifas et de toutes les organisations d'ultra-gauche sur la liste des organisations terroristes.",
+          "date": "2026-11-06",
+          "medium": "Message sur X (@J_Bardella), 6 novembre 2026, 21:10 UTC. Phrase suivante du même post, non reproduite ici : « Il faudra faire cela pour protéger le droit à manifester des honnêtes gens. » AFP via France 24 rapporte la même intention, conditionnelle au fait qu’il devienne Premier ministre si Marine Le Pen est élue, dans une formulation proche (« demanderait à l’Union européenne l’inscription des milices antifas et de toutes les organisations d’ultragauche », sans trait d’union).",
+          "url": "https://x.com/J_Bardella/status/2118813222325153989",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
         }
@@ -2213,7 +2243,9 @@
           "medium": "Propos publiés sur Facebook par le prévenu en octobre 2026, cités par France 3 Pays de la Loire ; jugement du tribunal correctionnel de Nantes (comparution immédiate) : six mois d'emprisonnement avec sursis probatoire pour menaces de mort à caractère raciste, visant aussi Emmanuel Macron",
           "url": "https://france3-regions.franceinfo.fr/pays-de-la-loire/loire-atlantique/nantes/menaces-racistes-armes-factices-telespectateur-de-cnews-un-habitant-de-lege-condamne-a-six-mois-de-prison-pour-vouloir-cramer-des-musulmans-3443592.html",
           "theme": "France – montée des violences",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261107102313/https://france3-regions.franceinfo.fr/pays-de-la-loire/loire-atlantique/nantes/menaces-racistes-armes-factices-telespectateur-de-cnews-un-habitant-de-lege-condamne-a-six-mois-de-prison-pour-vouloir-cramer-des-musulmans-3443592.html",
+          "archived": "2026-11-07"
         },
         {
           "quote": "Ça me monte un peu trop au cerveau, je suis une éponge",
@@ -2221,7 +2253,9 @@
           "medium": "Le prévenu, à l'audience du tribunal correctionnel de Nantes, au sujet de l'alcool qu'il consomme devant CNews pour « tromper sa solitude », cité par France 3 Pays de la Loire",
           "url": "https://france3-regions.franceinfo.fr/pays-de-la-loire/loire-atlantique/nantes/menaces-racistes-armes-factices-telespectateur-de-cnews-un-habitant-de-lege-condamne-a-six-mois-de-prison-pour-vouloir-cramer-des-musulmans-3443592.html",
           "theme": "France – montée des violences",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261107102313/https://france3-regions.franceinfo.fr/pays-de-la-loire/loire-atlantique/nantes/menaces-racistes-armes-factices-telespectateur-de-cnews-un-habitant-de-lege-condamne-a-six-mois-de-prison-pour-vouloir-cramer-des-musulmans-3443592.html",
+          "archived": "2026-11-07"
         },
         {
           "quote": "alimenté quotidiennement par des chaînes d'information en continu",
@@ -2229,7 +2263,9 @@
           "medium": "La procureure de la République, à l'audience, à propos du prévenu, citée par France 3 Pays de la Loire ; le tribunal a suivi les réquisitions du parquet",
           "url": "https://france3-regions.franceinfo.fr/pays-de-la-loire/loire-atlantique/nantes/menaces-racistes-armes-factices-telespectateur-de-cnews-un-habitant-de-lege-condamne-a-six-mois-de-prison-pour-vouloir-cramer-des-musulmans-3443592.html",
           "theme": "France – montée des violences",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261107102313/https://france3-regions.franceinfo.fr/pays-de-la-loire/loire-atlantique/nantes/menaces-racistes-armes-factices-telespectateur-de-cnews-un-habitant-de-lege-condamne-a-six-mois-de-prison-pour-vouloir-cramer-des-musulmans-3443592.html",
+          "archived": "2026-11-07"
         }
       ],
       "sections": [
@@ -2589,6 +2625,30 @@
           "section": "gaza",
           "archive_url": "https://web.archive.org/web/20261106193526/https://www.i24news.tv/fr/actu/france/artc-presidentielle-2027-melenchon-veut-voir-israel-devenir-un-etat-binational",
           "archived": "2026-11-06"
+        },
+        {
+          "quote": "Nous agirons frontalement au secours des Palestiniens, à la fois contre le génocide à Gaza et contre l’annexion progressive de la Cisjordanie.",
+          "date": "2026-11-07",
+          "medium": "Message sur X (@JLMelenchon), 7 novembre 2026, 17:15 UTC. Présentation orale au meeting du Bourget le même jour ; BFMTV a aussi repris cette formulation (https://www.bfmtv.com/politique/elections/presidentielle/video-jean-luc-melenchon-veut-agir-frontalement-au-secours-des-palestiniens-contre-le-genocide-a-gaza-et-contre-l-annexion-progressive-de-la-cisjordanie-en-cas-de-victoire-a-l-election-presidentielle_VN-202611070422.html). Engagement conditionnel à une éventuelle victoire présidentielle 2027 — le poste n’entraîne aucun ordre de déploiement.",
+          "url": "https://x.com/JLMelenchon/status/2119116481719882201",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
+        },
+        {
+          "quote": "Les navires français, s’il le fallait, escorteront les flottilles de citoyens mobilisés pour faire valoir leurs droits.",
+          "date": "2026-11-07",
+          "medium": "Même message sur X (@JLMelenchon), 7 novembre 2026, 17:15 UTC. Conditionnel (« s’il le fallait »). Distinct du programme écrit « L’Avenir en commun » déjà documenté le 06/11. Le même message se poursuit par deux phrases non reproduites ici.",
+          "url": "https://x.com/JLMelenchon/status/2119116481719882201",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
+        },
+        {
+          "quote": "Je dédie chacune de nos rencontres au peuple palestinien, soumis au génocide à Gaza.",
+          "date": "2026-11-07",
+          "medium": "Message sur X (@JLMelenchon), 7 novembre 2026, 16:07 UTC, en marge du meeting du Bourget. Le message dédie aussi le rassemblement aux victimes de l’attentat raciste de La Verrière et de Trappes ; cette seconde dédicace n’est pas reprise ici comme citation Gaza.",
+          "url": "https://x.com/JLMelenchon/status/2119099501218603276",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
         }
       ],
       "sections": [
@@ -3992,6 +4052,14 @@
       "section": "france",
       "archive_url": "https://web.archive.org/web/20261106193008/https://questions.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-mercredi-04-novembre-2026",
       "archived": "2026-11-06"
+    },
+    {
+      "source": "jordan-bardella",
+      "target": "cnews",
+      "relation": "invité dans « HD Pros 2 WE » le 06/11/2026 ; AFP via France 24 cite ses propos sur une « tentation totalitaire » à propos d’une demande de fermeture de CNews",
+      "url": "https://www.france24.com/fr/info-en-continu/20261106-bardella-accuse-lfi-de-tentation-totalitaire-en-voulant-fermer-cnews",
+      "date": "2026-11-06",
+      "section": "france"
     }
   ]
 }

@@ -771,6 +771,47 @@ _b["jean-luc-melenchon"]["statements"].append(_st(
  "Deux fragments du programme « L’Avenir en commun » (version dévoilée le 6 novembre 2026, 1 069 mesures selon i24NEWS). i24NEWS écrit que La France insoumise « propose désormais de « prendre en compte les autres possibilités » permettant de garantir les droits des Palestiniens, citant notamment l’hypothèse d’un « État binational égalitaire » ». i24NEWS écrit aussi, sans guillemets, que le texte promet des sanctions contre le gouvernement de Benyamin Netanyahou et la suspension de l’accord d’association entre Israël et l’Union européenne ; ces formulations ne sont pas reprises comme citations. Les qualifications éditoriales de l’article ne sont pas reprises.",
  I24_AEC, G, "gaza"))
 
+# ---------- mise à jour du 07/11/2026 : Mélenchon (Bourget / X), Bardella (CNews, antifas) ----------
+X_JLM_BOURGET="https://x.com/JLMelenchon/status/2119116481719882201"
+X_JLM_DEDIE="https://x.com/JLMelenchon/status/2119099501218603276"
+BFM_JLM_BOURGET="https://www.bfmtv.com/politique/elections/presidentielle/video-jean-luc-melenchon-veut-agir-frontalement-au-secours-des-palestiniens-contre-le-genocide-a-gaza-et-contre-l-annexion-progressive-de-la-cisjordanie-en-cas-de-victoire-a-l-election-presidentielle_VN-202611070422.html"
+F24_BARD_CNEWS="https://www.france24.com/fr/info-en-continu/20261106-bardella-accuse-lfi-de-tentation-totalitaire-en-voulant-fermer-cnews"
+X_CNEWS_BARD="https://x.com/CNEWS/status/2118796044427248034"
+X_BARD_ANTIFA="https://x.com/J_Bardella/status/2118813222325153989"
+_b["jean-luc-melenchon"]["statements"].append(_st(
+ "Nous agirons frontalement au secours des Palestiniens, à la fois contre le génocide à Gaza et contre l’annexion progressive de la Cisjordanie.",
+ "2026-11-07",
+ "Message sur X (@JLMelenchon), 7 novembre 2026, 17:15 UTC. Présentation orale au meeting du Bourget le même jour ; BFMTV a aussi repris cette formulation ("+BFM_JLM_BOURGET+"). Engagement conditionnel à une éventuelle victoire présidentielle 2027 — le poste n’entraîne aucun ordre de déploiement.",
+ X_JLM_BOURGET, G, "gaza"))
+_b["jean-luc-melenchon"]["statements"].append(_st(
+ "Les navires français, s’il le fallait, escorteront les flottilles de citoyens mobilisés pour faire valoir leurs droits.",
+ "2026-11-07",
+ "Même message sur X (@JLMelenchon), 7 novembre 2026, 17:15 UTC. Conditionnel (« s’il le fallait »). Distinct du programme écrit « L’Avenir en commun » déjà documenté le 06/11. Le même message se poursuit par deux phrases non reproduites ici.",
+ X_JLM_BOURGET, G, "gaza"))
+_b["jean-luc-melenchon"]["statements"].append(_st(
+ "Je dédie chacune de nos rencontres au peuple palestinien, soumis au génocide à Gaza.",
+ "2026-11-07",
+ "Message sur X (@JLMelenchon), 7 novembre 2026, 16:07 UTC, en marge du meeting du Bourget. Le message dédie aussi le rassemblement aux victimes de l’attentat raciste de La Verrière et de Trappes ; cette seconde dédicace n’est pas reprise ici comme citation Gaza.",
+ X_JLM_DEDIE, G, "gaza"))
+_st_bard_cnews=_st(
+ "Quand on veut fermer une chaîne de télévision comme CNews, on est habité d'une tentation totalitaire.",
+ "2026-11-06",
+ "Invité de Philippe de Villiers sur CNews (« HD Pros 2 WE » / #HDPros2WE), 6 novembre 2026, cité par AFP via France 24. La phrase suivante du même extrait AFP est reproduite séparément. Contexte indiqué par AFP : pétition demandant la fermeture de CNews (plus de 950 000 signatures le soir du 06/11) ; les députés doivent décider dans les prochains jours d’organiser ou non un débat ; le groupe parlementaire LFI est en première ligne. Aucune décision de l’Assemblée n’est documentée à cette date.",
+ F24_BARD_CNEWS, F)
+_st_bard_cnews["video"]={"url":X_CNEWS_BARD,"platform":"x.com","title":"Jordan Bardella sur CNews — « tentation totalitaire »","source":"CNews (compte officiel @CNEWS)"}
+_b["jordan-bardella"]["statements"].append(_st_bard_cnews)
+_b["jordan-bardella"]["statements"].append(_st(
+ "Lorsque, comme le maire de Saint-Denis, on veut empêcher le Rassemblement national de pouvoir s'exprimer, on est pris d'une tentation totalitaire",
+ "2026-11-06",
+ "Même intervention sur CNews (« HD Pros 2 WE »), 6 novembre 2026, phrase suivant immédiatement la précédente dans la dépêche AFP reprise par France 24. La fonction est citée telle que dans la dépêche ; le nom de l’élu n’est pas repris.",
+ F24_BARD_CNEWS, F))
+L("jordan-bardella","cnews","invité dans « HD Pros 2 WE » le 06/11/2026 ; AFP via France 24 cite ses propos sur une « tentation totalitaire » à propos d’une demande de fermeture de CNews",F24_BARD_CNEWS,"2026-11-06"); E[-1]["section"]="france"
+_b["jordan-bardella"]["statements"].append(_st(
+ "Si je suis chef du gouvernement, je demanderai l'inscription des milices antifas et de toutes les organisations d'ultra-gauche sur la liste des organisations terroristes.",
+ "2026-11-06",
+ "Message sur X (@J_Bardella), 6 novembre 2026, 21:10 UTC. Phrase suivante du même post, non reproduite ici : « Il faudra faire cela pour protéger le droit à manifester des honnêtes gens. » AFP via France 24 rapporte la même intention, conditionnelle au fait qu’il devienne Premier ministre si Marine Le Pen est élue, dans une formulation proche (« demanderait à l’Union européenne l’inscription des milices antifas et de toutes les organisations d’ultragauche », sans trait d’union).",
+ X_BARD_ANTIFA, F))
+
 # archives Wayback Machine (tools/archive.py -> tools/archives.json)
 _root=_here if os.path.isdir(os.path.join(_here,"tools")) else "/workspace/gaza-site"
 _ap=os.path.join(_root,"tools/archives.json")
