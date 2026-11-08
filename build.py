@@ -812,6 +812,20 @@ _b["jordan-bardella"]["statements"].append(_st(
  "Message sur X (@J_Bardella), 6 novembre 2026, 21:10 UTC. Phrase suivante du même post, non reproduite ici : « Il faudra faire cela pour protéger le droit à manifester des honnêtes gens. » AFP via France 24 rapporte la même intention, conditionnelle au fait qu’il devienne Premier ministre si Marine Le Pen est élue, dans une formulation proche (« demanderait à l’Union européenne l’inscription des milices antifas et de toutes les organisations d’ultragauche », sans trait d’union).",
  X_BARD_ANTIFA, F))
 
+# ---------- mise à jour du 08/11/2026 : Caroline Yadan (X, citation de Mélenchon) ; contexte ambassadeur sur le Bourget ----------
+X_YADAN_JLM="https://x.com/CarolineYADAN/status/2119194840160141660"
+I24_ZARKA="https://www.i24news.tv/fr/actu/france/artc-melenchon-promet-d-agir-frontalement-contre-la-politique-israelienne-s-il-est-elu"
+_b["caroline-yadan"]["statements"].append(_st(
+ "Le vautour politique antisémite a encore sévi. Dans la lignée des dictateurs sanguinaires et des terroristes islamistes, il rêve, aux côtés des mollahs iraniens et du Hamas, de faire la guerre à Israël. Quand la haine devient une foi, la violence un devoir et la barbarie une vertu, il ne reste plus rien de la politique : seulement le fanatisme.",
+ "2026-11-07",
+ "Message sur X (@CarolineYADAN), 7 novembre 2026, 22:26 UTC. Le message publié comporte un saut de paragraphe avant « Quand la haine ». Les phrases reproduites sont celles de Caroline Yadan. Message publié en citation du message de Jean-Luc Mélenchon du 7 novembre 2026 ("+X_JLM_BOURGET+"), qui reprend son discours du Bourget sur Gaza, la Cisjordanie et les flottilles.",
+ X_YADAN_JLM, G, "gaza"))
+L("caroline-yadan","jean-luc-melenchon","a publié sur X, le 07/11/2026 à 22:26 UTC, un message en citation de celui de Jean-Luc Mélenchon du même jour sur Gaza, la Cisjordanie et les flottilles (discours du Bourget)",X_YADAN_JLM,"2026-11-07"); E[-1]["section"]="gaza"
+_zarka_note=(" Contexte : le soir du 7 novembre 2026, Joshua Zarka, ambassadeur d’Israël en France, a réagi sur X. i24NEWS (article du 8 novembre 2026, "+I24_ZARKA+") écrit qu’il a partagé une vidéo du discours et cite, comme phrase du diplomate : « C'est une déclaration qui aurait fait honneur à l'un de ses prédécesseurs dans les mouvements fascistes européens des années trente du siècle dernier ». Les qualifications éditoriales de l’article ne sont pas reprises.")
+for _s in _b["jean-luc-melenchon"]["statements"]:
+    if _s["date"]=="2026-11-07" and _s["url"]==X_JLM_BOURGET and _s["quote"].startswith(("Nous agirons frontalement","Les navires français")):
+        _s["medium"]+=_zarka_note
+
 # archives Wayback Machine (tools/archive.py -> tools/archives.json)
 _root=_here if os.path.isdir(os.path.join(_here,"tools")) else "/workspace/gaza-site"
 _ap=os.path.join(_root,"tools/archives.json")

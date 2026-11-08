@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generated": "2026-11-07",
-    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-07 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : fichiers Wikimedia Commons sous licence libre, avec auteur, licence et lien ; logos reproduits à seule fin d'identification. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
+    "generated": "2026-11-08",
+    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-08 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : fichiers Wikimedia Commons sous licence libre, avec auteur, licence et lien ; logos reproduits à seule fin d'identification. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
       "persons": 40,
       "orgs": 37,
-      "edges": 120,
-      "statements": 140,
+      "edges": 121,
+      "statements": 141,
       "photos": 25,
       "logos": 19,
       "videos": 15,
@@ -82,6 +82,14 @@
           "section": "gaza",
           "archive_url": "https://web.archive.org/web/20251112193659/https://www.marianne.net/politique/lrem/la-deputee-caroline-yadan-essaie-t-elle-vraiment-de-faire-interdire-toute-mention-de-genocide-a-gaza",
           "archived": "2025-11-12"
+        },
+        {
+          "quote": "Le vautour politique antisémite a encore sévi. Dans la lignée des dictateurs sanguinaires et des terroristes islamistes, il rêve, aux côtés des mollahs iraniens et du Hamas, de faire la guerre à Israël. Quand la haine devient une foi, la violence un devoir et la barbarie une vertu, il ne reste plus rien de la politique : seulement le fanatisme.",
+          "date": "2026-11-07",
+          "medium": "Message sur X (@CarolineYADAN), 7 novembre 2026, 22:26 UTC. Le message publié comporte un saut de paragraphe avant « Quand la haine ». Les phrases reproduites sont celles de Caroline Yadan. Message publié en citation du message de Jean-Luc Mélenchon du 7 novembre 2026 (https://x.com/JLMelenchon/status/2119116481719882201), qui reprend son discours du Bourget sur Gaza, la Cisjordanie et les flottilles.",
+          "url": "https://x.com/CarolineYADAN/status/2119194840160141660",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
         }
       ],
       "sections": [
@@ -283,7 +291,9 @@
           "medium": "France 2, « Vous avez la parole » (à propos d'un livre de Gérald Darmanin), cité par franceinfo",
           "url": "https://www.franceinfo.fr/politique/gerald-darmanin/laicite-immigration-violences-policieres-huit-sequences-a-retenir-de-l-emission-vous-avez-la-parole-avec-gerald-darmanin-et-marine-le-pen_4293225.html",
           "theme": "France – normalisation de l'extrême droite",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261108191411/https://www.franceinfo.fr/politique/gerald-darmanin/laicite-immigration-violences-policieres-huit-sequences-a-retenir-de-l-emission-vous-avez-la-parole-avec-gerald-darmanin-et-marine-le-pen_4293225.html",
+          "archived": "2026-11-08"
         },
         {
           "quote": "Ce qui scandalise Gérald Darmanin doit faire l'objet d'une dissolution ? Ça ce n'est pas l'Etat de droit. J'appelle à faire attention à ça",
@@ -291,7 +301,9 @@
           "medium": "franceinfo (radio), au sujet de la dissolution envisagée de Génération identitaire",
           "url": "https://www.franceinfo.fr/politique/marine-le-pen/video-generation-identitaire-ce-qui-scandalise-m-darmanin-doit-fait-l-objet-d-une-dissolution-ca-ce-n-est-pas-l-etat-de-droit-denonce-marine-le-pen_4273347.html",
           "theme": "France – normalisation de l'extrême droite",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261108193102/https://www.franceinfo.fr/politique/marine-le-pen/video-generation-identitaire-ce-qui-scandalise-m-darmanin-doit-fait-l-objet-d-une-dissolution-ca-ce-n-est-pas-l-etat-de-droit-denonce-marine-le-pen_4273347.html",
+          "archived": "2026-11-08"
         },
         {
           "quote": "Quoi qu’on puisse en penser, heureusement que CNEWS existe pour évoquer l’agression de jeunes catholiques à Rouen au cri de « sale blanc » et « sale facho », manifestation d’un racisme anti-Blancs dont quasiment aucun autre média n’a parlé. Refuser de parler et de condamner tous les racismes, c’est refuser de condamner le racisme.",
@@ -365,7 +377,9 @@
             "title": "Jordan Bardella : \"On ne peut pas faire de \"En même temps\" avec l'immigration\" (Grand Entretien, 19/12/2023)",
             "source": "France Inter (chaîne YouTube officielle)"
           },
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261108191508/https://www.franceinfo.fr/societe/immigration/projet-de-loi-immigration-la-victoire-ideologique-du-rassemblement-national-est-de-plus-en-plus-forte-chaque-jour-se-targue-jordan-bardella_6253689.html",
+          "archived": "2026-11-08"
         },
         {
           "quote": "Si demain je suis à la tête du pays, je n'aurai aucune forme de tolérance à l'égard de ceux qui se livrent à de la violence dans notre pays",
@@ -393,7 +407,9 @@
           "medium": "Livre « Gouverner » (Fayard), sortie le 4 novembre 2026. franceinfo écrit que Jordan Bardella cite Jacques Bainville, qu'elle présente comme auteur nationaliste, royaliste et antisémite, « à qui il fait dire que la France n'est pas \"une race\" mais \"une nation à laquelle on s'agrège\" ». Les crochets reprennent cette liaison ; « une race » et « une nation à laquelle on s'agrège » sont les deux fragments placés entre guillemets par franceinfo.",
           "url": "https://www.franceinfo.fr/elections/presidentielle/gouverner-que-contient-le-nouveau-livre-de-jordan-bardella_8267120.html",
           "theme": "France – normalisation de l'extrême droite",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261108193409/https://www.franceinfo.fr/elections/presidentielle/gouverner-que-contient-le-nouveau-livre-de-jordan-bardella_8267120.html",
+          "archived": "2026-11-08"
         },
         {
           "quote": "L'aider à gagner cette campagne est ma responsabilité.",
@@ -401,7 +417,9 @@
           "medium": "Livre « Gouverner » (Fayard), cité par franceinfo, à propos de Marine Le Pen. franceinfo écrit qu'il reconnaît « avoir peut-être accusé le coup » après l'annonce de la candidature de Marine Le Pen, puis « se reprend » avec cette phrase.",
           "url": "https://www.franceinfo.fr/elections/presidentielle/gouverner-que-contient-le-nouveau-livre-de-jordan-bardella_8267120.html",
           "theme": "France – normalisation de l'extrême droite",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261108193409/https://www.franceinfo.fr/elections/presidentielle/gouverner-que-contient-le-nouveau-livre-de-jordan-bardella_8267120.html",
+          "archived": "2026-11-08"
         },
         {
           "quote": "On a tenté de me faire chuter",
@@ -409,7 +427,9 @@
           "medium": "Postface « Le prix de l'engagement » du livre « Gouverner » (Fayard), citée par franceinfo, qui écrit que Jordan Bardella « répète » cette phrase. franceinfo indique que les révélations de Mediapart sur des messages attribués à l'auteur à 17 ans sont arrivées alors que le livre était quasiment bouclé ; ces messages ne sont pas tenus pour établis ici. Il cite ensuite, selon franceinfo, une phrase attribuée à François Mitterrand : « Toutes les explications du monde ne justifieront pas qu'on ait pu livrer à la meute l'honneur d'un homme. »",
           "url": "https://www.franceinfo.fr/elections/presidentielle/gouverner-que-contient-le-nouveau-livre-de-jordan-bardella_8267120.html",
           "theme": "France – normalisation de l'extrême droite",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261108193409/https://www.franceinfo.fr/elections/presidentielle/gouverner-que-contient-le-nouveau-livre-de-jordan-bardella_8267120.html",
+          "archived": "2026-11-08"
         },
         {
           "quote": "Je sais maintenant que les mois qui viennent seront difficiles.",
@@ -417,7 +437,9 @@
           "medium": "Conclusion de la postface « Le prix de l'engagement » du livre « Gouverner » (Fayard), citée par franceinfo.",
           "url": "https://www.franceinfo.fr/elections/presidentielle/gouverner-que-contient-le-nouveau-livre-de-jordan-bardella_8267120.html",
           "theme": "France – normalisation de l'extrême droite",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261108193409/https://www.franceinfo.fr/elections/presidentielle/gouverner-que-contient-le-nouveau-livre-de-jordan-bardella_8267120.html",
+          "archived": "2026-11-08"
         },
         {
           "quote": "Quand on veut fermer une chaîne de télévision comme CNews, on est habité d'une tentation totalitaire.",
@@ -431,7 +453,9 @@
             "platform": "x.com",
             "title": "Jordan Bardella sur CNews — « tentation totalitaire »",
             "source": "CNews (compte officiel @CNEWS)"
-          }
+          },
+          "archive_url": "https://web.archive.org/web/20261108193910/https://www.france24.com/fr/info-en-continu/20261106-bardella-accuse-lfi-de-tentation-totalitaire-en-voulant-fermer-cnews",
+          "archived": "2026-11-08"
         },
         {
           "quote": "Lorsque, comme le maire de Saint-Denis, on veut empêcher le Rassemblement national de pouvoir s'exprimer, on est pris d'une tentation totalitaire",
@@ -439,7 +463,9 @@
           "medium": "Même intervention sur CNews (« HD Pros 2 WE »), 6 novembre 2026, phrase suivant immédiatement la précédente dans la dépêche AFP reprise par France 24. La fonction est citée telle que dans la dépêche ; le nom de l’élu n’est pas repris.",
           "url": "https://www.france24.com/fr/info-en-continu/20261106-bardella-accuse-lfi-de-tentation-totalitaire-en-voulant-fermer-cnews",
           "theme": "France – normalisation de l'extrême droite",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261108193910/https://www.france24.com/fr/info-en-continu/20261106-bardella-accuse-lfi-de-tentation-totalitaire-en-voulant-fermer-cnews",
+          "archived": "2026-11-08"
         },
         {
           "quote": "Si je suis chef du gouvernement, je demanderai l'inscription des milices antifas et de toutes les organisations d'ultra-gauche sur la liste des organisations terroristes.",
@@ -576,7 +602,9 @@
           "medium": "Cité par franceinfo (à propos du « grand remplacement »)",
           "url": "https://www.franceinfo.fr/politique/valerie-pecresse/presidentielle-2022-valerie-pecresse-radicalise-son-discours_4961262.html",
           "theme": "France – normalisation de l'extrême droite",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261108191541/https://www.franceinfo.fr/politique/valerie-pecresse/presidentielle-2022-valerie-pecresse-radicalise-son-discours_4961262.html",
+          "archived": "2026-11-08"
         },
         {
           "quote": "des hordes de barbares maghrébins et africains qui rentrent dans les villes",
@@ -1282,7 +1310,9 @@
             "title": "Vincent Bolloré : audition devant la commission d'enquête sur les fréquences TNT",
             "source": "LCP - Assemblée nationale (chaîne YouTube officielle)"
           },
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261108192511/https://www.franceinfo.fr/economie/medias/devant-les-deputes-vincent-bollore-president-du-groupe-canal-assume-sa-foi-et-recuse-tout-projet-ideologique_6422296.html",
+          "archived": "2026-11-08"
         }
       ],
       "sections": [
@@ -1760,7 +1790,9 @@
           "medium": "Le Figaro (entretien), cité par franceinfo",
           "url": "https://www.franceinfo.fr/politique/jean-castex/gouvernement-de-jean-castex/securite-gerald-darmanin-dit-vouloir-stopper-l-ensauvagement-d-une-certaine-partie-de-la-societe_4055715.html",
           "theme": "France – normalisation de l'extrême droite",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261108192618/https://www.franceinfo.fr/politique/jean-castex/gouvernement-de-jean-castex/securite-gerald-darmanin-dit-vouloir-stopper-l-ensauvagement-d-une-certaine-partie-de-la-societe_4055715.html",
+          "archived": "2026-11-08"
         },
         {
           "quote": "[le terme résume] la réalité que subissent une partie des Français, notamment des milieux populaires",
@@ -1778,7 +1810,9 @@
           "medium": "France 2, « Vous avez la parole » (débat avec Marine Le Pen), cité par franceinfo",
           "url": "https://www.franceinfo.fr/politique/gerald-darmanin/laicite-immigration-violences-policieres-huit-sequences-a-retenir-de-l-emission-vous-avez-la-parole-avec-gerald-darmanin-et-marine-le-pen_4293225.html",
           "theme": "France – normalisation de l'extrême droite",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261108191411/https://www.franceinfo.fr/politique/gerald-darmanin/laicite-immigration-violences-policieres-huit-sequences-a-retenir-de-l-emission-vous-avez-la-parole-avec-gerald-darmanin-et-marine-le-pen_4293225.html",
+          "archived": "2026-11-08"
         },
         {
           "quote": "Ce sont des gens qui pensent qu'il y a une suprématie blanche, qui portent des propos antisémites extrêmement graves",
@@ -1884,7 +1918,9 @@
           "medium": "RTL, cité par franceinfo",
           "url": "https://www.franceinfo.fr/politique/valerie-pecresse/presidentielle-2022-valerie-pecresse-radicalise-son-discours_4961262.html",
           "theme": "Nuance / contexte",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261108191541/https://www.franceinfo.fr/politique/valerie-pecresse/presidentielle-2022-valerie-pecresse-radicalise-son-discours_4961262.html",
+          "archived": "2026-11-08"
         }
       ],
       "sections": [
@@ -1914,7 +1950,9 @@
           "medium": "Valeurs actuelles (entretien), cité par franceinfo",
           "url": "https://www.franceinfo.fr/politique/emmanuel-macron/dans-valeurs-actuelles-emmanuel-macron-veut-plus-d-efficacite-contre-l-immigration-illegale_3681211.html",
           "theme": "Nuance / contexte",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261108192649/https://www.franceinfo.fr/politique/emmanuel-macron/dans-valeurs-actuelles-emmanuel-macron-veut-plus-d-efficacite-contre-l-immigration-illegale_3681211.html",
+          "archived": "2026-11-08"
         },
         {
           "quote": "Fidèle à son engagement historique pour une paix juste et durable au Proche-Orient, j'ai décidé que la France reconnaîtra l'Etat de Palestine",
@@ -2465,7 +2503,9 @@
           "medium": "Décret de dissolution du 3 mars 2021, cité par franceinfo",
           "url": "https://www.franceinfo.fr/politique/jean-castex/gouvernement-de-jean-castex/le-groupe-d-extreme-droite-generation-identitaire-dissous-en-conseil-des-ministres-annonce-gerald-darmanin_4318225.html",
           "theme": "France – normalisation de l'extrême droite",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261108193509/https://www.franceinfo.fr/politique/jean-castex/gouvernement-de-jean-castex/le-groupe-d-extreme-droite-generation-identitaire-dissous-en-conseil-des-ministres-annonce-gerald-darmanin_4318225.html",
+          "archived": "2026-11-08"
         }
       ],
       "sections": [
@@ -2629,7 +2669,7 @@
         {
           "quote": "Nous agirons frontalement au secours des Palestiniens, à la fois contre le génocide à Gaza et contre l’annexion progressive de la Cisjordanie.",
           "date": "2026-11-07",
-          "medium": "Message sur X (@JLMelenchon), 7 novembre 2026, 17:15 UTC. Présentation orale au meeting du Bourget le même jour ; BFMTV a aussi repris cette formulation (https://www.bfmtv.com/politique/elections/presidentielle/video-jean-luc-melenchon-veut-agir-frontalement-au-secours-des-palestiniens-contre-le-genocide-a-gaza-et-contre-l-annexion-progressive-de-la-cisjordanie-en-cas-de-victoire-a-l-election-presidentielle_VN-202611070422.html). Engagement conditionnel à une éventuelle victoire présidentielle 2027 — le poste n’entraîne aucun ordre de déploiement.",
+          "medium": "Message sur X (@JLMelenchon), 7 novembre 2026, 17:15 UTC. Présentation orale au meeting du Bourget le même jour ; BFMTV a aussi repris cette formulation (https://www.bfmtv.com/politique/elections/presidentielle/video-jean-luc-melenchon-veut-agir-frontalement-au-secours-des-palestiniens-contre-le-genocide-a-gaza-et-contre-l-annexion-progressive-de-la-cisjordanie-en-cas-de-victoire-a-l-election-presidentielle_VN-202611070422.html). Engagement conditionnel à une éventuelle victoire présidentielle 2027 — le poste n’entraîne aucun ordre de déploiement. Contexte : le soir du 7 novembre 2026, Joshua Zarka, ambassadeur d’Israël en France, a réagi sur X. i24NEWS (article du 8 novembre 2026, https://www.i24news.tv/fr/actu/france/artc-melenchon-promet-d-agir-frontalement-contre-la-politique-israelienne-s-il-est-elu) écrit qu’il a partagé une vidéo du discours et cite, comme phrase du diplomate : « C'est une déclaration qui aurait fait honneur à l'un de ses prédécesseurs dans les mouvements fascistes européens des années trente du siècle dernier ». Les qualifications éditoriales de l’article ne sont pas reprises.",
           "url": "https://x.com/JLMelenchon/status/2119116481719882201",
           "theme": "Gaza – déclarations",
           "section": "gaza"
@@ -2637,7 +2677,7 @@
         {
           "quote": "Les navires français, s’il le fallait, escorteront les flottilles de citoyens mobilisés pour faire valoir leurs droits.",
           "date": "2026-11-07",
-          "medium": "Même message sur X (@JLMelenchon), 7 novembre 2026, 17:15 UTC. Conditionnel (« s’il le fallait »). Distinct du programme écrit « L’Avenir en commun » déjà documenté le 06/11. Le même message se poursuit par deux phrases non reproduites ici.",
+          "medium": "Même message sur X (@JLMelenchon), 7 novembre 2026, 17:15 UTC. Conditionnel (« s’il le fallait »). Distinct du programme écrit « L’Avenir en commun » déjà documenté le 06/11. Le même message se poursuit par deux phrases non reproduites ici. Contexte : le soir du 7 novembre 2026, Joshua Zarka, ambassadeur d’Israël en France, a réagi sur X. i24NEWS (article du 8 novembre 2026, https://www.i24news.tv/fr/actu/france/artc-melenchon-promet-d-agir-frontalement-contre-la-politique-israelienne-s-il-est-elu) écrit qu’il a partagé une vidéo du discours et cite, comme phrase du diplomate : « C'est une déclaration qui aurait fait honneur à l'un de ses prédécesseurs dans les mouvements fascistes européens des années trente du siècle dernier ». Les qualifications éditoriales de l’article ne sont pas reprises.",
           "url": "https://x.com/JLMelenchon/status/2119116481719882201",
           "theme": "Gaza – déclarations",
           "section": "gaza"
@@ -2704,7 +2744,9 @@
           "medium": "Europe 1, cité par franceinfo avec AFP",
           "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/guerre-entre-israel-et-le-hamas-nous-allons-vers-le-genocide-il-est-en-cours-accuse-fabien-roussel_6416110.html",
           "theme": "Gaza – déclarations",
-          "section": "gaza"
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261108193540/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/guerre-entre-israel-et-le-hamas-nous-allons-vers-le-genocide-il-est-en-cours-accuse-fabien-roussel_6416110.html",
+          "archived": "2026-11-08"
         },
         {
           "quote": "Non au nettoyage ethnique à Gaza et au génocide du peuple palestinien",
@@ -2971,7 +3013,9 @@
       "relation": "a négocié un accord législatif avec le RN (refusé par le RN le 11/06/2024)",
       "url": "https://www.franceinfo.fr/elections/legislatives/elections-legislatives-2024-marion-marechal-deplore-un-changement-de-position-du-rn-qui-refuse-le-principe-d-un-accord-avec-reconquete_6598065.html",
       "date": "2024-06-11",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261108192747/https://www.franceinfo.fr/elections/legislatives/elections-legislatives-2024-marion-marechal-deplore-un-changement-de-position-du-rn-qui-refuse-le-principe-d-un-accord-avec-reconquete_6598065.html",
+      "archived": "2026-11-08"
     },
     {
       "source": "marion-marechal",
@@ -3449,7 +3493,9 @@
       "relation": "débat sur France 2, « Vous avez la parole » (11/02/2021)",
       "url": "https://www.franceinfo.fr/politique/gerald-darmanin/laicite-immigration-violences-policieres-huit-sequences-a-retenir-de-l-emission-vous-avez-la-parole-avec-gerald-darmanin-et-marine-le-pen_4293225.html",
       "date": "2021-02-11",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261108191411/https://www.franceinfo.fr/politique/gerald-darmanin/laicite-immigration-violences-policieres-huit-sequences-a-retenir-de-l-emission-vous-avez-la-parole-avec-gerald-darmanin-et-marine-le-pen_4293225.html",
+      "archived": "2026-11-08"
     },
     {
       "source": "bruno-retailleau",
@@ -3497,7 +3543,9 @@
       "relation": "entretien accordé (paru le 31/10/2019)",
       "url": "https://www.franceinfo.fr/politique/emmanuel-macron/dans-valeurs-actuelles-emmanuel-macron-veut-plus-d-efficacite-contre-l-immigration-illegale_3681211.html",
       "date": "2019-10-30",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261108192649/https://www.franceinfo.fr/politique/emmanuel-macron/dans-valeurs-actuelles-emmanuel-macron-veut-plus-d-efficacite-contre-l-immigration-illegale_3681211.html",
+      "archived": "2026-11-08"
     },
     {
       "source": "eric-ciotti",
@@ -3595,7 +3643,9 @@
       "relation": "amende de 200 000 € prononcée par le CSA (devenu Arcom) pour des propos d'Éric Zemmour",
       "url": "https://www.franceinfo.fr/monde/europe/migrants/cnews-sanctionnee-d-une-amende-de-200-000-euros-pour-les-propos-d-eric-zemmour-sur-les-migrants-mineurs_4338041.html",
       "date": "2021-03-18",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261108192816/https://www.franceinfo.fr/monde/europe/migrants/cnews-sanctionnee-d-une-amende-de-200-000-euros-pour-les-propos-d-eric-zemmour-sur-les-migrants-mineurs_4338041.html",
+      "archived": "2026-11-08"
     },
     {
       "source": "conseil-etat",
@@ -3623,7 +3673,9 @@
       "relation": "audition devant la commission d'enquête sur les fréquences TNT (Assemblée nationale)",
       "url": "https://www.franceinfo.fr/economie/medias/devant-les-deputes-vincent-bollore-president-du-groupe-canal-assume-sa-foi-et-recuse-tout-projet-ideologique_6422296.html",
       "date": "2024-03-13",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261108192511/https://www.franceinfo.fr/economie/medias/devant-les-deputes-vincent-bollore-president-du-groupe-canal-assume-sa-foi-et-recuse-tout-projet-ideologique_6422296.html",
+      "archived": "2026-11-08"
     },
     {
       "source": "marine-le-pen",
@@ -3641,7 +3693,9 @@
       "relation": "a évoqué une « victoire idéologique » du RN",
       "url": "https://www.franceinfo.fr/societe/immigration/projet-de-loi-immigration-la-victoire-ideologique-du-rassemblement-national-est-de-plus-en-plus-forte-chaque-jour-se-targue-jordan-bardella_6253689.html",
       "date": "2023-12-19",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261108191508/https://www.franceinfo.fr/societe/immigration/projet-de-loi-immigration-la-victoire-ideologique-du-rassemblement-national-est-de-plus-en-plus-forte-chaque-jour-se-targue-jordan-bardella_6253689.html",
+      "archived": "2026-11-08"
     },
     {
       "source": "rn",
@@ -3759,7 +3813,9 @@
       "relation": "fondatrice (Lyon, 2018)",
       "url": "https://www.franceinfo.fr/politique/front-national/video-marion-marechal-le-pen-les-petits-secrets-de-son-ecole-de-sciences-politiques_2766371.html",
       "date": "2018",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261108193027/https://www.franceinfo.fr/politique/front-national/video-marion-marechal-le-pen-les-petits-secrets-de-son-ecole-de-sciences-politiques_2766371.html",
+      "archived": "2026-11-08"
     },
     {
       "source": "nemesis",
@@ -3797,7 +3853,9 @@
       "relation": "a présenté le décret de dissolution (Conseil des ministres du 03/03/2021)",
       "url": "https://www.franceinfo.fr/politique/jean-castex/gouvernement-de-jean-castex/le-groupe-d-extreme-droite-generation-identitaire-dissous-en-conseil-des-ministres-annonce-gerald-darmanin_4318225.html",
       "date": "2021-03-03",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261108193509/https://www.franceinfo.fr/politique/jean-castex/gouvernement-de-jean-castex/le-groupe-d-extreme-droite-generation-identitaire-dissous-en-conseil-des-ministres-annonce-gerald-darmanin_4318225.html",
+      "archived": "2026-11-08"
     },
     {
       "source": "marine-le-pen",
@@ -3805,7 +3863,9 @@
       "relation": "s'est opposée sur franceinfo à la dissolution envisagée (27/01/2021)",
       "url": "https://www.franceinfo.fr/politique/marine-le-pen/video-generation-identitaire-ce-qui-scandalise-m-darmanin-doit-fait-l-objet-d-une-dissolution-ca-ce-n-est-pas-l-etat-de-droit-denonce-marine-le-pen_4273347.html",
       "date": "2021-01-27",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261108193102/https://www.franceinfo.fr/politique/marine-le-pen/video-generation-identitaire-ce-qui-scandalise-m-darmanin-doit-fait-l-objet-d-une-dissolution-ca-ce-n-est-pas-l-etat-de-droit-denonce-marine-le-pen_4273347.html",
+      "archived": "2026-11-08"
     },
     {
       "source": "eric-zemmour",
@@ -3923,7 +3983,9 @@
       "relation": "a réagi à sa comparaison de Gaza avec des sièges historiques (franceinfo, 10/03/2024)",
       "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/guerre-entre-israel-et-le-hamas-nous-allons-vers-le-genocide-il-est-en-cours-accuse-fabien-roussel_6416110.html",
       "date": "2024-03-10",
-      "section": "gaza"
+      "section": "gaza",
+      "archive_url": "https://web.archive.org/web/20261108193540/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/guerre-entre-israel-et-le-hamas-nous-allons-vers-le-genocide-il-est-en-cours-accuse-fabien-roussel_6416110.html",
+      "archived": "2026-11-08"
     },
     {
       "source": "gabriel-attal",
@@ -4059,7 +4121,17 @@
       "relation": "invité dans « HD Pros 2 WE » le 06/11/2026 ; AFP via France 24 cite ses propos sur une « tentation totalitaire » à propos d’une demande de fermeture de CNews",
       "url": "https://www.france24.com/fr/info-en-continu/20261106-bardella-accuse-lfi-de-tentation-totalitaire-en-voulant-fermer-cnews",
       "date": "2026-11-06",
-      "section": "france"
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261108193910/https://www.france24.com/fr/info-en-continu/20261106-bardella-accuse-lfi-de-tentation-totalitaire-en-voulant-fermer-cnews",
+      "archived": "2026-11-08"
+    },
+    {
+      "source": "caroline-yadan",
+      "target": "jean-luc-melenchon",
+      "relation": "a publié sur X, le 07/11/2026 à 22:26 UTC, un message en citation de celui de Jean-Luc Mélenchon du même jour sur Gaza, la Cisjordanie et les flottilles (discours du Bourget)",
+      "url": "https://x.com/CarolineYADAN/status/2119194840160141660",
+      "date": "2026-11-07",
+      "section": "gaza"
     }
   ]
 }
