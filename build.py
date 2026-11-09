@@ -826,6 +826,24 @@ for _s in _b["jean-luc-melenchon"]["statements"]:
     if _s["date"]=="2026-11-07" and _s["url"]==X_JLM_BOURGET and _s["quote"].startswith(("Nous agirons frontalement","Les navires français")):
         _s["medium"]+=_zarka_note
 
+# ---------- mise à jour du 09/11/2026 : Marine Le Pen dans « 60 Minutes » (CBS, 08/11) ----------
+FI_MLP_CBS="https://www.franceinfo.fr/politique/marine-le-pen/marine-le-pen-nie-l-existence-de-discriminations-en-france-dans-une-interview-a-la-television-americaine_8274212.html"
+EN_MLP_CBS="https://fr.euronews.com/2026/11/09/remigration-la-porte-est-grande-ouverte-dit-marine-le-pen"
+CBS_MLP="https://www.cbsnews.com/news/france-marine-le-pen-floats-expelling-immigrants-who-dont-assimilate-60-minutes/"
+CBS_MLP_VID="https://www.cbsnews.com/video/france-marine-le-pen-60-minutes-video-2026-11-08/"
+_st_mlp1=_st(
+ "il n'y a pas de discriminations en France […] le pays le moins raciste au monde",
+ "2026-11-08",
+ "Entretien avec Trevor Phillips pour « 60 Minutes » (CBS), diffusé le dimanche 8 novembre 2026 ; propos traduits de l’anglais tels que rapportés par franceinfo avec l’AFP (9 novembre 2026). Version originale publiée par CBS News ("+CBS_MLP+") : « there's no discrimination in France », « the least racist » country. Contexte donné par les sources : elle répondait au journaliste qui évoquait la discrimination comme explication possible du taux de chômage plus élevé des étrangers ; franceinfo rappelle que le Défenseur des droits (enquête publiée en décembre 2025) écrit que « l'origine perçue constitue le principal facteur d'exposition aux discriminations dans la recherche d'emploi ». Interrogée sur le fait de savoir si elle est fasciste, elle a répondu « Absolument pas » et affirmé soutenir le pluralisme politique (franceinfo). Réactions rapportées : Karim Bouamrane (PS), Manuel Bompard (LFI), François Ruffin.",
+ FI_MLP_CBS, F)
+_st_mlp1["video"]={"url":CBS_MLP_VID,"platform":"cbsnews.com","title":"French protests could benefit far-right political leader Marine Le Pen (60 Minutes)","source":"CBS News (site officiel)"}
+_st_mlp2=_st(
+ "Si quelqu'un arrive en France et dit : je vous déteste, je méprise votre culture, je ne veux pas respecter vos lois, nous lui dirons : la porte est grande ouverte […] Nous pourrions même vous obliger à la prendre",
+ "2026-11-08",
+ "Entretien pour « 60 Minutes » (CBS), diffusé le 8 novembre 2026 ; traduction publiée par Euronews (9 novembre 2026). Version originale publiée par CBS News ("+CBS_MLP+") : « If someone comes and says, 'I hate you, I despise your culture, I don't want to respect your laws,' well, we say to him, 'Listen, sir, the door is wide open.' And we might even, for that matter, force you to leave. » Contexte : réponse à une question sur la « remigration » des immigrés qui n’adopteraient pas le mode de vie français ; selon Euronews, elle n’a pas repris explicitement ce terme. CBS indique que, selon ses détracteurs, cette proposition pourrait concerner des immigrés en situation régulière.",
+ EN_MLP_CBS, F)
+_b["marine-le-pen"]["statements"]+= [_st_mlp1,_st_mlp2]
+
 # ---------- v23 : parcours d'ascension + nature des liens ----------
 # Une étape n'a un « by » que si la source nomme qui a désigné, nommé, confié ou chargé.
 # Aucune causalité ajoutée. Pas de nouveau nœud.

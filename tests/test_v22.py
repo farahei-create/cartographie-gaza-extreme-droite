@@ -20,7 +20,7 @@ def check(c, m):
         print("FAIL:", m)
 
 sw = open(os.path.join(ROOT, "sw.js")).read()
-check('var VERSION = "onrecord-v24"' in sw, "sw onrecord-v24")
+check('var VERSION = "onrecord-v25"' in sw, "sw onrecord-v25")
 js = open(os.path.join(ROOT, "app.js")).read()
 html = open(os.path.join(ROOT, "index.html")).read()
 check("Échelle du pouvoir" in html and 'href="#/pouvoir"' in html, "lien navigation")
