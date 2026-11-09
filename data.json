@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generated": "2026-11-08",
-    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-08 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : fichiers Wikimedia Commons sous licence libre, avec auteur, licence et lien ; logos reproduits à seule fin d'identification. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
+    "generated": "2026-11-09",
+    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-09 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : fichiers Wikimedia Commons sous licence libre, avec auteur, licence et lien ; logos reproduits à seule fin d'identification. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
       "persons": 40,
       "orgs": 37,
-      "edges": 121,
+      "edges": 128,
       "statements": 141,
       "photos": 25,
       "logos": 19,
@@ -327,7 +327,36 @@
         "file": "Marine_Le_Pen_2025_(cropped).jpg"
       },
       "category": "Responsables politiques",
-      "subcategory": "Parlementaires & élus"
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2011-01-16",
+          "title": "Présidente du Front national",
+          "text": "Elle est proclamée présidente du Front national au congrès de Tours, avec 67,65 % des voix, contre 32,35 % pour son rival.",
+          "url": "https://www.franceinfo.fr/politique/marine-le-pen-officiellement-proclamee-presidente-du-fn-recueille-67-65-des-voix-contre-32-35-pour-son-rival_231301.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20261109055656/https://www.franceinfo.fr/politique/marine-le-pen-officiellement-proclamee-presidente-du-fn-recueille-67-65-des-voix-contre-32-35-pour-son-rival_231301.html",
+          "archived": "2026-11-09"
+        },
+        {
+          "date": "2021-09-12",
+          "title": "Présidence par intérim confiée",
+          "text": "Elle confie les rênes du Rassemblement national à Jordan Bardella, alors vice-président, le temps de la campagne présidentielle de 2022.",
+          "url": "https://www.tf1info.fr/politique/presidentielle-2022-pourquoi-marine-le-pen-laisse-sa-place-a-jordan-bardella-a-la-tete-du-rn-a-frejus-2196085.html",
+          "source": "TF1 Info",
+          "archive_url": "https://web.archive.org/web/20250920075141/https://www.tf1info.fr/politique/presidentielle-2022-pourquoi-marine-le-pen-laisse-sa-place-a-jordan-bardella-a-la-tete-du-rn-a-frejus-2196085.html",
+          "archived": "2025-09-20"
+        },
+        {
+          "date": "2022-11-05",
+          "title": "Fin de la présidence du parti",
+          "text": "Le congrès élit Jordan Bardella président du Rassemblement national. Marine Le Pen quitte cette fonction.",
+          "url": "https://www.radiofrance.fr/franceinter/jordan-bardella-elu-a-la-tete-du-rassemblement-national-3154150",
+          "source": "France Inter",
+          "archive_url": "https://web.archive.org/web/20230620060519/https://www.radiofrance.fr/franceinter/jordan-bardella-elu-a-la-tete-du-rassemblement-national-3154150",
+          "archived": "2023-06-20"
+        }
+      ]
     },
     {
       "id": "jordan-bardella",
@@ -489,7 +518,125 @@
         "file": "Jordan Bardella - Strasbourg European Parliament September 2022 (Cropped).jpg"
       },
       "category": "Responsables politiques",
-      "subcategory": "Partis & dirigeants de parti"
+      "subcategory": "Partis & dirigeants de parti",
+      "parcours": [
+        {
+          "date": "2012",
+          "title": "Adhésion au Front national",
+          "text": "Jordan Bardella rejoint le Front national.",
+          "url": "https://www.franceinfo.fr/politique/front-national/jordan-bardella-devient-vice-president-du-rassemblement-national_3492801.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20261109055801/https://www.franceinfo.fr/politique/front-national/jordan-bardella-devient-vice-president-du-rassemblement-national_3492801.html",
+          "archived": "2026-11-09"
+        },
+        {
+          "date": "2015",
+          "title": "Conseiller régional d'Île-de-France",
+          "text": "Il est élu conseiller régional d'Île-de-France.",
+          "url": "https://www.franceinfo.fr/politique/front-national/europeennes-quatre-choses-a-savoir-sur-jordan-bardella-la-jeune-tete-de-liste-choisie-par-marine-le-pen_3142915.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20260129204530/https://www.franceinfo.fr/politique/front-national/europeennes-quatre-choses-a-savoir-sur-jordan-bardella-la-jeune-tete-de-liste-choisie-par-marine-le-pen_3142915.html",
+          "archived": "2026-01-29"
+        },
+        {
+          "date": "2017-09-21",
+          "title": "Porte-parole du Front national",
+          "text": "Marine Le Pen désigne trois porte-parole du Front national, dont Jordan Bardella, alors conseiller régional d'Île-de-France.",
+          "url": "https://www.franceinfo.fr/politique/front-national/front-national-david-rachline-nomme-responsable-du-pole-communication-en-remplacement-de-florian-philippot_2382954.html",
+          "source": "franceinfo",
+          "by": "marine-le-pen",
+          "verb": "a désigné porte-parole du Front national",
+          "archive_url": "https://web.archive.org/web/20261109055840/https://www.franceinfo.fr/politique/front-national/front-national-david-rachline-nomme-responsable-du-pole-communication-en-remplacement-de-florian-philippot_2382954.html",
+          "archived": "2026-11-09"
+        },
+        {
+          "date": "2018-03",
+          "title": "Direction de Génération nation",
+          "text": "Il devient président de Génération nation, branche jeunesse du Front national. L'article ne nomme pas la personne qui le désigne.",
+          "url": "https://www.franceinfo.fr/politique/front-national/europeennes-quatre-choses-a-savoir-sur-jordan-bardella-la-jeune-tete-de-liste-choisie-par-marine-le-pen_3142915.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20260129204530/https://www.franceinfo.fr/politique/front-national/europeennes-quatre-choses-a-savoir-sur-jordan-bardella-la-jeune-tete-de-liste-choisie-par-marine-le-pen_3142915.html",
+          "archived": "2026-01-29"
+        },
+        {
+          "date": "2019-01-07",
+          "title": "Tête de liste aux européennes de 2019",
+          "text": "Le bureau exécutif du Rassemblement national valide à l'unanimité le choix de sa présidente, Marine Le Pen, de le désigner tête de liste pour les élections européennes de mai 2019.",
+          "url": "https://www.franceinfo.fr/elections/europeennes/elections-europeennes-jordan-bardella-officiellement-choisi-comme-tete-de-liste-du-rassemblement-national_3133529.html",
+          "source": "franceinfo",
+          "by": "marine-le-pen",
+          "verb": "a désigné tête de liste aux européennes de 2019",
+          "archive_url": "https://web.archive.org/web/20261109055914/https://www.franceinfo.fr/elections/europeennes/elections-europeennes-jordan-bardella-officiellement-choisi-comme-tete-de-liste-du-rassemblement-national_3133529.html",
+          "archived": "2026-11-09"
+        },
+        {
+          "date": "2019-05-26",
+          "title": "Scrutin européen du 26 mai 2019",
+          "text": "Il est tête de liste du Rassemblement national. La liste totalise un peu plus de 23 % des voix.",
+          "url": "https://www.franceinfo.fr/politique/front-national/jordan-bardella-devient-vice-president-du-rassemblement-national_3492801.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20261109055801/https://www.franceinfo.fr/politique/front-national/jordan-bardella-devient-vice-president-du-rassemblement-national_3492801.html",
+          "archived": "2026-11-09"
+        },
+        {
+          "date": "2019-06-16",
+          "title": "Vice-président du Rassemblement national",
+          "text": "Il est nommé vice-président du Rassemblement national lors du conseil national à La Rochelle, et entre au bureau exécutif. L'article ne nomme pas l'auteur de la nomination.",
+          "url": "https://www.franceinfo.fr/politique/front-national/jordan-bardella-devient-vice-president-du-rassemblement-national_3492801.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20261109055801/https://www.franceinfo.fr/politique/front-national/jordan-bardella-devient-vice-president-du-rassemblement-national_3492801.html",
+          "archived": "2026-11-09"
+        },
+        {
+          "date": "2021-09-12",
+          "title": "Présidence par intérim",
+          "text": "Marine Le Pen lui confie les rênes du Rassemblement national pour la campagne présidentielle de 2022. Elle déclare le faire conformément aux statuts et au vote des adhérents qui l'ont placé en tête d'une élection interne.",
+          "url": "https://www.tf1info.fr/politique/presidentielle-2022-pourquoi-marine-le-pen-laisse-sa-place-a-jordan-bardella-a-la-tete-du-rn-a-frejus-2196085.html",
+          "source": "TF1 Info",
+          "by": "marine-le-pen",
+          "verb": "a confié la présidence par intérim du RN",
+          "archive_url": "https://web.archive.org/web/20250920075141/https://www.tf1info.fr/politique/presidentielle-2022-pourquoi-marine-le-pen-laisse-sa-place-a-jordan-bardella-a-la-tete-du-rn-a-frejus-2196085.html",
+          "archived": "2025-09-20"
+        },
+        {
+          "date": "2022-11-05",
+          "title": "Président du Rassemblement national",
+          "text": "Les adhérents l'élisent président du Rassemblement national avec 84,84 % des voix, face à Louis Aliot, lors du congrès du parti à Paris.",
+          "url": "https://www.radiofrance.fr/franceinter/jordan-bardella-elu-a-la-tete-du-rassemblement-national-3154150",
+          "source": "France Inter",
+          "archive_url": "https://web.archive.org/web/20230620060519/https://www.radiofrance.fr/franceinter/jordan-bardella-elu-a-la-tete-du-rassemblement-national-3154150",
+          "archived": "2023-06-20"
+        },
+        {
+          "date": "2023-09-03",
+          "title": "Tête de liste annoncée pour 2024",
+          "text": "Dans un entretien au Figaro cité par franceinfo, il confirme qu'il conduira la liste du Rassemblement national aux élections européennes de juin 2024, en tant que député européen sortant et chef de parti.",
+          "url": "https://www.franceinfo.fr/elections/europeennes/elections-europeennes-2024-jordan-bardella-confirme-qu-il-sera-tete-de-liste-du-rassemblement-national_6041243.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20250916100015/https://www.franceinfo.fr/elections/europeennes/elections-europeennes-2024-jordan-bardella-confirme-qu-il-sera-tete-de-liste-du-rassemblement-national_6041243.html",
+          "archived": "2025-09-16"
+        },
+        {
+          "date": "2024-06-09",
+          "title": "Élections européennes",
+          "text": "Au soir du 9 juin 2024, les élections européennes sont largement remportées par le Rassemblement national.",
+          "url": "https://www.franceinfo.fr/politique/parlement-francais/assemblee-nationale/dissolution/legislatives-2024-pourquoi-marine-le-pen-veut-laisser-matignon-a-jordan-bardella-en-cas-de-large-victoire-du-rn_6599709.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20250701111221/https://www.franceinfo.fr/politique/parlement-francais/assemblee-nationale/dissolution/legislatives-2024-pourquoi-marine-le-pen-veut-laisser-matignon-a-jordan-bardella-en-cas-de-large-victoire-du-rn_6599709.html",
+          "archived": "2025-07-01"
+        },
+        {
+          "date": "2024-06-10",
+          "title": "Annonce pour Matignon, sous condition",
+          "text": "Sur TF1, Marine Le Pen annonce que Jordan Bardella sera Premier ministre si le Rassemblement national obtient une majorité aux législatives anticipées. Elle parle d'un partage des rôles : elle vers la présidence de la République, lui vers Matignon. Cette phrase est conditionnelle : elle ne constate pas une nomination.",
+          "url": "https://www.tf1info.fr/politique/elections/legislatives/dissolution-video-marine-le-pen-sur-tf1-jordan-bardella-sera-premier-ministre-en-cas-de-majorite-rn-aux-legislatives-2303374.html",
+          "source": "TF1 Info",
+          "by": "marine-le-pen",
+          "verb": "a annoncé qu'il serait Premier ministre en cas de majorité du RN",
+          "archive_url": "https://web.archive.org/web/20261109060001/https://www.tf1info.fr/politique/elections/legislatives/dissolution-video-marine-le-pen-sur-tf1-jordan-bardella-sera-premier-ministre-en-cas-de-majorite-rn-aux-legislatives-2303374.html",
+          "archived": "2026-11-09"
+        }
+      ]
     },
     {
       "id": "marion-marechal",
@@ -540,7 +687,29 @@
         "file": "Portrait de Marion Maréchal, avril 2022.jpg"
       },
       "category": "Responsables politiques",
-      "subcategory": "Parlementaires & élus"
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2022-05",
+          "title": "Direction de l'ISSEP",
+          "text": "Elle quitte la direction de l'ISSEP, à Lyon. L'article indique qu'elle juge son engagement politique incompatible avec cette fonction.",
+          "url": "https://www.franceinfo.fr/elections/europeennes/europeennes-marion-marechal-designee-tete-de-liste-du-parti-reconquete-annonce-eric-zemmour_6047075.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20251010161447/https://www.franceinfo.fr/elections/europeennes/europeennes-marion-marechal-designee-tete-de-liste-du-parti-reconquete-annonce-eric-zemmour_6047075.html",
+          "archived": "2025-10-10"
+        },
+        {
+          "date": "2023-09-06",
+          "title": "Tête de liste de Reconquête",
+          "text": "Éric Zemmour déclare, dans un entretien au Figaro cité par franceinfo : « J'ai décidé de confier à Marion Maréchal la mission de conduire la liste de Reconquête pour les élections européennes. »",
+          "url": "https://www.franceinfo.fr/elections/europeennes/europeennes-marion-marechal-designee-tete-de-liste-du-parti-reconquete-annonce-eric-zemmour_6047075.html",
+          "source": "franceinfo",
+          "by": "eric-zemmour",
+          "verb": "a confié la tête de liste de Reconquête aux européennes",
+          "archive_url": "https://web.archive.org/web/20251010161447/https://www.franceinfo.fr/elections/europeennes/europeennes-marion-marechal-designee-tete-de-liste-du-parti-reconquete-annonce-eric-zemmour_6047075.html",
+          "archived": "2025-10-10"
+        }
+      ]
     },
     {
       "id": "eric-zemmour",
@@ -630,7 +799,27 @@
         "file": "Portrait_d'Éric_Zemmour,_avril_2022.jpg"
       },
       "category": "Responsables politiques",
-      "subcategory": "Partis & dirigeants de parti"
+      "subcategory": "Partis & dirigeants de parti",
+      "parcours": [
+        {
+          "date": "2021-09-13",
+          "title": "Fin des chroniques sur CNews",
+          "text": "CNews met fin à ses chroniques de « Face à l'info », après la décision du CSA de décompter son temps de parole.",
+          "url": "https://www.franceinfo.fr/politique/eric-zemmour/presidentielle-cnews-met-fin-aux-chroniques-du-possible-candidat-eric-zemmour-apres-la-decision-du-csa-de-decompter-son-temps-de-parole_4769613.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20260824220416/https://www.franceinfo.fr/politique/eric-zemmour/presidentielle-cnews-met-fin-aux-chroniques-du-possible-candidat-eric-zemmour-apres-la-decision-du-csa-de-decompter-son-temps-de-parole_4769613.html",
+          "archived": "2026-08-24"
+        },
+        {
+          "date": "2021-12-05",
+          "title": "Lancement de Reconquête",
+          "text": "Lors de son premier meeting de candidat à l'élection présidentielle, à Villepinte, il lance le parti Reconquête.",
+          "url": "https://www.franceinfo.fr/elections/presidentielle/presidentielle-2022-premier-meeting-d-eric-zemmour-pour-lancer-sa-reconquete_4871171.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20251231214333/https://www.franceinfo.fr/elections/presidentielle/presidentielle-2022-premier-meeting-d-eric-zemmour-pour-lancer-sa-reconquete_4871171.html",
+          "archived": "2025-12-31"
+        }
+      ]
     },
     {
       "id": "eric-ciotti",
@@ -711,7 +900,27 @@
         "file": "Éric_Ciotti_(cropped).jpg"
       },
       "category": "Responsables politiques",
-      "subcategory": "Parlementaires & élus"
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2022-12-11",
+          "title": "Président des Républicains",
+          "text": "Les adhérents l'élisent président des Républicains avec 53,7 % des voix, face à Bruno Retailleau.",
+          "url": "https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/alpes-maritimes/nice/eric-ciotti-elu-president-du-parti-les-republicains-2672864.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20261109060046/https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/alpes-maritimes/nice/eric-ciotti-elu-president-du-parti-les-republicains-2672864.html",
+          "archived": "2026-11-09"
+        },
+        {
+          "date": "2024-06-11",
+          "title": "Alliance électorale annoncée",
+          "text": "Il annonce une alliance des Républicains avec le Rassemblement national pour les législatives anticipées.",
+          "url": "https://www.franceinfo.fr/politique/legislatives-anticipees-eric-ciotti-dit-oui-a-une-alliance-des-republicains-avec-le-rn_6598017.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20250608183328/https://www.franceinfo.fr/politique/legislatives-anticipees-eric-ciotti-dit-oui-a-une-alliance-des-republicains-avec-le-rn_6598017.html",
+          "archived": "2025-06-08"
+        }
+      ]
     },
     {
       "id": "yael-braun-pivet",
@@ -1328,7 +1537,18 @@
         "file": "Festival_automobile_international_2014_-_Photocall_-_103.jpg"
       },
       "category": "Médias & propriétaires",
-      "subcategory": "Propriétaires, financeurs & groupes"
+      "subcategory": "Propriétaires, financeurs & groupes",
+      "parcours": [
+        {
+          "date": "2014",
+          "title": "Présidence du conseil de surveillance de Vivendi",
+          "text": "Il accède à la présidence du conseil de surveillance de Vivendi, et par là de sa filiale Canal+. L'article ne nomme pas une personne qui l'aurait désigné.",
+          "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+          "archived": "2026-10-16"
+        }
+      ]
     },
     {
       "id": "geoffroy-lejeune",
@@ -1350,7 +1570,18 @@
         "file": "Versailles_-_Geoffroy_Lejeune_-_1.jpg"
       },
       "category": "Journalistes & éditorialistes",
-      "subcategory": "Directions de rédaction"
+      "subcategory": "Directions de rédaction",
+      "parcours": [
+        {
+          "date": "2023-06-25",
+          "title": "Direction du JDD",
+          "text": "franceinfo relate l'annonce de son arrivée à la tête du Journal du dimanche, en provenance de Valeurs actuelles. L'article ne dit pas qui l'a nommé.",
+          "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+          "archived": "2026-10-16"
+        }
+      ]
     },
     {
       "id": "rn",
@@ -1886,7 +2117,27 @@
         "file": "Bruno_Retailleau_-_Ministre_de_l'Intérieur_français_(cropped).jpg"
       },
       "category": "Responsables politiques",
-      "subcategory": "Partis & dirigeants de parti"
+      "subcategory": "Partis & dirigeants de parti",
+      "parcours": [
+        {
+          "date": "2024-09-21",
+          "title": "Ministre de l'Intérieur",
+          "text": "franceinfo le présente comme nommé ministre de l'Intérieur par Michel Barnier. Il succède à Gérald Darmanin. Michel Barnier n'a pas de fiche dans ce jeu de données : l'étape ne crée pas de lien.",
+          "url": "https://www.franceinfo.fr/politique/gouvernement-de-michel-barnier/gouvernement-barnier-bruno-retailleau-figure-de-la-droite-conservatrice-a-l-interieur_6795379.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20261109060125/https://www.franceinfo.fr/politique/gouvernement-de-michel-barnier/gouvernement-barnier-bruno-retailleau-figure-de-la-droite-conservatrice-a-l-interieur_6795379.html",
+          "archived": "2026-11-09"
+        },
+        {
+          "date": "2025-05-18",
+          "title": "Président des Républicains",
+          "text": "Les adhérents l'élisent président des Républicains avec 74,31 % des voix, face à Laurent Wauquiez.",
+          "url": "https://www.franceinfo.fr/politique/bruno-retailleau/bruno-retailleau-est-elu-president-du-parti-les-republicains-avec-74-31-des-voix_7247163.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20260305080822/https://www.franceinfo.fr/politique/bruno-retailleau/bruno-retailleau-est-elu-president-du-parti-les-republicains-avec-74-31-des-voix_7247163.html",
+          "archived": "2026-03-05"
+        }
+      ]
     },
     {
       "id": "valerie-pecresse",
@@ -2012,7 +2263,18 @@
         "france"
       ],
       "category": "Médias & propriétaires",
-      "subcategory": "Propriétaires, financeurs & groupes"
+      "subcategory": "Propriétaires, financeurs & groupes",
+      "parcours": [
+        {
+          "date": "2024-07-18",
+          "title": "Projet « Périclès »",
+          "text": "Un document de 2023 décrit le projet « Périclès ». Le 18 juillet 2024, L'Humanité en publie le contenu. Les équipes de Pierre-Édouard Stérin en confirment l'existence, selon franceinfo.",
+          "url": "https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20261003121243/https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
+          "archived": "2026-10-03"
+        }
+      ]
     },
     {
       "id": "renaud-camus",
@@ -2415,7 +2677,18 @@
         "france"
       ],
       "category": "Médias & propriétaires",
-      "subcategory": "Animateurs & producteurs"
+      "subcategory": "Animateurs & producteurs",
+      "parcours": [
+        {
+          "date": "2025-02-27",
+          "title": "Arrivée annoncée au groupe M6",
+          "text": "Il annonce rejoindre le groupe M6. Il doit animer une émission quotidienne sur W9 et un programme sur Fun Radio à partir du 1er septembre. Le groupe M6 écrit se réjouir de cette arrivée. L'article ne nomme pas une personne qui l'aurait recruté.",
+          "url": "https://www.franceinfo.fr/culture/tv/cyril-hanouna/l-animateur-cyril-hanouna-annonce-rejoindre-le-groupe-m6-en-septembre_7100610.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20250901233633/https://www.franceinfo.fr/culture/tv/cyril-hanouna/l-animateur-cyril-hanouna-annonce-rejoindre-le-groupe-m6-en-septembre_7100610.html",
+          "archived": "2025-09-01"
+        }
+      ]
     },
     {
       "id": "nemesis",
@@ -2695,7 +2968,18 @@
         "gaza"
       ],
       "category": "Responsables politiques",
-      "subcategory": "Candidats à la présidentielle 2027"
+      "subcategory": "Candidats à la présidentielle 2027",
+      "parcours": [
+        {
+          "date": "2016-10-16",
+          "title": "La France insoumise",
+          "text": "franceinfo indique qu'il présente « L'Avenir en commun » près de Lille, lors de la première convention du mouvement baptisé La France insoumise.",
+          "url": "https://www.franceinfo.fr/elections/presidentielle/de-la-securite-sociale-integrale-a-la-vie-republique-jean-luc-melenchon-presente-son-programme-pour-2017_1874861.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20261109060221/https://www.franceinfo.fr/elections/presidentielle/de-la-securite-sociale-integrale-a-la-vie-republique-jean-luc-melenchon-presente-son-programme-pour-2017_1874861.html",
+          "archived": "2026-11-09"
+        }
+      ]
     },
     {
       "id": "raphael-glucksmann",
@@ -2821,7 +3105,20 @@
         "gaza"
       ],
       "category": "Responsables politiques",
-      "subcategory": "Candidats à la présidentielle 2027"
+      "subcategory": "Candidats à la présidentielle 2027",
+      "parcours": [
+        {
+          "date": "2017-05-15",
+          "title": "Premier ministre",
+          "text": "Emmanuel Macron le nomme Premier ministre.",
+          "url": "https://www.franceinfo.fr/elections/pourquoi-emmanuel-macron-a-choisi-edouard-philippe-pour-le-poste-de-premier-ministre_2192137.html",
+          "source": "franceinfo",
+          "by": "emmanuel-macron",
+          "verb": "a nommé Premier ministre",
+          "archive_url": "https://web.archive.org/web/20250715083645/https://www.franceinfo.fr/elections/pourquoi-emmanuel-macron-a-choisi-edouard-philippe-pour-le-poste-de-premier-ministre_2192137.html",
+          "archived": "2025-07-15"
+        }
+      ]
     },
     {
       "id": "gabriel-attal",
@@ -2855,7 +3152,20 @@
         "gaza"
       ],
       "category": "Responsables politiques",
-      "subcategory": "Candidats à la présidentielle 2027"
+      "subcategory": "Candidats à la présidentielle 2027",
+      "parcours": [
+        {
+          "date": "2024-01-09",
+          "title": "Premier ministre",
+          "text": "L'Élysée annonce sa nomination comme Premier ministre, en succession d'Élisabeth Borne. Le communiqué cité par franceinfo indique que le président de la République le charge de former un gouvernement. Le même article identifie ce président : Emmanuel Macron.",
+          "url": "https://www.franceinfo.fr/politique/remaniement/remaniement-gabriel-attal-est-nomme-premier-ministre-en-remplacement-d-elisabeth-borne_6292461.html",
+          "source": "franceinfo",
+          "by": "emmanuel-macron",
+          "verb": "a chargé de former le gouvernement, lors de la nomination au poste de Premier ministre annoncée par l'Élysée",
+          "archive_url": "https://web.archive.org/web/20261109060307/https://www.franceinfo.fr/politique/remaniement/remaniement-gabriel-attal-est-nomme-premier-ministre-en-remplacement-d-elisabeth-borne_6292461.html",
+          "archived": "2026-11-09"
+        }
+      ]
     },
     {
       "id": "xavier-bertrand",
@@ -2934,6 +3244,7 @@
       "url": "https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
       "date": "2025-03-26",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20260211151040/https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
       "archived": "2026-02-11"
     },
@@ -2944,6 +3255,7 @@
       "url": "https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
       "date": "2025-05-16",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20250914072232/https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
       "archived": "2025-09-14"
     },
@@ -2954,6 +3266,7 @@
       "url": "https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
       "date": "2023-10-29",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20250724222951/https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
       "archived": "2025-07-24"
     },
@@ -2964,6 +3277,7 @@
       "url": "https://www.franceinfo.fr/politique/eric-zemmour/presidentielle-cnews-met-fin-aux-chroniques-du-possible-candidat-eric-zemmour-apres-la-decision-du-csa-de-decompter-son-temps-de-parole_4769613.html",
       "date": "2021-09-13",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20260824220416/https://www.franceinfo.fr/politique/eric-zemmour/presidentielle-cnews-met-fin-aux-chroniques-du-possible-candidat-eric-zemmour-apres-la-decision-du-csa-de-decompter-son-temps-de-parole_4769613.html",
       "archived": "2026-08-24"
     },
@@ -2974,6 +3288,7 @@
       "url": "https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
       "date": "2023-10-29",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20250724222951/https://www.europe1.fr/international/israel-hamas-je-ne-suis-pas-daccord-avec-la-treve-humanitaire-explique-eric-zemmour-4211594",
       "archived": "2025-07-24"
     },
@@ -2984,6 +3299,7 @@
       "url": "https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
       "date": "2024-10-07",
       "section": "gaza",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20250724023204/https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
       "archived": "2025-07-24"
     },
@@ -2994,6 +3310,7 @@
       "url": "https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
       "date": "2024-10-07",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20250724023204/https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
       "archived": "2025-07-24"
     },
@@ -3004,6 +3321,7 @@
       "url": "https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
       "date": "2024-10-07",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20250724023204/https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
       "archived": "2025-07-24"
     },
@@ -3014,6 +3332,7 @@
       "url": "https://www.franceinfo.fr/elections/legislatives/elections-legislatives-2024-marion-marechal-deplore-un-changement-de-position-du-rn-qui-refuse-le-principe-d-un-accord-avec-reconquete_6598065.html",
       "date": "2024-06-11",
       "section": "gaza",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20261108192747/https://www.franceinfo.fr/elections/legislatives/elections-legislatives-2024-marion-marechal-deplore-un-changement-de-position-du-rn-qui-refuse-le-principe-d-un-accord-avec-reconquete_6598065.html",
       "archived": "2026-11-08"
     },
@@ -3024,6 +3343,7 @@
       "url": "https://rmc.bfmtv.com/actualites/politique/jordan-bardella-en-israel-je-n-y-vais-pas-pour-parler-du-conflit-assure-le-president-du-rn_AV-202503190364.html",
       "date": "2025-03-19",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20250408160440/https://rmc.bfmtv.com/actualites/politique/jordan-bardella-en-israel-je-n-y-vais-pas-pour-parler-du-conflit-assure-le-president-du-rn_AV-202503190364.html",
       "archived": "2025-04-08"
     },
@@ -3034,6 +3354,7 @@
       "url": "https://www.cnews.fr/monde/2024-05-21/marion-marechal-il-ny-pas-de-genocide-gaza-sinon-il-ny-aurait-pas-des-evacuations",
       "date": "2024-05-21",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20240705034513/https://www.cnews.fr/monde/2024-05-21/marion-marechal-il-ny-pas-de-genocide-gaza-sinon-il-ny-aurait-pas-des-evacuations",
       "archived": "2024-07-05"
     },
@@ -3044,6 +3365,7 @@
       "url": "https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
       "date": "2025-03-26",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20260211151040/https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
       "archived": "2026-02-11"
     },
@@ -3054,6 +3376,7 @@
       "url": "https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
       "date": "2025-03-26",
       "section": "gaza",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20260211151040/https://www.france24.com/fr/info-en-continu/20250326-en-isra%C3%ABl-bardella-rencontre-des-survivants-du-7-octobre-et-d%C3%A9fend-un-front-commun",
       "archived": "2026-02-11"
     },
@@ -3064,6 +3387,7 @@
       "url": "https://www.bfmtv.com/politique/les-republicains/elle-s-est-decredibilisee-eric-ciotti-souhaite-que-la-france-quitte-la-cour-penale-internationale_AV-202405220346.html",
       "date": "2024-05-22",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20240626155550/https://www.bfmtv.com/politique/les-republicains/elle-s-est-decredibilisee-eric-ciotti-souhaite-que-la-france-quitte-la-cour-penale-internationale_AV-202405220346.html",
       "archived": "2024-06-26"
     },
@@ -3074,6 +3398,7 @@
       "url": "https://www.franceinfo.fr/politique/legislatives-anticipees-eric-ciotti-dit-oui-a-une-alliance-des-republicains-avec-le-rn_6598017.html",
       "date": "2024-06-11",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20250608183328/https://www.franceinfo.fr/politique/legislatives-anticipees-eric-ciotti-dit-oui-a-une-alliance-des-republicains-avec-le-rn_6598017.html",
       "archived": "2025-06-08"
     },
@@ -3084,6 +3409,7 @@
       "url": "https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
       "date": "2024-10-07",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20250724023204/https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
       "archived": "2025-07-24"
     },
@@ -3094,6 +3420,7 @@
       "url": "https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
       "date": "2024-06-15",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20260419111603/https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
       "archived": "2026-04-19"
     },
@@ -3104,6 +3431,7 @@
       "url": "https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
       "date": "2024-06-16",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20260419111603/https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
       "archived": "2026-04-19"
     },
@@ -3114,6 +3442,7 @@
       "url": "https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
       "date": "2024-06-16",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20260419111603/https://www.franceinfo.fr/elections/legislatives/legislatives-l-historien-serge-klarsfeld-votera-pour-le-rassemblement-national-en-cas-de-duel-face-a-la-france-insoumise_6607854.html",
       "archived": "2026-04-19"
     },
@@ -3124,6 +3453,7 @@
       "url": "https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
       "date": "2025-05-15",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20250914072232/https://www.huffingtonpost.fr/politique/article/marine-le-pen-soutient-sans-reserve-ce-que-fait-israel-a-gaza_250113.html",
       "archived": "2025-09-14"
     },
@@ -3134,6 +3464,7 @@
       "url": "https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
       "date": "2023-10-22",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20261025132641/https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
       "archived": "2026-10-25"
     },
@@ -3144,6 +3475,7 @@
       "url": "https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
       "date": "2023-10-22",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261025132641/https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
       "archived": "2026-10-25"
     },
@@ -3154,6 +3486,7 @@
       "url": "https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
       "date": "2023-10-22",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261025132641/https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
       "archived": "2026-10-25"
     },
@@ -3164,6 +3497,7 @@
       "url": "https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
       "date": "2023-10-22",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20261025132641/https://www.france24.com/fr/france/20231022-ya%C3%ABl-braun-pivet-en-isra%C3%ABl-avec-les-faucons-de-lr-un-voyage-qui-s%C3%A8me-le-trouble",
       "archived": "2026-10-25"
     },
@@ -3174,6 +3508,7 @@
       "url": "https://www.vie-publique.fr/discours/296889-manuel-valls-16012025-europe-1-israel-hamas-cessez-le-feu-et-mayotte",
       "date": "2025-01-16",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261103044717/https://www.vie-publique.fr/discours/296889-manuel-valls-16012025-europe-1-israel-hamas-cessez-le-feu-et-mayotte",
       "archived": "2026-11-03"
     },
@@ -3184,6 +3519,7 @@
       "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
       "date": "2025-07-22",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20260407021925/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
       "archived": "2026-04-07"
     },
@@ -3194,6 +3530,7 @@
       "url": "https://www.marianne.net/politique/lrem/la-deputee-caroline-yadan-essaie-t-elle-vraiment-de-faire-interdire-toute-mention-de-genocide-a-gaza",
       "date": "2025-07-23",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20251112193659/https://www.marianne.net/politique/lrem/la-deputee-caroline-yadan-essaie-t-elle-vraiment-de-faire-interdire-toute-mention-de-genocide-a-gaza",
       "archived": "2025-11-12"
     },
@@ -3204,6 +3541,7 @@
       "url": "https://www.lepoint.fr/debats/qualifier-de-genocide-l-operation-menee-par-l-armee-israelienne-releve-de-la-manipulation-politique-09-09-2024-2569814_2.php",
       "date": "2024-09-09",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20260502000330/https://www.lepoint.fr/debats/qualifier-de-genocide-l-operation-menee-par-l-armee-israelienne-releve-de-la-manipulation-politique-09-09-2024-2569814_2.php",
       "archived": "2026-05-02"
     },
@@ -3214,6 +3552,7 @@
       "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
       "date": "2025-07-22",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20260407021925/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
       "archived": "2026-04-07"
     },
@@ -3224,6 +3563,7 @@
       "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
       "date": "2025-07-22",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20260407021925/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
       "archived": "2026-04-07"
     },
@@ -3234,6 +3574,7 @@
       "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
       "date": "2025-07-22",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20260407021925/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/denoncer-un-genocide-a-gaza-c-est-une-falsification-historique-estime-la-ministre-chargee-de-la-lutte-contre-les-discriminations-aurore-berge_7392085.html",
       "archived": "2026-04-07"
     },
@@ -3244,6 +3585,7 @@
       "url": "https://www.france24.com/fr/20140328-municipales-robert-menard-beziers-fn-rsf-liberte-presse-le-pen-mairie",
       "date": "2014-03-28",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20250719101929/https://www.france24.com/fr/20140328-municipales-robert-menard-beziers-fn-rsf-liberte-presse-le-pen-mairie",
       "archived": "2025-07-19"
     },
@@ -3254,6 +3596,7 @@
       "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "date": "2023-06-25",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "archived": "2026-10-16"
     },
@@ -3264,6 +3607,7 @@
       "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "date": "2023-06-25",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "archived": "2026-10-16"
     },
@@ -3274,6 +3618,7 @@
       "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "date": "2023-06-25",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "archived": "2026-10-16"
     },
@@ -3284,6 +3629,7 @@
       "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "date": "2023-06-25",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "archived": "2026-10-16"
     },
@@ -3294,6 +3640,7 @@
       "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "date": "2023-06-25",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "archived": "2026-10-16"
     },
@@ -3304,6 +3651,7 @@
       "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "date": "2023-06-25",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "archived": "2026-10-16"
     },
@@ -3314,6 +3662,7 @@
       "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "date": "2023-06-25",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "archived": "2026-10-16"
     },
@@ -3324,6 +3673,7 @@
       "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "date": "2023-06-25",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
       "archived": "2026-10-16"
     },
@@ -3334,6 +3684,7 @@
       "url": "https://x.com/GWGoldnadel",
       "date": "2026-11-03",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20251212162200/https://x.com/GWGoldnadel",
       "archived": "2025-12-12"
     },
@@ -3344,6 +3695,7 @@
       "url": "https://x.com/GWGoldnadel",
       "date": "2026-11-03",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20251212162200/https://x.com/GWGoldnadel",
       "archived": "2025-12-12"
     },
@@ -3354,6 +3706,7 @@
       "url": "https://www.programme-television.org/news/people/polemique/pascal-praud-sen-prend-a-nagui-apres-lusage-du-mot-genocide-pour-qualifier-la-guerre-a-gaza-6643",
       "date": "2025-10-01",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261103045243/https://www.programme-television.org/news/people/polemique/pascal-praud-sen-prend-a-nagui-apres-lusage-du-mot-genocide-pour-qualifier-la-guerre-a-gaza-6643",
       "archived": "2026-11-03"
     },
@@ -3364,6 +3717,7 @@
       "url": "https://www.20minutes.fr/monde/israel/4155846-20250528-gaza-population-augmente-enclave-palestinienne-pourquoi-idee-tient",
       "date": "2025-05-28",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20250729023543/https://www.20minutes.fr/monde/israel/4155846-20250528-gaza-population-augmente-enclave-palestinienne-pourquoi-idee-tient",
       "archived": "2025-07-29"
     },
@@ -3374,6 +3728,7 @@
       "url": "https://www.20minutes.fr/monde/israel/4155846-20250528-gaza-population-augmente-enclave-palestinienne-pourquoi-idee-tient",
       "date": "2025-05-27",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20250729023543/https://www.20minutes.fr/monde/israel/4155846-20250528-gaza-population-augmente-enclave-palestinienne-pourquoi-idee-tient",
       "archived": "2025-07-29"
     },
@@ -3384,6 +3739,7 @@
       "url": "https://www.cnews.fr/monde/2025-08-03/guerre-au-proche-orient-un-genocide-cest-faire-disparaitre-volontairement-un",
       "date": "2025-08-03",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20250805071155/https://www.cnews.fr/monde/2025-08-03/guerre-au-proche-orient-un-genocide-cest-faire-disparaitre-volontairement-un",
       "archived": "2025-08-05"
     },
@@ -3394,6 +3750,7 @@
       "url": "https://www.europe1.fr/international/pascal-praud-et-vous-conflit-israel-hamas-le-mot-genocide-ne-correspond-pas-a-la-realite-estime-gerard-carreyrou-774797",
       "date": "2025-10-01",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20251002205322/https://www.europe1.fr/international/pascal-praud-et-vous-conflit-israel-hamas-le-mot-genocide-ne-correspond-pas-a-la-realite-estime-gerard-carreyrou-774797",
       "archived": "2025-10-02"
     },
@@ -3404,6 +3761,7 @@
       "url": "https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
       "date": "",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20260828125108/https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
       "archived": "2026-08-28"
     },
@@ -3414,6 +3772,7 @@
       "url": "https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
       "date": "",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20260828125108/https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
       "archived": "2026-08-28"
     },
@@ -3424,6 +3783,7 @@
       "url": "https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
       "date": "",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20260828125108/https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
       "archived": "2026-08-28"
     },
@@ -3434,6 +3794,7 @@
       "url": "https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
       "date": "",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20260828125108/https://www.sudradio.fr/nos-biographies/elisabeth-levy-biographie",
       "archived": "2026-08-28"
     },
@@ -3444,6 +3805,7 @@
       "url": "https://www.strategies.fr/medias/caroline-fourest-directrice-editoriale-et-editorialiste-de-franc-tireur",
       "date": "2022-04-07",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20241224215451/https://www.strategies.fr/medias/caroline-fourest-directrice-editoriale-et-editorialiste-de-franc-tireur",
       "archived": "2024-12-24"
     },
@@ -3454,6 +3816,7 @@
       "url": "https://www.strategies.fr/medias/caroline-fourest-directrice-editoriale-et-editorialiste-de-franc-tireur",
       "date": "2022-04-07",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20241224215451/https://www.strategies.fr/medias/caroline-fourest-directrice-editoriale-et-editorialiste-de-franc-tireur",
       "archived": "2024-12-24"
     },
@@ -3464,6 +3827,7 @@
       "url": "https://www.bfmtv.com/politique/yonathan-arfi-president-du-crif-l-accusation-de-genocide-ne-vise-pas-a-proteger-les-palestiniens-mais-resonne-comme-un-cri-de-ralliement-pour-stigmatiser-les-juifs_VN-202405060963.html",
       "date": "2024-05-06",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20240514235823/https://www.bfmtv.com/politique/yonathan-arfi-president-du-crif-l-accusation-de-genocide-ne-vise-pas-a-proteger-les-palestiniens-mais-resonne-comme-un-cri-de-ralliement-pour-stigmatiser-les-juifs_VN-202405060963.html",
       "archived": "2024-05-14"
     },
@@ -3474,6 +3838,7 @@
       "url": "https://x.com/jdomerchet",
       "date": "2026-11-03",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20240927065941/https://x.com/jdomerchet",
       "archived": "2024-09-27"
     },
@@ -3484,6 +3849,7 @@
       "url": "https://bernard-henri-levy.com/fr/il-ny-a-pas-de-genocide-a-gaza-2/",
       "date": "2026-10-05",
       "section": "gaza",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20261016220624/https://bernard-henri-levy.com/fr/il-ny-a-pas-de-genocide-a-gaza-2/",
       "archived": "2026-10-16"
     },
@@ -3494,6 +3860,7 @@
       "url": "https://www.franceinfo.fr/politique/gerald-darmanin/laicite-immigration-violences-policieres-huit-sequences-a-retenir-de-l-emission-vous-avez-la-parole-avec-gerald-darmanin-et-marine-le-pen_4293225.html",
       "date": "2021-02-11",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261108191411/https://www.franceinfo.fr/politique/gerald-darmanin/laicite-immigration-violences-policieres-huit-sequences-a-retenir-de-l-emission-vous-avez-la-parole-avec-gerald-darmanin-et-marine-le-pen_4293225.html",
       "archived": "2026-11-08"
     },
@@ -3504,6 +3871,7 @@
       "url": "https://www.franceinfo.fr/politique/bruno-retailleau/bruno-retailleau-est-elu-president-du-parti-les-republicains-avec-74-31-des-voix_7247163.html",
       "date": "2025-05-18",
       "section": "france",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20260305080822/https://www.franceinfo.fr/politique/bruno-retailleau/bruno-retailleau-est-elu-president-du-parti-les-republicains-avec-74-31-des-voix_7247163.html",
       "archived": "2026-03-05"
     },
@@ -3514,6 +3882,7 @@
       "url": "https://www.lejdd.fr/politique/bruno-retailleau-au-jdd-il-faut-renverser-la-table-en-memoire-de-philippine-150010",
       "date": "2024-09-29",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20251219014849/https://www.lejdd.fr/politique/bruno-retailleau-au-jdd-il-faut-renverser-la-table-en-memoire-de-philippine-150010",
       "archived": "2025-12-19"
     },
@@ -3524,6 +3893,7 @@
       "url": "https://www.lefigaro.fr/politique/l-etat-de-droit-n-est-pas-intangible-ni-sacre-apres-les-declarations-de-retailleau-braun-pivet-se-dit-assez-inquiete-20240930",
       "date": "2024-09-30",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20260115105738/https://www.lefigaro.fr/politique/l-etat-de-droit-n-est-pas-intangible-ni-sacre-apres-les-declarations-de-retailleau-braun-pivet-se-dit-assez-inquiete-20240930",
       "archived": "2026-01-15"
     },
@@ -3534,6 +3904,7 @@
       "url": "https://www.franceinfo.fr/elections/presidentielle/candidats/presidentielle-comment-valerie-pecresse-a-suscite-la-polemique-en-reprenant-la-theorie-d-extreme-droite-du-grand-remplacement_4960755.html",
       "date": "2022-02-13",
       "section": "france",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20250604060145/https://www.franceinfo.fr/elections/presidentielle/candidats/presidentielle-comment-valerie-pecresse-a-suscite-la-polemique-en-reprenant-la-theorie-d-extreme-droite-du-grand-remplacement_4960755.html",
       "archived": "2025-06-04"
     },
@@ -3544,6 +3915,7 @@
       "url": "https://www.franceinfo.fr/politique/emmanuel-macron/dans-valeurs-actuelles-emmanuel-macron-veut-plus-d-efficacite-contre-l-immigration-illegale_3681211.html",
       "date": "2019-10-30",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261108192649/https://www.franceinfo.fr/politique/emmanuel-macron/dans-valeurs-actuelles-emmanuel-macron-veut-plus-d-efficacite-contre-l-immigration-illegale_3681211.html",
       "archived": "2026-11-08"
     },
@@ -3554,6 +3926,7 @@
       "url": "https://www.bfmtv.com/politique/presidentielle-ciotti-voterait-zemmour-contre-macron-au-deuxieme-tour_AD-202109050141.html",
       "date": "2021-09-05",
       "section": "france",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20250722081009/https://www.bfmtv.com/politique/presidentielle-ciotti-voterait-zemmour-contre-macron-au-deuxieme-tour_AD-202109050141.html",
       "archived": "2025-07-22"
     },
@@ -3564,6 +3937,7 @@
       "url": "https://www.franceinfo.fr/elections/presidentielle/candidats/presidentielle-comment-valerie-pecresse-a-suscite-la-polemique-en-reprenant-la-theorie-d-extreme-droite-du-grand-remplacement_4960755.html",
       "date": "2022-02-14",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20250604060145/https://www.franceinfo.fr/elections/presidentielle/candidats/presidentielle-comment-valerie-pecresse-a-suscite-la-polemique-en-reprenant-la-theorie-d-extreme-droite-du-grand-remplacement_4960755.html",
       "archived": "2025-06-04"
     },
@@ -3574,6 +3948,7 @@
       "url": "https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
       "date": "2024-07-20",
       "section": "france",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20261003121243/https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
       "archived": "2026-10-03"
     },
@@ -3584,6 +3959,7 @@
       "url": "https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
       "date": "2024-07-20",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261003121243/https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
       "archived": "2026-10-03"
     },
@@ -3594,6 +3970,7 @@
       "url": "https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
       "date": "2024-07-20",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261003121243/https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
       "archived": "2026-10-03"
     },
@@ -3604,6 +3981,7 @@
       "url": "https://www.radiofrance.fr/franceculture/podcasts/l-economie-du-livre/les-livres-des-politiques-une-sortie-hors-normes-pour-le-premier-ouvrage-de-jordan-bardella-2577554",
       "date": "2024-11-09",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20250723185327/https://www.radiofrance.fr/franceculture/podcasts/l-economie-du-livre/les-livres-des-politiques-une-sortie-hors-normes-pour-le-premier-ouvrage-de-jordan-bardella-2577554",
       "archived": "2025-07-23"
     },
@@ -3614,6 +3992,7 @@
       "url": "https://www.radiofrance.fr/franceculture/podcasts/l-economie-du-livre/les-livres-des-politiques-une-sortie-hors-normes-pour-le-premier-ouvrage-de-jordan-bardella-2577554",
       "date": "2024-11-09",
       "section": "france",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20250723185327/https://www.radiofrance.fr/franceculture/podcasts/l-economie-du-livre/les-livres-des-politiques-une-sortie-hors-normes-pour-le-premier-ouvrage-de-jordan-bardella-2577554",
       "archived": "2025-07-23"
     },
@@ -3624,6 +4003,7 @@
       "url": "https://www.franceinfo.fr/economie/medias/c8-et-nrj12-en-voie-de-perdre-leur-frequence-tnt-cinq-questions-sur-la-decision-de-l-arcom_6684051.html",
       "date": "2024-07-24",
       "section": "france",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20251006121119/https://www.franceinfo.fr/economie/medias/c8-et-nrj12-en-voie-de-perdre-leur-frequence-tnt-cinq-questions-sur-la-decision-de-l-arcom_6684051.html",
       "archived": "2025-10-06"
     },
@@ -3634,6 +4014,7 @@
       "url": "https://www.franceinfo.fr/economie/medias/c8-et-nrj12-en-voie-de-perdre-leur-frequence-tnt-cinq-questions-sur-la-decision-de-l-arcom_6684051.html",
       "date": "2024-07-24",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20251006121119/https://www.franceinfo.fr/economie/medias/c8-et-nrj12-en-voie-de-perdre-leur-frequence-tnt-cinq-questions-sur-la-decision-de-l-arcom_6684051.html",
       "archived": "2025-10-06"
     },
@@ -3644,6 +4025,7 @@
       "url": "https://www.franceinfo.fr/monde/europe/migrants/cnews-sanctionnee-d-une-amende-de-200-000-euros-pour-les-propos-d-eric-zemmour-sur-les-migrants-mineurs_4338041.html",
       "date": "2021-03-18",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20261108192816/https://www.franceinfo.fr/monde/europe/migrants/cnews-sanctionnee-d-une-amende-de-200-000-euros-pour-les-propos-d-eric-zemmour-sur-les-migrants-mineurs_4338041.html",
       "archived": "2026-11-08"
     },
@@ -3654,6 +4036,7 @@
       "url": "https://www.conseil-etat.fr/actualites/pluralisme-et-independance-de-l-information-l-arcom-devra-se-prononcer-a-nouveau-sur-le-respect-par-cnews-de-ses-obligations",
       "date": "2024-02-13",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20261026111225/https://www.conseil-etat.fr/actualites/pluralisme-et-independance-de-l-information-l-arcom-devra-se-prononcer-a-nouveau-sur-le-respect-par-cnews-de-ses-obligations",
       "archived": "2026-10-26"
     },
@@ -3664,6 +4047,7 @@
       "url": "https://www.conseil-etat.fr/actualites/pluralisme-et-independance-de-l-information-l-arcom-devra-se-prononcer-a-nouveau-sur-le-respect-par-cnews-de-ses-obligations",
       "date": "2024-02-13",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20261026111225/https://www.conseil-etat.fr/actualites/pluralisme-et-independance-de-l-information-l-arcom-devra-se-prononcer-a-nouveau-sur-le-respect-par-cnews-de-ses-obligations",
       "archived": "2026-10-26"
     },
@@ -3674,6 +4058,7 @@
       "url": "https://www.franceinfo.fr/economie/medias/devant-les-deputes-vincent-bollore-president-du-groupe-canal-assume-sa-foi-et-recuse-tout-projet-ideologique_6422296.html",
       "date": "2024-03-13",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20261108192511/https://www.franceinfo.fr/economie/medias/devant-les-deputes-vincent-bollore-president-du-groupe-canal-assume-sa-foi-et-recuse-tout-projet-ideologique_6422296.html",
       "archived": "2026-11-08"
     },
@@ -3684,6 +4069,7 @@
       "url": "https://www.franceinfo.fr/societe/immigration/loi-immigration-le-rn-votera-pour-annonce-marine-le-pen-qui-revendique-une-victoire-ideologique_6254361.html",
       "date": "2023-12-19",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20260911131429/https://www.franceinfo.fr/societe/immigration/loi-immigration-le-rn-votera-pour-annonce-marine-le-pen-qui-revendique-une-victoire-ideologique_6254361.html",
       "archived": "2026-09-11"
     },
@@ -3694,6 +4080,7 @@
       "url": "https://www.franceinfo.fr/societe/immigration/projet-de-loi-immigration-la-victoire-ideologique-du-rassemblement-national-est-de-plus-en-plus-forte-chaque-jour-se-targue-jordan-bardella_6253689.html",
       "date": "2023-12-19",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261108191508/https://www.franceinfo.fr/societe/immigration/projet-de-loi-immigration-la-victoire-ideologique-du-rassemblement-national-est-de-plus-en-plus-forte-chaque-jour-se-targue-jordan-bardella_6253689.html",
       "archived": "2026-11-08"
     },
@@ -3704,6 +4091,7 @@
       "url": "https://www.franceinfo.fr/societe/immigration/loi-immigration-le-rn-votera-pour-annonce-marine-le-pen-qui-revendique-une-victoire-ideologique_6254361.html",
       "date": "2023-12-19",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20260911131429/https://www.franceinfo.fr/societe/immigration/loi-immigration-le-rn-votera-pour-annonce-marine-le-pen-qui-revendique-une-victoire-ideologique_6254361.html",
       "archived": "2026-09-11"
     },
@@ -3714,6 +4102,7 @@
       "url": "https://www.conseil-constitutionnel.fr/actualites/communique/decision-n-2023-863-dc-du-25-janvier-2024-communique-de-presse",
       "date": "2024-01-25",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20251228193526/https://www.conseil-constitutionnel.fr/actualites/communique/decision-n-2023-863-dc-du-25-janvier-2024-communique-de-presse",
       "archived": "2025-12-28"
     },
@@ -3724,6 +4113,7 @@
       "url": "https://www.huffingtonpost.fr/france/article/l-arcom-a-directement-saisi-la-justice-pour-ces-sorties-d-eric-zemmour-apres-le-17-octobre_351273.html",
       "date": "2026-11-03",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20261103162638/https://www.huffingtonpost.fr/france/article/l-arcom-a-directement-saisi-la-justice-pour-ces-sorties-d-eric-zemmour-apres-le-17-octobre_351273.html",
       "archived": "2026-11-03"
     },
@@ -3734,6 +4124,7 @@
       "url": "https://www.lefigaro.fr/medias/il-y-a-un-desequilibre-manifeste-et-repete-l-arcom-met-en-demeure-cnews-de-se-conformer-a-ses-obligations-de-pluralisme-des-opinions-20260615",
       "date": "2026-06-12",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20260720014225/https://www.lefigaro.fr/medias/il-y-a-un-desequilibre-manifeste-et-repete-l-arcom-met-en-demeure-cnews-de-se-conformer-a-ses-obligations-de-pluralisme-des-opinions-20260615",
       "archived": "2026-07-20"
     },
@@ -3744,6 +4135,7 @@
       "url": "https://www.franceinfo.fr/economie/medias/l-arcom-inflige-une-sanction-de-200-000-euros-a-cnews-pour-deux-sequences-de-nature-a-inciter-a-la-haine-en-2025_8127374.html",
       "date": "2026-07-24",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20260730172153/https://www.franceinfo.fr/economie/medias/l-arcom-inflige-une-sanction-de-200-000-euros-a-cnews-pour-deux-sequences-de-nature-a-inciter-a-la-haine-en-2025_8127374.html",
       "archived": "2026-07-30"
     },
@@ -3754,6 +4146,7 @@
       "url": "https://www.lemonde.fr/economie/article/2026/10/26/europe-1-mise-en-demeure-par-l-arcom-apres-des-propos-de-nature-a-inciter-a-la-haine-tenus-a-l-antenne-par-sa-presentatrice-christine-kelly_6800838_3234.html",
       "date": "2026-10-21",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20261026211813/https://www.lemonde.fr/economie/article/2026/10/26/europe-1-mise-en-demeure-par-l-arcom-apres-des-propos-de-nature-a-inciter-a-la-haine-tenus-a-l-antenne-par-sa-presentatrice-christine-kelly_6800838_3234.html",
       "archived": "2026-10-26"
     },
@@ -3764,6 +4157,7 @@
       "url": "https://www.franceinfo.fr/culture/tv/cyril-hanouna/l-animateur-cyril-hanouna-annonce-rejoindre-le-groupe-m6-en-septembre_7100610.html",
       "date": "2025-02-27",
       "section": "france",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20250901233633/https://www.franceinfo.fr/culture/tv/cyril-hanouna/l-animateur-cyril-hanouna-annonce-rejoindre-le-groupe-m6-en-septembre_7100610.html",
       "archived": "2025-09-01"
     },
@@ -3774,6 +4168,7 @@
       "url": "https://www.franceinfo.fr/culture/tv/cyril-hanouna/l-animateur-cyril-hanouna-annonce-rejoindre-le-groupe-m6-en-septembre_7100610.html",
       "date": "2025-02-27",
       "section": "france",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20250901233633/https://www.franceinfo.fr/culture/tv/cyril-hanouna/l-animateur-cyril-hanouna-annonce-rejoindre-le-groupe-m6-en-septembre_7100610.html",
       "archived": "2025-09-01"
     },
@@ -3784,6 +4179,7 @@
       "url": "https://www.franceinfo.fr/elections/legislatives/legislatives-2024-l-arcom-met-en-demeure-europe-1-pour-manque-de-mesure-et-d-honnetete-dans-l-emission-de-cyril-hanouna_6629991.html",
       "date": "2024-06-27",
       "section": "france",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20250919022840/https://www.franceinfo.fr/elections/legislatives/legislatives-2024-l-arcom-met-en-demeure-europe-1-pour-manque-de-mesure-et-d-honnetete-dans-l-emission-de-cyril-hanouna_6629991.html",
       "archived": "2025-09-19"
     },
@@ -3794,6 +4190,7 @@
       "url": "https://www.arcom.fr/sites/default/files/2024-06/Arcom%20-%20MED%20Europe%201.pdf",
       "date": "2024-06-27",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20261104193832/https://www.arcom.fr/sites/default/files/2024-06/Arcom%20-%20MED%20Europe%201.pdf",
       "archived": "2026-11-04"
     },
@@ -3804,6 +4201,7 @@
       "url": "https://www.franceinfo.fr/economie/medias/insultes-de-cyril-hanouna-a-un-depute-la-chaine-c8-ecope-d-une-amende-record-de-3-5-millions-d-euros_5649680.html",
       "date": "2023-02-09",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20260516161532/https://www.franceinfo.fr/economie/medias/insultes-de-cyril-hanouna-a-un-depute-la-chaine-c8-ecope-d-une-amende-record-de-3-5-millions-d-euros_5649680.html",
       "archived": "2026-05-16"
     },
@@ -3814,6 +4212,7 @@
       "url": "https://www.franceinfo.fr/politique/front-national/video-marion-marechal-le-pen-les-petits-secrets-de-son-ecole-de-sciences-politiques_2766371.html",
       "date": "2018",
       "section": "france",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20261108193027/https://www.franceinfo.fr/politique/front-national/video-marion-marechal-le-pen-les-petits-secrets-de-son-ecole-de-sciences-politiques_2766371.html",
       "archived": "2026-11-08"
     },
@@ -3824,6 +4223,7 @@
       "url": "https://www.ladepeche.fr/2026/02/16/mort-de-quentin-a-lyon-quel-est-ce-collectif-identitaire-nemesis-proche-de-lextreme-droite-13228324.php",
       "date": "2026-02-16",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261104123458/https://www.ladepeche.fr/2026/02/16/mort-de-quentin-a-lyon-quel-est-ce-collectif-identitaire-nemesis-proche-de-lextreme-droite-13228324.php",
       "archived": "2026-11-04"
     },
@@ -3834,6 +4234,7 @@
       "url": "https://www.ladepeche.fr/2026/02/16/mort-de-quentin-a-lyon-quel-est-ce-collectif-identitaire-nemesis-proche-de-lextreme-droite-13228324.php",
       "date": "2026-02-16",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261104123458/https://www.ladepeche.fr/2026/02/16/mort-de-quentin-a-lyon-quel-est-ce-collectif-identitaire-nemesis-proche-de-lextreme-droite-13228324.php",
       "archived": "2026-11-04"
     },
@@ -3844,6 +4245,7 @@
       "url": "https://www.arcom.fr/se-documenter/espace-juridique/decisions/emission-100-politique-week-end-diffusee-le-3-avril-2026-intervention-aupres-de-cnews",
       "date": "2026-10-14",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20261104195104/https://www.arcom.fr/se-documenter/espace-juridique/decisions/emission-100-politique-week-end-diffusee-le-3-avril-2026-intervention-aupres-de-cnews",
       "archived": "2026-11-04"
     },
@@ -3854,6 +4256,7 @@
       "url": "https://www.franceinfo.fr/politique/jean-castex/gouvernement-de-jean-castex/le-groupe-d-extreme-droite-generation-identitaire-dissous-en-conseil-des-ministres-annonce-gerald-darmanin_4318225.html",
       "date": "2021-03-03",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20261108193509/https://www.franceinfo.fr/politique/jean-castex/gouvernement-de-jean-castex/le-groupe-d-extreme-droite-generation-identitaire-dissous-en-conseil-des-ministres-annonce-gerald-darmanin_4318225.html",
       "archived": "2026-11-08"
     },
@@ -3864,6 +4267,7 @@
       "url": "https://www.franceinfo.fr/politique/marine-le-pen/video-generation-identitaire-ce-qui-scandalise-m-darmanin-doit-fait-l-objet-d-une-dissolution-ca-ce-n-est-pas-l-etat-de-droit-denonce-marine-le-pen_4273347.html",
       "date": "2021-01-27",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20261108193102/https://www.franceinfo.fr/politique/marine-le-pen/video-generation-identitaire-ce-qui-scandalise-m-darmanin-doit-fait-l-objet-d-une-dissolution-ca-ce-n-est-pas-l-etat-de-droit-denonce-marine-le-pen_4273347.html",
       "archived": "2026-11-08"
     },
@@ -3874,6 +4278,7 @@
       "url": "https://www.franceinfo.fr/elections/presidentielle/l-ancien-cadre-de-generation-identitaire-et-assistant-parlementaire-rn-damien-rieu-rejoint-eric-zemmour_4924131.html",
       "date": "2022-01-20",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20251012122530/https://www.franceinfo.fr/elections/presidentielle/l-ancien-cadre-de-generation-identitaire-et-assistant-parlementaire-rn-damien-rieu-rejoint-eric-zemmour_4924131.html",
       "archived": "2025-10-12"
     },
@@ -3884,6 +4289,7 @@
       "url": "https://www.franceinfo.fr/politique/eric-zemmour/le-gouvernement-dissout-le-groupuscule-d-ultradroite-les-zouaves-paris-notamment-soupconne-d-etre-implique-dans-les-violences-lors-du-meeting-de-zemmour-a-villepinte_4905269.html",
       "date": "2022-01-05",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20260220060254/https://www.franceinfo.fr/politique/eric-zemmour/le-gouvernement-dissout-le-groupuscule-d-ultradroite-les-zouaves-paris-notamment-soupconne-d-etre-implique-dans-les-violences-lors-du-meeting-de-zemmour-a-villepinte_4905269.html",
       "archived": "2026-02-20"
     },
@@ -3894,6 +4300,7 @@
       "url": "https://www.franceinfo.fr/politique/eric-zemmour/le-gouvernement-dissout-le-groupuscule-d-ultradroite-les-zouaves-paris-notamment-soupconne-d-etre-implique-dans-les-violences-lors-du-meeting-de-zemmour-a-villepinte_4905269.html",
       "date": "2021-12-05",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20260220060254/https://www.franceinfo.fr/politique/eric-zemmour/le-gouvernement-dissout-le-groupuscule-d-ultradroite-les-zouaves-paris-notamment-soupconne-d-etre-implique-dans-les-violences-lors-du-meeting-de-zemmour-a-villepinte_4905269.html",
       "archived": "2026-02-20"
     },
@@ -3904,6 +4311,7 @@
       "url": "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2024-12-30/489498",
       "date": "2024-12-30",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20261105063042/https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2024-12-30/489498",
       "archived": "2026-11-05"
     },
@@ -3914,6 +4322,7 @@
       "url": "https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2025-07-31/497252",
       "date": "2025-07-31",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20261105063100/https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2025-07-31/497252",
       "archived": "2026-11-05"
     },
@@ -3924,6 +4333,7 @@
       "url": "https://www.franceinfo.fr/politique/gouvernement-de-gabriel-attal/le-gouvernement-a-dissous-le-syndicat-etudiant-gud-et-trois-autres-groupes-d-extreme-droite_6627165.html",
       "date": "2024-06-26",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20260909064210/https://www.franceinfo.fr/politique/gouvernement-de-gabriel-attal/le-gouvernement-a-dissous-le-syndicat-etudiant-gud-et-trois-autres-groupes-d-extreme-droite_6627165.html",
       "archived": "2026-09-09"
     },
@@ -3934,6 +4344,7 @@
       "url": "https://www.franceinfo.fr/politique/gouvernement-de-gabriel-attal/le-gouvernement-a-dissous-le-syndicat-etudiant-gud-et-trois-autres-groupes-d-extreme-droite_6627165.html",
       "date": "2024-06-26",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20260909064210/https://www.franceinfo.fr/politique/gouvernement-de-gabriel-attal/le-gouvernement-a-dissous-le-syndicat-etudiant-gud-et-trois-autres-groupes-d-extreme-droite_6627165.html",
       "archived": "2026-09-09"
     },
@@ -3944,6 +4355,7 @@
       "url": "https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
       "date": "2024-06-19",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20250902174618/https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
       "archived": "2025-09-02"
     },
@@ -3954,6 +4366,7 @@
       "url": "https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
       "date": "2024-06-19",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20250902174618/https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
       "archived": "2025-09-02"
     },
@@ -3964,6 +4377,7 @@
       "url": "https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
       "date": "2024-06-11",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20260831134710/https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
       "archived": "2026-08-31"
     },
@@ -3974,6 +4388,7 @@
       "url": "https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
       "date": "2024-06-11",
       "section": "france",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20260831134710/https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
       "archived": "2026-08-31"
     },
@@ -3984,6 +4399,7 @@
       "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/guerre-entre-israel-et-le-hamas-nous-allons-vers-le-genocide-il-est-en-cours-accuse-fabien-roussel_6416110.html",
       "date": "2024-03-10",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261108193540/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/guerre-entre-israel-et-le-hamas-nous-allons-vers-le-genocide-il-est-en-cours-accuse-fabien-roussel_6416110.html",
       "archived": "2026-11-08"
     },
@@ -3994,6 +4410,7 @@
       "url": "https://www.bfmtv.com/politique/gouvernement/reconnaissance-d-un-etat-palestinien-gabriel-attal-assure-a-son-tour-que-ce-n-est-pas-un-tabou_AN-202405290686.html",
       "date": "2024-05-29",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20250722000931/https://www.bfmtv.com/politique/gouvernement/reconnaissance-d-un-etat-palestinien-gabriel-attal-assure-a-son-tour-que-ce-n-est-pas-un-tabou_AN-202405290686.html",
       "archived": "2025-07-22"
     },
@@ -4004,6 +4421,7 @@
       "url": "https://www.bfmtv.com/politique/est-ce-le-bon-moment-les-doutes-d-edouard-phillipe-quant-a-la-reconnaissance-de-l-etat-de-palestine_AN-202507250488.html",
       "date": "2025-07-25",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20250805133134/https://www.bfmtv.com/politique/est-ce-le-bon-moment-les-doutes-d-edouard-phillipe-quant-a-la-reconnaissance-de-l-etat-de-palestine_AN-202507250488.html",
       "archived": "2025-08-05"
     },
@@ -4014,6 +4432,7 @@
       "url": "https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
       "date": "2025-07-24",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
       "archived": "2026-10-15"
     },
@@ -4024,6 +4443,7 @@
       "url": "https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
       "date": "2025-07-24",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
       "archived": "2026-10-15"
     },
@@ -4034,6 +4454,7 @@
       "url": "https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
       "date": "2025-07-24",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
       "archived": "2026-10-15"
     },
@@ -4044,6 +4465,7 @@
       "url": "https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
       "date": "2025-07-24",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
       "archived": "2026-10-15"
     },
@@ -4054,6 +4476,7 @@
       "url": "https://www.franceinfo.fr/monde/palestine/gaza/guerre-a-gaza-le-ps-le-pcf-et-les-ecologistes-reunis-a-paris-pour-denoncer-le-genocide-commis-par-israel_7274295.html",
       "date": "2025-05-26",
       "section": "gaza",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20250917175607/https://www.franceinfo.fr/monde/palestine/gaza/guerre-a-gaza-le-ps-le-pcf-et-les-ecologistes-reunis-a-paris-pour-denoncer-le-genocide-commis-par-israel_7274295.html",
       "archived": "2025-09-17"
     },
@@ -4064,6 +4487,7 @@
       "url": "https://www.streetpress.com/1793883196-mediapart-politis-streetpress-rassemblement-national-bardella-tri-journalistes-antisemitisme-extreme-droite-fayard-bollore",
       "date": "2026-11-04",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261106192934/https://www.streetpress.com/1793883196-mediapart-politis-streetpress-rassemblement-national-bardella-tri-journalistes-antisemitisme-extreme-droite-fayard-bollore",
       "archived": "2026-11-06"
     },
@@ -4074,6 +4498,7 @@
       "url": "https://www.bfmtv.com/politique/front-national/mediapart-s-est-vu-refuser-l-acces-a-la-soiree-de-lancement-du-livre-de-jordan-bardella_AD-202611050240.html",
       "date": "2026-11-04",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261106192006/https://www.bfmtv.com/politique/front-national/mediapart-s-est-vu-refuser-l-acces-a-la-soiree-de-lancement-du-livre-de-jordan-bardella_AD-202611050240.html",
       "archived": "2026-11-06"
     },
@@ -4084,6 +4509,7 @@
       "url": "https://www.bfmtv.com/politique/front-national/mediapart-s-est-vu-refuser-l-acces-a-la-soiree-de-lancement-du-livre-de-jordan-bardella_AD-202611050240.html",
       "date": "2026-11-04",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261106192006/https://www.bfmtv.com/politique/front-national/mediapart-s-est-vu-refuser-l-acces-a-la-soiree-de-lancement-du-livre-de-jordan-bardella_AD-202611050240.html",
       "archived": "2026-11-06"
     },
@@ -4094,6 +4520,7 @@
       "url": "https://www.huffingtonpost.fr/politique/article/le-lr-alexandre-portier-rapporteur-sur-la-petition-anti-cnews-voici-les-prochaines-etapes-qui-attendent-le-texte_352080.html",
       "date": "2026-11-04",
       "section": "france",
+      "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20261106193931/https://www.huffingtonpost.fr/politique/article/le-lr-alexandre-portier-rapporteur-sur-la-petition-anti-cnews-voici-les-prochaines-etapes-qui-attendent-le-texte_352080.html",
       "archived": "2026-11-06"
     },
@@ -4103,7 +4530,8 @@
       "relation": "message public sur X (@MLP_officiel) le 04/11/2026 prenant la défense de CNews, qu’elle présente comme ayant évoqué une agression de jeunes catholiques à Rouen",
       "url": "https://x.com/MLP_officiel/status/2117897335271219295",
       "date": "2026-11-04",
-      "section": "france"
+      "section": "france",
+      "nature": "autre"
     },
     {
       "source": "rn",
@@ -4112,6 +4540,7 @@
       "url": "https://questions.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-mercredi-04-novembre-2026",
       "date": "2026-11-04",
       "section": "france",
+      "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20261106193008/https://questions.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-mercredi-04-novembre-2026",
       "archived": "2026-11-06"
     },
@@ -4122,6 +4551,7 @@
       "url": "https://www.france24.com/fr/info-en-continu/20261106-bardella-accuse-lfi-de-tentation-totalitaire-en-voulant-fermer-cnews",
       "date": "2026-11-06",
       "section": "france",
+      "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261108193910/https://www.france24.com/fr/info-en-continu/20261106-bardella-accuse-lfi-de-tentation-totalitaire-en-voulant-fermer-cnews",
       "archived": "2026-11-08"
     },
@@ -4131,7 +4561,85 @@
       "relation": "a publié sur X, le 07/11/2026 à 22:26 UTC, un message en citation de celui de Jean-Luc Mélenchon du même jour sur Gaza, la Cisjordanie et les flottilles (discours du Bourget)",
       "url": "https://x.com/CarolineYADAN/status/2119194840160141660",
       "date": "2026-11-07",
-      "section": "gaza"
+      "section": "gaza",
+      "nature": "autre"
+    },
+    {
+      "source": "marine-le-pen",
+      "target": "jordan-bardella",
+      "relation": "a désigné porte-parole du Front national",
+      "url": "https://www.franceinfo.fr/politique/front-national/front-national-david-rachline-nomme-responsable-du-pole-communication-en-remplacement-de-florian-philippot_2382954.html",
+      "date": "2017-09-21",
+      "nature": "ascension",
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261109055840/https://www.franceinfo.fr/politique/front-national/front-national-david-rachline-nomme-responsable-du-pole-communication-en-remplacement-de-florian-philippot_2382954.html",
+      "archived": "2026-11-09"
+    },
+    {
+      "source": "marine-le-pen",
+      "target": "jordan-bardella",
+      "relation": "a désigné tête de liste aux européennes de 2019",
+      "url": "https://www.franceinfo.fr/elections/europeennes/elections-europeennes-jordan-bardella-officiellement-choisi-comme-tete-de-liste-du-rassemblement-national_3133529.html",
+      "date": "2019-01-07",
+      "nature": "ascension",
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261109055914/https://www.franceinfo.fr/elections/europeennes/elections-europeennes-jordan-bardella-officiellement-choisi-comme-tete-de-liste-du-rassemblement-national_3133529.html",
+      "archived": "2026-11-09"
+    },
+    {
+      "source": "marine-le-pen",
+      "target": "jordan-bardella",
+      "relation": "a confié la présidence par intérim du RN",
+      "url": "https://www.tf1info.fr/politique/presidentielle-2022-pourquoi-marine-le-pen-laisse-sa-place-a-jordan-bardella-a-la-tete-du-rn-a-frejus-2196085.html",
+      "date": "2021-09-12",
+      "nature": "ascension",
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20250920075141/https://www.tf1info.fr/politique/presidentielle-2022-pourquoi-marine-le-pen-laisse-sa-place-a-jordan-bardella-a-la-tete-du-rn-a-frejus-2196085.html",
+      "archived": "2025-09-20"
+    },
+    {
+      "source": "marine-le-pen",
+      "target": "jordan-bardella",
+      "relation": "a annoncé qu'il serait Premier ministre en cas de majorité du RN",
+      "url": "https://www.tf1info.fr/politique/elections/legislatives/dissolution-video-marine-le-pen-sur-tf1-jordan-bardella-sera-premier-ministre-en-cas-de-majorite-rn-aux-legislatives-2303374.html",
+      "date": "2024-06-10",
+      "nature": "ascension",
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261109060001/https://www.tf1info.fr/politique/elections/legislatives/dissolution-video-marine-le-pen-sur-tf1-jordan-bardella-sera-premier-ministre-en-cas-de-majorite-rn-aux-legislatives-2303374.html",
+      "archived": "2026-11-09"
+    },
+    {
+      "source": "emmanuel-macron",
+      "target": "edouard-philippe",
+      "relation": "a nommé Premier ministre",
+      "url": "https://www.franceinfo.fr/elections/pourquoi-emmanuel-macron-a-choisi-edouard-philippe-pour-le-poste-de-premier-ministre_2192137.html",
+      "date": "2017-05-15",
+      "nature": "ascension",
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20250715083645/https://www.franceinfo.fr/elections/pourquoi-emmanuel-macron-a-choisi-edouard-philippe-pour-le-poste-de-premier-ministre_2192137.html",
+      "archived": "2025-07-15"
+    },
+    {
+      "source": "emmanuel-macron",
+      "target": "gabriel-attal",
+      "relation": "a chargé de former le gouvernement, lors de la nomination au poste de Premier ministre annoncée par l'Élysée",
+      "url": "https://www.franceinfo.fr/politique/remaniement/remaniement-gabriel-attal-est-nomme-premier-ministre-en-remplacement-d-elisabeth-borne_6292461.html",
+      "date": "2024-01-09",
+      "nature": "ascension",
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20261109060307/https://www.franceinfo.fr/politique/remaniement/remaniement-gabriel-attal-est-nomme-premier-ministre-en-remplacement-d-elisabeth-borne_6292461.html",
+      "archived": "2026-11-09"
+    },
+    {
+      "source": "eric-zemmour",
+      "target": "marion-marechal",
+      "relation": "a confié la tête de liste de Reconquête aux européennes",
+      "url": "https://www.franceinfo.fr/elections/europeennes/europeennes-marion-marechal-designee-tete-de-liste-du-parti-reconquete-annonce-eric-zemmour_6047075.html",
+      "date": "2023-09-06",
+      "nature": "ascension",
+      "section": "france",
+      "archive_url": "https://web.archive.org/web/20251010161447/https://www.franceinfo.fr/elections/europeennes/europeennes-marion-marechal-designee-tete-de-liste-du-parti-reconquete-annonce-eric-zemmour_6047075.html",
+      "archived": "2025-10-10"
     }
   ]
 }

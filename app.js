@@ -58,9 +58,14 @@
   function fmtDate(d) {
     if (!d) return "date non précisée";
     var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d);
-    if (!m) return esc(d);
-    var day = parseInt(m[3], 10);
-    return (day === 1 ? "1er" : day) + " " + MONTHS[parseInt(m[2], 10) - 1] + " " + m[1];
+    if (m) {
+      var day = parseInt(m[3], 10);
+      return (day === 1 ? "1er" : day) + " " + MONTHS[parseInt(m[2], 10) - 1] + " " + m[1];
+    }
+    var ym = /^(\d{4})-(\d{2})$/.exec(d);
+    if (ym) return MONTHS[parseInt(ym[2], 10) - 1] + " " + ym[1];
+    if (/^\d{4}$/.test(d)) return d;
+    return esc(d);
   }
   function quoteHtml(q) { return "«\u00a0" + esc(q) + "\u00a0»"; }
   function srcLink(url, text) {
@@ -299,7 +304,7 @@
     }));
     edgesDS.update(DATA.edges.map(function (e) {
       var dim = q && !(m[e.source] || m[e.target]);
-      return { id: e._id, hidden: !(vis[e.source] && vis[e.target]), color: edgeColor(dim) };
+      return { id: e._id, hidden: !(vis[e.source] && vis[e.target]), color: edgeColor(dim, e), dashes: edgeNature(e) === "opposition" };
     }));
     var allOn = Object.keys(state.themes).every(function (k) { return state.themes[k]; }) &&
       Object.keys(state.types).every(function (k) { return state.types[k]; });
@@ -320,8 +325,16 @@
       font: { face: FONT, size: n.type === "person" ? 19 : 16, color: dim ? PAL.labelDim : PAL.label, strokeWidth: 5, strokeColor: PAL.bg, vadjust: 2 }
     };
   }
-  function edgeColor(dim) {
-    return { color: dim ? PAL.edgeDim : PAL.edge, highlight: PAL.accent, hover: PAL.accent, inherit: false };
+  function edgeNature(e) {
+    return e && (e.nature === "ascension" || e.nature === "opposition" || e.nature === "autre") ? e.nature : "autre";
+  }
+  function edgeColor(dim, e) {
+    var c = dim ? PAL.edgeDim : PAL.edge;
+    if (!dim && e && edgeNature(e) === "opposition") c = cssv("--t-fv") || "#B3261E";
+    return { color: c, highlight: PAL.accent, hover: PAL.accent, inherit: false };
+  }
+  function natureLabel(nat) {
+    return nat === "ascension" ? "Ascension" : nat === "opposition" ? "Opposition" : "Autre";
   }
 
   /* ---------- graphe ---------- */
@@ -355,7 +368,8 @@
         arrows: { to: { enabled: true, scaleFactor: 0.42, type: "arrow" } },
         arrowStrikethrough: false,
         width: 1.3, hoverWidth: 1.2, selectionWidth: 1.6,
-        color: edgeColor(false),
+        color: edgeColor(false, e),
+        dashes: edgeNature(e) === "opposition",
         smooth: { enabled: true, type: "curvedCW", roundness: 0.14 },
         title: tooltip(byId[e.source].name + " → " + byId[e.target].name + "\n" + e.relation + (e.date ? " (" + fmtDate(e.date) + ")" : "") + "\nCliquez pour afficher la source")
       };
@@ -958,7 +972,9 @@
       '<h1 class="f-name" tabindex="-1">' + esc(n.name) + "</h1>" + '<p class="f-role">' + esc(n.role) + "</p>" +
       (n.category ? '<p class="f-cat"><a href="#/sections">' + catLabel(n) + "</a></p>" : "") + "</div></header>" +
       (n.description ? '<p class="f-desc">' + esc(n.description) + "</p>" : "") +
-      '<div class="f-actions"><a class="btn-pill ghost small" href="#/reseau/' + encodeURIComponent(n.id) + '">Voir dans le réseau</a><a class="btn-pill ghost small" href="#/pouvoir/' + encodeURIComponent(n.id) + '">Voir sur l\'échelle</a></div>' +
+      '<div class="f-actions">' + (hasParcours(n) ? '<a class="btn-pill small" href="' + ficheHref(n) + '#parcours">' + esc(arriveLabel(n)) + '</a>' : "") +
+      '<a class="btn-pill ghost small" href="#/reseau/' + encodeURIComponent(n.id) + '">Voir dans le réseau</a><a class="btn-pill ghost small" href="#/pouvoir/' + encodeURIComponent(n.id) + '">Voir sur l\'échelle</a></div>' +
+      parcoursHtml(n) +
       amHtml(n) +
       (st.length || n.type === "person" ? '<h2 class="h-sec">Déclarations publiques <span class="h-n">' + st.length + "</span></h2>" +
         (st.length ? '<ol class="tl">' + st.map(function (x) { return tlItem(x.s, n, x.i, false); }).join("") + "</ol>" : '<p class="empty">Aucune déclaration répertoriée.</p>') : "") +
@@ -980,8 +996,29 @@
   function relItem(e, n) {
     var out = e.source === n.id, o = byId[out ? e.target : e.source];
     var sentence = out ? esc(n.name) + " → <strong>" + esc(o.name) + "</strong>" : "<strong>" + esc(o.name) + "</strong> → " + esc(n.name);
-    return '<li class="rel-card"><a class="rel-main" href="' + ficheHref(o) + '">' + avatar(o, "av-sm") + '<span class="rel-txt"><span class="rel-s">' + sentence + '</span><span class="rel-r">' + esc(e.relation) + '</span></span><span class="chev-r" aria-hidden="true">›</span></a>' +
-      '<div class="meta">' + (e.date ? '<time datetime="' + esc(e.date) + '">' + fmtDate(e.date) + "</time>" : "") + srcLink(e.url, "Source") + archLink(e) + "</div></li>";
+    var nat = edgeNature(e);
+    return '<li class="rel-card nat-' + nat + '"><a class="rel-main" href="' + ficheHref(o) + '">' + avatar(o, "av-sm") + '<span class="rel-txt"><span class="rel-s">' + sentence + '</span><span class="rel-r">' + esc(e.relation) + '</span></span><span class="chev-r" aria-hidden="true">›</span></a>' +
+      '<div class="meta">' + natureBadge(nat) + (e.date ? '<time datetime="' + esc(e.date) + '">' + fmtDate(e.date) + "</time>" : "") + srcLink(e.url, "Source") + archLink(e) + "</div></li>";
+  }
+  var FEMALE = { "caroline-yadan": 1, "aurore-berge": 1, "marine-le-pen": 1, "marion-marechal": 1, "yael-braun-pivet": 1, "elisabeth-levy": 1, "caroline-fourest": 1, "valerie-pecresse": 1, "marine-tondelier": 1 };
+  function arriveLabel(n) { return FEMALE[n.id] ? "Voir comment elle est arrivée là" : "Voir comment il est arrivé là"; }
+  function hasParcours(n) { return !!(n && n.type === "person" && n.parcours && n.parcours.length); }
+  function natureBadge(nat) {
+    return '<span class="nat nat-' + nat + '">' + esc(natureLabel(nat)) + "</span>";
+  }
+  function parcoursHtml(n) {
+    if (!hasParcours(n)) return "";
+    var steps = n.parcours.slice().sort(function (a, b) { return String(a.date).localeCompare(String(b.date)); });
+    return '<section class="parcours" id="parcours" aria-labelledby="parcours-title"><div class="parcours-h"><h2 class="h-sec" id="parcours-title">Parcours <span class="h-n">' + steps.length + "</span></h2>" +
+      '<p class="parcours-lead">Étapes datées, de la première fonction documentée ici jusqu\'au statut actuel. Une pastille n\'apparaît que si la source nomme qui a désigné, nommé, confié ou chargé.</p></div>' +
+      '<ol class="p-rail">' + steps.map(function (s, i) {
+        var who = s.by && byId[s.by] ? byId[s.by] : null;
+        var last = i === steps.length - 1;
+        return '<li class="p-step' + (last ? " is-now" : "") + '" style="--i:' + i + '"><time datetime="' + esc(s.date) + '">' + fmtDate(s.date) + "</time>" +
+          '<article class="p-card"><h3>' + esc(s.title) + "</h3><p>" + esc(s.text) + "</p>" +
+          (who ? '<a class="p-by" href="' + ficheHref(who) + '#parcours">' + avatar(who, "av-xs") + "<span><strong>" + esc(who.name) + "</strong><em>" + esc(s.verb || "") + "</em></span></a>" : "") +
+          '<div class="meta">' + srcLink(s.url, s.source || "Lire la source") + archLink(s) + "</div></article></li>";
+      }).join("") + "</ol></section>";
   }
   function bindFiche() {
     $("fiche-back").addEventListener("click", function () {
@@ -1323,7 +1360,7 @@
   function tlEdge(e) {
     var a = byId[e.source], b = byId[e.target];
     return '<li class="tl-item k-e" data-sec="' + esc(e.section || "") + '"><time class="tl-date" datetime="' + esc(e.date) + '">' + fmtDate(e.date) + '</time><article class="tl-card tl-link">' +
-      '<span class="badge lk">Lien public</span><p class="tl-rel"><a href="' + ficheHref(a) + '">' + esc(a.name) + '</a> → <a href="' + ficheHref(b) + '">' + esc(b.name) + "</a> : " + esc(e.relation) + "</p>" +
+      '<span class="badge lk">Lien public</span>' + natureBadge(edgeNature(e)) + '<p class="tl-rel"><a href="' + ficheHref(a) + '">' + esc(a.name) + '</a> → <a href="' + ficheHref(b) + '">' + esc(b.name) + "</a> : " + esc(e.relation) + "</p>" +
       '<div class="meta actions">' + srcLink(e.url, "Lire la source") + archLink(e) + "</div></article></li>";
   }
 
@@ -1372,7 +1409,7 @@
       url: "https://www.challenges.fr/classements/fortune/pierre-edouard-sterin_26641"
     }
   };
-  var powFilter = "tout", powSel = null, powBuilt = "", powReady = false, climbToken = 0;
+  var powFilter = "tout", powNature = "ascension", powSel = null, powBuilt = "", powReady = false, climbToken = 0;
 
   function fallbackPow(n) {
     var sub = n.subcategory || "", blob = sub + " " + (n.role || "") + " " + (n.category || "");
@@ -1398,14 +1435,21 @@
   }
   function visibleNode(n) { return nodeInFilter(n, powFilter); }
   function tierIndex(id) { var n = byId[id]; return n && typeof n._pow === "number" ? n._pow : -1; }
-  function edgesBetween(a, b) {
+  function edgesBetween(a, b, pred) {
     return (edgesOf[a] || []).filter(function (e) {
-      return (e.source === a && e.target === b) || (e.source === b && e.target === a);
+      var hit = (e.source === a && e.target === b) || (e.source === b && e.target === a);
+      return hit && (!pred || pred(e));
     });
   }
-  function visNeighbors(id) {
+  function edgeShown(e) {
+    if (powNature === "tous") return true;
+    return edgeNature(e) === powNature;
+  }
+  function isAscent(e) { return edgeNature(e) === "ascension"; }
+  function visNeighbors(id, pred) {
     var out = [];
     (edgesOf[id] || []).forEach(function (e) {
+      if (pred && !pred(e)) return;
       var o = e.source === id ? e.target : e.source;
       if (byId[o] && visibleNode(byId[o])) out.push({ id: o, e: e });
     });
@@ -1413,7 +1457,7 @@
   }
   function uniqueDir(id) {
     var up = {}, down = {}, same = {};
-    visNeighbors(id).forEach(function (nb) {
+    visNeighbors(id, edgeShown).forEach(function (nb) {
       var d = tierIndex(nb.id) - tierIndex(id);
       if (d > 0) up[nb.id] = 1; else if (d < 0) down[nb.id] = 1; else same[nb.id] = 1;
     });
@@ -1429,7 +1473,7 @@
     var q = [start], guard = 0;
     while (q.length && guard++ < 4000) {
       var id = q.shift(), seen = {};
-      visNeighbors(id).forEach(function (nb) {
+      visNeighbors(id, isAscent).forEach(function (nb) {
         if (seen[nb.id]) return;
         seen[nb.id] = 1;
         var nd = dist[id] + 1, ns = score[id] + tierIndex(nb.id);
@@ -1489,6 +1533,15 @@
       if (powSel && !visibleNode(byId[powSel])) goPower(null, true);
       else { buildLadder(); applyPowSelection(false); }
     });
+    $("pow-nat").addEventListener("click", function (ev) {
+      var b = ev.target.closest("[data-nat]");
+      if (!b) return;
+      climbToken++;
+      powNature = b.getAttribute("data-nat");
+      powBuilt = "";
+      buildLadder();
+      applyPowSelection(false);
+    });
     $("pow-ladder").addEventListener("click", function (ev) {
       if (ev.target.closest("a")) return;
       var b = ev.target.closest(".pow-node");
@@ -1522,7 +1575,7 @@
       var upLinks = 0;
       list.forEach(function (n) {
         var seen = {};
-        visNeighbors(n.id).forEach(function (nb) {
+        visNeighbors(n.id, edgeShown).forEach(function (nb) {
           if (tierIndex(nb.id) > t && !seen[nb.id]) { seen[nb.id] = 1; upLinks++; }
         });
       });
@@ -1536,7 +1589,7 @@
     }
     $("pow-ladder").innerHTML = html || '<p class="empty">Aucune fiche dans ce filtre.</p>';
     var shown = DATA.nodes.filter(visibleNode).length;
-    var edges = DATA.edges.filter(function (e) { return byId[e.source] && byId[e.target] && visibleNode(byId[e.source]) && visibleNode(byId[e.target]); }).length;
+    var edges = DATA.edges.filter(function (e) { return edgeShown(e) && byId[e.source] && byId[e.target] && visibleNode(byId[e.source]) && visibleNode(byId[e.target]); }).length;
     var fil = longestFil();
     $("pow-stats").textContent = plural(shown, "fiche", "fiches") + " · " + plural(edges, "lien", "liens") + " · plus long fil : " + fil + (fil > 1 ? " étapes" : " étape");
     document.querySelectorAll("#pow-seg [data-pow]").forEach(function (b) {
@@ -1547,22 +1600,29 @@
       var on = f === powFilter;
       b.setAttribute("aria-selected", on ? "true" : "false");
     });
-    powBuilt = powFilter;
+    powBuilt = powFilter + "/" + powNature;
+    markNature();
+  }
+  function markNature() {
+    document.querySelectorAll("#pow-nat [data-nat]").forEach(function (b) {
+      var on = b.getAttribute("data-nat") === powNature;
+      b.setAttribute("aria-selected", on ? "true" : "false");
+    });
   }
   function linkGroup(title, items) {
     if (!items.length) return "";
     return '<h3 class="pow-h">' + esc(title) + '</h3><ul class="pow-links">' + items.map(function (it) {
       var o = byId[it.id];
-      return '<li><button type="button" class="pow-link" data-pow-go="' + esc(it.id) + '">' + avatar(o, "av-xs") +
+      return '<li class="nat-' + edgeNature(it.e) + '"><button type="button" class="pow-link nat-' + edgeNature(it.e) + '" data-pow-go="' + esc(it.id) + '">' + avatar(o, "av-xs") +
         '<span><span class="pow-ln">' + esc(o.name) + '</span><span class="pow-lr">' + esc(it.e.relation) + "</span></span></button>" +
-        '<div class="pow-lsrc">' + (it.e.date ? '<time datetime="' + esc(it.e.date) + '">' + fmtDate(it.e.date) + "</time> " : "") + srcLink(it.e.url, "Source") + "</div></li>";
+        '<div class="pow-lsrc">' + natureBadge(edgeNature(it.e)) + (it.e.date ? '<time datetime="' + esc(it.e.date) + '">' + fmtDate(it.e.date) + "</time> " : "") + srcLink(it.e.url, "Source") + "</div></li>";
     }).join("") + "</ul>";
   }
   function applyPowSelection(scroll) {
     var path = powSel ? climbPath(powSel) : [];
     var pathSet = {}, nearSet = {};
     path.forEach(function (id) { pathSet[id] = 1; });
-    if (powSel) visNeighbors(powSel).forEach(function (nb) { nearSet[nb.id] = 1; });
+    if (powSel) visNeighbors(powSel, edgeShown).forEach(function (nb) { nearSet[nb.id] = 1; });
     document.querySelectorAll("#pow-ladder .pow-node").forEach(function (b) {
       var id = b.getAttribute("data-id");
       b.classList.toggle("is-on", id === powSel);
@@ -1580,7 +1640,7 @@
     var n = byId[powSel];
     var dir = uniqueDir(powSel);
     var ups = [], downs = [], same = [];
-    visNeighbors(powSel).forEach(function (nb) {
+    visNeighbors(powSel, edgeShown).forEach(function (nb) {
       var d = tierIndex(nb.id) - n._pow;
       (d > 0 ? ups : d < 0 ? downs : same).push(nb);
     });
@@ -1592,7 +1652,7 @@
       crumb = '<ol class="pow-crumb" aria-label="Fil de liens">';
       path.forEach(function (id, i) {
         if (i) {
-          var rels = edgesBetween(path[i - 1], id);
+          var rels = edgesBetween(path[i - 1], id, isAscent);
           crumb += '<li class="pow-crumb-rel">' + esc(rels.length ? rels[0].relation : "") + (rels.length > 1 ? " · " + rels.length + " liens" : "") + "</li>";
         }
         crumb += '<li><button type="button" class="pow-crumb-b' + (id === powSel ? " is-here" : "") + '" data-pow-go="' + esc(id) + '">' + esc(byId[id].name) + "</button></li>";
@@ -1600,6 +1660,10 @@
       crumb += "</ol>";
     }
     var climbBtn = path.length > 1 ? '<button type="button" class="btn-pill small" id="pow-climb">' + (reached ? "Remonter jusqu'au sommet" : "Remonter le fil") + "</button>" : "";
+    var parcBtn = hasParcours(n) ? '<a class="btn-pill ghost small" href="' + ficheHref(n) + '#parcours">' + esc(arriveLabel(n)) + "</a>" : "";
+    var modeNote = powNature === "opposition"
+      ? '<p class="pow-fort-n">Ces liens documentent une opposition, une sanction ou un contrôle. Le fil « Remonter » ne les suit pas.</p>'
+      : '<p class="pow-fort-n">Le fil ne suit que les liens d\'ascension : nomination, investiture, recrutement, soutien public ou financement documenté.</p>';
     var upPhrase = "Relié à " + dir.up + " acteur" + (dir.up === 1 ? "" : "s") + " plus haut";
     sheet.hidden = false;
     document.body.classList.add("pow-on");
@@ -1607,7 +1671,8 @@
       '<div class="pow-who">' + avatar(n, "av-sm") + '<div class="pow-who-t"><strong>' + esc(n.name) + "</strong><span>" + esc(n.role) + '</span><span class="pow-tier-tag">' + esc(POWER_TIERS[n._pow].label) + "</span></div></div>" +
       fortuneLine(n, true) +
       '<p class="pow-statline">' + upPhrase + (dir.down ? " · " + dir.down + " plus bas" : "") + "</p>" +
-      '<div class="pow-actions">' + climbBtn + '<a class="btn-pill ghost small" href="' + ficheHref(n) + '">Ouvrir la fiche</a></div>' +
+      '<div class="pow-actions">' + climbBtn + parcBtn + '<a class="btn-pill ghost small" href="' + ficheHref(n) + '">Ouvrir la fiche</a></div>' +
+      modeNote +
       crumb +
       (ups.length ? linkGroup("Vers le haut", ups) : '<p class="pow-fort-n">Aucun lien documenté vers un palier supérieur.</p>') +
       linkGroup("Vers le bas", downs) +
@@ -1640,7 +1705,7 @@
     var sel = id && byId[id] ? id : null;
     if (sel && !nodeInFilter(byId[sel], powFilter)) { powFilter = "tout"; powBuilt = ""; }
     powSel = sel;
-    if (powBuilt !== powFilter) buildLadder();
+    if (powBuilt !== powFilter + "/" + powNature) buildLadder();
     applyPowSelection(true);
     window.__power = function () {
       var path = powSel ? climbPath(powSel) : [];
@@ -1648,6 +1713,7 @@
         filter: powFilter,
         selected: powSel,
         path: path,
+        nature: powNature,
         tiers: POWER_TIERS.map(function (t, i) {
           return { id: t.id, label: t.label, n: DATA.nodes.filter(function (n) { return n._pow === i; }).length };
         })
@@ -1657,6 +1723,13 @@
   window.__powerTier = function (id) {
     var n = byId[id];
     return n && POWER_TIERS[n._pow] ? POWER_TIERS[n._pow].id : null;
+  };
+  window.__parcours = function (id) {
+    var n = byId[id];
+    if (!n || !n.parcours) return [];
+    return n.parcours.map(function (s) {
+      return { date: s.date, title: s.title, by: s.by || null, verb: s.verb || null, url: s.url };
+    });
   };
 
   /* ---------- Routage par ancre (#/…) ---------- */

@@ -180,11 +180,16 @@
   <section id="view-pouvoir" class="view" aria-labelledby="pouvoir-title" hidden>
     <div class="wrap page pow-page">
       <h1 class="view-title" id="pouvoir-title">Échelle du pouvoir</h1>
-      <p class="sec-intro" id="pow-method">Classement par fonction publique documentée, fortune seulement si sourcée. Le sommet est en haut. Un tap montre les liens déjà sourcés, vers le haut et vers le bas, puis le fil qui mène au palier le plus haut atteignable. Aucune relation n'est ajoutée.</p>
+      <p class="sec-intro" id="pow-method">Classement par fonction publique documentée, fortune seulement si sourcée. Le sommet est en haut. Le mode Ascension montre les nominations, investitures, recrutements, soutiens publics et financements documentés. Le fil « Remonter » ne suit que ces liens. L'opposition et le contrôle s'affichent à part, avec un autre style.</p>
       <div class="seg" role="tablist" aria-label="Filtrer l'échelle" id="pow-seg">
         <button type="button" class="seg-b" role="tab" data-pow="tout" id="pow-tout">Tout</button>
         <button type="button" class="seg-b" role="tab" data-pow="gaza" id="pow-gaza">Gaza</button>
         <button type="button" class="seg-b" role="tab" data-pow="france" id="pow-france">France</button>
+      </div>
+      <div class="seg seg-nat" role="tablist" aria-label="Nature des liens" id="pow-nat">
+        <button type="button" class="seg-b" role="tab" data-nat="ascension" id="pow-ascension" aria-selected="true">Ascension</button>
+        <button type="button" class="seg-b" role="tab" data-nat="opposition" id="pow-opposition">Opposition</button>
+        <button type="button" class="seg-b" role="tab" data-nat="tous" id="pow-tous-liens">Tous</button>
       </div>
       <p class="count" id="pow-stats" aria-live="polite"></p>
       <div id="pow-ladder" class="pow-ladder"></div>
@@ -272,7 +277,9 @@
       <p>Pour citer un élément, indiquez la personne, la citation, sa date et sa source d'origine, puis l'adresse de la fiche, par exemple : « Onrecord, fiche <em>Nom</em>, consultée le <em>date</em>, &lt;adresse de la page&gt; ». Chaque fiche dispose d'un bouton « Partager » qui copie son adresse.</p>
       <p>L'ensemble des données (personnes, organisations, citations, dates, sources, archives, relations, crédits des images) est téléchargeable au format JSON : <a href="data.json" download="onrecord-donnees.json" class="dl-link">Télécharger les données (JSON)</a>.</p>
       <h3>Échelle du pouvoir</h3>
-      <p>La vue Échelle du pouvoir range les fiches existantes selon la fonction publique indiquée sur la fiche : événement documenté, collectif ou groupe, association, auteur ou journaliste, média, élu ou dirigeant de parti, gouvernement ou institution, propriétaire ou groupe de médias. Ce rang décrit une fonction, pas un jugement. Les liens affichés sont uniquement ceux déjà sourcés. Un montant de fortune n'est indiqué que s'il figure sur une source publique datée, dont l'adresse est affichée. Un rang de classement est indiqué de la même façon, sans convertir une variation en somme.</p>
+      <p>La vue Échelle du pouvoir range les fiches existantes selon la fonction publique indiquée sur la fiche : événement documenté, collectif ou groupe, association, auteur ou journaliste, média, élu ou dirigeant de parti, gouvernement ou institution, propriétaire ou groupe de médias. Ce rang décrit une fonction, pas un jugement. Les liens sont classés par nature. Le mode par défaut, Ascension, montre les nominations, investitures, recrutements, soutiens publics et financements documentés. Les sanctions, procédures, critiques et autres oppositions s'affichent à part : elles ne sont pas présentées comme des appuis. Le fil « Remonter jusqu'au sommet » ne suit que les liens d'ascension. Un montant de fortune n'est indiqué que s'il figure sur une source publique datée, dont l'adresse est affichée. Un rang de classement est indiqué de la même façon, sans convertir une variation en somme.</p>
+      <h3>Parcours</h3>
+      <p>La fiche d'une personne peut comporter une frise « Parcours » : des étapes datées, chacune avec une source consultable. Une pastille vers une autre personne n'est ajoutée que si cette source dit explicitement qui a désigné, nommé, confié ou chargé. Sinon l'étape reste sans parrain. Le site n'ajoute pas de lien de causalité que la source n'écrit pas.</p>
       <h3>Absence de qualification juridique</h3>
       <p>Ce site <strong>ne porte aucune qualification juridique</strong> sur les personnes citées et ne leur attribue aucune étiquette. La présence d'une personne ou d'un lien dans la cartographie ne signifie ni adhésion, ni responsabilité, ni infraction.</p>
       <h3>Mise à jour</h3>

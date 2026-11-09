@@ -826,6 +826,192 @@ for _s in _b["jean-luc-melenchon"]["statements"]:
     if _s["date"]=="2026-11-07" and _s["url"]==X_JLM_BOURGET and _s["quote"].startswith(("Nous agirons frontalement","Les navires français")):
         _s["medium"]+=_zarka_note
 
+# ---------- v23 : parcours d'ascension + nature des liens ----------
+# Une étape n'a un « by » que si la source nomme qui a désigné, nommé, confié ou chargé.
+# Aucune causalité ajoutée. Pas de nouveau nœud.
+_U_FI_PP="https://www.franceinfo.fr/politique/front-national/front-national-david-rachline-nomme-responsable-du-pole-communication-en-remplacement-de-florian-philippot_2382954.html"
+_U_FI_4="https://www.franceinfo.fr/politique/front-national/europeennes-quatre-choses-a-savoir-sur-jordan-bardella-la-jeune-tete-de-liste-choisie-par-marine-le-pen_3142915.html"
+_U_FI_19="https://www.franceinfo.fr/elections/europeennes/elections-europeennes-jordan-bardella-officiellement-choisi-comme-tete-de-liste-du-rassemblement-national_3133529.html"
+_U_FI_VP="https://www.franceinfo.fr/politique/front-national/jordan-bardella-devient-vice-president-du-rassemblement-national_3492801.html"
+_U_TF1_INT="https://www.tf1info.fr/politique/presidentielle-2022-pourquoi-marine-le-pen-laisse-sa-place-a-jordan-bardella-a-la-tete-du-rn-a-frejus-2196085.html"
+_U_INTER="https://www.radiofrance.fr/franceinter/jordan-bardella-elu-a-la-tete-du-rassemblement-national-3154150"
+_U_FI_24="https://www.franceinfo.fr/elections/europeennes/elections-europeennes-2024-jordan-bardella-confirme-qu-il-sera-tete-de-liste-du-rassemblement-national_6041243.html"
+_U_FI_MAT="https://www.franceinfo.fr/politique/parlement-francais/assemblee-nationale/dissolution/legislatives-2024-pourquoi-marine-le-pen-veut-laisser-matignon-a-jordan-bardella-en-cas-de-large-victoire-du-rn_6599709.html"
+_U_TF1_MAT="https://www.tf1info.fr/politique/elections/legislatives/dissolution-video-marine-le-pen-sur-tf1-jordan-bardella-sera-premier-ministre-en-cas-de-majorite-rn-aux-legislatives-2303374.html"
+_U_FI_PHI="https://www.franceinfo.fr/elections/pourquoi-emmanuel-macron-a-choisi-edouard-philippe-pour-le-poste-de-premier-ministre_2192137.html"
+_U_FI_ATT="https://www.franceinfo.fr/politique/remaniement/remaniement-gabriel-attal-est-nomme-premier-ministre-en-remplacement-d-elisabeth-borne_6292461.html"
+_U_FI_ZEM="https://www.franceinfo.fr/elections/presidentielle/presidentielle-2022-premier-meeting-d-eric-zemmour-pour-lancer-sa-reconquete_4871171.html"
+_U_FI_MLP="https://www.franceinfo.fr/politique/marine-le-pen-officiellement-proclamee-presidente-du-fn-recueille-67-65-des-voix-contre-32-35-pour-son-rival_231301.html"
+_U_FI_JLM="https://www.franceinfo.fr/elections/presidentielle/de-la-securite-sociale-integrale-a-la-vie-republique-jean-luc-melenchon-presente-son-programme-pour-2017_1874861.html"
+_U_FI_MAR="https://www.franceinfo.fr/elections/europeennes/europeennes-marion-marechal-designee-tete-de-liste-du-parti-reconquete-annonce-eric-zemmour_6047075.html"
+_U_FI_RETI="https://www.franceinfo.fr/politique/gouvernement-de-michel-barnier/gouvernement-barnier-bruno-retailleau-figure-de-la-droite-conservatrice-a-l-interieur_6795379.html"
+_U_F3_CIO="https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/alpes-maritimes/nice/eric-ciotti-elu-president-du-parti-les-republicains-2672864.html"
+
+def _step(date, title, text, url, source, by=None, verb=None):
+    d={"date":date,"title":title,"text":text,"url":url,"source":source}
+    if by and verb:
+        d["by"]=by
+        d["verb"]=verb
+    return d
+
+def _parcours(pid, steps):
+    steps=sorted(steps, key=lambda s: s["date"])
+    _b[pid]["parcours"]=steps
+    for s in steps:
+        if not s.get("by"):
+            continue
+        L(s["by"], pid, s["verb"], s["url"], s["date"])
+        E[-1]["nature"]="ascension"
+        E[-1]["section"]="france"
+
+_parcours("jordan-bardella", [
+ _step("2012","Adhésion au Front national",
+  "Jordan Bardella rejoint le Front national.",
+  _U_FI_VP,"franceinfo"),
+ _step("2015","Conseiller régional d'Île-de-France",
+  "Il est élu conseiller régional d'Île-de-France.",
+  _U_FI_4,"franceinfo"),
+ _step("2017-09-21","Porte-parole du Front national",
+  "Marine Le Pen désigne trois porte-parole du Front national, dont Jordan Bardella, alors conseiller régional d'Île-de-France.",
+  _U_FI_PP,"franceinfo", by="marine-le-pen", verb="a désigné porte-parole du Front national"),
+ _step("2018-03","Direction de Génération nation",
+  "Il devient président de Génération nation, branche jeunesse du Front national. L'article ne nomme pas la personne qui le désigne.",
+  _U_FI_4,"franceinfo"),
+ _step("2019-01-07","Tête de liste aux européennes de 2019",
+  "Le bureau exécutif du Rassemblement national valide à l'unanimité le choix de sa présidente, Marine Le Pen, de le désigner tête de liste pour les élections européennes de mai 2019.",
+  _U_FI_19,"franceinfo", by="marine-le-pen", verb="a désigné tête de liste aux européennes de 2019"),
+ _step("2019-05-26","Scrutin européen du 26 mai 2019",
+  "Il est tête de liste du Rassemblement national. La liste totalise un peu plus de 23\u00a0% des voix.",
+  _U_FI_VP,"franceinfo"),
+ _step("2019-06-16","Vice-président du Rassemblement national",
+  "Il est nommé vice-président du Rassemblement national lors du conseil national à La Rochelle, et entre au bureau exécutif. L'article ne nomme pas l'auteur de la nomination.",
+  _U_FI_VP,"franceinfo"),
+ _step("2021-09-12","Présidence par intérim",
+  "Marine Le Pen lui confie les rênes du Rassemblement national pour la campagne présidentielle de 2022. Elle déclare le faire conformément aux statuts et au vote des adhérents qui l'ont placé en tête d'une élection interne.",
+  _U_TF1_INT,"TF1 Info", by="marine-le-pen", verb="a confié la présidence par intérim du RN"),
+ _step("2022-11-05","Président du Rassemblement national",
+  "Les adhérents l'élisent président du Rassemblement national avec 84,84 % des voix, face à Louis Aliot, lors du congrès du parti à Paris.",
+  _U_INTER,"France Inter"),
+ _step("2023-09-03","Tête de liste annoncée pour 2024",
+  "Dans un entretien au Figaro cité par franceinfo, il confirme qu'il conduira la liste du Rassemblement national aux élections européennes de juin 2024, en tant que député européen sortant et chef de parti.",
+  _U_FI_24,"franceinfo"),
+ _step("2024-06-09","Élections européennes",
+  "Au soir du 9 juin 2024, les élections européennes sont largement remportées par le Rassemblement national.",
+  _U_FI_MAT,"franceinfo"),
+ _step("2024-06-10","Annonce pour Matignon, sous condition",
+  "Sur TF1, Marine Le Pen annonce que Jordan Bardella sera Premier ministre si le Rassemblement national obtient une majorité aux législatives anticipées. Elle parle d'un partage des rôles : elle vers la présidence de la République, lui vers Matignon. Cette phrase est conditionnelle : elle ne constate pas une nomination.",
+  _U_TF1_MAT,"TF1 Info", by="marine-le-pen", verb="a annoncé qu'il serait Premier ministre en cas de majorité du RN"),
+])
+_parcours("marine-le-pen", [
+ _step("2011-01-16","Présidente du Front national",
+  "Elle est proclamée présidente du Front national au congrès de Tours, avec 67,65 % des voix, contre 32,35 % pour son rival.",
+  _U_FI_MLP,"franceinfo"),
+ _step("2021-09-12","Présidence par intérim confiée",
+  "Elle confie les rênes du Rassemblement national à Jordan Bardella, alors vice-président, le temps de la campagne présidentielle de 2022.",
+  _U_TF1_INT,"TF1 Info"),
+ _step("2022-11-05","Fin de la présidence du parti",
+  "Le congrès élit Jordan Bardella président du Rassemblement national. Marine Le Pen quitte cette fonction.",
+  _U_INTER,"France Inter"),
+])
+_parcours("edouard-philippe", [
+ _step("2017-05-15","Premier ministre",
+  "Emmanuel Macron le nomme Premier ministre.",
+  _U_FI_PHI,"franceinfo", by="emmanuel-macron", verb="a nommé Premier ministre"),
+])
+_parcours("gabriel-attal", [
+ _step("2024-01-09","Premier ministre",
+  "L'Élysée annonce sa nomination comme Premier ministre, en succession d'Élisabeth Borne. Le communiqué cité par franceinfo indique que le président de la République le charge de former un gouvernement. Le même article identifie ce président : Emmanuel Macron.",
+  _U_FI_ATT,"franceinfo", by="emmanuel-macron", verb="a chargé de former le gouvernement, lors de la nomination au poste de Premier ministre annoncée par l'Élysée"),
+])
+_parcours("eric-zemmour", [
+ _step("2021-09-13","Fin des chroniques sur CNews",
+  "CNews met fin à ses chroniques de « Face à l'info », après la décision du CSA de décompter son temps de parole.",
+  FI_ZEM_CNEWS,"franceinfo"),
+ _step("2021-12-05","Lancement de Reconquête",
+  "Lors de son premier meeting de candidat à l'élection présidentielle, à Villepinte, il lance le parti Reconquête.",
+  _U_FI_ZEM,"franceinfo"),
+])
+_parcours("eric-ciotti", [
+ _step("2022-12-11","Président des Républicains",
+  "Les adhérents l'élisent président des Républicains avec 53,7 % des voix, face à Bruno Retailleau.",
+  _U_F3_CIO,"franceinfo"),
+ _step("2024-06-11","Alliance électorale annoncée",
+  "Il annonce une alliance des Républicains avec le Rassemblement national pour les législatives anticipées.",
+  FI_CIOTTI,"franceinfo"),
+])
+_parcours("bruno-retailleau", [
+ _step("2024-09-21","Ministre de l'Intérieur",
+  "franceinfo le présente comme nommé ministre de l'Intérieur par Michel Barnier. Il succède à Gérald Darmanin. Michel Barnier n'a pas de fiche dans ce jeu de données : l'étape ne crée pas de lien.",
+  _U_FI_RETI,"franceinfo"),
+ _step("2025-05-18","Président des Républicains",
+  "Les adhérents l'élisent président des Républicains avec 74,31 % des voix, face à Laurent Wauquiez.",
+  FI_RET_LR,"franceinfo"),
+])
+_parcours("marion-marechal", [
+ _step("2022-05","Direction de l'ISSEP",
+  "Elle quitte la direction de l'ISSEP, à Lyon. L'article indique qu'elle juge son engagement politique incompatible avec cette fonction.",
+  _U_FI_MAR,"franceinfo"),
+ _step("2023-09-06","Tête de liste de Reconquête",
+  "Éric Zemmour déclare, dans un entretien au Figaro cité par franceinfo : « J'ai décidé de confier à Marion Maréchal la mission de conduire la liste de Reconquête pour les élections européennes. »",
+  _U_FI_MAR,"franceinfo", by="eric-zemmour", verb="a confié la tête de liste de Reconquête aux européennes"),
+])
+_parcours("jean-luc-melenchon", [
+ _step("2016-10-16","La France insoumise",
+  "franceinfo indique qu'il présente « L'Avenir en commun » près de Lille, lors de la première convention du mouvement baptisé La France insoumise.",
+  _U_FI_JLM,"franceinfo"),
+])
+_parcours("cyril-hanouna", [
+ _step("2025-02-27","Arrivée annoncée au groupe M6",
+  "Il annonce rejoindre le groupe M6. Il doit animer une émission quotidienne sur W9 et un programme sur Fun Radio à partir du 1er septembre. Le groupe M6 écrit se réjouir de cette arrivée. L'article ne nomme pas une personne qui l'aurait recruté.",
+  FI_HAN_M6,"franceinfo"),
+])
+_parcours("vincent-bollore", [
+ _step("2014","Présidence du conseil de surveillance de Vivendi",
+  "Il accède à la présidence du conseil de surveillance de Vivendi, et par là de sa filiale Canal+. L'article ne nomme pas une personne qui l'aurait désigné.",
+  FI_BOLLORE,"franceinfo"),
+])
+_parcours("geoffroy-lejeune", [
+ _step("2023-06-25","Direction du JDD",
+  "franceinfo relate l'annonce de son arrivée à la tête du Journal du dimanche, en provenance de Valeurs actuelles. L'article ne dit pas qui l'a nommé.",
+  FI_BOLLORE,"franceinfo"),
+])
+_parcours("pierre-edouard-sterin", [
+ _step("2024-07-18","Projet « Périclès »",
+  "Un document de 2023 décrit le projet « Périclès ». Le 18 juillet 2024, L'Humanité en publie le contenu. Les équipes de Pierre-Édouard Stérin en confirment l'existence, selon franceinfo.",
+  FI_PERICLES,"franceinfo"),
+])
+
+def _nature(e):
+    if e.get("nature") in ("ascension","opposition","autre"):
+        return e["nature"]
+    rel=e["relation"].lower()
+    # opposition ou contrôle : sanction, procédure, critique, rupture, dissolution
+    if any(k in rel for k in (
+        "amende","mise en demeure","non-renouvellement","sanction pécuniaire","censure",
+        "signalement","audition","dissol","rejet du recours","réexaminer","pluralisme",
+        "assez inquiète","exclusion","s'est opposée","a annulé","soupçonné","exclue",
+        "refusé","supprimer cnews")):
+        return "opposition"
+    # ni nomination, ni soutien, ni financement : apparition, réaction, ouvrage, événement
+    if any(k in rel for k in (
+        "invité","intervenant","entretien","débat","tribune","auteur de","voyage commun","a réagi",
+        "a repris","s'est interrogé","a salué","lui a succédé","en citation","rapprochement",
+        "co-autrice","soirée","avancée idéologique","victoire idéologique","vote des députés",
+        "rassemblement commun","a accueilli","qualifié par","proche du parti","le document vise",
+        "ont confirmé","message public sur x","a publié sur x","a qualifié")):
+        return "autre"
+    # ascension : poste, investiture, soutien public, financement ou contrôle capitalistique documenté
+    if any(k in rel for k in (
+        "président","directrice","directeur","fondat","propriétaire","opa ","filiale",
+        "maison-mère","député","animateur","journaliste","chroniqueur","éditorialiste",
+        "membre","a souten","soutien","élu maire","candidate","alliance","voterait",
+        "prend la défense","a pris la défense")):
+        return "ascension"
+    return "autre"
+
+for e in E:
+    e["nature"]=_nature(e)
+
 # archives Wayback Machine (tools/archive.py -> tools/archives.json)
 _root=_here if os.path.isdir(os.path.join(_here,"tools")) else "/workspace/gaza-site"
 _ap=os.path.join(_root,"tools/archives.json")
@@ -838,6 +1024,8 @@ for _n in N:
     for _s in _n["statements"]:
         _arch(_s)
         if _s.get("video") and _s["video"].get("platform")!="youtube": _arch(_s["video"])
+    for _s in _n.get("parcours") or []:
+        _arch(_s)
 for _e in E: _arch(_e)
 
 ids={n["id"] for n in N}
