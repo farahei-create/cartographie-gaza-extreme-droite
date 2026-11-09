@@ -104,6 +104,7 @@
       .concat(Object.keys(seen).filter(function (t) { return THEME_ORDER.indexOf(t) < 0; }).sort());
 
     computeDerived();
+    assignPower();
     fillMeta();
     bindDonation();
     bindVideos();
@@ -779,6 +780,7 @@
       ["#/sections/france", "Section", "France – normalisation de l'extrême droite", SEC_INTRO.france, cnt("france"), "c-fr"],
       ["#/chronologie", "Vue", "Chronologie", "Toutes les déclarations et tous les liens datés, filtrables par section, catégorie, thème et année.", plural(ALL_ST.length + DATA.edges.filter(function (e) { return e.date; }).length, "élément daté", "éléments datés"), "c-chrono"],
       ["#/reseau", "Vue", "Réseau des relations", "Graphe interactif des liens publics entre personnalités et organisations, chacun sourcé.", plural(DATA.edges.length, "relation", "relations"), "c-net"],
+      ["#/pouvoir", "Vue", "Échelle du pouvoir", "Les mêmes fiches, rangées par fonction publique documentée. Un tap montre les liens déjà sourcés, vers le haut et vers le bas.", plural(DATA.nodes.length, "fiche", "fiches") + " · " + plural(DATA.edges.length, "lien", "liens"), "c-pow"],
       ["#/methodologie", "À propos", "Méthodologie", "Critères d'inclusion, neutralité, images, vidéos, archivage et réutilisation des données.", "Sources vérifiées et archivées", "c-meth"],
       ["#/contribuer", "Participer", "Proposer une mise à jour", "Une erreur, une précision, une nouvelle déclaration sourcée ? Chaque proposition est vérifiée avant publication.", "Formulaire de contribution", "c-contrib"]
     ];
@@ -956,7 +958,7 @@
       '<h1 class="f-name" tabindex="-1">' + esc(n.name) + "</h1>" + '<p class="f-role">' + esc(n.role) + "</p>" +
       (n.category ? '<p class="f-cat"><a href="#/sections">' + catLabel(n) + "</a></p>" : "") + "</div></header>" +
       (n.description ? '<p class="f-desc">' + esc(n.description) + "</p>" : "") +
-      '<div class="f-actions"><a class="btn-pill ghost small" href="#/reseau/' + encodeURIComponent(n.id) + '">Voir dans le réseau</a></div>' +
+      '<div class="f-actions"><a class="btn-pill ghost small" href="#/reseau/' + encodeURIComponent(n.id) + '">Voir dans le réseau</a><a class="btn-pill ghost small" href="#/pouvoir/' + encodeURIComponent(n.id) + '">Voir sur l\'échelle</a></div>' +
       amHtml(n) +
       (st.length || n.type === "person" ? '<h2 class="h-sec">Déclarations publiques <span class="h-n">' + st.length + "</span></h2>" +
         (st.length ? '<ol class="tl">' + st.map(function (x) { return tlItem(x.s, n, x.i, false); }).join("") + "</ol>" : '<p class="empty">Aucune déclaration répertoriée.</p>') : "") +
@@ -1325,9 +1327,341 @@
       '<div class="meta actions">' + srcLink(e.url, "Lire la source") + archLink(e) + "</div></article></li>";
   }
 
+  /* ---------- v22 : échelle du pouvoir ----------
+     Palier = fonction publique déjà écrite sur la fiche. Pas un jugement.
+     Les liens sont les edges existants. Un montant de fortune n'est affiché
+     que si une source publique datée le donne ; ici, seul le rang Challenges
+     est repris, parce que la page publique ne publie pas la somme. */
+  var POWER_TIERS = [
+    { id: "evt", label: "Événements documentés", hint: "Fait public daté. Ce n'est pas une fonction permanente." },
+    { id: "col", label: "Collectifs et groupes", hint: "Collectif, groupement ou organisation dissoute, d'après la fiche." },
+    { id: "asso", label: "Associations et représentants", hint: "Association, organisation représentative ou établissement, et la personne qui la représente." },
+    { id: "jour", label: "Auteurs, journalistes et éditorialistes", hint: "Fonction d'auteur, de journaliste, d'éditorialiste ou d'animateur, d'après la fiche." },
+    { id: "media", label: "Médias et maisons d'édition", hint: "Chaîne, radio, titre de presse ou maison d'édition, d'après la fiche." },
+    { id: "elu", label: "Élus, candidats et dirigeants de parti", hint: "Mandat, candidature déclarée ou direction de parti, d'après la fiche." },
+    { id: "gouv", label: "Gouvernement et institutions", hint: "Fonction au gouvernement, à la présidence, ou institution publique, d'après la fiche." },
+    { id: "prop", label: "Propriétaires et groupes de médias", hint: "Groupe de médias, actionnaire de référence ou investisseur, d'après la fiche." }
+  ];
+  var POWER_OF = {
+    "conf-jerusalem-2025": 0, "loi-immigration-2023": 0, "proces-nantes-menaces-2026": 0,
+    "civitas": 1, "gud": 1, "generation-identitaire": 1, "les-remparts": 1, "zouaves-paris": 1, "nemesis": 1, "pericles": 1,
+    "avocats-sans-frontieres": 2, "crif": 2, "yad-vashem-fr": 2, "patrick-klugman": 2, "yonathan-arfi": 2, "issep": 2,
+    "serge-klarsfeld": 3, "bernard-henri-levy": 3, "raphael-enthoven": 3, "renaud-camus": 3, "caroline-fourest": 3,
+    "geoffroy-lejeune": 3, "elisabeth-levy": 3, "gilles-william-goldnadel": 3, "gerard-carreyrou": 3,
+    "jean-dominique-merchet": 3, "joseph-thouvenel": 3, "jules-torres": 3, "cyril-hanouna": 3,
+    "c8": 4, "cnews": 4, "causeur": 4, "europe1": 4, "franc-tireur": 4, "m6": 4, "lexpress": 4, "jdd": 4,
+    "le-point": 4, "sud-radio": 4, "valeurs-actuelles": 4, "fayard": 4,
+    "dominique-de-villepin": 5, "fabien-roussel": 5, "gabriel-attal": 5, "jean-luc-melenchon": 5, "marine-tondelier": 5,
+    "raphael-glucksmann": 5, "xavier-bertrand": 5, "edouard-philippe": 5, "caroline-yadan": 5, "marine-le-pen": 5,
+    "marion-marechal": 5, "meyer-habib": 5, "eric-ciotti": 5, "robert-menard": 5, "valerie-pecresse": 5,
+    "yael-braun-pivet": 5, "bruno-retailleau": 5, "eric-zemmour": 5, "jordan-bardella": 5,
+    "identite-libertes": 5, "lr": 5, "reconquete": 5, "renaissance-epr": 5, "rn": 5,
+    "aurore-berge": 6, "emmanuel-macron": 6, "gerald-darmanin": 6, "manuel-valls": 6,
+    "arcom": 6, "conseil-constitutionnel": 6, "conseil-etat": 6, "pnat": 6,
+    "vincent-bollore": 7, "pierre-edouard-sterin": 7, "lagardere": 7, "vivendi-canal": 7
+  };
+  /* Rangs publiés le 8 juillet 2026. La page publique donne le rang et la variation,
+     pas le montant : aucun chiffre de fortune n'est donc affiché. */
+  var FORTUNE = {
+    "vincent-bollore": {
+      rank: 13, date: "2026-07-08", source: "Challenges", family: true,
+      url: "https://www.challenges.fr/classements/fortune/vincent-bollore-et-sa-famille_26544"
+    },
+    "pierre-edouard-sterin": {
+      rank: 74, date: "2026-07-08", source: "Challenges", family: false,
+      url: "https://www.challenges.fr/classements/fortune/pierre-edouard-sterin_26641"
+    }
+  };
+  var powFilter = "tout", powSel = null, powBuilt = "", powReady = false, climbToken = 0;
+
+  function fallbackPow(n) {
+    var sub = n.subcategory || "", blob = sub + " " + (n.role || "") + " " + (n.category || "");
+    if (n.category === "Événements" || /événement/i.test(sub)) return 0;
+    if (n.type === "org" && /dissous|dissoute|collectif|projet/i.test(blob)) return 1;
+    if (/Associations|Projets/.test(sub)) return 2;
+    if (n.category === "Journalistes & éditorialistes" || n.category === "Intellectuels & essayistes" || sub === "Animateurs & producteurs") return 3;
+    if (sub === "Chaînes, radios & titres" || sub === "Édition") return 4;
+    if (sub === "Gouvernement & exécutif" || sub === "Institutions publiques") return 6;
+    if (sub === "Propriétaires, financeurs & groupes") return 7;
+    if (n.category === "Responsables politiques" || /parti/i.test(sub)) return 5;
+    return 3;
+  }
+  function assignPower() {
+    DATA.nodes.forEach(function (n) {
+      n._pow = Object.prototype.hasOwnProperty.call(POWER_OF, n.id) ? POWER_OF[n.id] : fallbackPow(n);
+    });
+  }
+  function nodeInFilter(n, f) {
+    if (!n) return false;
+    if (!f || f === "tout") return true;
+    return (n.sections || []).indexOf(f) >= 0;
+  }
+  function visibleNode(n) { return nodeInFilter(n, powFilter); }
+  function tierIndex(id) { var n = byId[id]; return n && typeof n._pow === "number" ? n._pow : -1; }
+  function edgesBetween(a, b) {
+    return (edgesOf[a] || []).filter(function (e) {
+      return (e.source === a && e.target === b) || (e.source === b && e.target === a);
+    });
+  }
+  function visNeighbors(id) {
+    var out = [];
+    (edgesOf[id] || []).forEach(function (e) {
+      var o = e.source === id ? e.target : e.source;
+      if (byId[o] && visibleNode(byId[o])) out.push({ id: o, e: e });
+    });
+    return out;
+  }
+  function uniqueDir(id) {
+    var up = {}, down = {}, same = {};
+    visNeighbors(id).forEach(function (nb) {
+      var d = tierIndex(nb.id) - tierIndex(id);
+      if (d > 0) up[nb.id] = 1; else if (d < 0) down[nb.id] = 1; else same[nb.id] = 1;
+    });
+    return { up: Object.keys(up).length, down: Object.keys(down).length, same: Object.keys(same).length };
+  }
+  function climbPath(start) {
+    if (!byId[start] || !visibleNode(byId[start])) return [];
+    /* Plus court chemin vers le palier le plus haut atteignable.
+       À longueur égale, on garde le fil qui traverse les paliers les plus hauts
+       (somme des indices). Uniquement des edges existants. */
+    var dist = {}, score = {}, parent = {};
+    dist[start] = 0; score[start] = tierIndex(start); parent[start] = null;
+    var q = [start], guard = 0;
+    while (q.length && guard++ < 4000) {
+      var id = q.shift(), seen = {};
+      visNeighbors(id).forEach(function (nb) {
+        if (seen[nb.id]) return;
+        seen[nb.id] = 1;
+        var nd = dist[id] + 1, ns = score[id] + tierIndex(nb.id);
+        var better = dist[nb.id] === undefined || nd < dist[nb.id] || (nd === dist[nb.id] && ns > score[nb.id]);
+        if (!better) return;
+        dist[nb.id] = nd; score[nb.id] = ns; parent[nb.id] = id;
+        q.push(nb.id);
+      });
+    }
+    var best = start;
+    Object.keys(parent).forEach(function (id) {
+      var better = tierIndex(id) > tierIndex(best) ||
+        (tierIndex(id) === tierIndex(best) && dist[id] < dist[best]) ||
+        (tierIndex(id) === tierIndex(best) && dist[id] === dist[best] && score[id] > score[best]) ||
+        (tierIndex(id) === tierIndex(best) && dist[id] === dist[best] && score[id] === score[best] && id.localeCompare(best) < 0);
+      if (better) best = id;
+    });
+    var path = [], cur = best, hop = 0;
+    while (cur && hop++ < 40) { path.push(cur); cur = parent[cur]; }
+    path.reverse();
+    return path;
+  }
+  function longestFil() {
+    var best = 1;
+    DATA.nodes.forEach(function (n) {
+      if (!visibleNode(n)) return;
+      var len = climbPath(n.id).length;
+      if (len > best) best = len;
+    });
+    return best;
+  }
+  function fortuneLine(n, longNote) {
+    var f = FORTUNE[n.id];
+    if (!f || !/^https:\/\//.test(f.url)) return "";
+    var label = f.rank + "e rang · " + f.source + " · " + fmtDate(f.date);
+    var note = "";
+    if (longNote) {
+      note = '<p class="pow-fort-n">Rang du classement Challenges des 500 plus grandes fortunes de France, publié le ' + fmtDate(f.date) + "." +
+        (f.family ? " L'entrée publiée concerne " + esc(n.name) + " et sa famille." : "") +
+        " Le montant en euros n'est pas affiché : la page publique indique le rang et la variation, pas la somme.</p>";
+    }
+    return '<a class="pow-fort" href="' + esc(f.url) + '" target="_blank" rel="noopener noreferrer">' + esc(label) + "</a>" + note;
+  }
+  function goPower(id, replace) {
+    var url = "#/pouvoir" + (id ? "/" + encodeURIComponent(id) : "");
+    if (replace) { history.replaceState(null, "", url); route(); }
+    else if (location.hash !== url) location.hash = url;
+    else route();
+  }
+  function bindPouvoir() {
+    $("pow-seg").addEventListener("click", function (ev) {
+      var b = ev.target.closest("[data-pow]");
+      if (!b) return;
+      climbToken++;
+      powFilter = b.getAttribute("data-pow");
+      powBuilt = "";
+      if (powSel && !visibleNode(byId[powSel])) goPower(null, true);
+      else { buildLadder(); applyPowSelection(false); }
+    });
+    $("pow-ladder").addEventListener("click", function (ev) {
+      if (ev.target.closest("a")) return;
+      var b = ev.target.closest(".pow-node");
+      if (!b) return;
+      climbToken++;
+      goPower(b.getAttribute("data-id"), false);
+    });
+    $("pow-sheet").addEventListener("click", function (ev) {
+      var go = ev.target.closest("[data-pow-go]");
+      if (go) { climbToken++; goPower(go.getAttribute("data-pow-go"), false); return; }
+      if (ev.target.closest("#pow-climb")) { playClimb(); return; }
+      if (ev.target.closest("#pow-close")) { climbToken++; goPower(null, false); }
+    });
+  }
+  function buildLadder() {
+    var buckets = POWER_TIERS.map(function () { return []; });
+    DATA.nodes.forEach(function (n) { if (visibleNode(n)) buckets[n._pow].push(n); });
+    buckets.forEach(function (list) {
+      list.sort(function (a, b) {
+        var fa = FORTUNE[a.id], fb = FORTUNE[b.id];
+        if (fa && fb && fa.rank !== fb.rank) return fa.rank - fb.rank;
+        if (fa && !fb) return -1;
+        if (fb && !fa) return 1;
+        return a.name.localeCompare(b.name, "fr");
+      });
+    });
+    var html = "";
+    for (var t = POWER_TIERS.length - 1; t >= 0; t--) {
+      var tier = POWER_TIERS[t], list = buckets[t];
+      if (!list.length) continue;
+      var upLinks = 0;
+      list.forEach(function (n) {
+        var seen = {};
+        visNeighbors(n.id).forEach(function (nb) {
+          if (tierIndex(nb.id) > t && !seen[nb.id]) { seen[nb.id] = 1; upLinks++; }
+        });
+      });
+      var mark = t === POWER_TIERS.length - 1 ? "Sommet" : (t === 0 ? "Base" : "");
+      html += '<section class="pow-tier" data-tier="' + tier.id + '" style="--lift:' + t + '"><header class="pow-tier-h"><p class="pow-k">' + (mark ? '<span class="pow-mark">' + mark + "</span>" : "") + '<h2>' + esc(tier.label) + '</h2></p><p class="pow-hint">' + esc(tier.hint) + '</p><p class="pow-meta">' + list.length + (list.length > 1 ? " fiches" : " fiche") + (upLinks ? " · " + upLinks + (upLinks > 1 ? " liens" : " lien") + " vers un palier supérieur" : "") + '</p></header><ul class="pow-nodes">' +
+        list.map(function (n) {
+          var d = uniqueDir(n.id);
+          var aria = n.name + ". " + d.up + " acteur" + (d.up > 1 ? "s" : "") + " plus haut, " + d.down + " plus bas";
+          return '<li class="pow-card" id="pow-n-' + esc(n.id) + '"><button type="button" class="pow-node" data-id="' + esc(n.id) + '" aria-pressed="false" aria-label="' + esc(aria) + '"><span class="pow-id">' + avatar(n, "av-sm") + '<span class="pow-txt"><span class="pow-name">' + esc(n.name) + '</span><span class="pow-role">' + esc(n.role) + '</span></span></span><span class="pow-mini" aria-hidden="true">↑ ' + d.up + "  ↓ " + d.down + "</span></button>" + fortuneLine(n, false) + "</li>";
+        }).join("") + "</ul></section>";
+    }
+    $("pow-ladder").innerHTML = html || '<p class="empty">Aucune fiche dans ce filtre.</p>';
+    var shown = DATA.nodes.filter(visibleNode).length;
+    var edges = DATA.edges.filter(function (e) { return byId[e.source] && byId[e.target] && visibleNode(byId[e.source]) && visibleNode(byId[e.target]); }).length;
+    var fil = longestFil();
+    $("pow-stats").textContent = plural(shown, "fiche", "fiches") + " · " + plural(edges, "lien", "liens") + " · plus long fil : " + fil + (fil > 1 ? " étapes" : " étape");
+    document.querySelectorAll("#pow-seg [data-pow]").forEach(function (b) {
+      var f = b.getAttribute("data-pow");
+      var c = DATA.nodes.filter(function (n) { return nodeInFilter(n, f); }).length;
+      var lab = { tout: "Tout", gaza: "Gaza", france: "France" }[f];
+      b.textContent = lab + " " + c;
+      var on = f === powFilter;
+      b.setAttribute("aria-selected", on ? "true" : "false");
+    });
+    powBuilt = powFilter;
+  }
+  function linkGroup(title, items) {
+    if (!items.length) return "";
+    return '<h3 class="pow-h">' + esc(title) + '</h3><ul class="pow-links">' + items.map(function (it) {
+      var o = byId[it.id];
+      return '<li><button type="button" class="pow-link" data-pow-go="' + esc(it.id) + '">' + avatar(o, "av-xs") +
+        '<span><span class="pow-ln">' + esc(o.name) + '</span><span class="pow-lr">' + esc(it.e.relation) + "</span></span></button>" +
+        '<div class="pow-lsrc">' + (it.e.date ? '<time datetime="' + esc(it.e.date) + '">' + fmtDate(it.e.date) + "</time> " : "") + srcLink(it.e.url, "Source") + "</div></li>";
+    }).join("") + "</ul>";
+  }
+  function applyPowSelection(scroll) {
+    var path = powSel ? climbPath(powSel) : [];
+    var pathSet = {}, nearSet = {};
+    path.forEach(function (id) { pathSet[id] = 1; });
+    if (powSel) visNeighbors(powSel).forEach(function (nb) { nearSet[nb.id] = 1; });
+    document.querySelectorAll("#pow-ladder .pow-node").forEach(function (b) {
+      var id = b.getAttribute("data-id");
+      b.classList.toggle("is-on", id === powSel);
+      b.classList.toggle("is-path", !!pathSet[id] && id !== powSel);
+      b.classList.toggle("is-near", !!nearSet[id] && !pathSet[id] && id !== powSel);
+      b.classList.toggle("is-dim", !!powSel && id !== powSel && !pathSet[id] && !nearSet[id]);
+      b.setAttribute("aria-pressed", id === powSel ? "true" : "false");
+    });
+    var sheet = $("pow-sheet");
+    if (!powSel || !byId[powSel]) {
+      sheet.hidden = true; sheet.innerHTML = "";
+      document.body.classList.remove("pow-on");
+      return;
+    }
+    var n = byId[powSel];
+    var dir = uniqueDir(powSel);
+    var ups = [], downs = [], same = [];
+    visNeighbors(powSel).forEach(function (nb) {
+      var d = tierIndex(nb.id) - n._pow;
+      (d > 0 ? ups : d < 0 ? downs : same).push(nb);
+    });
+    var orderNb = function (a, b) { return tierIndex(b.id) - tierIndex(a.id) || byId[a.id].name.localeCompare(byId[b.id].name, "fr"); };
+    ups.sort(orderNb); downs.sort(orderNb); same.sort(orderNb);
+    var reached = path.length && tierIndex(path[path.length - 1]) === POWER_TIERS.length - 1;
+    var crumb = "";
+    if (path.length > 1) {
+      crumb = '<ol class="pow-crumb" aria-label="Fil de liens">';
+      path.forEach(function (id, i) {
+        if (i) {
+          var rels = edgesBetween(path[i - 1], id);
+          crumb += '<li class="pow-crumb-rel">' + esc(rels.length ? rels[0].relation : "") + (rels.length > 1 ? " · " + rels.length + " liens" : "") + "</li>";
+        }
+        crumb += '<li><button type="button" class="pow-crumb-b' + (id === powSel ? " is-here" : "") + '" data-pow-go="' + esc(id) + '">' + esc(byId[id].name) + "</button></li>";
+      });
+      crumb += "</ol>";
+    }
+    var climbBtn = path.length > 1 ? '<button type="button" class="btn-pill small" id="pow-climb">' + (reached ? "Remonter jusqu'au sommet" : "Remonter le fil") + "</button>" : "";
+    var upPhrase = "Relié à " + dir.up + " acteur" + (dir.up === 1 ? "" : "s") + " plus haut";
+    sheet.hidden = false;
+    document.body.classList.add("pow-on");
+    sheet.innerHTML = '<div class="pow-sheet-bar"><span class="grabber" aria-hidden="true"></span><button type="button" class="panel-close" id="pow-close" aria-label="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button></div>' +
+      '<div class="pow-who">' + avatar(n, "av-sm") + '<div class="pow-who-t"><strong>' + esc(n.name) + "</strong><span>" + esc(n.role) + '</span><span class="pow-tier-tag">' + esc(POWER_TIERS[n._pow].label) + "</span></div></div>" +
+      fortuneLine(n, true) +
+      '<p class="pow-statline">' + upPhrase + (dir.down ? " · " + dir.down + " plus bas" : "") + "</p>" +
+      '<div class="pow-actions">' + climbBtn + '<a class="btn-pill ghost small" href="' + ficheHref(n) + '">Ouvrir la fiche</a></div>' +
+      crumb +
+      (ups.length ? linkGroup("Vers le haut", ups) : '<p class="pow-fort-n">Aucun lien documenté vers un palier supérieur.</p>') +
+      linkGroup("Vers le bas", downs) +
+      linkGroup("Même palier", same);
+    if (scroll !== false) {
+      var el = document.getElementById("pow-n-" + powSel);
+      if (el) {
+        var reduce = MQ_RM.matches;
+        el.scrollIntoView({ block: "center", behavior: reduce ? "auto" : "smooth" });
+        if (!reduce) { el.classList.remove("is-step"); void el.offsetWidth; el.classList.add("is-step"); }
+      }
+    }
+  }
+  function playClimb() {
+    if (!powSel) return;
+    var path = climbPath(powSel);
+    if (path.length < 2) return;
+    var token = ++climbToken;
+    if (MQ_RM.matches) { goPower(path[path.length - 1], true); return; }
+    var i = 1;
+    (function step() {
+      if (token !== climbToken) return;
+      goPower(path[i], true);
+      i++;
+      if (i < path.length) setTimeout(step, 560);
+    })();
+  }
+  function renderPouvoir(id) {
+    if (!powReady) { bindPouvoir(); powReady = true; }
+    var sel = id && byId[id] ? id : null;
+    if (sel && !nodeInFilter(byId[sel], powFilter)) { powFilter = "tout"; powBuilt = ""; }
+    powSel = sel;
+    if (powBuilt !== powFilter) buildLadder();
+    applyPowSelection(true);
+    window.__power = function () {
+      var path = powSel ? climbPath(powSel) : [];
+      return {
+        filter: powFilter,
+        selected: powSel,
+        path: path,
+        tiers: POWER_TIERS.map(function (t, i) {
+          return { id: t.id, label: t.label, n: DATA.nodes.filter(function (n) { return n._pow === i; }).length };
+        })
+      };
+    };
+  }
+  window.__powerTier = function (id) {
+    var n = byId[id];
+    return n && POWER_TIERS[n._pow] ? POWER_TIERS[n._pow].id : null;
+  };
+
   /* ---------- Routage par ancre (#/…) ---------- */
-  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "methodologie", "methode", "contribuer"];
-  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Sections", chronologie: "Chronologie", reseau: "Réseau des relations", methodologie: "Méthodologie", methode: "Méthode", contribuer: "Proposer une mise à jour" };
+  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "pouvoir", "methodologie", "methode", "contribuer"];
+  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Sections", chronologie: "Chronologie", reseau: "Réseau des relations", pouvoir: "Échelle du pouvoir", methodologie: "Méthodologie", methode: "Méthode", contribuer: "Proposer une mise à jour" };
   var lastView = null;
   function ensureGraph(focusId) {
     if (!network) buildGraph(); else { sizeGraph(); network.redraw(); }
@@ -1358,15 +1692,21 @@
       document.body.classList.remove("sheet-open", "panel-open");
       if (fsMode) exitFullscreen();
     }
+    if (v !== "pouvoir") {
+      document.body.classList.remove("pow-on");
+      if ($("pow-sheet")) $("pow-sheet").hidden = true;
+    }
     if (v !== "fiche") document.title = v === "accueil" ? TITLES.accueil : TITLES[v] + " — Onrecord";
     if (v === "sections") { curSec = ["tout", "gaza", "france", "commun"].indexOf(parts[1]) >= 0 ? parts[1] : "tout"; renderSections(); }
     if (v === "methode") renderMethode();
     if (v === "accueil") { renderResume(); renderQotd(); }
     if (v === "fiche") renderFiche(decodeURIComponent(parts[1] || ""), anchor);
-    var key = v + "/" + (v === "fiche" ? parts[1] : "");
-    if (key !== lastView && !(v === "reseau" && lastView && lastView.indexOf("reseau") === 0)) window.scrollTo(0, 0);
+    var key = v + "/" + ((v === "fiche" || v === "pouvoir") ? (parts[1] || "") : "");
+    var stay = (v === "reseau" && lastView && lastView.indexOf("reseau") === 0) || (v === "pouvoir" && lastView && lastView.indexOf("pouvoir") === 0);
+    if (key !== lastView && !stay) window.scrollTo(0, 0);
     lastView = key;
     if (v === "reseau") requestAnimationFrame(function () { ensureGraph(parts[1] ? decodeURIComponent(parts[1]) : null); });
+    if (v === "pouvoir") renderPouvoir(parts[1] ? decodeURIComponent(parts[1]) : null);
     window.__route = v;
   }
   function bindRouter() {
