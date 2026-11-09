@@ -36,6 +36,7 @@
     <a href="#/chronologie" data-tab="chronologie" id="tab-chronologie"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18"/><circle cx="12" cy="7" r="2"/><circle cx="12" cy="17" r="2"/><path d="M14 7h6M4 17h6"/></svg><span>Chronologie</span></a>
     <a href="#/reseau" data-tab="reseau" id="tab-reseau"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18" r="2.2"/><circle cx="19" cy="18" r="2.2"/><circle cx="12" cy="12.5" r="2.2"/><path d="M12 7.2v3.1M10.3 14 6.6 16.5M13.7 14l3.7 2.5"/></svg><span>Réseau</span></a>
     <a href="#/pouvoir" data-tab="pouvoir" id="tab-pouvoir"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v18M17 3v18M7 8h10M7 12h10M7 16h10"/></svg><span>Échelle</span></a>
+    <a href="#/coulisses" data-tab="coulisses" id="tab-coulisses"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M4 9h16M9 5v14M15 5v14"/></svg><span>Coulisses</span></a>
     <a href="#/methodologie" data-tab="methodologie" id="tab-methodologie"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h9l3 3v13H6z"/><path d="M9 10h6M9 14h6M9 18h3"/></svg><span>Méthode</span></a>
 </nav>
 
@@ -194,6 +195,19 @@
       <p class="count" id="pow-stats" aria-live="polite"></p>
       <div id="pow-ladder" class="pow-ladder"></div>
     </div>
+  </section>
+
+  <!-- COULISSES -->
+  <section id="view-coulisses" class="view" aria-labelledby="coulisses-title" hidden>
+    <div class="wrap page cou-page">
+      <h1 class="view-title" id="coulisses-title">Coulisses</h1>
+      <p class="sec-intro" id="cou-lead"></p>
+      <div class="seg seg-cou" id="cou-stories" role="tablist" aria-label="Choisir un récit"></div>
+      <p class="count" id="cou-stats" aria-live="polite"></p>
+      <div id="cou-story"></div>
+      <div id="cou-spheres"></div>
+    </div>
+    <div id="cou-sheet" class="cou-sheet" hidden></div>
   </section>
 
   <!-- METHODOLOGIE -->

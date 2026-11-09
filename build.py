@@ -981,8 +981,11 @@ _parcours("pierre-edouard-sterin", [
   FI_PERICLES,"franceinfo"),
 ])
 
+import v24_content
+v24_content.apply(N, E, _b, _step, _node, L, _st)
+
 def _nature(e):
-    if e.get("nature") in ("ascension","opposition","autre"):
+    if e.get("nature") in ("ascension","opposition","autre","coulisses"):
         return e["nature"]
     rel=e["relation"].lower()
     # opposition ou contrôle : sanction, procédure, critique, rupture, dissolution

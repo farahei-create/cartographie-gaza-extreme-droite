@@ -5,7 +5,7 @@ import asyncio, json, os, re, struct
 from playwright.async_api import async_playwright
 
 HERE=os.path.dirname(os.path.abspath(__file__))
-SITE=os.path.join(HERE,"site")
+SITE=os.path.join(HERE,"site") if os.path.isdir(os.path.join(HERE,"site")) else os.path.dirname(HERE)
 DATA=json.load(open(os.path.join(SITE,"data.json")))
 URL="http://localhost:8765/"
 NN=len(DATA["nodes"]); NST=sum(len(n.get("statements",[])) for n in DATA["nodes"])
@@ -93,10 +93,10 @@ async def mobile(b, w, h, scheme, errs):
     ok(f"{T} landing is Accueil", await pg.evaluate("window.__route")=="accueil")
     ok(f"{T} tab bar visible at bottom", await pg.evaluate("(()=>{const r=document.querySelector('.tabnav').getBoundingClientRect();return Math.abs(r.bottom-innerHeight)<1&&r.height>=56})()"))
     tabs=await pg.evaluate("[...document.querySelectorAll('#tabnav a')].map(a=>[a.textContent.trim(),a.getBoundingClientRect().height,a.getBoundingClientRect().width])")
-    ok(f"{T} 6 tabs with big targets", [t[0] for t in tabs]==["Accueil","Sections","Chronologie","Réseau","Échelle","Méthode"] and all(t[1]>=44 and t[2]>=44 for t in tabs), tabs)
+    ok(f"{T} 7 tabs with big targets", [t[0] for t in tabs]==["Accueil","Sections","Chronologie","Réseau","Échelle","Coulisses","Méthode"] and all(t[1]>=44 and t[2]>=44 for t in tabs), tabs)
     ok(f"{T} home stats", await pg.locator("#home-stats .stat").count()==7)
     ok(f"{T} home stats values", (await pg.locator("#home-stats .stat").nth(2).locator("dd").inner_text()).strip()==str(NST))
-    ok(f"{T} home entry cards", await pg.locator("#home-entries .entry").count()==7)
+    ok(f"{T} home entry cards", await pg.locator("#home-entries .entry").count()==8)
     ok(f"{T} home latest 6", await pg.locator("#home-latest li").count()==6)
     dates=await pg.evaluate("[...document.querySelectorAll('#home-latest time')].map(t=>t.getAttribute('datetime'))")
     ok(f"{T} latest sorted desc", dates==sorted(dates, reverse=True), dates)

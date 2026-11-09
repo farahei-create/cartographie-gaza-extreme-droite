@@ -18,7 +18,7 @@ def check(c, m):
         print("FAIL:", m)
 
 sw = open(os.path.join(ROOT, "sw.js")).read()
-check('var VERSION = "onrecord-v23"' in sw, "sw onrecord-v23")
+check('var VERSION = "onrecord-v24"' in sw, "sw onrecord-v24")
 html = open(os.path.join(ROOT, "index.html")).read()
 js = open(os.path.join(ROOT, "app.js")).read()
 check("Voir comment il est arrivé là" in js, "libellé parcours")
@@ -40,7 +40,7 @@ check(elu and not elu[0].get("by"), "présidence 2022 sans parrain inventé")
 nats = {}
 for e in D["edges"]:
     nats[e.get("nature")] = nats.get(e.get("nature"), 0) + 1
-check(set(nats) <= {"ascension", "opposition", "autre"} and nats.get("ascension") and nats.get("opposition"), "natures " + str(nats))
+check(set(nats) <= {"ascension", "opposition", "autre", "coulisses"} and nats.get("ascension") and nats.get("opposition"), "natures " + str(nats))
 boll = [e for e in D["edges"] if {e["source"], e["target"]} == {"vincent-bollore", "arcom"}]
 check(boll and all(e["nature"] == "opposition" for e in boll), "bolloré-arcom opposition")
 lej = [e for e in D["edges"] if {e["source"], e["target"]} == {"geoffroy-lejeune", "jdd"}]

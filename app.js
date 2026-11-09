@@ -326,7 +326,7 @@
     };
   }
   function edgeNature(e) {
-    return e && (e.nature === "ascension" || e.nature === "opposition" || e.nature === "autre") ? e.nature : "autre";
+    return e && (e.nature === "ascension" || e.nature === "opposition" || e.nature === "coulisses" || e.nature === "autre") ? e.nature : "autre";
   }
   function edgeColor(dim, e) {
     var c = dim ? PAL.edgeDim : PAL.edge;
@@ -334,7 +334,7 @@
     return { color: c, highlight: PAL.accent, hover: PAL.accent, inherit: false };
   }
   function natureLabel(nat) {
-    return nat === "ascension" ? "Ascension" : nat === "opposition" ? "Opposition" : "Autre";
+    return nat === "ascension" ? "Ascension" : nat === "opposition" ? "Opposition" : nat === "coulisses" ? "Coulisses" : "Autre";
   }
 
   /* ---------- graphe ---------- */
@@ -795,6 +795,7 @@
       ["#/chronologie", "Vue", "Chronologie", "Toutes les déclarations et tous les liens datés, filtrables par section, catégorie, thème et année.", plural(ALL_ST.length + DATA.edges.filter(function (e) { return e.date; }).length, "élément daté", "éléments datés"), "c-chrono"],
       ["#/reseau", "Vue", "Réseau des relations", "Graphe interactif des liens publics entre personnalités et organisations, chacun sourcé.", plural(DATA.edges.length, "relation", "relations"), "c-net"],
       ["#/pouvoir", "Vue", "Échelle du pouvoir", "Les mêmes fiches, rangées par fonction publique documentée. Un tap montre les liens déjà sourcés, vers le haut et vers le bas.", plural(DATA.nodes.length, "fiche", "fiches") + " · " + plural(DATA.edges.length, "lien", "liens"), "c-pow"],
+      ["#/coulisses", "Vue", "Coulisses", "Partis, médias, argent, idées, édition, institutions : les ponts datés et sourcés. Un récit suit l'argent, les médias ou les nominations.", "Liens publics entre sphères", "c-cou"],
       ["#/methodologie", "À propos", "Méthodologie", "Critères d'inclusion, neutralité, images, vidéos, archivage et réutilisation des données.", "Sources vérifiées et archivées", "c-meth"],
       ["#/contribuer", "Participer", "Proposer une mise à jour", "Une erreur, une précision, une nouvelle déclaration sourcée ? Chaque proposition est vérifiée avant publication.", "Formulaire de contribution", "c-contrib"]
     ];
@@ -973,7 +974,8 @@
       (n.category ? '<p class="f-cat"><a href="#/sections">' + catLabel(n) + "</a></p>" : "") + "</div></header>" +
       (n.description ? '<p class="f-desc">' + esc(n.description) + "</p>" : "") +
       '<div class="f-actions">' + (hasParcours(n) ? '<a class="btn-pill small" href="' + ficheHref(n) + '#parcours">' + esc(arriveLabel(n)) + '</a>' : "") +
-      '<a class="btn-pill ghost small" href="#/reseau/' + encodeURIComponent(n.id) + '">Voir dans le réseau</a><a class="btn-pill ghost small" href="#/pouvoir/' + encodeURIComponent(n.id) + '">Voir sur l\'échelle</a></div>' +
+      '<a class="btn-pill ghost small" href="#/reseau/' + encodeURIComponent(n.id) + '">Voir dans le réseau</a><a class="btn-pill ghost small" href="#/pouvoir/' + encodeURIComponent(n.id) + '">Voir sur l\'échelle</a>' +
+      (n.sphere ? '<a class="btn-pill ghost small" href="#/coulisses/' + encodeURIComponent(n.id) + '">Voir dans les coulisses</a>' : "") + "</div>" +
       parcoursHtml(n) +
       amHtml(n) +
       (st.length || n.type === "person" ? '<h2 class="h-sec">Déclarations publiques <span class="h-n">' + st.length + "</span></h2>" +
@@ -1000,9 +1002,12 @@
     return '<li class="rel-card nat-' + nat + '"><a class="rel-main" href="' + ficheHref(o) + '">' + avatar(o, "av-sm") + '<span class="rel-txt"><span class="rel-s">' + sentence + '</span><span class="rel-r">' + esc(e.relation) + '</span></span><span class="chev-r" aria-hidden="true">›</span></a>' +
       '<div class="meta">' + natureBadge(nat) + (e.date ? '<time datetime="' + esc(e.date) + '">' + fmtDate(e.date) + "</time>" : "") + srcLink(e.url, "Source") + archLink(e) + "</div></li>";
   }
-  var FEMALE = { "caroline-yadan": 1, "aurore-berge": 1, "marine-le-pen": 1, "marion-marechal": 1, "yael-braun-pivet": 1, "elisabeth-levy": 1, "caroline-fourest": 1, "valerie-pecresse": 1, "marine-tondelier": 1 };
-  function arriveLabel(n) { return FEMALE[n.id] ? "Voir comment elle est arrivée là" : "Voir comment il est arrivé là"; }
-  function hasParcours(n) { return !!(n && n.type === "person" && n.parcours && n.parcours.length); }
+  var FEMALE = { "caroline-yadan": 1, "aurore-berge": 1, "marine-le-pen": 1, "marion-marechal": 1, "yael-braun-pivet": 1, "elisabeth-levy": 1, "caroline-fourest": 1, "valerie-pecresse": 1, "marine-tondelier": 1, "sarah-knafo": 1, "lise-boell": 1, "constance-benque": 1 };
+  function arriveLabel(n) {
+    if (!n || n.type !== "person") return "Voir la frise";
+    return FEMALE[n.id] ? "Voir comment elle est arrivée là" : "Voir comment il est arrivé là";
+  }
+  function hasParcours(n) { return !!(n && n.parcours && n.parcours.length); }
   function natureBadge(nat) {
     return '<span class="nat nat-' + nat + '">' + esc(natureLabel(nat)) + "</span>";
   }
@@ -1010,7 +1015,9 @@
     if (!hasParcours(n)) return "";
     var steps = n.parcours.slice().sort(function (a, b) { return String(a.date).localeCompare(String(b.date)); });
     return '<section class="parcours" id="parcours" aria-labelledby="parcours-title"><div class="parcours-h"><h2 class="h-sec" id="parcours-title">Parcours <span class="h-n">' + steps.length + "</span></h2>" +
-      '<p class="parcours-lead">Étapes datées, de la première fonction documentée ici jusqu\'au statut actuel. Une pastille n\'apparaît que si la source nomme qui a désigné, nommé, confié ou chargé.</p></div>' +
+      '<p class="parcours-lead">' + (n.type === "person"
+        ? "Étapes datées, de la première fonction documentée ici jusqu'au statut actuel. Une pastille n'apparaît que si la source nomme qui a désigné, nommé, confié ou chargé."
+        : "Frise courte : création, rachat, direction ou ligne, seulement quand une source le décrit.") + "</p></div>" +
       '<ol class="p-rail">' + steps.map(function (s, i) {
         var who = s.by && byId[s.by] ? byId[s.by] : null;
         var last = i === steps.length - 1;
@@ -1395,7 +1402,13 @@
     "identite-libertes": 5, "lr": 5, "reconquete": 5, "renaissance-epr": 5, "rn": 5,
     "aurore-berge": 6, "emmanuel-macron": 6, "gerald-darmanin": 6, "manuel-valls": 6,
     "arcom": 6, "conseil-constitutionnel": 6, "conseil-etat": 6, "pnat": 6,
-    "vincent-bollore": 7, "pierre-edouard-sterin": 7, "lagardere": 7, "vivendi-canal": 7
+    "vincent-bollore": 7, "pierre-edouard-sterin": 7, "lagardere": 7, "vivendi-canal": 7,
+    "institut-iliade": 2, "nuits-du-bien-commun": 2, "philippe-conrad": 2, "arnaud-rerolle": 2,
+    "pascal-praud": 3, "lise-boell": 3, "serge-nedjar": 3, "gerald-brice-viret": 3,
+    "tugdual-denis": 3, "erik-tegner": 3, "donat-vidal-revel": 3, "constance-benque": 3,
+    "prisma-media": 4, "frontieres": 4,
+    "sarah-knafo": 5, "philippe-olivier": 5, "kevin-pfeffer": 5, "udr": 5,
+    "francois-durvye": 7, "alban-du-rostu": 7, "arnaud-lagardere": 7
   };
   /* Rangs publiés le 8 juillet 2026. La page publique donne le rang et la variation,
      pas le montant : aucun chiffre de fortune n'est donc affiché. */
@@ -1732,9 +1745,157 @@
     });
   };
 
+  /* ---------- v24 : coulisses ---------- */
+  var COU_SPHERES = [
+    { id: "partis", label: "Partis", hint: "Partis, candidats et cadres nommés dans la presse." },
+    { id: "medias", label: "Médias", hint: "Chaînes, radios, titres et leurs directions." },
+    { id: "argent", label: "Argent", hint: "Actionnaires, fonds et financeurs nommés." },
+    { id: "idees", label: "Idées", hint: "Écoles, instituts et projets documentés." },
+    { id: "edition", label: "Édition", hint: "Maisons et éditrices." },
+    { id: "institutions", label: "Institutions", hint: "Régulateur et contrôles publics." }
+  ];
+  var COU_STORIES = {
+    tout: "Tout",
+    argent: "Suivre l'argent",
+    medias: "Suivre les médias",
+    nominations: "Suivre les nominations"
+  };
+  var couStory = "tout", couSel = null, couStep = 0, couReady = false;
+
+  function sphereOf(n) { return n && n.sphere; }
+  function sphereMeta(id) {
+    for (var i = 0; i < COU_SPHERES.length; i++) if (COU_SPHERES[i].id === id) return COU_SPHERES[i];
+    return { id: id, label: id, hint: "" };
+  }
+  function couEdges() {
+    return DATA.edges.filter(function (e) {
+      var a = byId[e.source], b = byId[e.target];
+      if (!a || !b || !sphereOf(a) || !sphereOf(b)) return false;
+      if (couStory === "tout") return sphereOf(a) !== sphereOf(b);
+      return (e.stories || []).indexOf(couStory) >= 0;
+    }).sort(function (a, b) {
+      var cross = function (e) {
+        var x = byId[e.source], y = byId[e.target];
+        return (x && y && x.sphere !== y.sphere) ? 0 : 1;
+      };
+      return cross(a) - cross(b) || String(a.date).localeCompare(String(b.date));
+    });
+  }
+  function couPeople() {
+    var ids = {};
+    DATA.nodes.forEach(function (n) { if (sphereOf(n)) ids[n.id] = n; });
+    if (couStory === "tout") return Object.keys(ids).map(function (id) { return ids[id]; });
+    var keep = {};
+    couEdges().forEach(function (e) { keep[e.source] = 1; keep[e.target] = 1; });
+    return Object.keys(keep).map(function (id) { return byId[id]; }).filter(Boolean);
+  }
+  function renderCoulisses(arg) {
+    if (!couReady) { bindCoulisses(); couReady = true; }
+    if (arg && COU_STORIES[arg]) {
+      if (couStory !== arg) couStep = 0;
+      couStory = arg;
+      couSel = null;
+    } else if (arg && byId[arg]) couSel = arg;
+    else if (!arg) { couStory = "tout"; couSel = null; couStep = 0; }
+    var edges = couEdges();
+    if (couStep >= edges.length) couStep = 0;
+    var people = couPeople();
+    $("cou-lead").textContent = "Acteurs publics rangés par sphère. Un pont n'est affiché que s'il est daté et sourcé. Rien ici ne prête une intention.";
+    $("cou-stories").innerHTML = Object.keys(COU_STORIES).map(function (k) {
+      return '<button type="button" class="seg-b" role="tab" data-story="' + k + '" id="cou-story-' + k + '" aria-selected="' + (couStory === k ? "true" : "false") + '">' + esc(COU_STORIES[k]) + "</button>";
+    }).join("");
+    $("cou-stats").textContent = plural(people.length, "acteur", "acteurs") + " · " + plural(edges.length, "pont daté", "ponts datés");
+    var storyHtml = "";
+    if (edges.length) {
+      var e = edges[couStep], a = byId[e.source], b = byId[e.target];
+      var from = sphereMeta(a.sphere).label, to = sphereMeta(b.sphere).label;
+      var kicker = couStory === "tout" ? "Pont entre sphères" : COU_STORIES[couStory];
+      storyHtml = '<article class="cou-now" aria-live="polite"><p class="cou-k">' + esc(kicker) + " · " + (couStep + 1) + " / " + edges.length + "</p>" +
+        '<div class="cou-bridge">' + couChip(a) + '<p class="cou-rel">' + esc(e.relation) + "</p>" + couChip(b) + "</div>" +
+        '<div class="meta">' + natureBadge(edgeNature(e)) +
+        '<span class="cou-sp">' + esc(from === to ? from : from + " → " + to) + "</span>" +
+        (e.date ? '<time datetime="' + esc(e.date) + '">' + fmtDate(e.date) + "</time>" : "") +
+        srcLink(e.url, "Source") + "</div>" +
+        '<div class="cou-nav"><button type="button" class="btn-pill ghost small" id="cou-prev">Précédent</button><button type="button" class="btn-pill small" id="cou-next">Suivant</button></div></article>';
+    } else if (couStory !== "tout") {
+      storyHtml = '<p class="empty">Aucun pont de ce récit dans les sources retenues.</p>';
+    }
+    $("cou-story").innerHTML = storyHtml;
+    var byS = {};
+    people.forEach(function (n) { (byS[n.sphere] || (byS[n.sphere] = [])).push(n); });
+    $("cou-spheres").innerHTML = COU_SPHERES.filter(function (s) { return byS[s.id] && byS[s.id].length; }).map(function (s) {
+      var list = byS[s.id].slice().sort(function (a, b) { return a.name.localeCompare(b.name, "fr"); });
+      return '<section class="cou-lane" id="cou-lane-' + s.id + '"><h2 class="h-sec">' + esc(s.label) + ' <span class="h-n">' + list.length + "</span></h2><p class=\"cou-hint\">" + esc(s.hint) + "</p><ul class=\"cou-people\">" +
+        list.map(function (n) {
+          return '<li><button type="button" class="cou-person' + (couSel === n.id ? " is-on" : "") + '" data-cou="' + esc(n.id) + '">' + avatar(n, "av-sm") + "<span><strong>" + esc(n.name) + "</strong><em>" + esc(n.role) + "</em></span></button></li>";
+        }).join("") + "</ul></section>";
+    }).join("");
+    renderCouSheet(edges);
+    window.__coulisses = function () {
+      return { story: couStory, selected: couSel, step: couStep, bridges: couEdges().length, people: couPeople().length };
+    };
+  }
+  function couChip(n) {
+    return '<button type="button" class="cou-end" data-cou="' + esc(n.id) + '">' + avatar(n, "av-sm") + "<span><strong>" + esc(n.name) + "</strong><em>" + esc(sphereMeta(n.sphere).label) + "</em></span></button>";
+  }
+  function renderCouSheet() {
+    var sheet = $("cou-sheet");
+    if (!couSel || !byId[couSel]) { sheet.hidden = true; document.body.classList.remove("cou-on"); return; }
+    var n = byId[couSel];
+    var groups = { coulisses: [], ascension: [], opposition: [], autre: [] };
+    (edgesOf[n.id] || []).forEach(function (e) {
+      var nat = edgeNature(e);
+      (groups[nat] || groups.autre).push(e);
+    });
+    function group(title, list) {
+      if (!list.length) return "";
+      return "<h3 class=\"cou-h\">" + esc(title) + "</h3><ul class=\"cou-links\">" + list.map(function (e) {
+        var other = byId[e.source === n.id ? e.target : e.source];
+        return '<li><button type="button" class="cou-link" data-cou="' + esc(other.id) + '">' + avatar(other, "av-xs") + "<span><strong>" + esc(other.name) + "</strong><em>" + esc(e.relation) + "</em></span></button>" +
+          '<div class="meta">' + natureBadge(edgeNature(e)) + (e.date ? '<time datetime="' + esc(e.date) + '">' + fmtDate(e.date) + "</time>" : "") + srcLink(e.url, "Source") + "</div></li>";
+      }).join("") + "</ul>";
+    }
+    var parc = hasParcours(n) ? '<a class="btn-pill ghost small" href="' + ficheHref(n) + '#parcours">' + esc(arriveLabel(n)) + "</a>" : "";
+    sheet.hidden = false;
+    document.body.classList.add("cou-on");
+    sheet.innerHTML = '<div class="cou-sheet-bar"><span class="grabber" aria-hidden="true"></span><button type="button" class="panel-close" id="cou-close" aria-label="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button></div>' +
+      '<div class="cou-who">' + avatar(n, "av-sm") + '<div><strong>' + esc(n.name) + "</strong><span>" + esc(n.role) + "</span><span class=\"cou-tag\">" + esc(sphereMeta(n.sphere).label) + "</span></div></div>" +
+      '<div class="cou-actions"><a class="btn-pill small" href="' + ficheHref(n) + '">Ouvrir la fiche</a>' + parc + "</div>" +
+      group("Coulisses", groups.coulisses) + group("Ascension", groups.ascension) + group("Opposition", groups.opposition) + group("Autre", groups.autre);
+    $("cou-close").addEventListener("click", function () {
+      couSel = null; sheet.hidden = true; document.body.classList.remove("cou-on");
+      if (location.hash.indexOf("#/coulisses/") === 0) history.replaceState(null, "", "#/coulisses" + (couStory !== "tout" ? "/" + couStory : ""));
+    });
+  }
+  function bindCoulisses() {
+    $("view-coulisses").addEventListener("click", function (ev) {
+      var story = ev.target.closest("[data-story]");
+      if (story) {
+        ev.preventDefault();
+        location.hash = "#/coulisses/" + story.getAttribute("data-story");
+        return;
+      }
+      var who = ev.target.closest("[data-cou]");
+      if (who) {
+        ev.preventDefault();
+        location.hash = "#/coulisses/" + encodeURIComponent(who.getAttribute("data-cou"));
+        return;
+      }
+      if (ev.target.closest("#cou-prev")) {
+        var n = couEdges().length;
+        couStep = (couStep - 1 + n) % n;
+        renderCoulisses(couStory);
+      } else if (ev.target.closest("#cou-next")) {
+        var m = couEdges().length;
+        couStep = (couStep + 1) % m;
+        renderCoulisses(couStory);
+      }
+    });
+  }
+
   /* ---------- Routage par ancre (#/…) ---------- */
-  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "pouvoir", "methodologie", "methode", "contribuer"];
-  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Sections", chronologie: "Chronologie", reseau: "Réseau des relations", pouvoir: "Échelle du pouvoir", methodologie: "Méthodologie", methode: "Méthode", contribuer: "Proposer une mise à jour" };
+  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "pouvoir", "coulisses", "methodologie", "methode", "contribuer"];
+  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Sections", chronologie: "Chronologie", reseau: "Réseau des relations", pouvoir: "Échelle du pouvoir", coulisses: "Coulisses", methodologie: "Méthodologie", methode: "Méthode", contribuer: "Proposer une mise à jour" };
   var lastView = null;
   function ensureGraph(focusId) {
     if (!network) buildGraph(); else { sizeGraph(); network.redraw(); }
@@ -1769,17 +1930,22 @@
       document.body.classList.remove("pow-on");
       if ($("pow-sheet")) $("pow-sheet").hidden = true;
     }
+    if (v !== "coulisses") {
+      document.body.classList.remove("cou-on");
+      if ($("cou-sheet")) $("cou-sheet").hidden = true;
+    }
     if (v !== "fiche") document.title = v === "accueil" ? TITLES.accueil : TITLES[v] + " — Onrecord";
     if (v === "sections") { curSec = ["tout", "gaza", "france", "commun"].indexOf(parts[1]) >= 0 ? parts[1] : "tout"; renderSections(); }
     if (v === "methode") renderMethode();
     if (v === "accueil") { renderResume(); renderQotd(); }
     if (v === "fiche") renderFiche(decodeURIComponent(parts[1] || ""), anchor);
     var key = v + "/" + ((v === "fiche" || v === "pouvoir") ? (parts[1] || "") : "");
-    var stay = (v === "reseau" && lastView && lastView.indexOf("reseau") === 0) || (v === "pouvoir" && lastView && lastView.indexOf("pouvoir") === 0);
+    var stay = (v === "reseau" && lastView && lastView.indexOf("reseau") === 0) || (v === "pouvoir" && lastView && lastView.indexOf("pouvoir") === 0) || (v === "coulisses" && lastView && lastView.indexOf("coulisses") === 0);
     if (key !== lastView && !stay) window.scrollTo(0, 0);
     lastView = key;
     if (v === "reseau") requestAnimationFrame(function () { ensureGraph(parts[1] ? decodeURIComponent(parts[1]) : null); });
     if (v === "pouvoir") renderPouvoir(parts[1] ? decodeURIComponent(parts[1]) : null);
+    if (v === "coulisses") renderCoulisses(parts[1] ? decodeURIComponent(parts[1]) : "");
     window.__route = v;
   }
   function bindRouter() {
