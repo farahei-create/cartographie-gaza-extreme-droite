@@ -147,7 +147,7 @@
  "https://x.com/BHL/status/2110817601270231314": {
   "archive_url": null,
   "status": "failed",
-  "error": "save:HTTP Error 523: UNKNOWN"
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
  },
  "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/on-vous-explique-la-polemique-autour-de-raphael-enthoven-deprogramme-du-festival-livres-dans-la-boucle-apres-ses-messages-sur-gaza_7480282.html": {
   "archive_url": "https://web.archive.org/web/20251219051636/https://www.franceinfo.fr/monde/proche-orient/israel-palestine/on-vous-explique-la-polemique-autour-de-raphael-enthoven-deprogramme-du-festival-livres-dans-la-boucle-apres-ses-messages-sur-gaza_7480282.html",
@@ -217,7 +217,7 @@
  "https://x.com/jdomerchet/status/2107742270753558671": {
   "archive_url": null,
   "status": "failed",
-  "error": "save:HTTP Error 523: UNKNOWN"
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
  },
  "https://www.franceinfo.fr/economie/medias/devant-les-deputes-vincent-bollore-president-du-groupe-canal-assume-sa-foi-et-recuse-tout-projet-ideologique_6422296.html": {
   "archive_url": "https://web.archive.org/web/20261108192511/https://www.franceinfo.fr/economie/medias/devant-les-deputes-vincent-bollore-president-du-groupe-canal-assume-sa-foi-et-recuse-tout-projet-ideologique_6422296.html",
@@ -407,7 +407,7 @@
  "https://www.leparisien.fr/faits-divers/alcool-solitude-et-cnews-en-boucle-un-technicien-de-45-ans-condamne-apres-ses-menaces-de-mort-racistes-sur-facebook-03-11-2026-J4YLXBPWUVEEPFJLRLRLUVL22Q.php": {
   "archive_url": null,
   "status": "failed",
-  "error": "save:HTTP Error 520: UNKNOWN"
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
  },
  "https://www.ouest-france.fr/societe/justice/ce-quon-voit-est-anxiogene-a-nantes-un-homme-condamne-apres-des-menaces-de-mort-a-caractere-raciste-sur-facebook-23d0dcec-d79a-11f1-9911-9179baff22e2": {
   "archive_url": "https://web.archive.org/web/20261107102322/https://www.ouest-france.fr/societe/justice/ce-quon-voit-est-anxiogene-a-nantes-un-homme-condamne-apres-des-menaces-de-mort-a-caractere-raciste-sur-facebook-23d0dcec-d79a-11f1-9911-9179baff22e2",
@@ -692,7 +692,7 @@
  "https://x.com/CarolineYADAN/status/2119194840160141660": {
   "archive_url": null,
   "status": "failed",
-  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+  "error": "save:HTTP Error 523: UNKNOWN"
  },
  "https://www.i24news.tv/fr/actu/france/artc-melenchon-promet-d-agir-frontalement-contre-la-politique-israelienne-s-il-est-elu": {
   "archive_url": "https://web.archive.org/web/20261108191240/https://www.i24news.tv/fr/actu/france/artc-melenchon-promet-d-agir-frontalement-contre-la-politique-israelienne-s-il-est-elu",
@@ -978,5 +978,30 @@
   "archive_url": "https://web.archive.org/web/20260807114230/https://www.valeursactuelles.com/clubvaleurs/politique/tugdual-denis-limmigration-un-noeud-gordien",
   "archived": "2026-08-07",
   "status": "existing"
+ },
+ "https://www.franceinfo.fr/politique/la-petition-appelant-a-supprimer-cnews-de-l-audiovisuel-francais-classee-par-la-commission-de-l-assemblee-nationale_8276303.html": {
+  "archive_url": "https://web.archive.org/web/20261110153023/https://www.franceinfo.fr/politique/la-petition-appelant-a-supprimer-cnews-de-l-audiovisuel-francais-classee-par-la-commission-de-l-assemblee-nationale_8276303.html",
+  "archived": "2026-11-10",
+  "status": "existing"
+ },
+ "https://www.leparisien.fr/culture-loisirs/tv/cnews-les-deputes-decident-de-ne-pas-donner-suite-a-la-petition-pour-supprimer-la-chaine-10-11-2026-2QKCXKX3E5DPBJEH5QBO7F4IOY.php": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://www.bfmtv.com/politique/reconquete/vrai-faux-gerald-darmanin-a-t-il-dit-la-meme-chose-qu-eric-zemmour-sur-l-immigration-et-la-delinquance-comme-l-affirme-sarah-knafo_AV-202611090761.html": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://www.franceinfo.fr/culture/livres/lise-boell-ancienne-editrice-d-eric-zemmour-nommee-directrice-generale-deleguee-des-editions-grasset_8275976.html": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://www.assemblee-nationale.fr/dyn/17/organes/commissions-permanentes/affaires-culturelles/actualites/decision-de-classement-de-la-petition-supprimer-cnews-de-l-audiovisuel-francais": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
  }
 }

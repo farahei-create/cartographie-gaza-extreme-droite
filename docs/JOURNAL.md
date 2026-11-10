@@ -4,6 +4,15 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-10 (soir) — v27
+
+- CNews, 10/11/2026 : communiqué après le classement de la pétition « Supprimer CNews de l'audiovisuel français » par la commission des affaires culturelles (28 voix contre 25) — Le Parisien/AFP, franceinfo, site de l'Assemblée nationale
+- RN (Caroline Parmentier), 10/11/2026 : « cette obsession de la censure… » dans le même débat, avec la réponse d'Aymeric Caron — franceinfo
+- Sarah Knafo, 09/11/2026 : BFMTV-RMC, Darmanin aurait « dit la même chose » qu'Éric Zemmour ; VRAI/FAUX de BFMTV : faux — BFMTV
+- Lise Boëll, 09/11/2026 : nommée directrice générale déléguée de Grasset (parcours), citation d'Arnaud Lagardère dans le communiqué, lien coulisses Lagardère → Boëll — franceinfo/AFP
+
+Module : `v27_content.py`. Archives réessayées.
+
 ## 2026-11-10 — v26
 
 Citations ajoutées sur des fiches qui en avaient 0 ou 1. Portraits Commons ou Parlement européen. Monogrammes. Page `#/credits`. Guide `docs/REPRISE.md`.

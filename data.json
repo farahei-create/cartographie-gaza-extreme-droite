@@ -5,8 +5,8 @@
     "counts": {
       "persons": 56,
       "orgs": 42,
-      "edges": 155,
-      "statements": 168,
+      "edges": 156,
+      "statements": 172,
       "photos": 41,
       "logos": 21,
       "videos": 16,
@@ -1992,6 +1992,16 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261106193008/https://questions.assemblee-nationale.fr/dyn/17/comptes-rendus/seance/session-ordinaire-de-2026-2027/premiere-seance-du-mercredi-04-novembre-2026",
           "archived": "2026-11-06"
+        },
+        {
+          "quote": "cette obsession de la censure portée par la gauche et l'extrême gauche",
+          "date": "2026-11-10",
+          "medium": "Caroline Parmentier, députée RN, en commission des affaires culturelles de l'Assemblée nationale lors de l'examen de la pétition visant CNews, citée par franceinfo. Dans le même débat, le député LFI Aymeric Caron parle d'un « outil promotionnel de l'extrême droite » et ajoute : « C'est un problème de droit, pas un problème de liberté d'expression ». La pétition a été classée par 28 voix contre 25.",
+          "url": "https://www.franceinfo.fr/politique/la-petition-appelant-a-supprimer-cnews-de-l-audiovisuel-francais-classee-par-la-commission-de-l-assemblee-nationale_8276303.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261110153023/https://www.franceinfo.fr/politique/la-petition-appelant-a-supprimer-cnews-de-l-audiovisuel-francais-classee-par-la-commission-de-l-assemblee-nationale_8276303.html",
+          "archived": "2026-11-10"
         }
       ],
       "sections": [
@@ -2193,7 +2203,16 @@
       "type": "org",
       "role": "Chaîne d'information (Groupe Canal+)",
       "description": "Ex-i-Télé, renommée CNews.",
-      "statements": [],
+      "statements": [
+        {
+          "quote": "Chacun est libre de critiquer CNews et de contester ses choix éditoriaux. Mais réclamer la disparition d'une chaîne pose une question essentielle pour le pluralisme et la liberté d'informer",
+          "date": "2026-11-10",
+          "medium": "Communiqué de CNews, cité par Le Parisien avec AFP, après le vote de la commission des affaires culturelles de l'Assemblée nationale qui a classé, le 10 novembre 2026, la pétition « Supprimer CNews de l'audiovisuel français » (plus d'un million de signatures) par 28 voix contre 25 (site de l'Assemblée nationale). Le président et rapporteur Alexandre Portier (LR) : « Nous ne sommes pas l'Arcom » ; il propose un débat plus large sur la liberté de la presse et la régulation des médias. Selon franceinfo, le RN, l'UDR, LR et Horizons ont voté pour le classement ; la gauche et le MoDem contre ; le groupe EPR s'est divisé. Le PS et LFI demandent un débat dans l'hémicycle.",
+          "url": "https://www.leparisien.fr/culture-loisirs/tv/cnews-les-deputes-decident-de-ne-pas-donner-suite-a-la-petition-pour-supprimer-la-chaine-10-11-2026-2QKCXKX3E5DPBJEH5QBO7F4IOY.php",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
       "sections": [
         "gaza",
         "france"
@@ -4120,6 +4139,14 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20250214082453/https://www.cnews.fr/france/2025-02-10/immigration-il-faut-fermer-la-porte-insiste-la-deputee-europeenne-reconquete",
           "archived": "2025-02-14"
+        },
+        {
+          "quote": "depuis, Gérald Darmanin a dit la même chose comme garde des Sceaux, comme ministre. Il n’a pas été condamné par la justice pour l’avoir dit.",
+          "date": "2026-11-09",
+          "medium": "BFMTV-RMC, 9 novembre 2026, cité par BFMTV. Elle évoque la condamnation d'Éric Zemmour en 2011 pour provocation à la haine raciale, en défendant sa candidature à la présidentielle. La rubrique VRAI/FAUX de BFMTV conclut que l'affirmation est fausse : Gérald Darmanin n'a jamais justifié des contrôles au faciès ; BFMTV rappelle qu'il a toutefois lié à plusieurs reprises immigration et délinquance (Le Figaro, août 2022).",
+          "url": "https://www.bfmtv.com/politique/reconquete/vrai-faux-gerald-darmanin-a-t-il-dit-la-meme-chose-qu-eric-zemmour-sur-l-immigration-et-la-delinquance-comme-l-affirme-sarah-knafo_AV-202611090761.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -4360,7 +4387,7 @@
       "id": "lise-boell",
       "name": "Lise Boëll",
       "type": "person",
-      "role": "Présidente-directrice générale des éditions Fayard (nommée le 5 juin 2024)",
+      "role": "Présidente-directrice générale des éditions Fayard (nommée le 5 juin 2024) ; directrice générale déléguée des éditions Grasset (9 novembre 2026)",
       "description": "franceinfo (5 juin 2024) : Hachette Livre, propriété du groupe Vivendi, annonce sa nomination à la tête de Fayard. Le même article la présente comme l'éditrice d'Éric Zemmour et rappelle le licenciement, en avril 2024, d'Isabelle Saporta, pour « différends stratégiques ». Il cite aussi Vincent Bolloré, en mars, devant des députés : « Je n'ai aucun projet idéologique, je suis tout doux et débonnaire ».",
       "statements": [],
       "sections": [
@@ -4377,6 +4404,13 @@
           "source": "franceinfo",
           "archive_url": "https://web.archive.org/web/20250611192045/https://www.franceinfo.fr/culture/livres/hachette-livre-nomme-lise-boell-editrice-d-eric-zemmour-a-la-tete-des-editions-fayard_6586515.html",
           "archived": "2025-06-11"
+        },
+        {
+          "date": "2026-11-09",
+          "title": "Direction générale déléguée de Grasset",
+          "text": "Hachette Livre, dont Vincent Bolloré est l'actionnaire de référence selon franceinfo, annonce sa nomination comme directrice générale déléguée des éditions Grasset, aux côtés du PDG Jean-Christophe Thiery. Elle reste PDG de Fayard. La nomination intervient sept mois après le départ d'Olivier Nora, qui a dirigé Grasset pendant vingt-six ans.",
+          "url": "https://www.franceinfo.fr/culture/livres/lise-boell-ancienne-editrice-d-eric-zemmour-nommee-directrice-generale-deleguee-des-editions-grasset_8275976.html",
+          "source": "franceinfo"
         }
       ],
       "sphere": "edition"
@@ -4724,7 +4758,16 @@
       "type": "person",
       "role": "Président-directeur général du groupe Lagardère ; président de Prisma Media, selon France 24 (2025)",
       "description": "Le communiqué du groupe du 23 juin 2023 dit que Geoffroy Lejeune « est nommé ce jour directeur de la rédaction du JDD par Arnaud Lagardère ». Le communiqué du 20 octobre 2022 le nomme parmi les deux signataires de la nomination du directeur général d'Europe 1. France 24 (10 septembre 2025) le dit auteur du message nommant Serge Nedjar à Prisma Media, et président de Prisma Media.",
-      "statements": [],
+      "statements": [
+        {
+          "quote": "Son exigence éditoriale, sa proximité avec les auteurs et sa vision seront des atouts précieux pour accompagner le développement des Editions Grasset, tout en restant fidèle à l'ADN qui a fait le succès de cette marque emblématique",
+          "date": "2026-11-09",
+          "medium": "Communiqué de Hachette Livre, cité par franceinfo avec AFP (10 novembre 2026), sur la nomination de Lise Boëll comme directrice générale déléguée des éditions Grasset. franceinfo rappelle que Fayard, qu'elle dirige toujours, publie notamment Sarah Knafo, Charles Alloncle, Jordan Bardella et Philippe de Villiers.",
+          "url": "https://www.franceinfo.fr/culture/livres/lise-boell-ancienne-editrice-d-eric-zemmour-nommee-directrice-generale-deleguee-des-editions-grasset_8275976.html",
+          "theme": "Médias – structure",
+          "section": "france"
+        }
+      ],
       "sections": [
         "france"
       ],
@@ -4757,6 +4800,13 @@
           "source": "France 24",
           "archive_url": "https://web.archive.org/web/20261109064022/https://www.france24.com/fr/info-en-continu/20250910-le-patron-de-cnews-%C3%A9galement-nomm%C3%A9-directeur-des-r%C3%A9dactions-de-prisma-media",
           "archived": "2026-11-09"
+        },
+        {
+          "date": "2026-11-09",
+          "title": "Grasset",
+          "text": "PDG de Hachette Livre selon franceinfo, il est cité dans le communiqué annonçant la nomination de Lise Boëll comme directrice générale déléguée des éditions Grasset.",
+          "url": "https://www.franceinfo.fr/culture/livres/lise-boell-ancienne-editrice-d-eric-zemmour-nommee-directrice-generale-deleguee-des-editions-grasset_8275976.html",
+          "source": "franceinfo"
         }
       ],
       "sphere": "argent",
@@ -6808,6 +6858,18 @@
       ],
       "archive_url": "https://web.archive.org/web/20260906110725/https://www.franceinfo.fr/politique/il-n-y-a-qu-une-voie-eric-ciotti-propose-a-marine-le-pen-un-pacte-d-alliance-pour-la-presidentielle-de-2027_8178815.html",
       "archived": "2026-09-06"
+    },
+    {
+      "source": "arnaud-lagardere",
+      "target": "lise-boell",
+      "relation": "PDG de Hachette Livre selon franceinfo ; cité dans le communiqué annonçant sa nomination comme directrice générale déléguée des éditions Grasset",
+      "url": "https://www.franceinfo.fr/culture/livres/lise-boell-ancienne-editrice-d-eric-zemmour-nommee-directrice-generale-deleguee-des-editions-grasset_8275976.html",
+      "date": "2026-11-09",
+      "nature": "coulisses",
+      "section": "france",
+      "stories": [
+        "nominations"
+      ]
     }
   ]
 }

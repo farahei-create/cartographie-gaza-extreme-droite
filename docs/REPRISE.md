@@ -26,7 +26,7 @@ Site statique à la racine. Pas de CDN. Pas d'étape de build côté Vercel : `d
 | `style.css`, `app.js` | Mise en forme et routage |
 | `data.json` | Contenu. **Généré.** Ne pas l'éditer à la main |
 | `build.py` | Construit `data.json` (personnes, liens, archives, compteurs) |
-| `v24_content.py`, `v26_content.py` | Ajouts branchés à la fin de `build.py` |
+| `v24_content.py`, `v26_content.py`, `v27_content.py` | Ajouts branchés à la fin de `build.py` |
 | `config.js` | `DONATION_URL`, `CORRECTION_EMAIL` |
 | `sw.js` | Service worker. La constante `VERSION` doit monter à chaque publication |
 | `manifest.webmanifest`, `icons/` | PWA |
@@ -195,7 +195,8 @@ Le numéro vivant est celui de `sw.js`. Il n'y a pas de tag git `v11`, `v17`, `v
 | v23 | `f451506` | Parcours d'ascension, liens par nature |
 | v24 | `33f9c07` | Parcours pour tous, vue Coulisses |
 | v25 | `d45e741` | Mise à jour du 09/11 (Marine Le Pen, 60 Minutes) |
-| v26 | cette publication | Citations des fiches pauvres, portraits libres, monogrammes, crédits, ce guide |
+| v26 | `a5f4f04` | Citations des fiches pauvres, portraits libres, monogrammes, crédits, ce guide |
+| v27 | Mise à jour du 10/11 | CNews (pétition classée), Knafo, Boëll à Grasset ; module `v27_content.py` |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 
