@@ -4,15 +4,19 @@ Résultat : tools/archives.json {url: {archive_url, archived, status}}"""
 import json, os, time, urllib.parse, urllib.request, re, sys
 HERE=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT=os.path.join(HERE,"tools/archives.json")
-D=json.load(open(os.path.join(HERE,"site/data.json")))
-urls=[]
-for n in D["nodes"]:
-    for s in n["statements"]:
-        urls.append(s["url"])
-        if s.get("video"): urls.append(s["video"]["url"])
-for e in D["edges"]: urls.append(e["url"])
-urls=list(dict.fromkeys(urls))
-if len(sys.argv)>1: urls=[u for u in sys.argv[1:]]   # URL précises (ex. nouveaux ajouts)
+_data=os.path.join(HERE,"data.json")
+if not os.path.exists(_data): _data=os.path.join(HERE,"site/data.json")
+if len(sys.argv)>1:
+    urls=[u for u in sys.argv[1:]]   # URL précises (ex. nouveaux ajouts)
+else:
+    D=json.load(open(_data))
+    urls=[]
+    for n in D["nodes"]:
+        for s in n["statements"]:
+            urls.append(s["url"])
+            if s.get("video"): urls.append(s["video"]["url"])
+    for e in D["edges"]: urls.append(e["url"])
+    urls=list(dict.fromkeys(urls))
 res=json.load(open(OUT)) if os.path.exists(OUT) else {}
 UA="Cartographie-archivage/1.0 (projet citoyen; contact via GitHub)"
 def get(u, timeout=60):

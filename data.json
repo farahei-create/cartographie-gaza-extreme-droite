@@ -1,14 +1,14 @@
 {
   "meta": {
-    "generated": "2026-11-09",
-    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-09 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : fichiers Wikimedia Commons sous licence libre, avec auteur, licence et lien ; logos reproduits à seule fin d'identification. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
+    "generated": "2026-11-10",
+    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-10 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
       "persons": 56,
       "orgs": 42,
       "edges": 155,
-      "statements": 144,
-      "photos": 25,
-      "logos": 19,
+      "statements": 168,
+      "photos": 41,
+      "logos": 21,
       "videos": 16,
       "france_nodes": 63
     },
@@ -1860,7 +1860,28 @@
       "type": "person",
       "role": "Directeur de la rédaction du JDD (depuis 2023), ancien directeur de Valeurs actuelles",
       "description": "Sa nomination à la tête du JDD en 2023 a provoqué une longue grève de la rédaction.",
-      "statements": [],
+      "statements": [
+        {
+          "quote": "C'est une des conséquences, ce sondage, une des conséquences de l'immigration arabo-musulmane. C'est une des conséquences, comme une partie du trafic de drogue, comme la surpopulation carcérale, comme l'abaya, comme tout ça",
+          "date": "2023-09-28",
+          "medium": "CNews, « L'Heure des pros 2 » du 28 septembre 2023, cité par Le Figaro avec AFP (23 mai 2024). L'Arcom a infligé 50 000 euros à CNews pour ces propos : elle estime qu'ils imputent des faits graves à un groupe de population et qu'ils n'ont fait l'objet d'aucune réaction sur le plateau.",
+          "url": "https://www.lefigaro.fr/medias/amende-de-50-000-euros-pour-cnews-a-cause-de-propos-sur-l-immigration-arabo-musulmane-20240523",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20250124212429/https://www.lefigaro.fr/medias/amende-de-50-000-euros-pour-cnews-a-cause-de-propos-sur-l-immigration-arabo-musulmane-20240523",
+          "archived": "2025-01-24"
+        },
+        {
+          "quote": "En fait, l'antisémitisme dont sont victimes les juifs aujourd'hui, c'est juste qu'on n'a pas eu une politique d'immigration qui avait juste le début du commencement d'une cohérence",
+          "date": "2023-09-28",
+          "medium": "Même séquence, même article du Figaro. Geoffroy Lejeune est présenté comme directeur du Journal du dimanche et chroniqueur régulier de l'émission.",
+          "url": "https://www.lefigaro.fr/medias/amende-de-50-000-euros-pour-cnews-a-cause-de-propos-sur-l-immigration-arabo-musulmane-20240523",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20250124212429/https://www.lefigaro.fr/medias/amende-de-50-000-euros-pour-cnews-a-cause-de-propos-sur-l-immigration-arabo-musulmane-20240523",
+          "archived": "2025-01-24"
+        }
+      ],
       "sections": [
         "gaza",
         "france"
@@ -2789,6 +2810,36 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261003121243/https://www.franceinfo.fr/politique/front-national/plan-pericles-ce-que-l-on-sait-du-projet-du-milliardaire-catholique-pierre-edouard-sterin-pour-promouvoir-des-valeurs-conservatrices-et-faire-gagner-la-droite-aux-elections_6677268.html",
           "archived": "2026-10-03"
+        },
+        {
+          "quote": "Minoritaire dans les urnes, la gauche est sans doute plus minoritaire que jamais dans les esprits. Il n'y a qu'à consulter les enquêtes d'opinion sur l'immigration, la sécurité, la fiscalité ou les dépenses publiques pour se rendre compte combien les aspirations des Français sont éloignées des vieilles rengaines que seule la gauche française, plus urbaine et moins populaire que jamais, ose encore porter.",
+          "date": "2024-07-17",
+          "medium": "Tribune signée au Figaro (page datée du 17 juillet 2024). La suite de l'article est réservée aux abonnés : seule la partie lisible sans compte est citée.",
+          "url": "https://www.lefigaro.fr/vox/politique/pierre-edouard-sterin-face-aux-injonctions-des-deconstructeurs-ne-plus-courber-l-echine-20240717",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261012004148/https://www.lefigaro.fr/vox/politique/pierre-edouard-sterin-face-aux-injonctions-des-deconstructeurs-ne-plus-courber-l-echine-20240717",
+          "archived": "2026-10-12"
+        },
+        {
+          "quote": "La gauche française est minoritaire, mais elle est habile, doublement habile même : elle est habile quand elle se partage les circonscriptions alors que les partis qui la composent ne sont d'accord sur rien, et habile encore quand, à grand renfort d'une communication tonitruante, elle fait croire au pays qu'elle a gagné les élections alors que 75 % des Français n'ont pas voté pour elle .",
+          "date": "2024-07-17",
+          "medium": "Suite de la même tribune, partie lisible sans abonnement.",
+          "url": "https://www.lefigaro.fr/vox/politique/pierre-edouard-sterin-face-aux-injonctions-des-deconstructeurs-ne-plus-courber-l-echine-20240717",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261012004148/https://www.lefigaro.fr/vox/politique/pierre-edouard-sterin-face-aux-injonctions-des-deconstructeurs-ne-plus-courber-l-echine-20240717",
+          "archived": "2026-10-12"
+        },
+        {
+          "quote": "Je ne peux plus me résoudre à voir cette gauche mélenchonisée mener cette bataille culturelle sans rencontrer une résistance des forces de droite, qui, depuis cinquante ans, courbent l’échine sous les injonctions culturelles des déconstructeurs.",
+          "date": "2024-07-18",
+          "medium": "La Croix (22 juillet 2024, avec AFP) présente cette phrase, entre guillemets, comme celle par laquelle il a annoncé Périclès « dans les pages du Figaro du 18 juillet ». Le Figaro en ligne date sa page du 17 juillet ; la phrase complète n'y est pas lisible sans abonnement.",
+          "url": "https://www.la-croix.com/france/pericles-le-plan-du-milliardaire-pierre-edouard-sterin-pour-unir-et-faire-gagner-les-droites-20240722",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20250930111519/https://www.la-croix.com/france/pericles-le-plan-du-milliardaire-pierre-edouard-sterin-pour-unir-et-faire-gagner-les-droites-20240722",
+          "archived": "2025-09-30"
         }
       ],
       "sections": [
@@ -3340,7 +3391,15 @@
           "archived": "2025-09-01"
         }
       ],
-      "sphere": "medias"
+      "sphere": "medias",
+      "image": "img/people/cyril-hanouna.webp",
+      "image_credit": {
+        "author": "Julien Morvan",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Pieds_dans_le_plat_hanouna_2_(cropped).jpg",
+        "file": "Pieds dans le plat hanouna 2 (cropped).jpg"
+      }
     },
     {
       "id": "nemesis",
@@ -3400,7 +3459,15 @@
         "france"
       ],
       "category": "Médias & propriétaires",
-      "subcategory": "Chaînes, radios & titres"
+      "subcategory": "Chaînes, radios & titres",
+      "logo": "img/orgs/m6.webp",
+      "logo_credit": {
+        "license": "Public domain",
+        "license_url": "",
+        "source_url": "https://commons.wikimedia.org/wiki/File:M6Groupe2023.svg",
+        "file": "M6Groupe2023.svg",
+        "author": "Groupe M6"
+      }
     },
     {
       "id": "pnat",
@@ -3652,7 +3719,15 @@
           "archive_url": "https://web.archive.org/web/20261109060221/https://www.franceinfo.fr/elections/presidentielle/de-la-securite-sociale-integrale-a-la-vie-republique-jean-luc-melenchon-presente-son-programme-pour-2017_1874861.html",
           "archived": "2026-11-09"
         }
-      ]
+      ],
+      "image": "img/people/jean-luc-melenchon.webp",
+      "image_credit": {
+        "author": "jlm2017.fr",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Jean_Luc_M%C3%A9lenchon_en_mai_2026-_55261894422_(cropped).jpg",
+        "file": "Jean Luc Mélenchon en mai 2026- 55261894422 (cropped).jpg"
+      }
     },
     {
       "id": "raphael-glucksmann",
@@ -3697,7 +3772,15 @@
           "archive_url": "https://web.archive.org/web/20240929102111/https://www.lefigaro.fr/politique/guerre-hamas-israel-raphael-glucksmann-refuse-le-terme-de-genocide-et-prefere-celui-de-carnage-20240312",
           "archived": "2024-09-29"
         }
-      ]
+      ],
+      "image": "img/people/raphael-glucksmann.webp",
+      "image_credit": {
+        "author": "European Union 2024 - Source : EP — © European Union",
+        "license": "Réutilisation autorisée avec mention « © European Union »",
+        "license_url": "https://www.europarl.europa.eu/legal-notice/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:1720448398743_20240708_GLUCKSMANN_Raphael_FR_006.jpg",
+        "file": "1720448398743 20240708 GLUCKSMANN Raphael FR 006.jpg"
+      }
     },
     {
       "id": "fabien-roussel",
@@ -3742,7 +3825,15 @@
           "archive_url": "https://web.archive.org/web/20250917175607/https://www.franceinfo.fr/monde/palestine/gaza/guerre-a-gaza-le-ps-le-pcf-et-les-ecologistes-reunis-a-paris-pour-denoncer-le-genocide-commis-par-israel_7274295.html",
           "archived": "2025-09-17"
         }
-      ]
+      ],
+      "image": "img/people/fabien-roussel.webp",
+      "image_credit": {
+        "author": "Zouhair NAKARA",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Roussel_Fabien_1.jpg",
+        "file": "Roussel Fabien 1.jpg"
+      }
     },
     {
       "id": "marine-tondelier",
@@ -3787,7 +3878,15 @@
           "archive_url": "https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
           "archived": "2026-10-15"
         }
-      ]
+      ],
+      "image": "img/people/marine-tondelier.webp",
+      "image_credit": {
+        "author": "Selbymay",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Huma2023MarineTondelier_(cropped).jpg",
+        "file": "Huma2023MarineTondelier (cropped).jpg"
+      }
     },
     {
       "id": "edouard-philippe",
@@ -3824,7 +3923,15 @@
           "archive_url": "https://web.archive.org/web/20250715083645/https://www.franceinfo.fr/elections/pourquoi-emmanuel-macron-a-choisi-edouard-philippe-pour-le-poste-de-premier-ministre_2192137.html",
           "archived": "2025-07-15"
         }
-      ]
+      ],
+      "image": "img/people/edouard-philippe.webp",
+      "image_credit": {
+        "author": "Wasasaq8",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Edouard_Philippe_3x4_crop.jpg",
+        "file": "Edouard Philippe 3x4 crop.jpg"
+      }
     },
     {
       "id": "gabriel-attal",
@@ -3871,7 +3978,15 @@
           "archive_url": "https://web.archive.org/web/20261109060307/https://www.franceinfo.fr/politique/remaniement/remaniement-gabriel-attal-est-nomme-premier-ministre-en-remplacement-d-elisabeth-borne_6292461.html",
           "archived": "2026-11-09"
         }
-      ]
+      ],
+      "image": "img/people/gabriel-attal.webp",
+      "image_credit": {
+        "author": "Ismail Aissoub",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Gabriel_Attal_2025_(close_crop).jpg",
+        "file": "Gabriel Attal 2025 (close crop).jpg"
+      }
     },
     {
       "id": "xavier-bertrand",
@@ -3916,7 +4031,15 @@
           "archive_url": "https://web.archive.org/web/20260831134710/https://www.lefigaro.fr/elections/legislatives/et-la-on-va-tergiverser-xavier-bertrand-demande-l-exclusion-d-eric-ciotti-des-republicains-20240611",
           "archived": "2026-08-31"
         }
-      ]
+      ],
+      "image": "img/people/xavier-bertrand.webp",
+      "image_credit": {
+        "author": "Claudio Centonze / European Union, 2025 / EC - Audiovisual Service",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Xavier_Bertrand_-_2025_(cropped).jpg",
+        "file": "Xavier Bertrand - 2025 (cropped).jpg"
+      }
     },
     {
       "id": "dominique-de-villepin",
@@ -3961,7 +4084,15 @@
           "archive_url": "https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
           "archived": "2026-10-15"
         }
-      ]
+      ],
+      "image": "img/people/dominique-de-villepin.webp",
+      "image_credit": {
+        "author": "Georges Seguin (Okki)",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Dominique_de_Villepin_20100330_Salon_du_livre_de_Paris_2_cropped.jpg",
+        "file": "Dominique de Villepin 20100330 Salon du livre de Paris 2 cropped.jpg"
+      }
     },
     {
       "id": "sarah-knafo",
@@ -3969,7 +4100,28 @@
       "type": "person",
       "role": "Eurodéputée (Reconquête) ; directrice de campagne présidentielle en 2022",
       "description": "franceinfo (4 décembre 2021) la présente comme magistrate à la Cour des comptes, plume, conseillère spéciale, directrice de campagne et de la communication d'Éric Zemmour, et écrit qu'elle partage sa vie. Le 21 octobre 2026, la présentation d'un Complément d'enquête sur franceinfo la dit « élue Reconquête au Parlement européen » deux ans après cette campagne. Cette fiche ne décrit pas d'autre fonction.",
-      "statements": [],
+      "statements": [
+        {
+          "quote": "L’immigration n’est pas un phénomène météorologique",
+          "date": "2024-12-09",
+          "medium": "CNews, article du site (9 décembre 2024). L'article, très court, ne retranscrit pas le reste de l'entretien. Il la présente comme eurodéputée Reconquête.",
+          "url": "https://www.cnews.fr/france/2024-12-09/sarah-knafo-limmigration-nest-pas-un-phenomene-meteorologique-1600173",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20250724125323/https://www.cnews.fr/france/2024-12-09/sarah-knafo-limmigration-nest-pas-un-phenomene-meteorologique-1600173",
+          "archived": "2025-07-24"
+        },
+        {
+          "quote": "Il faut fermer la porte",
+          "date": "2025-02-10",
+          "medium": "CNews, « La Grande Interview » (lundi 10 février 2025), article du site. L'article dit qu'elle réagit aux flux migratoires et à l'assimilation, sans citer d'autre phrase.",
+          "url": "https://www.cnews.fr/france/2025-02-10/immigration-il-faut-fermer-la-porte-insiste-la-deputee-europeenne-reconquete",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20250214082453/https://www.cnews.fr/france/2025-02-10/immigration-il-faut-fermer-la-porte-insiste-la-deputee-europeenne-reconquete",
+          "archived": "2025-02-14"
+        }
+      ],
       "sections": [
         "france"
       ],
@@ -3995,7 +4147,15 @@
           "archived": "2026-10-28"
         }
       ],
-      "sphere": "partis"
+      "sphere": "partis",
+      "image": "img/people/sarah-knafo.webp",
+      "image_credit": {
+        "author": "European Union 2024 - Source : EP — © European Union",
+        "license": "Réutilisation autorisée avec mention « © European Union »",
+        "license_url": "https://www.europarl.europa.eu/legal-notice/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:1719930258552_20240702_KNAFO_Sarah_FR_021.jpg",
+        "file": "1719930258552 20240702 KNAFO Sarah FR 021.jpg"
+      }
     },
     {
       "id": "pascal-praud",
@@ -4003,7 +4163,38 @@
       "type": "person",
       "role": "Présentateur de « L'Heure des pros » (CNews ; page d'émission Europe 1)",
       "description": "Un portrait de franceinfo du 13 novembre 2017 le présente comme animateur de « L'Heure des Pros » sur CNews, chaîne du groupe Bolloré. La page de l'émission sur europe1.fr, lue le 9 novembre 2026, indique que « L'Heure des Pros » y est « présentée par Pascal Praud ». La page ne donne pas la date de début de cette diffusion.",
-      "statements": [],
+      "statements": [
+        {
+          "quote": "Est-ce qu'on sait pourquoi il y a plus de punaises de lit aujourd'hui ? Est-ce lié à l'hygiène ?",
+          "date": "2023-09-29",
+          "medium": "CNews, « L'Heure des pros » (29 septembre 2023), cité par franceinfo. Il s'adresse à Nicolas Roux de Bézieux (Badbugs.fr). L'invité répond « Absolument pas ». Plusieurs élus annoncent saisir l'Arcom ; l'article ne rapporte pas de décision de l'Arcom.",
+          "url": "https://www.franceinfo.fr/culture/tv/punaises-de-lit-indignation-apres-une-sequence-d-un-racisme-evident-sur-cnews-un-depute-lfi-annonce-saisir-l-arcom_6091530.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260601171912/https://www.franceinfo.fr/culture/tv/punaises-de-lit-indignation-apres-une-sequence-d-un-racisme-evident-sur-cnews-un-depute-lfi-annonce-saisir-l-arcom_6091530.html",
+          "archived": "2026-06-01"
+        },
+        {
+          "quote": "Je vais poser toutes les questions. Il y a beaucoup d'immigration en ce moment. Est-ce que c'est des personnes qui n'ont pas les mêmes conditions d'hygiène que ceux qui sont sur le sol de France qui apportent, parce qu'ils sont dans la rue, peut-être n'ont-ils pas accès à tous les services comme les autres, est-ce que c'est lié à cela ?",
+          "date": "2023-09-29",
+          "medium": "Même séquence de « L'Heure des pros », citée par franceinfo, qui signale un [sic]. L'invité répond « Absolument pas » et avait indiqué sur franceinfo que la première cause d'infestation, ce sont les voyages.",
+          "url": "https://www.franceinfo.fr/culture/tv/punaises-de-lit-indignation-apres-une-sequence-d-un-racisme-evident-sur-cnews-un-depute-lfi-annonce-saisir-l-arcom_6091530.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260601171912/https://www.franceinfo.fr/culture/tv/punaises-de-lit-indignation-apres-une-sequence-d-un-racisme-evident-sur-cnews-un-depute-lfi-annonce-saisir-l-arcom_6091530.html",
+          "archived": "2026-06-01"
+        },
+        {
+          "quote": "L'Association nationale d'assistance aux frontières pour les étrangers (...) s'est retirée de la zone d'attente de Roissy infestée par les punaises de lit. Une situation qui, selon elle, ne cesse de se dégrader",
+          "date": "2023-09-29",
+          "medium": "Fin de la même émission, cité par Le Figaro : Pascal Praud justifie sa question. Les points de suspension entre parenthèses sont ceux de l'article. Le Figaro rapporte aussi la réponse « Absolument pas » de l'invité.",
+          "url": "https://www.lefigaro.fr/medias/l-arcom-saisie-apres-une-question-de-pascal-praud-liant-punaises-de-lit-et-immigration-20230929",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20250912122303/https://www.lefigaro.fr/medias/l-arcom-saisie-apres-une-question-de-pascal-praud-liant-punaises-de-lit-et-immigration-20230929",
+          "archived": "2025-09-12"
+        }
+      ],
       "sections": [
         "france"
       ],
@@ -4029,7 +4220,15 @@
           "archived": "2026-09-01"
         }
       ],
-      "sphere": "medias"
+      "sphere": "medias",
+      "image": "img/people/pascal-praud.webp",
+      "image_credit": {
+        "author": "ManoSolo13241324",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Pascal_Praud_2025.jpg",
+        "file": "Pascal Praud 2025.jpg"
+      }
     },
     {
       "id": "francois-durvye",
@@ -4097,6 +4296,46 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20250606171925/https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/ceelec/l17ceelec2425036_compte-rendu.pdf",
           "archived": "2025-06-06"
+        },
+        {
+          "quote": "Le document publié par L’Humanité en juillet 2024 date de septembre 2023.",
+          "date": "2025-05-06",
+          "medium": "Audition sous serment, commission d'enquête de l'Assemblée nationale sur l'organisation des élections (compte rendu n° 36). Il parle du document révélé par L'Humanité.",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/ceelec/l17ceelec2425036_compte-rendu.pdf",
+          "theme": "Nuance / contexte",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20250606171925/https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/ceelec/l17ceelec2425036_compte-rendu.pdf",
+          "archived": "2025-06-06"
+        },
+        {
+          "quote": "J’assume ce document, dont je suis l’auteur, mais certains des éléments qui y sont présentés ne sont plus d’actualité.",
+          "date": "2025-05-06",
+          "medium": "Même audition. Cette phrase précise la portée du document de septembre 2023.",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/ceelec/l17ceelec2425036_compte-rendu.pdf",
+          "theme": "Nuance / contexte",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20250606171925/https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/ceelec/l17ceelec2425036_compte-rendu.pdf",
+          "archived": "2025-06-06"
+        },
+        {
+          "quote": "notre activité consiste aujourd’hui à produire et à soutenir des idées, ce que nous assumons complètement, dans le respect du cadre légal.",
+          "date": "2025-05-06",
+          "medium": "Même audition, après avoir rappelé l'article L. 52-8 du code électoral. Il venait de dire que Périclès ne finance pas de candidats, ni directement ni indirectement.",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/ceelec/l17ceelec2425036_compte-rendu.pdf",
+          "theme": "Nuance / contexte",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20250606171925/https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/ceelec/l17ceelec2425036_compte-rendu.pdf",
+          "archived": "2025-06-06"
+        },
+        {
+          "quote": "C’est donc dans un souci de rééquilibrage démocratique, lié à notre attachement au pluralisme, que nous avons jugé opportun de lancer une organisation agissant dans le champ métapolitique pour promouvoir ces valeurs.",
+          "date": "2025-05-06",
+          "medium": "Même audition, propos liminaire. « Ces valeurs » renvoie, dans le compte rendu, aux « valeurs libérales et conservatrices » qu'il dit défendre.",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/ceelec/l17ceelec2425036_compte-rendu.pdf",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20250606171925/https://www.assemblee-nationale.fr/dyn/17/comptes-rendus/ceelec/l17ceelec2425036_compte-rendu.pdf",
+          "archived": "2025-06-06"
         }
       ],
       "sections": [
@@ -4148,7 +4387,28 @@
       "type": "person",
       "role": "Directeur des rédactions de Prisma Media (nommé le 10 septembre 2025) ; patron de CNews, selon France 24",
       "description": "France 24 avec AFP (10 septembre 2025) : Arnaud Lagardère, président de Prisma Media, annonce dans un message aux salariés que Serge Nedjar est nommé directeur des rédactions. Il conserve ses fonctions à CNews. Il est placé sous l'autorité de Gérald-Brice Viret, vice-président de Prisma et directeur général de Canal+ France. L'article écrit que Vivendi a racheté Prisma Media en 2021.",
-      "statements": [],
+      "statements": [
+        {
+          "quote": "CNews est une chaîne d’opinions, avec un \"s\", comme nous l’avons toujours revendiqué, et avant tout une chaîne d’information. Bien évidemment, nous ne sommes pas une chaîne d’extrême droite !",
+          "date": "2025-09-30",
+          "medium": "Entretien au Figaro publié le 30 septembre 2025, cité par Puremédias (article du 4 octobre 2025). Il répond à Delphine Ernotte, qui avait dit au Monde : « Qu’ils assument d’être une chaîne d’extrême droite ! »",
+          "url": "https://www.ozap.com/actu/cnews-une-chaine-d-extreme-droite-serge-nedjar-pointe-un-manque-de-mesure-et-de-responsabilite-de-la-part-de-delphine-ernotte/651856",
+          "theme": "Nuance / contexte",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260606133852/https://www.ozap.com/actu/cnews-une-chaine-d-extreme-droite-serge-nedjar-pointe-un-manque-de-mesure-et-de-responsabilite-de-la-part-de-delphine-ernotte/651856",
+          "archived": "2026-06-06"
+        },
+        {
+          "quote": "Cette phrase a fait beaucoup de mal en interne. Je peux vous dire que l’émotion était très vive dans les couloirs. Nos 200 collaborateurs ont pris cette attaque de plein fouet.",
+          "date": "2025-09-30",
+          "medium": "Même entretien, même article de Puremédias.",
+          "url": "https://www.ozap.com/actu/cnews-une-chaine-d-extreme-droite-serge-nedjar-pointe-un-manque-de-mesure-et-de-responsabilite-de-la-part-de-delphine-ernotte/651856",
+          "theme": "Nuance / contexte",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260606133852/https://www.ozap.com/actu/cnews-une-chaine-d-extreme-droite-serge-nedjar-pointe-un-manque-de-mesure-et-de-responsabilite-de-la-part-de-delphine-ernotte/651856",
+          "archived": "2026-06-06"
+        }
+      ],
       "sections": [
         "france"
       ],
@@ -4190,7 +4450,15 @@
           "archived": "2026-11-09"
         }
       ],
-      "sphere": "medias"
+      "sphere": "medias",
+      "image": "img/people/gerald-brice-viret.webp",
+      "image_credit": {
+        "author": "Elyot Boudart",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:G%C3%A9rald-Brice_Viret_at_Deauville_American_Film_festival_2026.jpg",
+        "file": "Gérald-Brice Viret at Deauville American Film festival 2026.jpg"
+      }
     },
     {
       "id": "philippe-olivier",
@@ -4198,7 +4466,48 @@
       "type": "person",
       "role": "Conseiller de Marine Le Pen ; directeur de la cellule « Idées et images » du RN, selon franceinfo (2022)",
       "description": "franceinfo (18 avril 2022) le présente comme « le plus proche conseiller de Marine Le Pen » et comme directeur de la cellule « Idées et images » du parti. Le même article écrit qu'il est l'époux de Marie-Caroline Le Pen et le père de Nolwenn Olivier, « l'actuelle compagne de Jordan Bardella ». Ces liens familiaux sont ceux que l'article énonce.",
-      "statements": [],
+      "statements": [
+        {
+          "quote": "Est-ce que oui ou non vous approuvez le projet de loi ci-joint",
+          "date": "2021-09-28",
+          "medium": "franceinfo, « Votre invité politique » (article du 28 septembre 2021). Il explique la question que poserait le référendum sur l'immigration annoncé la veille par Marine Le Pen sur France 2.",
+          "url": "https://www.franceinfo.fr/politique/marine-le-pen/immigration-le-referendum-annonce-par-marine-le-pen-serait-un-arbitrage-de-l-ensemble-du-peuple-d-apres-son-conseiller-special_4786617.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261110042737/https://www.franceinfo.fr/politique/marine-le-pen/immigration-le-referendum-annonce-par-marine-le-pen-serait-un-arbitrage-de-l-ensemble-du-peuple-d-apres-son-conseiller-special_4786617.html",
+          "archived": "2026-11-10"
+        },
+        {
+          "quote": "un projet de loi qui comprend un dispositif complet de lutte contre l'immigration, de régulation de l'immigration",
+          "date": "2021-09-28",
+          "medium": "Même entretien. L'article écrit : « Le texte sera selon lui » cette formule.",
+          "url": "https://www.franceinfo.fr/politique/marine-le-pen/immigration-le-referendum-annonce-par-marine-le-pen-serait-un-arbitrage-de-l-ensemble-du-peuple-d-apres-son-conseiller-special_4786617.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261110042737/https://www.franceinfo.fr/politique/marine-le-pen/immigration-le-referendum-annonce-par-marine-le-pen-serait-un-arbitrage-de-l-ensemble-du-peuple-d-apres-son-conseiller-special_4786617.html",
+          "archived": "2026-11-10"
+        },
+        {
+          "quote": "un arbitrage de l'ensemble du peuple",
+          "date": "2021-09-28",
+          "medium": "Même entretien. Il ajoute que les mesures seraient « à prendre ou à laisser ».",
+          "url": "https://www.franceinfo.fr/politique/marine-le-pen/immigration-le-referendum-annonce-par-marine-le-pen-serait-un-arbitrage-de-l-ensemble-du-peuple-d-apres-son-conseiller-special_4786617.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261110042737/https://www.franceinfo.fr/politique/marine-le-pen/immigration-le-referendum-annonce-par-marine-le-pen-serait-un-arbitrage-de-l-ensemble-du-peuple-d-apres-son-conseiller-special_4786617.html",
+          "archived": "2026-11-10"
+        },
+        {
+          "quote": "à prendre ou à laisser",
+          "date": "2021-09-28",
+          "medium": "Même entretien, à propos des mesures du projet de loi soumis à référendum.",
+          "url": "https://www.franceinfo.fr/politique/marine-le-pen/immigration-le-referendum-annonce-par-marine-le-pen-serait-un-arbitrage-de-l-ensemble-du-peuple-d-apres-son-conseiller-special_4786617.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261110042737/https://www.franceinfo.fr/politique/marine-le-pen/immigration-le-referendum-annonce-par-marine-le-pen-serait-un-arbitrage-de-l-ensemble-du-peuple-d-apres-son-conseiller-special_4786617.html",
+          "archived": "2026-11-10"
+        }
+      ],
       "sections": [
         "france"
       ],
@@ -4215,7 +4524,15 @@
           "archived": "2026-11-09"
         }
       ],
-      "sphere": "partis"
+      "sphere": "partis",
+      "image": "img/people/philippe-olivier.webp",
+      "image_credit": {
+        "author": "European Union — © European Union",
+        "license": "Réutilisation autorisée avec mention « © European Union »",
+        "license_url": "https://www.europarl.europa.eu/legal-notice/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Philippe_Olivier_MEP_(2024).jpg",
+        "file": "Philippe Olivier MEP (2024).jpg"
+      }
     },
     {
       "id": "kevin-pfeffer",
@@ -4240,7 +4557,15 @@
           "archived": "2025-11-07"
         }
       ],
-      "sphere": "partis"
+      "sphere": "partis",
+      "image": "img/people/kevin-pfeffer.webp",
+      "image_credit": {
+        "author": "TrisHR",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:20240709-P1040788_K%C3%A9vin_Pfeffer_Wikipedia_(cropped).jpg",
+        "file": "20240709-P1040788 Kévin Pfeffer Wikipedia (cropped).jpg"
+      }
     },
     {
       "id": "tugdual-denis",
@@ -4248,7 +4573,28 @@
       "type": "person",
       "role": "Directeur de la rédaction de Valeurs actuelles",
       "description": "Le 21 juin 2023, Valeurs actuelles publie un texte signé de lui, dont le titre parle du « message du nouveau directeur de la rédaction ». Le 11 septembre 2024, BFMTV le présente encore comme « directeur de la rédaction de Valeurs actuelles ». Le nom du propriétaire n'est pas repris ici : la page lue ne le désigne pas dans le corps accessible hors commentaires.",
-      "statements": [],
+      "statements": [
+        {
+          "quote": "L’immigration, comme une évidence. Car l’immigration partout et tout le temps. L’immigration derrière les lynchages, l’immigration dans le poids sur nos comptes publics, l’immigration derrière les incivilités du canal Saint-Martin .",
+          "date": "2026-07-02",
+          "medium": "Éditorial signé dans Valeurs actuelles (2 juillet 2026), « L'immigration, un nœud gordien ». Le texte qui suit est le sien : le site ne reprend pas le lien de causalité comme un fait établi.",
+          "url": "https://www.valeursactuelles.com/clubvaleurs/politique/tugdual-denis-limmigration-un-noeud-gordien",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260807114230/https://www.valeursactuelles.com/clubvaleurs/politique/tugdual-denis-limmigration-un-noeud-gordien",
+          "archived": "2026-08-07"
+        },
+        {
+          "quote": "Ce sujet, qui fait consensus dans la société française (une majorité écrasante de nos concitoyens souhaite réduire drastiquement les flux), continue à faire l’objet de pudeurs dans le débat public.",
+          "date": "2026-07-02",
+          "medium": "Suite du même éditorial. La parenthèse est dans le texte.",
+          "url": "https://www.valeursactuelles.com/clubvaleurs/politique/tugdual-denis-limmigration-un-noeud-gordien",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260807114230/https://www.valeursactuelles.com/clubvaleurs/politique/tugdual-denis-limmigration-un-noeud-gordien",
+          "archived": "2026-08-07"
+        }
+      ],
       "sections": [
         "france"
       ],
@@ -4282,7 +4628,28 @@
       "type": "person",
       "role": "Directeur et fondateur du média Frontières ; éditorialiste sur CNews, selon franceinfo",
       "description": "franceinfo (20 juin 2026) le désigne comme « directeur de Frontières », « fondateur du média » et « éditorialiste sur CNews », dans un article sur sa condamnation du jeudi précédent : six mois de prison avec sursis et 10 000 euros d'amende pour divulgation de données personnelles d'avocats. Aucune participation au capital n'est affirmée ici.",
-      "statements": [],
+      "statements": [
+        {
+          "quote": "L'immigration, c'est l'éléphant au milieu de la pièce",
+          "date": "2025-10-08",
+          "medium": "Europe 1, « Christine Kelly et vous » (article du 8 octobre 2025). Il commente une étude de l'Insee publiée la veille : six millions d'étrangers en France, soit 8,8 % de la population. L'article écrit qu'il juge cette étude inaperçue des autres médias.",
+          "url": "https://www.europe1.fr/societe/six-millions-detrangers-recenses-en-france-erik-tegner-preconise-une-immigration-negative-775658",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20251107193002/https://www.europe1.fr/societe/six-millions-detrangers-recenses-en-france-erik-tegner-preconise-une-immigration-negative-775658",
+          "archived": "2025-11-07"
+        },
+        {
+          "quote": "immigration négative",
+          "date": "2025-10-08",
+          "medium": "Même article d'Europe 1. Le terme est entre guillemets. L'article, et non une phrase continue de l'intéressé, écrit qu'il préconise de mettre en place cette politique, « consistant à ne pas renouveler le titre de séjour d'un certain nombre d'étrangers ».",
+          "url": "https://www.europe1.fr/societe/six-millions-detrangers-recenses-en-france-erik-tegner-preconise-une-immigration-negative-775658",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20251107193002/https://www.europe1.fr/societe/six-millions-detrangers-recenses-en-france-erik-tegner-preconise-une-immigration-negative-775658",
+          "archived": "2025-11-07"
+        }
+      ],
       "sections": [
         "france"
       ],
@@ -4392,7 +4759,15 @@
           "archived": "2026-11-09"
         }
       ],
-      "sphere": "argent"
+      "sphere": "argent",
+      "image": "img/people/arnaud-lagardere.webp",
+      "image_credit": {
+        "author": "Lagardère",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Arnaud_lagardere_-_portrait.png",
+        "file": "Arnaud lagardere - portrait.png"
+      }
     },
     {
       "id": "constance-benque",
@@ -4417,7 +4792,15 @@
           "archived": "2026-04-13"
         }
       ],
-      "sphere": "medias"
+      "sphere": "medias",
+      "image": "img/people/constance-benque.webp",
+      "image_credit": {
+        "author": "Manuelledetrois",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Constance_Benque.jpg",
+        "file": "Constance Benque.jpg"
+      }
     },
     {
       "id": "prisma-media",
@@ -4451,7 +4834,15 @@
           "archived": "2026-11-09"
         }
       ],
-      "sphere": "medias"
+      "sphere": "medias",
+      "logo": "img/orgs/prisma-media.webp",
+      "logo_credit": {
+        "license": "Public domain",
+        "license_url": "",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Prisma_Media_Logo_2015.svg",
+        "file": "Prisma Media Logo 2015.svg",
+        "author": "Prisma Media SAS"
+      }
     },
     {
       "id": "nuits-du-bien-commun",

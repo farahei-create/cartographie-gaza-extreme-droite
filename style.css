@@ -797,6 +797,28 @@ body{padding-bottom:var(--nav-total)}
 .av.is-logo img{object-fit:contain;background:#fff;padding:14%;box-sizing:border-box;border-radius:0;box-shadow:none}
 .av-ini{font-weight:750;font-size:calc(var(--s) * .36);letter-spacing:-.02em;color:var(--tc)}
 .av:not(.no-img) .av-ini{visibility:hidden}
+/* monogramme : dégradé selon la sphère (coulisses) ou le type */
+.av.no-img{
+  background:linear-gradient(145deg,#3b0a57,#7b2cbf 55%,#c2185b);
+  box-shadow:0 0 0 2px color-mix(in srgb, var(--tc) 70%, transparent), inset 0 1px 0 rgba(255,255,255,.35);
+}
+.av.no-img .av-ini{color:#fff;font-weight:700;letter-spacing:.04em;text-shadow:0 1px 1px rgba(0,0,0,.28)}
+.av.no-img[data-kind="parti"]{background:linear-gradient(145deg,#9a3412,#fb923c)}
+.av.no-img[data-kind="media"]{background:linear-gradient(145deg,#14532d,#4ade80)}
+.av.no-img[data-kind="association"]{background:linear-gradient(145deg,#4a044e,#e879f9)}
+.av.no-img[data-kind="evenement"]{background:linear-gradient(145deg,#881337,#fb7185)}
+.av.no-img[data-kind="org"]{background:linear-gradient(145deg,#1e293b,#cbd5e1)}
+.av.no-img[data-sphere="partis"]{background:linear-gradient(145deg,#9a3412,#fb923c)}
+.av.no-img[data-sphere="medias"]{background:linear-gradient(145deg,#14532d,#4ade80)}
+.av.no-img[data-sphere="argent"]{background:linear-gradient(145deg,#78350f,#fbbf24)}
+.av.no-img[data-sphere="idees"]{background:linear-gradient(145deg,#134e4a,#5eead4)}
+.av.no-img[data-sphere="edition"]{background:linear-gradient(145deg,#4a044e,#e879f9)}
+.av.no-img[data-sphere="institutions"]{background:linear-gradient(145deg,#1e293b,#cbd5e1)}
+.cred{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:.5px solid var(--hair)}
+.cred img{width:72px;height:72px;object-fit:cover;border-radius:16px;background:var(--surface-2);flex:none}
+.cred div{display:flex;flex-direction:column;gap:3px;min-width:0}
+.cred span{font-size:.82rem;color:var(--muted);overflow-wrap:anywhere}
+.credits{list-style:none;margin:0;padding:0}
 .av-xs{--s:28px} .av-sm{--s:44px} .av-md{--s:52px} .av-xl{--s:104px}
 .av-xs{box-shadow:0 0 0 1.5px color-mix(in srgb, var(--tc) 70%, transparent)}
 
@@ -861,7 +883,7 @@ body{padding-bottom:var(--nav-total)}
 .f-media{margin:0;flex:none;display:flex;flex-direction:column;align-items:center;gap:6px;max-width:140px}
 .f-media img{display:block;width:120px;height:120px;border-radius:50%;object-fit:cover;background:var(--surface-2);box-shadow:0 0 0 3px var(--c-person), var(--shadow-2)}
 .f-media.is-logo img{border-radius:24px;object-fit:contain;padding:14px;background:#fff;box-shadow:0 0 0 .5px var(--hair-strong), var(--shadow-1)}
-.f-media .credit{max-width:140px}
+.f-media .credit{max-width:240px}
 .f-media.img-failed{display:none}
 .f-id{min-width:0;flex:1}
 .f-badges{display:flex;flex-wrap:wrap;gap:6px;align-items:center}

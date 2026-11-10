@@ -759,7 +759,12 @@
     var url = n.image || n.logo, tv = TYPES[n._sub].cssVar;
     var ini = '<span class="av-ini" aria-hidden="true">' + esc(initials(n.name)) + "</span>";
     var c = "av " + (cls || "") + (n.logo && !n.image ? " is-logo" : "") + (url ? "" : " no-img");
-    return '<span class="' + c + '" style="--tc:var(' + tv + ')">' + (url ? '<img src="' + esc(url) + '" alt="" loading="lazy" decoding="async" width="96" height="96" onerror="this.parentNode.classList.add(\'no-img\');this.remove()">' : "") + ini + "</span>";
+    var extra = "";
+    if (!url) {
+      if (n.sphere) extra += ' data-sphere="' + esc(n.sphere) + '"';
+      extra += ' data-kind="' + esc(n._sub || n.type || "person") + '"';
+    }
+    return '<span class="' + c + '" style="--tc:var(' + tv + ')"' + extra + '>' + (url ? '<img src="' + esc(url) + '" alt="" loading="lazy" decoding="async" width="96" height="96" onerror="this.parentNode.classList.add(\'no-img\');this.remove()">' : "") + ini + "</span>";
   }
   function catLabel(n) { return n.category ? esc(n.category) + (n.subcategory && n.subcategory !== n.category ? ' <span class="sep">›</span> ' + esc(n.subcategory) : "") : ""; }
   function shortDate(d) { var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d || ""); return m ? parseInt(m[3], 10) + " " + MONTHS_S[parseInt(m[2], 10) - 1] : esc(d || ""); }
@@ -1144,6 +1149,39 @@
     oc.fillStyle = gb; oc.fillRect(0, 0, w, h);
     ctx.save(); ctx.globalAlpha = 0.62; ctx.drawImage(o, x0, 0); ctx.restore();
   }
+  var SPHERE_GRAD = {
+    partis: ["#9a3412", "#fb923c"], medias: ["#14532d", "#4ade80"], argent: ["#78350f", "#fbbf24"],
+    idees: ["#134e4a", "#5eead4"], edition: ["#4a044e", "#e879f9"], institutions: ["#1e293b", "#cbd5e1"]
+  };
+  var KIND_GRAD = {
+    person: ["#3b0a57", "#7b2cbf", "#c2185b"], parti: ["#9a3412", "#fb923c"], media: ["#14532d", "#4ade80"],
+    association: ["#4a044e", "#e879f9"], evenement: ["#881337", "#fb7185"], org: ["#1e293b", "#cbd5e1"]
+  };
+  function monoColors(n) {
+    if (n && n.sphere && SPHERE_GRAD[n.sphere]) return SPHERE_GRAD[n.sphere];
+    if (n && KIND_GRAD[n._sub]) return KIND_GRAD[n._sub];
+    return KIND_GRAD.person;
+  }
+  function drawMonogram(ctx, n, cx, cy, r) {
+    var cols = monoColors(n), g = ctx.createLinearGradient(cx - r, cy - r, cx + r, cy + r);
+    cols.forEach(function (col, i) { g.addColorStop(cols.length === 1 ? 0 : i / (cols.length - 1), col); });
+    ctx.save();
+    ctx.beginPath(); ctx.arc(cx, cy, r + 4, 0, Math.PI * 2); ctx.fillStyle = "rgba(255,255,255,.92)"; ctx.fill();
+    ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.fillStyle = g; ctx.fill();
+    ctx.fillStyle = "#ffffff"; ctx.font = "700 " + Math.round(r * 0.7) + "px " + CARD_FONT;
+    ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.fillText(initials(n.name), cx, cy + Math.round(r * 0.04));
+    ctx.restore();
+    ctx.textAlign = "left"; ctx.textBaseline = "alphabetic";
+  }
+  function drawPhotoCredit(ctx, n) {
+    if (!n || !n.image || !n.image_credit) return;
+    var cr = n.image_credit;
+    var t = "Photo : " + (cr.author || "auteur non précisé") + (cr.license ? " · " + cr.license : "");
+    ctx.fillStyle = "rgba(255,255,255,.62)"; ctx.font = "400 18px " + CARD_FONT;
+    ctx.textAlign = "left"; ctx.textBaseline = "alphabetic";
+    ctx.fillText(clampText(ctx, t, CARD_W - 2 * CARD_PAD, 1)[0], CARD_PAD, CARD_H - 36);
+  }
   function drawPortraitRing(ctx, im, cx, cy, r) {
     ctx.save();
     ctx.shadowColor = "rgba(0,0,0,.45)"; ctx.shadowBlur = 30; ctx.shadowOffsetY = 10;
@@ -1168,14 +1206,16 @@
     var im = readyImg(n.image);
     cardBase(ctx, null, im);
     ctx.fillStyle = "#ffffff";
-    var qh = im ? 560 : 650;
+    var qh = im ? 560 : 580;
     var r = fitQuote(ctx, s.quote, W, qh, 72, 34, "600");
     drawLines(ctx, r, CARD_PAD, 300);
     var y = 300 + qh + 40, tx = CARD_PAD, tw = W;
     if (im) { var R = 100; drawPortraitRing(ctx, im, CARD_PAD + R, y + R, R); tx = CARD_PAD + 2 * R + 40; tw = W - 2 * R - 40; }
+    else { var Rm = 68; drawMonogram(ctx, n, CARD_PAD + Rm, y + Rm, Rm); tx = CARD_PAD + 2 * Rm + 32; tw = W - 2 * Rm - 32; }
     ctx.fillStyle = "#ffffff"; ctx.font = "700 44px " + CARD_FONT; ctx.fillText(clampText(ctx, n.name, tw, 1)[0], tx, y + 44); y += 64;
     ctx.fillStyle = "rgba(255,255,255,.9)"; ctx.font = "600 32px " + CARD_FONT; ctx.fillText(dmy(s.date), tx, y + 32); y += 44;
     drawSource(ctx, s, tx, y, tw, 2);
+    drawPhotoCredit(ctx, n);
     c.__truncated = r.truncated; c.__fontSize = r.size; c.__portrait = !!im; window.__lastCardHadPortrait = !!im;
     return c;
   }
@@ -1184,8 +1224,9 @@
     var ctx = c.getContext("2d"), W = CARD_W - 2 * CARD_PAD, tr = false, y = 268;
     var im = readyImg(n.image);
     cardBase(ctx, "Avant / maintenant · écart : " + gapText(a.date, b.date), im);
-    if (im) { drawPortraitRing(ctx, im, CARD_PAD + 36, y + 30, 36); }
-    var nx = im ? CARD_PAD + 92 : CARD_PAD;
+    if (im) drawPortraitRing(ctx, im, CARD_PAD + 36, y + 30, 36);
+    else drawMonogram(ctx, n, CARD_PAD + 36, y + 30, 36);
+    var nx = CARD_PAD + 92;
     ctx.fillStyle = "#ffffff"; ctx.font = "700 44px " + CARD_FONT; ctx.fillText(clampText(ctx, n.name, W - (nx - CARD_PAD), 1)[0], nx, y + 44); y += 76;
     [a, b].forEach(function (s, k) {
       ctx.fillStyle = "rgba(255,255,255,.9)"; ctx.font = "700 32px " + CARD_FONT; ctx.fillText((k ? "Maintenant · " : "Avant · ") + dmy(s.date), CARD_PAD, y + 32); y += 50;
@@ -1195,6 +1236,7 @@
       y = drawSource(ctx, s, CARD_PAD, y, W, 1) + (k ? 0 : 24);
       if (!k) { ctx.fillStyle = "rgba(255,255,255,.2)"; ctx.fillRect(CARD_PAD, y, W, 2); y += 26; }
     });
+    drawPhotoCredit(ctx, n);
     c.__truncated = tr; c.__portrait = !!im; window.__lastCardHadPortrait = !!im;
     return c;
   }
@@ -1894,8 +1936,18 @@
   }
 
   /* ---------- Routage par ancre (#/…) ---------- */
-  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "pouvoir", "coulisses", "methodologie", "methode", "contribuer"];
-  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Sections", chronologie: "Chronologie", reseau: "Réseau des relations", pouvoir: "Échelle du pouvoir", coulisses: "Coulisses", methodologie: "Méthodologie", methode: "Méthode", contribuer: "Proposer une mise à jour" };
+  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "pouvoir", "coulisses", "methodologie", "methode", "contribuer", "credits"];
+  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Sections", chronologie: "Chronologie", reseau: "Réseau des relations", pouvoir: "Échelle du pouvoir", coulisses: "Coulisses", methodologie: "Méthodologie", methode: "Méthode", contribuer: "Proposer une mise à jour", credits: "Crédits photos" };
+  function renderCredits() {
+    var rows = DATA.nodes.filter(function (n) { return n.image || n.logo; }).slice().sort(function (a, b) { return a.name.localeCompare(b.name, "fr"); });
+    $("credits-count").textContent = rows.length + (rows.length > 1 ? " images" : " image");
+    $("credits-list").innerHTML = rows.map(function (n) {
+      var photo = !!n.image, url = photo ? n.image : n.logo, cr = (photo ? n.image_credit : n.logo_credit) || {};
+      var lic = cr.license ? (cr.license_url ? '<a href="' + esc(cr.license_url) + '" target="_blank" rel="noopener noreferrer license">' + esc(cr.license) + "</a>" : esc(cr.license)) : "—";
+      var src = cr.source_url ? '<a href="' + esc(cr.source_url) + '" target="_blank" rel="noopener noreferrer">page du fichier</a>' : "—";
+      return '<li class="cred"><img src="' + esc(url) + '" alt="" width="72" height="72"><div><a href="' + ficheHref(n) + '"><strong>' + esc(n.name) + "</strong></a><span>" + (photo ? "Photo" : "Logo") + " · " + esc(cr.author || "auteur non précisé") + "</span><span>" + lic + " · " + src + "</span></div></li>";
+    }).join("");
+  }
   var lastView = null;
   function ensureGraph(focusId) {
     if (!network) buildGraph(); else { sizeGraph(); network.redraw(); }
@@ -1916,7 +1968,7 @@
     if (v === "personne" || v === "organisation") v = "fiche";
     if (VIEWS.indexOf(v) < 0) v = "accueil";
     VIEWS.forEach(function (k) { $("view-" + k).hidden = k !== v; });
-    var tab = v === "fiche" ? "sections" : (v === "methode" || v === "contribuer") ? "methodologie" : v;
+    var tab = v === "fiche" ? "sections" : (v === "methode" || v === "contribuer" || v === "credits") ? "methodologie" : v;
     document.querySelectorAll("#tabnav a").forEach(function (a) {
       if (a.getAttribute("data-tab") === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
@@ -1937,6 +1989,7 @@
     if (v !== "fiche") document.title = v === "accueil" ? TITLES.accueil : TITLES[v] + " — Onrecord";
     if (v === "sections") { curSec = ["tout", "gaza", "france", "commun"].indexOf(parts[1]) >= 0 ? parts[1] : "tout"; renderSections(); }
     if (v === "methode") renderMethode();
+    if (v === "credits") renderCredits();
     if (v === "accueil") { renderResume(); renderQotd(); }
     if (v === "fiche") renderFiche(decodeURIComponent(parts[1] || ""), anchor);
     var key = v + "/" + ((v === "fiche" || v === "pouvoir") ? (parts[1] || "") : "");

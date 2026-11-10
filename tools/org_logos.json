@@ -169,5 +169,25 @@
    "file": "Fayard logo.jpg",
    "author": "Éditions Fayard"
   }
+ },
+ "m6": {
+  "logo": "img/orgs/m6.webp",
+  "logo_credit": {
+   "license": "Public domain",
+   "license_url": "",
+   "source_url": "https://commons.wikimedia.org/wiki/File:M6Groupe2023.svg",
+   "file": "M6Groupe2023.svg",
+   "author": "Groupe M6"
+  }
+ },
+ "prisma-media": {
+  "logo": "img/orgs/prisma-media.webp",
+  "logo_credit": {
+   "license": "Public domain",
+   "license_url": "",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Prisma_Media_Logo_2015.svg",
+   "file": "Prisma Media Logo 2015.svg",
+   "author": "Prisma Media SAS"
+  }
  }
 }

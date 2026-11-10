@@ -1001,6 +1001,12 @@ _parcours("pierre-edouard-sterin", [
 
 import v24_content
 v24_content.apply(N, E, _b, _step, _node, L, _st)
+import v26_content
+v26_content.apply(N, _b)
+# v24 ajoute des fiches après le premier passage photos : on réapplique.
+for n in N:
+    if n["id"] in PIMG: n.update(PIMG[n["id"]])
+    if n["id"] in OLOG: n.update(OLOG[n["id"]])
 
 def _nature(e):
     if e.get("nature") in ("ascension","opposition","autre","coulisses"):
@@ -1052,7 +1058,7 @@ for _e in E: _arch(_e)
 ids={n["id"] for n in N}
 for e in E: assert e["source"] in ids and e["target"] in ids, e
 data={"meta":{"generated":datetime.date.today().isoformat(),
- "methodology":"Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le "+datetime.date.today().isoformat()+" (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : fichiers Wikimedia Commons sous licence libre, avec auteur, licence et lien ; logos reproduits à seule fin d'identification. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
+ "methodology":"Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le "+datetime.date.today().isoformat()+" (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
  "counts":{}, "category_order":CATEGORY_ORDER, "sections":{"gaza":"Gaza","france":F}},"nodes":N,"edges":E}
 data["meta"]["counts"]={"persons":sum(n["type"]=="person" for n in N),"orgs":sum(n["type"]=="org" for n in N),"edges":len(E),"statements":sum(len(n["statements"]) for n in N),
  "photos":sum(1 for n in N if n.get("image")),"logos":sum(1 for n in N if n.get("logo")),

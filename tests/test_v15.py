@@ -19,7 +19,7 @@ with sync_playwright() as p:
     check(c and c["w"]==1080 and c["h"]==1350,"taille carte photo"); check(c and c["portrait"] is True,"portrait dessiné")
     check(pg.evaluate("window.__lastCardHadPortrait") is True,"hook portrait")
     open("/workspace/v15-card-portrait.png","wb").write(base64.b64decode(c["d"].split(",")[1]))
-    c0=share("jean-luc-melenchon")
+    c0=share("jules-torres")
     check(c0 and c0["w"]==1080 and c0["h"]==1350,"carte sans photo"); check(c0 and c0["portrait"] is False,"pas de portrait sans photo")
     check(c["size"]>c0["size"],"carte photo plus lourde")
     pg.goto(BASE+"#/personne/marine-le-pen"); pg.wait_for_selector(".fiche"); pg.wait_for_timeout(900)
