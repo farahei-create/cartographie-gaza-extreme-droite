@@ -90,6 +90,7 @@ async def mobile(b, w, h, scheme, errs):
         r=await pg.evaluate(INSIDE_JS)
         ok(f"{T} {label}: no horizontal overflow / overlays inside", r["sw"]<=w and r["n"]==0, r)
     await pg.goto(URL, wait_until="networkidle")
+    await pg.evaluate("document.fonts.ready")
     ok(f"{T} landing is Accueil", await pg.evaluate("window.__route")=="accueil")
     ok(f"{T} tab bar visible at bottom", await pg.evaluate("(()=>{const r=document.querySelector('.tabnav').getBoundingClientRect();return Math.abs(r.bottom-innerHeight)<1&&r.height>=56})()"))
     tabs=await pg.evaluate("[...document.querySelectorAll('#tabnav a')].map(a=>[a.textContent.trim(),a.getBoundingClientRect().height,a.getBoundingClientRect().width])")
@@ -125,6 +126,13 @@ async def mobile(b, w, h, scheme, errs):
     hrefs=await pg.evaluate("[...document.querySelectorAll('.hero-pillar')].map(a=>a.getAttribute('href'))")
     ok(f"{T} three hero pillars", hrefs==["#/sections/gaza","#/sections/france","#/coulisses"], hrefs)
     ok(f"{T} hero canvas", await pg.locator("#hero-net").count()==1)
+    net=await pg.evaluate("""(()=>{const c=document.getElementById('hero-net');const s=getComputedStyle(c);const x=c.getContext('2d');
+      const x0=Math.floor(c.width*0.12), y0=Math.floor(c.height*0.04), rw=Math.floor(c.width*0.76), rh=Math.max(2, Math.floor(c.height*0.34));
+      let n=0; if(c.width&&c.height){const d=x.getImageData(x0,y0,rw,rh).data; for(let i=3;i<d.length;i+=32) if(d[i]>28) n++;}
+      const h=document.getElementById('home-title'); const hs=getComputedStyle(h);
+      return {n, op:+s.opacity, disp:s.display, dpr:c.clientWidth?+(c.width/c.clientWidth).toFixed(2):0, ff:hs.fontFamily, tf:hs.textTransform, fw:hs.fontWeight}})()""")
+    ok(f"{T} hero net visible behind the title", net["n"]>12 and net["op"]>0.8 and net["disp"]!="none" and net["dpr"]<=2.05, net)
+    ok(f"{T} Anton uppercase wordmark", "Anton" in net["ff"] and net["tf"]=="uppercase" and int(net["fw"])>=900, net)
     ok(f"{T} brand text Onrecord", (await pg.locator(".appbar .brand span").inner_text()).strip()=="Onrecord")
     await check("home")
     if shot:
@@ -368,12 +376,22 @@ async def hero_center(b, errs):
             T=f"[hero {w} {scheme}]"
             ctx=await b.new_context(viewport={"width":w,"height":844}, device_scale_factor=2, is_mobile=True, has_touch=True, color_scheme=scheme, service_workers="block")
             pg=await ctx.new_page(); hook(pg, errs, T)
-            await pg.goto(URL, wait_until="networkidle"); await pg.wait_for_timeout(300)
+            await pg.goto(URL, wait_until="networkidle")
+            await pg.evaluate("document.fonts.ready")
+            await pg.wait_for_timeout(800)
+            await pg.evaluate("""()=>{const n=document.getElementById('hero-net'); if(n) n.style.visibility='hidden';
+              document.querySelectorAll('.hero-marquee,.hero-glow').forEach(e=>{e.style.visibility='hidden'});
+              const s=document.createElement('style');
+              s.textContent='.tagline::before,.tagline::after,.hero h1.onrecord::before{display:none !important}';
+              document.head.appendChild(s);}""")
             async def ink(sel):
                 r=await pg.evaluate("(s)=>{const e=document.querySelector(s),g=document.createRange();g.selectNodeContents(e);const b=g.getBoundingClientRect();return [b.left,b.top,b.right,b.bottom]}", sel)
                 png=await pg.screenshot(clip={"x":0,"y":r[1],"width":w,"height":max(1, r[3]-r[1])})
                 im=Image.open(io.BytesIO(png)).convert("RGB"); W,H=im.size; px=im.load()
-                cols=[x for x in range(W) if any(sum(px[x,y])>600 for y in range(H))]
+                def lit(rgb):
+                    return sum(rgb)>500
+                cols=[x for x in range(W) if sum(1 for y in range(H) if lit(px[x,y]))>=max(3, H*0.1)]
+                if not cols: cols=[x for x in range(W) if any(sum(px[x,y])>420 for y in range(H))]
                 return cols[0]/2, (cols[-1]+1)/2, r
             tl,tr,trect=await ink("#home-title"); gl,gr,grect=await ink(".tagline")
             tc,gc=(tl+tr)/2,(gl+gr)/2

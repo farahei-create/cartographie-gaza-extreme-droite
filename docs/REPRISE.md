@@ -203,6 +203,7 @@ Le numéro vivant est celui de `sw.js`. Il n'y a pas de tag git `v11`, `v17`, `v
 | v31 | Mise à jour du 11/11 | Louise Montangon et l'UNI ; accueil centré. Module `v31_content.py` |
 | v32 | Mise à jour du 11/11 | Haut de l'accueil : le rôle du site, trois accès, réseau en fond |
 | v33 | Mise à jour du 11/11 | Accueil : le mot Onrecord reprend le titre, promesse en deux lignes |
+| v34 | Mise à jour du 11/11 | Accueil : enseigne néon (Anton), réseau visible derrière le titre |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 

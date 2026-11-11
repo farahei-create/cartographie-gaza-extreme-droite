@@ -786,10 +786,10 @@
     var ctx = canvas.getContext("2d", { alpha: true });
     if (!ctx) return;
     var reduce = MQ_RM.matches;
-    var N = 26;
+    var N = 42;
     var nodes = [], links = [], seen = {};
     var px = [], py = [], pz = [], ps = [], order = [];
-    var cssW = 0, cssH = 0, ang = 0.5;
+    var cssW = 0, cssH = 0, ang = 0.62;
     var ptr = { x: 0, y: 0, on: false, hot: 0 };
     var running = false, raf = 0, onScreen = true, pageOn = true, lastT = 0;
     var pointerActive = false;
@@ -811,16 +811,18 @@
     }
     for (i = 0; i < N; i++) {
       link(i, (i + 1) % N);
-      link(i, (i + 5) % N);
-      link(i, (i + 11) % N);
+      link(i, (i + 3) % N);
+      link(i, (i + 8) % N);
+      link(i, (i + 15) % N);
     }
-    var WHITE_A = [], PINK_A = [], NODE_A = [];
-    for (i = 0; i <= 20; i++) {
-      var a = (i / 20).toFixed(2);
-      WHITE_A.push("rgba(255,255,255," + a + ")");
-      PINK_A.push("rgba(255,214,236," + a + ")");
-      NODE_A.push("rgba(255,255,255," + a + ")");
-    }
+    var PAL = [[255, 45, 210], [64, 236, 255], [255, 214, 70], [188, 92, 255], [255, 90, 160]];
+    var INK = PAL.map(function (c) {
+      var arr = [];
+      for (var k = 0; k <= 20; k++) arr.push("rgba(" + c[0] + "," + c[1] + "," + c[2] + "," + (k / 20).toFixed(2) + ")");
+      return arr;
+    });
+    var CORE = [];
+    for (i = 0; i <= 20; i++) CORE.push("rgba(255,255,255," + (i / 20).toFixed(2) + ")");
     function aix(v) {
       var n = (v * 20 + 0.5) | 0;
       return n < 0 ? 0 : n > 20 ? 20 : n;
@@ -841,16 +843,17 @@
     }
     function project(now) {
       var sc = window.scrollY || 0;
-      var depth = sc * 0.0012;
-      if (depth > 0.9) depth = 0.9;
-      ang = reduce ? 0.5 : now * 0.00018;
+      var depth = sc * 0.0016;
+      if (depth > 1.05) depth = 1.05;
+      ang = reduce ? 0.62 : now * 0.00028;
       var cosY = Math.cos(ang), sinY = Math.sin(ang);
-      var ax = 0.42 + Math.min(0.35, sc * 0.00045);
+      var wob = reduce ? 0 : Math.sin(now * 0.00012) * 0.34;
+      var ax = 0.62 + wob + Math.min(0.4, sc * 0.00055);
       var cosX = Math.cos(ax), sinX = Math.sin(ax);
-      var zCam = 2.55 + depth;
-      var scale = Math.min(cssW, cssH) * 0.34;
+      var zCam = 2.25 + depth;
+      var scale = Math.min(cssW, cssH) * 0.52;
       var ox = cssW * 0.5;
-      var oy = cssH * 0.42 + Math.min(36, sc * 0.08);
+      var oy = cssH * 0.34 + Math.min(48, sc * 0.1);
       for (var n = 0; n < N; n++) {
         var node = nodes[n];
         var x = node.bx + node.dx, y = node.by + node.dy, z = node.bz + node.dz;
@@ -858,7 +861,7 @@
         var z1 = x * sinY + z * cosY;
         var y2 = y * cosX - z1 * sinX;
         var z2 = y * sinX + z1 * cosX;
-        var p = 1.65 / (zCam - z2);
+        var p = 2.15 / (zCam - z2);
         px[n] = ox + x1 * p * scale;
         py[n] = oy + y2 * p * scale;
         pz[n] = z2;
@@ -871,13 +874,13 @@
       else if (ptr.hot > 0.02) ptr.hot *= Math.pow(0.88, k);
       else ptr.hot = 0;
       if (ptr.hot > 0.02) {
-        var R = 132;
+        var R = 170;
         for (var n = 0; n < N; n++) {
           var dx = px[n] - ptr.x, dy = py[n] - ptr.y;
           var d2 = dx * dx + dy * dy;
           if (d2 < R * R && d2 > 9) {
             var d = Math.sqrt(d2);
-            var f = (1 - d / R) * 0.05 * k * ptr.hot;
+            var f = (1 - d / R) * 0.09 * k * ptr.hot;
             nodes[n].dx += (dx / d) * f;
             nodes[n].dy += (dy / d) * f * 0.85;
           }
@@ -901,28 +904,49 @@
           var mx = (px[a] + px[b]) * 0.5, my = (py[a] + py[b]) * 0.5;
           var ddx = mx - ptr.x, ddy = my - ptr.y;
           var dd = Math.sqrt(ddx * ddx + ddy * ddy);
-          if (dd < 170) near = (1 - dd / 170) * ptr.hot;
+          if (dd < 190) near = (1 - dd / 190) * ptr.hot;
         }
         var z = (pz[a] + pz[b]) * 0.5;
-        var alpha = 0.18 + (z + 1) * 0.1 + near * 0.7;
+        var alpha = 0.42 + (z + 1) * 0.26 + near * 0.4;
+        if (alpha > 1) alpha = 1;
+        var col = INK[(a + b) % 5];
         ctx.beginPath();
         ctx.moveTo(px[a], py[a]);
         ctx.lineTo(px[b], py[b]);
-        ctx.strokeStyle = near > 0.28 ? PINK_A[aix(alpha)] : WHITE_A[aix(alpha)];
-        ctx.lineWidth = 1 + near * 1.15;
+        ctx.strokeStyle = col[aix(alpha * 0.38)];
+        ctx.lineWidth = 4.2 + near * 2.4 + (z + 1) * 0.6;
+        ctx.stroke();
+        ctx.strokeStyle = col[aix(alpha)];
+        ctx.lineWidth = 1.35 + near * 0.9;
         ctx.stroke();
       }
       order.sort(function (ia, ib) { return pz[ia] - pz[ib]; });
       for (n = 0; n < N; n++) {
         i = order[n];
-        var rad = (1.7 + ps[i] * 1.5) * (0.85 + (pz[i] + 1) * 0.16);
+        var rad = (1.6 + ps[i] * 3.4) * (0.42 + (pz[i] + 1) * 0.42);
+        var coln = INK[i % 5];
+        var na = 0.62 + (pz[i] + 1) * 0.2;
+        if (na > 1) na = 1;
         ctx.beginPath();
-        ctx.arc(px[i], py[i], rad * 2.5, 0, 6.2832);
-        ctx.fillStyle = NODE_A[aix(0.05 + (pz[i] + 1) * 0.035)];
+        ctx.arc(px[i], py[i], rad * 3.1, 0, 6.2832);
+        ctx.fillStyle = coln[aix(na * 0.34)];
         ctx.fill();
         ctx.beginPath();
         ctx.arc(px[i], py[i], rad, 0, 6.2832);
-        ctx.fillStyle = NODE_A[aix(0.4 + (pz[i] + 1) * 0.14)];
+        ctx.fillStyle = coln[aix(na)];
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(px[i], py[i], Math.max(1.1, rad * 0.36), 0, 6.2832);
+        ctx.fillStyle = CORE[aix(0.7 + (pz[i] + 1) * 0.12)];
+        ctx.fill();
+      }
+      if (ptr.hot > 0.04) {
+        var g = ctx.createRadialGradient(ptr.x, ptr.y, 0, ptr.x, ptr.y, 150);
+        g.addColorStop(0, "rgba(255,226,150," + (0.22 * ptr.hot).toFixed(3) + ")");
+        g.addColorStop(1, "rgba(255,40,180,0)");
+        ctx.fillStyle = g;
+        ctx.beginPath();
+        ctx.arc(ptr.x, ptr.y, 150, 0, 6.2832);
         ctx.fill();
       }
     }
@@ -1014,6 +1038,7 @@
         if (ry > 7) ry = 7; else if (ry < -7) ry = -7;
         if (rx > 7) rx = 7; else if (rx < -7) rx = -7;
         if (Math.abs(ry) < 0.6 && Math.abs(rx) < 0.6) return;
+        tiltMark(ry / 7, rx / 7);
         for (var c = 0; c < cards.length; c++) {
           if (!cards[c].classList.contains("is-pressed")) setTilt(cards[c], rx, ry, false);
         }

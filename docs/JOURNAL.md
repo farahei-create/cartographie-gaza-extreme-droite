@@ -4,6 +4,10 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-11 — v34
+
+Tu ne touches qu'au haut de l'accueil. ONRECORD devient une enseigne : Anton (OFL, `fonts/anton-latin.woff2`), très grand, en capitales, dégradé magenta / violet / rose / or, halo rose et cyan, profondeur, bref scintillement au chargement, reflet qui traverse les lettres, légère inclinaison au pointeur ou à l'orientation. « Ils l'ont dit. On l'a archivé. » est plus grand, en or, dans un cadre d'ampoules. La ligne d'explication reste petite. Le réseau derrière le texte redevient visible (le masque ne creuse plus le centre), nœuds et liens néon, rotation lente, réaction au doigt et au défilement. Les trois cartes gardent leur inclinaison et gagnent un liseré néon. Le reste de la page ne change pas. Cache `onrecord-v34`.
+
 ## 2026-11-11 — v33
 
 Tu raccourcis le haut de l'accueil. Le mot Onrecord redevient le titre, grand et centré, avec une ombre légère qui suit un peu le pointeur. Dessous : « Ils l'ont dit. On l'a archivé. » Puis une seule ligne, plus petite : « Déclarations publiques sur Gaza et l'extrême droite en France, et les liens entre leurs auteurs. » Les trois cartes restent, avec des libellés courts : Gaza, Extrême droite, Les liens. Le réseau, l'inclinaison des cartes et la recherche ne changent pas. Le reste de la page non plus. Cache `onrecord-v33`.

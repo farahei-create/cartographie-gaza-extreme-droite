@@ -1,6 +1,15 @@
 /* ==========================================================================
-   Cartographie — style inspiré d'iOS / visionOS (aucune police ni CDN externe)
+   Cartographie — style inspiré d'iOS / visionOS.
+   Pas de CDN : Anton (SIL OFL 1.1) est dans fonts/anton-latin.woff2.
    ========================================================================== */
+@font-face{
+  font-family:"Anton";
+  font-style:normal;
+  font-weight:900;
+  font-display:swap;
+  src:url("fonts/anton-latin.woff2") format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
 :root{
   color-scheme: light dark;
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -711,67 +720,126 @@ body{padding-bottom:var(--nav-total)}
 @media (pointer:coarse){ .btn-pill.small{min-height:44px} }
 .more{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0}
 
-/* ---------- accueil : hero ---------- */
+/* ---------- accueil : hero (enseigne) ---------- */
 .hero{
-  color:#fff;padding:22px 0 56px;position:relative;overflow:hidden;isolation:isolate;
+  color:#fff;padding:18px 0 48px;position:relative;overflow:hidden;isolation:isolate;
   background:
-    radial-gradient(120% 90% at 100% 0%, rgba(194,24,91,.45), transparent 55%),
-    radial-gradient(90% 80% at 0% 100%, rgba(157,78,221,.45), transparent 60%),
-    linear-gradient(165deg,var(--hero-a),var(--hero-b));
+    radial-gradient(90% 70% at 100% 0%, rgba(255,40,160,.42), transparent 52%),
+    radial-gradient(80% 64% at 0% 100%, rgba(70,40,255,.48), transparent 58%),
+    radial-gradient(46% 36% at 50% 18%, rgba(255,210,90,.16), transparent 70%),
+    linear-gradient(165deg,#120214 0%, var(--hero-a) 42%, var(--hero-b) 100%);
 }
 .hero::before{
-  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:radial-gradient(80% 46% at 50% 0%, rgba(255,255,255,.16), transparent 62%);
+  content:"";position:absolute;inset:-12% -18%;z-index:1;pointer-events:none;
+  background:radial-gradient(30% 26% at 50% 42%, rgba(255,244,214,.2), rgba(255,60,180,.05) 46%, transparent 70%);
+  animation:spot-sweep 9s ease-in-out infinite alternate;
 }
 .hero-net{
-  position:absolute;inset:0;z-index:0;width:100%;height:100%;display:block;pointer-events:none;
-  -webkit-mask-image:radial-gradient(ellipse 72% 46% at 50% 30%, transparent 0%, rgba(0,0,0,.2) 40%, rgba(0,0,0,.82) 70%, #000 100%);
-  mask-image:radial-gradient(ellipse 72% 46% at 50% 30%, transparent 0%, rgba(0,0,0,.2) 40%, rgba(0,0,0,.82) 70%, #000 100%);
+  position:absolute;inset:0;z-index:0;width:100%;height:100%;display:block;pointer-events:none;opacity:1;
+  -webkit-mask-image:linear-gradient(to bottom, transparent 0, #000 5%, #000 96%, transparent 100%);
+  mask-image:linear-gradient(to bottom, transparent 0, #000 5%, #000 96%, transparent 100%);
 }
 .hero-glow{
   position:absolute;inset:0;z-index:1;pointer-events:none;
   background:
-    radial-gradient(38% 28% at 16% 16%, rgba(255,186,214,.32), transparent 70%),
-    radial-gradient(34% 36% at 88% 82%, rgba(176,120,255,.34), transparent 68%),
-    radial-gradient(58% 48% at 50% 42%, rgba(18,4,36,.22), transparent 72%);
+    radial-gradient(32% 26% at 12% 18%, rgba(255,60,190,.22), transparent 70%),
+    radial-gradient(30% 28% at 90% 78%, rgba(60,220,255,.18), transparent 68%),
+    radial-gradient(28% 22% at 70% 12%, rgba(255,210,80,.12), transparent 70%);
+}
+.hero-marquee{
+  position:absolute;inset:6px 6px 14px;z-index:1;pointer-events:none;border-radius:16px;padding:8px;
+  background:
+    radial-gradient(circle, #fff 0 1.2px, #ffe08a 1.5px, rgba(255,160,40,.95) 2.2px, transparent 2.8px) 0 0 / 18px 18px,
+    radial-gradient(circle, rgba(90,50,16,.7) 0 1.15px, transparent 2.1px) 9px 9px / 18px 18px;
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite:exclude;
+  animation:bulb-chase 1.8s linear infinite;
 }
 .hero .wrap{position:relative;z-index:2}
 .hero-copy{position:relative;text-align:center}
-.hero-copy::before{
-  content:"";position:absolute;z-index:-1;pointer-events:none;
-  left:50%;top:-12px;bottom:-8px;width:min(46rem, 100%);transform:translateX(-50%);
-  background:radial-gradient(ellipse at 50% 38%, rgba(22,4,42,.55), rgba(22,4,42,.18) 55%, transparent 76%);
-}
 .hero h1.onrecord{
   --mx:0;--my:0;
-  margin:0 auto;max-width:100%;color:#fff;
-  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Rounded",system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  font-weight:800;font-size:clamp(4.85rem, 20.4vw, 11rem);line-height:.9;letter-spacing:-.055em;
+  --ex:calc(7px + var(--mx) * 5px);
+  --ey:calc(8px + var(--my) * 4px);
+  position:relative;isolation:isolate;
+  margin:0 auto;max-width:100%;
+  font-family:"Anton", Impact, "Arial Narrow", sans-serif;
+  font-weight:900;font-synthesis:none;
+  font-size:clamp(4.5rem, calc((100vw - 56px) / 3.81), 11rem);
+  line-height:.92;letter-spacing:0;text-transform:uppercase;
   white-space:nowrap;text-wrap:nowrap;
-  background:linear-gradient(185deg,#ffffff 8%,#fff 36%,#f6d4e6 78%,#e4c2ff 100%);
-  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-  text-shadow:none;
-  filter:
-    drop-shadow(calc(var(--mx) * 4px) calc(1px + var(--my) * 2px) 0 rgba(255,255,255,.28))
-    drop-shadow(calc(var(--mx) * -1.5px) calc(3px + var(--my) * 1px) 0 rgba(92,28,148,.42))
-    drop-shadow(calc(var(--mx) * -3px) calc(12px + var(--my) * 5px) 16px rgba(8,0,22,.46));
-  /* l'espacement négatif compte après la dernière lettre : le padding droit remet le centre visuel au milieu */
-  display:block;width:fit-content;padding:0 .055em .07em 0;
-  transition:filter .18s var(--ease);
+  color:transparent;-webkit-text-fill-color:transparent;
+  display:block;width:fit-content;padding:0;
+  transform:perspective(640px) rotateX(calc(var(--my) * -6deg)) rotateY(calc(var(--mx) * 8deg));
+  transform-origin:center center;
+  animation:neon-flicker .7s linear 1 both;
+}
+/* Le dégradé est sur ::after : un ::before en z-index négatif se peignait PAR-DESSUS background-clip:text. */
+.hero h1.onrecord::before,
+.hero h1.onrecord::after{
+  content:attr(data-sign);
+  position:absolute;left:0;top:0;width:100%;
+  pointer-events:none;white-space:nowrap;
+}
+.hero h1.onrecord::before{
+  z-index:0;color:#ff4ad8;-webkit-text-fill-color:#ff4ad8;
+  text-shadow:
+    0 0 6px #ff4ad8,
+    0 0 16px rgba(255,43,214,.95),
+    0 0 34px rgba(48,240,255,.85),
+    0 0 56px rgba(255,43,214,.4),
+    calc(var(--ex) * .22) calc(var(--ey) * .22) 0 #e4239a,
+    calc(var(--ex) * .44) calc(var(--ey) * .44) 0 #c01480,
+    calc(var(--ex) * .66) calc(var(--ey) * .66) 0 #961066,
+    calc(var(--ex) * .86) calc(var(--ey) * .86) 0 #6c0c4a,
+    var(--ex) var(--ey) 0 #42082e,
+    calc(var(--ex) * 1.12) calc(var(--ey) * 1.22) 16px rgba(0,0,0,.5);
+}
+.hero h1.onrecord::after{
+  z-index:1;
+  background-image:linear-gradient(105deg,#ff4ec8 0%,#d06bff 16%,#7ef6ff 32%,#ffe38a 48%,#ff7ad9 64%,#c77bff 80%,#fff6c8 92%,#ff4ec8 100%);
+  background-size:220% 100%;background-position:30% 50%;
+  -webkit-background-clip:text;background-clip:text;
+  color:transparent;-webkit-text-fill-color:transparent;
+  animation:sign-shimmer 6.5s linear .7s infinite;
 }
 .tagline{
-  margin:4px auto 0;width:fit-content;max-width:100%;padding-right:.012em;text-align:center;
-  font-size:clamp(1.05rem, 4.15vw, 1.42rem);font-weight:650;letter-spacing:-.015em;color:rgba(255,255,255,.96);
-  text-shadow:0 1px 0 rgba(255,255,255,.14), 0 8px 18px rgba(16,0,36,.32);
+  position:relative;
+  margin:10px auto 0;width:fit-content;max-width:calc(100% - 8px);
+  /* Anton laisse plus d'approche à droite : le padding gauche remet l'encre au centre */
+  padding:10px 16px 11px calc(16px + .24em);text-align:center;
+  font-family:"Anton", Impact, "Arial Narrow", sans-serif;
+  font-weight:900;font-synthesis:none;
+  font-size:clamp(1.28rem, 6.35vw, 2.05rem);line-height:1.05;letter-spacing:.012em;
+  color:#fff4c2;white-space:nowrap;
+  text-shadow:
+    0 0 6px rgba(255,244,194,.95),
+    0 0 16px rgba(255,196,60,.9),
+    0 0 28px rgba(255,70,170,.45);
+  border-radius:12px;
+  background:linear-gradient(180deg, rgba(255,220,120,.1), rgba(28,4,48,.22));
+  box-shadow:
+    0 0 0 1px rgba(255,214,120,.7),
+    0 0 14px rgba(255,180,40,.4),
+    inset 0 0 14px rgba(255,200,80,.14);
 }
+.tagline::before,.tagline::after{
+  content:"";position:absolute;left:12px;right:12px;height:8px;pointer-events:none;
+  background:radial-gradient(circle, #fff 0 1.35px, #ffe08a 1.7px, #e09020 2.45px, transparent 3.1px) 0 50% / 14px 8px repeat-x;
+  animation:tag-bulbs 1.6s linear infinite;
+}
+.tagline::before{top:-4px}
+.tagline::after{bottom:-4px;animation-direction:reverse}
 .hero-purpose{
-  margin:7px auto 0;max-width:40rem;text-align:center;
-  font-size:clamp(.8rem, 2.05vw, .98rem);font-weight:500;line-height:1.32;letter-spacing:-.011em;
-  color:rgba(255,255,255,.88);text-wrap:balance;
-  text-shadow:0 1px 2px rgba(16,0,36,.4);
+  margin:8px auto 0;max-width:36rem;text-align:center;
+  font-size:clamp(.7rem, 2.7vw, .82rem);font-weight:450;line-height:1.35;letter-spacing:.004em;
+  color:rgba(255,255,255,.74);text-wrap:balance;
+  text-shadow:0 1px 2px rgba(0,0,0,.88), 0 0 10px rgba(8,0,20,.75);
 }
 @media (min-width:860px){
-  .hero-purpose{white-space:nowrap;max-width:none;font-size:.9rem}
+  .hero-purpose{white-space:nowrap;max-width:none;font-size:.8rem}
 }
 #view-accueil .hero .wrap{text-align:center}
 .hero-pillars{
@@ -781,13 +849,19 @@ body{padding-bottom:var(--nav-total)}
 .hero-pillar{
   position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
   min-height:112px;padding:14px 8px 12px;border-radius:20px;text-align:center;text-decoration:none;color:#fff;
-  background:linear-gradient(165deg, rgba(255,255,255,.2), rgba(18,4,36,.5));
+  background:linear-gradient(165deg, rgba(255,255,255,.16), rgba(18,4,36,.55));
   -webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);
-  border:1px solid rgba(255,255,255,.38);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.45), 0 14px 28px rgba(12,0,28,.32), 0 2px 6px rgba(12,0,28,.22);
+  border:1px solid rgba(255,80,210,.8);
+  box-shadow:
+    inset 0 0 16px rgba(255,50,190,.2),
+    inset 0 1px 0 rgba(255,255,255,.4),
+    0 0 0 1px rgba(80,240,255,.32),
+    0 0 14px rgba(255,40,190,.6),
+    0 0 28px rgba(70,210,255,.22),
+    0 12px 24px rgba(12,0,28,.36);
   transform-style:preserve-3d;-webkit-tap-highlight-color:transparent;touch-action:manipulation;overflow:hidden;
 }
-.hero-pillar:hover{text-decoration:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.55), 0 18px 36px rgba(12,0,28,.4)}
+.hero-pillar:hover{text-decoration:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.5), 0 0 0 1px rgba(140,255,255,.5), 0 0 18px rgba(255,60,210,.8), 0 0 36px rgba(80,220,255,.35), 0 16px 30px rgba(12,0,28,.42)}
 .hero-pillar:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .hero-pillar .i{width:26px;height:26px;stroke:#fff}
 .hero-pillar strong{font-size:.84rem;font-weight:750;letter-spacing:-.02em;line-height:1.2;text-shadow:0 1px 1px rgba(0,0,0,.35)}
@@ -801,8 +875,9 @@ body{padding-bottom:var(--nav-total)}
 .home-search .search-box{border-radius:16px;transition:transform .16s var(--spring)}
 .home-search .search-box.is-pressed{transform:translateY(2px) scale(.985)}
 @media (max-width:520px){
-  .hero{padding:12px 0 44px}
-  .hero-pillars{gap:8px;margin:14px auto 12px}
+  .hero{padding:8px 0 36px}
+  .hero-pillars{gap:8px;margin:12px auto 10px}
+  .tagline{margin-top:8px;padding:8px 12px 9px calc(12px + .24em)}
   .hero-pillar{min-height:96px;padding:10px 5px 8px;gap:3px;border-radius:16px}
   .hero-pillar .i{width:22px;height:22px}
   .hero-pillar strong{font-size:.76rem}
@@ -810,13 +885,26 @@ body{padding-bottom:var(--nav-total)}
 }
 @media (forced-colors:active){
   .hero{background:Canvas;color:CanvasText}
-  .hero-net,.hero-glow,.hero::before,.hero-copy::before{display:none}
-  .hero h1.onrecord,.hero .tagline,.hero-purpose{color:CanvasText;-webkit-text-fill-color:currentColor;background:none;filter:none;text-shadow:none}
+  .hero-net,.hero-glow,.hero-marquee,.hero::before,.tagline::before,.tagline::after,.hero h1.onrecord::before,.hero h1.onrecord::after{display:none}
+  .hero h1.onrecord,.hero .tagline,.hero-purpose{color:CanvasText;-webkit-text-fill-color:currentColor;background:none;filter:none;text-shadow:none;animation:none}
   .hero-pillar{background:Canvas;color:LinkText;border:1px solid CanvasText;box-shadow:none}
 }
 @keyframes hero-rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @keyframes pillar-in{from{opacity:0;transform:translateY(18px) scale(.96)}to{opacity:1;transform:none}}
 @keyframes hero-ripple{0%{transform:scale(0);opacity:.55}100%{transform:scale(16);opacity:0}}
+@keyframes neon-flicker{
+  0%,100%{opacity:1}
+  14%{opacity:.9}
+  26%{opacity:1}
+  42%{opacity:.93}
+  58%{opacity:1}
+  74%{opacity:.95}
+  88%,100%{opacity:1}
+}
+@keyframes sign-shimmer{from{background-position:0% 50%}to{background-position:100% 50%}}
+@keyframes bulb-chase{to{background-position:18px 0, 27px 9px}}
+@keyframes tag-bulbs{to{background-position:14px 50%}}
+@keyframes spot-sweep{from{transform:translate3d(-14%,-8%,0)}to{transform:translate3d(16%,10%,0)}}
 @media (prefers-reduced-motion:no-preference){
   .hero-pillar{animation:pillar-in .62s var(--spring) both}
   .hero-pillar:nth-child(1){animation-delay:.16s}
@@ -825,7 +913,9 @@ body{padding-bottom:var(--nav-total)}
   .hero-purpose{animation:hero-rise .55s var(--ease) both}
 }
 @media (prefers-reduced-motion:reduce){
-  .hero h1.onrecord,.hero-pillar,.hero-purpose{animation:none;transition:none}
+  .hero h1.onrecord,.hero h1.onrecord::before,.hero h1.onrecord::after,.hero-pillar,.hero-purpose,.hero-marquee,.hero-glow,.hero::before,.tagline::before,.tagline::after{
+    animation:none !important;transition:none;
+  }
 }
 .home-search{max-width:640px;margin-left:auto;margin-right:auto;text-align:left}
 .home-search input{height:52px;font-size:1rem;border-radius:16px;background:#fff;color:#1e1527;box-shadow:0 10px 30px rgba(20,0,40,.3)}
