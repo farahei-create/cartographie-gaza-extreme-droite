@@ -49,23 +49,30 @@
           <h1 class="onrecord" id="onrecord-title">Onrecord</h1>
           <p class="tagline">Leurs mots, datés et sourcés.</p>
         </header>
-        <p class="eyebrow">Archive citoyenne · sources vérifiables</p>
-        <h2 class="hero-title" id="home-title">Gaza et extrême droite en France : cartographie des déclarations et des liens publics</h2>
-        <p class="lead">Ce site rassemble, pour mémoire, des <strong>déclarations publiques</strong> et des <strong>liens publics</strong> entre personnalités et organisations en France, au sujet de la guerre à Gaza et de la normalisation de l'extrême droite. Chaque citation est reproduite telle que publiée, datée, accompagnée de sa source et, lorsque c'est possible, d'une copie archivée, afin que chacun puisse vérifier qui a dit quoi, quand et où. Le site ne qualifie ni les personnes ni leurs intentions.</p>
+        <p class="eyebrow">Gaza · extrême droite en France</p>
+        <h2 class="hero-title" id="home-title">Ce qu'ils ont dit. Daté, sourcé, archivé.</h2>
+        <p class="lead">Chaque phrase est reproduite telle que publiée, avec sa date et sa source. Le site ne qualifie ni les personnes ni leurs intentions.</p>
         <form class="home-search" role="search" id="home-search-form" autocomplete="off">
           <label for="home-search" class="sr-only">Rechercher une personne, une organisation ou une citation</label>
-          <div class="search-box"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><input id="home-search" type="search" placeholder="Rechercher une personne, un média, une citation…" enterkeyhint="search"></div>
+          <div class="search-box"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><input id="home-search" type="search" placeholder="Nom, média, phrase" enterkeyhint="search"></div>
           <ul id="home-results" class="search-results" hidden></ul>
         </form>
       </div>
     </div>
     <div class="wrap home-body">
-      <div id="home-resume" class="home-resume" hidden></div>
-      <section class="qotd card" id="home-qotd" aria-label="Citation du jour" hidden></section>
       <dl class="stats" id="home-stats" aria-label="Chiffres clés"></dl>
+      <div id="home-resume" class="home-resume" hidden></div>
+      <h2 class="h-sec" id="home-quick-title">Accès rapides</h2>
+      <nav class="home-quick" aria-labelledby="home-quick-title">
+        <a href="#/coulisses"><span>Coulisses</span><small>Ponts datés entre sphères</small></a>
+        <a href="#/pouvoir"><span>Échelle du pouvoir</span><small>Fonctions publiques documentées</small></a>
+        <a href="#/sections/tout/Candidats%20%C3%A0%20la%20pr%C3%A9sidentielle%202027"><span>Candidats 2027</span><small>Leurs déclarations versées ici</small></a>
+      </nav>
+      <section class="qotd card" id="home-qotd" aria-label="Citation du jour" hidden></section>
       <h2 class="h-sec">Explorer</h2>
       <div class="entry-cards" id="home-entries"></div>
-      <h2 class="h-sec">Déclarations les plus récentes</h2>
+      <h2 class="h-sec">Dernières entrées</h2>
+      <p class="home-sub">Les déclarations les plus récentes, par date.</p>
       <ol class="latest" id="home-latest"></ol>
       <p class="more"><a href="#/chronologie" class="btn-pill">Toute la chronologie</a> <a href="data.json" download="onrecord-donnees.json" class="btn-pill ghost dl-link">Télécharger les données (JSON)</a> <a href="#/methode" class="btn-pill ghost" id="home-methode">Méthode</a></p>
     </div>

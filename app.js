@@ -738,7 +738,7 @@
     france: "Propos publics datés et décisions d'institutions portant sur la reprise de termes ou de thèmes associés à l'extrême droite, et liens publics entre partis, médias, éditeurs et financeurs.",
     commun: "Personnalités et organisations présentes dans les deux sections."
   };
-  var SUB_ORDER = ["Gouvernement & exécutif", "Parlementaires & élus", "Partis & dirigeants de parti", "Propriétaires, financeurs & groupes", "Chaînes, radios & titres", "Édition",
+  var SUB_ORDER = ["Gouvernement & exécutif", "Parlementaires & élus", "Candidats à la présidentielle 2027", "Partis & dirigeants de parti", "Militants", "Propriétaires, financeurs & groupes", "Chaînes, radios & titres", "Édition",
     "Directions de rédaction", "Journalistes & chroniqueurs", "Philosophes & essayistes", "Historiens", "Institutions publiques", "Associations & représentants", "Projets & réseaux"];
   var MONTHS_S = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
 
@@ -789,20 +789,21 @@
     ];
     $("home-stats").innerHTML = stats.map(function (s) { return '<div class="stat stat-tap"><dt>' + esc(s[1]) + '</dt><dd><a class="stat-a" href="' + s[2] + '" aria-label="' + esc(s[0] + " " + s[1]) + '">' + s[0] + "</a></dd></div>"; }).join("") +
       '<div class="stat stat-date"><dt>dernière mise à jour</dt><dd><time datetime="' + esc(upd || "") + '">' + (upd ? fmtDate(upd) : "—") + "</time></dd></div>";
+    animateStats();
     function cnt(sec) {
       var ns = DATA.nodes.filter(function (n) { return (n.sections || []).indexOf(sec) >= 0; }).length;
       var st = ALL_ST.filter(function (x) { return stSection(x.s, x.n) === sec; }).length;
       return plural(ns, "fiche", "fiches") + " · " + plural(st, "déclaration", "déclarations");
     }
     var cards = [
-      ["#/sections/gaza", "Section", "Gaza", SEC_INTRO.gaza, cnt("gaza"), "c-gaza"],
-      ["#/sections/france", "Section", "France – normalisation de l'extrême droite", SEC_INTRO.france, cnt("france"), "c-fr"],
-      ["#/chronologie", "Vue", "Chronologie", "Toutes les déclarations et tous les liens datés, filtrables par section, catégorie, thème et année.", plural(ALL_ST.length + DATA.edges.filter(function (e) { return e.date; }).length, "élément daté", "éléments datés"), "c-chrono"],
-      ["#/reseau", "Vue", "Réseau des relations", "Graphe interactif des liens publics entre personnalités et organisations, chacun sourcé.", plural(DATA.edges.length, "relation", "relations"), "c-net"],
-      ["#/pouvoir", "Vue", "Échelle du pouvoir", "Les mêmes fiches, rangées par fonction publique documentée. Un tap montre les liens déjà sourcés, vers le haut et vers le bas.", plural(DATA.nodes.length, "fiche", "fiches") + " · " + plural(DATA.edges.length, "lien", "liens"), "c-pow"],
-      ["#/coulisses", "Vue", "Coulisses", "Partis, médias, argent, idées, édition, institutions : les ponts datés et sourcés. Un récit suit l'argent, les médias ou les nominations.", "Liens publics entre sphères", "c-cou"],
-      ["#/methodologie", "À propos", "Méthodologie", "Critères d'inclusion, neutralité, images, vidéos, archivage et réutilisation des données.", "Sources vérifiées et archivées", "c-meth"],
-      ["#/contribuer", "Participer", "Proposer une mise à jour", "Une erreur, une précision, une nouvelle déclaration sourcée ? Chaque proposition est vérifiée avant publication.", "Formulaire de contribution", "c-contrib"]
+      ["#/sections/gaza", "Section", "Gaza", "Ce qui a été dit, en France, sur cette guerre.", cnt("gaza"), "c-gaza"],
+      ["#/sections/france", "Section", "France", "Propos publics, partis, médias, éditeurs.", cnt("france"), "c-fr"],
+      ["#/chronologie", "Vue", "Chronologie", "Toutes les dates, dans l'ordre.", plural(ALL_ST.length + DATA.edges.filter(function (e) { return e.date; }).length, "élément daté", "éléments datés"), "c-chrono"],
+      ["#/reseau", "Vue", "Réseau", "Chaque lien public a une source.", plural(DATA.edges.length, "relation", "relations"), "c-net"],
+      ["#/pouvoir", "Vue", "Échelle du pouvoir", "Les fiches, rangées par fonction documentée.", plural(DATA.nodes.length, "fiche", "fiches") + " · " + plural(DATA.edges.length, "lien", "liens"), "c-pow"],
+      ["#/coulisses", "Vue", "Coulisses", "Partis, médias, argent, idées, édition.", "Ponts datés et sourcés", "c-cou"],
+      ["#/methodologie", "À propos", "Méthode", "Ce qui entre. Ce qui n'entre pas.", "Sources vérifiées, copies archivées", "c-meth"],
+      ["#/contribuer", "Participer", "Une correction", "Une erreur, une précision, une phrase à vérifier.", "Chaque proposition est relue", "c-contrib"]
     ];
     $("home-entries").innerHTML = cards.map(function (c) {
       return '<a class="entry ' + c[5] + '" href="' + c[0] + '"><span class="entry-k">' + esc(c[1]) + '</span><span class="entry-t">' + esc(c[2]) + '</span><span class="entry-d">' + esc(c[3]) + '</span><span class="entry-c">' + esc(c[4]) + '</span><span class="entry-go" aria-hidden="true">›</span></a>';
@@ -814,31 +815,73 @@
     }).join("");
     renderQotd(); renderResume();
     bindSearch($("home-search"), $("home-results"));
+    var qotdEl = $("home-qotd");
+    if (qotdEl && !qotdEl._bound) {
+      qotdEl._bound = 1;
+      qotdEl.addEventListener("click", function (ev) {
+        if (!ev.target.closest("#qotd-next")) return;
+        var pool = quotePool();
+        if (!pool.length) return;
+        var i = Math.floor(Math.random() * pool.length), x = pool[i];
+        if (qotdShown && pool.length > 1 && x.n.id === qotdShown.n.id && x.i === qotdShown.i) x = pool[(i + 1) % pool.length];
+        if (!MQ_RM.matches) {
+          qotdEl.classList.remove("is-in");
+          void qotdEl.offsetWidth;
+          qotdEl.classList.add("is-in");
+        }
+        renderQotd(x, true);
+      });
+    }
+  }
+  function quotePool() {
+    return ALL_ST.filter(function (x) { return x.n.type === "person" && x.s.date && x.s.quote && x.s.quote.length <= 260; });
+  }
+  function animateStats() {
+    if (MQ_RM.matches || navigator.webdriver) return;
+    var fins = [];
+    document.querySelectorAll("#home-stats a.stat-a").forEach(function (a) {
+      var n = parseInt(String(a.textContent).replace(/\s/g, ""), 10);
+      if (isFinite(n)) fins.push({ a: a, n: n });
+    });
+    if (!fins.length) return;
+    fins.forEach(function (f) { f.a.textContent = "0"; });
+    var t0 = performance.now(), dur = 800;
+    function frame(now) {
+      var p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      fins.forEach(function (f) { f.a.textContent = String(p >= 1 ? f.n : Math.round(e * f.n)); });
+      if (p < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
   }
   /* v13 : citation du jour (déterministe par date à Paris), reprise de la dernière fiche */
   function parisDay() {
     try { return new Intl.DateTimeFormat("fr-CA", { timeZone: "Europe/Paris", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()); }
     catch (e) { return new Date().toISOString().slice(0, 10); }
   }
+  var qotdShown = null;
   function qotdPick(day) {
-    var pool = ALL_ST.filter(function (x) { return x.n.type === "person" && x.s.date && x.s.quote && x.s.quote.length <= 260; })
-      .sort(function (a, b) { return (a.n.id + a.i).localeCompare(b.n.id + b.i); });
+    var pool = quotePool().slice().sort(function (a, b) { return (a.n.id + a.i).localeCompare(b.n.id + b.i); });
     if (!pool.length) return null;
     var h = 0; for (var k = 0; k < day.length; k++) h = (h * 31 + day.charCodeAt(k)) >>> 0;
     return pool[h % pool.length];
   }
   window.__renderCard = function (id, i) { var n = byId[id]; return n ? renderCard(n, n.statements[i || 0]) : null; };
   window.__qotd = function (d) { var x = qotdPick(d || parisDay()); return x ? { id: x.n.id, i: x.i } : null; };
-  function renderQotd() {
+  function renderQotd(x, alt) {
     var el = $("home-qotd"); if (!el) return;
-    var day = parisDay(), x = qotdPick(day); if (!x) { el.hidden = true; return; }
+    var day = parisDay();
+    if (!x) x = qotdPick(day);
+    if (!x) { el.hidden = true; return; }
+    qotdShown = x;
     el.hidden = false; preloadImg(x.n.image);
-    el.innerHTML = '<p class="qotd-k">Citation du jour · <time datetime="' + esc(day) + '">' + fmtDate(day) + "</time></p>" +
+    var kicker = alt ? "Citation au hasard" : "Citation du jour";
+    el.innerHTML = '<p class="qotd-k">' + kicker + (alt ? "" : ' · <time datetime="' + esc(day) + '">' + fmtDate(day) + "</time>") + "</p>" +
       '<blockquote class="qotd-q">' + quoteHtml(x.s.quote) + "</blockquote>" +
       '<p class="qotd-m"><a class="qotd-who" href="' + ficheHref(x.n) + "#d" + x.i + '">' + avatar(x.n, "av-xs") + "<span>" + esc(x.n.name) + "</span></a> · " +
-      '<time datetime="' + esc(x.s.date) + '">' + fmtDate(x.s.date) + "</time> · " + esc(x.s.medium) + "</p>" +
+      '<time datetime="' + esc(x.s.date) + '">' + fmtDate(x.s.date) + '</time></p><p class="qotd-src">' + esc(x.s.medium) + "</p>" +
       '<div class="meta actions">' + srcLink(x.s.url, "Lire la source") + actionsHtml(x.n, x.i) + "</div>" +
-      '<p class="qotd-note">Une nouvelle citation chaque jour.</p>';
+      '<p class="qotd-note">Citation du jour, une par jour.</p>' +
+      '<p class="qotd-more"><button type="button" class="btn-pill ghost small" id="qotd-next">Une autre</button></p>';
   }
   function renderResume() {
     var el = $("home-resume"); if (!el) return;
@@ -910,7 +953,7 @@
   }
 
   /* ---------- Sections ---------- */
-  var curSec = "tout";
+  var curSec = "tout", secSub = "";
   function inSec(n, sec) {
     var s = n.sections || [];
     if (sec === "tout") return true;
@@ -945,11 +988,17 @@
   }
   function renderSections() {
     var q = norm($("sec-search").value).trim(), total = 0;
+    if (secSub) {
+      var known = false;
+      document.querySelectorAll("#sec-groups .sub").forEach(function (sb) { if (sb.getAttribute("data-sub") === secSub) known = true; });
+      if (!known) secSub = "";
+    }
     document.querySelectorAll("#sec-seg .seg-b").forEach(function (b) { var on = b.getAttribute("data-sec") === curSec; b.setAttribute("aria-selected", on ? "true" : "false"); });
-    $("sec-intro").textContent = SEC_INTRO[curSec];
+    $("sec-intro").textContent = secSub ? secSub + ". Les fiches de cette sous-catégorie, dans la section affichée." : SEC_INTRO[curSec];
     document.querySelectorAll("#sec-groups .cat").forEach(function (d) {
       var shownCat = 0;
       d.querySelectorAll(".sub").forEach(function (sb) {
+        if (secSub && sb.getAttribute("data-sub") !== secSub) { sb.hidden = true; return; }
         var shown = 0;
         sb.querySelectorAll("li[data-id]").forEach(function (li) {
           var ok = inSec(byId[li.getAttribute("data-id")], curSec) && (!q || li.getAttribute("data-q").indexOf(q) >= 0);
@@ -1007,7 +1056,7 @@
     return '<li class="rel-card nat-' + nat + '"><a class="rel-main" href="' + ficheHref(o) + '">' + avatar(o, "av-sm") + '<span class="rel-txt"><span class="rel-s">' + sentence + '</span><span class="rel-r">' + esc(e.relation) + '</span></span><span class="chev-r" aria-hidden="true">›</span></a>' +
       '<div class="meta">' + natureBadge(nat) + (e.date ? '<time datetime="' + esc(e.date) + '">' + fmtDate(e.date) + "</time>" : "") + srcLink(e.url, "Source") + archLink(e) + "</div></li>";
   }
-  var FEMALE = { "caroline-yadan": 1, "aurore-berge": 1, "marine-le-pen": 1, "marion-marechal": 1, "yael-braun-pivet": 1, "elisabeth-levy": 1, "caroline-fourest": 1, "valerie-pecresse": 1, "marine-tondelier": 1, "sarah-knafo": 1, "lise-boell": 1, "constance-benque": 1 };
+  var FEMALE = { "caroline-yadan": 1, "aurore-berge": 1, "marine-le-pen": 1, "marion-marechal": 1, "yael-braun-pivet": 1, "elisabeth-levy": 1, "caroline-fourest": 1, "valerie-pecresse": 1, "marine-tondelier": 1, "sarah-knafo": 1, "lise-boell": 1, "constance-benque": 1, "louise-montangon": 1 };
   function arriveLabel(n) {
     if (!n || n.type !== "person") return "Voir la frise";
     return FEMALE[n.id] ? "Voir comment elle est arrivée là" : "Voir comment il est arrivé là";
@@ -1433,6 +1482,7 @@
     "conf-jerusalem-2025": 0, "loi-immigration-2023": 0, "proces-nantes-menaces-2026": 0,
     "civitas": 1, "gud": 1, "generation-identitaire": 1, "les-remparts": 1, "zouaves-paris": 1, "nemesis": 1, "pericles": 1,
     "avocats-sans-frontieres": 2, "crif": 2, "yad-vashem-fr": 2, "patrick-klugman": 2, "yonathan-arfi": 2, "issep": 2,
+    "louise-montangon": 2, "uni": 2,
     "serge-klarsfeld": 3, "bernard-henri-levy": 3, "raphael-enthoven": 3, "renaud-camus": 3, "caroline-fourest": 3,
     "geoffroy-lejeune": 3, "elisabeth-levy": 3, "gilles-william-goldnadel": 3, "gerard-carreyrou": 3,
     "jean-dominique-merchet": 3, "joseph-thouvenel": 3, "jules-torres": 3, "cyril-hanouna": 3,
@@ -1994,7 +2044,11 @@
       if ($("cou-sheet")) $("cou-sheet").hidden = true;
     }
     if (v !== "fiche") document.title = v === "accueil" ? TITLES.accueil : TITLES[v] + " — Onrecord";
-    if (v === "sections") { curSec = ["tout", "gaza", "france", "commun"].indexOf(parts[1]) >= 0 ? parts[1] : "tout"; renderSections(); }
+    if (v === "sections") {
+      curSec = ["tout", "gaza", "france", "commun"].indexOf(parts[1]) >= 0 ? parts[1] : "tout";
+      try { secSub = parts[2] ? decodeURIComponent(parts[2]) : ""; } catch (e) { secSub = ""; }
+      renderSections();
+    }
     if (v === "methode") renderMethode();
     if (v === "credits") renderCredits();
     if (v === "accueil") { renderResume(); renderQotd(); }

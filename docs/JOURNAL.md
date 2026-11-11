@@ -4,6 +4,31 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-11 — v31
+
+Tu ajoutes Louise Montangon, 22 ans, responsable de l'UNI à Bordeaux, et le syndicat UNI. Pas de photo libre : monogramme. Tu recentres l'accueil.
+
+Citations (la phrase, la date, la page) :
+
+- Sénat, 15/04/2026 : Parcoursup, et « saccager l'université en la bloquant » — https://www.senat.fr/compte-rendu-commissions/20260413/ce_universites.html
+- Le Parisien, 08/10/2026 : « J'ai honte d'appartenir à cette génération » — https://www.leparisien.fr/societe/jai-honte-dappartenir-a-cette-generation-qui-est-louise-montangon-letudiante-candidate-rn-aux-municipales-qui-fustige-les-blocus-lyceens-08-10-2026-LORHOXBKGRGIRB7AKPWHQ2LWEA.php
+- VA+, 22/10/2026 : « J'ai pas honte de cette génération. J'ai honte de cette partie de la jeunesse » — https://www.valeursactuelles.com/societe/a-15-ans-jetais-tres-a-gauche-louise-montangon-raconte-son-basculement-a-droite-et-son-combat-contre-les-blocages
+- LCI, 06/10/2026, face à Gabriel Attal : « Ça ne sert à rien de me regarder avec un petit sourire, votre bilan est désastreux ! » et « Vous êtes le visage du laxisme » — même article du Parisien
+- LCI, 07/10/2026, « La Grande Confrontation » : « Vous êtes les idiots utiles de ce mouvement » et « Bloquer des établissements c'est i-llé-gal ». Le Parisien écrit « mercredi 6 octobre », qui n'est pas un mercredi. Sud Ouest et le JDD placent le débat le 7. Le lycéen n'est pas nommé — https://www.leparisien.fr/culture-loisirs/tv/moi-je-nasperge-pas-mes-professeurs-dessence-le-face-a-face-entre-elwan-et-louise-vire-au-reglement-de-comptes-sur-lci-09-10-2026-LPGLK6QOYZDYFHMI2QNUZGFEHM.php
+- JDD, 11/10/2026 : l'emploi du temps, « J'ai préféré prendre du recul », et la phrase sur la jeunesse de droite — https://www.lejdd.fr/Societe/mobilisation-lyceenne-louise-montangon-visage-de-la-resistance-aux-blocages-185745
+- Sud Ouest, 09/10/2026 : « J'étais très déçue par l'alliance entre LR et les macronistes » et « Je dois tout à l'extrême gauche » — https://www.sudouest.fr/gironde/bordeaux/decryptage-qui-est-la-bordelaise-louise-montangon-etoile-montante-du-rn-sur-les-plateaux-tele-de-la-colere-lyceenne-30996470.php
+- VA+, 22/10/2026 : « Je comprends pas comment, à 18 ou à 20 ans, on peut crier à la gloire du Hamas ». C'est son récit d'octobre 2024, pas un fait recoupé
+- UNI, pétition citée le 09/10/2026 par 20 Minutes — https://www.20minutes.fr/societe/4252906-20261009-militante-rn-uni-bordelaise-louise-montangon-etudiante-echarpe-mobilisation-lyceenne
+- Cyril Hanouna, 08/10/2026, selon Midi Libre : « Si elle veut, je l'engage tout de suite. » — https://www.midilibre.fr/2026/10/12/elle-a-refuse-loffre-de-cyril-hanouna-pour-rejoindre-un-media-du-groupe-bollore-louise-montangon-est-le-nouveau-phenomene-mediatique-de-la-droite-13597210.php
+
+Nuances sur la même fiche : Bordeaux-Montaigne dit à 20 Minutes qu'elle n'y est plus étudiante depuis 2025. Sud Ouest parle d'un master à distance rattaché à Reims. Le JDD la présente encore à Bordeaux-Montaigne. Le JDD écrit qu'elle ne rejette pas l'offre d'Hanouna. Midi Libre et Public, le 12 octobre, écrivent qu'elle n'a pas donné suite et qu'elle a mis en avant le JDD. Le portrait ne dit pas qu'elle y est recrutée. Marie France écrit que la liste municipale n'a pas eu d'élu.
+
+Parcours : septembre 2022, octobre 2024, septembre 2025, décembre 2025, mars 2026, 15 avril 2026, septembre 2026. Liens coulisses vers l'UNI, le RN, Hanouna, le JDD et Gabriel Attal.
+
+Accueil : textes centrés, promesse courte, compteurs lus dans `data.json` (animation coupée si `prefers-reduced-motion`), accès vers Coulisses, l'échelle et les candidats 2027, citation du jour avec un bouton « Une autre », dernières déclarations. Le bouton Soutenir ne change pas.
+
+Module : `v31_content.py`.
+
 ## 2026-11-11 — v30
 
 Tu fais commencer la frise « Voir comment elle/il est arrivé là » par les études, quand une page relue donne l'année. Repère Formation sur la frise. Pas d'étape si l'année manque.
