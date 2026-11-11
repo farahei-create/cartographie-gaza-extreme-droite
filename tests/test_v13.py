@@ -13,7 +13,7 @@ check(re.search(r'CORRECTION_EMAIL:\s*""',cfg),"CORRECTION_EMAIL vide")
 import re as _re
 _sw=open("site/sw.js").read()
 check(int(_re.search(r"onrecord-v(\d+)",_sw).group(1))>=18,"sw >= v18")
-check('var VERSION = "onrecord-v32"' in _sw,"sw onrecord-v32")
+check('var VERSION = "onrecord-v33"' in _sw,"sw onrecord-v33")
 BAN=["pantin","revirement","complice","contradiction"]
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path="/usr/bin/google-chrome")

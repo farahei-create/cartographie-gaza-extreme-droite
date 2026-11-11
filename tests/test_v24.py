@@ -20,7 +20,7 @@ def check(c, m):
 sw = open(os.path.join(ROOT, "sw.js")).read()
 js = open(os.path.join(ROOT, "app.js")).read()
 html = open(os.path.join(ROOT, "index.html")).read()
-check('var VERSION = "onrecord-v32"' in sw, "sw onrecord-v32")
+check('var VERSION = "onrecord-v33"' in sw, "sw onrecord-v33")
 check('href="#/coulisses"' in html and 'id="view-coulisses"' in html, "entrée coulisses")
 check("Suivre l'argent" in js and "Suivre les médias" in js and "Suivre les nominations" in js and "Suivre les sondages" in js, "récits")
 blob = json.dumps(D, ensure_ascii=False)

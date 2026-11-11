@@ -978,17 +978,32 @@
       box.addEventListener("pointerleave", up);
       box.addEventListener("pointercancel", up);
     }
+    var mark = document.getElementById("home-title");
+    function tiltMark(nx, ny) {
+      if (!mark || reduce) return;
+      mark.style.setProperty("--mx", nx.toFixed(3));
+      mark.style.setProperty("--my", ny.toFixed(3));
+    }
     function placePtr(e) {
       var r = hero.getBoundingClientRect();
       ptr.x = e.clientX - r.left;
       ptr.y = e.clientY - r.top;
       ptr.on = true;
+      var nx = (ptr.x / (r.width || 1) - 0.5) * 2;
+      var ny = (ptr.y / (r.height || 1) - 0.5) * 2;
+      if (nx > 1) nx = 1; else if (nx < -1) nx = -1;
+      if (ny > 1) ny = 1; else if (ny < -1) ny = -1;
+      tiltMark(nx, ny);
+    }
+    function clearPtr() {
+      ptr.on = false;
+      tiltMark(0, 0);
     }
     hero.addEventListener("pointermove", placePtr, { passive: true });
     hero.addEventListener("pointerdown", placePtr, { passive: true });
-    hero.addEventListener("pointerup", function () { ptr.on = false; });
-    hero.addEventListener("pointerleave", function () { ptr.on = false; });
-    hero.addEventListener("pointercancel", function () { ptr.on = false; });
+    hero.addEventListener("pointerup", clearPtr);
+    hero.addEventListener("pointerleave", clearPtr);
+    hero.addEventListener("pointercancel", clearPtr);
     if (!reduce && window.matchMedia("(pointer: coarse)").matches) {
       var oriAfter = 0, oriArmed = false;
       var DOE = window.DeviceOrientationEvent;
