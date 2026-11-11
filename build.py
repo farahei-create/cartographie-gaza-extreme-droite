@@ -1027,6 +1027,8 @@ import v27_content
 v27_content.apply(N, E, _b, _step, L)
 import v28_content
 v28_content.apply(N, E, _b, _step, _node, L, _st)
+import v30_content
+v30_content.apply(N, _b, _step)
 # v24 ajoute des fiches après le premier passage photos : on réapplique.
 for n in N:
     if n["id"] in PIMG: n.update(PIMG[n["id"]])

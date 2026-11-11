@@ -412,6 +412,26 @@
       "subcategory": "Candidats à la présidentielle 2027",
       "parcours": [
         {
+          "date": "1992",
+          "title": "Prestation de serment",
+          "text": "Le journal de 20 heures de France 2, cité par franceinfo, rappelle qu'elle prête serment en 1992. Elle plaide pendant six ans.",
+          "url": "https://www.franceinfo.fr/economie/emploi/metiers/presidentielle-les-candidats-et-le-monde-du-travail_2142710.html",
+          "source": "franceinfo",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20261111110221/https://www.franceinfo.fr/economie/emploi/metiers/presidentielle-les-candidats-et-le-monde-du-travail_2142710.html",
+          "archived": "2026-11-11"
+        },
+        {
+          "date": "1998",
+          "title": "Service juridique du Front national",
+          "text": "Le même sujet indique qu'en 1998 elle intègre le service juridique du Front national.",
+          "url": "https://www.franceinfo.fr/economie/emploi/metiers/presidentielle-les-candidats-et-le-monde-du-travail_2142710.html",
+          "source": "franceinfo",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20261111110221/https://www.franceinfo.fr/economie/emploi/metiers/presidentielle-les-candidats-et-le-monde-du-travail_2142710.html",
+          "archived": "2026-11-11"
+        },
+        {
           "date": "2011-01-16",
           "title": "Présidente du Front national",
           "text": "Elle est proclamée présidente du Front national au congrès de Tours, avec 67,65 % des voix, contre 32,35 % pour son rival.",
@@ -631,6 +651,16 @@
           "archived": "2026-01-29"
         },
         {
+          "date": "2016",
+          "title": "Licence de géographie interrompue",
+          "text": "France Inter : titulaire d'un baccalauréat économique et social, mention très bien, obtenu au lycée privé Jean-Baptiste-de-La-Salle de Saint-Denis, il s'inscrit en licence de géographie à Paris-Sorbonne. Il quitte l'université en 2016, en troisième année, sans diplôme. L'article ne date pas le bac. L'adhésion au Front national, en 2012, est antérieure : il a alors 16 ans.",
+          "url": "https://www.radiofrance.fr/franceinter/cinq-choses-a-savoir-sur-jordan-bardella-designe-premier-vice-president-pour-remplacer-marine-le-pen-3829052",
+          "source": "France Inter",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20240701075431/https://www.radiofrance.fr/franceinter/cinq-choses-a-savoir-sur-jordan-bardella-designe-premier-vice-president-pour-remplacer-marine-le-pen-3829052",
+          "archived": "2024-07-01"
+        },
+        {
           "date": "2017-09-21",
           "title": "Porte-parole du Front national",
           "text": "Marine Le Pen désigne trois porte-parole du Front national, dont Jordan Bardella, alors conseiller régional d'Île-de-France.",
@@ -783,6 +813,26 @@
       "subcategory": "Parlementaires & élus",
       "parcours": [
         {
+          "date": "2010-06",
+          "title": "Licence à Panthéon-Assas",
+          "text": "Le curriculum publié sur le site du Parlement européen, sous la responsabilité de l'élue, indique une licence de droit des affaires à l'université Panthéon-Assas en juin 2010.",
+          "url": "https://www.europarl.europa.eu/meps/fr/256922/MARION_MARECHAL/cv",
+          "source": "Parlement européen",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20250911125732/https://www.europarl.europa.eu/meps/fr/256922/MARION_MARECHAL/cv",
+          "archived": "2025-09-11"
+        },
+        {
+          "date": "2011-06",
+          "title": "Master 1 à Panthéon-Assas",
+          "text": "Le même curriculum indique un master 1 de droit public à Panthéon-Assas en juin 2011.",
+          "url": "https://www.europarl.europa.eu/meps/fr/256922/MARION_MARECHAL/cv",
+          "source": "Parlement européen",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20250911125732/https://www.europarl.europa.eu/meps/fr/256922/MARION_MARECHAL/cv",
+          "archived": "2025-09-11"
+        },
+        {
           "date": "2018",
           "title": "Fondation de l'ISSEP",
           "text": "franceinfo la présente comme la fondatrice de cette école, à Lyon, en 2018.",
@@ -790,6 +840,16 @@
           "source": "franceinfo",
           "archive_url": "https://web.archive.org/web/20261108193027/https://www.franceinfo.fr/politique/front-national/video-marion-marechal-le-pen-les-petits-secrets-de-son-ecole-de-sciences-politiques_2766371.html",
           "archived": "2026-11-08"
+        },
+        {
+          "date": "2018-06",
+          "title": "EM Lyon",
+          "text": "Le curriculum du Parlement européen indique, en juin 2018, un diplôme équivalent à un master 2 en management à l'EM Lyon.",
+          "url": "https://www.europarl.europa.eu/meps/fr/256922/MARION_MARECHAL/cv",
+          "source": "Parlement européen",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20250911125732/https://www.europarl.europa.eu/meps/fr/256922/MARION_MARECHAL/cv",
+          "archived": "2025-09-11"
         },
         {
           "date": "2022-05",
@@ -923,6 +983,26 @@
       "category": "Responsables politiques",
       "subcategory": "Candidats à la présidentielle 2027",
       "parcours": [
+        {
+          "date": "1979",
+          "title": "Sciences Po Paris",
+          "text": "Le Figaro écrit qu'il est diplômé de Sciences Po Paris en 1979 et qu'il échoue deux fois au concours d'entrée de l'ENA. Il se tourne ensuite vers la publicité. L'article ne date pas cette activité.",
+          "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2022-eric-zemmour-candidat-20211130",
+          "source": "Le Figaro",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20251103134629/https://www.lefigaro.fr/elections/presidentielles/presidentielle-2022-eric-zemmour-candidat-20211130",
+          "archived": "2025-11-03"
+        },
+        {
+          "date": "1986",
+          "title": "Quotidien de Paris",
+          "text": "La même biographie du Figaro : il devient journaliste au Quotidien de Paris en 1986.",
+          "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2022-eric-zemmour-candidat-20211130",
+          "source": "Le Figaro",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20251103134629/https://www.lefigaro.fr/elections/presidentielles/presidentielle-2022-eric-zemmour-candidat-20211130",
+          "archived": "2025-11-03"
+        },
         {
           "date": "2021-09-13",
           "title": "Fin des chroniques sur CNews",
@@ -2881,6 +2961,36 @@
       "subcategory": "Gouvernement & exécutif",
       "parcours": [
         {
+          "date": "2001",
+          "title": "Sciences Po, promotion 2001",
+          "text": "La page de Sciences Po titrée « promotion 2001 » écrit qu'il entre à 21 ans après trois années de classe préparatoire littéraire au lycée Henri-IV et deux échecs au concours de l'ENS. En parallèle, il obtient une maîtrise puis un DEA de philosophie à l'université de Nanterre. La page ne date pas ces deux diplômes.",
+          "url": "https://www.sciencespo.fr/fr/actualites/emmanuel-macron-promotion-2001/",
+          "source": "Sciences Po",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20260309165559/https://www.sciencespo.fr/fr/actualites/emmanuel-macron-promotion-2001/",
+          "archived": "2026-03-09"
+        },
+        {
+          "date": "2004",
+          "title": "ENA, puis Inspection des finances",
+          "text": "L'Élysée écrit qu'il a étudié la philosophie avant d'intégrer l'ENA, dont il est diplômé en 2004, puis l'Inspection générale des finances, où il travaille quatre ans.",
+          "url": "https://www.elysee.fr/emmanuel-macron",
+          "source": "Élysée",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20261027092317/https://www.elysee.fr/emmanuel-macron",
+          "archived": "2026-10-27"
+        },
+        {
+          "date": "2008",
+          "title": "Banque Rothschild",
+          "text": "franceinfo, citant le journal de 20 heures de France 2 : de 2008 à 2012, il est banquier d'affaires chez Rothschild.",
+          "url": "https://www.franceinfo.fr/economie/emploi/metiers/presidentielle-les-candidats-et-le-monde-du-travail_2142710.html",
+          "source": "franceinfo",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20261111110221/https://www.franceinfo.fr/economie/emploi/metiers/presidentielle-les-candidats-et-le-monde-du-travail_2142710.html",
+          "archived": "2026-11-11"
+        },
+        {
           "date": "2017-05-15",
           "title": "Choix du Premier ministre",
           "text": "franceinfo titre sur le choix d'Édouard Philippe. L'article constate la nomination.",
@@ -3817,6 +3927,36 @@
       "subcategory": "Candidats à la présidentielle 2027",
       "parcours": [
         {
+          "date": "1968",
+          "title": "Terminale au lycée Rouget-de-Lisle",
+          "text": "France 3 : il est en classe de terminale au lycée Rouget-de-Lisle, à Lons-le-Saunier, lorsque Mai 68 éclate. L'article ne dit pas la date du baccalauréat.",
+          "url": "https://france3-regions.franceinfo.fr/bourgogne-franche-comte/info/la-jeunesse-franc-comtoise-de-melenchon-31773.html",
+          "source": "France 3",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20251028085853/https://france3-regions.franceinfo.fr/bourgogne-franche-comte/info/la-jeunesse-franc-comtoise-de-melenchon-31773.html",
+          "archived": "2025-10-28"
+        },
+        {
+          "date": "1969",
+          "title": "Faculté de lettres de Besançon",
+          "text": "France 3 : en 1969, il étudie à la faculté de lettres de Besançon, où il prépare une licence de philosophie. L'article ne dit pas s'il obtient le diplôme.",
+          "url": "https://france3-regions.franceinfo.fr/bourgogne-franche-comte/info/la-jeunesse-franc-comtoise-de-melenchon-31773.html",
+          "source": "France 3",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20251028085853/https://france3-regions.franceinfo.fr/bourgogne-franche-comte/info/la-jeunesse-franc-comtoise-de-melenchon-31773.html",
+          "archived": "2025-10-28"
+        },
+        {
+          "date": "1976",
+          "title": "Professeur de français",
+          "text": "France 3 : en 1976, il devient professeur de français dans un lycée à Lons-le-Saunier. Il est aussi journaliste à La Dépêche du Jura.",
+          "url": "https://france3-regions.franceinfo.fr/bourgogne-franche-comte/info/la-jeunesse-franc-comtoise-de-melenchon-31773.html",
+          "source": "France 3",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20251028085853/https://france3-regions.franceinfo.fr/bourgogne-franche-comte/info/la-jeunesse-franc-comtoise-de-melenchon-31773.html",
+          "archived": "2025-10-28"
+        },
+        {
           "date": "2016-10-16",
           "title": "La France insoumise",
           "text": "franceinfo indique qu'il présente « L'Avenir en commun » près de Lille, lors de la première convention du mouvement baptisé La France insoumise.",
@@ -3976,6 +4116,26 @@
       "subcategory": "Candidats à la présidentielle 2027",
       "parcours": [
         {
+          "date": "2009",
+          "title": "IEP de Lille",
+          "text": "France 24 : après une classe préparatoire littéraire, elle entre à l'Institut d'études politiques de Lille. Pendant ces études, à 22 ans, elle adhère à Europe Écologie-Les Verts en 2009. L'article ne date pas l'entrée à l'IEP.",
+          "url": "https://www.france24.com/fr/france/20221127-congrès-eelv-marine-tondelier-la-favorite-qui-rêvait-d-un-avenir-en-vert",
+          "source": "France 24",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20260928113825/https://www.france24.com/fr/france/20221127-congr%C3%A8s-eelv-marine-tondelier-la-favorite-qui-r%C3%AAvait-d-un-avenir-en-vert",
+          "archived": "2026-09-28"
+        },
+        {
+          "date": "2011",
+          "title": "Diplôme, puis collaboratrice parlementaire",
+          "text": "France 24 : le diplôme en poche, elle devient collaboratrice parlementaire de la sénatrice Aline Archimbaud, de 2011 à 2015, chargée des questions sanitaires et sociales. L'article ne donne pas l'année du diplôme, seulement qu'il est obtenu avant ce poste.",
+          "url": "https://www.france24.com/fr/france/20221127-congrès-eelv-marine-tondelier-la-favorite-qui-rêvait-d-un-avenir-en-vert",
+          "source": "France 24",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20260928113825/https://www.france24.com/fr/france/20221127-congr%C3%A8s-eelv-marine-tondelier-la-favorite-qui-r%C3%AAvait-d-un-avenir-en-vert",
+          "archived": "2026-09-28"
+        },
+        {
           "date": "2025-07-24",
           "title": "Lien public daté",
           "text": "Lien déjà sourcé vers Emmanuel Macron : a réagi sur X à l'annonce de la reconnaissance de l'État de Palestine (24/07/2025)",
@@ -4018,6 +4178,36 @@
       "category": "Responsables politiques",
       "subcategory": "Candidats à la présidentielle 2027",
       "parcours": [
+        {
+          "date": "1988",
+          "title": "Baccalauréat à Bonn",
+          "text": "Dans un discours du 15 septembre 2017 retranscrit par vie-publique.fr, il dit avoir vécu à Bonn de 1986 à 1988, avoir été élève au Friedrich-Ebert-Gymnasium et y avoir passé le baccalauréat français.",
+          "url": "https://www.vie-publique.fr/discours/203599-declaration-de-m-edouard-philippe-premier-ministre-sur-les-grandes-or",
+          "source": "vie-publique.fr",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20241125223937/https://www.vie-publique.fr/discours/203599-declaration-de-m-edouard-philippe-premier-ministre-sur-les-grandes-or",
+          "archived": "2024-11-25"
+        },
+        {
+          "date": "1995",
+          "title": "Entrée à l'ENA",
+          "text": "franceinfo : après le bac à Bonn, une année d'hypokhâgne, puis Sciences Po, section « service public ». Il intègre l'ENA en 1995. L'article ne date pas le diplôme de Sciences Po.",
+          "url": "https://www.franceinfo.fr/politique/emmanuel-macron/six-choses-que-vous-ignorez-peut-etre-sur-edouard-philippe-pressenti-pour-devenir-le-premier-ministre-d-emmanuel-macron_2190663.html",
+          "source": "franceinfo",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20251219200452/https://www.franceinfo.fr/politique/emmanuel-macron/six-choses-que-vous-ignorez-peut-etre-sur-edouard-philippe-pressenti-pour-devenir-le-premier-ministre-d-emmanuel-macron_2190663.html",
+          "archived": "2025-12-19"
+        },
+        {
+          "date": "1997",
+          "title": "Conseil d'État",
+          "text": "Le même article de franceinfo : il sort de l'ENA en 1997 et rejoint le Conseil d'État.",
+          "url": "https://www.franceinfo.fr/politique/emmanuel-macron/six-choses-que-vous-ignorez-peut-etre-sur-edouard-philippe-pressenti-pour-devenir-le-premier-ministre-d-emmanuel-macron_2190663.html",
+          "source": "franceinfo",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20251219200452/https://www.franceinfo.fr/politique/emmanuel-macron/six-choses-que-vous-ignorez-peut-etre-sur-edouard-philippe-pressenti-pour-devenir-le-premier-ministre-d-emmanuel-macron_2190663.html",
+          "archived": "2025-12-19"
+        },
         {
           "date": "2017-05-15",
           "title": "Premier ministre",
@@ -4073,6 +4263,26 @@
       "category": "Responsables politiques",
       "subcategory": "Candidats à la présidentielle 2027",
       "parcours": [
+        {
+          "date": "2007",
+          "title": "Entrée à Sciences Po",
+          "text": "Les Echos écrivent qu'il est scolarisé à l'École alsacienne, de la grande section de maternelle à la terminale. Le bac obtenu, il intègre Sciences Po Paris en 2007. L'article ne date pas le bac.",
+          "url": "https://www.lesechos.fr/politique-societe/education/quelles-etudes-ont-ete-suivies-par-gabriel-attal-nouveau-premier-ministre-2045292",
+          "source": "Les Echos",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20260507033652/https://www.lesechos.fr/politique-societe/education/quelles-etudes-ont-ete-suivies-par-gabriel-attal-nouveau-premier-ministre-2045292",
+          "archived": "2026-05-07"
+        },
+        {
+          "date": "2013",
+          "title": "Master de Sciences Po",
+          "text": "Les Echos : il sort diplômé de Sciences Po en 2013, master en affaires publiques. En parallèle, une licence de droit à l'université Paris-Panthéon-Assas, qu'il n'obtient pas. L'université l'a indiqué au journal.",
+          "url": "https://www.lesechos.fr/politique-societe/education/quelles-etudes-ont-ete-suivies-par-gabriel-attal-nouveau-premier-ministre-2045292",
+          "source": "Les Echos",
+          "kind": "formation",
+          "archive_url": "https://web.archive.org/web/20260507033652/https://www.lesechos.fr/politique-societe/education/quelles-etudes-ont-ete-suivies-par-gabriel-attal-nouveau-premier-ministre-2045292",
+          "archived": "2026-05-07"
+        },
         {
           "date": "2024-01-09",
           "title": "Premier ministre",

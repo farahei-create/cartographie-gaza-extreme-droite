@@ -1129,6 +1129,7 @@ body.pow-on{padding-bottom:calc(var(--nav-total) + min(46vh, 420px))}
 .nat-opposition{color:var(--t-fv);background:color-mix(in srgb, var(--t-fv) 14%, transparent)}
 .nat-autre{color:var(--muted);background:var(--fill)}
 .nat-coulisses{color:var(--ink);background:color-mix(in srgb, var(--accent) 16%, var(--fill))}
+.nat-formation{color:var(--violet-deep);background:var(--fill)}
 .pow-link.nat-opposition{box-shadow:inset 3px 0 0 var(--t-fv), var(--shadow-1)}
 .rel-card.nat-opposition{box-shadow:inset 3px 0 0 var(--t-fv), var(--shadow-1)}
 .parcours{margin:8px 0 28px}
@@ -1138,6 +1139,8 @@ body.pow-on{padding-bottom:calc(var(--nav-total) + min(46vh, 420px))}
 .p-step{position:relative;padding:0 0 16px 14px}
 .p-step::before{content:"";position:absolute;left:-16px;top:18px;width:12px;height:12px;border-radius:50%;background:var(--surface);box-shadow:0 0 0 3px var(--accent)}
 .p-step.is-now::before{background:var(--accent)}
+.p-step.is-formation::before{border-radius:2px;background:var(--surface);box-shadow:0 0 0 3px var(--mauve);transform:rotate(45deg)}
+.p-step.is-formation.is-now::before{background:var(--mauve)}
 .p-step time{display:block;font-size:.75rem;font-weight:750;color:var(--accent);margin-bottom:4px}
 .p-card{background:var(--surface);border-radius:18px;padding:14px 14px 12px;box-shadow:var(--shadow-1);border:.5px solid var(--hair);min-width:0;overflow-wrap:anywhere}
 .p-card h3{margin:0 0 6px;font-size:1.02rem;letter-spacing:-.02em;line-height:1.25}

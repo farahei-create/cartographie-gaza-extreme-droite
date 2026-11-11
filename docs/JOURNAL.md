@@ -4,6 +4,22 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-11 — v30
+
+Tu fais commencer la frise « Voir comment elle/il est arrivé là » par les études, quand une page relue donne l'année. Repère Formation sur la frise. Pas d'étape si l'année manque.
+
+- Marine Le Pen : 1992, serment ; 1998, service juridique du FN — franceinfo
+- Jordan Bardella : 2016, licence de géographie quittée sans diplôme ; bac ES au lycée Jean-Baptiste-de-La-Salle, sans année — France Inter. L'adhésion de 2012 reste avant, il a 16 ans
+- Éric Zemmour : 1979, Sciences Po ; 1986, Quotidien de Paris — Le Figaro
+- Marion Maréchal : 2010, licence ; 2011, master 1 ; 2018, EM Lyon — Parlement européen
+- Emmanuel Macron : 2001, Sciences Po ; 2004, ENA ; 2008, Rothschild — Sciences Po, Élysée, franceinfo
+- Édouard Philippe : 1988, bac à Bonn ; 1995, ENA ; 1997, Conseil d'État — vie-publique.fr, franceinfo
+- Gabriel Attal : 2007 et 2013, Sciences Po ; École alsacienne sans année de bac — Les Echos
+- Marine Tondelier : 2009, IEP de Lille ; 2011, diplôme puis collaboratrice — France 24
+- Jean-Luc Mélenchon : 1968, terminale ; 1969, faculté de Besançon ; 1976, professeur — France 3
+
+Les autres fiches n'ont pas reçu d'étape : aucune page relue ne datait les études.
+
 ## 2026-11-11 — v29
 
 Tu ranges Marine Le Pen dans « Candidats à la présidentielle 2027 », sans deuxième fiche. Le rôle, la photo et le parcours restent. Tu ajoutes la phrase du 20 heures de TF1, le 7 juillet 2026.

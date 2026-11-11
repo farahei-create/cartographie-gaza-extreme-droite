@@ -1021,15 +1021,16 @@
     var steps = n.parcours.slice().sort(function (a, b) { return String(a.date).localeCompare(String(b.date)); });
     return '<section class="parcours" id="parcours" aria-labelledby="parcours-title"><div class="parcours-h"><h2 class="h-sec" id="parcours-title">Parcours <span class="h-n">' + steps.length + "</span></h2>" +
       '<p class="parcours-lead">' + (n.type === "person"
-        ? "Étapes datées, de la première fonction documentée ici jusqu'au statut actuel. Une pastille n'apparaît que si la source nomme qui a désigné, nommé, confié ou chargé."
+        ? "Étapes datées, des études documentées jusqu'au statut actuel. Le repère Formation marque la scolarité, un diplôme ou le premier métier. Une pastille n'apparaît que si la source nomme qui a désigné, nommé, confié ou chargé."
         : "Frise courte : création, rachat, direction ou ligne, seulement quand une source le décrit.") + "</p></div>" +
       '<ol class="p-rail">' + steps.map(function (s, i) {
         var who = s.by && byId[s.by] ? byId[s.by] : null;
         var last = i === steps.length - 1;
-        return '<li class="p-step' + (last ? " is-now" : "") + '" style="--i:' + i + '"><time datetime="' + esc(s.date) + '">' + fmtDate(s.date) + "</time>" +
+        var form = s.kind === "formation";
+        return '<li class="p-step' + (form ? " is-formation" : "") + (last ? " is-now" : "") + '" style="--i:' + i + '"><time datetime="' + esc(s.date) + '">' + fmtDate(s.date) + "</time>" +
           '<article class="p-card"><h3>' + esc(s.title) + "</h3><p>" + esc(s.text) + "</p>" +
           (who ? '<a class="p-by" href="' + ficheHref(who) + '#parcours">' + avatar(who, "av-xs") + "<span><strong>" + esc(who.name) + "</strong><em>" + esc(s.verb || "") + "</em></span></a>" : "") +
-          '<div class="meta">' + srcLink(s.url, s.source || "Lire la source") + archLink(s) + "</div></article></li>";
+          '<div class="meta">' + (form ? '<span class="nat nat-formation">Formation</span>' : "") + srcLink(s.url, s.source || "Lire la source") + archLink(s) + "</div></article></li>";
       }).join("") + "</ol></section>";
   }
   function bindFiche() {

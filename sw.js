@@ -3,7 +3,7 @@
    - pages (navigation) : réseau d'abord, index.html en cache en secours ;
    - autres fichiers du site : cache, puis mise à jour en arrière-plan.
    Les requêtes vers d'autres domaines (sources, YouTube, archives) ne sont pas interceptées. */
-var VERSION = "onrecord-v29";
+var VERSION = "onrecord-v30";
 var SHELL = [
   "./", "index.html", "style.css", "app.js", "config.js", "data.json", "manifest.webmanifest",
   "vendor/vis-network.min.js",
