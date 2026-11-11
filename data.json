@@ -4,13 +4,13 @@
     "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-11 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
       "persons": 57,
-      "orgs": 54,
-      "edges": 172,
-      "statements": 203,
+      "orgs": 55,
+      "edges": 174,
+      "statements": 209,
       "photos": 41,
       "logos": 21,
-      "videos": 16,
-      "france_nodes": 76
+      "videos": 17,
+      "france_nodes": 77
     },
     "category_order": [
       "Responsables politiques",
@@ -615,6 +615,32 @@
           "url": "https://x.com/J_Bardella/status/2118813222325153989",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "Il n’y a pas de racisme systémique en France. Sinon pourquoi plus de 500.000 personnes voudraient venir chaque année dans notre pays? J’en ai ras le bol qu’on mette systématiquement la France sur le banc des accusés",
+          "date": "2026-11-10",
+          "medium": "« Face à BFM » (BFMTV), 10 novembre 2026, cité par BFMTV. Il revient sur l'entretien de Marine Le Pen à CBS (« 60 Minutes ») où elle dit que la France est « le pays le moins raciste du monde », et se dit d'accord « à 300% ». Dans la même émission, interrogé sur l'attentat de Trappes et sur les accusations visant le RN, il répond : « nous avons condamné ce drame », et met en cause des « dirigeants de gauche et d'extrême gauche ».",
+          "url": "https://www.bfmtv.com/politique/front-national/etat-pro-police-racisme-reforme-des-retraites-ce-qu-il-faut-retenir-du-face-a-bfm-de-jordan-bardella_AN-202611100999.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261111191418/https://www.bfmtv.com/politique/front-national/etat-pro-police-racisme-reforme-des-retraites-ce-qu-il-faut-retenir-du-face-a-bfm-de-jordan-bardella_AN-202611100999.html",
+          "archived": "2026-11-11"
+        },
+        {
+          "quote": "Une petite victoire de la démocratie et de la liberté : la délirante pétition d'extrême gauche appelant à la censure de CNews, média régulièrement suivi par des millions de Français, ne passera pas l'étape de la commission parlementaire, grâce aux voix des élus Rassemblement National.",
+          "date": "2026-11-10",
+          "medium": "Message publié sur son compte X officiel (@J_Bardella) le 10 novembre 2026 à 14 h 39 UTC, après le classement de la pétition « Supprimer CNews de l'audiovisuel français » par la commission des affaires culturelles de l'Assemblée nationale (28 voix contre 25). Le message se termine par : « Face aux tentations totalitaires de l'extrême gauche, la vigilance doit être permanente ! » France 24, avec l'AFP, cite le même message. Les auteurs de la pétition comparaient CNews à « une machine de propagande », ce que la chaîne conteste en disant défendre la liberté d'expression (France 24).",
+          "url": "https://x.com/J_Bardella/status/2120164408357740552",
+          "theme": "Médias – structure",
+          "section": "france"
+        },
+        {
+          "quote": "Le temps n'est plus à voter pour des partis à 4%: l'enjeu, c'est de gagner cette élection. Quand on est patriote comme le sont les électeurs d'Eric Zemmour, quand on est traversé par l'angoisse existentielle de voir la France disparaître, alors il faut se rassembler.",
+          "date": "2026-11-10",
+          "medium": "Message avec extrait vidéo publié sur son compte X officiel (@J_Bardella) le 10 novembre 2026 à 23 h 08 UTC, le soir de son passage dans « Face à BFM » et de l'annonce de candidature d'Éric Zemmour sur TF1. Il s'adresse aux électeurs d'Éric Zemmour ; le message ne nomme pas d'accord entre partis.",
+          "url": "https://x.com/J_Bardella/status/2120292537067847764",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -965,6 +991,24 @@
           "theme": "France – normalisation de l'extrême droite",
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261111105005/https://www.bfmtv.com/politique/elections/presidentielle/je-suis-bien-candidat-eric-zemmour-confirme-se-presenter-a-l-election-presidentielle_AN-202611100873.html",
+          "archived": "2026-11-11"
+        },
+        {
+          "quote": "Je ne veux pas seulement contrôler les flux migratoires, je veux qu'il y ait moins d'immigrés à la fin de mon quinquennat",
+          "date": "2026-11-10",
+          "medium": "Journal de 20 heures de TF1, 10 novembre 2026, jour de l'annonce de sa candidature, cité par RTL. Selon RTL, il chiffre cette baisse à « deux millions », en comptant par exemple « les prisonniers, les délinquants, les criminels étrangers », et ajoute : « Cela n'a rien de criminel ni de barbare ». Le Bien public, avec l'AFP, écrit qu'il veut aussi expulser « les chômeurs étrangers de plus de six mois », même en situation régulière, et rapporte que Dominique Sopo, président de SOS Racisme, juge que cette candidature pose « un problème républicain ».",
+          "url": "https://www.rtl.fr/actu/politique/je-me-presente-pour-conserver-une-france-francaise-eric-zemmour-officialise-sa-candidature-a-la-presidentielle-2027-7900694983",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "video": {
+            "url": "https://www.tf1info.fr/politique/videos/video-presidentielle-2027-eric-zemmour-officialise-sa-candidature-au-20h-de-tf1-4341-2475122.html",
+            "platform": "tf1info.fr",
+            "title": "Présidentielle 2027 : Éric Zemmour officialise sa candidature au 20H de TF1",
+            "source": "TF1 Info (site officiel)",
+            "archive_url": "https://web.archive.org/web/20261111191622/https://www.tf1info.fr/politique/videos/video-presidentielle-2027-eric-zemmour-officialise-sa-candidature-au-20h-de-tf1-4341-2475122.html",
+            "archived": "2026-11-11"
+          },
+          "archive_url": "https://web.archive.org/web/20261111191547/https://www.rtl.fr/actu/politique/je-me-presente-pour-conserver-une-france-francaise-eric-zemmour-officialise-sa-candidature-a-la-presidentielle-2027-7900694983",
           "archived": "2026-11-11"
         }
       ],
@@ -4454,7 +4498,9 @@
           "medium": "BFMTV-RMC, 9 novembre 2026, cité par BFMTV. Elle évoque la condamnation d'Éric Zemmour en 2011 pour provocation à la haine raciale, en défendant sa candidature à la présidentielle. La rubrique VRAI/FAUX de BFMTV conclut que l'affirmation est fausse : Gérald Darmanin n'a jamais justifié des contrôles au faciès ; BFMTV rappelle qu'il a toutefois lié à plusieurs reprises immigration et délinquance (Le Figaro, août 2022).",
           "url": "https://www.bfmtv.com/politique/reconquete/vrai-faux-gerald-darmanin-a-t-il-dit-la-meme-chose-qu-eric-zemmour-sur-l-immigration-et-la-delinquance-comme-l-affirme-sarah-knafo_AV-202611090761.html",
           "theme": "France – normalisation de l'extrême droite",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261111190742/https://www.bfmtv.com/politique/reconquete/vrai-faux-gerald-darmanin-a-t-il-dit-la-meme-chose-qu-eric-zemmour-sur-l-immigration-et-la-delinquance-comme-l-affirme-sarah-knafo_AV-202611090761.html",
+          "archived": "2026-11-11"
         }
       ],
       "sections": [
@@ -4718,7 +4764,9 @@
           "title": "Direction générale déléguée de Grasset",
           "text": "Hachette Livre, dont Vincent Bolloré est l'actionnaire de référence selon franceinfo, annonce sa nomination comme directrice générale déléguée des éditions Grasset, aux côtés du PDG Jean-Christophe Thiery. Elle reste PDG de Fayard. La nomination intervient sept mois après le départ d'Olivier Nora, qui a dirigé Grasset pendant vingt-six ans.",
           "url": "https://www.franceinfo.fr/culture/livres/lise-boell-ancienne-editrice-d-eric-zemmour-nommee-directrice-generale-deleguee-des-editions-grasset_8275976.html",
-          "source": "franceinfo"
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20261110191526/https://www.franceinfo.fr/culture/livres/lise-boell-ancienne-editrice-d-eric-zemmour-nommee-directrice-generale-deleguee-des-editions-grasset_8275976.html",
+          "archived": "2026-11-10"
         }
       ],
       "sphere": "edition"
@@ -4882,7 +4930,18 @@
       "type": "person",
       "role": "Trésorier du Rassemblement national, selon franceinfo (25 juin 2025)",
       "description": "Dans un article du 25 juin 2025 sur le financement de la campagne de 2027, franceinfo le désigne deux fois comme « le trésorier » du parti et lui attribue l'indication selon laquelle des dossiers seraient envoyés à une cinquantaine de banques. L'article ne date pas le début de cette fonction. Le communiqué du congrès de 2021 sur le site du RN n'a pas répondu (redirection) : il n'est pas utilisé.",
-      "statements": [],
+      "statements": [
+        {
+          "quote": "accord juridique sur la faisabilité et la solidité du dossier du parti a été trouvé avec deux banques européennes",
+          "date": "2026-11-10",
+          "medium": "Propos recueillis par franceinfo (« Info franceinfo », 10 novembre 2026), qui le présente comme le trésorier du parti. Il se dit « assez optimiste » au vu de « discussions très avancées ». Selon franceinfo, les deux banques ne sont pas nommées et sont situées dans deux pays différents ; aucune banque française n'a accepté à ce jour de prêter au RN pour la campagne de Marine Le Pen ; le parti cherche 10,6 millions d'euros. Un accord pourrait aboutir « d'ici la fin du mois », selon un cadre du parti cité par franceinfo. Il s'agit d'un pré-accord, pas d'un prêt signé.",
+          "url": "https://www.franceinfo.fr/politique/front-national/info-franceinfo-le-rn-a-un-obtenu-un-pre-accord-de-deux-banques-europeennes-pour-financer-sa-campagne-pour-la-presidentielle_8276195.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261111191327/https://www.franceinfo.fr/politique/front-national/info-franceinfo-le-rn-a-un-obtenu-un-pre-accord-de-deux-banques-europeennes-pour-financer-sa-campagne-pour-la-presidentielle_8276195.html",
+          "archived": "2026-11-11"
+        }
+      ],
       "sections": [
         "france"
       ],
@@ -4897,6 +4956,15 @@
           "source": "franceinfo",
           "archive_url": "https://web.archive.org/web/20251107125844/https://www.franceinfo.fr/politique/front-national/affaire-des-assistants-fn-au-parlement-europeen/presidentielle-2027-comment-les-condamnations-du-rn-l-empechent-de-preparer-le-financement-de-la-future-campagne_7337280.html",
           "archived": "2025-11-07"
+        },
+        {
+          "date": "2026-11-10",
+          "title": "Pré-accord bancaire pour 2027",
+          "text": "franceinfo, qui le présente comme trésorier du RN, rapporte qu'un pré-accord a été trouvé avec deux banques européennes non nommées pour un prêt destiné à la campagne présidentielle de Marine Le Pen ; le parti cherche 10,6 millions d'euros.",
+          "url": "https://www.franceinfo.fr/politique/front-national/info-franceinfo-le-rn-a-un-obtenu-un-pre-accord-de-deux-banques-europeennes-pour-financer-sa-campagne-pour-la-presidentielle_8276195.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20261111191327/https://www.franceinfo.fr/politique/front-national/info-franceinfo-le-rn-a-un-obtenu-un-pre-accord-de-deux-banques-europeennes-pour-financer-sa-campagne-pour-la-presidentielle_8276195.html",
+          "archived": "2026-11-11"
         }
       ],
       "sphere": "partis",
@@ -5073,7 +5141,9 @@
           "medium": "Communiqué de Hachette Livre, cité par franceinfo avec AFP (10 novembre 2026), sur la nomination de Lise Boëll comme directrice générale déléguée des éditions Grasset. franceinfo rappelle que Fayard, qu'elle dirige toujours, publie notamment Sarah Knafo, Charles Alloncle, Jordan Bardella et Philippe de Villiers.",
           "url": "https://www.franceinfo.fr/culture/livres/lise-boell-ancienne-editrice-d-eric-zemmour-nommee-directrice-generale-deleguee-des-editions-grasset_8275976.html",
           "theme": "Médias – structure",
-          "section": "france"
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261110191526/https://www.franceinfo.fr/culture/livres/lise-boell-ancienne-editrice-d-eric-zemmour-nommee-directrice-generale-deleguee-des-editions-grasset_8275976.html",
+          "archived": "2026-11-10"
         }
       ],
       "sections": [
@@ -5114,7 +5184,9 @@
           "title": "Grasset",
           "text": "PDG de Hachette Livre selon franceinfo, il est cité dans le communiqué annonçant la nomination de Lise Boëll comme directrice générale déléguée des éditions Grasset.",
           "url": "https://www.franceinfo.fr/culture/livres/lise-boell-ancienne-editrice-d-eric-zemmour-nommee-directrice-generale-deleguee-des-editions-grasset_8275976.html",
-          "source": "franceinfo"
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20261110191526/https://www.franceinfo.fr/culture/livres/lise-boell-ancienne-editrice-d-eric-zemmour-nommee-directrice-generale-deleguee-des-editions-grasset_8275976.html",
+          "archived": "2026-11-10"
         }
       ],
       "sphere": "argent",
@@ -6040,6 +6112,30 @@
         }
       ],
       "sphere": "partis"
+    },
+    {
+      "id": "france-terre-dasile",
+      "name": "France terre d'asile",
+      "type": "org",
+      "role": "Association d'accueil des demandeurs d'asile et des réfugiés",
+      "description": "Sud Ouest, avec l'AFP, la présente le 10 novembre 2026 comme un opérateur public chargé de l'accueil des demandeurs d'asile et des réfugiés, dirigé par Jean-François Beaugrand. Le même jour, avec l'association Désinfox-Migrations (chercheurs et citoyens), elle annonce avoir saisi l'Arcom au sujet de quatre séquences diffusées sur CNews et Europe 1, et publie le rapport « Pour un débat éclairé sur les migrations ». Une saisine n'est pas une décision : l'Arcom ne s'est pas prononcée publiquement à ce stade.",
+      "statements": [
+        {
+          "quote": "Nous sommes sidérés de l’état du débat public sur le sujet de l’immigration, de la multiplication des fausses informations sur le sujet, comme la mise en avant de la fausse théorie du grand remplacement ou d’un prétendu appel d’air",
+          "date": "2026-11-10",
+          "medium": "Jean-François Beaugrand, directeur général de France terre d'asile, en conférence de presse, cité par Sud Ouest avec l'AFP. Il ajoute : « Nous ne sommes pas opposés au débat public sur la question migratoire, on peut avoir des désaccords sur les orientations politiques, mais il doit se faire à partir de bases objectives et sourcées ». Selon Sud Ouest, les deux associations ont saisi l'Arcom pour la reprise « sans contradiction » d'affirmations « manifestement erronées » liées à la théorie du « grand remplacement » sur CNews et Europe 1 les 17 et 18 septembre. Le communiqué des associations parle de « quatre séquences ». Les articles lus ne rapportent pas de réponse de CNews ni d'Europe 1.",
+          "url": "https://www.sudouest.fr/international/immigration-un-collectif-de-scientifiques-sort-un-rapport-pour-retablir-les-faits-face-a-la-desinformation-31468731.php",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261110131748/https://www.sudouest.fr/international/immigration-un-collectif-de-scientifiques-sort-un-rapport-pour-retablir-les-faits-face-a-la-desinformation-31468731.php",
+          "archived": "2026-11-10"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Associations & représentants"
     }
   ],
   "edges": [
@@ -7889,7 +7985,9 @@
       "section": "france",
       "stories": [
         "nominations"
-      ]
+      ],
+      "archive_url": "https://web.archive.org/web/20261110191526/https://www.franceinfo.fr/culture/livres/lise-boell-ancienne-editrice-d-eric-zemmour-nommee-directrice-generale-deleguee-des-editions-grasset_8275976.html",
+      "archived": "2026-11-10"
     },
     {
       "source": "lfpi",
@@ -8104,6 +8202,28 @@
       ],
       "archive_url": "https://web.archive.org/web/20261010014657/https://www.leparisien.fr/societe/jai-honte-dappartenir-a-cette-generation-qui-est-louise-montangon-letudiante-candidate-rn-aux-municipales-qui-fustige-les-blocus-lyceens-08-10-2026-LORHOXBKGRGIRB7AKPWHQ2LWEA.php",
       "archived": "2026-10-10"
+    },
+    {
+      "source": "france-terre-dasile",
+      "target": "cnews",
+      "relation": "saisine de l'Arcom, avec Désinfox-Migrations, au sujet de séquences liées à la théorie du « grand remplacement » (annoncée le 10/11/2026 ; pas de décision de l'Arcom à ce stade)",
+      "url": "https://www.france-terre-asile.org/communiques-presse/communiques-de-presse/communique-france-terre-d-asile-et-desinfox-migrations-saisissent-l-arcom-et-publient-un-rapport-sur-la-desinformation-au-sujet-de-l-immigration",
+      "date": "2026-11-10",
+      "section": "france",
+      "nature": "opposition",
+      "archive_url": "https://web.archive.org/web/20261111191752/https://www.france-terre-asile.org/communiques-presse/communiques-de-presse/communique-france-terre-d-asile-et-desinfox-migrations-saisissent-l-arcom-et-publient-un-rapport-sur-la-desinformation-au-sujet-de-l-immigration",
+      "archived": "2026-11-11"
+    },
+    {
+      "source": "france-terre-dasile",
+      "target": "europe1",
+      "relation": "saisine de l'Arcom, avec Désinfox-Migrations, au sujet de séquences liées à la théorie du « grand remplacement » (annoncée le 10/11/2026 ; pas de décision de l'Arcom à ce stade)",
+      "url": "https://www.france-terre-asile.org/communiques-presse/communiques-de-presse/communique-france-terre-d-asile-et-desinfox-migrations-saisissent-l-arcom-et-publient-un-rapport-sur-la-desinformation-au-sujet-de-l-immigration",
+      "date": "2026-11-10",
+      "section": "france",
+      "nature": "opposition",
+      "archive_url": "https://web.archive.org/web/20261111191752/https://www.france-terre-asile.org/communiques-presse/communiques-de-presse/communique-france-terre-d-asile-et-desinfox-migrations-saisissent-l-arcom-et-publient-un-rapport-sur-la-desinformation-au-sujet-de-l-immigration",
+      "archived": "2026-11-11"
     }
   ]
 }
