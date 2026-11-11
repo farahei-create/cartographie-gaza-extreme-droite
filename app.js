@@ -1421,7 +1421,7 @@
   var POWER_TIERS = [
     { id: "evt", label: "Événements documentés", hint: "Fait public daté. Ce n'est pas une fonction permanente." },
     { id: "col", label: "Collectifs et groupes", hint: "Collectif, groupement ou organisation dissoute, d'après la fiche." },
-    { id: "asso", label: "Associations et représentants", hint: "Association, organisation représentative ou établissement, et la personne qui la représente." },
+    { id: "asso", label: "Associations et représentants", hint: "Association, organisation représentative, établissement ou institut de sondage, et la personne qui la représente." },
     { id: "jour", label: "Auteurs, journalistes et éditorialistes", hint: "Fonction d'auteur, de journaliste, d'éditorialiste ou d'animateur, d'après la fiche." },
     { id: "media", label: "Médias et maisons d'édition", hint: "Chaîne, radio, titre de presse ou maison d'édition, d'après la fiche." },
     { id: "elu", label: "Élus, candidats et dirigeants de parti", hint: "Mandat, candidature déclarée ou direction de parti, d'après la fiche." },
@@ -1450,7 +1450,10 @@
     "tugdual-denis": 3, "erik-tegner": 3, "donat-vidal-revel": 3, "constance-benque": 3,
     "prisma-media": 4, "frontieres": 4,
     "sarah-knafo": 5, "philippe-olivier": 5, "kevin-pfeffer": 5, "udr": 5,
-    "francois-durvye": 7, "alban-du-rostu": 7, "arnaud-lagardere": 7
+    "francois-durvye": 7, "alban-du-rostu": 7, "arnaud-lagardere": 7,
+    "ifop": 2, "opinionway": 2, "institut-csa": 2, "harris-interactive": 2, "toluna": 2, "elabe": 2,
+    "commission-des-sondages": 6,
+    "lfpi": 7, "havas": 7, "les-echos-le-parisien": 7, "lvmh": 7
   };
   /* Rangs publiés le 8 juillet 2026. La page publique donne le rang et la variation,
      pas le montant : aucun chiffre de fortune n'est donc affiché. */
@@ -1800,7 +1803,8 @@
     tout: "Tout",
     argent: "Suivre l'argent",
     medias: "Suivre les médias",
-    nominations: "Suivre les nominations"
+    nominations: "Suivre les nominations",
+    sondages: "Suivre les sondages"
   };
   var couStory = "tout", couSel = null, couStep = 0, couReady = false;
 
@@ -1842,7 +1846,9 @@
     var edges = couEdges();
     if (couStep >= edges.length) couStep = 0;
     var people = couPeople();
-    $("cou-lead").textContent = "Acteurs publics rangés par sphère. Un pont n'est affiché que s'il est daté et sourcé. Rien ici ne prête une intention.";
+    var lead = "Acteurs publics rangés par sphère. Un pont n'est affiché que s'il est daté et sourcé. Rien ici ne prête une intention.";
+    if (couStory === "sondages") lead += " Les ponts suivent des actionnariats et des commandes publiés. Les sondages liés au débat électoral, publiés ou diffusés, relèvent de la loi du 19 juillet 1977 et de la Commission des sondages.";
+    $("cou-lead").textContent = lead;
     $("cou-stories").innerHTML = Object.keys(COU_STORIES).map(function (k) {
       return '<button type="button" class="seg-b" role="tab" data-story="' + k + '" id="cou-story-' + k + '" aria-selected="' + (couStory === k ? "true" : "false") + '">' + esc(COU_STORIES[k]) + "</button>";
     }).join("");

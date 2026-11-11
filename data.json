@@ -1,16 +1,16 @@
 {
   "meta": {
-    "generated": "2026-11-10",
-    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-10 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
+    "generated": "2026-11-11",
+    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-11 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
       "persons": 56,
-      "orgs": 42,
-      "edges": 156,
-      "statements": 172,
+      "orgs": 53,
+      "edges": 165,
+      "statements": 184,
       "photos": 41,
       "logos": 21,
       "videos": 16,
-      "france_nodes": 63
+      "france_nodes": 74
     },
     "category_order": [
       "Responsables politiques",
@@ -913,6 +913,15 @@
           "archived": "2026-08-24"
         },
         {
+          "date": "2021-10-06",
+          "title": "Sondage Harris Interactive pour Challenges",
+          "text": "Challenges écrit qu'il « n’a toujours pas déclaré sa candidature » et que, « en moins d’un mois », il est « passant de 7% à 17% des intentions de vote ». L'enquête, en ligne du 1er au 4 octobre 2021, porte sur 1 310 personnes, dont 1 062 inscrites sur les listes électorales. L'article précise : « Les intentions de vote mesurent un rapport de force à un moment donné. Elles ne peuvent en aucun cas être considérées comme étant prédictives des résultats du scrutin. »",
+          "url": "https://www.challenges.fr/politique/presidentielle-2022-eric-zemmour-double-marine-le-pen-et-s-envole-vers-le-second-tour_783521",
+          "source": "Challenges",
+          "archive_url": "https://web.archive.org/web/20260521225413/https://www.challenges.fr/politique/presidentielle-2022-eric-zemmour-double-marine-le-pen-et-s-envole-vers-le-second-tour_783521",
+          "archived": "2026-05-21"
+        },
+        {
           "date": "2021-12-04",
           "title": "Direction de campagne",
           "text": "franceinfo présente Sarah Knafo comme directrice de sa campagne et de sa communication.",
@@ -929,6 +938,15 @@
           "source": "franceinfo",
           "archive_url": "https://web.archive.org/web/20251231214333/https://www.franceinfo.fr/elections/presidentielle/presidentielle-2022-premier-meeting-d-eric-zemmour-pour-lancer-sa-reconquete_4871171.html",
           "archived": "2025-12-31"
+        },
+        {
+          "date": "2022-04-10",
+          "title": "Premier tour",
+          "text": "Le 13 avril 2022, Laurent Fabius, président du Conseil constitutionnel, annonce les résultats officiels du premier tour du 10 avril : Eric Zemmour, 2 485 226 voix, soit 7,07 % des suffrages exprimés. Les deux candidats en tête sont Emmanuel Macron et Marine Le Pen.",
+          "url": "https://www.conseil-constitutionnel.fr/actualites/annonce-par-laurent-fabius-president-du-conseil-constitutionnel-des-resultats-officiels-du-premier",
+          "source": "Conseil constitutionnel",
+          "archive_url": "https://web.archive.org/web/20250322003216/https://www.conseil-constitutionnel.fr/actualites/annonce-par-laurent-fabius-president-du-conseil-constitutionnel-des-resultats-officiels-du-premier",
+          "archived": "2025-03-22"
         }
       ],
       "sphere": "partis"
@@ -1850,6 +1868,15 @@
           "source": "franceinfo",
           "archive_url": "https://web.archive.org/web/20261016124726/https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
           "archived": "2026-10-16"
+        },
+        {
+          "date": "2025-12-31",
+          "title": "Part dans Havas après la scission",
+          "text": "Le site du groupe indique qu'au 31 décembre 2025, à la suite de la scission de Vivendi, le Groupe Bolloré détient 30,4 % du capital et des droits de vote de Havas, de Canal+ et de Louis Hachette Group. Les Echos écrivent le 23 février 2026 que la famille dépasse 50 % de Havas, holdings comprises.",
+          "url": "https://www.bollore.com/fr/activites-et-participations-2/communication/",
+          "source": "Groupe Bolloré",
+          "archive_url": "https://web.archive.org/web/20260923082638/https://www.bollore.com/fr/activites-et-participations-2/communication/",
+          "archived": "2026-09-23"
         }
       ],
       "sphere": "argent"
@@ -2296,7 +2323,28 @@
       "type": "org",
       "role": "Hebdomadaire (Lagardère / Vivendi)",
       "description": "Dirigé par Geoffroy Lejeune depuis 2023.",
-      "statements": [],
+      "statements": [
+        {
+          "quote": "Le Top 50 du JDD, créé en 1988 avec l’Ifop, a été réalisé cette année par l’institut CSA, sur un échantillon représentatif de 1 006 Français âgés de 15 ans et plus.",
+          "date": "2026-01-04",
+          "medium": "Le Journal du dimanche, 4 janvier 2026 (Antonin André). L'article précise que 121 personnalités ont été soumises, et que l'étude s'est déroulée du 17 au 22 décembre 2025. Il place Jordan Bardella 4e (10e l'année précédente), Marine Le Pen 7e (11e), l'entrée de Marion Maréchal à la 30e place, Philippe de Villiers 37e (77e l'année précédente) et Nicolas Sarkozy 53e. Il cite trois livres chez Fayard : « Ce que veulent les Français » de Jordan Bardella (100 000 exemplaires), « Populicide » de Philippe de Villiers (175 000) et « Journal d’un prisonnier » de Nicolas Sarkozy (plus de 180 000).",
+          "url": "https://www.lejdd.fr/Societe/exclusif-top-50-jdd-decouvrez-les-personnalites-preferees-des-francais-165530",
+          "theme": "Médias – structure",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260222125442/https://www.lejdd.fr/Societe/exclusif-top-50-jdd-decouvrez-les-personnalites-preferees-des-francais-165530",
+          "archived": "2026-02-22"
+        },
+        {
+          "quote": "Le Monde soulevait que les sept responsables politiques arrivés en tête étaient tous publiés chez Fayard….",
+          "date": "2026-07-24",
+          "medium": "20 Minutes, 24 juillet 2026, à propos du Top 50 du JDD réalisé par CSA. La phrase est attribuée au Monde par 20 Minutes. L'article du JDD du 4 janvier 2026, lui, cite trois ouvrages Fayard (Bardella, Villiers, Sarkozy) et place en tête du classement général Jean-Jacques Goldman, Zinédine Zidane et Omar Sy. La page du Monde n'a pas renvoyé le corps de l'article le 11 novembre 2026.",
+          "url": "https://www.20minutes.fr/societe/4235898-20260724-bollore-arnault-independants-appartiennent-instituts-sondage",
+          "theme": "Médias – structure",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260910172411/https://www.20minutes.fr/societe/4235898-20260724-bollore-arnault-independants-appartiennent-instituts-sondage",
+          "archived": "2026-09-10"
+        }
+      ],
       "sections": [
         "gaza",
         "france"
@@ -2328,6 +2376,15 @@
           "source": "Public Sénat",
           "archive_url": "https://web.archive.org/web/20260618173722/https://www.publicsenat.fr/actualites/societe/larrivee-de-geoffroy-lejeune-au-jdd-relance-le-debat-au-senat-sur-lindependance-des-medias",
           "archived": "2026-06-18"
+        },
+        {
+          "date": "2026-01-04",
+          "title": "Top 50 réalisé par CSA",
+          "text": "L'article dit le classement créé en 1988 avec l'Ifop, et réalisé cette année par CSA. Il donne les rangs de Jordan Bardella (4e), Marine Le Pen (7e), Marion Maréchal (30e), Philippe de Villiers (37e) et Nicolas Sarkozy (53e), et cite trois livres publiés chez Fayard.",
+          "url": "https://www.lejdd.fr/Societe/exclusif-top-50-jdd-decouvrez-les-personnalites-preferees-des-francais-165530",
+          "source": "Le JDD",
+          "archive_url": "https://web.archive.org/web/20260222125442/https://www.lejdd.fr/Societe/exclusif-top-50-jdd-decouvrez-les-personnalites-preferees-des-francais-165530",
+          "archived": "2026-02-22"
         }
       ],
       "sphere": "medias"
@@ -5020,6 +5077,471 @@
         }
       ],
       "sphere": "partis"
+    },
+    {
+      "id": "lfpi",
+      "name": "LFPI",
+      "type": "org",
+      "role": "Gestionnaire d'actifs",
+      "description": "Le Figaro du 25 juillet 2022 écrit qu'un communiqué commun de l'Ifop, de Dentressangle et de LFPI annonce la vente de l'institut au fonds LFPI. L'article présente LFPI comme l'un des premiers gestionnaires d'actifs indépendants multi-stratégies en Europe, avec 14 milliards d'euros d'actifs sous gestion. Cette fiche ne dit pas quelle part LFPI détient encore en novembre 2026 : le registre consulté ce jour-là ne publie pas la liste des actionnaires.",
+      "statements": [
+        {
+          "quote": "L'institut de sondage d'opinion et d'études de marché Ifop a été vendu par la famille Dentressangle au fonds LFPI, ont annoncé lundi les trois sociétés dans un communiqué commun, confirmant une information de la lettre A.",
+          "date": "2022-07-25",
+          "medium": "Le Figaro, avec l'AFP. Le même article rappelle que la famille Dentressangle était l'actionnaire majoritaire depuis fin 2016, après la famille Parisot. Le montant n'est pas indiqué. Stéphane Truchi, présenté comme patron du groupe Ifop, écrit à l'AFP : « Avec LFPI, un nouveau chapitre va s'écrire dans la longue et belle histoire du Groupe Ifop, avec l'ambition de poursuivre notre dynamique de croissance ».",
+          "url": "https://www.lefigaro.fr/flash-eco/l-ifop-vendu-par-la-famille-dentressangle-au-fonds-lfpi-20220725",
+          "theme": "Médias – structure",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260827224421/https://www.lefigaro.fr/flash-eco/l-ifop-vendu-par-la-famille-dentressangle-au-fonds-lfpi-20220725",
+          "archived": "2026-08-27"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Médias & propriétaires",
+      "subcategory": "Propriétaires, financeurs & groupes",
+      "parcours": [
+        {
+          "date": "2022-07-25",
+          "title": "Acquisition de l'Ifop annoncée",
+          "text": "Le Figaro rapporte le communiqué commun. L'entretien du groupe Ifop du 4 novembre 2022 parle d'un actionnaire majoritaire et d'une équipe de direction également au capital.",
+          "url": "https://www.lefigaro.fr/flash-eco/l-ifop-vendu-par-la-famille-dentressangle-au-fonds-lfpi-20220725",
+          "source": "Le Figaro",
+          "archive_url": "https://web.archive.org/web/20260827224421/https://www.lefigaro.fr/flash-eco/l-ifop-vendu-par-la-famille-dentressangle-au-fonds-lfpi-20220725",
+          "archived": "2026-08-27"
+        }
+      ],
+      "sphere": "argent"
+    },
+    {
+      "id": "ifop",
+      "name": "Ifop",
+      "type": "org",
+      "role": "Institut de sondages et d'études",
+      "description": "Le Figaro du 25 juillet 2022 rapporte la vente de l'Ifop par la famille Dentressangle au fonds LFPI. Le 4 novembre 2022, le site du groupe publie un entretien de Stéphane Truchi où LFPI est appelé nouvel actionnaire majoritaire, et où il dit l'équipe de direction également présente au capital. La page Pappers, mise à jour du RCS le 10 novembre 2026, désigne ETUDINVEST comme dirigeant. L'annonce BODACC du 27 décembre 2022, reproduite sur cette page, constate la nomination d'ETUDINVEST comme président et le départ de LFPI Gestion du conseil de surveillance, à l'occasion d'un changement de forme juridique. La liste des actionnaires n'est pas sur la page consultée. Le 24 juillet 2026, 20 Minutes écrit encore que l'Ifop « est détenu par des investisseurs financiers regroupés dans le fonds LFPI ».",
+      "statements": [
+        {
+          "quote": "L’annonce de la cession du Groupe Ifop avec l’arrivée de LFPI en tant que nouvel actionnaire majoritaire fait partie des évènements marquants de ces derniers mois dans le paysage des études marketing.",
+          "date": "2022-11-04",
+          "medium": "Site du groupe Ifop, introduction d'un entretien de Stéphane Truchi, alors présenté comme CEO, publié le 4 novembre 2022. Il répond : « nous ne sommes pas dans la course à la performance à tout prix, mais plutôt dans un LBO prudent, raisonnable, notre équipe managériale étant présente dans l’actionnariat ». La page Pappers consultée le 11 novembre 2026 ne publie pas les bénéficiaires effectifs et nomme ETUDINVEST comme dirigeant.",
+          "url": "https://www.ifopgroup.com/article/larrivee-de-lfpi-nous-ouvre-de-superbes-perspectives-de-developpement-interview-stephane-truchi/",
+          "theme": "Médias – structure",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261111072834/https://www.ifopgroup.com/article/larrivee-de-lfpi-nous-ouvre-de-superbes-perspectives-de-developpement-interview-stephane-truchi/",
+          "archived": "2026-11-11"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Instituts de sondage",
+      "parcours": [
+        {
+          "date": "1938",
+          "title": "Création indiquée par Le Figaro",
+          "text": "Le Figaro du 25 juillet 2022 parle de la « première entreprise de sondages d'opinion et d'études marketing à voir le jour en France en 1938 ».",
+          "url": "https://www.lefigaro.fr/flash-eco/l-ifop-vendu-par-la-famille-dentressangle-au-fonds-lfpi-20220725",
+          "source": "Le Figaro",
+          "archive_url": "https://web.archive.org/web/20260827224421/https://www.lefigaro.fr/flash-eco/l-ifop-vendu-par-la-famille-dentressangle-au-fonds-lfpi-20220725",
+          "archived": "2026-08-27"
+        },
+        {
+          "date": "2022-07-25",
+          "title": "Vente au fonds LFPI",
+          "text": "Un communiqué commun, rapporté par Le Figaro, annonce la vente par la famille Dentressangle au fonds LFPI. L'entretien du 4 novembre 2022 sur le site du groupe appelle LFPI l'actionnaire majoritaire et dit l'équipe de direction aussi au capital.",
+          "url": "https://www.lefigaro.fr/flash-eco/l-ifop-vendu-par-la-famille-dentressangle-au-fonds-lfpi-20220725",
+          "source": "Le Figaro",
+          "archive_url": "https://web.archive.org/web/20260827224421/https://www.lefigaro.fr/flash-eco/l-ifop-vendu-par-la-famille-dentressangle-au-fonds-lfpi-20220725",
+          "archived": "2026-08-27"
+        },
+        {
+          "date": "2022-12-27",
+          "title": "Présidence d'ETUDINVEST au registre",
+          "text": "L'annonce BODACC reproduite par Pappers constate la nomination d'ETUDINVEST comme président et le départ de LFPI Gestion du conseil de surveillance. La page, à jour du RCS le 10 novembre 2026, ne publie pas la liste des actionnaires.",
+          "url": "https://www.pappers.fr/entreprise/ifop-348698754",
+          "source": "Pappers",
+          "archive_url": "https://web.archive.org/web/20260223065231/https://www.pappers.fr/entreprise/ifop-348698754",
+          "archived": "2026-02-23"
+        },
+        {
+          "date": "2026-01-04",
+          "title": "Le JDD change d'institut pour le Top 50",
+          "text": "Le JDD écrit que le Top 50, créé en 1988 avec l'Ifop, est réalisé cette année par CSA.",
+          "url": "https://www.lejdd.fr/Societe/exclusif-top-50-jdd-decouvrez-les-personnalites-preferees-des-francais-165530",
+          "source": "Le JDD",
+          "archive_url": "https://web.archive.org/web/20260222125442/https://www.lejdd.fr/Societe/exclusif-top-50-jdd-decouvrez-les-personnalites-preferees-des-francais-165530",
+          "archived": "2026-02-22"
+        }
+      ],
+      "sphere": "idees"
+    },
+    {
+      "id": "lvmh",
+      "name": "LVMH",
+      "type": "org",
+      "role": "Groupe",
+      "description": "20 Minutes écrit le 24 juillet 2026 que le groupe Les Echos-Le Parisien est une filiale de LVMH. La page « Who we are » d'OpinionWay, lue le 11 novembre 2026, présente l'institut comme entré en 2022 dans « the Les Echos-Le Parisien Group (LVMH) ». Cette fiche ne décrit pas d'autre activité du groupe.",
+      "statements": [],
+      "sections": [
+        "france"
+      ],
+      "category": "Médias & propriétaires",
+      "subcategory": "Propriétaires, financeurs & groupes",
+      "parcours": [
+        {
+          "date": "2026-07-24",
+          "title": "Filiale nommée par 20 Minutes",
+          "text": "20 Minutes présente Les Echos-Le Parisien comme une filiale de LVMH et décrit le projet de mise en vente d'OpinionWay selon L'Informé.",
+          "url": "https://www.20minutes.fr/societe/4235898-20260724-bollore-arnault-independants-appartiennent-instituts-sondage",
+          "source": "20 Minutes",
+          "archive_url": "https://web.archive.org/web/20260910172411/https://www.20minutes.fr/societe/4235898-20260724-bollore-arnault-independants-appartiennent-instituts-sondage",
+          "archived": "2026-09-10"
+        }
+      ],
+      "sphere": "argent"
+    },
+    {
+      "id": "les-echos-le-parisien",
+      "name": "Les Echos-Le Parisien",
+      "type": "org",
+      "role": "Groupe de presse",
+      "description": "20 Minutes le présente le 24 juillet 2026 comme une filiale de LVMH, et écrit qu'il a racheté 75 % d'OpinionWay en 2022. Le même article écrit que, selon L'Informé en mai 2026, LVMH a prévu de mettre l'institut en vente. Il ne constate pas une cession signée. La page d'OpinionWay lue le 11 novembre 2026 présente toujours l'entrée dans ce groupe en 2022.",
+      "statements": [
+        {
+          "quote": "Racheté à 75 % en 2022 par le groupe Les Echos-Le Parisien, filiale du groupe LVMH du milliardaire Bernard Arnault, OpinionWay est scruté pour la même raison que CSA, car ses sondages ont pu alimenter des médias appartenant à son propre actionnaire.",
+          "date": "2026-07-24",
+          "medium": "20 Minutes, 24 juillet 2026. La phrase qui suit dans l'article : « Mais selon une information de l’Informé, publiée en mai, LVMH a prévu de mettre en vente l’institut. » L'article parle d'un projet de vente, pas d'une cession déjà signée. La page d'OpinionWay lue le 11 novembre 2026 écrit encore : « in 2022 it became part of the Les Echos-Le Parisien Group (LVMH) ».",
+          "url": "https://www.20minutes.fr/societe/4235898-20260724-bollore-arnault-independants-appartiennent-instituts-sondage",
+          "theme": "Médias – structure",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260910172411/https://www.20minutes.fr/societe/4235898-20260724-bollore-arnault-independants-appartiennent-instituts-sondage",
+          "archived": "2026-09-10"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Médias & propriétaires",
+      "subcategory": "Propriétaires, financeurs & groupes",
+      "parcours": [
+        {
+          "date": "2022",
+          "title": "Participation dans OpinionWay",
+          "text": "OpinionWay écrit être entré cette année-là dans le groupe. 20 Minutes précise le 24 juillet 2026 un rachat de 75 %, et un projet de revente non constaté comme signé.",
+          "url": "https://www.opinion-way.com/en/about-us/who-we-are/",
+          "source": "OpinionWay",
+          "archive_url": "https://web.archive.org/web/20260712185132/https://www.opinion-way.com/en/about-us/who-we-are/",
+          "archived": "2026-07-12"
+        }
+      ],
+      "sphere": "argent"
+    },
+    {
+      "id": "opinionway",
+      "name": "OpinionWay",
+      "type": "org",
+      "role": "Institut d'études et de sondages",
+      "description": "La page « Who we are », lue le 11 novembre 2026, écrit qu'en 2022 l'institut est entré dans le groupe Les Echos-Le Parisien (LVMH). 20 Minutes écrit le 24 juillet 2026 que ce rachat a porté sur 75 % du capital, et que LVMH a prévu, selon L'Informé en mai, de mettre l'institut en vente. Cette fiche ne présente pas la vente comme réalisée.",
+      "statements": [
+        {
+          "quote": "The OpinionWay Group has grown constantly since its creation, and in 2022 it became part of the Les Echos-Le Parisien Group (LVMH), with the aim of accelerating its development and internationalisation in order to better serve its clients.",
+          "date": "2022",
+          "medium": "Page « Who we are » d'OpinionWay, lue le 11 novembre 2026. La page mentionne aussi, plus bas, l'adhésion au réseau WIN comme partenaire exclusif pour la France depuis le 1er janvier 2026. Elle ne parle pas d'une cession. 20 Minutes, le 24 juillet 2026, écrit un projet de mise en vente selon L'Informé (mai 2026), sans en constater la signature.",
+          "url": "https://www.opinion-way.com/en/about-us/who-we-are/",
+          "theme": "Médias – structure",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260712185132/https://www.opinion-way.com/en/about-us/who-we-are/",
+          "archived": "2026-07-12"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Instituts de sondage",
+      "parcours": [
+        {
+          "date": "2022",
+          "title": "Entrée dans Les Echos-Le Parisien",
+          "text": "La page de l'institut écrit : « in 2022 it became part of the Les Echos-Le Parisien Group (LVMH) ». 20 Minutes, le 24 juillet 2026, parle d'un rachat de 75 % et d'un projet de mise en vente, sans en constater la signature.",
+          "url": "https://www.opinion-way.com/en/about-us/who-we-are/",
+          "source": "OpinionWay",
+          "archive_url": "https://web.archive.org/web/20260712185132/https://www.opinion-way.com/en/about-us/who-we-are/",
+          "archived": "2026-07-12"
+        }
+      ],
+      "sphere": "idees"
+    },
+    {
+      "id": "havas",
+      "name": "Havas",
+      "type": "org",
+      "role": "Groupe de communication coté",
+      "description": "CSA écrit le 13 février 2026 faire partie du groupe Havas depuis 2015. Havas est coté à Amsterdam depuis décembre 2024, après la scission de Vivendi. Le site du groupe Bolloré indique qu'au 31 décembre 2025 le groupe détient 30,4 % du capital et des droits de vote de Havas. Le 20 février 2026, Havas annonce que la Compagnie de l'Étoile des Mers, contrôlée par Bolloré Participations, a acquis près de 19 % supplémentaires, et qu'après apport de la part détenue via YB6 cette holding détiendrait environ 22 %. Les Echos écrivent le 23 février 2026 que la famille Bolloré détient plus de 50 % des actions.",
+      "statements": [
+        {
+          "quote": "In addition to the 30.4% stake held by Bolloré SE in Havas since its listing on Euronext Amsterdam in December 2024, Compagnie de l’Etoile des Mers, controlled by Bolloré Participations, has acquired over the past months close to 19% of Havas NV.",
+          "date": "2026-02-20",
+          "medium": "Communiqué de Havas NV, 20 février 2026. Le texte ajoute qu'à l'issue de l'apport de YB6, la Compagnie de l'Étoile des Mers « will hold approximately 22% » et que Yannick Bolloré, président-directeur général de Havas NV, en sera nommé président. Les Echos du 23 février 2026 titrent que la famille détient plus de la moitié du capital. Le site du groupe Bolloré, lu le 11 novembre 2026, maintient le chiffre de 30,4 % au 31 décembre 2025, après la scission de Vivendi.",
+          "url": "https://www.havas.com/press_release/havas-nv-announces-increased-shareholding-by-compagnie-de-letoile-des-mers/",
+          "theme": "Médias – structure",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260922025248/https://www.havas.com/press_release/havas-nv-announces-increased-shareholding-by-compagnie-de-letoile-des-mers/",
+          "archived": "2026-09-22"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Médias & propriétaires",
+      "subcategory": "Propriétaires, financeurs & groupes",
+      "parcours": [
+        {
+          "date": "2024-12",
+          "title": "Cotation après la scission de Vivendi",
+          "text": "Le communiqué du 20 février 2026 rappelle la cotation de Havas à Amsterdam en décembre 2024 et la part de 30,4 % détenue par Bolloré SE depuis cette cotation.",
+          "url": "https://www.havas.com/press_release/havas-nv-announces-increased-shareholding-by-compagnie-de-letoile-des-mers/",
+          "source": "Havas",
+          "archive_url": "https://web.archive.org/web/20260922025248/https://www.havas.com/press_release/havas-nv-announces-increased-shareholding-by-compagnie-de-letoile-des-mers/",
+          "archived": "2026-09-22"
+        },
+        {
+          "date": "2026-02-23",
+          "title": "Participation familiale",
+          "text": "Les Echos écrivent que la famille Bolloré détient plus de 50 % des actions, après les achats de la Compagnie de l'Étoile des Mers.",
+          "url": "https://www.lesechos.fr/tech-medias/medias/la-famille-bollore-detient-plus-de-la-majorite-du-capital-de-havas-2217523",
+          "source": "Les Echos",
+          "archive_url": "https://web.archive.org/web/20260225080714/https://www.lesechos.fr/tech-medias/medias/la-famille-bollore-detient-plus-de-la-majorite-du-capital-de-havas-2217523",
+          "archived": "2026-02-25"
+        }
+      ],
+      "sphere": "argent"
+    },
+    {
+      "id": "institut-csa",
+      "name": "Institut CSA",
+      "type": "org",
+      "role": "Institut d'études et de sondages",
+      "description": "CSA écrit le 13 février 2026, dans la présentation jointe à un communiqué de nominations : « CSA, dirigé par Yves Del Frate, CEO, fait partie du groupe Havas depuis 2015. » Le 4 janvier 2026, le JDD écrit que son Top 50, créé en 1988 avec l'Ifop, a été réalisé cette année par CSA. Havas n'est plus une filiale de Vivendi : le groupe est coté depuis la scission de décembre 2024. Voir la fiche Havas pour les pourcentages publiés en 2025 et 2026.",
+      "statements": [
+        {
+          "quote": "CSA, dirigé par Yves Del Frate, CEO, fait partie du groupe Havas depuis 2015.",
+          "date": "2026-02-13",
+          "medium": "Communiqué de CSA du 13 février 2026 (nominations de Xavier Terryn et Pierre Labarraque), rubrique « À propos de CSA ». Le 4 janvier 2026, le JDD écrit avoir fait réaliser son Top 50 par cet institut, sur 1 006 personnes interrogées du 17 au 22 décembre 2025.",
+          "url": "https://csa.eu/news/xavier-terryn-et-pierre-labarraque-nommes-partners-chez-csa/",
+          "theme": "Médias – structure",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260429124308/https://csa.eu/news/xavier-terryn-et-pierre-labarraque-nommes-partners-chez-csa/",
+          "archived": "2026-04-29"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Instituts de sondage",
+      "parcours": [
+        {
+          "date": "2015",
+          "title": "Entrée dans Havas",
+          "text": "Le communiqué du 13 février 2026 écrit que CSA « fait partie du groupe Havas depuis 2015 » et qu'Yves Del Frate en est le CEO.",
+          "url": "https://csa.eu/news/xavier-terryn-et-pierre-labarraque-nommes-partners-chez-csa/",
+          "source": "CSA",
+          "archive_url": "https://web.archive.org/web/20260429124308/https://csa.eu/news/xavier-terryn-et-pierre-labarraque-nommes-partners-chez-csa/",
+          "archived": "2026-04-29"
+        },
+        {
+          "date": "2026-01-04",
+          "title": "Top 50 du JDD",
+          "text": "Le JDD écrit que ce classement, créé en 1988 avec l'Ifop, est réalisé cette année par CSA, auprès de 1 006 personnes, du 17 au 22 décembre 2025.",
+          "url": "https://www.lejdd.fr/Societe/exclusif-top-50-jdd-decouvrez-les-personnalites-preferees-des-francais-165530",
+          "source": "Le JDD",
+          "archive_url": "https://web.archive.org/web/20260222125442/https://www.lejdd.fr/Societe/exclusif-top-50-jdd-decouvrez-les-personnalites-preferees-des-francais-165530",
+          "archived": "2026-02-22"
+        }
+      ],
+      "sphere": "idees"
+    },
+    {
+      "id": "toluna",
+      "name": "Toluna",
+      "type": "org",
+      "role": "Groupe d'études",
+      "description": "Le 28 septembre 2026, Toluna annonce que Harris Interactive a été acquis par Toluna en 2014, et que Nathalie Perrio-Combeaux, cofondatrice de Harris Interactive avec Patrick Van Bloeme, prend seule la direction de Toluna France le 29 septembre 2026. Le communiqué nomme Frederic Charles-Petit comme fondateur et CEO de Toluna. Il ne désigne pas un groupe de médias comme actionnaire.",
+      "statements": [
+        {
+          "quote": "Nathalie et Patrick Van Bloeme ont co-fondé Harris Interactive en 1995, contribuant à faire émerger les études en ligne en France, et ont dirigé l’entreprise ensemble depuis lors, devenant co-CEOs de Toluna France à la suite de l’acquisition de Harris Interactive par Toluna en 2014.",
+          "date": "2026-09-28",
+          "medium": "Communiqué de Toluna, Paris, 28 septembre 2026. Nathalie Perrio-Combeaux devient seule CEO de Toluna France le 29 septembre 2026. Patrick Van Bloeme quitte ses fonctions le 28 septembre. Le texte ne nomme pas de groupe de presse ou de chaîne au capital.",
+          "url": "https://tolunacorporate.com/fr/toluna-france-entre-dans-une-nouvelle-ere-avec-nathalie-perrio-combeaux-comme-ceo/",
+          "theme": "Médias – structure",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261111072953/https://tolunacorporate.com/fr/toluna-france-entre-dans-une-nouvelle-ere-avec-nathalie-perrio-combeaux-comme-ceo/",
+          "archived": "2026-11-11"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Instituts de sondage",
+      "parcours": [
+        {
+          "date": "2014",
+          "title": "Acquisition de Harris Interactive",
+          "text": "Le communiqué du 28 septembre 2026 rappelle cette acquisition et la direction commune de Nathalie Perrio-Combeaux et Patrick Van Bloeme jusqu'au 28 septembre 2026.",
+          "url": "https://tolunacorporate.com/fr/toluna-france-entre-dans-une-nouvelle-ere-avec-nathalie-perrio-combeaux-comme-ceo/",
+          "source": "Toluna",
+          "archive_url": "https://web.archive.org/web/20261111072953/https://tolunacorporate.com/fr/toluna-france-entre-dans-une-nouvelle-ere-avec-nathalie-perrio-combeaux-comme-ceo/",
+          "archived": "2026-11-11"
+        },
+        {
+          "date": "2026-09-29",
+          "title": "Direction de Toluna France",
+          "text": "Nathalie Perrio-Combeaux prend seule la direction. Frederic Charles-Petit est nommé dans le communiqué comme fondateur et CEO de Toluna.",
+          "url": "https://tolunacorporate.com/fr/toluna-france-entre-dans-une-nouvelle-ere-avec-nathalie-perrio-combeaux-comme-ceo/",
+          "source": "Toluna",
+          "archive_url": "https://web.archive.org/web/20261111072953/https://tolunacorporate.com/fr/toluna-france-entre-dans-une-nouvelle-ere-avec-nathalie-perrio-combeaux-comme-ceo/",
+          "archived": "2026-11-11"
+        }
+      ],
+      "sphere": "idees"
+    },
+    {
+      "id": "harris-interactive",
+      "name": "Harris Interactive",
+      "type": "org",
+      "role": "Institut d'études",
+      "description": "Toluna écrit le 28 septembre 2026 avoir acquis Harris Interactive en 2014. Le communiqué ne désigne pas d'autre actionnaire, ni un groupe de médias. Challenges du 6 octobre 2021 publie un sondage « Harris Interactive » pour Challenges sur les intentions de vote, qui place alors Éric Zemmour à 17 %.",
+      "statements": [],
+      "sections": [
+        "france"
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Instituts de sondage",
+      "parcours": [
+        {
+          "date": "2014",
+          "title": "Acquisition par Toluna",
+          "text": "Le communiqué de Toluna du 28 septembre 2026 date l'acquisition de 2014. Il ne nomme pas de groupe de médias.",
+          "url": "https://tolunacorporate.com/fr/toluna-france-entre-dans-une-nouvelle-ere-avec-nathalie-perrio-combeaux-comme-ceo/",
+          "source": "Toluna",
+          "archive_url": "https://web.archive.org/web/20261111072953/https://tolunacorporate.com/fr/toluna-france-entre-dans-une-nouvelle-ere-avec-nathalie-perrio-combeaux-comme-ceo/",
+          "archived": "2026-11-11"
+        },
+        {
+          "date": "2021-10-06",
+          "title": "Sondage pour Challenges",
+          "text": "Challenges publie le sondage Harris Interactive qui crédite Éric Zemmour de 17 %, après un passage de 7 % à 17 % « en moins d’un mois », et rappelle que ces intentions ne prédisent pas le scrutin.",
+          "url": "https://www.challenges.fr/politique/presidentielle-2022-eric-zemmour-double-marine-le-pen-et-s-envole-vers-le-second-tour_783521",
+          "source": "Challenges",
+          "archive_url": "https://web.archive.org/web/20260521225413/https://www.challenges.fr/politique/presidentielle-2022-eric-zemmour-double-marine-le-pen-et-s-envole-vers-le-second-tour_783521",
+          "archived": "2026-05-21"
+        }
+      ],
+      "sphere": "idees"
+    },
+    {
+      "id": "elabe",
+      "name": "Elabe",
+      "type": "org",
+      "role": "Cabinet d'études et de conseil",
+      "description": "Les mentions légales d'elabe.fr, lues le 11 novembre 2026, présentent l'éditeur comme « BERNARD SANANES CONSEILS – ELABE », SAS, et Bernard Sananes comme directeur de la publication et président. CB News du 5 septembre 2022 écrit que Bernard Sananès, Marie-Rose Beslin, Laurence Bedeau, Benoit Viala, Sandrine Raffin et Philippe Raffin deviennent actionnaires de la structure qui détiendra intégralement Elabe et LinkUp. Ni cette page ni les mentions légales ne nomment un groupe de médias.",
+      "statements": [
+        {
+          "quote": "Bernard Sananès, Marie-Rose Beslin, Laurence Bedeau, et Benoit Viala, associés au sein d’Elabe, ainsi que Sandrine Raffin et Philippe Raffin, associés au sein de LinkUp, deviennent actionnaires de la nouvelle structure qui détiendra intégralement le capital des deux sociétés, « gage d’indépendance et de vision de long terme », assure un communiqué, tandis que Bernard Sananès devient le président de cette structure.",
+          "date": "2022-09-05",
+          "medium": "CB News, 5 septembre 2022, citant le communiqué du rapprochement. Bernard Sananès en devient le président. Les mentions légales lues le 11 novembre 2026 désignent encore « BERNARD SANANES CONSEILS – ELABE » et Bernard Sananes comme président. Elles ne citent pas de groupe de médias.",
+          "url": "https://www.cbnews.fr/conseil/etudes-conseils-elabe-linkup-se-rapprochent",
+          "theme": "Médias – structure",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261111073025/https://www.cbnews.fr/conseil/etudes-conseils-elabe-linkup-se-rapprochent",
+          "archived": "2026-11-11"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Instituts de sondage",
+      "parcours": [
+        {
+          "date": "2022-09-05",
+          "title": "Actionnariat des associés",
+          "text": "CB News écrit que six associés d'Elabe et de LinkUp deviennent actionnaires de la structure qui détiendra les deux sociétés, et que Bernard Sananès en est le président.",
+          "url": "https://www.cbnews.fr/conseil/etudes-conseils-elabe-linkup-se-rapprochent",
+          "source": "CB News",
+          "archive_url": "https://web.archive.org/web/20261111073025/https://www.cbnews.fr/conseil/etudes-conseils-elabe-linkup-se-rapprochent",
+          "archived": "2026-11-11"
+        },
+        {
+          "date": "2026-11-11",
+          "title": "Mentions légales",
+          "text": "La page lue ce jour désigne « BERNARD SANANES CONSEILS – ELABE » et Bernard Sananes comme président. Elle ne nomme pas de groupe de médias.",
+          "url": "https://elabe.fr/mentions-legales/",
+          "source": "Elabe",
+          "archive_url": "https://web.archive.org/web/20261019171450/https://elabe.fr/mentions-legales/",
+          "archived": "2026-10-19"
+        }
+      ],
+      "sphere": "idees"
+    },
+    {
+      "id": "commission-des-sondages",
+      "name": "Commission des sondages",
+      "type": "org",
+      "role": "Autorité créée par la loi du 19 juillet 1977",
+      "description": "La loi n° 77-808 du 19 juillet 1977, dans le texte publié sur le site de la Commission, régit les sondages publiés ou diffusés qui portent sur le débat électoral. Elle ne s'applique pas, d'après cet article 1er, à toute enquête d'opinion. L'article 3 prévoit que la notice déposée avant publication indique, s'il y a lieu, la gratification versée aux personnes interrogées. Le site ne fixe aucun montant.",
+      "statements": [
+        {
+          "quote": "Sont régis par la présente loi les sondages publiés, diffusés ou rendus publics sur le territoire national, portant sur des sujets liés, de manière directe ou indirecte, au débat électoral.",
+          "date": "2016-04-25",
+          "medium": "Article 1er de la loi n° 77-808 du 19 juillet 1977, texte consolidé publié sur le site de la Commission des sondages. La page indique que l'article a été modifié par la loi n° 2016-508 du 25 avril 2016. Le même article définit le sondage comme une enquête par échantillon et vise aussi les simulations de vote réalisées à partir de ces sondages.",
+          "url": "https://www.commission-des-sondages.fr/lois/lois.htm",
+          "theme": "Nuance / contexte",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260226141801/https://www.commission-des-sondages.fr/lois/lois.htm",
+          "archived": "2026-02-26"
+        },
+        {
+          "quote": "S’il y a lieu, la nature et la valeur de la gratification perçue par les personnes interrogées",
+          "date": "2016-04-25",
+          "medium": "Article 3, 6°, de la même loi, sur la notice déposée à la Commission avant la publication d'un sondage entrant dans le champ de l'article 1er. La mention n'existe que « s'il y a lieu ». La page ne donne ni un barème ni un montant, pour OpinionWay ou pour un autre institut.",
+          "url": "https://www.commission-des-sondages.fr/lois/lois.htm",
+          "theme": "Nuance / contexte",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260226141801/https://www.commission-des-sondages.fr/lois/lois.htm",
+          "archived": "2026-02-26"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Institutions publiques",
+      "parcours": [
+        {
+          "date": "1977-07-19",
+          "title": "Loi sur certains sondages",
+          "text": "La loi n° 77-808 encadre la publication et la diffusion de certains sondages d'opinion. Le texte en ligne vise, à l'article 1er modifié en 2016, les sondages liés au débat électoral.",
+          "url": "https://www.commission-des-sondages.fr/lois/lois.htm",
+          "source": "Commission des sondages",
+          "archive_url": "https://web.archive.org/web/20260226141801/https://www.commission-des-sondages.fr/lois/lois.htm",
+          "archived": "2026-02-26"
+        },
+        {
+          "date": "2016-04-25",
+          "title": "Notice et gratification",
+          "text": "La loi du 25 avril 2016, dans le texte publié par la Commission, fait figurer dans la notice, s'il y a lieu, la nature et la valeur de la gratification perçue par les personnes interrogées.",
+          "url": "https://www.commission-des-sondages.fr/lois/lois.htm",
+          "source": "Commission des sondages",
+          "archive_url": "https://web.archive.org/web/20260226141801/https://www.commission-des-sondages.fr/lois/lois.htm",
+          "archived": "2026-02-26"
+        }
+      ],
+      "sphere": "institutions"
     }
   ],
   "edges": [
@@ -6870,6 +7392,134 @@
       "stories": [
         "nominations"
       ]
+    },
+    {
+      "source": "lfpi",
+      "target": "ifop",
+      "relation": "Le Figaro du 25 juillet 2022 rapporte la vente de l'Ifop au fonds LFPI. L'entretien du groupe, le 4 novembre 2022, parle d'un actionnaire majoritaire, l'équipe de direction étant aussi au capital. Le registre consulté le 11 novembre 2026 nomme ETUDINVEST comme président et ne publie pas les actionnaires",
+      "url": "https://www.lefigaro.fr/flash-eco/l-ifop-vendu-par-la-famille-dentressangle-au-fonds-lfpi-20220725",
+      "date": "2022-07-25",
+      "nature": "ascension",
+      "section": "france",
+      "stories": [
+        "sondages"
+      ],
+      "archive_url": "https://web.archive.org/web/20260827224421/https://www.lefigaro.fr/flash-eco/l-ifop-vendu-par-la-famille-dentressangle-au-fonds-lfpi-20220725",
+      "archived": "2026-08-27"
+    },
+    {
+      "source": "les-echos-le-parisien",
+      "target": "opinionway",
+      "relation": "OpinionWay écrit être entré en 2022 dans le groupe Les Echos-Le Parisien (LVMH). 20 Minutes, le 24 juillet 2026, parle d'un rachat de 75 % et d'un projet de mise en vente non constaté comme signé",
+      "url": "https://www.opinion-way.com/en/about-us/who-we-are/",
+      "date": "2022",
+      "nature": "ascension",
+      "section": "france",
+      "stories": [
+        "sondages"
+      ],
+      "archive_url": "https://web.archive.org/web/20260712185132/https://www.opinion-way.com/en/about-us/who-we-are/",
+      "archived": "2026-07-12"
+    },
+    {
+      "source": "lvmh",
+      "target": "les-echos-le-parisien",
+      "relation": "20 Minutes le présente le 24 juillet 2026 comme une filiale de LVMH",
+      "url": "https://www.20minutes.fr/societe/4235898-20260724-bollore-arnault-independants-appartiennent-instituts-sondage",
+      "date": "2026-07-24",
+      "nature": "ascension",
+      "section": "france",
+      "stories": [
+        "sondages"
+      ],
+      "archive_url": "https://web.archive.org/web/20260910172411/https://www.20minutes.fr/societe/4235898-20260724-bollore-arnault-independants-appartiennent-instituts-sondage",
+      "archived": "2026-09-10"
+    },
+    {
+      "source": "havas",
+      "target": "institut-csa",
+      "relation": "CSA écrit le 13 février 2026 faire partie du groupe Havas depuis 2015",
+      "url": "https://csa.eu/news/xavier-terryn-et-pierre-labarraque-nommes-partners-chez-csa/",
+      "date": "2015",
+      "nature": "ascension",
+      "section": "france",
+      "stories": [
+        "sondages"
+      ],
+      "archive_url": "https://web.archive.org/web/20260429124308/https://csa.eu/news/xavier-terryn-et-pierre-labarraque-nommes-partners-chez-csa/",
+      "archived": "2026-04-29"
+    },
+    {
+      "source": "vincent-bollore",
+      "target": "havas",
+      "relation": "le site du groupe indique qu'au 31 décembre 2025, après la scission de Vivendi, le Groupe Bolloré détient 30,4 % du capital et des droits de vote de Havas",
+      "url": "https://www.bollore.com/fr/activites-et-participations-2/communication/",
+      "date": "2025-12-31",
+      "nature": "ascension",
+      "section": "france",
+      "stories": [
+        "sondages"
+      ],
+      "archive_url": "https://web.archive.org/web/20260923082638/https://www.bollore.com/fr/activites-et-participations-2/communication/",
+      "archived": "2026-09-23"
+    },
+    {
+      "source": "vincent-bollore",
+      "target": "havas",
+      "relation": "Les Echos écrivent le 23 février 2026 que la famille Bolloré détient plus de 50 % des actions de Havas, après les achats de la Compagnie de l'Étoile des Mers",
+      "url": "https://www.lesechos.fr/tech-medias/medias/la-famille-bollore-detient-plus-de-la-majorite-du-capital-de-havas-2217523",
+      "date": "2026-02-23",
+      "nature": "ascension",
+      "section": "france",
+      "stories": [
+        "sondages"
+      ],
+      "archive_url": "https://web.archive.org/web/20260225080714/https://www.lesechos.fr/tech-medias/medias/la-famille-bollore-detient-plus-de-la-majorite-du-capital-de-havas-2217523",
+      "archived": "2026-02-25"
+    },
+    {
+      "source": "toluna",
+      "target": "harris-interactive",
+      "relation": "Toluna écrit le 28 septembre 2026 avoir acquis Harris Interactive en 2014. Le communiqué ne nomme pas de groupe de médias",
+      "url": "https://tolunacorporate.com/fr/toluna-france-entre-dans-une-nouvelle-ere-avec-nathalie-perrio-combeaux-comme-ceo/",
+      "date": "2014",
+      "nature": "ascension",
+      "section": "france",
+      "stories": [
+        "sondages"
+      ],
+      "archive_url": "https://web.archive.org/web/20261111072953/https://tolunacorporate.com/fr/toluna-france-entre-dans-une-nouvelle-ere-avec-nathalie-perrio-combeaux-comme-ceo/",
+      "archived": "2026-11-11"
+    },
+    {
+      "source": "institut-csa",
+      "target": "jdd",
+      "relation": "le JDD écrit le 4 janvier 2026 que son Top 50, créé en 1988 avec l'Ifop, a été réalisé cette année par l'institut CSA, auprès de 1 006 personnes du 17 au 22 décembre 2025",
+      "url": "https://www.lejdd.fr/Societe/exclusif-top-50-jdd-decouvrez-les-personnalites-preferees-des-francais-165530",
+      "date": "2026-01-04",
+      "nature": "coulisses",
+      "section": "france",
+      "stories": [
+        "sondages",
+        "medias"
+      ],
+      "archive_url": "https://web.archive.org/web/20260222125442/https://www.lejdd.fr/Societe/exclusif-top-50-jdd-decouvrez-les-personnalites-preferees-des-francais-165530",
+      "archived": "2026-02-22"
+    },
+    {
+      "source": "ifop",
+      "target": "jdd",
+      "relation": "le JDD écrit le 4 janvier 2026 que ce Top 50 a été créé en 1988 avec l'Ifop, et qu'il est réalisé cette année par CSA",
+      "url": "https://www.lejdd.fr/Societe/exclusif-top-50-jdd-decouvrez-les-personnalites-preferees-des-francais-165530",
+      "date": "2026-01-04",
+      "nature": "coulisses",
+      "section": "france",
+      "stories": [
+        "sondages",
+        "medias"
+      ],
+      "archive_url": "https://web.archive.org/web/20260222125442/https://www.lejdd.fr/Societe/exclusif-top-50-jdd-decouvrez-les-personnalites-preferees-des-francais-165530",
+      "archived": "2026-02-22"
     }
   ]
 }

@@ -4,6 +4,22 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-11 — v28
+
+Tu ajoutes les instituts dont l'actionnaire est documenté, et le récit « Suivre les sondages ». La vidéo TikTok n'est pas une source.
+
+- Ifop : vente au fonds LFPI annoncée le 25/07/2022 (Le Figaro) ; entretien du 04/11/2022 (actionnaire majoritaire, équipe aussi au capital) ; registre du 10/11/2026 : président ETUDINVEST, actionnaires non publiés — Le Figaro, ifopgroup.com, Pappers
+- OpinionWay : entré en 2022 dans Les Echos-Le Parisien (LVMH) ; 20 Minutes du 24/07/2026 parle d'un rachat de 75 % et d'un projet de vente non signé dans l'article — opinion-way.com, 20 Minutes
+- CSA : « fait partie du groupe Havas depuis 2015 » (communiqué du 13/02/2026). Havas coté depuis la scission de Vivendi ; Bolloré SE 30,4 % au 31/12/2025 ; famille au-dessus de 50 % le 23/02/2026 — CSA, bollore.com, Havas, Les Echos
+- Harris Interactive acquis par Toluna en 2014 ; pas de groupe de médias nommé dans le communiqué du 28/09/2026 — Toluna
+- Elabe : associés actionnaires selon CB News du 05/09/2022 ; mentions légales du 11/11/2026 sans groupe de médias — CB News, elabe.fr
+- Commission des sondages : loi du 19/07/1977, champ limité au débat électoral ; gratification « s'il y a lieu », sans montant — commission-des-sondages.fr
+- JDD, 04/01/2026 : Top 50 créé en 1988 avec l'Ifop, réalisé par CSA ; Bardella 4e, Le Pen 7e. 20 Minutes attribue au Monde la phrase sur les sept politiques de tête publiés chez Fayard. Le décompte « 4 de gauche sur 24 » n'est pas repris
+- Éric Zemmour : Challenges, 06/10/2021, de 7 % à 17 % en moins d'un mois dans le sondage Harris, avant candidature déclarée ; 7,07 % le 10/04/2022 — Challenges, Conseil constitutionnel
+- Odoxa non ajouté : la page lue nomme le président, pas l'actionnaire. Le 0,25 € des panels n'est pas publié
+
+Module : `v28_content.py`.
+
 ## 2026-11-10 (soir) — v27
 
 - CNews, 10/11/2026 : communiqué après le classement de la pétition « Supprimer CNews de l'audiovisuel français » par la commission des affaires culturelles (28 voix contre 25) — Le Parisien/AFP, franceinfo, site de l'Assemblée nationale
