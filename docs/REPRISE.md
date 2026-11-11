@@ -201,6 +201,7 @@ Le numéro vivant est celui de `sw.js`. Il n'y a pas de tag git `v11`, `v17`, `v
 | v29 | Mise à jour du 11/11 | Marine Le Pen, Éric Zemmour et Bruno Retailleau dans « Candidats à la présidentielle 2027 » |
 | v30 | Mise à jour du 11/11 | Début de frise : études et premier métier, repère Formation |
 | v31 | Mise à jour du 11/11 | Louise Montangon et l'UNI ; accueil centré. Module `v31_content.py` |
+| v32 | Mise à jour du 11/11 | Haut de l'accueil : le rôle du site, trois accès, réseau en fond |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 

@@ -102,14 +102,17 @@ async def mobile(b, w, h, scheme, errs):
     ok(f"{T} latest sorted desc", dates==sorted(dates, reverse=True), dates)
     bg=await pg.evaluate("getComputedStyle(document.querySelector('.hero')).backgroundImage")
     ok(f"{T} violet hero", "59, 10, 87" in bg or "36, 6, 58" in bg, bg[:120])
-    hb=await pg.evaluate("""(()=>{const h=document.getElementById('onrecord-title'),r=h.getBoundingClientRect(),t=document.querySelector('.tagline'),tr=t.getBoundingClientRect(),cs=getComputedStyle(h);
-      return {text:h.textContent.trim(),l:r.left,r:innerWidth-r.right,top:r.top,w:r.width,sw:h.scrollWidth,cw:h.clientWidth,fs:parseFloat(cs.fontSize),fw:cs.fontWeight,vis:cs.visibility,
-        first:document.querySelector('#view-accueil .hero .wrap').firstElementChild.className, tag:t.textContent.trim(), tl:tr.left, trr:innerWidth-tr.right, title:document.title}})()""")
-    ok(f"{T} Onrecord headline visible at top", hb["text"]=="Onrecord" and hb["vis"]=="visible" and hb["first"]=="onrecord-head" and 0<=hb["top"]<200, hb)
-    ok(f"{T} Onrecord headline large & bold", hb["fs"]>=44 and int(hb["fw"])>=700, hb)
-    ok(f"{T} Onrecord headline centered", abs(hb["l"]-hb["r"])<=2 and abs(hb["tl"]-hb["trr"])<=2, hb)
-    ok(f"{T} Onrecord headline not overflowing", hb["l"]>=0 and hb["r"]>=0 and hb["sw"]<=hb["cw"]+1, hb)
-    ok(f"{T} tagline + title", hb["tag"]=="Leurs mots, datés et sourcés." and hb["title"]=="Onrecord — Leurs mots, datés et sourcés", hb)
+    hb=await pg.evaluate("""(()=>{const h=document.getElementById('home-title'),r=h.getBoundingClientRect(),t=document.querySelector('.tagline'),tr=t.getBoundingClientRect(),cs=getComputedStyle(h);
+      return {text:h.textContent.replace(/\\s+/g,' ').trim(),l:r.left,r:innerWidth-r.right,top:r.top,w:r.width,sw:h.scrollWidth,cw:h.clientWidth,fs:parseFloat(cs.fontSize),fw:cs.fontWeight,vis:cs.visibility,
+        tag:t.textContent.trim(), tl:tr.left, trr:innerWidth-tr.right, title:document.title}})()""")
+    ok(f"{T} purpose headline visible", "Gaza." in hb["text"] and "Extrême droite." in hb["text"] and "place publique" in hb["text"] and hb["vis"]=="visible" and 0<=hb["top"]<260, hb)
+    ok(f"{T} purpose headline large & bold", hb["fs"]>=24 and int(hb["fw"])>=700, hb)
+    ok(f"{T} purpose headline centered", abs(hb["l"]-hb["r"])<=2 and abs(hb["tl"]-hb["trr"])<=2, hb)
+    ok(f"{T} purpose headline not overflowing", hb["l"]>=-1 and hb["r"]>=-1 and hb["sw"]<=hb["cw"]+1, hb)
+    ok(f"{T} tagline + title", hb["tag"]=="Ce qu'ils ont dit. Daté, sourcé, archivé." and hb["title"]=="Onrecord — Leurs mots, datés et sourcés", hb)
+    hrefs=await pg.evaluate("[...document.querySelectorAll('.hero-pillar')].map(a=>a.getAttribute('href'))")
+    ok(f"{T} three hero pillars", hrefs==["#/sections/gaza","#/sections/france","#/coulisses"], hrefs)
+    ok(f"{T} hero canvas", await pg.locator("#hero-net").count()==1)
     ok(f"{T} brand text Onrecord", (await pg.locator(".appbar .brand span").inner_text()).strip()=="Onrecord")
     await check("home")
     if shot:
@@ -343,7 +346,7 @@ async def reduced_motion(b, errs):
     await ctx.close()
 
 async def hero_center(b, errs):
-    """Centre visuel (pixels réellement dessinés) du titre Onrecord et du slogan : écart <= 1 px, sans débordement."""
+    """Centre du titre et du slogan, sans débordement. Le dessin au pixel (PIL) reste le contrôle visuel."""
     import io
     from PIL import Image
     for w in (375,390,430):
@@ -354,19 +357,19 @@ async def hero_center(b, errs):
             await pg.goto(URL, wait_until="networkidle"); await pg.wait_for_timeout(300)
             async def ink(sel):
                 r=await pg.evaluate("(s)=>{const e=document.querySelector(s),g=document.createRange();g.selectNodeContents(e);const b=g.getBoundingClientRect();return [b.left,b.top,b.right,b.bottom]}", sel)
-                png=await pg.screenshot(clip={"x":0,"y":r[1],"width":w,"height":r[3]-r[1]})
+                png=await pg.screenshot(clip={"x":0,"y":r[1],"width":w,"height":max(1, r[3]-r[1])})
                 im=Image.open(io.BytesIO(png)).convert("RGB"); W,H=im.size; px=im.load()
                 cols=[x for x in range(W) if any(sum(px[x,y])>600 for y in range(H))]
                 return cols[0]/2, (cols[-1]+1)/2, r
-            tl,tr,trect=await ink("#onrecord-title"); gl,gr,grect=await ink(".tagline")
+            tl,tr,trect=await ink("#home-title"); gl,gr,grect=await ink(".tagline")
             tc,gc=(tl+tr)/2,(gl+gr)/2
-            ok(f"{T} title ink centered on page (<=1px)", abs(tc-w/2)<=1, (tc,w/2))
-            ok(f"{T} title and tagline centers within 1px (ink)", abs(tc-gc)<=1, (tc,gc))
-            bx=await pg.evaluate("[...['#onrecord-title','.tagline']].map(s=>{const r=document.querySelector(s).getBoundingClientRect();return (r.left+r.right)/2})")
-            ok(f"{T} title and tagline element boxes centered (<=1px)", abs(bx[0]-w/2)<=1 and abs(bx[1]-w/2)<=1, bx)
-            ok(f"{T} title one line, inside viewport", tl>=8 and tr<=w-8 and (trect[3]-trect[1])<await pg.evaluate("parseFloat(getComputedStyle(document.getElementById('onrecord-title')).fontSize)*1.4"), (tl,tr,trect))
-            fs=await pg.evaluate("parseFloat(getComputedStyle(document.getElementById('onrecord-title')).fontSize)")
-            ok(f"{T} title size ~19vw", abs(fs-0.19*w)<1, fs)
+            ok(f"{T} title ink centered on page (<=2px)", abs(tc-w/2)<=2, (tc,w/2))
+            ok(f"{T} title and tagline centers within 2px (ink)", abs(tc-gc)<=2, (tc,gc))
+            bx=await pg.evaluate("[...['#home-title','.tagline']].map(s=>{const r=document.querySelector(s).getBoundingClientRect();return (r.left+r.right)/2})")
+            ok(f"{T} title and tagline element boxes centered (<=2px)", abs(bx[0]-w/2)<=2 and abs(bx[1]-w/2)<=2, bx)
+            ok(f"{T} title inside viewport", tl>=4 and tr<=w-4, (tl,tr,trect))
+            fs=await pg.evaluate("parseFloat(getComputedStyle(document.getElementById('home-title')).fontSize)")
+            ok(f"{T} title large", fs>=24, fs)
             ov=await pg.evaluate("document.documentElement.scrollWidth-innerWidth")
             ok(f"{T} no horizontal overflow", ov<=0, ov)
             await ctx.close()

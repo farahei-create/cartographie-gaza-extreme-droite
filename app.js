@@ -87,6 +87,8 @@
   var state = { themes: {}, types: {}, search: "" };
   var panelOpenedAt = 0;
 
+  initHeroMotion();
+
   fetch("data.json", { cache: "no-cache" })
     .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
     .then(init)
@@ -774,6 +776,293 @@
     var t = $("toast"); t.textContent = msg; t.hidden = false;
     requestAnimationFrame(function () { t.classList.add("show"); });
     clearTimeout(toast._t); toast._t = setTimeout(function () { t.classList.remove("show"); setTimeout(function () { t.hidden = true; }, 300); }, 2600);
+  }
+
+  /* ---------- Hero : réseau, inclinaison, appui ---------- */
+  function initHeroMotion() {
+    var hero = document.getElementById("home-hero");
+    var canvas = document.getElementById("hero-net");
+    if (!hero || !canvas || !canvas.getContext) return;
+    var ctx = canvas.getContext("2d", { alpha: true });
+    if (!ctx) return;
+    var reduce = MQ_RM.matches;
+    var N = 26;
+    var nodes = [], links = [], seen = {};
+    var px = [], py = [], pz = [], ps = [], order = [];
+    var cssW = 0, cssH = 0, ang = 0.5;
+    var ptr = { x: 0, y: 0, on: false, hot: 0 };
+    var running = false, raf = 0, onScreen = true, pageOn = true, lastT = 0;
+    var pointerActive = false;
+    var i, gold = Math.PI * (3 - Math.sqrt(5));
+    for (i = 0; i < N; i++) {
+      var yy = 1 - (i + 0.5) / N * 2;
+      var rr = Math.sqrt(Math.max(0, 1 - yy * yy));
+      var th = gold * i;
+      nodes.push({ bx: Math.cos(th) * rr, by: yy * 0.78, bz: Math.sin(th) * rr, dx: 0, dy: 0, dz: 0 });
+      px.push(0); py.push(0); pz.push(0); ps.push(1); order.push(i);
+    }
+    function link(a, b) {
+      if (a === b) return;
+      if (a > b) { var t = a; a = b; b = t; }
+      var k = a + ":" + b;
+      if (seen[k]) return;
+      seen[k] = 1;
+      links.push(a, b);
+    }
+    for (i = 0; i < N; i++) {
+      link(i, (i + 1) % N);
+      link(i, (i + 5) % N);
+      link(i, (i + 11) % N);
+    }
+    var WHITE_A = [], PINK_A = [], NODE_A = [];
+    for (i = 0; i <= 20; i++) {
+      var a = (i / 20).toFixed(2);
+      WHITE_A.push("rgba(255,255,255," + a + ")");
+      PINK_A.push("rgba(255,214,236," + a + ")");
+      NODE_A.push("rgba(255,255,255," + a + ")");
+    }
+    function aix(v) {
+      var n = (v * 20 + 0.5) | 0;
+      return n < 0 ? 0 : n > 20 ? 20 : n;
+    }
+    function resize() {
+      var dpr = Math.min(2, window.devicePixelRatio || 1);
+      var w = hero.clientWidth || 0;
+      var h = hero.clientHeight || 0;
+      if (w < 2 || h < 2) { cssW = 0; cssH = 0; return; }
+      var bw = Math.round(w * dpr), bh = Math.round(h * dpr);
+      if (canvas.width !== bw || canvas.height !== bh) {
+        canvas.width = bw;
+        canvas.height = bh;
+      }
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      cssW = w;
+      cssH = h;
+    }
+    function project(now) {
+      var sc = window.scrollY || 0;
+      var depth = sc * 0.0012;
+      if (depth > 0.9) depth = 0.9;
+      ang = reduce ? 0.5 : now * 0.00018;
+      var cosY = Math.cos(ang), sinY = Math.sin(ang);
+      var ax = 0.42 + Math.min(0.35, sc * 0.00045);
+      var cosX = Math.cos(ax), sinX = Math.sin(ax);
+      var zCam = 2.55 + depth;
+      var scale = Math.min(cssW, cssH) * 0.34;
+      var ox = cssW * 0.5;
+      var oy = cssH * 0.42 + Math.min(36, sc * 0.08);
+      for (var n = 0; n < N; n++) {
+        var node = nodes[n];
+        var x = node.bx + node.dx, y = node.by + node.dy, z = node.bz + node.dz;
+        var x1 = x * cosY - z * sinY;
+        var z1 = x * sinY + z * cosY;
+        var y2 = y * cosX - z1 * sinX;
+        var z2 = y * sinX + z1 * cosX;
+        var p = 1.65 / (zCam - z2);
+        px[n] = ox + x1 * p * scale;
+        py[n] = oy + y2 * p * scale;
+        pz[n] = z2;
+        ps[n] = p;
+      }
+    }
+    function step(dt) {
+      var k = dt / 16.67;
+      if (ptr.on) ptr.hot = 1;
+      else if (ptr.hot > 0.02) ptr.hot *= Math.pow(0.88, k);
+      else ptr.hot = 0;
+      if (ptr.hot > 0.02) {
+        var R = 132;
+        for (var n = 0; n < N; n++) {
+          var dx = px[n] - ptr.x, dy = py[n] - ptr.y;
+          var d2 = dx * dx + dy * dy;
+          if (d2 < R * R && d2 > 9) {
+            var d = Math.sqrt(d2);
+            var f = (1 - d / R) * 0.05 * k * ptr.hot;
+            nodes[n].dx += (dx / d) * f;
+            nodes[n].dy += (dy / d) * f * 0.85;
+          }
+        }
+      }
+      var decay = Math.pow(0.9, k);
+      for (n = 0; n < N; n++) {
+        var node = nodes[n];
+        node.dx *= decay; node.dy *= decay; node.dz *= decay;
+        var m = Math.sqrt(node.dx * node.dx + node.dy * node.dy + node.dz * node.dz);
+        if (m > 0.42) { var s = 0.42 / m; node.dx *= s; node.dy *= s; node.dz *= s; }
+      }
+    }
+    function paint() {
+      ctx.clearRect(0, 0, cssW, cssH);
+      var nLinks = links.length, a, b, n;
+      for (n = 0; n < nLinks; n += 2) {
+        a = links[n]; b = links[n + 1];
+        var near = 0;
+        if (ptr.hot > 0.02) {
+          var mx = (px[a] + px[b]) * 0.5, my = (py[a] + py[b]) * 0.5;
+          var ddx = mx - ptr.x, ddy = my - ptr.y;
+          var dd = Math.sqrt(ddx * ddx + ddy * ddy);
+          if (dd < 170) near = (1 - dd / 170) * ptr.hot;
+        }
+        var z = (pz[a] + pz[b]) * 0.5;
+        var alpha = 0.18 + (z + 1) * 0.1 + near * 0.7;
+        ctx.beginPath();
+        ctx.moveTo(px[a], py[a]);
+        ctx.lineTo(px[b], py[b]);
+        ctx.strokeStyle = near > 0.28 ? PINK_A[aix(alpha)] : WHITE_A[aix(alpha)];
+        ctx.lineWidth = 1 + near * 1.15;
+        ctx.stroke();
+      }
+      order.sort(function (ia, ib) { return pz[ia] - pz[ib]; });
+      for (n = 0; n < N; n++) {
+        i = order[n];
+        var rad = (1.7 + ps[i] * 1.5) * (0.85 + (pz[i] + 1) * 0.16);
+        ctx.beginPath();
+        ctx.arc(px[i], py[i], rad * 2.5, 0, 6.2832);
+        ctx.fillStyle = NODE_A[aix(0.05 + (pz[i] + 1) * 0.035)];
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(px[i], py[i], rad, 0, 6.2832);
+        ctx.fillStyle = NODE_A[aix(0.4 + (pz[i] + 1) * 0.14)];
+        ctx.fill();
+      }
+    }
+    function frame() {
+      if (!cssW) return;
+      project(reduce ? 0 : (lastT || 0));
+      paint();
+    }
+    var cards = hero.querySelectorAll(".hero-pillar");
+    function setTilt(card, rx, ry, press) {
+      card.style.transform = "rotateX(" + rx.toFixed(2) + "deg) rotateY(" + ry.toFixed(2) + "deg)" + (press ? " scale(.975)" : "");
+    }
+    function pointOn(card, e, press) {
+      var r = card.getBoundingClientRect();
+      var w = r.width || 1, h = r.height || 1;
+      var pxr = (e.clientX - r.left) / w;
+      var pyr = (e.clientY - r.top) / h;
+      card.style.setProperty("--rx", (pxr * 100) + "%");
+      card.style.setProperty("--ry", (pyr * 100) + "%");
+      if (reduce) return;
+      var ry = (pxr - 0.5) * 18;
+      var rx = (0.5 - pyr) * 16;
+      if (ry > 9) ry = 9; else if (ry < -9) ry = -9;
+      if (rx > 8) rx = 8; else if (rx < -8) rx = -8;
+      setTilt(card, rx, ry, press);
+    }
+    for (i = 0; i < cards.length; i++) {
+      (function (card) {
+        card.addEventListener("pointerdown", function (e) {
+          card.classList.add("is-pressed");
+          pointerActive = true;
+          pointOn(card, e, true);
+        });
+        card.addEventListener("pointermove", function (e) {
+          pointerActive = true;
+          pointOn(card, e, card.classList.contains("is-pressed"));
+        });
+        function release() {
+          pointerActive = false;
+          card.classList.remove("is-pressed");
+          if (!reduce) card.style.transform = "";
+        }
+        card.addEventListener("pointerup", release);
+        card.addEventListener("pointerleave", release);
+        card.addEventListener("pointercancel", release);
+      })(cards[i]);
+    }
+    var box = hero.querySelector(".home-search .search-box");
+    if (box) {
+      box.addEventListener("pointerdown", function () { box.classList.add("is-pressed"); });
+      function up() { box.classList.remove("is-pressed"); }
+      box.addEventListener("pointerup", up);
+      box.addEventListener("pointerleave", up);
+      box.addEventListener("pointercancel", up);
+    }
+    function placePtr(e) {
+      var r = hero.getBoundingClientRect();
+      ptr.x = e.clientX - r.left;
+      ptr.y = e.clientY - r.top;
+      ptr.on = true;
+    }
+    hero.addEventListener("pointermove", placePtr, { passive: true });
+    hero.addEventListener("pointerdown", placePtr, { passive: true });
+    hero.addEventListener("pointerup", function () { ptr.on = false; });
+    hero.addEventListener("pointerleave", function () { ptr.on = false; });
+    hero.addEventListener("pointercancel", function () { ptr.on = false; });
+    if (!reduce && window.matchMedia("(pointer: coarse)").matches) {
+      var oriAfter = 0, oriArmed = false;
+      var DOE = window.DeviceOrientationEvent;
+      function onOri(ev) {
+        if (pointerActive || performance.now() < oriAfter) return;
+        if (ev.gamma == null || ev.beta == null) return;
+        var ry = ev.gamma * 0.16, rx = (ev.beta - 48) * 0.1;
+        if (ry > 7) ry = 7; else if (ry < -7) ry = -7;
+        if (rx > 7) rx = 7; else if (rx < -7) rx = -7;
+        if (Math.abs(ry) < 0.6 && Math.abs(rx) < 0.6) return;
+        for (var c = 0; c < cards.length; c++) {
+          if (!cards[c].classList.contains("is-pressed")) setTilt(cards[c], rx, ry, false);
+        }
+      }
+      function armOri() {
+        if (!DOE || oriArmed) return;
+        oriArmed = true;
+        try {
+          if (typeof DOE.requestPermission === "function") {
+            DOE.requestPermission().then(function (state) {
+              if (state === "granted") {
+                oriAfter = performance.now() + 400;
+                window.addEventListener("deviceorientation", onOri);
+              }
+            }).catch(function () {});
+          } else {
+            oriAfter = performance.now() + 1100;
+            window.addEventListener("deviceorientation", onOri);
+          }
+        } catch (err) { oriArmed = false; }
+      }
+      if (DOE && typeof DOE.requestPermission !== "function") armOri();
+      hero.addEventListener("pointerdown", function (ev) {
+        if (ev.target.closest && ev.target.closest(".hero-pillar") && DOE && typeof DOE.requestPermission === "function") armOri();
+      });
+    }
+    function syncRun() {
+      resize();
+      var view = document.getElementById("view-accueil");
+      var want = !reduce && pageOn && onScreen && cssW > 0 && view && !view.hidden;
+      if (want && !running) {
+        running = true;
+        lastT = 0;
+        raf = requestAnimationFrame(tick);
+      } else if (!want && running) {
+        running = false;
+        if (raf) cancelAnimationFrame(raf);
+        raf = 0;
+      } else if (!want) frame();
+    }
+    function tick(now) {
+      if (!running) return;
+      var dt = lastT ? now - lastT : 16;
+      if (dt > 34) dt = 34;
+      lastT = now;
+      step(dt);
+      project(now);
+      paint();
+      raf = requestAnimationFrame(tick);
+    }
+    if ("ResizeObserver" in window) new ResizeObserver(syncRun).observe(hero);
+    else window.addEventListener("resize", syncRun);
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (ents) {
+        onScreen = !!(ents[0] && ents[0].isIntersecting);
+        syncRun();
+      }, { threshold: 0.05 }).observe(hero);
+    }
+    document.addEventListener("visibilitychange", function () {
+      pageOn = document.visibilityState !== "hidden";
+      syncRun();
+    });
+    window.addEventListener("hashchange", function () { setTimeout(syncRun, 0); });
+    syncRun();
   }
 
   /* ---------- Accueil ---------- */

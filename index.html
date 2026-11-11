@@ -43,15 +43,33 @@
 <main id="main">
   <!-- ACCUEIL -->
   <section id="view-accueil" class="view" aria-labelledby="home-title">
-    <div class="hero">
+    <div class="hero" id="home-hero">
+      <canvas class="hero-net" id="hero-net" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
       <div class="wrap">
-        <header class="onrecord-head">
-          <h1 class="onrecord" id="onrecord-title">Onrecord</h1>
-          <p class="tagline">Leurs mots, datés et sourcés.</p>
-        </header>
-        <p class="eyebrow">Gaza · extrême droite en France</p>
-        <h2 class="hero-title" id="home-title">Ce qu'ils ont dit. Daté, sourcé, archivé.</h2>
-        <p class="lead">Chaque phrase est reproduite telle que publiée, avec sa date et sa source. Le site ne qualifie ni les personnes ni leurs intentions.</p>
+        <div class="hero-copy">
+          <p class="eyebrow">Archive citoyenne · sourcée · gratuite</p>
+          <h1 class="hero-title" id="home-title"><span class="hero-line hero-line-1"><span class="hw">Gaza.</span> <span class="hw">Extrême</span> <span class="hw">droite.</span></span> <span class="hero-line hero-line-2"><span class="hw">Ce</span> <span class="hw">qu'ils</span> <span class="hw">ont</span> <span class="hw">dit,</span> <span class="hw">sur</span> <span class="hw">la</span> <span class="hw">place</span> <span class="hw">publique.</span></span></h1>
+          <p class="tagline">Ce qu'ils ont dit. Daté, sourcé, archivé.</p>
+          <p class="lead">Onrecord archive les déclarations des personnalités publiques sur Gaza et documente la normalisation de l'extrême droite en France : citations exactes, datées, sourcées, archivées. Et les liens entre les personnes, les médias, l'argent et les organisations.</p>
+        </div>
+        <nav class="hero-pillars" aria-label="Entrer dans l'archive">
+          <a class="hero-pillar" href="#/sections/gaza">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h8.5L19 8v12.5H6z"/><path d="M14.2 3.6V8H19"/><path d="M9 12.2h6M9 15.6h4"/></svg>
+            <strong>Déclarations sur Gaza</strong>
+            <small>Citations exactes, datées</small>
+          </a>
+          <a class="hero-pillar" href="#/sections/france">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="5" cy="6" r="1.25"/><circle cx="5" cy="12" r="1.25"/><circle cx="5" cy="18" r="1.25"/></svg>
+            <strong>Normalisation de l'extrême droite</strong>
+            <small>Faits publics, en France</small>
+          </a>
+          <a class="hero-pillar" href="#/coulisses">
+            <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"/><circle cx="5.2" cy="18" r="2"/><circle cx="18.8" cy="18" r="2"/><circle cx="12" cy="12.2" r="2"/><path d="M12 7v3.1M10.3 13.7 6.8 16.4M13.7 13.7l3.5 2.7"/></svg>
+            <strong>Les liens entre eux</strong>
+            <small>Personnes, médias, argent</small>
+          </a>
+        </nav>
         <form class="home-search" role="search" id="home-search-form" autocomplete="off">
           <label for="home-search" class="sr-only">Rechercher une personne, une organisation ou une citation</label>
           <div class="search-box"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><input id="home-search" type="search" placeholder="Nom, média, phrase" enterkeyhint="search"></div>

@@ -4,6 +4,10 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-11 — v32
+
+Tu refais seulement le haut de l'accueil. En deux secondes, on voit ce que le site fait : il archive les déclarations publiques sur Gaza, il documente la normalisation de l'extrême droite en France, et il montre les liens entre les personnes, les médias, l'argent et les organisations. Trois accès, au doigt : Gaza, France, Coulisses. Le fond est un réseau qui tourne lentement, s'écarte du doigt et s'éclaircit près du pointeur. Les cartes s'inclinent. Le reste de la page ne change pas : compteurs, citation du jour, dernières entrées, bouton Soutenir. Cache `onrecord-v32`.
+
 ## 2026-11-11 — v31
 
 Tu ajoutes Louise Montangon, 22 ans, responsable de l'UNI à Bordeaux, et le syndicat UNI. Pas de photo libre : monogramme. Tu recentres l'accueil.
