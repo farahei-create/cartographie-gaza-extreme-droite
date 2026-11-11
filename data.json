@@ -6,7 +6,7 @@
       "persons": 56,
       "orgs": 53,
       "edges": 165,
-      "statements": 184,
+      "statements": 187,
       "photos": 41,
       "logos": 21,
       "videos": 16,
@@ -279,8 +279,8 @@
       "id": "marine-le-pen",
       "name": "Marine Le Pen",
       "type": "person",
-      "role": "Présidente du groupe RN à l'Assemblée nationale, députée du Pas-de-Calais",
-      "description": "Figure principale du Rassemblement national.",
+      "role": "Présidente du groupe RN à l'Assemblée nationale, députée du Pas-de-Calais ; candidate déclarée à la présidentielle 2027 (07/07/2026)",
+      "description": "Figure principale du Rassemblement national. Le 7 juillet 2026, la cour d'appel de Paris a confirmé sa condamnation dans l'affaire des assistants parlementaires du FN, en ramenant son inéligibilité à 45 mois dont 30 avec sursis ; la partie ferme ayant déjà été exécutée, elle est éligible en 2027 (franceinfo). Le soir même, sur TF1, elle a annoncé sa candidature et un pourvoi en cassation.",
       "statements": [
         {
           "quote": "[Israël] fait ce qu'il peut dans une situation extrêmement difficile",
@@ -350,6 +350,16 @@
           "archived": "2026-11-08"
         },
         {
+          "quote": "Ce soir, je suis candidate à l'élection présidentielle et je ne changerai pas d'avis.",
+          "date": "2026-07-07",
+          "medium": "Journal de 20 heures de TF1, cité par franceinfo",
+          "url": "https://www.franceinfo.fr/politique/marine-le-pen/je-suis-candidate-a-l-election-presidentielle-marine-le-pen-annonce-son-pourvoi-en-cassation-apres-sa-condamnation-allegee-en-appel_8098361.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261103122430/https://www.franceinfo.fr/politique/marine-le-pen/je-suis-candidate-a-l-election-presidentielle-marine-le-pen-annonce-son-pourvoi-en-cassation-apres-sa-condamnation-allegee-en-appel_8098361.html",
+          "archived": "2026-11-03"
+        },
+        {
           "quote": "Quoi qu’on puisse en penser, heureusement que CNEWS existe pour évoquer l’agression de jeunes catholiques à Rouen au cri de « sale blanc » et « sale facho », manifestation d’un racisme anti-Blancs dont quasiment aucun autre média n’a parlé. Refuser de parler et de condamner tous les racismes, c’est refuser de condamner le racisme.",
           "date": "2026-11-04",
           "medium": "Message sur X (@MLP_officiel), 4 novembre 2026, 08:30 UTC. Le message publié comporte un saut de paragraphe avant la seconde phrase. Il porte sur la couverture, par CNews, d’une agression que Marine Le Pen situe à Rouen ; ce fait n’est pas documenté ici indépendamment de son message.",
@@ -399,7 +409,7 @@
         "file": "Marine_Le_Pen_2025_(cropped).jpg"
       },
       "category": "Responsables politiques",
-      "subcategory": "Parlementaires & élus",
+      "subcategory": "Candidats à la présidentielle 2027",
       "parcours": [
         {
           "date": "2011-01-16",
@@ -817,8 +827,8 @@
       "id": "eric-zemmour",
       "name": "Éric Zemmour",
       "type": "person",
-      "role": "Président de Reconquête",
-      "description": "Ancien chroniqueur de « Face à l'info » sur CNews jusqu'en septembre 2021, candidat à la présidentielle 2022.",
+      "role": "Président de Reconquête ; candidat déclaré à la présidentielle 2027 (10/11/2026)",
+      "description": "Ancien chroniqueur de « Face à l'info » sur CNews jusqu'en septembre 2021, candidat à la présidentielle 2022. Le 10 novembre 2026, sur le journal de 20 heures de TF1, il a confirmé être candidat à l'élection présidentielle de 2027 (BFMTV).",
       "statements": [
         {
           "quote": "L'important pour Israël est de rétablir son rapport de force, quel que soit le cas. Et ce, peu importe le prix",
@@ -886,6 +896,16 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261103162638/https://www.huffingtonpost.fr/france/article/l-arcom-a-directement-saisi-la-justice-pour-ces-sorties-d-eric-zemmour-apres-le-17-octobre_351273.html",
           "archived": "2026-11-03"
+        },
+        {
+          "quote": "Oui, je vous le confirme je suis bien candidat à l'élection présidentielle",
+          "date": "2026-11-10",
+          "medium": "Journal de 20 heures de TF1, cité par BFMTV",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/je-suis-bien-candidat-eric-zemmour-confirme-se-presenter-a-l-election-presidentielle_AN-202611100873.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261111105005/https://www.bfmtv.com/politique/elections/presidentielle/je-suis-bien-candidat-eric-zemmour-confirme-se-presenter-a-l-election-presidentielle_AN-202611100873.html",
+          "archived": "2026-11-11"
         }
       ],
       "sections": [
@@ -901,7 +921,7 @@
         "file": "Portrait_d'Éric_Zemmour,_avril_2022.jpg"
       },
       "category": "Responsables politiques",
-      "subcategory": "Partis & dirigeants de parti",
+      "subcategory": "Candidats à la présidentielle 2027",
       "parcours": [
         {
           "date": "2021-09-13",
@@ -2662,8 +2682,8 @@
       "id": "bruno-retailleau",
       "name": "Bruno Retailleau",
       "type": "person",
-      "role": "Président des Républicains (depuis mai 2025), ancien ministre de l'Intérieur (2024-2025)",
-      "description": "Élu président de LR le 18 mai 2025. Ses propos de septembre 2024 sur l'État de droit ont suscité des réactions, dont celle de la présidente de l'Assemblée nationale, qui s'est dite « assez inquiète » (Le Figaro).",
+      "role": "Président des Républicains (depuis mai 2025), ancien ministre de l'Intérieur (2024-2025) ; candidat désigné par les adhérents LR à la présidentielle 2027 (19/04/2026)",
+      "description": "Élu président de LR le 18 mai 2025. Ses propos de septembre 2024 sur l'État de droit ont suscité des réactions, dont celle de la présidente de l'Assemblée nationale, qui s'est dite « assez inquiète » (Le Figaro). Le 19 avril 2026, les adhérents des Républicains l'ont désigné candidat à la présidentielle de 2027, avec plus de 73 % des voix (franceinfo).",
       "statements": [
         {
           "quote": "L'État de droit, ça n'est pas intangible ni sacré. C'est un ensemble de règles, une hiérarchie des normes, un contrôle juridictionnel, une séparation des pouvoirs. Mais la source de l'État de droit, c'est la démocratie, c'est le peuple souverain.",
@@ -2691,6 +2711,16 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20240923103213/https://www.bfmtv.com/politique/les-republicains/retailleau-deplore-une-regression-ethnique-des-emeutiers-les-insoumis-denoncent-son-racisme-crasse_AN-202307050457.html",
           "archived": "2024-09-23"
+        },
+        {
+          "quote": "Je remercie tous les adhérents, les Républicains, qui, une fois de plus, m'accordent leur confiance. Je leur avais promis de leur donner la parole. Je leur promets désormais d'aller jusqu'au bout pour faire gagner nos idées",
+          "date": "2026-04-19",
+          "medium": "Message sur X, cité par franceinfo",
+          "url": "https://www.franceinfo.fr/politique/les-republicains/presidentielle-2027-les-adherents-lr-choisissent-bruno-retailleau-comme-candidat_7951298.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20260420103841/https://www.franceinfo.fr/politique/les-republicains/presidentielle-2027-les-adherents-lr-choisissent-bruno-retailleau-comme-candidat_7951298.html",
+          "archived": "2026-04-20"
         }
       ],
       "sections": [
@@ -2705,7 +2735,7 @@
         "file": "Bruno_Retailleau_-_Ministre_de_l'Intérieur_français_(cropped).jpg"
       },
       "category": "Responsables politiques",
-      "subcategory": "Partis & dirigeants de parti",
+      "subcategory": "Candidats à la présidentielle 2027",
       "parcours": [
         {
           "date": "2024-09-21",

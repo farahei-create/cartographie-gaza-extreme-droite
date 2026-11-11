@@ -2,7 +2,7 @@
 import json
 from playwright.sync_api import sync_playwright
 BASE="http://localhost:8765/"; D=json.load(open("site/data.json")); by={n["id"]:n for n in D["nodes"]}
-G=["jean-luc-melenchon","raphael-glucksmann","fabien-roussel","marine-tondelier","edouard-philippe","gabriel-attal","xavier-bertrand","dominique-de-villepin"]
+G=["jean-luc-melenchon","raphael-glucksmann","fabien-roussel","marine-tondelier","edouard-philippe","gabriel-attal","xavier-bertrand","dominique-de-villepin","marine-le-pen","eric-zemmour","bruno-retailleau"]
 ok=fail=0; errs=[]
 def check(c,m):
     global ok,fail

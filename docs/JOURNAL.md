@@ -4,6 +4,15 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-11 — v29
+
+Tu ranges Marine Le Pen dans « Candidats à la présidentielle 2027 », sans deuxième fiche. Le rôle, la photo et le parcours restent. Tu ajoutes la phrase du 20 heures de TF1, le 7 juillet 2026.
+
+- Marine Le Pen, 07/07/2026 : « Ce soir, je suis candidate à l'élection présidentielle et je ne changerai pas d'avis. » — Journal de 20 heures de TF1, cité par franceinfo. La cour d'appel de Paris a confirmé la condamnation et ramené l'inéligibilité à 45 mois dont 30 avec sursis ; la partie ferme déjà exécutée, elle est éligible en 2027 — https://www.franceinfo.fr/politique/marine-le-pen/je-suis-candidate-a-l-election-presidentielle-marine-le-pen-annonce-son-pourvoi-en-cassation-apres-sa-condamnation-allegee-en-appel_8098361.html et https://www.franceinfo.fr/politique/front-national/affaire-des-assistants-fn-au-parlement-europeen/marine-le-pen-condamnee-en-appel-a-trois-ans-de-prison-dont-un-an-sous-bracelet-electronique-mais-eligible-en-2027_8097896.html
+- Éric Zemmour, 10/11/2026 : « Oui, je vous le confirme je suis bien candidat à l'élection présidentielle » — TF1, cité par BFMTV. Même sous-catégorie — https://www.bfmtv.com/politique/elections/presidentielle/je-suis-bien-candidat-eric-zemmour-confirme-se-presenter-a-l-election-presidentielle_AN-202611100873.html
+- Bruno Retailleau, 19/04/2026 : les adhérents LR le désignent candidat, plus de 73 % des voix (franceinfo). Phrase sur X citée par franceinfo. Même sous-catégorie — https://www.franceinfo.fr/politique/les-republicains/presidentielle-2027-les-adherents-lr-choisissent-bruno-retailleau-comme-candidat_7951298.html
+- Pas reclassés : Jordan Bardella (candidat à Matignon, pas à l'Élysée ; 20 Minutes, 29/08/2026), Sarah Knafo (« donc non, je n'irai pas », BFMTV, 09/11/2026), Marion Maréchal (campagne de Marine Le Pen, Le Figaro, 09/09/2026), Éric Ciotti (écarte une candidature, Le Figaro, 28/05/2025), Valérie Pécresse (pas de déclaration, franceinfo, 31/08/2026)
+
 ## 2026-11-11 — v28
 
 Tu ajoutes les instituts dont l'actionnaire est documenté, et le récit « Suivre les sondages ». La vidéo TikTok n'est pas une source.

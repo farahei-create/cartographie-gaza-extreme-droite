@@ -392,11 +392,13 @@ for _n in N:
     for _s in _n["statements"]: _s.setdefault("section","france")
 POL="Responsables politiques"; MED="Médias & propriétaires"; JOU="Journalistes & éditorialistes"
 INT="Intellectuels & essayistes"; ORG="Organisations & institutions"; EVT="Événements"
+PR27="Candidats à la présidentielle 2027"
 CAT={
  # Responsables politiques
  **{i:(POL,"Gouvernement & exécutif") for i in ["aurore-berge","gerald-darmanin","emmanuel-macron","manuel-valls"]},
- **{i:(POL,"Parlementaires & élus") for i in ["caroline-yadan","meyer-habib","marine-le-pen","eric-ciotti","yael-braun-pivet","marion-marechal","robert-menard","valerie-pecresse"]},
- **{i:(POL,"Partis & dirigeants de parti") for i in ["jordan-bardella","eric-zemmour","bruno-retailleau","rn","reconquete","identite-libertes","lr","renaissance-epr"]},
+ **{i:(POL,"Parlementaires & élus") for i in ["caroline-yadan","meyer-habib","eric-ciotti","yael-braun-pivet","marion-marechal","robert-menard","valerie-pecresse"]},
+ **{i:(POL,PR27) for i in ["marine-le-pen","eric-zemmour","bruno-retailleau"]},
+ **{i:(POL,"Partis & dirigeants de parti") for i in ["jordan-bardella","rn","reconquete","identite-libertes","lr","renaissance-epr"]},
  # Médias
  **{i:(MED,"Propriétaires, financeurs & groupes") for i in ["vincent-bollore","pierre-edouard-sterin","vivendi-canal","lagardere"]},
  **{i:(MED,"Chaînes, radios & titres") for i in ["cnews","c8","europe1","sud-radio","jdd","valeurs-actuelles","franc-tireur","causeur","le-point","lexpress"]},
@@ -597,8 +599,7 @@ for _i in ["generation-identitaire","zouaves-paris","civitas","les-remparts","gu
 
 ARCH_EXTRA['https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2024-12-30/489498']=('https://web.archive.org/web/20261105063042/https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2024-12-30/489498',"2026-11-05")
 ARCH_EXTRA['https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2025-07-31/497252']=('https://web.archive.org/web/20261105063100/https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2025-07-31/497252',"2026-11-05")
-# --- v14 : candidats à la présidentielle 2027 ---
-PR27="Candidats à la présidentielle 2027"
+# --- v14 : candidats à la présidentielle 2027 (PR27 est défini avec les catégories) ---
 FI_LFI7O="https://www.franceinfo.fr/monde/proche-orient/israel-palestine/attaque-du-hamas-contre-israel-la-position-de-lfi-cree-la-polemique-au-sein-de-la-nupes_6109152.html"
 FI_REAC_PAL="https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html"
 FI_MAC_PAL="https://www.franceinfo.fr/monde/proche-orient/guerre/la-paix-est-possible-emmanuel-macron-annonce-que-la-france-va-reconnaitre-l-etat-de-palestine-en-septembre_7396969.html"
@@ -643,6 +644,25 @@ _node("dominique-de-villepin","Dominique de Villepin","person","Ancien Premier m
  "A repris le 1er août 2025 sur X sa tribune publiée le 31 juillet 2025 dans Le Monde sur la situation à Gaza (franceinfo, 20 Minutes).",
  [_st("Un crime a lieu à Gaza, un crime de génocide","2025-07-31","Tribune publiée dans Le Monde, citée par 20 Minutes et franceinfo",M20_VIL,G,"gaza"),
   _st("Elle honore nos valeurs universelles, mais elle nous oblige immédiatement à agir","2025-07-24","Message sur X au sujet de la décision d'Emmanuel Macron, cité par franceinfo",FI_REAC_PAL,G,"gaza")],POL,PR27,("gaza",))
+# Fiches déjà créées : on change la sous-catégorie, on ne duplique pas le nœud.
+FI_MLP_CAND="https://www.franceinfo.fr/politique/marine-le-pen/je-suis-candidate-a-l-election-presidentielle-marine-le-pen-annonce-son-pourvoi-en-cassation-apres-sa-condamnation-allegee-en-appel_8098361.html"
+BFM_ZEM_27="https://www.bfmtv.com/politique/elections/presidentielle/je-suis-bien-candidat-eric-zemmour-confirme-se-presenter-a-l-election-presidentielle_AN-202611100873.html"
+FI_RET_27="https://www.franceinfo.fr/politique/les-republicains/presidentielle-2027-les-adherents-lr-choisissent-bruno-retailleau-comme-candidat_7951298.html"
+_mlp=[x for x in N if x["id"]=="marine-le-pen"][0]
+_mlp["subcategory"]=PR27
+_mlp["role"]="Présidente du groupe RN à l'Assemblée nationale, députée du Pas-de-Calais ; candidate déclarée à la présidentielle 2027 (07/07/2026)"
+_mlp["description"]+=" Le 7 juillet 2026, la cour d'appel de Paris a confirmé sa condamnation dans l'affaire des assistants parlementaires du FN, en ramenant son inéligibilité à 45 mois dont 30 avec sursis ; la partie ferme ayant déjà été exécutée, elle est éligible en 2027 (franceinfo). Le soir même, sur TF1, elle a annoncé sa candidature et un pourvoi en cassation."
+_mlp["statements"].append(_st("Ce soir, je suis candidate à l'élection présidentielle et je ne changerai pas d'avis.","2026-07-07","Journal de 20 heures de TF1, cité par franceinfo",FI_MLP_CAND,F))
+_ez=[x for x in N if x["id"]=="eric-zemmour"][0]
+_ez["subcategory"]=PR27
+_ez["role"]="Président de Reconquête ; candidat déclaré à la présidentielle 2027 (10/11/2026)"
+_ez["description"]+=" Le 10 novembre 2026, sur le journal de 20 heures de TF1, il a confirmé être candidat à l'élection présidentielle de 2027 (BFMTV)."
+_ez["statements"].append(_st("Oui, je vous le confirme je suis bien candidat à l'élection présidentielle","2026-11-10","Journal de 20 heures de TF1, cité par BFMTV",BFM_ZEM_27,F))
+_br=[x for x in N if x["id"]=="bruno-retailleau"][0]
+_br["subcategory"]=PR27
+_br["role"]="Président des Républicains (depuis mai 2025), ancien ministre de l'Intérieur (2024-2025) ; candidat désigné par les adhérents LR à la présidentielle 2027 (19/04/2026)"
+_br["description"]+=" Le 19 avril 2026, les adhérents des Républicains l'ont désigné candidat à la présidentielle de 2027, avec plus de 73 % des voix (franceinfo)."
+_br["statements"].append(_st("Je remercie tous les adhérents, les Républicains, qui, une fois de plus, m'accordent leur confiance. Je leur avais promis de leur donner la parole. Je leur promets désormais d'aller jusqu'au bout pour faire gagner nos idées","2026-04-19","Message sur X, cité par franceinfo",FI_RET_27,F))
 _mac=[x for x in N if x["id"]=="emmanuel-macron"][0]
 _mac["statements"].append(_st("Fidèle à son engagement historique pour une paix juste et durable au Proche-Orient, j'ai décidé que la France reconnaîtra l'Etat de Palestine","2025-07-24","Message sur X, cité par franceinfo",FI_MAC_PAL,G,"gaza"))
 _mac["statements"].append(_st("L'urgence est aujourd'hui que cesse la guerre à Gaza et que la population civile soit secourue","2025-07-24","Message sur X, cité par franceinfo",FI_MAC_PAL,G,"gaza"))
