@@ -115,6 +115,7 @@
     fillMeta();
     bindDonation();
     bindVideos();
+    bindReseau3d();
     buildFilters();
     buildHome();
     buildSections();
@@ -230,13 +231,17 @@
         var m = matches(); if (m.length) focusNode(m[0].id);
       }
     });
-    $("btn-fit").addEventListener("click", function () { network.fit({ animation: anim(450) }); });
+    $("btn-fit").addEventListener("click", function () {
+      if (reseau3dOn && window.Onrecord3D) { window.Onrecord3D.resetCam(); return; }
+      if (network) network.fit({ animation: anim(450) });
+    });
     $("btn-reset").addEventListener("click", function () {
       document.querySelectorAll("#theme-filters input, #type-filters input").forEach(function (i) { i.checked = true; });
       Object.keys(state.themes).forEach(function (k) { state.themes[k] = true; });
       Object.keys(state.types).forEach(function (k) { state.types[k] = true; });
       inp.value = ""; state.search = ""; closePanel(); applyFilters();
-      network.fit({ animation: anim(450) });
+      if (reseau3dOn && window.Onrecord3D) window.Onrecord3D.resetCam();
+      else if (network) network.fit({ animation: anim(450) });
     });
 
     // Légende
@@ -296,7 +301,7 @@
   }
 
   function applyFilters() {
-    if (!nodesDS) return;
+    if (!nodesDS) { syncReseau3d(); return; }
     var vis = visibleSet();
     var q = norm(state.search).trim();
     var m = {}; matches().forEach(function (n) { m[n.id] = true; });
@@ -311,7 +316,11 @@
     var allOn = Object.keys(state.themes).every(function (k) { return state.themes[k]; }) &&
       Object.keys(state.types).every(function (k) { return state.types[k]; });
     document.querySelector(".toolbar").classList.toggle("has-off", !allOn);
-    document.querySelectorAll(".chip").forEach(function (c) { c.classList.toggle("is-on", c.querySelector("input").checked); });
+    document.querySelectorAll(".chip").forEach(function (c) {
+      var input = c.querySelector("input");
+      if (input) c.classList.toggle("is-on", input.checked);
+    });
+    syncReseau3d();
   }
 
   function nodeStyle(n, dim) {
@@ -433,6 +442,7 @@
     var onScheme = function () { readPalette(); applyFilters(); network.redraw(); };
     if (MQ_DARK.addEventListener) MQ_DARK.addEventListener("change", onScheme); else if (MQ_DARK.addListener) MQ_DARK.addListener(onScheme);
     applyFilters();
+    maybeStart3d();
   }
   /* ---------- images des nœuds (chargement différé, repli sur la forme colorée) ---------- */
   function nodeImageUrl(n) { return n.image || n.logo || null; }
@@ -581,6 +591,7 @@
       "<h3>Relations (" + edgesOf[id].length + ")</h3>" + relationsHtml(n, true);
     showPanel();
     if (!fromSearch && network) network.selectNodes([id]);
+    if (reseau3dOn && window.Onrecord3D) window.Onrecord3D.select(id);
     if (location.hash.indexOf("#/reseau") === 0) history.replaceState(null, "", "#/reseau/" + encodeURIComponent(id));
   }
   function openEdge(eid) {
@@ -659,6 +670,7 @@
     p.style.transform = "";
     document.body.classList.remove("panel-open", "sheet-open");
     if (network) network.unselectAll();
+    if (window.Onrecord3D) window.Onrecord3D.select(null);
     if (location.hash.indexOf("#/reseau/") === 0) history.replaceState(null, "", "#/reseau");
   }
 
@@ -1474,7 +1486,9 @@
     body.innerHTML =
       '<header class="f-head">' + media + '<div class="f-id">' +
       '<div class="f-badges"><span class="badge" style="--tc:var(' + t.cssVar + ')">' + esc(t.label) + "</span>" + sectionTags(n) + "</div>" +
-      '<h1 class="f-name" tabindex="-1">' + esc(n.name) + "</h1>" + '<p class="f-role">' + esc(n.role) + "</p>" +
+      '<h1 class="f-name" tabindex="-1">' + esc(n.name) + "</h1>" +
+      '<div class="star-rule" aria-hidden="true"><span>✦</span></div>' +
+      '<p class="f-role">' + esc(n.role) + "</p>" +
       (n.category ? '<p class="f-cat"><a href="#/sections">' + catLabel(n) + "</a></p>" : "") + "</div></header>" +
       (n.description ? '<p class="f-desc">' + esc(n.description) + "</p>" : "") +
       '<div class="f-actions">' + (hasParcours(n) ? '<a class="btn-pill small" href="' + ficheHref(n) + '#parcours">' + esc(arriveLabel(n)) + '</a>' : "") +
@@ -2442,6 +2456,122 @@
     });
   }
 
+  /* ---------- Réseau 3D (canvas, chargé seulement si activé) ---------- */
+  var reseau3dOn = false, reseau3dLoading = false;
+  var NEON_TYPE = {
+    person: "#f4f0ff", parti: "#f0abfc", media: "#c4b5fd",
+    association: "#d8b4fe", evenement: "#f9a8d4", org: "#a78bfa"
+  };
+  function wantReseau3d() {
+    try { return localStorage.getItem("onrecord-reseau-3d") === "1"; } catch (e) { return false; }
+  }
+  function storeReseau3d(on) {
+    try { localStorage.setItem("onrecord-reseau-3d", on ? "1" : "0"); } catch (e) {}
+  }
+  function loadReseau3d() {
+    if (window.Onrecord3D) return Promise.resolve(window.Onrecord3D);
+    return new Promise(function (resolve, reject) {
+      var s = document.createElement("script");
+      s.src = "vendor/reseau3d.js";
+      s.async = true;
+      s.onload = function () { window.Onrecord3D ? resolve(window.Onrecord3D) : reject(new Error("module")); };
+      s.onerror = function () { reject(new Error("load")); };
+      document.head.appendChild(s);
+    });
+  }
+  function setReseau3dUi(on) {
+    var b = $("btn-3d"), shell = document.querySelector(".graph-shell"), canvas = $("graph-3d");
+    var note = $("g3-note"), h2 = document.querySelector(".hint-2d"), h3 = document.querySelector(".hint-3d");
+    if (b) b.setAttribute("aria-pressed", on ? "true" : "false");
+    if (shell) shell.classList.toggle("is-3d", on);
+    if (canvas) canvas.hidden = !on;
+    if (note) note.hidden = !on;
+    if (h2) h2.hidden = !!on;
+    if (h3) h3.hidden = !on;
+    var g = $("graph");
+    if (g) g.setAttribute("aria-hidden", on ? "true" : "false");
+  }
+  function graph3dModel() {
+    var vis = visibleSet();
+    var q = norm(state.search).trim();
+    var m = {};
+    matches().forEach(function (n) { m[n.id] = true; });
+    var outN = [];
+    DATA.nodes.forEach(function (n) {
+      if (!vis[n.id]) return;
+      outN.push({
+        id: n.id, name: n.name, initials: initials(n.name),
+        color: NEON_TYPE[n._sub] || "#d8c7ff", deg: (edgesOf[n.id] || []).length,
+        img: n.image || n.logo || "", logo: !!(n.logo && !n.image),
+        dim: !!(q && !m[n.id])
+      });
+    });
+    var outE = [];
+    DATA.edges.forEach(function (e) {
+      if (!vis[e.source] || !vis[e.target]) return;
+      outE.push({ s: e.source, t: e.target, dim: !!(q && !(m[e.source] || m[e.target])), opp: edgeNature(e) === "opposition" });
+    });
+    return { nodes: outN, links: outE };
+  }
+  function syncReseau3d() {
+    if (!reseau3dOn || !window.Onrecord3D) return;
+    window.Onrecord3D.setReduced(MQ_RM.matches);
+    window.Onrecord3D.setGraph(graph3dModel());
+  }
+  function failReseau3d(msg) {
+    reseau3dOn = false;
+    reseau3dLoading = false;
+    storeReseau3d(false);
+    setReseau3dUi(false);
+    if (window.Onrecord3D) window.Onrecord3D.stop();
+    toast(msg);
+  }
+  function enableReseau3d() {
+    if (!window.Onrecord3D || !window.Onrecord3D.ok()) {
+      failReseau3d("La vue 3D n'est pas disponible sur cet appareil. Le réseau reste en 2D.");
+      return;
+    }
+    var canvas = $("graph-3d");
+    reseau3dOn = true;
+    setReseau3dUi(true);
+    if (!window.Onrecord3D.start(canvas, {
+      reduced: MQ_RM.matches,
+      font: FONT,
+      onSelect: function (id) { openNode(id, false); }
+    })) {
+      failReseau3d("La vue 3D n'est pas disponible sur cet appareil. Le réseau reste en 2D.");
+      return;
+    }
+    syncReseau3d();
+  }
+  function disableReseau3d() {
+    reseau3dOn = false;
+    setReseau3dUi(false);
+    if (window.Onrecord3D) window.Onrecord3D.stop();
+  }
+  function toggleReseau3d() {
+    if (reseau3dOn) { storeReseau3d(false); disableReseau3d(); return; }
+    if (reseau3dLoading) return;
+    storeReseau3d(true);
+    if (window.Onrecord3D) { enableReseau3d(); return; }
+    reseau3dLoading = true;
+    setReseau3dUi(true);
+    loadReseau3d().then(function () {
+      reseau3dLoading = false;
+      enableReseau3d();
+    }).catch(function () {
+      failReseau3d("Impossible de charger la vue 3D. Le réseau reste en 2D.");
+    });
+  }
+  function maybeStart3d() { if (wantReseau3d() && !reseau3dOn && !reseau3dLoading) toggleReseau3d(); }
+  function bindReseau3d() {
+    var b = $("btn-3d");
+    if (b) b.addEventListener("click", toggleReseau3d);
+    if (MQ_RM.addEventListener) MQ_RM.addEventListener("change", function () {
+      if (window.Onrecord3D) window.Onrecord3D.setReduced(MQ_RM.matches);
+    });
+  }
+
   /* ---------- Routage par ancre (#/…) ---------- */
   var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "pouvoir", "coulisses", "methodologie", "methode", "contribuer", "credits"];
   var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Sections", chronologie: "Chronologie", reseau: "Réseau des relations", pouvoir: "Échelle du pouvoir", coulisses: "Coulisses", methodologie: "Méthodologie", methode: "Méthode", contribuer: "Proposer une mise à jour", credits: "Crédits photos" };
@@ -2457,7 +2587,7 @@
   }
   var lastView = null;
   function ensureGraph(focusId) {
-    if (!network) buildGraph(); else { sizeGraph(); network.redraw(); }
+    if (!network) buildGraph(); else { sizeGraph(); network.redraw(); if (reseau3dOn) syncReseau3d(); }
     if (focusId && byId[focusId]) {
       (function wait(k) { if (window.__graphReady) focusNode(focusId); else if (k < 200) setTimeout(function () { wait(k + 1); }, 50); })(0);
     }

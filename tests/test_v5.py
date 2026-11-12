@@ -48,7 +48,7 @@ def static_checks():
     m=json.load(open(os.path.join(SITE,"manifest.webmanifest")))
     ok(f"{T} manifest name/short_name", m.get("name") and m.get("name")=="Onrecord" and m.get("short_name")=="Onrecord")
     ok(f"{T} manifest standalone/start_url/scope relative", m["display"]=="standalone" and not m["start_url"].startswith(("/","http")) and not m["scope"].startswith(("/","http")))
-    ok(f"{T} manifest violet theme/background", m["theme_color"].lower()=="#3b0a57" and m["background_color"].lower()=="#3b0a57")
+    ok(f"{T} manifest violet theme/background", m["theme_color"].lower()=="#07030f" and m["background_color"].lower()=="#07030f")
     sizes={(i["sizes"],i.get("purpose","any")) for i in m["icons"]}
     ok(f"{T} manifest icons 192/512 any + maskable", {("192x192","any"),("512x512","any"),("192x192","maskable"),("512x512","maskable")}<=sizes, sizes)
     for i in m["icons"]:
@@ -296,7 +296,7 @@ async def mobile(b, w, h, scheme, errs):
     ok(f"{T} unknown route → accueil", await pg.evaluate("window.__route")=="accueil")
     # contraste approximatif de l'accent
     c=await pg.evaluate("[getComputedStyle(document.documentElement).getPropertyValue('--accent').trim(), getComputedStyle(document.body).backgroundColor]")
-    ok(f"{T} accent is violet", c[0].lower() in ("#7b2cbf","#c9a2f5"), c)
+    ok(f"{T} accent is violet", c[0].lower() in ("#7b2cbf","#c9a2f5","#7c3aed","#c084fc","#d8c7ff","#a855f7"), c)
     await ctx.close()
 
 async def desktop(b, scheme, errs):
@@ -325,7 +325,7 @@ async def desktop(b, scheme, errs):
     ok(f"{T} fullscreen off", not await pg.evaluate("__fs()"))
     # dark: couleurs
     bgc=await pg.evaluate("getComputedStyle(document.body).backgroundColor")
-    ok(f"{T} body background matches scheme", (bgc=="rgb(15, 10, 21)") if scheme=="dark" else (bgc=="rgb(247, 244, 250)"), bgc)
+    ok(f"{T} body background matches scheme", (bgc=="rgb(7, 3, 15)") if scheme=="dark" else (bgc=="rgb(247, 244, 250)"), bgc)
     await ctx.close()
 
 async def pwa(b, errs):

@@ -208,6 +208,7 @@ Le numéro vivant est celui de `sw.js`. Il n'y a pas de tag git `v11`, `v17`, `v
 | v36 | Mise à jour du 12/11 | Accueil : couleurs d'origine (violet, blush, lavande), animation de l'enseigne conservée |
 | v37 | Mise à jour du 12/11 | Accueil : réseau du hero flouté, voile dépoli derrière la punchline et la ligne d'explication |
 | v38 | Mise à jour du 12/11 | Accueil : hero sombre violet, phrases surlignées, constellation 3D visible |
+| v39 | Mise à jour du 12/11 | Ambiance néon sur tout le site, Réseau en 3D activable (canvas, sans librairie tierce) |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 

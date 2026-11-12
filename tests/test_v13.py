@@ -13,7 +13,7 @@ check(re.search(r'CORRECTION_EMAIL:\s*""',cfg),"CORRECTION_EMAIL vide")
 import re as _re
 _sw=open("site/sw.js").read()
 check(int(_re.search(r"onrecord-v(\d+)",_sw).group(1))>=18,"sw >= v18")
-check('var VERSION = "onrecord-v38"' in _sw,"sw onrecord-v38")
+check('var VERSION = "onrecord-v39"' in _sw,"sw onrecord-v39")
 BAN=["pantin","revirement","complice","contradiction"]
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path="/usr/bin/google-chrome")
@@ -36,7 +36,7 @@ with sync_playwright() as p:
     check(pg.locator("#home-stats a.stat-a").count()>=6,"stats cliquables")
     check(pg.is_hidden("#home-resume"),"pas de reprise sans visite")
     pg.goto(BASE+"#/personne/cyril-hanouna"); pg.wait_for_selector(".fiche"); pg.wait_for_timeout(400)
-    ex=pg.inner_text("#explore") if pg.locator("#explore").count() else ""
+    ex=pg.evaluate("document.getElementById('explore') ? document.getElementById('explore').textContent : ''")
     check("Continuer à explorer" in ex,"continuer à explorer"); check(pg.locator("#explore a.explore-it").count()==3,"3 suggestions")
     check(pg.locator("#donate-invite").count()==0,"pas d'invitation avant partage")
     pg.locator(".fiche [data-act='copy']").first.click(); pg.wait_for_timeout(400)

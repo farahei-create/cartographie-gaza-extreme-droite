@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#3b0a57">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#07030f">
+<meta name="theme-color" content="#f7f4fa" media="(prefers-color-scheme: light)">
 <title>Onrecord — Leurs mots, datés et sourcés</title>
 <meta name="description" content="Onrecord : cartographie sourcée de déclarations publiques sur Gaza et sur la normalisation de l'extrême droite en France, et de liens publics entre personnalités et organisations. Chaque élément renvoie à sa source.">
 <link rel="manifest" href="manifest.webmanifest">
@@ -86,6 +87,7 @@
       <dl class="stats" id="home-stats" aria-label="Chiffres clés"></dl>
       <div id="home-resume" class="home-resume" hidden></div>
       <h2 class="h-sec" id="home-quick-title">Accès rapides</h2>
+      <div class="star-rule" aria-hidden="true"><span>✦</span></div>
       <nav class="home-quick" aria-labelledby="home-quick-title">
         <a href="#/coulisses"><span>Coulisses</span><small>Ponts datés entre sphères</small></a>
         <a href="#/pouvoir"><span>Échelle du pouvoir</span><small>Fonctions publiques documentées</small></a>
@@ -93,8 +95,10 @@
       </nav>
       <section class="qotd card" id="home-qotd" aria-label="Citation du jour" hidden></section>
       <h2 class="h-sec">Explorer</h2>
+      <div class="star-rule" aria-hidden="true"><span>✦</span></div>
       <div class="entry-cards" id="home-entries"></div>
       <h2 class="h-sec">Dernières entrées</h2>
+      <div class="star-rule" aria-hidden="true"><span>✦</span></div>
       <p class="home-sub">Les déclarations les plus récentes, par date.</p>
       <ol class="latest" id="home-latest"></ol>
       <p class="more"><a href="#/chronologie" class="btn-pill">Toute la chronologie</a> <a href="data.json" download="onrecord-donnees.json" class="btn-pill ghost dl-link">Télécharger les données (JSON)</a> <a href="#/methode" class="btn-pill ghost" id="home-methode">Méthode</a></p>
@@ -105,6 +109,7 @@
   <section id="view-sections" class="view" aria-labelledby="sections-title" hidden>
     <div class="wrap page">
       <h1 class="view-title" id="sections-title">Sections</h1>
+      <div class="star-rule" aria-hidden="true"><span>✦</span></div>
       <div class="seg" role="tablist" aria-label="Choisir une section" id="sec-seg"></div>
       <p class="sec-intro" id="sec-intro"></p>
       <div class="field search">
@@ -129,6 +134,7 @@
   <section id="view-chronologie" class="view" aria-labelledby="chrono-title" hidden>
     <div class="wrap page">
       <h1 class="view-title" id="chrono-title">Chronologie</h1>
+      <div class="star-rule" aria-hidden="true"><span>✦</span></div>
       <p class="sec-intro">Toutes les déclarations et tous les liens datés, dans l'ordre chronologique.</p>
       <div class="chrono-filters" id="chrono-filters">
         <div class="field"><label for="tl-section">Section</label><select id="tl-section"><option value="">Toutes</option></select></div>
@@ -158,7 +164,12 @@
             <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M7 12h10M10 17h4"/></svg>
             <span class="dot" aria-hidden="true"></span>
           </button>
+          <button type="button" id="btn-3d" class="view3d" aria-pressed="false">
+            <span class="view3d-k" aria-hidden="true"></span>
+            <span>Vue 3D</span>
+          </button>
         </div>
+        <p class="view3d-help" id="g3-note" hidden>Couleur selon le type, taille selon les liens. Glisser pour tourner, pincer pour zoomer. Un toucher ouvre la fiche.</p>
         <div class="filters" id="filters">
           <div class="filters-inner">
             <fieldset class="field">
@@ -175,6 +186,7 @@
       <div class="graph-layout">
         <div class="graph-wrap">
           <div id="graph" aria-label="Graphe interactif des relations. Une version textuelle est disponible dans la vue Sections et dans la Chronologie."></div>
+          <canvas id="graph-3d" class="graph-3d" hidden aria-label="Réseau en trois dimensions. Glisser pour tourner, pincer pour zoomer, toucher un nœud pour ouvrir sa fiche."></canvas>
           <div class="field actions graph-controls">
             <button type="button" id="btn-fit" class="btn">
               <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/><circle cx="12" cy="12" r="2.5"/></svg>
@@ -191,7 +203,8 @@
             </button>
           </div>
           <div id="legend" class="legend" aria-label="Légende"></div>
-          <p class="hint">Survolez un lien pour lire la relation ; cliquez sur un nœud pour afficher ses déclarations et ses sources. Molette ou pincement pour zoomer, glisser pour se déplacer.</p>
+          <p class="hint hint-2d">Survolez un lien pour lire la relation ; cliquez sur un nœud pour afficher ses déclarations et ses sources. Molette ou pincement pour zoomer, glisser pour se déplacer.</p>
+          <p class="hint hint-3d" hidden>Glisser pour tourner, pincer ou molette pour zoomer. Un toucher met le nœud et ses liens en évidence et ouvre sa fiche.</p>
         </div>
         <aside id="panel" class="panel" hidden aria-live="polite">
           <div class="panel-head">
@@ -211,6 +224,7 @@
   <section id="view-pouvoir" class="view" aria-labelledby="pouvoir-title" hidden>
     <div class="wrap page pow-page">
       <h1 class="view-title" id="pouvoir-title">Échelle du pouvoir</h1>
+      <div class="star-rule" aria-hidden="true"><span>✦</span></div>
       <p class="sec-intro" id="pow-method">Classement par fonction publique documentée, fortune seulement si sourcée. Le sommet est en haut. Le mode Ascension montre les nominations, investitures, recrutements, soutiens publics et financements documentés. Le fil « Remonter » ne suit que ces liens. L'opposition et le contrôle s'affichent à part, avec un autre style.</p>
       <div class="seg" role="tablist" aria-label="Filtrer l'échelle" id="pow-seg">
         <button type="button" class="seg-b" role="tab" data-pow="tout" id="pow-tout">Tout</button>
@@ -231,6 +245,7 @@
   <section id="view-coulisses" class="view" aria-labelledby="coulisses-title" hidden>
     <div class="wrap page cou-page">
       <h1 class="view-title" id="coulisses-title">Coulisses</h1>
+      <div class="star-rule" aria-hidden="true"><span>✦</span></div>
       <p class="sec-intro" id="cou-lead"></p>
       <div class="seg seg-cou" id="cou-stories" role="tablist" aria-label="Choisir un récit"></div>
       <p class="count" id="cou-stats" aria-live="polite"></p>
@@ -245,6 +260,7 @@
     <div class="wrap page">
       <article class="card prose">
         <h2>Méthode</h2>
+        <div class="star-rule" aria-hidden="true"><span>✦</span></div>
         <p><strong>Onrecord</strong> est une archive gratuite, non commerciale et indépendante de déclarations publiques, datées et sourcées.</p>
         <h3>Critères d'inclusion</h3>
         <ul>
@@ -277,6 +293,7 @@
   <section id="view-methodologie" class="view" hidden>
     <div class="wrap page"><article class="prose card">
       <h2>Méthodologie</h2>
+      <div class="star-rule" aria-hidden="true"><span>✦</span></div>
       <h3>Objet</h3>
       <p>Ce site documente des <strong>propos publics</strong> tenus en France au sujet de la guerre à Gaza, ainsi que des <strong>liens publics</strong> (appartenance, fonction, collaboration éditoriale, soutien déclaré, événement commun) entre des personnalités et des organisations. Il ne constitue pas une accusation : il rassemble des éléments publiés et vérifiables.</p>
       <h3>Section « France – normalisation de l'extrême droite »</h3>
@@ -338,6 +355,7 @@
   <section id="view-credits" class="view" hidden>
     <div class="wrap page"><article class="prose card">
       <h2>Crédits photos</h2>
+      <div class="star-rule" aria-hidden="true"><span>✦</span></div>
       <p>Chaque image est hébergée dans le dépôt. La licence et l'auteur sont ceux indiqués sur la page du fichier au moment de l'ajout. Les fiches sans portrait libre utilisent un monogramme, pas une photo.</p>
       <p class="count" id="credits-count"></p>
       <ul class="credits" id="credits-list"></ul>
@@ -346,6 +364,7 @@
   <section id="view-contribuer" class="view" hidden>
     <div class="wrap page"><article class="prose card contrib">
       <h2>Proposer une mise à jour</h2>
+      <div class="star-rule" aria-hidden="true"><span>✦</span></div>
       <p>Onrecord est une archive collaborative de faits sourcés. Toute proposition est vérifiée avant publication. Merci d'indiquer une source consultable.</p>
       <form id="contrib-form" novalidate>
         <label>Type de proposition *
@@ -377,6 +396,7 @@
 
 <footer class="site-footer">
   <div class="wrap">
+    <div class="star-rule" aria-hidden="true"><span>✦</span></div>
     <p>Données sourcées, citations reproduites telles que publiées. Aucune qualification juridique des personnes. Dernière mise à jour : <span id="footer-update">—</span>.</p>
     <p>Une erreur, une précision ou une nouvelle source ? <a href="#/contribuer" id="footer-contribuer">Proposer une mise à jour</a> · <a href="#/methode" id="footer-methode">Méthode</a></p>
     <p><a href="data.json" download="onrecord-donnees.json" class="dl-link">Télécharger les données (JSON)</a></p>

@@ -4,6 +4,12 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-12 — v39
+
+Tu étends l'ambiance du hero à tout le site : fond sombre violacé, cartes en verre, bord violet, titres de section en Anton, liens et pastilles lavande, séparateur ✦. Le sombre néon est le thème par défaut (theme-color et manifeste `#07030f`). Le mode clair, s'il est demandé par l'appareil, reste lisible avec les accents violets. Le hero v38 ne change pas. Aucune citation, aucune source, aucune fiche n'est réécrite.
+
+Sur le Réseau, un interrupteur « Vue 3D » (mémorisé sur l'appareil) affiche les personnes, organisations et médias de `data.json`, avec les mêmes filtres et la même recherche. Constellation canvas, même famille que le hero : nœuds lavande / violet / blanc / rose, taille selon les liens, liens qui pulsent, rotation lente, glisser et pincer. Un toucher met le nœud et ses voisins en évidence et ouvre le panneau déjà en place, avec le lien vers la fiche. La vue 2D vis-network reste là. Le script `vendor/reseau3d.js` ne se charge qu'à l'activation, puis le service worker le met en cache. Pas de WebGL : si le canvas 2D manque, tu restes en 2D. `prefers-reduced-motion` coupe la rotation automatique. Cache `onrecord-v39`.
+
 ## 2026-11-12 — v38
 
 Tu ne touches pas au reste de la page. Le haut de l'accueil reprend le visuel sombre : fond presque noir violacé, ONRECORD en blanc avec un halo violet, puis deux lignes en Anton, plus grandes : « ILS L’ONT DIT » en blanc, « ON L’A ARCHIVÉ » en violet néon. Un surlignage violet se dessine sur DIT et ARCHIVÉ. La ligne d'explication, en lavande, reprend Gaza, la banalisation de l'extrême droite en France, et les liens, ces trois bouts en blanc gras surlignés. Le cadre d'ampoules, la guirlande et le voile dépoli disparaissent. Les trois cartes et la recherche passent au verre sombre, bord violet. Le réseau derrière devient une constellation en profondeur, nette, qui tourne, pulse, et suit le doigt, le défilement et l'inclinaison du téléphone. Cache `onrecord-v38`.
