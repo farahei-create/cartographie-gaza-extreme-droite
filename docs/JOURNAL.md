@@ -4,6 +4,10 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-12 — v36
+
+Tu ne changes pas les textes. Tu rends au haut de l'accueil les couleurs d'avant l'enseigne néon : violet `#7b2cbf` / `#3b0a57` (sombre : `#c9a2f5` / `#24063a` / `#5a1a91`), blush `#f6d4e6`, lavande `#e4c2ff`. Le mot ONRECORD garde la taille, le relief, le scintillement et l'inclinaison, mais le dégradé reste dans cette famille. La punchline, le cadre, la guirlande, le projecteur, les trois cartes et le réseau derrière redeviennent blanc, lavande et violet. Plus d'or, de cyan, ni de rose néon. Le mouvement du réseau reste. Cache `onrecord-v36`.
+
 ## 2026-11-11 (soir) — v35
 
 Tu ajoutes six phrases et une organisation. Rien de neuf sur Gaza ne passait les règles dans les 48 heures.

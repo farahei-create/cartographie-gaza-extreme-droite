@@ -815,12 +815,35 @@
       link(i, (i + 8) % N);
       link(i, (i + 15) % N);
     }
-    var PAL = [[255, 45, 210], [64, 236, 255], [255, 214, 70], [188, 92, 255], [255, 90, 160]];
-    var INK = PAL.map(function (c) {
-      var arr = [];
-      for (var k = 0; k <= 20; k++) arr.push("rgba(" + c[0] + "," + c[1] + "," + c[2] + "," + (k / 20).toFixed(2) + ")");
-      return arr;
-    });
+    var PAL = [];
+    var INK = [];
+    var HOT = [228, 194, 255];
+    var HOT_END = [123, 44, 191];
+    function loadPalette() {
+      var cs = getComputedStyle(document.documentElement);
+      var fb = [[255, 255, 255], [246, 212, 230], [228, 194, 255], [201, 162, 245], [176, 120, 255]];
+      function chan(name, fallback) {
+        var raw = (cs.getPropertyValue(name) || "").split(",");
+        if (raw.length < 3) return fallback;
+        var out = [];
+        for (var k = 0; k < 3; k++) {
+          var n = parseInt(raw[k], 10);
+          out.push(isNaN(n) ? fallback[k] : n);
+        }
+        return out;
+      }
+      PAL = ["--net-1", "--net-2", "--net-3", "--net-4", "--net-5"].map(function (name, idx) {
+        return chan(name, fb[idx]);
+      });
+      INK = PAL.map(function (c) {
+        var arr = [];
+        for (var k = 0; k <= 20; k++) arr.push("rgba(" + c[0] + "," + c[1] + "," + c[2] + "," + (k / 20).toFixed(2) + ")");
+        return arr;
+      });
+      HOT = chan("--net-hot", [228, 194, 255]);
+      HOT_END = chan("--net-hot-end", [123, 44, 191]);
+    }
+    loadPalette();
     var CORE = [];
     for (i = 0; i <= 20; i++) CORE.push("rgba(255,255,255," + (i / 20).toFixed(2) + ")");
     function aix(v) {
@@ -942,8 +965,8 @@
       }
       if (ptr.hot > 0.04) {
         var g = ctx.createRadialGradient(ptr.x, ptr.y, 0, ptr.x, ptr.y, 150);
-        g.addColorStop(0, "rgba(255,226,150," + (0.22 * ptr.hot).toFixed(3) + ")");
-        g.addColorStop(1, "rgba(255,40,180,0)");
+        g.addColorStop(0, "rgba(" + HOT[0] + "," + HOT[1] + "," + HOT[2] + "," + (0.22 * ptr.hot).toFixed(3) + ")");
+        g.addColorStop(1, "rgba(" + HOT_END[0] + "," + HOT_END[1] + "," + HOT_END[2] + ",0)");
         ctx.fillStyle = g;
         ctx.beginPath();
         ctx.arc(ptr.x, ptr.y, 150, 0, 6.2832);
@@ -1102,6 +1125,10 @@
       syncRun();
     });
     window.addEventListener("hashchange", function () { setTimeout(syncRun, 0); });
+    var mqScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    function onScheme() { loadPalette(); if (!running) frame(); }
+    if (mqScheme.addEventListener) mqScheme.addEventListener("change", onScheme);
+    else if (mqScheme.addListener) mqScheme.addListener(onScheme);
     syncRun();
   }
 

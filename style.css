@@ -37,6 +37,44 @@
   --violet:#7b2cbf;
   --hero-a:#3b0a57;
   --hero-b:#7b2cbf;
+  /* Enseigne : nuances de la marque d'avant v34 (blanc, blush, lavande, violet). */
+  --sign-1:#ffffff;
+  --sign-2:#f6d4e6;
+  --sign-3:#e4c2ff;
+  --sign-4:#d4b4f2;
+  --sign-glow:#e4c2ff;
+  --sign-glow-a:rgba(123,44,191,.78);
+  --sign-glow-b:rgba(157,78,221,.5);
+  --sign-s1:#e4c2ff;
+  --sign-s2:#c9a2f5;
+  --sign-s3:#9d4edd;
+  --sign-s4:#7b2cbf;
+  --sign-s5:#5c1c94;
+  --sign-s6:#3b0a57;
+  --sign-shade:rgba(8,0,22,.5);
+  --bulb-core:#ffffff;
+  --bulb-mid:#e4c2ff;
+  --bulb-hot:#7b2cbf;
+  --bulb-socket:rgba(59,10,87,.72);
+  --spot-core:rgba(255,255,255,.22);
+  --spot-edge:rgba(228,194,255,.1);
+  --glow-a:rgba(255,186,214,.32);
+  --glow-b:rgba(176,120,255,.34);
+  --glow-c:rgba(228,194,255,.16);
+  --tag-ink:rgba(255,255,255,.96);
+  --tag-glow:rgba(228,194,255,.55);
+  --tag-glow-2:rgba(123,44,191,.4);
+  --tag-line:rgba(228,194,255,.62);
+  --tag-wash-a:rgba(255,255,255,.1);
+  --tag-wash-b:rgba(59,10,87,.22);
+  --tag-inset:rgba(228,194,255,.14);
+  --net-1:255,255,255;
+  --net-2:246,212,230;
+  --net-3:228,194,255;
+  --net-4:201,162,245;
+  --net-5:176,120,255;
+  --net-hot:228,194,255;
+  --net-hot-end:123,44,191;
   --focus:rgba(123,44,191,.5);
 
   /* Types de nœuds (couleurs système iOS) */
@@ -98,6 +136,43 @@
     --mauve:#c79bdc;
     --hero-a:#24063a;
     --hero-b:#5a1a91;
+    --sign-1:#f4eff9;
+    --sign-2:#f6d4e6;
+    --sign-3:#c9a2f5;
+    --sign-4:#b98aed;
+    --sign-glow:#c9a2f5;
+    --sign-glow-a:rgba(201,162,245,.8);
+    --sign-glow-b:rgba(185,138,237,.55);
+    --sign-s1:#e4c2ff;
+    --sign-s2:#c9a2f5;
+    --sign-s3:#b98aed;
+    --sign-s4:#7b2cbf;
+    --sign-s5:#5a1a91;
+    --sign-s6:#3b0a57;
+    --sign-shade:rgba(0,0,0,.55);
+    --bulb-core:#f4eff9;
+    --bulb-mid:#c9a2f5;
+    --bulb-hot:#7b2cbf;
+    --bulb-socket:rgba(36,6,58,.78);
+    --spot-core:rgba(244,239,249,.24);
+    --spot-edge:rgba(201,162,245,.12);
+    --glow-a:rgba(244,143,177,.26);
+    --glow-b:rgba(201,162,245,.34);
+    --glow-c:rgba(185,138,237,.16);
+    --tag-ink:#f4eff9;
+    --tag-glow:rgba(201,162,245,.6);
+    --tag-glow-2:rgba(123,44,191,.45);
+    --tag-line:rgba(201,162,245,.72);
+    --tag-wash-a:rgba(244,239,249,.08);
+    --tag-wash-b:rgba(36,6,58,.35);
+    --tag-inset:rgba(201,162,245,.14);
+    --net-1:244,239,249;
+    --net-2:246,212,230;
+    --net-3:228,194,255;
+    --net-4:201,162,245;
+    --net-5:185,138,237;
+    --net-hot:201,162,245;
+    --net-hot-end:123,44,191;
     --accent-soft:rgba(201,162,245,.16);
     --focus:rgba(201,162,245,.7);
 
@@ -724,14 +799,13 @@ body{padding-bottom:var(--nav-total)}
 .hero{
   color:#fff;padding:18px 0 48px;position:relative;overflow:hidden;isolation:isolate;
   background:
-    radial-gradient(90% 70% at 100% 0%, rgba(255,40,160,.42), transparent 52%),
-    radial-gradient(80% 64% at 0% 100%, rgba(70,40,255,.48), transparent 58%),
-    radial-gradient(46% 36% at 50% 18%, rgba(255,210,90,.16), transparent 70%),
-    linear-gradient(165deg,#120214 0%, var(--hero-a) 42%, var(--hero-b) 100%);
+    radial-gradient(120% 90% at 100% 0%, rgba(194,24,91,.45), transparent 55%),
+    radial-gradient(90% 80% at 0% 100%, rgba(157,78,221,.45), transparent 60%),
+    linear-gradient(165deg,var(--hero-a),var(--hero-b));
 }
 .hero::before{
   content:"";position:absolute;inset:-12% -18%;z-index:1;pointer-events:none;
-  background:radial-gradient(30% 26% at 50% 42%, rgba(255,244,214,.2), rgba(255,60,180,.05) 46%, transparent 70%);
+  background:radial-gradient(30% 26% at 50% 42%, var(--spot-core), var(--spot-edge) 46%, transparent 70%);
   animation:spot-sweep 9s ease-in-out infinite alternate;
 }
 .hero-net{
@@ -742,15 +816,15 @@ body{padding-bottom:var(--nav-total)}
 .hero-glow{
   position:absolute;inset:0;z-index:1;pointer-events:none;
   background:
-    radial-gradient(32% 26% at 12% 18%, rgba(255,60,190,.22), transparent 70%),
-    radial-gradient(30% 28% at 90% 78%, rgba(60,220,255,.18), transparent 68%),
-    radial-gradient(28% 22% at 70% 12%, rgba(255,210,80,.12), transparent 70%);
+    radial-gradient(32% 26% at 12% 18%, var(--glow-a), transparent 70%),
+    radial-gradient(30% 28% at 90% 78%, var(--glow-b), transparent 68%),
+    radial-gradient(28% 22% at 70% 12%, var(--glow-c), transparent 70%);
 }
 .hero-marquee{
   position:absolute;inset:6px 6px 14px;z-index:1;pointer-events:none;border-radius:16px;padding:8px;
   background:
-    radial-gradient(circle, #fff 0 1.2px, #ffe08a 1.5px, rgba(255,160,40,.95) 2.2px, transparent 2.8px) 0 0 / 18px 18px,
-    radial-gradient(circle, rgba(90,50,16,.7) 0 1.15px, transparent 2.1px) 9px 9px / 18px 18px;
+    radial-gradient(circle, var(--bulb-core) 0 1.2px, var(--bulb-mid) 1.5px, var(--bulb-hot) 2.2px, transparent 2.8px) 0 0 / 18px 18px,
+    radial-gradient(circle, var(--bulb-socket) 0 1.15px, transparent 2.1px) 9px 9px / 18px 18px;
   -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite:xor;
   mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
@@ -784,22 +858,23 @@ body{padding-bottom:var(--nav-total)}
   pointer-events:none;white-space:nowrap;
 }
 .hero h1.onrecord::before{
-  z-index:0;color:#ff4ad8;-webkit-text-fill-color:#ff4ad8;
+  z-index:0;color:var(--sign-glow);-webkit-text-fill-color:var(--sign-glow);
   text-shadow:
-    0 0 6px #ff4ad8,
-    0 0 16px rgba(255,43,214,.95),
-    0 0 34px rgba(48,240,255,.85),
-    0 0 56px rgba(255,43,214,.4),
-    calc(var(--ex) * .22) calc(var(--ey) * .22) 0 #e4239a,
-    calc(var(--ex) * .44) calc(var(--ey) * .44) 0 #c01480,
-    calc(var(--ex) * .66) calc(var(--ey) * .66) 0 #961066,
-    calc(var(--ex) * .86) calc(var(--ey) * .86) 0 #6c0c4a,
-    var(--ex) var(--ey) 0 #42082e,
-    calc(var(--ex) * 1.12) calc(var(--ey) * 1.22) 16px rgba(0,0,0,.5);
+    0 0 6px var(--sign-glow),
+    0 0 16px var(--sign-glow-a),
+    0 0 34px var(--sign-glow-b),
+    0 0 56px var(--sign-glow-a),
+    calc(var(--ex) * .22) calc(var(--ey) * .22) 0 var(--sign-s1),
+    calc(var(--ex) * .44) calc(var(--ey) * .44) 0 var(--sign-s2),
+    calc(var(--ex) * .66) calc(var(--ey) * .66) 0 var(--sign-s3),
+    calc(var(--ex) * .86) calc(var(--ey) * .86) 0 var(--sign-s4),
+    var(--ex) var(--ey) 0 var(--sign-s5),
+    calc(var(--ex) * 1.12) calc(var(--ey) * 1.22) 0 var(--sign-s6),
+    calc(var(--ex) * 1.12) calc(var(--ey) * 1.22) 16px var(--sign-shade);
 }
 .hero h1.onrecord::after{
   z-index:1;
-  background-image:linear-gradient(105deg,#ff4ec8 0%,#d06bff 16%,#7ef6ff 32%,#ffe38a 48%,#ff7ad9 64%,#c77bff 80%,#fff6c8 92%,#ff4ec8 100%);
+  background-image:linear-gradient(105deg,var(--sign-1) 0%,var(--sign-2) 16%,var(--sign-3) 34%,var(--sign-1) 50%,var(--sign-2) 66%,var(--sign-4) 82%,var(--sign-1) 100%);
   background-size:220% 100%;background-position:30% 50%;
   -webkit-background-clip:text;background-clip:text;
   color:transparent;-webkit-text-fill-color:transparent;
@@ -813,21 +888,21 @@ body{padding-bottom:var(--nav-total)}
   font-family:"Anton", Impact, "Arial Narrow", sans-serif;
   font-weight:900;font-synthesis:none;
   font-size:clamp(1.28rem, 6.35vw, 2.05rem);line-height:1.05;letter-spacing:.012em;
-  color:#fff4c2;white-space:nowrap;
+  color:var(--tag-ink);white-space:nowrap;
   text-shadow:
-    0 0 6px rgba(255,244,194,.95),
-    0 0 16px rgba(255,196,60,.9),
-    0 0 28px rgba(255,70,170,.45);
+    0 1px 0 rgba(255,255,255,.2),
+    0 0 10px var(--tag-glow),
+    0 8px 18px rgba(16,0,36,.32);
   border-radius:12px;
-  background:linear-gradient(180deg, rgba(255,220,120,.1), rgba(28,4,48,.22));
+  background:linear-gradient(180deg, var(--tag-wash-a), var(--tag-wash-b));
   box-shadow:
-    0 0 0 1px rgba(255,214,120,.7),
-    0 0 14px rgba(255,180,40,.4),
-    inset 0 0 14px rgba(255,200,80,.14);
+    0 0 0 1px var(--tag-line),
+    0 0 14px var(--tag-glow-2),
+    inset 0 0 14px var(--tag-inset);
 }
 .tagline::before,.tagline::after{
   content:"";position:absolute;left:12px;right:12px;height:8px;pointer-events:none;
-  background:radial-gradient(circle, #fff 0 1.35px, #ffe08a 1.7px, #e09020 2.45px, transparent 3.1px) 0 50% / 14px 8px repeat-x;
+  background:radial-gradient(circle, var(--bulb-core) 0 1.35px, var(--bulb-mid) 1.7px, var(--bulb-hot) 2.45px, transparent 3.1px) 0 50% / 14px 8px repeat-x;
   animation:tag-bulbs 1.6s linear infinite;
 }
 .tagline::before{top:-4px}
@@ -835,8 +910,8 @@ body{padding-bottom:var(--nav-total)}
 .hero-purpose{
   margin:8px auto 0;max-width:36rem;text-align:center;
   font-size:clamp(.7rem, 2.7vw, .82rem);font-weight:450;line-height:1.35;letter-spacing:.004em;
-  color:rgba(255,255,255,.74);text-wrap:balance;
-  text-shadow:0 1px 2px rgba(0,0,0,.88), 0 0 10px rgba(8,0,20,.75);
+  color:rgba(255,255,255,.92);text-wrap:balance;
+  text-shadow:0 1px 2px rgba(16,0,36,.55), 0 0 10px rgba(8,0,22,.4);
 }
 @media (min-width:860px){
   .hero-purpose{white-space:nowrap;max-width:none;font-size:.8rem}
@@ -849,19 +924,13 @@ body{padding-bottom:var(--nav-total)}
 .hero-pillar{
   position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
   min-height:112px;padding:14px 8px 12px;border-radius:20px;text-align:center;text-decoration:none;color:#fff;
-  background:linear-gradient(165deg, rgba(255,255,255,.16), rgba(18,4,36,.55));
+  background:linear-gradient(165deg, rgba(255,255,255,.2), rgba(18,4,36,.5));
   -webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);
-  border:1px solid rgba(255,80,210,.8);
-  box-shadow:
-    inset 0 0 16px rgba(255,50,190,.2),
-    inset 0 1px 0 rgba(255,255,255,.4),
-    0 0 0 1px rgba(80,240,255,.32),
-    0 0 14px rgba(255,40,190,.6),
-    0 0 28px rgba(70,210,255,.22),
-    0 12px 24px rgba(12,0,28,.36);
+  border:1px solid rgba(255,255,255,.38);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.45), 0 14px 28px rgba(12,0,28,.32), 0 2px 6px rgba(12,0,28,.22);
   transform-style:preserve-3d;-webkit-tap-highlight-color:transparent;touch-action:manipulation;overflow:hidden;
 }
-.hero-pillar:hover{text-decoration:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.5), 0 0 0 1px rgba(140,255,255,.5), 0 0 18px rgba(255,60,210,.8), 0 0 36px rgba(80,220,255,.35), 0 16px 30px rgba(12,0,28,.42)}
+.hero-pillar:hover{text-decoration:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.55), 0 18px 36px rgba(12,0,28,.4)}
 .hero-pillar:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .hero-pillar .i{width:26px;height:26px;stroke:#fff}
 .hero-pillar strong{font-size:.84rem;font-weight:750;letter-spacing:-.02em;line-height:1.2;text-shadow:0 1px 1px rgba(0,0,0,.35)}
