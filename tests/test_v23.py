@@ -18,7 +18,7 @@ def check(c, m):
         print("FAIL:", m)
 
 sw = open(os.path.join(ROOT, "sw.js")).read()
-check('var VERSION = "onrecord-v39"' in sw, "sw onrecord-v39")
+check('var VERSION = "onrecord-v40"' in sw, "sw onrecord-v40")
 html = open(os.path.join(ROOT, "index.html")).read()
 js = open(os.path.join(ROOT, "app.js")).read()
 check("Voir comment il est arrivé là" in js, "libellé parcours")

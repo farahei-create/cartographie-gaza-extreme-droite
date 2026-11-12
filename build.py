@@ -1038,6 +1038,9 @@ for n in N:
     if n["id"] in PIMG: n.update(PIMG[n["id"]])
     if n["id"] in OLOG: n.update(OLOG[n["id"]])
 
+import admin_content
+admin_content.apply(N, E, PIMG)
+
 def _nature(e):
     if e.get("nature") in ("ascension","opposition","autre","coulisses"):
         return e["nature"]
@@ -1094,5 +1097,6 @@ data["meta"]["counts"]={"persons":sum(n["type"]=="person" for n in N),"orgs":sum
  "photos":sum(1 for n in N if n.get("image")),"logos":sum(1 for n in N if n.get("logo")),
  "videos":sum(1 for n in N for st in n["statements"] if st.get("video")),
  "france_nodes":sum("france" in n["sections"] for n in N)}
-json.dump(data,open(os.path.join(_root,"data.json"),"w"),ensure_ascii=False,indent=2)
+_out=os.environ.get("ONRECORD_DATA_OUT") or os.path.join(_root,"data.json")
+json.dump(data,open(_out,"w"),ensure_ascii=False,indent=2)
 print(data["meta"]["counts"])

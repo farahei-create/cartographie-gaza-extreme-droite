@@ -4,6 +4,12 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-12 — v40
+
+Tu corriges l'accueil sans toucher à la palette. La barre de recherche du hero ne recouvre plus les chiffres : la marge négative et le z-index qui tiraient les cartes vers le haut disparaissent. Le bloc « Reprendre » a sa propre marge, au-dessus des accès rapides. ONRECORD garde le blanc Anton ; la lueur externe passe au violet (#8b3dff, #b388ff, #7b2cbf), et un trait néon, un peu moins large que le mot, sépare le titre du slogan.
+
+Tu ajoutes une page privée, https://onrecord-fr.vercel.app/admin.html , non liée depuis le site, en `noindex`. Ta propriétaire y colle un jeton GitHub (fine-grained, Contents lecture/écriture, ce dépôt seulement). Il reste dans le navigateur de l'appareil et ne part que vers api.github.com. Depuis le téléphone elle peut ajouter une personnalité (photo WebP 400 px, ou monogramme), une déclaration, ou un lien du réseau, voir l'aperçu, puis publier. Le commit `admin: ajout …` écrit `tools/admin_additions.json` (et la photo, le crédit). GitHub Actions relance `build.py` et ne commit `data.json` que si le contenu change, pas si seule la date bouge. Aucune citation nouvelle dans cette version. Cache `onrecord-v40`.
+
 ## 2026-11-12 — v39
 
 Tu étends l'ambiance du hero à tout le site : fond sombre violacé, cartes en verre, bord violet, titres de section en Anton, liens et pastilles lavande, séparateur ✦. Le sombre néon est le thème par défaut (theme-color et manifeste `#07030f`). Le mode clair, s'il est demandé par l'appareil, reste lisible avec les accents violets. Le hero v38 ne change pas. Aucune citation, aucune source, aucune fiche n'est réécrite.

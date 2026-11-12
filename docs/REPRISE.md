@@ -209,6 +209,7 @@ Le numéro vivant est celui de `sw.js`. Il n'y a pas de tag git `v11`, `v17`, `v
 | v37 | Mise à jour du 12/11 | Accueil : réseau du hero flouté, voile dépoli derrière la punchline et la ligne d'explication |
 | v38 | Mise à jour du 12/11 | Accueil : hero sombre violet, phrases surlignées, constellation 3D visible |
 | v39 | Mise à jour du 12/11 | Ambiance néon sur tout le site, Réseau en 3D activable (canvas, sans librairie tierce) |
+| v40 | Mise à jour du 12/11 | Accueil : espacement du hero, trait violet sous ONRECORD. Page admin privée (`admin.html`) |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 
@@ -228,3 +229,28 @@ Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 - `sw.js` a changé de version.
 - `docs/JOURNAL.md` a une entrée du jour.
 - `curl` du `sw.js` en ligne montre cette version.
+
+## 9. Page admin
+
+Adresse : https://onrecord-fr.vercel.app/admin.html (la réécriture `/admin` mène au même fichier). Elle n'est liée nulle part dans `index.html`. `noindex, nofollow` est dans la page et dans `X-Robots-Tag` (`vercel.json`). `robots.txt` interdit `/admin.html` et `/admin`. Il n'y a pas de sitemap : n'y ajoute pas cette URL si tu en crées un.
+
+La page sert à la propriétaire, depuis son iPhone, sans nouvel outil. Elle colle une fois un jeton GitHub **fine-grained**, limité au dépôt `farahei-create/cartographie-gaza-extreme-droite`, permission **Contents : Read and write**, rien d'autre. Le jeton reste dans le `localStorage` de l'appareil (`onrecord:admin-token`). « Se déconnecter » l'efface. Il n'est envoyé qu'à `https://api.github.com`. Le guide pas à pas est sur la page.
+
+Créer le jeton :
+
+1. github.com, compte **@farahei-create**.
+2. Settings → Developer settings → Personal access tokens → Fine-grained tokens, ou https://github.com/settings/personal-access-tokens/new
+3. Nom : Onrecord. Expiration au choix (90 jours est un bon défaut).
+4. Resource owner : farahei-create. Repository access : seulement `cartographie-gaza-extreme-droite`.
+5. Repository permissions → Contents → Read and write. Le reste reste sur No access.
+6. Generate token, copier le `github_pat_…` (GitHub ne le réaffiche pas), le coller sur la page.
+
+Formulaires : personnalité (nom, fonction, parti ou organisation, catégorie, section, photo facultative), déclaration (personne, citation exacte, date, média, URL, vidéo officielle, contexte, démenti), lien du réseau (deux entités, relation, source). La photo est réduite à 400 px et passée en WebP dans le navigateur. Sans photo : monogramme. Avec photo : auteur, licence libre ou portrait officiel, page Commons ou page officielle.
+
+« Voir l'aperçu », puis « Publier ». Le commit `admin: ajout …` écrit `tools/admin_additions.json` (et, s'il y a une photo, `tools/people_images.json` plus `img/people/<id>.webp`) via l'API Git. En cas de conflit de sha, la page relit la branche et réessaie. Un jeton refusé s'affiche clairement.
+
+`build.py` applique ce fichier à la fin, par `admin_content.py`, après les modules `v35_content.py` et suivants. Même format que le reste : citation, date, média, URL, thème, section ; lien avec `nature` déjà posée pour que `_nature()` ne la reclasse pas. Une personne nouvelle reçoit une étape de parcours tirée de sa première déclaration, sinon `tests/test_v24.py` échoue.
+
+Vercel ne lance pas `build.py` (le site est statique, `data.json` est dans le dépôt). Le workflow `.github/workflows/build-data.yml` part sur un push des sources, lance `python3 build.py`, et `tools/commit_data_if_content.py` ne commit `data.json` que si le contenu change. Si seule la date de génération change, pas de commit. Ce second push redéploie Vercel. `data.json` est en réseau d'abord dans `sw.js` : le téléphone récupère le fichier nouveau sans geste de plus. Compte environ une minute.
+
+Les règles éditoriales de la section 3 s'appliquent aussi à ce qui entre par cette page. Une URL Wikipédia, un mot interdit dans un texte rédigé par le site, ou une licence NC/ND, font échouer `build.py` : le `data.json` en ligne ne bouge pas.

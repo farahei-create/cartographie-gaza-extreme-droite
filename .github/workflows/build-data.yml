@@ -1,0 +1,35 @@
+name: Régénérer data.json
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "build.py"
+      - "admin_content.py"
+      - "v*.py"
+      - "tools/admin_additions.json"
+      - "tools/people_images.json"
+      - "tools/org_logos.json"
+      - "tools/archives.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-data-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Identité git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Reconstruire data.json
+        run: python3 build.py
+      - name: Publier data.json si le contenu a changé
+        run: python3 tools/commit_data_if_content.py

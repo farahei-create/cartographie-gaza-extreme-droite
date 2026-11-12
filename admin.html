@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="fr" class="admin-root">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#07030f">
+<meta name="color-scheme" content="dark">
+<title>Admin — Onrecord</title>
+<link rel="icon" href="icons/favicon-64.png">
+<link rel="stylesheet" href="style.css">
+<style>
+  html.admin-root{color-scheme:dark}
+  body.admin-page{
+    --bg:#07030f;--surface:#140c22;--ink:#f7f3ff;--muted:#d8c7ff;--accent:#c084fc;
+    margin:0;padding:24px 0 40px;background:#07030f;color:#f7f3ff;
+    font:16px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;
+  }
+  .admin{max-width:640px;margin:0 auto;padding:0 16px}
+  .mark{
+    margin:0 0 6px;font-family:"Anton",Impact,sans-serif;font-weight:900;font-size:2.4rem;letter-spacing:.04em;
+    color:#fff;text-shadow:0 0 12px rgba(139,61,255,.85),0 0 28px rgba(123,44,191,.55);
+  }
+  h1.page-h{margin:0 0 8px;font-size:1.35rem;font-weight:750}
+  .lead,.hint{color:#d8c7ff}
+  .hint{font-size:.92rem}
+  .rules,.guide,.card{
+    margin:16px 0;padding:14px 14px 6px;border-radius:18px;
+    background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(12,6,24,.84));
+    border:1px solid rgba(168,85,247,.72);
+    box-shadow:0 0 16px rgba(124,58,237,.28);
+  }
+  .rules h2,.guide h2,fieldset legend{font-size:1rem;margin:0 0 8px}
+  .rules li,.guide li{margin:0 0 8px}
+  a{color:#c084fc}
+  label{display:flex;flex-direction:column;gap:6px;font-weight:650;margin:0 0 14px}
+  input,select,textarea{
+    font:inherit;font-size:16px;min-height:48px;width:100%;box-sizing:border-box;
+    padding:12px 14px;border-radius:14px;border:1px solid rgba(168,85,247,.75);
+    background:#12081c;color:#fff;
+  }
+  textarea{min-height:140px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:3px solid rgba(179,136,255,.7);outline-offset:1px}
+  .checks{display:flex;flex-wrap:wrap;gap:12px 18px;margin:0 0 14px}
+  .checks label{flex-direction:row;align-items:center;font-weight:600;margin:0}
+  .checks input{width:22px;height:22px;min-height:0}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media (max-width:520px){ .row2{grid-template-columns:1fr} }
+  .tabs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:8px 0 14px}
+  .tabs button{
+    min-height:48px;border-radius:14px;border:1px solid rgba(168,85,247,.7);
+    background:#1c1230;color:#f7f3ff;font:inherit;font-weight:700;cursor:pointer;
+  }
+  .tabs button[aria-selected="true"]{background:#7c3aed;box-shadow:0 0 16px rgba(124,58,237,.55)}
+  button.btn{
+    display:flex;align-items:center;justify-content:center;width:100%;min-height:52px;margin:8px 0;
+    border:0;border-radius:999px;background:#7c3aed;color:#fff;font:inherit;font-weight:750;font-size:1.05rem;
+    box-shadow:0 0 16px rgba(124,58,237,.45);cursor:pointer;
+  }
+  button.btn.ghost{background:transparent;color:#e9d5ff;border:1px solid rgba(168,85,247,.8);box-shadow:none}
+  button.btn:disabled{opacity:.55}
+  .err{color:#ffd0e8;background:#3b1028;border-radius:12px;padding:10px 12px;margin:8px 0}
+  .pv{margin:0 0 12px;padding:12px;border-radius:16px;background:#12081c;border:1px solid rgba(168,85,247,.45)}
+  .pv h3{margin:0 0 6px;font-size:1.05rem}
+  .pv blockquote{margin:8px 0;font-size:1.02rem}
+  .pv .k{margin:0;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:#b388ff}
+  .pv button{min-height:44px;margin-top:8px;padding:8px 14px;border-radius:999px;border:1px solid rgba(168,85,247,.6);background:transparent;color:#f7f3ff;font:inherit}
+  #pub-status{font-weight:650}
+  fieldset{border:0;margin:0;padding:0}
+  [hidden]{display:none !important}
+</style>
+</head>
+<body class="admin-page" id="admin-app">
+<main class="admin">
+  <p class="mark">ONRECORD</p>
+  <h1 class="page-h">Mise à jour</h1>
+  <p class="lead">Cette page n’est pas liée depuis le site. Le jeton reste sur cet appareil et ne part que vers api.github.com.</p>
+
+  <section id="gate">
+    <div class="guide">
+      <h2>Créer le jeton GitHub</h2>
+      <ol>
+        <li>Sur l’iPhone, ouvre github.com et connecte-toi avec <strong>@farahei-create</strong>.</li>
+        <li>Va dans Settings → Developer settings → Personal access tokens → Fine-grained tokens, ou ouvre <a href="https://github.com/settings/personal-access-tokens/new">la page de création</a>.</li>
+        <li>Nom : <strong>Onrecord</strong>. Expiration : 90 jours, ou la durée que tu choisis.</li>
+        <li>Resource owner : <strong>farahei-create</strong>.</li>
+        <li>Repository access : Only select repositories → <strong>cartographie-gaza-extreme-droite</strong>.</li>
+        <li>Permissions → Repository permissions → <strong>Contents : Read and write</strong>. Laisse le reste sur No access.</li>
+        <li>Generate token. Copie le jeton (il commence par <strong>github_pat_</strong>). GitHub ne le réaffichera pas.</li>
+        <li>Colle-le ci-dessous. « Se déconnecter » l’efface de cet appareil.</li>
+      </ol>
+    </div>
+    <label for="token">Jeton personnel
+      <input id="token" type="password" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="github_pat_…">
+    </label>
+    <p id="gate-error" class="err" hidden></p>
+    <button type="button" class="btn" id="btn-login">Enregistrer sur cet appareil</button>
+  </section>
+
+  <section id="workspace" hidden>
+    <p><button type="button" class="btn ghost" id="btn-logout">Se déconnecter</button></p>
+    <div class="rules">
+      <h2>Règles</h2>
+      <ul>
+        <li>Citation exacte, datée, avec une URL qui contient la phrase. Les crochets [ ] marquent une coupure.</li>
+        <li>Ton neutre. Pas de jugement sur la personne.</li>
+        <li>Pas de personne privée : personnalités publiques et organisations seulement.</li>
+        <li>Le contexte et le démenti vont dans la même fiche.</li>
+        <li>Wikipédia ne peut pas être la seule source.</li>
+        <li>Vidéo : seulement le compte du diffuseur d’origine ou un compte officiel.</li>
+        <li>Photo : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable, avec auteur, licence et lien. Sinon, laisse la photo vide : le monogramme s’affiche.</li>
+      </ul>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" data-tab="person" aria-selected="true">Personne</button>
+      <button type="button" role="tab" data-tab="statement" aria-selected="false">Déclaration</button>
+      <button type="button" role="tab" data-tab="edge" aria-selected="false">Lien</button>
+    </div>
+
+    <div class="pane" id="pane-person">
+      <fieldset>
+        <legend>Personnalité</legend>
+        <div class="checks">
+          <label><input type="radio" name="pmode" value="new" checked> Nouvelle</label>
+          <label><input type="radio" name="pmode" value="existing"> Déjà dans l’archive</label>
+        </div>
+        <div id="existing-fields" hidden>
+          <label>Rechercher <input id="ph-filter" type="search" placeholder="Nom" autocomplete="off"></label>
+          <label>Personne <select id="ph-existing"></select></label>
+        </div>
+        <div id="new-fields">
+          <label>Nom <input id="p-name" autocomplete="name" placeholder="Prénom Nom"></label>
+          <label>Fonction <input id="p-role" placeholder="Députée, journaliste, association…"></label>
+          <label>Parti ou organisation <input id="p-org" placeholder="Facultatif. Ajouté à la fonction."></label>
+          <label>Description neutre <textarea id="p-desc" rows="3" placeholder="Une phrase factuelle. Vide = la fonction."></textarea></label>
+          <div class="checks">
+            <label><input type="radio" name="ptype" value="person" checked> Personne</label>
+            <label><input type="radio" name="ptype" value="org"> Organisation</label>
+          </div>
+          <label>Catégorie <select id="p-cat"></select></label>
+          <label>Sous-catégorie <select id="p-sub"></select></label>
+          <div class="checks">
+            <label><input type="checkbox" name="psec" value="gaza"> Gaza</label>
+            <label><input type="checkbox" name="psec" value="france" checked> France</label>
+          </div>
+        </div>
+        <div id="photo-block">
+          <p class="hint">Photo facultative. Depuis la galerie : elle est réduite à 400 px et convertie en WebP. Laisse vide pour le monogramme.</p>
+          <label>Photo <input id="p-file" type="file" accept="image/*"></label>
+          <label>Auteur <input id="ph-author" placeholder="Nom sur Commons, ou l’institution"></label>
+          <label>Licence
+            <select id="ph-license">
+              <option value="">Choisir</option>
+              <option value="CC BY 4.0" data-url="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</option>
+              <option value="CC BY-SA 4.0" data-url="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</option>
+              <option value="CC BY 2.0" data-url="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</option>
+              <option value="CC BY-SA 2.0" data-url="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</option>
+              <option value="CC0" data-url="https://creativecommons.org/publicdomain/zero/1.0/">CC0</option>
+              <option value="Domaine public" data-url="https://creativecommons.org/publicdomain/mark/1.0/">Domaine public</option>
+              <option value="Portrait officiel (Parlement européen)" data-url="https://www.europarl.europa.eu/legal-notice/">Portrait officiel (Parlement européen)</option>
+              <option value="Portrait officiel (réutilisation autorisée)" data-url="https://www.europarl.europa.eu/legal-notice/">Portrait officiel (réutilisation autorisée)</option>
+            </select>
+          </label>
+          <label>Lien de la licence <input id="ph-license-url" type="url" inputmode="url" placeholder="https://"></label>
+          <label>Page de la photo <input id="ph-source" type="url" inputmode="url" placeholder="https://commons.wikimedia.org/wiki/File:…"></label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="pane" id="pane-statement" hidden>
+      <fieldset>
+        <legend>Déclaration</legend>
+        <label>Rechercher une personne <input id="st-filter" type="search" placeholder="Nom" autocomplete="off"></label>
+        <label>Personne <select id="st-person"></select></label>
+        <label>Citation exacte <textarea id="st-quote" placeholder="La phrase telle que la source la publie"></textarea></label>
+        <label>Date <input id="st-date" type="date"></label>
+        <label>Média ou support <input id="st-medium" placeholder="BFMTV, entretien du …"></label>
+        <label>URL de la source <input id="st-url" type="url" inputmode="url" placeholder="https://" required></label>
+        <label>Lien vidéo officiel (facultatif) <input id="st-video" type="url" inputmode="url" placeholder="https://… compte du diffuseur"></label>
+        <label>Titre de la vidéo <input id="st-video-title" placeholder="Facultatif"></label>
+        <label>Compte officiel <input id="st-video-source" placeholder="Nom du diffuseur"></label>
+        <label>Contexte (facultatif) <textarea id="st-context" rows="3" placeholder="Ce que la source précise autour de la phrase"></textarea></label>
+        <label>Démenti ou précision (facultatif) <textarea id="st-denial" rows="3" placeholder="Réponse publiée dans la même source, ou une source liée"></textarea></label>
+        <label>Thème <select id="st-theme"></select></label>
+        <label>Section
+          <select id="st-section">
+            <option value="france">France</option>
+            <option value="gaza">Gaza</option>
+          </select>
+        </label>
+      </fieldset>
+    </div>
+
+    <div class="pane" id="pane-edge" hidden>
+      <fieldset>
+        <legend>Lien du réseau</legend>
+        <label>Rechercher l’origine <input id="e-filter" type="search" placeholder="Nom" autocomplete="off"></label>
+        <label>De <select id="e-source"></select></label>
+        <label>Rechercher la cible <input id="e-filter2" type="search" placeholder="Nom" autocomplete="off"></label>
+        <label>Vers <select id="e-target"></select></label>
+        <label>Relation, formulée comme la source <textarea id="e-rel" rows="3" placeholder="Ce que la source écrit, sans lien de causalité ajouté"></textarea></label>
+        <label>URL de la source <input id="e-url" type="url" inputmode="url" placeholder="https://"></label>
+        <label>Date <input id="e-date" type="date"></label>
+        <div class="row2">
+          <label>Section
+            <select id="e-section"><option value="france">France</option><option value="gaza">Gaza</option></select>
+          </label>
+          <label>Nature
+            <select id="e-nature">
+              <option value="autre">autre</option>
+              <option value="ascension">ascension</option>
+              <option value="opposition">opposition</option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
+    </div>
+
+    <p id="form-errors" class="err" hidden></p>
+    <button type="button" class="btn ghost" id="btn-stage">Voir l’aperçu</button>
+    <h2>Aperçu</h2>
+    <div id="preview"></div>
+    <button type="button" class="btn" id="btn-publish">Publier</button>
+    <p id="pub-status"></p>
+    <p class="hint">La publication écrit les sources. Le site régénère data.json tout seul. Compte une minute.</p>
+  </section>
+</main>
+<script src="admin.js"></script>
+</body>
+</html>

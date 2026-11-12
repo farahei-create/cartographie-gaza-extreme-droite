@@ -1,0 +1,48 @@
+{
+  "people": [
+    {
+      "id": "personne-admin-fixture",
+      "name": "Personne Admin Fixture",
+      "type": "person",
+      "role": "Députée",
+      "description": "Députée. Organisation indiquée : Rassemblement national.",
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "sections": ["france"]
+    }
+  ],
+  "statements": [
+    {
+      "person_id": "personne-admin-fixture",
+      "quote": "Phrase exacte d'exemple pour le contrôle du générateur.",
+      "date": "2026-11-12",
+      "medium": "franceinfo, article d'exemple",
+      "url": "https://www.franceinfo.fr/exemple-admin-fixture",
+      "theme": "France – normalisation de l'extrême droite",
+      "section": "france"
+    }
+  ],
+  "edges": [
+    {
+      "source": "personne-admin-fixture",
+      "target": "rn",
+      "relation": "mention dans le même article d'exemple",
+      "url": "https://www.franceinfo.fr/exemple-admin-fixture",
+      "date": "2026-11-12",
+      "section": "france",
+      "nature": "autre"
+    }
+  ],
+  "photos": [
+    {
+      "id": "personne-admin-fixture",
+      "image": "img/people/personne-admin-fixture.webp",
+      "image_credit": {
+        "author": "Auteur Commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Exemple.jpg"
+      }
+    }
+  ]
+}

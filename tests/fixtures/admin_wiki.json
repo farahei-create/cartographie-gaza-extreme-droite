@@ -1,0 +1,16 @@
+{
+  "people": [],
+  "statements": [
+    {
+      "person_id": "marine-le-pen",
+      "quote": "Phrase qui ne doit pas entrer.",
+      "date": "2026-11-12",
+      "medium": "Notice",
+      "url": "https://fr.wikipedia.org/wiki/Exemple",
+      "theme": "France – normalisation de l'extrême droite",
+      "section": "france"
+    }
+  ],
+  "edges": [],
+  "photos": []
+}
