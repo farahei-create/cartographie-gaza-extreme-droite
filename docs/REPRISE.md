@@ -206,6 +206,7 @@ Le numéro vivant est celui de `sw.js`. Il n'y a pas de tag git `v11`, `v17`, `v
 | v34 | Mise à jour du 11/11 | Accueil : enseigne néon (Anton), réseau visible derrière le titre |
 | v35 | Mise à jour du 11/11 (soir) | Pfeffer (prêt RN), Bardella (Face à BFM, X), Zemmour (TF1), France terre d'asile (saisine Arcom) ; module `v35_content.py` |
 | v36 | Mise à jour du 12/11 | Accueil : couleurs d'origine (violet, blush, lavande), animation de l'enseigne conservée |
+| v37 | Mise à jour du 12/11 | Accueil : réseau du hero flouté, voile dépoli derrière la punchline et la ligne d'explication |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 

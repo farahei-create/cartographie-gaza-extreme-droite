@@ -809,9 +809,19 @@ body{padding-bottom:var(--nav-total)}
   animation:spot-sweep 9s ease-in-out infinite alternate;
 }
 .hero-net{
-  position:absolute;inset:0;z-index:0;width:100%;height:100%;display:block;pointer-events:none;opacity:1;
-  -webkit-mask-image:linear-gradient(to bottom, transparent 0, #000 5%, #000 96%, transparent 100%);
-  mask-image:linear-gradient(to bottom, transparent 0, #000 5%, #000 96%, transparent 100%);
+  position:absolute;inset:0;z-index:0;width:100%;height:100%;display:block;pointer-events:none;opacity:.9;
+  filter:blur(2px) contrast(.84);
+  -webkit-filter:blur(2px) contrast(.84);
+  /* Centre (texte) plus discret, bords plus présents. Le produit des deux masques est commutatif. */
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent 0, #000 6%, #000 94%, transparent 100%),
+    radial-gradient(ellipse 80% 54% at 50% 32%, rgba(0,0,0,.38) 0%, rgba(0,0,0,.62) 46%, #000 78%);
+  mask-image:
+    linear-gradient(to bottom, transparent 0, #000 6%, #000 94%, transparent 100%),
+    radial-gradient(ellipse 80% 54% at 50% 32%, rgba(0,0,0,.38) 0%, rgba(0,0,0,.62) 46%, #000 78%);
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  -webkit-mask-size:100% 100%;mask-size:100% 100%;
+  -webkit-mask-composite:source-in;mask-composite:intersect;
 }
 .hero-glow{
   position:absolute;inset:0;z-index:1;pointer-events:none;
@@ -833,6 +843,22 @@ body{padding-bottom:var(--nav-total)}
 }
 .hero .wrap{position:relative;z-index:2}
 .hero-copy{position:relative;text-align:center}
+/* Voile dépoli derrière la punchline et la ligne d'explication. Le ::before déborde un peu
+   sans rétrécir le texte. #24063a est le violet du hero sombre. */
+.hero-lines{
+  position:relative;isolation:isolate;
+  margin:10px auto 0;width:100%;max-width:100%;
+  padding:6px 0 2px;
+}
+.hero-lines::before{
+  content:"";position:absolute;z-index:-1;inset:-6px -8px -8px;border-radius:18px;pointer-events:none;
+  background:rgba(36,6,58,.55);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  backdrop-filter:blur(14px) saturate(140%);
+  border:1px solid rgba(228,194,255,.34);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.16), 0 10px 24px rgba(16,0,36,.28);
+  -webkit-transform:translateZ(0);transform:translateZ(0);
+}
 .hero h1.onrecord{
   --mx:0;--my:0;
   --ex:calc(7px + var(--mx) * 5px);
@@ -882,7 +908,7 @@ body{padding-bottom:var(--nav-total)}
 }
 .tagline{
   position:relative;
-  margin:10px auto 0;width:fit-content;max-width:calc(100% - 8px);
+  margin:0 auto;width:fit-content;max-width:calc(100% - 8px);
   /* Anton laisse plus d'approche à droite : le padding gauche remet l'encre au centre */
   padding:10px 16px 11px calc(16px + .24em);text-align:center;
   font-family:"Anton", Impact, "Arial Narrow", sans-serif;
@@ -891,6 +917,7 @@ body{padding-bottom:var(--nav-total)}
   color:var(--tag-ink);white-space:nowrap;
   text-shadow:
     0 1px 0 rgba(255,255,255,.2),
+    0 1px 2px rgba(16,0,36,.8),
     0 0 10px var(--tag-glow),
     0 8px 18px rgba(16,0,36,.32);
   border-radius:12px;
@@ -909,11 +936,13 @@ body{padding-bottom:var(--nav-total)}
 .tagline::after{bottom:-4px;animation-direction:reverse}
 .hero-purpose{
   margin:8px auto 0;max-width:36rem;text-align:center;
-  font-size:clamp(.7rem, 2.7vw, .82rem);font-weight:450;line-height:1.35;letter-spacing:.004em;
-  color:rgba(255,255,255,.92);text-wrap:balance;
-  text-shadow:0 1px 2px rgba(16,0,36,.55), 0 0 10px rgba(8,0,22,.4);
+  font-size:clamp(.7rem, 2.7vw, .82rem);font-weight:500;line-height:1.35;letter-spacing:.004em;
+  color:#fff;text-wrap:balance;
+  text-shadow:0 1px 2px rgba(16,0,36,.75);
 }
 @media (min-width:860px){
+  .hero-lines{width:fit-content;max-width:100%}
+  .hero-lines .tagline,.hero-lines .hero-purpose{width:fit-content}
   .hero-purpose{white-space:nowrap;max-width:none;font-size:.8rem}
 }
 #view-accueil .hero .wrap{text-align:center}
@@ -924,8 +953,8 @@ body{padding-bottom:var(--nav-total)}
 .hero-pillar{
   position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
   min-height:112px;padding:14px 8px 12px;border-radius:20px;text-align:center;text-decoration:none;color:#fff;
-  background:linear-gradient(165deg, rgba(255,255,255,.2), rgba(18,4,36,.5));
-  -webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);
+  background:linear-gradient(165deg, rgba(255,255,255,.14), rgba(36,6,58,.72));
+  -webkit-backdrop-filter:blur(16px) saturate(150%);backdrop-filter:blur(16px) saturate(150%);
   border:1px solid rgba(255,255,255,.38);
   box-shadow:inset 0 1px 0 rgba(255,255,255,.45), 0 14px 28px rgba(12,0,28,.32), 0 2px 6px rgba(12,0,28,.22);
   transform-style:preserve-3d;-webkit-tap-highlight-color:transparent;touch-action:manipulation;overflow:hidden;
@@ -933,8 +962,8 @@ body{padding-bottom:var(--nav-total)}
 .hero-pillar:hover{text-decoration:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.55), 0 18px 36px rgba(12,0,28,.4)}
 .hero-pillar:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .hero-pillar .i{width:26px;height:26px;stroke:#fff}
-.hero-pillar strong{font-size:.84rem;font-weight:750;letter-spacing:-.02em;line-height:1.2;text-shadow:0 1px 1px rgba(0,0,0,.35)}
-.hero-pillar small{font-size:.7rem;line-height:1.25;color:rgba(255,255,255,.9);text-shadow:0 1px 1px rgba(0,0,0,.35);text-wrap:balance}
+.hero-pillar strong{font-size:.84rem;font-weight:750;letter-spacing:-.02em;line-height:1.2;text-shadow:0 1px 2px rgba(16,0,36,.65)}
+.hero-pillar small{font-size:.7rem;line-height:1.25;color:#fff;text-shadow:0 1px 2px rgba(16,0,36,.75);text-wrap:balance}
 .hero-pillar::after{
   content:"";position:absolute;left:var(--rx,50%);top:var(--ry,50%);width:14px;height:14px;margin:-7px 0 0 -7px;
   border-radius:50%;background:rgba(255,255,255,.55);transform:scale(0);opacity:0;pointer-events:none;
@@ -946,7 +975,8 @@ body{padding-bottom:var(--nav-total)}
 @media (max-width:520px){
   .hero{padding:8px 0 36px}
   .hero-pillars{gap:8px;margin:12px auto 10px}
-  .tagline{margin-top:8px;padding:8px 12px 9px calc(12px + .24em)}
+  .hero-lines{margin-top:8px}
+  .tagline{padding:8px 12px 9px calc(12px + .24em)}
   .hero-pillar{min-height:96px;padding:10px 5px 8px;gap:3px;border-radius:16px}
   .hero-pillar .i{width:22px;height:22px}
   .hero-pillar strong{font-size:.76rem}
@@ -954,7 +984,7 @@ body{padding-bottom:var(--nav-total)}
 }
 @media (forced-colors:active){
   .hero{background:Canvas;color:CanvasText}
-  .hero-net,.hero-glow,.hero-marquee,.hero::before,.tagline::before,.tagline::after,.hero h1.onrecord::before,.hero h1.onrecord::after{display:none}
+  .hero-net,.hero-glow,.hero-marquee,.hero::before,.hero-lines::before,.tagline::before,.tagline::after,.hero h1.onrecord::before,.hero h1.onrecord::after{display:none}
   .hero h1.onrecord,.hero .tagline,.hero-purpose{color:CanvasText;-webkit-text-fill-color:currentColor;background:none;filter:none;text-shadow:none;animation:none}
   .hero-pillar{background:Canvas;color:LinkText;border:1px solid CanvasText;box-shadow:none}
 }
@@ -979,10 +1009,10 @@ body{padding-bottom:var(--nav-total)}
   .hero-pillar:nth-child(1){animation-delay:.16s}
   .hero-pillar:nth-child(2){animation-delay:.24s}
   .hero-pillar:nth-child(3){animation-delay:.32s}
-  .hero-purpose{animation:hero-rise .55s var(--ease) both}
+  .hero-lines{animation:hero-rise .55s var(--ease) both}
 }
 @media (prefers-reduced-motion:reduce){
-  .hero h1.onrecord,.hero h1.onrecord::before,.hero h1.onrecord::after,.hero-pillar,.hero-purpose,.hero-marquee,.hero-glow,.hero::before,.tagline::before,.tagline::after{
+  .hero h1.onrecord,.hero h1.onrecord::before,.hero h1.onrecord::after,.hero-pillar,.hero-lines,.hero-purpose,.hero-marquee,.hero-glow,.hero::before,.tagline::before,.tagline::after{
     animation:none !important;transition:none;
   }
 }
@@ -1282,6 +1312,8 @@ body[data-view="reseau"] .site-footer{display:none}
 }
 @supports not ((-webkit-backdrop-filter:blur(1px)) or (backdrop-filter:blur(1px))){
   :root{--glass:var(--surface);--glass-strong:var(--surface)}
+  .hero-lines::before{background:rgba(36,6,58,.9)}
+  .hero-pillar{background:linear-gradient(165deg, rgba(59,10,87,.94), rgba(36,6,58,.96))}
 }
 
 /* v7 : boutons Partager / Copier le lien, Avant / maintenant */
