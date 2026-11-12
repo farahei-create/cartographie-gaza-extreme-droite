@@ -4,6 +4,10 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-12 — v38
+
+Tu ne touches pas au reste de la page. Le haut de l'accueil reprend le visuel sombre : fond presque noir violacé, ONRECORD en blanc avec un halo violet, puis deux lignes en Anton, plus grandes : « ILS L’ONT DIT » en blanc, « ON L’A ARCHIVÉ » en violet néon. Un surlignage violet se dessine sur DIT et ARCHIVÉ. La ligne d'explication, en lavande, reprend Gaza, la banalisation de l'extrême droite en France, et les liens, ces trois bouts en blanc gras surlignés. Le cadre d'ampoules, la guirlande et le voile dépoli disparaissent. Les trois cartes et la recherche passent au verre sombre, bord violet. Le réseau derrière devient une constellation en profondeur, nette, qui tourne, pulse, et suit le doigt, le défilement et l'inclinaison du téléphone. Cache `onrecord-v38`.
+
 ## 2026-11-12 — v37
 
 Tu ne changes pas les textes, le mot ONRECORD, les couleurs, ni le mouvement du réseau. Tu rends le haut de l'accueil plus lisible. Le canevas `#hero-net` est légèrement flou et moins contrasté ; un masque le laisse plus discret derrière les phrases et plus visible sur les bords. Derrière « Ils l'ont dit. On l'a archivé. » et la ligne d'explication, un voile violet dépoli (`rgba(36,6,58,.55)`, `backdrop-filter`, coins arrondis, ombre de texte légère). Les trois cartes ont le même verre, un peu plus couvrant, pour les sous-titres. Sans `backdrop-filter`, le voile et les cartes passent à un fond plus opaque. Cache `onrecord-v37`.
