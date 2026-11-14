@@ -26,7 +26,7 @@ Site statique à la racine. Pas de CDN. Pas d'étape de build côté Vercel : `d
 | `style.css`, `app.js` | Mise en forme et routage |
 | `data.json` | Contenu. **Généré.** Ne pas l'éditer à la main |
 | `build.py` | Construit `data.json` (personnes, liens, archives, compteurs) |
-| `v24_content.py`, `v26_content.py`, `v27_content.py`, `v28_content.py`, `v30_content.py`, `v31_content.py`, `v35_content.py` | Ajouts branchés à la fin de `build.py` |
+| `v24_content.py`, `v26_content.py`, `v27_content.py`, `v28_content.py`, `v30_content.py`, `v31_content.py`, `v35_content.py`, `v41_content.py` | Ajouts branchés à la fin de `build.py` |
 | `config.js` | `DONATION_URL`, `CORRECTION_EMAIL` |
 | `sw.js` | Service worker. La constante `VERSION` doit monter à chaque publication |
 | `manifest.webmanifest`, `icons/` | PWA |
@@ -134,6 +134,13 @@ python3 tests/test_v13.py
 # puis les autres tests/test_v*.py, sauf test_v8.py
 rm site   # ne pas committer ce lien
 ```
+
+Notes sur les tests (14/11/2026) :
+
+- Les tests écrivent des captures dans `/opt/cursor/artifacts` : créer ce dossier s'il manque (`sudo mkdir -p /opt/cursor/artifacts && sudo chown $USER /opt/cursor/artifacts`). Sans Playwright installé : `python3 -m venv /tmp/pw && /tmp/pw/bin/pip install playwright pillow && /tmp/pw/bin/python -m playwright install chromium`, puis lancer les tests avec `/tmp/pw/bin/python`.
+- `tests/test_v22.py` compte les fiches par étage de l'Échelle du pouvoir (`EXPECT`) : une fiche nouvelle demande d'ajuster le chiffre de son étage (ex. « gouv » pour un ministre).
+- `tests/test_v5.py` échoue déjà sur « graph built lazily on Réseau » (4 cas, depuis la vue 3D) : échec connu, comme `test_v8.py`.
+- Si la machine n'a pas de droit de push (pas de jeton GitHub), la publication passe par un agent cloud Cursor lancé sur le dépôt : lui donner un patch (`git diff --binary`, sans `data.json`) à appliquer, puis `python3 build.py`, commit et push sur `main`.
 
 8. Une ligne dans `docs/JOURNAL.md`.
 9. Commit et push :

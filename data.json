@@ -1,16 +1,16 @@
 {
   "meta": {
-    "generated": "2026-11-11",
-    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-11 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
+    "generated": "2026-11-14",
+    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-14 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
-      "persons": 57,
+      "persons": 58,
       "orgs": 55,
-      "edges": 174,
-      "statements": 209,
-      "photos": 41,
+      "edges": 176,
+      "statements": 217,
+      "photos": 42,
       "logos": 21,
-      "videos": 17,
-      "france_nodes": 77
+      "videos": 19,
+      "france_nodes": 79
     },
     "category_order": [
       "Responsables politiques",
@@ -821,6 +821,16 @@
           "section": "gaza",
           "archive_url": "https://web.archive.org/web/20250724023204/https://www.franceinfo.fr/politique/marion-marechal-lance-son-propre-mouvement-politique-et-propose-une-coalition-a-marine-le-pen_6824000.html",
           "archived": "2025-07-24"
+        },
+        {
+          "quote": "Quand on voit la menace — on en a longuement parlé aujourd'hui — que représente l'extrême gauche française, je pense qu'on n'a pas le droit de se disperser et qu'aujourd'hui le rempart le plus efficace et le mieux placé pour éviter à tout prix une victoire de Jean-Luc Mélenchon, que ce soit à la présidentielle ou aux législatives, c'est de se rassembler autour de Marine Le Pen.",
+          "date": "2026-11-11",
+          "medium": "Invitée de Jacques Cardoze dans « Le Grand Matin » de Sud Radio, 11 novembre 2026 (retranscription publiée par Sud Radio). Interrogée sur la candidature d'Éric Zemmour, elle répond qu'elle ne fera pas campagne pour lui : « je soutiens Marine Le Pen évidemment à l'heure où je vous parle, les députés que j'ai à l'Assemblée nationale sont alliés au groupe du Rassemblement national ». Elle dit ne plus avoir « de contact humain » avec lui, la rupture ayant été « assez violente ».",
+          "url": "https://www.sudradio.fr/sud-radio/marion-marechal-eric-zemmour-devrait-rejoindre-et-soutenir-marine-le-pen",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261114193414/https://www.sudradio.fr/sud-radio/marion-marechal-eric-zemmour-devrait-rejoindre-et-soutenir-marine-le-pen",
+          "archived": "2026-11-14"
         }
       ],
       "sections": [
@@ -1010,6 +1020,24 @@
           },
           "archive_url": "https://web.archive.org/web/20261111191547/https://www.rtl.fr/actu/politique/je-me-presente-pour-conserver-une-france-francaise-eric-zemmour-officialise-sa-candidature-a-la-presidentielle-2027-7900694983",
           "archived": "2026-11-11"
+        },
+        {
+          "quote": "Tous ces gens-là se retrouvent entre eux. Je suis assez déçu. Je vois que c'est la reconstitution de LR et la reconstitution du bloc central. J'espère me tromper et j'espère que Monsieur Lisnard résistera à cette pression de ses amis de LR et qu'il imposera la présence de reconquête",
+          "date": "2026-11-13",
+          "medium": "Salon du Made in France (Paris), 13 novembre 2026, vidéo BFMTV. Selon BFMTV, les directeurs de campagne de Gabriel Attal, Bruno Retailleau et David Lisnard doivent se réunir le 17 novembre au sujet d'une primaire de la droite et du centre, à laquelle Édouard Philippe s'oppose. Selon l'AFP, il juge « curieux » que Gabriel Attal y participe ; celui-ci a refusé qu'il y soit intégré (fiche Gabriel Attal).",
+          "url": "https://www.bfmtv.com/politique/les-republicains/video-je-serai-ravi-d-etre-candidat-dans-cette-primaire-declare-eric-zemmour-candidat-reconquete-a-la-presidentielle-au-salon-made-in-france_VN-202611130526.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "video": {
+            "url": "https://www.bfmtv.com/politique/les-republicains/video-je-serai-ravi-d-etre-candidat-dans-cette-primaire-declare-eric-zemmour-candidat-reconquete-a-la-presidentielle-au-salon-made-in-france_VN-202611130526.html",
+            "platform": "bfmtv.com",
+            "title": "« Je serai ravi d'être candidat dans cette primaire », déclare Éric Zemmour au salon Made in France",
+            "source": "BFMTV (site officiel)",
+            "archive_url": "https://web.archive.org/web/20261114014356/https://www.bfmtv.com/politique/les-republicains/video-je-serai-ravi-d-etre-candidat-dans-cette-primaire-declare-eric-zemmour-candidat-reconquete-a-la-presidentielle-au-salon-made-in-france_VN-202611130526.html",
+            "archived": "2026-11-14"
+          },
+          "archive_url": "https://web.archive.org/web/20261114014356/https://www.bfmtv.com/politique/les-republicains/video-je-serai-ravi-d-etre-candidat-dans-cette-primaire-declare-eric-zemmour-candidat-reconquete-a-la-presidentielle-au-salon-made-in-france_VN-202611130526.html",
+          "archived": "2026-11-14"
         }
       ],
       "sections": [
@@ -2173,6 +2201,16 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261110153023/https://www.franceinfo.fr/politique/la-petition-appelant-a-supprimer-cnews-de-l-audiovisuel-francais-classee-par-la-commission-de-l-assemblee-nationale_8276303.html",
           "archived": "2026-11-10"
+        },
+        {
+          "quote": "On engagera une procédure judiciaire contre Mme Tondelier",
+          "date": "2026-11-12",
+          "medium": "Andréa Kotarac, porte-parole de Marine Le Pen, sur franceinfo le 12 novembre 2026, cité par TF1 Info avec l'AFP. Il reproche à Marine Tondelier d'avoir « expliqué que le tireur aurait tué au nom du RN », dit que le RN « ne laissera pas passer » et se dit prêt à « débattre avec la gauche […] jamais sur la base de fake news ». Interrogé par l'AFP, il indique que la plainte en diffamation sera déposée « très prochainement » : à cette date, les articles lus ne disent pas qu'elle a été déposée. Marine Tondelier se dit « extrêmement sereine » (BFMTV). Selon l'AFP (TF1 Info), Marine Tondelier avait déclaré la semaine précédente sur BFMTV que le tireur de l'attentat raciste du 23 octobre 2026 à Trappes et La Verrière « avait chez lui des tracts d'un parti politique qui peut arriver au pouvoir » ; il s'agissait, selon l'AFP, d'autocollants « Vive la France, RN, fier d'être français » qu'il avait lui-même fait fabriquer. Le suspect est présumé innocent ; il n'est pas nommé ici.",
+          "url": "https://www.tf1info.fr/justice-faits-divers/attentat-de-trappes-le-rn-va-porter-plainte-contre-tondelier-pour-diffamation-2475583.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261114193446/https://www.tf1info.fr/justice-faits-divers/attentat-de-trappes-le-rn-va-porter-plainte-contre-tondelier-pour-diffamation-2475583.html",
+          "archived": "2026-11-14"
         }
       ],
       "sections": [
@@ -3143,6 +3181,15 @@
           "source": "La Nuit du bien commun",
           "archive_url": "https://web.archive.org/web/20261109064220/https://www.lanuitdubiencommun.com/faq",
           "archived": "2026-11-09"
+        },
+        {
+          "date": "2026-11-12",
+          "title": "Cité devant le tribunal correctionnel",
+          "text": "Selon le parquet de Paris, sollicité par l'AFP, une citation lui a été « délivrée à M. Pierre-Edouard Stérin pour comparaître à l'audience du 19 janvier 2027 devant la 10e chambre du tribunal correctionnel de Paris pour non-comparution devant une commission d'enquête parlementaire » : il avait refusé de se rendre aux convocations de la commission d'enquête de l'Assemblée nationale sur « l'organisation des élections en France » en 2025 (deux refus, les 14 et 20 mai 2025, selon franceinfo ; trois, entre avril et mai 2025, selon LCP). LCP rapporte qu'il avait invoqué à l'époque des menaces pour sa sécurité et demandé une audition en visioconférence. Il n'a pas été jugé : il est présumé innocent.",
+          "url": "https://www.franceinfo.fr/societe/justice/pierre-edouard-sterin-milliardaire-proche-de-l-extreme-droite-sera-juge-en-janvier-pour-son-refus-de-venir-devant-les-deputes_8280011.html",
+          "source": "franceinfo (AFP) ; LCP",
+          "archive_url": "https://web.archive.org/web/20261114193620/https://www.franceinfo.fr/societe/justice/pierre-edouard-sterin-milliardaire-proche-de-l-extreme-droite-sera-juge-en-janvier-pour-son-refus-de-venir-devant-les-deputes_8280011.html",
+          "archived": "2026-11-14"
         }
       ],
       "sphere": "argent"
@@ -3972,6 +4019,30 @@
           "url": "https://x.com/JLMelenchon/status/2119099501218603276",
           "theme": "Gaza – déclarations",
           "section": "gaza"
+        },
+        {
+          "quote": "Si nous arrivons au pouvoir, nous dirons ce que nous aurons à dire. À savoir : dénoncer le génocide à Gaza, la colonisation en Cisjordanie et l'annexion progressive du Sud-Liban et du plateau du Golan.",
+          "date": "2026-11-12",
+          "medium": "Message sur X (@JLMelenchon), 12 novembre 2026, 17:31 UTC, qui commence par : « Israël m'interdit d'entrer sur son territoire ? Je n'ai pas demandé à y entrer. » et se termine par : « Refuser la loi du plus fort ou du plus fou et respecter, en toutes circonstances, le droit international : telle est notre ligne politique. » LCP cite le même message. Le 12 novembre 2026, le ministère israélien des Affaires étrangères a annoncé interdire l'entrée sur son territoire à Jean-Luc Mélenchon et à Mathilde Panot, « compte tenu des positions anti-israéliennes virulentes du parti La France Insoumise (LFI) et des propos scandaleux tenus par ses dirigeants » ; selon son communiqué, « Tous deux ont tenu des propos relayant des calomnies sanglantes à l'encontre d'Israël », et Jean-Luc Mélenchon a « appelé à ce que des navires français escortent des flottilles illégales vers Gaza » (franceinfo). Israël rejette fermement l'accusation de « génocide » (franceinfo).",
+          "url": "https://x.com/JLMelenchon/status/2120932595126894785",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
+        },
+        {
+          "quote": "On m'interdit d'entrer sur un territoire où je n'ai pas demandé à entrer. […] Je regrette que le gouvernement d'Israël me poursuive de cette manière",
+          "date": "2026-11-12",
+          "medium": "franceinfo, journée spéciale « Nos services publics », 12 novembre 2026, cité par franceinfo. Il écarte toute « normalisation » avec le gouvernement israélien s'il est élu : « On dira ce qu'on a à dire, on le dira franchement. » Dans la vidéo de franceinfo, il ajoute : « L'ambassadeur, ici, à Paris a dit qu'il préférait qu'on élise n'importe qui plutôt que moi, bon, dont acte, chacun ses goûts ». Le 12 novembre 2026, le ministère israélien des Affaires étrangères a annoncé interdire l'entrée sur son territoire à Jean-Luc Mélenchon et à Mathilde Panot, « compte tenu des positions anti-israéliennes virulentes du parti La France Insoumise (LFI) et des propos scandaleux tenus par ses dirigeants » ; selon son communiqué, « Tous deux ont tenu des propos relayant des calomnies sanglantes à l'encontre d'Israël », et Jean-Luc Mélenchon a « appelé à ce que des navires français escortent des flottilles illégales vers Gaza » (franceinfo). Israël rejette fermement l'accusation de « génocide » (franceinfo).",
+          "url": "https://www.franceinfo.fr/politique/la-france-insoumise/israel-interdit-a-jean-luc-melenchon-et-mathilde-panot-l-entree-sur-son-territoire-denoncant-la-position-extremement-anti-israelienne-de-la-france-insoumise_8279801.html",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "video": {
+            "url": "https://www.franceinfo.fr/monde/israel/je-regrette-que-le-gouvernement-d-israel-me-poursuive-de-cette-maniere-denonce-jean-luc-melenchon-interdit-de-territoire-en-israel_8279831.html",
+            "platform": "franceinfo.fr",
+            "title": "« Je regrette que le gouvernement d'Israël me poursuive de cette manière », dénonce Jean-Luc Mélenchon",
+            "source": "franceinfo (site officiel)"
+          },
+          "archive_url": "https://web.archive.org/web/20261114194010/https://www.franceinfo.fr/politique/la-france-insoumise/israel-interdit-a-jean-luc-melenchon-et-mathilde-panot-l-entree-sur-son-territoire-denoncant-la-position-extremement-anti-israelienne-de-la-france-insoumise_8279801.html",
+          "archived": "2026-11-14"
         }
       ],
       "sections": [
@@ -4161,10 +4232,21 @@
           "section": "gaza",
           "archive_url": "https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
           "archived": "2026-10-15"
+        },
+        {
+          "quote": "Je ne dis pas que c'est un membre actif du RN qui, au nom de Marine Le Pen, a été assassiner des gens dans les rues […] je dis juste qu'il y a quand même une remise en question à avoir [pour] des mots qu'on prononce sur les plateaux, qui précèdent des actes et qui peuvent être parfois des munitions",
+          "date": "2026-11-12",
+          "medium": "BFMTV (« Vous présidente »), 12 novembre 2026, cité par TF1 Info avec l'AFP ; les crochets signalent un mot ajouté par l'AFP. Elle se dit « extrêmement sereine » face à la plainte en diffamation annoncée par le RN, « habituée des menaces de procédures-bâillons ». Le RN lui reproche d'avoir affirmé que le tireur avait « tué au nom du RN » et annonce une plainte « très prochainement » (porte-parole Andréa Kotarac). Selon l'AFP (TF1 Info), Marine Tondelier avait déclaré la semaine précédente sur BFMTV que le tireur de l'attentat raciste du 23 octobre 2026 à Trappes et La Verrière « avait chez lui des tracts d'un parti politique qui peut arriver au pouvoir » ; il s'agissait, selon l'AFP, d'autocollants « Vive la France, RN, fier d'être français » qu'il avait lui-même fait fabriquer. Le suspect est présumé innocent ; il n'est pas nommé ici.",
+          "url": "https://www.tf1info.fr/justice-faits-divers/attentat-de-trappes-le-rn-va-porter-plainte-contre-tondelier-pour-diffamation-2475583.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261114193446/https://www.tf1info.fr/justice-faits-divers/attentat-de-trappes-le-rn-va-porter-plainte-contre-tondelier-pour-diffamation-2475583.html",
+          "archived": "2026-11-14"
         }
       ],
       "sections": [
-        "gaza"
+        "gaza",
+        "france"
       ],
       "category": "Responsables politiques",
       "subcategory": "Candidats à la présidentielle 2027",
@@ -4309,10 +4391,21 @@
           "section": "gaza",
           "archive_url": "https://web.archive.org/web/20250722000931/https://www.bfmtv.com/politique/gouvernement/reconnaissance-d-un-etat-palestinien-gabriel-attal-assure-a-son-tour-que-ce-n-est-pas-un-tabou_AN-202405290686.html",
           "archived": "2025-07-22"
+        },
+        {
+          "quote": "certainement pas [à] servir de marche-pied à l'extrême droite dont M. Zemmour est un représentant",
+          "date": "2026-11-13",
+          "medium": "Propos tenus au Salon du Made in France (Paris), 13 novembre 2026, cités par l'AFP (dépêche reprise par Boursorama ; CNews publie la même phrase). Selon l'AFP, il refuse qu'Éric Zemmour soit intégré à la primaire de la droite et du centre, qui vise selon lui à « empêcher un deuxième tour entre les extrêmes ». Éric Zemmour, de son côté, a dit souhaiter y participer et qualifié Gabriel Attal de « militant socialiste ». Les crochets signalent un mot ajouté par l'AFP.",
+          "url": "https://www.boursorama.com/actualite-economique/actualites/primaire-a-droite-zemmour-espere-y-participer-mais-attal-ne-veut-pas-40598195eed5b0dd0bb42f30821bddf8",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261114193224/https://www.boursorama.com/actualite-economique/actualites/primaire-a-droite-zemmour-espere-y-participer-mais-attal-ne-veut-pas-40598195eed5b0dd0bb42f30821bddf8",
+          "archived": "2026-11-14"
         }
       ],
       "sections": [
-        "gaza"
+        "gaza",
+        "france"
       ],
       "category": "Responsables politiques",
       "subcategory": "Candidats à la présidentielle 2027",
@@ -6136,6 +6229,47 @@
       ],
       "category": "Organisations & institutions",
       "subcategory": "Associations & représentants"
+    },
+    {
+      "id": "jean-noel-barrot",
+      "name": "Jean-Noël Barrot",
+      "type": "person",
+      "role": "Ministre des Affaires étrangères (selon franceinfo et LCP, 12 novembre 2026)",
+      "description": "Chef de la diplomatie française. Le 12 novembre 2026, il réagit sur X à la décision d'Israël d'interdire l'entrée sur son territoire à Jean-Luc Mélenchon et à Mathilde Panot (franceinfo, LCP).",
+      "statements": [
+        {
+          "quote": "Cette décision démagogique, émanant d'un gouvernement qui a multiplié les violations du droit international, fait le jeu de ceux qui, comme La France insoumise, vivent de l'instrumentalisation du conflit israélo-palestinien.",
+          "date": "2026-11-12",
+          "medium": "Message sur X (@jnbarrot), 12 novembre 2026, 18:52 UTC. Il commence par : « Le gouvernement d'affaires courantes de Benyamin Netanyahou vient d'interdire l'accès à son territoire à des responsables de la France insoumise. » et se termine par : « La France continuera inlassablement à agir pour la solution à deux États et la coexistence pacifique des peuples israélien et palestinien. » franceinfo et LCP citent le même message. Le ministère israélien des Affaires étrangères justifie sa décision par les « positions anti-israéliennes virulentes » de LFI (franceinfo).",
+          "url": "https://x.com/jnbarrot/status/2120953009983127868",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
+        }
+      ],
+      "sections": [
+        "gaza"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Gouvernement & exécutif",
+      "parcours": [
+        {
+          "date": "2026-11-12",
+          "title": "Ministre des Affaires étrangères",
+          "text": "franceinfo le présente comme « le chef de la diplomatie française » et « ministre des Affaires étrangères » en rapportant sa réaction à l'interdiction d'entrée en Israël visant Jean-Luc Mélenchon et Mathilde Panot.",
+          "url": "https://www.franceinfo.fr/politique/la-france-insoumise/israel-interdit-a-jean-luc-melenchon-et-mathilde-panot-l-entree-sur-son-territoire-denoncant-la-position-extremement-anti-israelienne-de-la-france-insoumise_8279801.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20261114194010/https://www.franceinfo.fr/politique/la-france-insoumise/israel-interdit-a-jean-luc-melenchon-et-mathilde-panot-l-entree-sur-son-territoire-denoncant-la-position-extremement-anti-israelienne-de-la-france-insoumise_8279801.html",
+          "archived": "2026-11-14"
+        }
+      ],
+      "image": "img/people/jean-noel-barrot.webp",
+      "image_credit": {
+        "author": "U.S. Department of State",
+        "license": "Public domain",
+        "license_url": "",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Jean-No%C3%ABl_Barrot_2025_(cropped).jpg",
+        "file": "Jean-Noël_Barrot_2025_(cropped).jpg"
+      }
     }
   ],
   "edges": [
@@ -8224,6 +8358,28 @@
       "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20261111191752/https://www.france-terre-asile.org/communiques-presse/communiques-de-presse/communique-france-terre-d-asile-et-desinfox-migrations-saisissent-l-arcom-et-publient-un-rapport-sur-la-desinformation-au-sujet-de-l-immigration",
       "archived": "2026-11-11"
+    },
+    {
+      "source": "gabriel-attal",
+      "target": "eric-zemmour",
+      "relation": "refuse qu'Éric Zemmour participe à la primaire de la droite et du centre (13/11/2026, AFP)",
+      "url": "https://www.boursorama.com/actualite-economique/actualites/primaire-a-droite-zemmour-espere-y-participer-mais-attal-ne-veut-pas-40598195eed5b0dd0bb42f30821bddf8",
+      "date": "2026-11-13",
+      "section": "france",
+      "nature": "opposition",
+      "archive_url": "https://web.archive.org/web/20261114193224/https://www.boursorama.com/actualite-economique/actualites/primaire-a-droite-zemmour-espere-y-participer-mais-attal-ne-veut-pas-40598195eed5b0dd0bb42f30821bddf8",
+      "archived": "2026-11-14"
+    },
+    {
+      "source": "rn",
+      "target": "marine-tondelier",
+      "relation": "annonce d'une plainte en diffamation après ses propos sur l'attentat de Trappes (12/11/2026 ; « très prochainement », selon le porte-parole de Marine Le Pen)",
+      "url": "https://www.tf1info.fr/justice-faits-divers/attentat-de-trappes-le-rn-va-porter-plainte-contre-tondelier-pour-diffamation-2475583.html",
+      "date": "2026-11-12",
+      "section": "france",
+      "nature": "opposition",
+      "archive_url": "https://web.archive.org/web/20261114193446/https://www.tf1info.fr/justice-faits-divers/attentat-de-trappes-le-rn-va-porter-plainte-contre-tondelier-pour-diffamation-2475583.html",
+      "archived": "2026-11-14"
     }
   ]
 }

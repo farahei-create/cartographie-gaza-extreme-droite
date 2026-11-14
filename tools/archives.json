@@ -1243,5 +1243,70 @@
   "archive_url": "https://web.archive.org/web/20261110131748/https://www.sudouest.fr/international/immigration-un-collectif-de-scientifiques-sort-un-rapport-pour-retablir-les-faits-face-a-la-desinformation-31468731.php",
   "archived": "2026-11-10",
   "status": "existing"
+ },
+ "https://www.franceinfo.fr/politique/la-france-insoumise/israel-interdit-a-jean-luc-melenchon-et-mathilde-panot-l-entree-sur-son-territoire-denoncant-la-position-extremement-anti-israelienne-de-la-france-insoumise_8279801.html": {
+  "archive_url": "https://web.archive.org/web/20261114194010/https://www.franceinfo.fr/politique/la-france-insoumise/israel-interdit-a-jean-luc-melenchon-et-mathilde-panot-l-entree-sur-son-territoire-denoncant-la-position-extremement-anti-israelienne-de-la-france-insoumise_8279801.html",
+  "archived": "2026-11-14",
+  "status": "saved"
+ },
+ "https://www.franceinfo.fr/monde/israel/je-regrette-que-le-gouvernement-d-israel-me-poursuive-de-cette-maniere-denonce-jean-luc-melenchon-interdit-de-territoire-en-israel_8279831.html": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://x.com/JLMelenchon/status/2120932595126894785": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://x.com/jnbarrot/status/2120953009983127868": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://lcp.fr/actualites/israel-interdit-son-territoire-a-jean-luc-melenchon-la-reponse-cinglante-du-gouvernement": {
+  "archive_url": "https://web.archive.org/web/20261113155109/https://lcp.fr/actualites/israel-interdit-son-territoire-a-jean-luc-melenchon-la-reponse-cinglante-du-gouvernement",
+  "archived": "2026-11-13",
+  "status": "existing"
+ },
+ "https://www.bfmtv.com/politique/les-republicains/video-je-serai-ravi-d-etre-candidat-dans-cette-primaire-declare-eric-zemmour-candidat-reconquete-a-la-presidentielle-au-salon-made-in-france_VN-202611130526.html": {
+  "archive_url": "https://web.archive.org/web/20261114014356/https://www.bfmtv.com/politique/les-republicains/video-je-serai-ravi-d-etre-candidat-dans-cette-primaire-declare-eric-zemmour-candidat-reconquete-a-la-presidentielle-au-salon-made-in-france_VN-202611130526.html",
+  "archived": "2026-11-14",
+  "status": "existing"
+ },
+ "https://www.boursorama.com/actualite-economique/actualites/primaire-a-droite-zemmour-espere-y-participer-mais-attal-ne-veut-pas-40598195eed5b0dd0bb42f30821bddf8": {
+  "archive_url": "https://web.archive.org/web/20261114193224/https://www.boursorama.com/actualite-economique/actualites/primaire-a-droite-zemmour-espere-y-participer-mais-attal-ne-veut-pas-40598195eed5b0dd0bb42f30821bddf8",
+  "archived": "2026-11-14",
+  "status": "saved"
+ },
+ "https://www.cnews.fr/france/2026-11-13/presidentielle-2027-eric-zemmour-espere-participer-une-primaire-de-la-droite-et": {
+  "archive_url": "https://web.archive.org/web/20261114193316/https://www.cnews.fr/france/2026-11-13/presidentielle-2027-eric-zemmour-espere-participer-une-primaire-de-la-droite-et",
+  "archived": "2026-11-14",
+  "status": "saved"
+ },
+ "https://www.sudradio.fr/sud-radio/marion-marechal-eric-zemmour-devrait-rejoindre-et-soutenir-marine-le-pen": {
+  "archive_url": "https://web.archive.org/web/20261114193414/https://www.sudradio.fr/sud-radio/marion-marechal-eric-zemmour-devrait-rejoindre-et-soutenir-marine-le-pen",
+  "archived": "2026-11-14",
+  "status": "saved"
+ },
+ "https://www.tf1info.fr/justice-faits-divers/attentat-de-trappes-le-rn-va-porter-plainte-contre-tondelier-pour-diffamation-2475583.html": {
+  "archive_url": "https://web.archive.org/web/20261114193446/https://www.tf1info.fr/justice-faits-divers/attentat-de-trappes-le-rn-va-porter-plainte-contre-tondelier-pour-diffamation-2475583.html",
+  "archived": "2026-11-14",
+  "status": "existing"
+ },
+ "https://www.bfmtv.com/politique/elections/presidentielle/marine-tondelier-accusee-de-diffamation-par-le-rn-apres-des-propos-sur-le-suspect-de-l-attentat-des-yvelines-se-dit-extremement-sereine_AV-202611120933.html": {
+  "archive_url": "https://web.archive.org/web/20261114193552/https://www.bfmtv.com/politique/elections/presidentielle/marine-tondelier-accusee-de-diffamation-par-le-rn-apres-des-propos-sur-le-suspect-de-l-attentat-des-yvelines-se-dit-extremement-sereine_AV-202611120933.html",
+  "archived": "2026-11-14",
+  "status": "saved"
+ },
+ "https://www.franceinfo.fr/societe/justice/pierre-edouard-sterin-milliardaire-proche-de-l-extreme-droite-sera-juge-en-janvier-pour-son-refus-de-venir-devant-les-deputes_8280011.html": {
+  "archive_url": "https://web.archive.org/web/20261114193620/https://www.franceinfo.fr/societe/justice/pierre-edouard-sterin-milliardaire-proche-de-l-extreme-droite-sera-juge-en-janvier-pour-son-refus-de-venir-devant-les-deputes_8280011.html",
+  "archived": "2026-11-14",
+  "status": "saved"
+ },
+ "https://lcp.fr/actualites/le-milliardaire-pierre-edouard-sterin-juge-en-janvier-pour-avoir-seche-plusieurs": {
+  "archive_url": "https://web.archive.org/web/20261114193651/https://lcp.fr/actualites/le-milliardaire-pierre-edouard-sterin-juge-en-janvier-pour-avoir-seche-plusieurs",
+  "archived": "2026-11-14",
+  "status": "existing"
  }
 }
