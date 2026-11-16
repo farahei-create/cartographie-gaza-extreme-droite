@@ -3,14 +3,14 @@
     "generated": "2026-11-16",
     "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-16 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
-      "persons": 76,
-      "orgs": 55,
-      "edges": 182,
-      "statements": 281,
+      "persons": 78,
+      "orgs": 56,
+      "edges": 189,
+      "statements": 305,
       "photos": 45,
       "logos": 21,
       "videos": 23,
-      "france_nodes": 99
+      "france_nodes": 102
     },
     "category_order": [
       "Responsables politiques",
@@ -6762,6 +6762,66 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261116012223/https://www.bfmtv.com/politique/cet-exercice-n-a-d-interet-que-s-il-rassemble-nicolas-sarkozy-plaide-pour-l-organisation-d-une-large-primaire-de-la-droite-et-du-centre_AN-202611130733.html",
           "archived": "2026-11-16"
+        },
+        {
+          "quote": "Un scandale démocratique sans précédent.",
+          "date": "2026-11-13",
+          "medium": "Entretien au Figaro publié le 13 novembre 2026, cité par le JDD le 15 novembre 2026 à 1 h. La phrase qualifie, dans l'article du JDD, la fermeture de C8 en 2025.",
+          "url": "https://www.lejdd.fr/Societe/c8-cnews-nicolas-sarkozy-denonce-une-dangereuse-conception-de-la-democratie-188706",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116074321/https://www.lejdd.fr/Societe/c8-cnews-nicolas-sarkozy-denonce-une-dangereuse-conception-de-la-democratie-188706",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "bien étrange et dangereuse conception de la démocratie",
+          "date": "2026-11-13",
+          "medium": "Le JDD, 15 novembre 2026, cite l'entretien au Figaro du 13 novembre. Le journal écrit qu'il « dénonce » cette formule face aux appels à la suppression de CNews.",
+          "url": "https://www.lejdd.fr/Societe/c8-cnews-nicolas-sarkozy-denonce-une-dangereuse-conception-de-la-democratie-188706",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116074321/https://www.lejdd.fr/Societe/c8-cnews-nicolas-sarkozy-denonce-une-dangereuse-conception-de-la-democratie-188706",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Il ne me serait jamais venu à l’idée de plaider pour l’interdiction de L’Humanité !",
+          "date": "2026-11-13",
+          "medium": "Le JDD, 15 novembre 2026, citant l'entretien au Figaro du 13 novembre, à propos de CNews.",
+          "url": "https://www.lejdd.fr/Societe/c8-cnews-nicolas-sarkozy-denonce-une-dangereuse-conception-de-la-democratie-188706",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116074321/https://www.lejdd.fr/Societe/c8-cnews-nicolas-sarkozy-denonce-une-dangereuse-conception-de-la-democratie-188706",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Je n’accepterai jamais qu’un journaliste quelles que soient ses opinions soit menacé dans l’exercice de son travail.",
+          "date": "2026-11-13",
+          "medium": "Le JDD, 15 novembre 2026, citant l'entretien au Figaro du 13 novembre. La phrase suivante citée est : « Cette indignation ne doit pas être à géométrie variable. »",
+          "url": "https://www.lejdd.fr/Societe/c8-cnews-nicolas-sarkozy-denonce-une-dangereuse-conception-de-la-democratie-188706",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116074321/https://www.lejdd.fr/Societe/c8-cnews-nicolas-sarkozy-denonce-une-dangereuse-conception-de-la-democratie-188706",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Cette indignation ne doit pas être à géométrie variable.",
+          "date": "2026-11-13",
+          "medium": "Le JDD, 15 novembre 2026, citant l'entretien au Figaro du 13 novembre.",
+          "url": "https://www.lejdd.fr/Societe/c8-cnews-nicolas-sarkozy-denonce-une-dangereuse-conception-de-la-democratie-188706",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116074321/https://www.lejdd.fr/Societe/c8-cnews-nicolas-sarkozy-denonce-une-dangereuse-conception-de-la-democratie-188706",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Vouloir interdire LFI ou le RN, les deux partis donnés par les sondages au deuxième tour de la présidentielle, c’est là encore une curieuse vision de la démocratie",
+          "date": "2026-11-13",
+          "medium": "BFMTV, 13 novembre 2026, citant l'entretien au Figaro du même jour. BFMTV écrit que ce raisonnement « vaut aussi » pour le Rassemblement national, puis donne cette phrase. Il dit aussi : « L’interdiction de La France Insoumise, dont le candidat est donné au second tour par tous les sondages, n’aurait aucun sens (...) Je n’ai aucune sympathie pour le mouvement de Jean-Luc Mélenchon mais, à partir du moment où les Insoumis ont le droit de concourir aux élections, cela signifie qu’ils font partie de l’arc républicain ». Les points de suspension entre parenthèses sont ceux de BFMTV.",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/une-curieuse-vision-de-la-democratie-nicolas-sarkozy-se-dit-contre-l-interdiction-de-lfi-suggeree-par-bruno-retailleau_AN-202611130717.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116074402/https://www.bfmtv.com/politique/elections/presidentielle/une-curieuse-vision-de-la-democratie-nicolas-sarkozy-se-dit-contre-l-interdiction-de-lfi-suggeree-par-bruno-retailleau_AN-202611130717.html",
+          "archived": "2026-11-16"
         }
       ],
       "sections": [
@@ -7291,6 +7351,262 @@
           "text": "Il écrit que la liberté d’expression sera l’un des grands combats de 2027.",
           "url": "https://x.com/sebchenu/status/2121923164955668823",
           "source": "X"
+        }
+      ]
+    },
+    {
+      "id": "ajc",
+      "name": "American Jewish Committee (AJC)",
+      "type": "org",
+      "role": "Organisation. Enquête Ifop avec la Fondapol, page datée du 15 novembre 2026",
+      "description": "L'AJC publie une enquête sur l'antisémitisme en France. La page date le texte du 15 novembre 2026. Le 16 novembre, Anne-Sophie Sebban-Bécache le présente sur France Inter.",
+      "statements": [
+        {
+          "quote": "À l’antisémitisme historiquement ancré à l’extrême droite s’ajoute une diffusion croissante des préjugés antisémites parmi les sympathisants de l’extrême gauche.",
+          "date": "2026-11-15",
+          "medium": "Page de l'American Jewish Committee, datée du 15 novembre 2026. Enquête Ifop pour l'AJC et la Fondapol. Anne-Sophie Sebban-Bécache la présente le 16 novembre 2026 sur France Inter. La page écrit aussi qu'en 2025 le ministère de l'Intérieur a recensé 1 320 actes antisémites.",
+          "url": "https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116073948/https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Pour la première fois, les idées d’extrême gauche et d’extrême droite sont citées dans les mêmes proportions (25 % chacune) parmi les principales causes de l’antisémitisme. En 2022, les premières n’étaient mentionnées que par 13 % des Français, contre 36 % pour les secondes.",
+          "date": "2026-11-15",
+          "medium": "Page de l'American Jewish Committee, datée du 15 novembre 2026. Enquête Ifop pour l'AJC et la Fondapol. Anne-Sophie Sebban-Bécache la présente le 16 novembre 2026 sur France Inter. La page écrit aussi qu'en 2025 le ministère de l'Intérieur a recensé 1 320 actes antisémites.",
+          "url": "https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116073948/https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Alors que les préjugés traditionnels demeurent présents chez les sympathisants du Rassemblement national, ils sont désormais plus répandus parmi ceux de La France insoumise sur la quasi-totalité des indicateurs mesurés.",
+          "date": "2026-11-15",
+          "medium": "Page de l'American Jewish Committee, datée du 15 novembre 2026. Enquête Ifop pour l'AJC et la Fondapol. Anne-Sophie Sebban-Bécache la présente le 16 novembre 2026 sur France Inter. La page écrit aussi qu'en 2025 le ministère de l'Intérieur a recensé 1 320 actes antisémites.",
+          "url": "https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116073948/https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Ainsi, 51 % des sympathisants LFI estiment que les Juifs ont trop de pouvoir dans l’économie et la finance (+17 points depuis 2022), et 50 % dans les médias (+21 points). Par ailleurs, 81 % considèrent qu’Israël se comporte envers les Palestiniens comme les nazis envers les Juifs.",
+          "date": "2026-11-15",
+          "medium": "Page de l'American Jewish Committee, datée du 15 novembre 2026. Enquête Ifop pour l'AJC et la Fondapol. Anne-Sophie Sebban-Bécache la présente le 16 novembre 2026 sur France Inter. La page écrit aussi qu'en 2025 le ministère de l'Intérieur a recensé 1 320 actes antisémites. Le « par ailleurs » suit la phrase sur les sympathisants LFI.",
+          "url": "https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261116073948/https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "58 % des Français estiment que Jean-Luc Mélenchon contribue à la montée de l’antisémitisme, contre 53 % pour Éric Zemmour et 47 % pour Marine Le Pen.",
+          "date": "2026-11-15",
+          "medium": "Page de l'American Jewish Committee, datée du 15 novembre 2026. Enquête Ifop pour l'AJC et la Fondapol. Anne-Sophie Sebban-Bécache la présente le 16 novembre 2026 sur France Inter. La page écrit aussi qu'en 2025 le ministère de l'Intérieur a recensé 1 320 actes antisémites.",
+          "url": "https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116073948/https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "69 % des Français juifs déclarent qu’ils pourraient quitter la France si Jean-Luc Mélenchon était élu président de la République en 2027, dont 40 % « certainement ».",
+          "date": "2026-11-15",
+          "medium": "Page de l'American Jewish Committee, datée du 15 novembre 2026. Enquête Ifop pour l'AJC et la Fondapol. Anne-Sophie Sebban-Bécache la présente le 16 novembre 2026 sur France Inter. La page écrit aussi qu'en 2025 le ministère de l'Intérieur a recensé 1 320 actes antisémites. La phrase suivante de la page rappelle le chiffre de 2024 pour un candidat LFI : 57 %.",
+          "url": "https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116073948/https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Une élection de Marine Le Pen conduirait 31 % d’entre eux à envisager de quitter le pays.",
+          "date": "2026-11-15",
+          "medium": "Page de l'American Jewish Committee, datée du 15 novembre 2026. Enquête Ifop pour l'AJC et la Fondapol. Anne-Sophie Sebban-Bécache la présente le 16 novembre 2026 sur France Inter. La page écrit aussi qu'en 2025 le ministère de l'Intérieur a recensé 1 320 actes antisémites. « d’entre eux » renvoie, dans le même paragraphe, aux Français juifs.",
+          "url": "https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116073948/https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Cette hostilité dépasse parfois la critique de la politique israélienne pour se reporter sur les Juifs de France : 79 % d’entre eux déclarent s’être déjà sentis accusés ou rendus responsables des actions du gouvernement israélien.",
+          "date": "2026-11-15",
+          "medium": "Page de l'American Jewish Committee, datée du 15 novembre 2026. Enquête Ifop pour l'AJC et la Fondapol. Anne-Sophie Sebban-Bécache la présente le 16 novembre 2026 sur France Inter. La page écrit aussi qu'en 2025 le ministère de l'Intérieur a recensé 1 320 actes antisémites.",
+          "url": "https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261116073948/https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Près d’un jeune de 18 à 24 ans sur deux (49 %) considère qu’Israël se comporte envers les Palestiniens comme les nazis envers les Juifs, une proportion en hausse de 7 points depuis 2024.",
+          "date": "2026-11-15",
+          "medium": "Page de l'American Jewish Committee, datée du 15 novembre 2026. Enquête Ifop pour l'AJC et la Fondapol. Anne-Sophie Sebban-Bécache la présente le 16 novembre 2026 sur France Inter. La page écrit aussi qu'en 2025 le ministère de l'Intérieur a recensé 1 320 actes antisémites.",
+          "url": "https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "theme": "Gaza – déclarations",
+          "section": "gaza",
+          "archive_url": "https://web.archive.org/web/20261116073948/https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "82 % des Français juifs déclarent avoir déjà été victimes d’un acte antisémite au cours de leur vie.",
+          "date": "2026-11-15",
+          "medium": "Page de l'American Jewish Committee, datée du 15 novembre 2026. Enquête Ifop pour l'AJC et la Fondapol. Anne-Sophie Sebban-Bécache la présente le 16 novembre 2026 sur France Inter. La page écrit aussi qu'en 2025 le ministère de l'Intérieur a recensé 1 320 actes antisémites.",
+          "url": "https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116073948/https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "archived": "2026-11-16"
+        }
+      ],
+      "sections": [
+        "france",
+        "gaza"
+      ],
+      "category": "Associations & représentants",
+      "subcategory": "Associations & représentants",
+      "parcours": [
+        {
+          "date": "2026-11-15",
+          "title": "Enquête sur l'antisémitisme",
+          "text": "L'AJC publie, avec la Fondapol, une enquête Ifop. La page rapproche l'extrême droite, l'extrême gauche et le rejet d'Israël, tels que l'enquête les mesure.",
+          "url": "https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "source": "AJC",
+          "archive_url": "https://web.archive.org/web/20261116073948/https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+          "archived": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": "anne-sophie-sebban-becache",
+      "name": "Anne-Sophie Sebban-Bécache",
+      "type": "person",
+      "role": "Vice-présidente de l'antenne Europe de l'American Jewish Committee (France Inter, 16 novembre 2026)",
+      "description": "Le 16 novembre 2026, sur France Inter, elle présente l'enquête de l'AJC. Elle parle d'une fissure, d'une frontière de ce qui est acceptable, et des « deux extrêmes ».",
+      "statements": [
+        {
+          "quote": "Quelque chose s'est fissuré entre la France et une partie croissante des Français de confession juive",
+          "date": "2026-11-16",
+          "medium": "France Inter, L'invité de 6h20, 16 novembre 2026. La page de l'émission reprend la phrase. franceinfo publie les mêmes mots le matin.",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-6h20/la-question-de-6h20-du-lundi-16-novembre-2026-4955302",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116074041/https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-6h20/la-question-de-6h20-du-lundi-16-novembre-2026-4955302",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Une frontière s'est déplacée dans ce qui est socialement acceptable aujourd'hui",
+          "date": "2026-11-16",
+          "medium": "France Inter, 16 novembre 2026. La page ajoute qu'elle note un sentiment de haine « alimenté par tous les phénomènes qui traversent notre société ».",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-6h20/la-question-de-6h20-du-lundi-16-novembre-2026-4955302",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116074041/https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-6h20/la-question-de-6h20-du-lundi-16-novembre-2026-4955302",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "On voit aujourd'hui dans la polarisation de la politique en France comment les deux extrêmes utilisent cette question de l'antisémitisme et la nourrissent",
+          "date": "2026-11-16",
+          "medium": "France Inter, 16 novembre 2026. « les deux extrêmes » est sa formule. La page dit que l'enquête est, selon elle, un « dernier avertissement ». Les pourcentages Mélenchon et Le Pen sont ceux de la page de l'AJC, pas une phrase distincte d'elle sur cette antenne.",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-6h20/la-question-de-6h20-du-lundi-16-novembre-2026-4955302",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116074041/https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-6h20/la-question-de-6h20-du-lundi-16-novembre-2026-4955302",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Il y a cette question de la tolérance zéro qui n'est pas véritablement appliquée en matière d'antisémitisme et l'idée que les institutions de la République ne sont plus tout à fait à même de nous protéger",
+          "date": "2026-11-16",
+          "medium": "France Inter, 16 novembre 2026. La page écrit aussi qu'elle décrit « le sentiment d'une forme d'impunité face à l'antisémitisme ».",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-6h20/la-question-de-6h20-du-lundi-16-novembre-2026-4955302",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116074041/https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-6h20/la-question-de-6h20-du-lundi-16-novembre-2026-4955302",
+          "archived": "2026-11-16"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Associations & représentants",
+      "subcategory": "Associations & représentants",
+      "parcours": [
+        {
+          "date": "2026-11-16",
+          "title": "France Inter, enquête de l'AJC",
+          "text": "Elle présente sur France Inter la radiographie de l'antisémitisme publiée par l'AJC.",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-6h20/la-question-de-6h20-du-lundi-16-novembre-2026-4955302",
+          "source": "France Inter",
+          "archive_url": "https://web.archive.org/web/20261116074041/https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-6h20/la-question-de-6h20-du-lundi-16-novembre-2026-4955302",
+          "archived": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": "olivier-rioult",
+      "name": "Olivier Rioult",
+      "type": "person",
+      "role": "Maire RN des 11e et 12e arrondissements de Marseille (Sud Radio, 16 novembre 2026)",
+      "description": "Le 16 novembre 2026, sur Sud Radio, il parle d'une agression visant des militants du RN et de La Cocarde. Il ne nomme personne. « milice » et « nazifier » sont ses mots.",
+      "statements": [
+        {
+          "quote": "C’était des jeunes qui étaient tranquillement en train de boire un verre et qui ont subi une attaque de la part d’un commando cagoulé et habillé en noir",
+          "date": "2026-11-16",
+          "medium": "Sud Radio, « C'est à la une », 16 novembre 2026, au micro de Jacques Cardoze. La page le présente comme maire RN des 11e et 12e arrondissements de Marseille. Il ne nomme aucune personne.",
+          "url": "https://www.sudradio.fr/faits-divers/marseille-de-jeunes-militants-du-rn-agresses-dans-un-bar",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116074139/https://www.sudradio.fr/faits-divers/marseille-de-jeunes-militants-du-rn-agresses-dans-un-bar",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Cela fait référence à des black blocs. Je pense que c’était une milice d’extrême-gauche, comme on en voit à Marseille et un peu partout en France.",
+          "date": "2026-11-16",
+          "medium": "Sud Radio, 16 novembre 2026. « Je pense » est dans la phrase. La page ne présente pas cette qualification comme une décision de justice.",
+          "url": "https://www.sudradio.fr/faits-divers/marseille-de-jeunes-militants-du-rn-agresses-dans-un-bar",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116074139/https://www.sudradio.fr/faits-divers/marseille-de-jeunes-militants-du-rn-agresses-dans-un-bar",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Les mots qui m’ont été rapportés quand ils étaient sur place est qu’ils cherchaient des fascistes.",
+          "date": "2026-11-16",
+          "medium": "Sud Radio, 16 novembre 2026. La tournure « est qu’ils » est celle de la page. Il dit rapporter des mots, il ne nomme personne.",
+          "url": "https://www.sudradio.fr/faits-divers/marseille-de-jeunes-militants-du-rn-agresses-dans-un-bar",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116074139/https://www.sudradio.fr/faits-divers/marseille-de-jeunes-militants-du-rn-agresses-dans-un-bar",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Il ne faut pas s’étonner que cela arrive quand vous avez des élus de gauche et d’extrême-gauche qui passent leur temps à nous nazifier.",
+          "date": "2026-11-16",
+          "medium": "Sud Radio, 16 novembre 2026. Il ajoute : « Aujourd’hui, des militants, hier des journalistes, et demain des quidams. Il y a deux poids deux mesures : nous ne sommes pas les bonnes victimes. » Il dit aussi que deux jeunes ont reçu des coups et qu’un client a eu le nez cassé. Aucun nom.",
+          "url": "https://www.sudradio.fr/faits-divers/marseille-de-jeunes-militants-du-rn-agresses-dans-un-bar",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116074139/https://www.sudradio.fr/faits-divers/marseille-de-jeunes-militants-du-rn-agresses-dans-un-bar",
+          "archived": "2026-11-16"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-16",
+          "title": "Sud Radio, agression à Marseille",
+          "text": "Il parle sur Sud Radio d'une agression visant des militants du RN et de La Cocarde. Il ne nomme personne.",
+          "url": "https://www.sudradio.fr/faits-divers/marseille-de-jeunes-militants-du-rn-agresses-dans-un-bar",
+          "source": "Sud Radio",
+          "archive_url": "https://web.archive.org/web/20261116074139/https://www.sudradio.fr/faits-divers/marseille-de-jeunes-militants-du-rn-agresses-dans-un-bar",
+          "archived": "2026-11-16"
         }
       ]
     }
@@ -9463,6 +9779,83 @@
       "date": "2026-11-15",
       "section": "france",
       "nature": "autre"
+    },
+    {
+      "source": "anne-sophie-sebban-becache",
+      "target": "ajc",
+      "relation": "vice-présidente de l'antenne Europe, elle présente l'enquête de l'AJC sur France Inter (16/11/2026)",
+      "url": "https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-6h20/la-question-de-6h20-du-lundi-16-novembre-2026-4955302",
+      "date": "2026-11-16",
+      "section": "france",
+      "nature": "autre",
+      "archive_url": "https://web.archive.org/web/20261116074041/https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-6h20/la-question-de-6h20-du-lundi-16-novembre-2026-4955302",
+      "archived": "2026-11-16"
+    },
+    {
+      "source": "ajc",
+      "target": "marine-le-pen",
+      "relation": "l'enquête indique que 47 % des Français estiment qu'elle contribue à la montée de l'antisémitisme, et que 31 % des Français juifs envisageraient de quitter le pays si elle était élue (page du 15/11/2026)",
+      "url": "https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+      "date": "2026-11-15",
+      "section": "france",
+      "nature": "autre",
+      "archive_url": "https://web.archive.org/web/20261116073948/https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+      "archived": "2026-11-16"
+    },
+    {
+      "source": "ajc",
+      "target": "eric-zemmour",
+      "relation": "l'enquête indique que 53 % des Français estiment qu'il contribue à la montée de l'antisémitisme (page du 15/11/2026)",
+      "url": "https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+      "date": "2026-11-15",
+      "section": "france",
+      "nature": "autre",
+      "archive_url": "https://web.archive.org/web/20261116073948/https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+      "archived": "2026-11-16"
+    },
+    {
+      "source": "ajc",
+      "target": "jean-luc-melenchon",
+      "relation": "l'enquête indique que 58 % des Français estiment qu'il contribue à la montée de l'antisémitisme, et que 69 % des Français juifs déclarent qu'ils pourraient quitter la France s'il était élu (page du 15/11/2026)",
+      "url": "https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+      "date": "2026-11-15",
+      "section": "france",
+      "nature": "autre",
+      "archive_url": "https://web.archive.org/web/20261116073948/https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/",
+      "archived": "2026-11-16"
+    },
+    {
+      "source": "olivier-rioult",
+      "target": "rn",
+      "relation": "Sud Radio le présente comme maire RN des 11e et 12e arrondissements de Marseille (16/11/2026)",
+      "url": "https://www.sudradio.fr/faits-divers/marseille-de-jeunes-militants-du-rn-agresses-dans-un-bar",
+      "date": "2026-11-16",
+      "section": "france",
+      "nature": "ascension",
+      "archive_url": "https://web.archive.org/web/20261116074139/https://www.sudradio.fr/faits-divers/marseille-de-jeunes-militants-du-rn-agresses-dans-un-bar",
+      "archived": "2026-11-16"
+    },
+    {
+      "source": "nicolas-sarkozy",
+      "target": "cnews",
+      "relation": "il parle d'une « bien étrange et dangereuse conception de la démocratie » face aux appels à supprimer la chaîne (Figaro du 13/11/2026, cité par le JDD le 15/11)",
+      "url": "https://www.lejdd.fr/Societe/c8-cnews-nicolas-sarkozy-denonce-une-dangereuse-conception-de-la-democratie-188706",
+      "date": "2026-11-13",
+      "section": "france",
+      "nature": "autre",
+      "archive_url": "https://web.archive.org/web/20261116074321/https://www.lejdd.fr/Societe/c8-cnews-nicolas-sarkozy-denonce-une-dangereuse-conception-de-la-democratie-188706",
+      "archived": "2026-11-16"
+    },
+    {
+      "source": "nicolas-sarkozy",
+      "target": "rn",
+      "relation": "il dit que vouloir interdire le RN, comme LFI, est « une curieuse vision de la démocratie » (Figaro du 13/11/2026, cité par BFMTV)",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/une-curieuse-vision-de-la-democratie-nicolas-sarkozy-se-dit-contre-l-interdiction-de-lfi-suggeree-par-bruno-retailleau_AN-202611130717.html",
+      "date": "2026-11-13",
+      "section": "france",
+      "nature": "autre",
+      "archive_url": "https://web.archive.org/web/20261116074402/https://www.bfmtv.com/politique/elections/presidentielle/une-curieuse-vision-de-la-democratie-nicolas-sarkozy-se-dit-contre-l-interdiction-de-lfi-suggeree-par-bruno-retailleau_AN-202611130717.html",
+      "archived": "2026-11-16"
     }
   ]
 }

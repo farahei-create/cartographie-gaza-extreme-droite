@@ -4,6 +4,21 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-16 (matin) — v45
+
+Tu pars du relevé v44, lu jusqu’au 16/11 vers 2 h, et d’un second relevé X (92 comptes, depuis le 14/11 6 h). Tu ne recopies aucune phrase déjà en ligne. Tu publies ce que les pages du matin contiennent mot pour mot.
+
+Tu ajoutes vingt-quatre phrases, trois fiches (American Jewish Committee, Anne-Sophie Sebban-Bécache, Olivier Rioult) et sept liens. Pas de photo libre : monogramme. `tests/test_v22.py` : « asso » passe à 21, « elu » à 43.
+
+- American Jewish Committee, page datée du 15/11/2026, enquête Ifop avec la Fondapol : l’extrême droite et l’extrême gauche dans les causes perçues de l’antisémitisme (25 % chacune) ; sympathisants du RN et de LFI ; 58 % / 53 % / 47 % pour Mélenchon, Zemmour et Le Pen ; 69 % et 31 % à l’hypothèse d’une élection de Mélenchon ou de Le Pen ; 79 % des Français juifs se sont sentis rendus responsables des actions du gouvernement israélien ; 49 % des 18-24 ans sur la comparaison avec les nazis ; 82 % disent avoir déjà été victimes d’un acte antisémite. — https://ajcfrance.com/radiographie-de-lantisemitisme-en-france-edition-2027/
+- Anne-Sophie Sebban-Bécache, 16/11/2026, France Inter, 6 h 20 : « Quelque chose s'est fissuré », « Une frontière s'est déplacée », « les deux extrêmes utilisent cette question de l'antisémitisme et la nourrissent », « tolérance zéro ». « les deux extrêmes » est sa formule. Lien vers l’AJC. — https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-6h20/la-question-de-6h20-du-lundi-16-novembre-2026-4955302
+- Olivier Rioult, 16/11/2026, Sud Radio : agression visant des militants du RN et de La Cocarde, « milice d’extrême-gauche », « cherchaient des fascistes », « nous nazifier ». Il ne nomme personne. « Je pense » et « les mots qui m’ont été rapportés » restent dans les phrases. Lien vers le RN. — https://www.sudradio.fr/faits-divers/marseille-de-jeunes-militants-du-rn-agresses-dans-un-bar
+- Nicolas Sarkozy, entretien au Figaro du 13/11/2026, phrases lues dans le JDD du 15/11 à 1 h et dans BFMTV du 13/11 : C8, « bien étrange et dangereuse conception de la démocratie » pour CNews, L’Humanité, journalistes menacés, « géométrie variable », et « Vouloir interdire LFI ou le RN, les deux partis donnés par les sondages au deuxième tour de la présidentielle, c’est là encore une curieuse vision de la démocratie ». Ces phrases n’étaient pas sur la fiche, qui avait seulement la primaire. Liens vers CNews et le RN. — https://www.lejdd.fr/Societe/c8-cnews-nicolas-sarkozy-denonce-une-dangereuse-conception-de-la-democratie-188706 et https://www.bfmtv.com/politique/elections/presidentielle/une-curieuse-vision-de-la-democratie-nicolas-sarkozy-se-dit-contre-l-interdiction-de-lfi-suggeree-par-bruno-retailleau_AN-202611130717.html
+
+Écarté, en une ligne : les phrases déjà en v42, v43 ou v44 (Goldnadel, Mélenchon et le livre de Rima Hassan, Lévy, Ciotti, Zemmour, Tondelier, Maréchal, Le Gallou, Odoul, Bompard à Nice, Dupont-Aignan, Onfray, Montbrial, Jadot, Ridel, Alloncle sur l’égard démocratique, Rodwell, Chenu, Panot, le RN sur l’ordre, Rousseau, Retailleau) ; Ukraine, Riner, bac, carburant, permis, SMIC, retraites, sondages et titres sans phrase nouvelle ; Crépol, audience du 16/11 sans décision et mis en cause mineurs non nommés ; Gaza, communiqués de Kaja Kallas et du Royaume-Uni, de l’Italie, de l’Australie et du Canada, la France n’est pas signataire ; pas de décision nouvelle de l’Arcom ; Bompard, le mot « complicité » reste hors du fichier ; Chloé Ridel sur la forêt de Saint-Cloud, insinuation pénale ; posts X (Autain, Faure, Rima Hassan, Karl Olive, Copé) dont la phrase exacte n’a pas été relue sur une page qui répond ; particuliers (Marlone, auditeurs, victimes non nommées au-delà du fait déjà dit) ; Alain Destexhe, pas une personnalité française.
+
+Cache `onrecord-v45`.
+
 ## 2026-11-16 (relevé X) — v44
 
 Tu pars d’un relevé de 154 posts (32 comptes), lus via l’API X entre le 13/11 et le 16/11, 2 h. Tu en publies 52. Les autres sont écartés. Les phrases déjà en ligne (v42, v43) ne sont pas recopiées. Quinze fiches nouvelles, sans photo libre : monogramme. `tests/test_v22.py` : « elu » passe à 42, « jour » à 25.
