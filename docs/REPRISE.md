@@ -26,7 +26,7 @@ Site statique à la racine. Pas de CDN. Pas d'étape de build côté Vercel : `d
 | `style.css`, `app.js` | Mise en forme et routage |
 | `data.json` | Contenu. **Généré.** Ne pas l'éditer à la main |
 | `build.py` | Construit `data.json` (personnes, liens, archives, compteurs) |
-| `v24_content.py`, `v26_content.py`, `v27_content.py`, `v28_content.py`, `v30_content.py`, `v31_content.py`, `v35_content.py`, `v41_content.py` | Ajouts branchés à la fin de `build.py` |
+| `v24_content.py`, `v26_content.py`, `v27_content.py`, `v28_content.py`, `v30_content.py`, `v31_content.py`, `v35_content.py`, `v41_content.py`, `v42_content.py` | Ajouts branchés à la fin de `build.py` |
 | `config.js` | `DONATION_URL`, `CORRECTION_EMAIL` |
 | `sw.js` | Service worker. La constante `VERSION` doit monter à chaque publication |
 | `manifest.webmanifest`, `icons/` | PWA |
@@ -217,6 +217,8 @@ Le numéro vivant est celui de `sw.js`. Il n'y a pas de tag git `v11`, `v17`, `v
 | v38 | Mise à jour du 12/11 | Accueil : hero sombre violet, phrases surlignées, constellation 3D visible |
 | v39 | Mise à jour du 12/11 | Ambiance néon sur tout le site, Réseau en 3D activable (canvas, sans librairie tierce) |
 | v40 | Mise à jour du 12/11 | Accueil : espacement du hero, trait violet sous ONRECORD. Page admin privée (`admin.html`) |
+| v41 | `bd2d4b7` | Mise à jour du 14/11 : Mélenchon, Barrot, primaire (Zemmour, Attal), Maréchal, Tondelier, Stérin. Module `v41_content.py` |
+| v42 | Mise à jour du 16/11 | Rousseau, Portelli, réponse de Tondelier. Module `v42_content.py` |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 

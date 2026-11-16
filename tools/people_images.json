@@ -418,5 +418,25 @@
    "source_url": "https://commons.wikimedia.org/wiki/File:Jean-No%C3%ABl_Barrot_2025_(cropped).jpg",
    "file": "Jean-Noël_Barrot_2025_(cropped).jpg"
   }
+ },
+ "sandrine-rousseau": {
+  "image": "img/people/sandrine-rousseau.webp",
+  "image_credit": {
+   "author": "Tilou90",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Sandrine_Rousseau.jpg",
+   "file": "Sandrine Rousseau.jpg"
+  }
+ },
+ "florence-portelli": {
+  "image": "img/people/florence-portelli.webp",
+  "image_credit": {
+   "author": "Jacques Paquier",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Florence_Portelli_(46824288354).jpg",
+   "file": "Florence Portelli (46824288354).jpg"
+  }
  }
 }

@@ -1,16 +1,16 @@
 {
   "meta": {
-    "generated": "2026-11-14",
-    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-14 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
+    "generated": "2026-11-16",
+    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-16 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
-      "persons": 58,
+      "persons": 60,
       "orgs": 55,
-      "edges": 176,
-      "statements": 217,
-      "photos": 42,
+      "edges": 178,
+      "statements": 222,
+      "photos": 44,
       "logos": 21,
-      "videos": 19,
-      "france_nodes": 79
+      "videos": 21,
+      "france_nodes": 81
     },
     "category_order": [
       "Responsables politiques",
@@ -4039,7 +4039,9 @@
             "url": "https://www.franceinfo.fr/monde/israel/je-regrette-que-le-gouvernement-d-israel-me-poursuive-de-cette-maniere-denonce-jean-luc-melenchon-interdit-de-territoire-en-israel_8279831.html",
             "platform": "franceinfo.fr",
             "title": "« Je regrette que le gouvernement d'Israël me poursuive de cette manière », dénonce Jean-Luc Mélenchon",
-            "source": "franceinfo (site officiel)"
+            "source": "franceinfo (site officiel)",
+            "archive_url": "https://web.archive.org/web/20261114192944/https://www.franceinfo.fr/monde/israel/je-regrette-que-le-gouvernement-d-israel-me-poursuive-de-cette-maniere-denonce-jean-luc-melenchon-interdit-de-territoire-en-israel_8279831.html",
+            "archived": "2026-11-14"
           },
           "archive_url": "https://web.archive.org/web/20261114194010/https://www.franceinfo.fr/politique/la-france-insoumise/israel-interdit-a-jean-luc-melenchon-et-mathilde-panot-l-entree-sur-son-territoire-denoncant-la-position-extremement-anti-israelienne-de-la-france-insoumise_8279801.html",
           "archived": "2026-11-14"
@@ -4242,6 +4244,14 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261114193446/https://www.tf1info.fr/justice-faits-divers/attentat-de-trappes-le-rn-va-porter-plainte-contre-tondelier-pour-diffamation-2475583.html",
           "archived": "2026-11-14"
+        },
+        {
+          "quote": "J'en ai aussi un peu ras-le-bol que, dans des moments aussi difficiles que le nôtre, on se permette parler à tort et à travers en son nom propre, et jamais au nom du collectif. C'est un peu facile, et ça abîme beaucoup le collectif et l'exercice compliqué qu'on est en train de mener",
+          "date": "2026-11-15",
+          "medium": "franceinfo, 15 novembre 2026 au soir, cité par Le Parisien, au sujet de Sandrine Rousseau. La phrase est reproduite telle que Le Parisien l'imprime. Le Parisien cite aussi : elle dit que Sandrine Rousseau « cherche la provocation », « Tout ça est n'importe quoi », « la question sera tranchée, c'est mon engagement, c'est ce qu'on a toujours dit », et « Les options sur lesquelles nous voterons seront détaillées à la fin du mois de novembre ». Le journal écrit qu'un sondage publié la veille attribue à Marine Le Pen entre 31 et 33 % au premier tour, et à Jean-Luc Mélenchon 18,5 % si Marine Tondelier et François Ruffin ne se présentent pas (3,5 % et 3 % sinon).",
+          "url": "https://www.leparisien.fr/politique/presidentielle-2027-rousseau-appelle-les-ecologistes-a-se-rallier-a-lfi-pour-la-presidentielle-tondelier-denonce-une-provocation-15-11-2026-D3HHDNGM5VEQ7JDCSCYCXE6XA4.php",
+          "theme": "Nuance / contexte",
+          "section": "france"
         }
       ],
       "sections": [
@@ -6269,6 +6279,128 @@
         "license_url": "",
         "source_url": "https://commons.wikimedia.org/wiki/File:Jean-No%C3%ABl_Barrot_2025_(cropped).jpg",
         "file": "Jean-Noël_Barrot_2025_(cropped).jpg"
+      }
+    },
+    {
+      "id": "sandrine-rousseau",
+      "name": "Sandrine Rousseau",
+      "type": "person",
+      "role": "Députée Les Écologistes de Paris (BFMTV, 15 novembre 2026)",
+      "description": "Députée. Le 15 novembre 2026, sur BFMTV, elle parle d'un second tour avec Marine Le Pen et appelle son parti à « rejoindre la dynamique » de Jean-Luc Mélenchon. Marine Tondelier répond le soir même sur franceinfo (Le Parisien).",
+      "statements": [
+        {
+          "quote": "Présentez-moi un seul candidat qui aujourd'hui n'est pas battu au second tour par Marine Le Pen. La question qui va se poser au second tour c'est ce que va faire le bloc central",
+          "date": "2026-11-15",
+          "medium": "BFM Politique, BFMTV, 15 novembre 2026. Elle ajoute : « Si le bloc central ne voit pas la différence entre les deux, alors, ce sera le moment de vérité, les masques vont tomber. » BFMTV écrit qu'elle déplore le « jeu extrêmement dangereux » de représentants du bloc central « en mettant un signe égal » entre LFI et le RN. Elle dit aussi : « cette candidature écologiste qui fait 3% doit alimenter une dynamique plus large » et « Ça pourrait être les pourcents qui manquent à la gauche pour accéder au second tour. » TF1 Info, sur le même entretien, cite le sondage Elabe du 14 novembre : la candidate écologiste est créditée de 3 à 3,5 %. Le soir même, sur franceinfo, Marine Tondelier répond. Le Parisien cite ses mots : Sandrine Rousseau « cherche la provocation », « Tout ça est n'importe quoi », « la question sera tranchée, c'est mon engagement, c'est ce qu'on a toujours dit », et « Les options sur lesquelles nous voterons seront détaillées à la fin du mois de novembre ». Le vote interne des Écologistes est prévu du 10 au 13 décembre (BFMTV).",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-sandrine-rousseau-appelle-les-ecologistes-a-rejoindre-la-dynamique-de-jean-luc-melenchon-et-marine-tondelier-a-se-retirer_AV-202611150255.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "video": {
+            "url": "https://www.bfmtv.com/replay-emissions/bfm-politique/video-invitee-sandrine-rousseau_VN-202611150243.html",
+            "platform": "bfmtv.com",
+            "title": "Sandrine Rousseau, invitée de BFM Politique",
+            "source": "BFMTV (site officiel)",
+            "archive_url": "https://web.archive.org/web/20261116004732/https://www.bfmtv.com/replay-emissions/bfm-politique/video-invitee-sandrine-rousseau_VN-202611150243.html",
+            "archived": "2026-11-16"
+          },
+          "archive_url": "https://web.archive.org/web/20261116004706/https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-sandrine-rousseau-appelle-les-ecologistes-a-rejoindre-la-dynamique-de-jean-luc-melenchon-et-marine-tondelier-a-se-retirer_AV-202611150255.html",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Je dis que dans un moment comme celui-ci, il nous faut une ligne politique, nous sommes un parti politique, avec la montée du fascisme, nous ne pouvons pas nous exonérer d'avoir un débat sur la ligne politique au-delà des négociations [pour la présidentielle]",
+          "date": "2026-11-15",
+          "medium": "BFM Politique, BFMTV, 15 novembre 2026. Les crochets sont ceux de BFMTV. La formule « montée du fascisme » est la sienne. Le soir même, sur franceinfo, Marine Tondelier répond. Le Parisien cite ses mots : Sandrine Rousseau « cherche la provocation », « Tout ça est n'importe quoi », « la question sera tranchée, c'est mon engagement, c'est ce qu'on a toujours dit », et « Les options sur lesquelles nous voterons seront détaillées à la fin du mois de novembre ». Le vote interne des Écologistes est prévu du 10 au 13 décembre (BFMTV).",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-sandrine-rousseau-appelle-les-ecologistes-a-rejoindre-la-dynamique-de-jean-luc-melenchon-et-marine-tondelier-a-se-retirer_AV-202611150255.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116004706/https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-sandrine-rousseau-appelle-les-ecologistes-a-rejoindre-la-dynamique-de-jean-luc-melenchon-et-marine-tondelier-a-se-retirer_AV-202611150255.html",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "J'appelle mon parti à rejoindre la dynamique de Jean-Luc Mélenchon, et la rejoindre très tôt, pour que nous ne soyons pas dans une démarche politique de négociation de place mais que nous soyons vraiment dans l'appui à une ligne politique",
+          "date": "2026-11-15",
+          "medium": "BFM Politique, 15 novembre 2026, cité par TF1 Info. Sur son parrainage à Marine Tondelier, elle dit : « Je ne le donnerai pas ». Elle l'appelle « absolument » à retirer sa candidature « le plus rapidement possible » et ajoute : « Je la qualifierais même de dangereuse si elle se maintient ». Le même article rappelle que Marine Tondelier avait déclaré le 9 novembre sur TF1 : « Je ne me désisterai pas, je ne disparaîtrai pas comme ça d'un coup de l'élection présidentielle ». Le soir même, sur franceinfo, Marine Tondelier répond. Le Parisien cite ses mots : Sandrine Rousseau « cherche la provocation », « Tout ça est n'importe quoi », « la question sera tranchée, c'est mon engagement, c'est ce qu'on a toujours dit », et « Les options sur lesquelles nous voterons seront détaillées à la fin du mois de novembre ». Le vote interne des Écologistes est prévu du 10 au 13 décembre (BFMTV).",
+          "url": "https://www.tf1info.fr/politique/elections/presidentielle/presidentielle-2027-sandrine-rousseau-appelle-marine-tondelier-a-retirer-sa-candidature-2475969.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116004803/https://www.tf1info.fr/politique/elections/presidentielle/presidentielle-2027-sandrine-rousseau-appelle-marine-tondelier-a-retirer-sa-candidature-2475969.html",
+          "archived": "2026-11-16"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-15",
+          "title": "Députée Les Écologistes de Paris",
+          "text": "BFMTV la présente comme « députée écologiste de Paris » et « députée Les Écologistes de Paris » en rapportant son entretien du 15 novembre 2026.",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-sandrine-rousseau-appelle-les-ecologistes-a-rejoindre-la-dynamique-de-jean-luc-melenchon-et-marine-tondelier-a-se-retirer_AV-202611150255.html",
+          "source": "BFMTV",
+          "archive_url": "https://web.archive.org/web/20261116004706/https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-sandrine-rousseau-appelle-les-ecologistes-a-rejoindre-la-dynamique-de-jean-luc-melenchon-et-marine-tondelier-a-se-retirer_AV-202611150255.html",
+          "archived": "2026-11-16"
+        }
+      ],
+      "image": "img/people/sandrine-rousseau.webp",
+      "image_credit": {
+        "author": "Tilou90",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Sandrine_Rousseau.jpg",
+        "file": "Sandrine Rousseau.jpg"
+      }
+    },
+    {
+      "id": "florence-portelli",
+      "name": "Florence Portelli",
+      "type": "person",
+      "role": "Vice-présidente des Républicains (BFMTV, 14 novembre 2026)",
+      "description": "Le 14 novembre 2026, BFMTV publie une vidéo où elle commente un sondage d'intentions de vote pour 2027. La chaîne attribue la phrase au titre de la page.",
+      "statements": [
+        {
+          "quote": "Ce qui est très inquiétant au-delà des personnes, c'est surtout que les deux extrêmes sont en train d'arriver au second tour",
+          "date": "2026-11-14",
+          "medium": "BFMTV, vidéo du 14 novembre 2026. La phrase figure dans le titre de la page, introduite par « déclare Florence Portelli, vice-présidente des LR ». « Les deux extrêmes » est sa formulation. Le 15 novembre, Le Parisien écrit qu'un sondage publié la veille attribue à Marine Le Pen entre 31 et 33 % des voix au premier tour, et à Jean-Luc Mélenchon 18,5 % dans l'hypothèse où Marine Tondelier et François Ruffin ne se présentent pas.",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-credite-de-4-5-des-intentions-de-vote-dans-un-sondage-ce-qui-est-tres-inquietant-au-dela-des-personnes-c-est-surtout-que-les-deux-extremes-sont-en-train-d-arriver-au-second-tour-declare-florence-portelli-vice-presidente-des-lr_VN-202611140375.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "video": {
+            "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-credite-de-4-5-des-intentions-de-vote-dans-un-sondage-ce-qui-est-tres-inquietant-au-dela-des-personnes-c-est-surtout-que-les-deux-extremes-sont-en-train-d-arriver-au-second-tour-declare-florence-portelli-vice-presidente-des-lr_VN-202611140375.html",
+            "platform": "bfmtv.com",
+            "title": "Florence Portelli sur un sondage pour 2027",
+            "source": "BFMTV (site officiel)",
+            "archive_url": "https://web.archive.org/web/20261116005233/https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-credite-de-4-5-des-intentions-de-vote-dans-un-sondage-ce-qui-est-tres-inquietant-au-dela-des-personnes-c-est-surtout-que-les-deux-extremes-sont-en-train-d-arriver-au-second-tour-declare-florence-portelli-vice-presidente-des-lr_VN-202611140375.html",
+            "archived": "2026-11-16"
+          },
+          "archive_url": "https://web.archive.org/web/20261116005233/https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-credite-de-4-5-des-intentions-de-vote-dans-un-sondage-ce-qui-est-tres-inquietant-au-dela-des-personnes-c-est-surtout-que-les-deux-extremes-sont-en-train-d-arriver-au-second-tour-declare-florence-portelli-vice-presidente-des-lr_VN-202611140375.html",
+          "archived": "2026-11-16"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Partis & dirigeants de parti",
+      "parcours": [
+        {
+          "date": "2026-11-14",
+          "title": "Vice-présidente des Républicains",
+          "text": "BFMTV la présente comme « vice-présidente des LR » dans le titre de la vidéo du 14 novembre 2026.",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-credite-de-4-5-des-intentions-de-vote-dans-un-sondage-ce-qui-est-tres-inquietant-au-dela-des-personnes-c-est-surtout-que-les-deux-extremes-sont-en-train-d-arriver-au-second-tour-declare-florence-portelli-vice-presidente-des-lr_VN-202611140375.html",
+          "source": "BFMTV",
+          "archive_url": "https://web.archive.org/web/20261116005233/https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-credite-de-4-5-des-intentions-de-vote-dans-un-sondage-ce-qui-est-tres-inquietant-au-dela-des-personnes-c-est-surtout-que-les-deux-extremes-sont-en-train-d-arriver-au-second-tour-declare-florence-portelli-vice-presidente-des-lr_VN-202611140375.html",
+          "archived": "2026-11-16"
+        }
+      ],
+      "image": "img/people/florence-portelli.webp",
+      "image_credit": {
+        "author": "Jacques Paquier",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Florence_Portelli_(46824288354).jpg",
+        "file": "Florence Portelli (46824288354).jpg"
       }
     }
   ],
@@ -8380,6 +8512,28 @@
       "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20261114193446/https://www.tf1info.fr/justice-faits-divers/attentat-de-trappes-le-rn-va-porter-plainte-contre-tondelier-pour-diffamation-2475583.html",
       "archived": "2026-11-14"
+    },
+    {
+      "source": "sandrine-rousseau",
+      "target": "marine-tondelier",
+      "relation": "appelle Marine Tondelier à retirer sa candidature et dit qu'elle ne lui donnera pas son parrainage (15/11/2026, TF1 Info)",
+      "url": "https://www.tf1info.fr/politique/elections/presidentielle/presidentielle-2027-sandrine-rousseau-appelle-marine-tondelier-a-retirer-sa-candidature-2475969.html",
+      "date": "2026-11-15",
+      "section": "france",
+      "nature": "opposition",
+      "archive_url": "https://web.archive.org/web/20261116004803/https://www.tf1info.fr/politique/elections/presidentielle/presidentielle-2027-sandrine-rousseau-appelle-marine-tondelier-a-retirer-sa-candidature-2475969.html",
+      "archived": "2026-11-16"
+    },
+    {
+      "source": "sandrine-rousseau",
+      "target": "jean-luc-melenchon",
+      "relation": "appelle son parti à rejoindre la dynamique de Jean-Luc Mélenchon (15/11/2026, TF1 Info)",
+      "url": "https://www.tf1info.fr/politique/elections/presidentielle/presidentielle-2027-sandrine-rousseau-appelle-marine-tondelier-a-retirer-sa-candidature-2475969.html",
+      "date": "2026-11-15",
+      "section": "france",
+      "nature": "autre",
+      "archive_url": "https://web.archive.org/web/20261116004803/https://www.tf1info.fr/politique/elections/presidentielle/presidentielle-2027-sandrine-rousseau-appelle-marine-tondelier-a-retirer-sa-candidature-2475969.html",
+      "archived": "2026-11-16"
     }
   ]
 }
