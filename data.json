@@ -3,14 +3,14 @@
     "generated": "2026-11-16",
     "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-16 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
-      "persons": 61,
+      "persons": 76,
       "orgs": 55,
-      "edges": 179,
-      "statements": 229,
+      "edges": 182,
+      "statements": 281,
       "photos": 45,
       "logos": 21,
       "videos": 23,
-      "france_nodes": 82
+      "france_nodes": 99
     },
     "category_order": [
       "Responsables politiques",
@@ -412,6 +412,46 @@
           },
           "archive_url": "https://web.archive.org/web/20261116012003/https://www.franceinfo.fr/economie/industrie/made-in-france-quand-la-presidentielle-s-invite-au-salon_8282180.html",
           "archived": "2026-11-16"
+        },
+        {
+          "quote": "Je demande que Jean-Luc Mélenchon demande à ses troupes de laisser les autres candidats faire campagne sans faire l'objet d'intimidations",
+          "date": "2026-11-13",
+          "medium": "CNews, émission Punchline WE, 13 novembre 2026, 17:11, heure de Paris. Phrase entre guillemets dans le post de @CNEWS. BFMTV et Frontières publient la même demande le même jour.",
+          "url": "https://x.com/CNEWS/status/2121274837750493202",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Ils n'arrivent même pas à se mettre d'accord sur les critères pour choisir un seul candidat. Partant de là, c'est pas moi qui vais régler leurs problèmes",
+          "date": "2026-11-13",
+          "medium": "LCI, salon du Made in France, 13 novembre 2026, 14:59, heure de Paris. Phrase entre guillemets dans le post de @LCI, sur les candidats de la droite et du centre.",
+          "url": "https://x.com/LCI/status/2121241582527508582",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Nous considérons que les Français doivent être prioritaires dans l’accès à un certain nombre de prestations sociales. C’est le cas du logement social.\n\nCes logements ont été payés par les parents, les grands-parents des Français. C’est normal qu’ils soient premiers servis chez",
+          "date": "2026-11-15",
+          "medium": "Message sur X (@MLP_officiel), 15 novembre 2026, 19:15, heure de Paris. Le post est coupé à 280 caractères. Texte du post lu via l'API X, heure de Paris. Le post s'arrête à la limite des 280 caractères lorsqu'il est incomplet.",
+          "url": "https://x.com/MLP_officiel/status/2122030794189181288",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Nous ne sommes pas contre les APL, nous souhaitons simplement les réserver aux Français et à ceux qui sont étrangers et qui ont travaillé cinq ans  équivalent temps plein en France.\n\nLe coût du logement étudiant est souvent insurmontable pour beaucoup de parents.",
+          "date": "2026-11-15",
+          "medium": "Message sur X (@MLP_officiel), 15 novembre 2026, 19:19, heure de Paris.",
+          "url": "https://x.com/MLP_officiel/status/2122031802550202623",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "J’ai longtemps proposé l’interdiction de la double nationalité. Je pense que j’ai commis une erreur.\n\nJ’ai laissé penser à ceux qui ont la double nationalité que je nourrissais à leur égard une forme de suspicion. Il n’y a aucune raison d’avoir la moindre suspicion.",
+          "date": "2026-11-15",
+          "medium": "Message sur X (@MLP_officiel), 15 novembre 2026, 19:36, heure de Paris. Elle revient ici sur une proposition antérieure.",
+          "url": "https://x.com/MLP_officiel/status/2122036013514301653",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -667,6 +707,54 @@
           "url": "https://x.com/J_Bardella/status/2121353541805592926",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "Avec Marine Le Pen, on est riches de nos complémentarités.\n\nIl y a une relation de confiance très forte, qui sera, demain, un véritable atout, lorsque nous aurons peut-être la responsabilité immense de devoir servir le pays.",
+          "date": "2026-11-13",
+          "medium": "Message sur X (@J_Bardella), 13 novembre 2026, 21:08, heure de Paris.",
+          "url": "https://x.com/J_Bardella/status/2121334296170406348",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Nous souhaitons qu’il ait, sur le modèle du traitement des hooligans dans le football, des interdictions de manifester pour les individus violents qui sont fichés pour leur atteinte à la sûreté de l’État",
+          "date": "2026-11-13",
+          "medium": "LCI, 13 novembre 2026, 20:12, heure de Paris. Phrase entre guillemets dans le post de @LCI, attribuée à Jordan Bardella, président du RN.",
+          "url": "https://x.com/LCI/status/2121320381986304467",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Depuis maintenant plusieurs semaines, les Français le voient bien, le gouvernement est en train de perdre le contrôle sur la situation sécuritaire du pays",
+          "date": "2026-11-13",
+          "medium": "LCI, 13 novembre 2026, 20:13, heure de Paris. Phrase entre guillemets dans le post de @LCI.",
+          "url": "https://x.com/LCI/status/2121320672756375683",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "On est là face à un individu qui a commis un acte raciste, ignoble, qui doit être condamné très fermement. (…) La place de cet individu est d’entrer en prison sans la possibilité d’en sortir un jour",
+          "date": "2026-11-13",
+          "medium": "LCI, 13 novembre 2026, 20:25, heure de Paris, sur l’attentat de Trappes. Phrase entre guillemets dans le post de @LCI. Il ne nomme pas le suspect. La personne mise en cause reste présumée innocente : cette phrase est la sienne, pas un jugement.",
+          "url": "https://x.com/LCI/status/2121323705137573988",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "On a une relation qui est très fluide, qui est extrêmement naturelle et je pense que demain nous sommes les seuls à pouvoir assumer ce couple exécutif avec un tel niveau de confiance",
+          "date": "2026-11-13",
+          "medium": "LCI, 13 novembre 2026, 21:10, heure de Paris, à propos de Marine Le Pen. Phrase entre guillemets dans le post de @LCI.",
+          "url": "https://x.com/LCI/status/2121334968567619659",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "C'est bien, les macronistes se réveillent. (…) Ils ont gouverné comme des socialistes depuis dix ans, et à trois mois des élections, parce que c'est populaire et qu'on est donné gagnant, il faut parler comme le Rassemblement national",
+          "date": "2026-11-13",
+          "medium": "LCI, 13 novembre 2026, 21:28, heure de Paris, rubrique « Immigration » du post de @LCI. Les parenthèses et points de suspension sont dans le post.",
+          "url": "https://x.com/LCI/status/2121339447790678133",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -857,6 +945,14 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261114193414/https://www.sudradio.fr/sud-radio/marion-marechal-eric-zemmour-devrait-rejoindre-et-soutenir-marine-le-pen",
           "archived": "2026-11-14"
+        },
+        {
+          "quote": "À Marseille, une quinzaine d’individus cagoulés attaquent des militants du RN et de la Cocarde à coups de bouteille, causant 3 blessés.\n\nUn énième exemple de la violence décomplexée d’une ultra gauche encouragée par le laxisme judiciaire,  la bienveillance médiatique et la",
+          "date": "2026-11-16",
+          "medium": "Message sur X (@MarionMarechal), 16 novembre 2026, 0:12, heure de Paris. Elle ne nomme aucun particulier. Le post est coupé à 280 caractères. BFMTV et CNews relatent les mêmes faits le 15 novembre, sans nommer les personnes. Texte du post lu via l'API X, heure de Paris. Le post s'arrête à la limite des 280 caractères lorsqu'il est incomplet.",
+          "url": "https://x.com/MarionMarechal/status/2122105573546050039",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -1064,6 +1160,22 @@
           },
           "archive_url": "https://web.archive.org/web/20261114014356/https://www.bfmtv.com/politique/les-republicains/video-je-serai-ravi-d-etre-candidat-dans-cette-primaire-declare-eric-zemmour-candidat-reconquete-a-la-presidentielle-au-salon-made-in-france_VN-202611130526.html",
           "archived": "2026-11-14"
+        },
+        {
+          "quote": "Dans cette présidentielle, je suis le seul à proposer une politique d’immigration négative.\n\nLa Suède, l’une des plus vieilles démocraties du monde, réforme sa Constitution pour le faire. Nous devons faire de même en France.",
+          "date": "2026-11-15",
+          "medium": "Message sur X (@ZemmourEric), 15 novembre 2026, 21:30, heure de Paris.",
+          "url": "https://x.com/ZemmourEric/status/2122064723352924442",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Tout faire pour que notre avenir soit français",
+          "date": "2026-11-15",
+          "medium": "Le JDD, entretien publié le 15 novembre 2026. Le post de @leJDD (5:50, heure de Paris) met la phrase entre guillemets : « Éric Zemmour au JDD : « Tout faire pour que notre avenir soit français » ».",
+          "url": "https://x.com/leJDD/status/2121828049071050926",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -1213,6 +1325,14 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20250722081009/https://www.bfmtv.com/politique/presidentielle-ciotti-voterait-zemmour-contre-macron-au-deuxieme-tour_AD-202109050141.html",
           "archived": "2025-07-22"
+        },
+        {
+          "quote": "« one two three viva l’Algérie » scandé par des émeutiers à Lyon brandissant le drapeau algérien. \n\nNier le lien entre l’immigration et les émeutes est une faute et une folie",
+          "date": "2026-11-14",
+          "medium": "Message sur X (@eciotti), 14 novembre 2026, 20:31, heure de Paris. Le slogan entre guillemets est celui qu’il dit avoir entendu ; la phrase sur l’immigration est la sienne.",
+          "url": "https://x.com/eciotti/status/2121687539006292151",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -1662,10 +1782,67 @@
           "url": "https://x.com/GWGoldnadel/status/2108986735938220224",
           "theme": "Gaza – déclarations",
           "section": "gaza"
+        },
+        {
+          "quote": "Le vice président de la fac de Versailles hospitalisé après une attaque  au couteau ! Ni à 9 h ni à 10 h sur @franceinter pas 1 mot sur l’affaire . Les violences contre les profs , ils s’en tapent. Mais apologie d’une pièce sur Gaza . Radio France Insoumise en roue libre .",
+          "date": "2026-11-14",
+          "medium": "Message sur X (@GWGoldnadel), 14 novembre 2026, 10:10, heure de Paris. Il ne nomme pas la victime.",
+          "url": "https://x.com/GWGoldnadel/status/2121531263739650356",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
+        },
+        {
+          "quote": "Moi cette déclaration ne me choque pas , j’affirme simplement que l’assimilation de St Denis au Congo aurait permis à l’extrême gauche de terroriser intellectuellement C News injustement.",
+          "date": "2026-11-14",
+          "medium": "Réponse sur X (@GWGoldnadel), 14 novembre 2026, 12:05, heure de Paris.",
+          "url": "https://x.com/GWGoldnadel/status/2121560184262644212",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Voilà ce que tweeta le petit député du Parti Antisémite le jour du massacre islamiste du 13 novembre. On ne les méprisera jamais assez .",
+          "date": "2026-11-14",
+          "medium": "Message sur X (@GWGoldnadel), 14 novembre 2026, 13:46, heure de Paris. « Parti Antisémite » est sa formule. Il ne nomme pas le député dans ce texte. Le message cité n’est pas recopié ici.",
+          "url": "https://x.com/GWGoldnadel/status/2121585507683676406",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Rien à faire , la radio de sévices publics continue de dire le RN « d’extrême droite » et LFI  , parti antisémite , « radicale » ou « de gauche » . Malhonnête. Insupportable. Dégueulasse . Stupide. J’oubliais stupidement que @franceinter est radicalement d’extrême gauche.",
+          "date": "2026-11-14",
+          "medium": "Message sur X (@GWGoldnadel), 14 novembre 2026, 15:46, heure de Paris.",
+          "url": "https://x.com/GWGoldnadel/status/2121615782786347335",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Le désespoir de Gal Gadot est mien . Pas seulement la tristesse. Mais la rage devant l’injustice mensongère. Je publie le 2 décembre « Vérités sur le Mensonge » . Parmi tous ceux que je raconte, celui sur Gaza qui n’est plus un faux victorieux mais un vil fantasme qui a triomphé.",
+          "date": "2026-11-14",
+          "medium": "Message sur X (@GWGoldnadel), 14 novembre 2026, 19:05, heure de Paris.",
+          "url": "https://x.com/GWGoldnadel/status/2121665837933134334",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
+        },
+        {
+          "quote": "Encore un festival de sottise anti française ce dimanche sur @franceinter de Nora Hamadi, admiratrice de Rima Hassan. Les français sont racistes : MLP , Ciotti, Macron etc.. C’est raciste d’évoquer les immigrés. Sauf qu’elle se présente comme franco- algérienne . Le seul exemple",
+          "date": "2026-11-15",
+          "medium": "Message sur X (@GWGoldnadel), 15 novembre 2026, 9:20, heure de Paris. Le post est coupé à 280 caractères. Texte du post lu via l'API X, heure de Paris. Le post s'arrête à la limite des 280 caractères lorsqu'il est incomplet.",
+          "url": "https://x.com/GWGoldnadel/status/2121880947985399877",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Dans « Vérités sur le Mensonge » à paraître le 2 décembre, j’écris qu’Amnesty s’est déshonorée en donnant mille exemples . Voila qu’elle honore Francesca Albanese qui a défendu le Grand Muphti allié de Hitler et raconte qu’Israel fait violer des femmes par des chiens. INDIGNE.",
+          "date": "2026-11-15",
+          "medium": "Message sur X (@GWGoldnadel), 15 novembre 2026, 23:53, heure de Paris. Ce sont ses mots sur Amnesty International et Francesca Albanese.",
+          "url": "https://x.com/GWGoldnadel/status/2122100789132894676",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
         }
       ],
       "sections": [
-        "gaza"
+        "gaza",
+        "france"
       ],
       "category": "Journalistes & éditorialistes",
       "subcategory": "Journalistes & chroniqueurs",
@@ -1697,10 +1874,19 @@
           "section": "gaza",
           "archive_url": "https://web.archive.org/web/20250729023543/https://www.20minutes.fr/monde/israel/4155846-20250528-gaza-population-augmente-enclave-palestinienne-pourquoi-idee-tient",
           "archived": "2025-07-29"
+        },
+        {
+          "quote": "S’il y a une chose qu’on ne peut pas enlever à Éric Zemmour, c’est que sur l’immigration, il a un programme",
+          "date": "2026-11-15",
+          "medium": "CNews, « 100% Politique » week-end, 15 novembre 2026, 23:34, heure de Paris. Phrase entre guillemets dans le post de @CNEWS. Jules Torres est présenté comme journaliste au JDD.",
+          "url": "https://x.com/CNEWS/status/2122095908103823377",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
-        "gaza"
+        "gaza",
+        "france"
       ],
       "category": "Journalistes & éditorialistes",
       "subcategory": "Journalistes & chroniqueurs",
@@ -1836,10 +2022,19 @@
           "section": "gaza",
           "archive_url": "https://web.archive.org/web/20260616153839/https://www.sudradio.fr/emission/le-regard-delisabeth-levy-566",
           "archived": "2026-06-16"
+        },
+        {
+          "quote": "Depuis des semaines, les insoumis ciblent les chaînes d’information, les accusant de racisme, ce qui, n’en déplaise à monsieur Mélenchon, est une insulte. Samedi à Lyon, un caméraman-pigiste travaillant pour BFM a été roué de coups en marge d’une manifestation. Sans agents de",
+          "date": "2026-11-15",
+          "medium": "Message sur X (@ELevyCauseur), 15 novembre 2026, 19:07, heure de Paris. Le post est coupé à 280 caractères. Elle ne nomme pas le caméraman. Texte du post lu via l'API X, heure de Paris. Le post s'arrête à la limite des 280 caractères lorsqu'il est incomplet.",
+          "url": "https://x.com/ELevyCauseur/status/2122028803845140813",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
-        "gaza"
+        "gaza",
+        "france"
       ],
       "image": "img/people/elisabeth-levy.webp",
       "image_credit": {
@@ -2105,6 +2300,14 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20250124212429/https://www.lefigaro.fr/medias/amende-de-50-000-euros-pour-cnews-a-cause-de-propos-sur-l-immigration-arabo-musulmane-20240523",
           "archived": "2025-01-24"
+        },
+        {
+          "quote": "J’aime beaucoup Tibo InShape, que je trouve courageux et positif. Mais il y a une erreur dans son analyse : le sujet n’est pas de savoir si les musulmans ont le droit de porter le voile. Le sujet, c’est de savoir si le voile est français.",
+          "date": "2026-11-13",
+          "medium": "Message sur X (@GeoffroyLejeune), 13 novembre 2026, 11:51, heure de Paris. Compte non certifié dans le relevé ; c’est le compte public du directeur du JDD.",
+          "url": "https://x.com/GeoffroyLejeune/status/2121194259273404891",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -2237,6 +2440,22 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261114193446/https://www.tf1info.fr/justice-faits-divers/attentat-de-trappes-le-rn-va-porter-plainte-contre-tondelier-pour-diffamation-2475583.html",
           "archived": "2026-11-14"
+        },
+        {
+          "quote": "La confiance et l’amitié qui unissent @MLP_officiel et @J_Bardella constituent une véritable chance pour le redressement de la France.",
+          "date": "2026-11-13",
+          "medium": "Message sur X (@RNational_off), 13 novembre 2026, 21:09, heure de Paris. La suite du post est coupée à 280 caractères.",
+          "url": "https://x.com/RNational_off/status/2121334707958972554",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Remettre de l'ordre dans la rue, dans nos comptes publics et à nos frontières.",
+          "date": "2026-11-14",
+          "medium": "Message sur X (@RNational_off), 14 novembre 2026, 17:20, heure de Paris, au sujet du livre de Jordan Bardella et de son déplacement à Saint-Savin.",
+          "url": "https://x.com/RNational_off/status/2121639292699357568",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -2957,6 +3176,14 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261116011928/https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html",
           "archived": "2026-11-16"
+        },
+        {
+          "quote": "Il y a trop d’immigration en France. Pour reprendre le contrôle de notre politique migratoire, je donnerai la parole aux Français par référendum.",
+          "date": "2026-11-13",
+          "medium": "Message sur X (@BrunoRetailleau), 13 novembre 2026, 9:17, heure de Paris. Le même jour, sur France 2, il développe ces propositions (fiche, entretien des 4V).",
+          "url": "https://x.com/BrunoRetailleau/status/2121155423986180396",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -4128,6 +4355,14 @@
           },
           "archive_url": "https://web.archive.org/web/20261114194010/https://www.franceinfo.fr/politique/la-france-insoumise/israel-interdit-a-jean-luc-melenchon-et-mathilde-panot-l-entree-sur-son-territoire-denoncant-la-position-extremement-anti-israelienne-de-la-france-insoumise_8279801.html",
           "archived": "2026-11-14"
+        },
+        {
+          "quote": "Désolant. France inter tient une tranchée absurde contre la cause palestinienne en interdisant d'antenne le magnifique livre de Rima Hassan. \n\nPour l'honneur de l'esprit, pour l'honneur des Français, Viviant démissionne. Respect. \n\nLe moment venu, par les urnes, la résistance",
+          "date": "2026-11-14",
+          "medium": "Message sur X (@JLMelenchon), 14 novembre 2026, 16:54, heure de Paris. Le post est coupé à 280 caractères. Il écrit « Viviant ». Texte du post lu via l'API X, heure de Paris. Le post s'arrête à la limite des 280 caractères lorsqu'il est incomplet.",
+          "url": "https://x.com/JLMelenchon/status/2121632985321496587",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
         }
       ],
       "sections": [
@@ -4264,10 +4499,19 @@
           "section": "gaza",
           "archive_url": "https://web.archive.org/web/20250917175607/https://www.franceinfo.fr/monde/palestine/gaza/guerre-a-gaza-le-ps-le-pcf-et-les-ecologistes-reunis-a-paris-pour-denoncer-le-genocide-commis-par-israel_7274295.html",
           "archived": "2025-09-17"
+        },
+        {
+          "quote": "Le Rassemblement National est un poison contre le peuple.\n\nIls veulent couper dans le budget des services publics et ils sont contre le logement social.\n\nLeur projet, c’est fracturer la société, défendre le secteur privé et nous diviser en fonction de nos origines.",
+          "date": "2026-11-13",
+          "medium": "Message sur X (@Fabien_Roussel), 13 novembre 2026, 15:43, heure de Paris. Compte non certifié dans le relevé ; c’est le compte public du secrétaire national du PCF.",
+          "url": "https://x.com/Fabien_Roussel/status/2121252617825247563",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
-        "gaza"
+        "gaza",
+        "france"
       ],
       "category": "Responsables politiques",
       "subcategory": "Candidats à la présidentielle 2027",
@@ -4334,6 +4578,14 @@
           "medium": "franceinfo, 15 novembre 2026 au soir, cité par Le Parisien, au sujet de Sandrine Rousseau. La phrase est reproduite telle que Le Parisien l'imprime. Le Parisien cite aussi : elle dit que Sandrine Rousseau « cherche la provocation », « Tout ça est n'importe quoi », « la question sera tranchée, c'est mon engagement, c'est ce qu'on a toujours dit », et « Les options sur lesquelles nous voterons seront détaillées à la fin du mois de novembre ». Le journal écrit qu'un sondage publié la veille attribue à Marine Le Pen entre 31 et 33 % au premier tour, et à Jean-Luc Mélenchon 18,5 % si Marine Tondelier et François Ruffin ne se présentent pas (3,5 % et 3 % sinon).",
           "url": "https://www.leparisien.fr/politique/presidentielle-2027-rousseau-appelle-les-ecologistes-a-se-rallier-a-lfi-pour-la-presidentielle-tondelier-denonce-une-provocation-15-11-2026-D3HHDNGM5VEQ7JDCSCYCXE6XA4.php",
           "theme": "Nuance / contexte",
+          "section": "france"
+        },
+        {
+          "quote": "Emmanuel Macron avait promis d'être l'antidote au vote d'extrême droite.\n\nDeux quinquennats plus tard, elle n'a jamais été aussi haute.\n\nEt si elle arrive au pouvoir, elle pourra même profiter de certaines des dispositions qu'il a fait voter pour s'en prendre à l'opposition.",
+          "date": "2026-11-15",
+          "medium": "Message sur X (@marinetondelier), 15 novembre 2026, 20:07, heure de Paris. « Elle » désigne, dans son texte, l’extrême droite.",
+          "url": "https://x.com/marinetondelier/status/2122043729414357402",
+          "theme": "France – normalisation de l'extrême droite",
           "section": "france"
         }
       ],
@@ -4494,6 +4746,14 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261114193224/https://www.boursorama.com/actualite-economique/actualites/primaire-a-droite-zemmour-espere-y-participer-mais-attal-ne-veut-pas-40598195eed5b0dd0bb42f30821bddf8",
           "archived": "2026-11-14"
+        },
+        {
+          "quote": "Monsieur Zemmour n'est pas invité dans cette primaire",
+          "date": "2026-11-13",
+          "medium": "BFMTV, 13 novembre 2026, 18:06, heure de Paris. Phrase entre guillemets dans le post de @BFMTV, dite par Jad Zahab, présenté comme porte-parole de Gabriel Attal.",
+          "url": "https://x.com/BFMTV/status/2121288509818314754",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -6528,6 +6788,511 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Nicolas_Sarkozy_(2008).jpg",
         "file": "Nicolas Sarkozy (2008).jpg"
       }
+    },
+    {
+      "id": "mathilde-panot",
+      "name": "Mathilde Panot",
+      "type": "person",
+      "role": "Députée, présidente du groupe La France insoumise à l'Assemblée nationale (X, 13 novembre 2026)",
+      "description": "Députée. Les 13 et 15 novembre 2026, elle publie sur X deux messages sur la Cisjordanie et sur un documentaire tourné dans l'armée israélienne.",
+      "statements": [
+        {
+          "quote": "Dimanche 15 novembre, Paris va abriter le salon de l’immobilier israélien Icube à Paris. Au programme : la promotion et la vente de biens dans des colonies en Cisjordanie.\n\nEn Cisjordanie, fin octobre, l’armée israélienne a forcé plus de 3 000 Palestiniens à quitter leur foyer à",
+          "date": "2026-11-13",
+          "medium": "Message sur X (@MathildePanot), 13 novembre 2026, 17:07, heure de Paris. Le post est coupé à 280 caractères. Texte du post lu via l'API X, heure de Paris. Le post s'arrête à la limite des 280 caractères lorsqu'il est incomplet.",
+          "url": "https://x.com/MathildePanot/status/2121273706924175854",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
+        },
+        {
+          "quote": "Plus de 1,5 million de personne ont déjà vu le documentaire NAZA des réalisateurs israéliens Yuval Abraham et Rachel Szor. \n\nJe l’ai vu. Il est puissant, révoltant, glaçant et édifiant. Il donne à voir de l’intérieur de l’armée israélienne le processus de déshumanisation et la",
+          "date": "2026-11-15",
+          "medium": "Message sur X (@MathildePanot), 15 novembre 2026, 13:19, heure de Paris. Le post est coupé à 280 caractères. « personne » est écrit ainsi dans le post. Texte du post lu via l'API X, heure de Paris. Le post s'arrête à la limite des 280 caractères lorsqu'il est incomplet.",
+          "url": "https://x.com/MathildePanot/status/2121941033516757057",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
+        }
+      ],
+      "sections": [
+        "gaza"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-13",
+          "title": "Messages sur la Cisjordanie et Gaza",
+          "text": "Elle publie sur X un message sur le salon Icube et la vente de biens dans des colonies en Cisjordanie.",
+          "url": "https://x.com/MathildePanot/status/2121273706924175854",
+          "source": "X"
+        }
+      ]
+    },
+    {
+      "id": "jean-yves-le-gallou",
+      "name": "Jean-Yves Le Gallou",
+      "type": "person",
+      "role": "Essayiste, président de Polémia (X, 15 novembre 2026)",
+      "description": "Le 15 novembre 2026, il publie sur X un message sur la déchéance de nationalité en Suède et sur l’interdiction, selon lui, du débat sur la remigration en France.",
+      "statements": [
+        {
+          "quote": "Pendant que la Suède agit pour déchoir de la nationalité suédoise les bi nationaux délinquants ou indélicats, en France les commissaires politiques de l’extrême gauche , du ministère de l’Interieur et des tribunaux administratifs interdisent tout débat sur la remigration au nom",
+          "date": "2026-11-15",
+          "medium": "Message sur X (@jylgallou), 15 novembre 2026, 23:59, heure de Paris. Le post est coupé à 280 caractères. Texte du post lu via l'API X, heure de Paris. Le post s'arrête à la limite des 280 caractères lorsqu'il est incomplet.",
+          "url": "https://x.com/jylgallou/status/2122102144966742481",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Intellectuels & essayistes",
+      "subcategory": "Philosophes & essayistes",
+      "parcours": [
+        {
+          "date": "2026-11-15",
+          "title": "Message sur la remigration",
+          "text": "Il publie sur X un message qui oppose une réforme suédoise de la nationalité à l’interdiction, selon lui, du débat sur la remigration en France.",
+          "url": "https://x.com/jylgallou/status/2122102144966742481",
+          "source": "X"
+        }
+      ]
+    },
+    {
+      "id": "julien-odoul",
+      "name": "Julien Odoul",
+      "type": "person",
+      "role": "Député du Rassemblement national (X, 15 novembre 2026)",
+      "description": "Député RN. Le 15 novembre 2026, il demande sur X ce qu’il y a « d’extrême » chez Marine Le Pen.",
+      "statements": [
+        {
+          "quote": "Si @Cyrilhanouna est partant mais cela ne répond pas à ma question. Qu’est-ce qu’il y a d’extrême chez @MLP_officiel ?",
+          "date": "2026-11-15",
+          "medium": "Réponse sur X (@JulienOdoul), 15 novembre 2026, 16:53, heure de Paris.",
+          "url": "https://x.com/JulienOdoul/status/2121994894306693279",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-15",
+          "title": "Question sur le mot « extrême »",
+          "text": "Dans une réponse sur X, il demande ce qu’il y a « d’extrême » chez Marine Le Pen.",
+          "url": "https://x.com/JulienOdoul/status/2121994894306693279",
+          "source": "X"
+        }
+      ]
+    },
+    {
+      "id": "florian-philippot",
+      "name": "Florian Philippot",
+      "type": "person",
+      "role": "Président des Patriotes (X, 15 novembre 2026)",
+      "description": "Le 15 novembre 2026, il écrit sur X que son mouvement retire un drapeau européen à Paris.",
+      "statements": [
+        {
+          "quote": "On se débarrasse du torchon bleu à étoiles en plein Paris, à l’appel des Patriotes !\n\nNotre drapeau c’est 🇫🇷 !\n\nÀ bas l’UE !\nFrexit !",
+          "date": "2026-11-15",
+          "medium": "Message sur X (@f_philippot), 15 novembre 2026, 14:20, heure de Paris. Il présente ce geste comme celui de son mouvement, Les Patriotes.",
+          "url": "https://x.com/f_philippot/status/2121956505607966852",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Partis & dirigeants de parti",
+      "parcours": [
+        {
+          "date": "2026-11-15",
+          "title": "Message sur un drapeau européen retiré",
+          "text": "Il écrit que Les Patriotes retirent un drapeau européen à Paris.",
+          "url": "https://x.com/f_philippot/status/2121956505607966852",
+          "source": "X"
+        }
+      ]
+    },
+    {
+      "id": "ivan-rioufol",
+      "name": "Ivan Rioufol",
+      "type": "person",
+      "role": "Éditorialiste (X, 13 novembre 2026)",
+      "description": "Le 13 novembre 2026, il précise sur X ce qu’il a dit de David Lisnard, de Sarah Knafo et d’Éric Zemmour.",
+      "statements": [
+        {
+          "quote": "Je n'ai pas dit ce qui m'est attribué. J'ai soulevé une ambiguïté de @davidlisnard qui parle de rupture mais accepte une primaire avec le centre. J'ajoute : il pourrait personnaliser la synthèse \"Knafo-Zemmour\" mais il reste trop prudemment, pour l'instant, sur une jambe (Knafo).",
+          "date": "2026-11-13",
+          "medium": "Réponse sur X (@ivanrioufol), 13 novembre 2026, 18:47, heure de Paris. Il dit que des propos lui ont été attribués à tort.",
+          "url": "https://x.com/ivanrioufol/status/2121298910794903629",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Journalistes & éditorialistes",
+      "subcategory": "Journalistes & chroniqueurs",
+      "parcours": [
+        {
+          "date": "2026-11-13",
+          "title": "Précision sur Lisnard, Knafo et Zemmour",
+          "text": "Il écrit sur X qu’il a soulevé une ambiguïté de David Lisnard sur une primaire avec le centre, et parle d’une « synthèse Knafo-Zemmour ».",
+          "url": "https://x.com/ivanrioufol/status/2121298910794903629",
+          "source": "X"
+        }
+      ]
+    },
+    {
+      "id": "manuel-bompard",
+      "name": "Manuel Bompard",
+      "type": "person",
+      "role": "Député, coordinateur de La France insoumise (X, 14 novembre 2026)",
+      "description": "Député. Les 14 et 15 novembre 2026, il publie sur X deux messages, l’un sur des groupuscules à Nice, l’autre sur un reportage de CNews à Marseille.",
+      "statements": [
+        {
+          "quote": "Des groupuscules d’extrême droite à Nice ont fait savoir que nous n’étions pas les bienvenus. \n\nVoilà la réponse du peuple niçois : nous sommes 3 000 ce soir !",
+          "date": "2026-11-14",
+          "medium": "Message sur X (@mbompard), 14 novembre 2026, 23:13, heure de Paris. Le compte @FranceInsoumise publie le même soir un texte proche, qui ajoute : « En 2027, face à l’extrême droite, nous sommes le seul rempart. » Il ne nomme pas les groupuscules.",
+          "url": "https://x.com/mbompard/status/2121728155857613159",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Regardez comment @CNEWS a essayé de manipuler des commerçants marseillais pour servir leur propagande.\n\nEt regardez comment ils se sont fait avoir.",
+          "date": "2026-11-15",
+          "medium": "Message sur X (@mbompard), 15 novembre 2026, 16:07, heure de Paris. Il ne nomme pas les commerçants.",
+          "url": "https://x.com/mbompard/status/2121983554024362492",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-14",
+          "title": "Message sur des groupuscules à Nice",
+          "text": "Il écrit que des groupuscules d’extrême droite ont fait savoir que La France insoumise n’était pas la bienvenue à Nice, et annonce 3 000 personnes à un rassemblement.",
+          "url": "https://x.com/mbompard/status/2121728155857613159",
+          "source": "X"
+        }
+      ]
+    },
+    {
+      "id": "nicolas-dupont-aignan",
+      "name": "Nicolas Dupont-Aignan",
+      "type": "person",
+      "role": "Président de Debout la France (X, 14 novembre 2026)",
+      "description": "Le 14 novembre 2026, il écrit sur X que Marine Le Pen a abandonné la sortie de l’Union européenne.",
+      "statements": [
+        {
+          "quote": "L’oligarchie et les médias ont culpabilisé la classe politique pour qu’elle renonce à parler de la sortie de l’Union européenne. Marine Le Pen l’a abandonnée, Jean-Luc Mélenchon n’en parle même plus.",
+          "date": "2026-11-14",
+          "medium": "Message sur X (@dupontaignan), 14 novembre 2026, 14:49, heure de Paris. La suite est coupée à 280 caractères. Texte du post lu via l'API X, heure de Paris. Le post s'arrête à la limite des 280 caractères lorsqu'il est incomplet.",
+          "url": "https://x.com/dupontaignan/status/2121601389662994662",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Partis & dirigeants de parti",
+      "parcours": [
+        {
+          "date": "2026-11-14",
+          "title": "Message sur la sortie de l’Union européenne",
+          "text": "Il écrit que Marine Le Pen a abandonné la sortie de l’Union européenne.",
+          "url": "https://x.com/dupontaignan/status/2121601389662994662",
+          "source": "X"
+        }
+      ]
+    },
+    {
+      "id": "michel-onfray",
+      "name": "Michel Onfray",
+      "type": "person",
+      "role": "Philosophe (CNews, 14 novembre 2026)",
+      "description": "Le 14 novembre 2026, CNews cite une phrase de lui sur Marine Le Pen et le Rassemblement national.",
+      "statements": [
+        {
+          "quote": "Marine Le Pen n'est pas son père, le RN ce n'est plus le FN",
+          "date": "2026-11-14",
+          "medium": "CNews, « Face à Michel Onfray », 14 novembre 2026, 13:48, heure de Paris. Phrase entre guillemets dans le post de @CNEWS. Il est présenté comme philosophe et essayiste.",
+          "url": "https://x.com/CNEWS/status/2121586073255960975",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Intellectuels & essayistes",
+      "subcategory": "Philosophes & essayistes",
+      "parcours": [
+        {
+          "date": "2026-11-14",
+          "title": "Phrase citée par CNews",
+          "text": "CNews publie cette phrase, dite dans « Face à Michel Onfray ».",
+          "url": "https://x.com/CNEWS/status/2121586073255960975",
+          "source": "CNews"
+        }
+      ]
+    },
+    {
+      "id": "thibault-de-montbrial",
+      "name": "Thibault de Montbrial",
+      "type": "person",
+      "role": "Avocat, président du mouvement Concorde (CNews et Europe 1, 15 novembre 2026)",
+      "description": "Le 15 novembre 2026, CNews et Europe 1 citent des phrases de lui sur les étrangers et la violence, et sur un second tour entre Marine Le Pen et Jean-Luc Mélenchon.",
+      "statements": [
+        {
+          "quote": "Statistiquement, il y a une surreprésentation des étrangers dans la violence",
+          "date": "2026-11-15",
+          "medium": "CNews, 15 novembre 2026, 11:46, heure de Paris. Phrase entre guillemets dans le post de @CNEWS.",
+          "url": "https://x.com/CNEWS/status/2121917876747801077",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Il faut tout faire pour éviter que la France insoumise gagne l'élection présidentielle (...) Dans ce cas-là je voterais pour Marine Le Pen",
+          "date": "2026-11-15",
+          "medium": "CNews, « Le Grand Rendez-vous », 15 novembre 2026, 12:00, heure de Paris. Phrase entre guillemets dans le post de @CNEWS. Il est présenté comme avocat et président du mouvement Concorde.",
+          "url": "https://x.com/CNEWS/status/2121921263283122358",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Sans aucune hésitation, je voterai pour Marine Le Pen",
+          "date": "2026-11-15",
+          "medium": "Europe 1, 15 novembre 2026, 11:40, heure de Paris. Phrase entre guillemets dans le post de @Europe1, « face à Jean-Luc Mélenchon ».",
+          "url": "https://x.com/Europe1/status/2121916128335135196",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Partis & dirigeants de parti",
+      "parcours": [
+        {
+          "date": "2026-11-15",
+          "title": "Phrases citées par CNews et Europe 1",
+          "text": "Les deux chaînes citent ses phrases sur un second tour entre Marine Le Pen et Jean-Luc Mélenchon.",
+          "url": "https://x.com/CNEWS/status/2121921263283122358",
+          "source": "CNews"
+        }
+      ]
+    },
+    {
+      "id": "yannick-jadot",
+      "name": "Yannick Jadot",
+      "type": "person",
+      "role": "Sénateur, soutien de Raphaël Glucksmann (BFMTV, 15 novembre 2026)",
+      "description": "Le 15 novembre 2026, BFMTV cite une phrase de lui sur un second tour avec Marine Le Pen.",
+      "statements": [
+        {
+          "quote": "Je n'en vois qu'un qui peut battre Marine Le Pen, c'est Raphaël Glucksmann",
+          "date": "2026-11-15",
+          "medium": "BFMTV, 15 novembre 2026, 23:28, heure de Paris. Phrase entre guillemets dans le post de @BFMTV. Il est présenté comme sénateur et soutien de Raphaël Glucksmann.",
+          "url": "https://x.com/BFMTV/status/2122094349211030011",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-15",
+          "title": "Phrase citée par BFMTV",
+          "text": "BFMTV cite cette phrase sur Marine Le Pen et Raphaël Glucksmann.",
+          "url": "https://x.com/BFMTV/status/2122094349211030011",
+          "source": "BFMTV"
+        }
+      ]
+    },
+    {
+      "id": "chloe-ridel",
+      "name": "Chloé Ridel",
+      "type": "person",
+      "role": "Députée européenne (Europe 1, 14 novembre 2026)",
+      "description": "Le 14 novembre 2026, Europe 1 cite une phrase d’elle sur un second tour entre Marine Le Pen et Jean-Luc Mélenchon.",
+      "statements": [
+        {
+          "quote": "On ne peut pas avoir un second tour Le Pen/Mélenchon",
+          "date": "2026-11-14",
+          "medium": "Europe 1, 14 novembre 2026, 18:20, heure de Paris. Phrase entre guillemets dans le post de @Europe1. Le post la présente au micro d’Hélène Roudil.",
+          "url": "https://x.com/Europe1/status/2121654530647445944",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-14",
+          "title": "Phrase citée par Europe 1",
+          "text": "Europe 1 cite cette phrase sur un second tour Le Pen / Mélenchon.",
+          "url": "https://x.com/Europe1/status/2121654530647445944",
+          "source": "Europe 1"
+        }
+      ]
+    },
+    {
+      "id": "charles-alloncle",
+      "name": "Charles Alloncle",
+      "type": "person",
+      "role": "Député UDR de l'Hérault (LCI, 15 novembre 2026)",
+      "description": "Le 15 novembre 2026, LCI cite une phrase de lui sur un second tour de Marine Le Pen.",
+      "statements": [
+        {
+          "quote": "Quel que soit l'adversaire que Marine Le Pen pourrait affronter, selon les sondages au deuxième tour, il faudra le traiter avec exactement le même égard démocratique",
+          "date": "2026-11-15",
+          "medium": "LCI, 15 novembre 2026, 21:21, heure de Paris. Phrase entre guillemets dans le post de @LCI. Il est présenté comme député UDR de l’Hérault.",
+          "url": "https://x.com/LCI/status/2122062419409199467",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-15",
+          "title": "Phrase citée par LCI",
+          "text": "LCI cite cette phrase sur le second tour de Marine Le Pen.",
+          "url": "https://x.com/LCI/status/2122062419409199467",
+          "source": "LCI"
+        }
+      ]
+    },
+    {
+      "id": "charles-rodwell",
+      "name": "Charles Rodwell",
+      "type": "person",
+      "role": "Député (Le JDD, 15 novembre 2026)",
+      "description": "Le 15 novembre 2026, le JDD met entre guillemets une phrase de lui sur les entrées d’étrangers.",
+      "statements": [
+        {
+          "quote": "Il faut diviser les entrées par quatre",
+          "date": "2026-11-15",
+          "medium": "Le JDD, 15 novembre 2026, 7:08, heure de Paris. Le post de @leJDD titre : « Immigration : « Il faut diviser les entrées par quatre », le plan du Charles Rodwell ».",
+          "url": "https://x.com/leJDD/status/2121847705613844851",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-15",
+          "title": "Phrase citée par le JDD",
+          "text": "Le JDD met cette phrase entre guillemets dans un titre sur l’immigration.",
+          "url": "https://x.com/leJDD/status/2121847705613844851",
+          "source": "Le JDD"
+        }
+      ]
+    },
+    {
+      "id": "raphael-stainville",
+      "name": "Raphaël Stainville",
+      "type": "person",
+      "role": "Journaliste au JDD (CNews, 13 novembre 2026)",
+      "description": "Le 13 novembre 2026, CNews cite deux phrases de lui sur l’interdiction d’entrée en Israël visant Jean-Luc Mélenchon et Mathilde Panot.",
+      "statements": [
+        {
+          "quote": "Pourquoi leur donner l'occasion de (...) cracher leur haine sur Israël ?",
+          "date": "2026-11-13",
+          "medium": "CNews, « 100% Actu », 13 novembre 2026, 16:36, heure de Paris. Phrase entre guillemets dans le post de @CNEWS. Les points de suspension entre parenthèses sont dans le post. Un post voisin, une minute plus tôt, omet le mot « sur ».",
+          "url": "https://x.com/CNEWS/status/2121265949558895065",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
+        },
+        {
+          "quote": "Ça donne l'occasion au leader insoumis de se victimiser",
+          "date": "2026-11-13",
+          "medium": "CNews, 13 novembre 2026, 16:48, heure de Paris. Phrase entre guillemets dans le post de @CNEWS, sur l’interdiction de territoire visant Jean-Luc Mélenchon.",
+          "url": "https://x.com/CNEWS/status/2121269070070952381",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
+        }
+      ],
+      "sections": [
+        "gaza"
+      ],
+      "category": "Journalistes & éditorialistes",
+      "subcategory": "Journalistes & chroniqueurs",
+      "parcours": [
+        {
+          "date": "2026-11-13",
+          "title": "Phrases citées par CNews",
+          "text": "CNews le présente comme journaliste au JDD et cite ses phrases sur l’interdiction d’entrée en Israël visant Jean-Luc Mélenchon et Mathilde Panot.",
+          "url": "https://x.com/CNEWS/status/2121265949558895065",
+          "source": "CNews"
+        }
+      ]
+    },
+    {
+      "id": "sebastien-chenu",
+      "name": "Sébastien Chenu",
+      "type": "person",
+      "role": "Député du Rassemblement national (X, 15 novembre 2026)",
+      "description": "Le 15 novembre 2026, il écrit sur X que la liberté d’expression sera un combat de 2027, et renvoie à une tribune dans le JDD.",
+      "statements": [
+        {
+          "quote": "La liberté d’expression sera l’un des grands combats de 2027.",
+          "date": "2026-11-15",
+          "medium": "Message sur X (@sebchenu), 15 novembre 2026, 12:08, heure de Paris. Il renvoie à une tribune dans le JDD. Le texte de la tribune n’est pas recopié ici.",
+          "url": "https://x.com/sebchenu/status/2121923164955668823",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-15",
+          "title": "Message sur la liberté d’expression",
+          "text": "Il écrit que la liberté d’expression sera l’un des grands combats de 2027.",
+          "url": "https://x.com/sebchenu/status/2121923164955668823",
+          "source": "X"
+        }
+      ]
     }
   ],
   "edges": [
@@ -8671,6 +9436,33 @@
       "nature": "opposition",
       "archive_url": "https://web.archive.org/web/20261116011928/https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html",
       "archived": "2026-11-16"
+    },
+    {
+      "source": "gabriel-attal",
+      "target": "eric-zemmour",
+      "relation": "son porte-parole Jad Zahab dit qu'Éric Zemmour n'est pas invité dans la primaire (13/11/2026, BFMTV)",
+      "url": "https://x.com/BFMTV/status/2121288509818314754",
+      "date": "2026-11-13",
+      "section": "france",
+      "nature": "opposition"
+    },
+    {
+      "source": "thibault-de-montbrial",
+      "target": "marine-le-pen",
+      "relation": "déclare qu'il voterait pour Marine Le Pen face à Jean-Luc Mélenchon (15/11/2026, CNews)",
+      "url": "https://x.com/CNEWS/status/2121921263283122358",
+      "date": "2026-11-15",
+      "section": "france",
+      "nature": "autre"
+    },
+    {
+      "source": "yannick-jadot",
+      "target": "raphael-glucksmann",
+      "relation": "dit que Raphaël Glucksmann est le seul qu'il voit battre Marine Le Pen (15/11/2026, BFMTV)",
+      "url": "https://x.com/BFMTV/status/2122094349211030011",
+      "date": "2026-11-15",
+      "section": "france",
+      "nature": "autre"
     }
   ]
 }

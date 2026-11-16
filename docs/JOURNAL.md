@@ -4,6 +4,56 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-16 (relevé X) — v44
+
+Tu pars d’un relevé de 154 posts (32 comptes), lus via l’API X entre le 13/11 et le 16/11, 2 h. Tu en publies 52. Les autres sont écartés. Les phrases déjà en ligne (v42, v43) ne sont pas recopiées. Quinze fiches nouvelles, sans photo libre : monogramme. `tests/test_v22.py` : « elu » passe à 42, « jour » à 25.
+
+Comptes déjà sur le site :
+
+- Bruno Retailleau, 13/11, 9:17, X : « Il y a trop d’immigration en France. Pour reprendre le contrôle de notre politique migratoire, je donnerai la parole aux Français par référendum. » — https://x.com/BrunoRetailleau/status/2121155423986180396
+- Fabien Roussel, 13/11, 15:43, X : « Le Rassemblement National est un poison contre le peuple » et « nous diviser en fonction de nos origines ». — https://x.com/Fabien_Roussel/status/2121252617825247563
+- Geoffroy Lejeune, 13/11, 11:51, X : « le sujet, c’est de savoir si le voile est français ». — https://x.com/GeoffroyLejeune/status/2121194259273404891
+- Gilles-William Goldnadel, 14/11 et 15/11, sept messages sur X : pièce sur Gaza et France Inter, Saint-Denis, « Parti Antisémite », le RN dit « d’extrême droite », Gaza comme « vil fantasme », Nora Hamadi et Marine Le Pen, Amnesty et Francesca Albanese. — https://x.com/GWGoldnadel/status/2121531263739650356
+- Jean-Luc Mélenchon, 14/11, 16:54, X : « France inter tient une tranchée absurde contre la cause palestinienne » et le livre de Rima Hassan. — https://x.com/JLMelenchon/status/2121632985321496587
+- Jordan Bardella, 13/11, X, 21:08 : « Avec Marine Le Pen, on est riches de nos complémentarités. » — https://x.com/J_Bardella/status/2121334296170406348
+- Jordan Bardella, 13/11, LCI, cinq phrases citées par @LCI : interdiction de manifester pour les personnes fichées, « perdre le contrôle » sécuritaire, l’attentat de Trappes (suspect non nommé, présumé innocent), « couple exécutif » avec Marine Le Pen, « il faut parler comme le Rassemblement national ». — https://x.com/LCI/status/2121323705137573988
+- Élisabeth Lévy, 15/11, 19:07, X : les insoumis « ciblent les chaînes d’information, les accusant de racisme ». — https://x.com/ELevyCauseur/status/2122028803845140813
+- Marine Le Pen, 13/11, CNews : « laisser les autres candidats faire campagne sans faire l'objet d'intimidations ». — https://x.com/CNEWS/status/2121274837750493202
+- Marine Le Pen, 13/11, LCI : « Ils n'arrivent même pas à se mettre d'accord sur les critères pour choisir un seul candidat. » — https://x.com/LCI/status/2121241582527508582
+- Marine Le Pen, 15/11, X : priorité aux Français pour le logement social ; APL réservées aux Français et aux étrangers ayant travaillé cinq ans ; elle dit avoir « commis une erreur » en proposant l’interdiction de la double nationalité. — https://x.com/MLP_officiel/status/2122030794189181288 et https://x.com/MLP_officiel/status/2122036013514301653
+- Marine Tondelier, 15/11, 20:07, X : Macron « avait promis d'être l'antidote au vote d'extrême droite » et « elle n'a jamais été aussi haute ». — https://x.com/marinetondelier/status/2122043729414357402
+- Marion Maréchal, 16/11, 0:12, X : à Marseille, « une quinzaine d’individus cagoulés » attaquent des militants du RN et de la Cocarde, 3 blessés, aucun nom. — https://x.com/MarionMarechal/status/2122105573546050039
+- Éric Ciotti, 14/11, 20:31, X : « Nier le lien entre l’immigration et les émeutes est une faute et une folie ». — https://x.com/eciotti/status/2121687539006292151
+- Éric Zemmour, 15/11, 21:30, X : « je suis le seul à proposer une politique d’immigration négative ». — https://x.com/ZemmourEric/status/2122064723352924442
+- Éric Zemmour, 15/11, JDD cité par @leJDD : « Tout faire pour que notre avenir soit français ». — https://x.com/leJDD/status/2121828049071050926
+- Jules Torres, 15/11, CNews : « sur l’immigration, il a un programme », à propos d’Éric Zemmour. — https://x.com/CNEWS/status/2122095908103823377
+- Rassemblement national, 13/11 et 14/11, X : « la confiance et l’amitié » entre Marine Le Pen et Jordan Bardella ; « de l'ordre dans la rue, dans nos comptes publics et à nos frontières ». — https://x.com/RNational_off/status/2121334707958972554
+- Gabriel Attal, 13/11, BFMTV : Jad Zahab, son porte-parole, « Monsieur Zemmour n'est pas invité dans cette primaire ». Lien d’opposition vers Éric Zemmour. — https://x.com/BFMTV/status/2121288509818314754
+
+Fiches nouvelles :
+
+- Mathilde Panot, 13/11 et 15/11, X : salon Icube et colonies en Cisjordanie ; documentaire NAZA, « processus de déshumanisation ». — https://x.com/MathildePanot/status/2121273706924175854
+- Jean-Yves Le Gallou, 15/11, 23:59, X : la Suède et « tout débat sur la remigration ». — https://x.com/jylgallou/status/2122102144966742481
+- Julien Odoul, 15/11, X : « Qu’est-ce qu’il y a d’extrême chez » Marine Le Pen ? — https://x.com/JulienOdoul/status/2121994894306693279
+- Florian Philippot, 15/11, X : « On se débarrasse du torchon bleu à étoiles en plein Paris ». — https://x.com/f_philippot/status/2121956505607966852
+- Ivan Rioufol, 13/11, X : il parle d’une « synthèse Knafo-Zemmour » et dit qu’on lui a attribué des propos à tort. — https://x.com/ivanrioufol/status/2121298910794903629
+- Manuel Bompard, 14/11, X : « Des groupuscules d’extrême droite à Nice ont fait savoir que nous n’étions pas les bienvenus. » Le 15/11, il écrit que CNews a « essayé de manipuler des commerçants marseillais ». — https://x.com/mbompard/status/2121728155857613159
+- Nicolas Dupont-Aignan, 14/11, X : « Marine Le Pen l’a abandonnée » (la sortie de l’Union européenne). — https://x.com/dupontaignan/status/2121601389662994662
+- Michel Onfray, 14/11, CNews : « Marine Le Pen n'est pas son père, le RN ce n'est plus le FN ». — https://x.com/CNEWS/status/2121586073255960975
+- Thibault de Montbrial, 15/11, CNews : « une surreprésentation des étrangers dans la violence » ; « je voterais pour Marine Le Pen ». Europe 1 : « Sans aucune hésitation, je voterai pour Marine Le Pen ». Lien vers Marine Le Pen. — https://x.com/CNEWS/status/2121921263283122358
+- Yannick Jadot, 15/11, BFMTV : « Je n'en vois qu'un qui peut battre Marine Le Pen, c'est Raphaël Glucksmann ». — https://x.com/BFMTV/status/2122094349211030011
+- Chloé Ridel, 14/11, Europe 1 : « On ne peut pas avoir un second tour Le Pen/Mélenchon ». — https://x.com/Europe1/status/2121654530647445944
+- Charles Alloncle, 15/11, LCI : traiter l’adversaire de Marine Le Pen « avec exactement le même égard démocratique ». — https://x.com/LCI/status/2122062419409199467
+- Charles Rodwell, 15/11, JDD : « Il faut diviser les entrées par quatre ». — https://x.com/leJDD/status/2121847705613844851
+- Raphaël Stainville, 13/11, CNews : « cracher leur haine sur Israël » et « se victimiser », sur l’interdiction visant Jean-Luc Mélenchon et Mathilde Panot. — https://x.com/CNEWS/status/2121265949558895065
+- Sébastien Chenu, 15/11, X : « La liberté d’expression sera l’un des grands combats de 2027. » — https://x.com/sebchenu/status/2121923164955668823
+
+102 posts écartés : 14 déjà en ligne ou même phrase gardée une seule fois ; 46 hors sujet (Ukraine, Riner, bac, pouvoir d’achat, permis, SMIC, 35 heures, Frexit sans propos sur le RN, promotions, logistique) ; 22 titres, sondages ou paraphrases sans phrase exacte ; 8 particuliers ou propos anonymes ; 6 qui ne viennent pas d’une personnalité publique française ; 4 fragments ou citations dont le message cité manque ; 2 qui contiennent « complicité », mot exclu du fichier de données.
+
+Les 52 URL X ont été soumises à la Wayback Machine : toutes échouent (erreur 523 ou coupure TLS), comme les messages X déjà en échec.
+
+Cache `onrecord-v44`.
+
 ## 2026-11-16 (complément) — v43
 
 La v42 du même jour était trop courte. Tu reprends du 13 au 16 novembre, sans republier les phrases déjà en ligne.

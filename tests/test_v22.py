@@ -20,7 +20,7 @@ def check(c, m):
         print("FAIL:", m)
 
 sw = open(os.path.join(ROOT, "sw.js")).read()
-check('var VERSION = "onrecord-v43"' in sw, "sw onrecord-v43")
+check('var VERSION = "onrecord-v44"' in sw, "sw onrecord-v44")
 js = open(os.path.join(ROOT, "app.js")).read()
 html = open(os.path.join(ROOT, "index.html")).read()
 check("Échelle du pouvoir" in html and 'href="#/pouvoir"' in html, "lien navigation")
@@ -28,7 +28,7 @@ check("Classement par fonction publique documentée, fortune seulement si sourc�
 for bad in ("pantin", "complice", "revirement"):
     check(bad not in js and bad not in html, "mot exclu " + bad)
 
-EXPECT = {"evt": 3, "col": 7, "asso": 19, "jour": 21, "media": 14, "elu": 31, "gouv": 10, "prop": 11}
+EXPECT = {"evt": 3, "col": 7, "asso": 19, "jour": 25, "media": 14, "elu": 42, "gouv": 10, "prop": 11}
 
 def relations(a, b):
     return [e["relation"] for e in EDGES if {e["source"], e["target"]} == {a, b}]
