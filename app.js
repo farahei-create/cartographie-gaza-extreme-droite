@@ -1965,7 +1965,7 @@
     "tugdual-denis": 3, "erik-tegner": 3, "donat-vidal-revel": 3, "constance-benque": 3,
     "prisma-media": 4, "frontieres": 4,
     "sarah-knafo": 5, "philippe-olivier": 5, "kevin-pfeffer": 5, "udr": 5,
-    "sandrine-rousseau": 5, "florence-portelli": 5,
+    "sandrine-rousseau": 5, "florence-portelli": 5, "nicolas-sarkozy": 5,
     "francois-durvye": 7, "alban-du-rostu": 7, "arnaud-lagardere": 7,
     "ifop": 2, "opinionway": 2, "institut-csa": 2, "harris-interactive": 2, "toluna": 2, "elabe": 2,
     "commission-des-sondages": 6,

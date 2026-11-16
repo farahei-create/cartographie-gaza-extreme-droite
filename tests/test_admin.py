@@ -42,7 +42,7 @@ check("admin.html" not in html and "href=\"admin" not in html, "pas de lien depu
 admin = open("admin.html", encoding="utf-8").read()
 check('content="noindex, nofollow"' in admin, "noindex")
 check("admin.html" in open("robots.txt", encoding="utf-8").read(), "robots")
-check("onrecord-v42" in open("sw.js", encoding="utf-8").read(), "sw v42")
+check("onrecord-v43" in open("sw.js", encoding="utf-8").read(), "sw v43")
 check("admin.html" in open("sw.js", encoding="utf-8").read() and "admin.js" in open("sw.js", encoding="utf-8").read(), "précache admin")
 
 out = "/tmp/onrecord-admin-ok.json"

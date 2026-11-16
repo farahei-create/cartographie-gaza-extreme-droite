@@ -3,14 +3,14 @@
     "generated": "2026-11-16",
     "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-16 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
-      "persons": 60,
+      "persons": 61,
       "orgs": 55,
-      "edges": 178,
-      "statements": 222,
-      "photos": 44,
+      "edges": 179,
+      "statements": 229,
+      "photos": 45,
       "logos": 21,
-      "videos": 21,
-      "france_nodes": 81
+      "videos": 23,
+      "france_nodes": 82
     },
     "category_order": [
       "Responsables politiques",
@@ -394,6 +394,24 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261109191238/https://fr.euronews.com/2026/11/09/remigration-la-porte-est-grande-ouverte-dit-marine-le-pen",
           "archived": "2026-11-09"
+        },
+        {
+          "quote": "La baisse des impôts de production, le développement de la commande publique avec une priorité nationale dans la commande publique. La commande publique, c'est 200 milliards d'euros par an. C'est absolument considérable. Or, cette commande publique, elle n'est pas fléchée sur les entreprises françaises, ce qui pose un problème",
+          "date": "2026-11-13",
+          "medium": "Salon du Made in France (Paris), 13 novembre 2026, reportage du 23h info de franceinfo publié le 14 novembre. franceinfo écrit qu'elle a été « accueillie sous les huées par des militants insoumis selon la candidate ».",
+          "url": "https://www.franceinfo.fr/economie/industrie/made-in-france-quand-la-presidentielle-s-invite-au-salon_8282180.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "video": {
+            "url": "https://www.franceinfo.fr/economie/industrie/made-in-france-quand-la-presidentielle-s-invite-au-salon_8282180.html",
+            "platform": "franceinfo.fr",
+            "title": "Le 23h info du 13 novembre 2026, salon du Made in France",
+            "source": "franceinfo (site officiel)",
+            "archive_url": "https://web.archive.org/web/20261116012003/https://www.franceinfo.fr/economie/industrie/made-in-france-quand-la-presidentielle-s-invite-au-salon_8282180.html",
+            "archived": "2026-11-16"
+          },
+          "archive_url": "https://web.archive.org/web/20261116012003/https://www.franceinfo.fr/economie/industrie/made-in-france-quand-la-presidentielle-s-invite-au-salon_8282180.html",
+          "archived": "2026-11-16"
         }
       ],
       "sections": [
@@ -639,6 +657,14 @@
           "date": "2026-11-10",
           "medium": "Message avec extrait vidéo publié sur son compte X officiel (@J_Bardella) le 10 novembre 2026 à 23 h 08 UTC, le soir de son passage dans « Face à BFM » et de l'annonce de candidature d'Éric Zemmour sur TF1. Il s'adresse aux électeurs d'Éric Zemmour ; le message ne nomme pas d'accord entre partis.",
           "url": "https://x.com/J_Bardella/status/2120292537067847764",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Au bout de 6 mois, un étranger sans contrat de travail devra partir. La France n'est ni un hôtel, ni un guichet social !",
+          "date": "2026-11-13",
+          "medium": "Message sur X (@J_Bardella), 13 novembre 2026, 21:24 UTC. Le texte a été lu le 16 novembre 2026 sur la copie Nitter du post (https://nitter.cf/J_Bardella/status/2121353541805592926) : x.com ne répond pas depuis la machine. Le message est accompagné d'un extrait intitulé « Jordan Bardella sur LCI ».",
+          "url": "https://x.com/J_Bardella/status/2121353541805592926",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
         }
@@ -2883,6 +2909,54 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20260420103841/https://www.franceinfo.fr/politique/les-republicains/presidentielle-2027-les-adherents-lr-choisissent-bruno-retailleau-comme-candidat_7951298.html",
           "archived": "2026-04-20"
+        },
+        {
+          "quote": "Avec moi, ce sont les Français qui choisiront. Ils nous disent à une écrasante majorité, il y a trop d'immigration en France, trop d'immigration illégale avec des clandestins qu'on ne parvient pas à expulser, à éloigner, trop d'immigration légale avec des immigrés qui malheureusement désormais ne veulent plus s'intégrer ou s'assimiler. Concrètement, j'assume une position très ferme pour qu'on puisse accueillir beaucoup moins et qu'on expulse beaucoup plus. Comment fait-on ? On change la Constitution. Aujourd'hui, avec le droit tel qu'il est, vous savez qu'il n'y a pas de politique d'immigration en France.",
+          "date": "2026-11-13",
+          "medium": "Les 4V, France 2, 13 novembre 2026, retranscription publiée par franceinfo. Le journaliste dit qu'il détaille ce jour-là ses propositions sur l'immigration. Sur l'asile, il dit qu'il ne renverra pas des Afghanes tant que la situation ne s'améliore pas, puis : « ce ne sont pas des Afghanes qui viennent ici, ce sont des Afghans qui, parfois d'ailleurs, n'ont rien contre le régime des talibans ». Il veut un asile « temporaire et révocable », les demandes étant « examinées dans des pays tiers sûrs ». À la question « le Maroc, l'Algérie, la Tunisie, ce sont des pays sûrs pour vous ? », il répond : « Ce sont des pays sûrs. »",
+          "url": "https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "video": {
+            "url": "https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html",
+            "platform": "franceinfo.fr",
+            "title": "Bruno Retailleau, invité des 4V sur France 2",
+            "source": "franceinfo (site officiel)",
+            "archive_url": "https://web.archive.org/web/20261116011928/https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html",
+            "archived": "2026-11-16"
+          },
+          "archive_url": "https://web.archive.org/web/20261116011928/https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Elle ne le fera pas parce qu'elle ne respecte pas la Constitution et que les maires n'organiseront pas son référendum. Moi, je respecte la Constitution et je donnerai la possibilité aux Français, par le référendum, de choisir justement la politique migratoire, sinon on sera censuré. Il faut bien sûr changer la Constitution par un référendum.",
+          "date": "2026-11-13",
+          "medium": "Les 4V, France 2, 13 novembre 2026, retranscription franceinfo. Francis Letellier venait de dire : « Ce que veut faire Marine Le Pen, elle veut aussi changer la Constitution pour un référendum sur l'immigration. »",
+          "url": "https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116011928/https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Mais la France n'est pas raciste. La France n'a jamais été raciste, mais il y a des discriminations. […] Le mal est partout, il y a des individus. Regardez Trappes, c'est le racisme. Voilà, un racisme anti-maghrébin, anti-africain, anti-musulman. Vous avez Trappes et vous avez Crépol. Crépol, c'est un racisme anti-blanc. Vous voyez bien que le mal est dans des êtres humains, mais pas dans le peuple français.",
+          "date": "2026-11-13",
+          "medium": "Les 4V, France 2, 13 novembre 2026, retranscription franceinfo. Question : « Pour Marine Le Pen, la France est le pays le moins raciste. Est-ce que vous êtes d'accord avec ça ? » Les crochets signalent la coupure entre deux phrases de la même réponse. Il cite aussi Joséphine Baker. L'attentat de Trappes du 23 octobre 2026 est rappelé ici comme il le nomme ; le suspect n'est pas nommé et reste présumé innocent.",
+          "url": "https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116011928/https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html",
+          "archived": "2026-11-16"
+        },
+        {
+          "quote": "Non, je ne dis jamais islamophobe parce que c'est un terme qui a été forgé par les Frères musulmans, je dis anti-musulman. D'ailleurs, au ministère de l'Intérieur, lorsqu'on comptabilise des actes antireligieux, nous avons écarté ce concept.",
+          "date": "2026-11-13",
+          "medium": "Les 4V, France 2, 13 novembre 2026, retranscription franceinfo. Question : « Sur Trappes, certains disent que c'est même un acte islamophobe. Est-ce que vous reprenez cette définition ? »",
+          "url": "https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116011928/https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html",
+          "archived": "2026-11-16"
         }
       ],
       "sections": [
@@ -2925,6 +2999,15 @@
           "source": "franceinfo",
           "archive_url": "https://web.archive.org/web/20260305080822/https://www.franceinfo.fr/politique/bruno-retailleau/bruno-retailleau-est-elu-president-du-parti-les-republicains-avec-74-31-des-voix_7247163.html",
           "archived": "2026-03-05"
+        },
+        {
+          "date": "2026-11-13",
+          "title": "Propositions sur l'immigration",
+          "text": "Invité des 4V sur France 2, il détaille des propositions : moins d'entrées, plus d'expulsions, révision de la Constitution pour un référendum sur l'immigration, asile temporaire examiné dans des pays tiers.",
+          "url": "https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html",
+          "source": "franceinfo",
+          "archive_url": "https://web.archive.org/web/20261116011928/https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html",
+          "archived": "2026-11-16"
         }
       ],
       "sphere": "partis"
@@ -6402,6 +6485,49 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Florence_Portelli_(46824288354).jpg",
         "file": "Florence Portelli (46824288354).jpg"
       }
+    },
+    {
+      "id": "nicolas-sarkozy",
+      "name": "Nicolas Sarkozy",
+      "type": "person",
+      "role": "Ancien président de la République (Le Figaro, cité par BFMTV, 13 novembre 2026)",
+      "description": "Ancien président de la République. Le 13 novembre 2026, dans un entretien au Figaro cité par BFMTV, il parle d'une primaire « large » de la droite et du centre. Il ne nomme pas Éric Zemmour dans les phrases citées.",
+      "statements": [
+        {
+          "quote": "entrer dans le sujet par la question des noms, c'est déjà créer les conditions de l'impasse. […] si primaire il y a, elle doit être large. […] tous ceux qui s'engageront à en respecter les règles devront pouvoir y concourir",
+          "date": "2026-11-13",
+          "medium": "Entretien au Figaro publié le 13 novembre 2026, cité par BFMTV. Les crochets séparent trois phrases de la même page. BFMTV écrit que la primaire est agitée par des sondages donnant un second tour entre Marine Le Pen et Jean-Luc Mélenchon, et demande si elle doit inclure Éric Zemmour, qui l'a réclamé le même jour. Sarkozy ne le nomme pas. Il dit aussi : « La primaire est le pire des systèmes, à l'exception de tous les autres ! », « Cet exercice n'a d'intérêt que s'il rassemble ! Autrement, mieux vaut s'abstenir », et qu'il soutiendra « celui qui, au sein de la droite et du centre, aura réussi à rassembler le plus largement ».",
+          "url": "https://www.bfmtv.com/politique/cet-exercice-n-a-d-interet-que-s-il-rassemble-nicolas-sarkozy-plaide-pour-l-organisation-d-une-large-primaire-de-la-droite-et-du-centre_AN-202611130733.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261116012223/https://www.bfmtv.com/politique/cet-exercice-n-a-d-interet-que-s-il-rassemble-nicolas-sarkozy-plaide-pour-l-organisation-d-une-large-primaire-de-la-droite-et-du-centre_AN-202611130733.html",
+          "archived": "2026-11-16"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-13",
+          "title": "Entretien au Figaro sur la primaire",
+          "text": "BFMTV rend compte d'un entretien au Figaro où il plaide pour une primaire large de la droite et du centre, ouverte à ceux qui en respectent les règles.",
+          "url": "https://www.bfmtv.com/politique/cet-exercice-n-a-d-interet-que-s-il-rassemble-nicolas-sarkozy-plaide-pour-l-organisation-d-une-large-primaire-de-la-droite-et-du-centre_AN-202611130733.html",
+          "source": "BFMTV",
+          "archive_url": "https://web.archive.org/web/20261116012223/https://www.bfmtv.com/politique/cet-exercice-n-a-d-interet-que-s-il-rassemble-nicolas-sarkozy-plaide-pour-l-organisation-d-une-large-primaire-de-la-droite-et-du-centre_AN-202611130733.html",
+          "archived": "2026-11-16"
+        }
+      ],
+      "image": "img/people/nicolas-sarkozy.webp",
+      "image_credit": {
+        "author": "Aleph",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Nicolas_Sarkozy_(2008).jpg",
+        "file": "Nicolas Sarkozy (2008).jpg"
+      }
     }
   ],
   "edges": [
@@ -8533,6 +8659,17 @@
       "section": "france",
       "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261116004803/https://www.tf1info.fr/politique/elections/presidentielle/presidentielle-2027-sandrine-rousseau-appelle-marine-tondelier-a-retirer-sa-candidature-2475969.html",
+      "archived": "2026-11-16"
+    },
+    {
+      "source": "bruno-retailleau",
+      "target": "marine-le-pen",
+      "relation": "dit que Marine Le Pen ne fera pas son référendum sur l'immigration parce qu'elle ne respecte pas la Constitution (13/11/2026, France 2)",
+      "url": "https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html",
+      "date": "2026-11-13",
+      "section": "france",
+      "nature": "opposition",
+      "archive_url": "https://web.archive.org/web/20261116011928/https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html",
       "archived": "2026-11-16"
     }
   ]

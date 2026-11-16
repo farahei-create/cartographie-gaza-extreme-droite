@@ -1333,5 +1333,30 @@
   "archive_url": "https://web.archive.org/web/20261116005233/https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-credite-de-4-5-des-intentions-de-vote-dans-un-sondage-ce-qui-est-tres-inquietant-au-dela-des-personnes-c-est-surtout-que-les-deux-extremes-sont-en-train-d-arriver-au-second-tour-declare-florence-portelli-vice-presidente-des-lr_VN-202611140375.html",
   "archived": "2026-11-16",
   "status": "saved"
+ },
+ "https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html": {
+  "archive_url": "https://web.archive.org/web/20261116011928/https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html",
+  "archived": "2026-11-16",
+  "status": "saved"
+ },
+ "https://www.franceinfo.fr/economie/industrie/made-in-france-quand-la-presidentielle-s-invite-au-salon_8282180.html": {
+  "archive_url": "https://web.archive.org/web/20261116012003/https://www.franceinfo.fr/economie/industrie/made-in-france-quand-la-presidentielle-s-invite-au-salon_8282180.html",
+  "archived": "2026-11-16",
+  "status": "saved"
+ },
+ "https://x.com/J_Bardella/status/2121353541805592926": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://nitter.cf/J_Bardella/status/2121353541805592926": {
+  "archive_url": "https://web.archive.org/web/20261116012058/https://nitter.cf/J_Bardella/status/2121353541805592926",
+  "archived": "2026-11-16",
+  "status": "saved"
+ },
+ "https://www.bfmtv.com/politique/cet-exercice-n-a-d-interet-que-s-il-rassemble-nicolas-sarkozy-plaide-pour-l-organisation-d-une-large-primaire-de-la-droite-et-du-centre_AN-202611130733.html": {
+  "archive_url": "https://web.archive.org/web/20261116012223/https://www.bfmtv.com/politique/cet-exercice-n-a-d-interet-que-s-il-rassemble-nicolas-sarkozy-plaide-pour-l-organisation-d-une-large-primaire-de-la-droite-et-du-centre_AN-202611130733.html",
+  "archived": "2026-11-16",
+  "status": "saved"
  }
 }

@@ -4,6 +4,25 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-16 (complément) — v43
+
+La v42 du même jour était trop courte. Tu reprends du 13 au 16 novembre, sans republier les phrases déjà en ligne.
+
+Tu ajoutes sept phrases, une fiche (Nicolas Sarkozy) et un lien.
+
+- Bruno Retailleau, 13/11/2026, Les 4V, France 2, retranscription franceinfo : « il y a trop d'immigration en France […] accueillir beaucoup moins et […] expulse beaucoup plus » ; « il n'y a pas de politique d'immigration en France ». Il dit que Marine Le Pen « ne respecte pas la Constitution » et que « les maires n'organiseront pas son référendum ». Lien « opposition » vers Marine Le Pen. Vidéo franceinfo — https://www.franceinfo.fr/politique/vous-avez-en-france-des-minorites-bruyantes-agissantes-violentes-qu-on-laisse-agir-affirme-bruno-retailleau-a-propos-du-mouvement-social_8280638.html
+- Bruno Retailleau, même entretien : « La France n'est pas raciste. La France n'a jamais été raciste, mais il y a des discriminations. » Il nomme Trappes (« racisme anti-maghrébin, anti-africain, anti-musulman ») et Crépol (« racisme anti-blanc »). Le suspect de Trappes n'est pas nommé. Même URL.
+- Bruno Retailleau, même entretien : « je ne dis jamais islamophobe parce que c'est un terme qui a été forgé par les Frères musulmans, je dis anti-musulman ». Même URL.
+- Marine Le Pen, 13/11/2026, salon du Made in France, 23h info de franceinfo : « une priorité nationale dans la commande publique ». Vidéo franceinfo — https://www.franceinfo.fr/economie/industrie/made-in-france-quand-la-presidentielle-s-invite-au-salon_8282180.html
+- Jordan Bardella, 13/11/2026, 21:24 UTC, X : « Au bout de 6 mois, un étranger sans contrat de travail devra partir. La France n'est ni un hôtel, ni un guichet social ! » Texte lu sur la copie Nitter, x.com ne répondant pas. URL du post — https://x.com/J_Bardella/status/2121353541805592926
+- Nicolas Sarkozy (nouvelle fiche, portrait Commons CC BY-SA 2.5, Aleph), 13/11/2026, Le Figaro cité par BFMTV : « si primaire il y a, elle doit être large » et « tous ceux qui s'engageront à en respecter les règles devront pouvoir y concourir ». Il ne nomme pas Éric Zemmour. BFMTV pose la question de l'inclure, dans le contexte de sondages Le Pen–Mélenchon — https://www.bfmtv.com/politique/cet-exercice-n-a-d-interet-que-s-il-rassemble-nicolas-sarkozy-plaide-pour-l-organisation-d-une-large-primaire-de-la-droite-et-du-centre_AN-202611130733.html
+
+Écarté : Kaja Kallas (14/11) et le communiqué du 15/11 (Royaume-Uni, Italie, Australie, Canada) — pas une personnalité française, la France n'est pas signataire du second ; Gérard Larcher (14/11) — les phrases entre guillemets ne nomment ni le RN ni l'extrême droite ; Jean-Charles Orsucci (14/11) — Politique Matin paraphrase l'exclusion de Zemmour, la page BFMTV ne donne pas la phrase ; Thomas Ménagé (14/11) — pas de citation exacte sur le racisme, seulement le bac ; message de Bardella du 14/11 sur l'université — il vise « l'extrême gauche », hors des deux sujets ; dédicaces de Bardella et de Knafo — pas de phrase nouvelle sur les sujets ; Barbara Lefebvre, condamnation du 13/11 — l'UJFP (partie civile) et L'Humanité ne donnent pas la même phrase, le jugement n'a pas été lu ; livret de Retailleau sur le droit du sol — fichier daté du 11/11, annonce située au 12/11 par France Inter, hors période ; droits de douane de Zemmour le 13/11 — hors sujet ; Sarkozy ne nomme pas Zemmour, seule la phrase sur le périmètre est retenue ; aucune décision nouvelle de l'Arcom.
+
+Archives : copies pour les deux pages franceinfo, BFMTV (Sarkozy) et la copie Nitter du message de Bardella. Le post x.com échoue encore (erreur 523).
+
+`tests/test_v22.py` : « elu » passe à 31. Cache `onrecord-v43`.
+
 ## 2026-11-16 — v42
 
 Tu couvres du 14 au 16 novembre. Rien n'était entré par la page admin (`tools/admin_additions.json` vide).

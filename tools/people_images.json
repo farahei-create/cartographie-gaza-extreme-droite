@@ -438,5 +438,15 @@
    "source_url": "https://commons.wikimedia.org/wiki/File:Florence_Portelli_(46824288354).jpg",
    "file": "Florence Portelli (46824288354).jpg"
   }
+ },
+ "nicolas-sarkozy": {
+  "image": "img/people/nicolas-sarkozy.webp",
+  "image_credit": {
+   "author": "Aleph",
+   "license": "CC BY-SA 2.5",
+   "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+   "source_url": "https://commons.wikimedia.org/wiki/File:Nicolas_Sarkozy_(2008).jpg",
+   "file": "Nicolas Sarkozy (2008).jpg"
+  }
  }
 }
