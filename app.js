@@ -1971,6 +1971,7 @@
     "olivier-rioult": 5,
     "nicolas-dupont-aignan": 5, "thibault-de-montbrial": 5, "yannick-jadot": 5,
     "chloe-ridel": 5, "charles-alloncle": 5, "charles-rodwell": 5, "sebastien-chenu": 5,
+    "bruno-le-maire": 5,
     "jean-yves-le-gallou": 3, "ivan-rioufol": 3, "michel-onfray": 3, "raphael-stainville": 3,
     "francois-durvye": 7, "alban-du-rostu": 7, "arnaud-lagardere": 7,
     "ifop": 2, "opinionway": 2, "institut-csa": 2, "harris-interactive": 2, "toluna": 2, "elabe": 2,

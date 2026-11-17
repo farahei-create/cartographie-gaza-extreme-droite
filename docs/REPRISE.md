@@ -222,6 +222,7 @@ Le numéro vivant est celui de `sw.js`. Il n'y a pas de tag git `v11`, `v17`, `v
 | v43 | Mise à jour du 16/11 (complément) | Retailleau (4V), Le Pen (priorité nationale), Bardella (X), Sarkozy (primaire). Module `v43_content.py` |
 | v44 | Mise à jour du 16/11 (relevé X) | 52 posts du 13 au 16/11, quinze fiches nouvelles. Module `v44_content.py` |
 | v45 | Mise à jour du 16/11 (matin) | AJC, Anne-Sophie Sebban-Bécache, Olivier Rioult, Sarkozy (CNews et interdiction du RN). Module `v45_content.py` |
+| v46 | Mise à jour du 17/11 | Débat LCI (Le Pen, Attal, Glucksmann, Mélenchon, Retailleau), Mélenchon et Arfi sur l'enquête de l'AJC, Rodwell sur Europe 1, Bruno Le Maire sur CNews. Module `v46_content.py` |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 

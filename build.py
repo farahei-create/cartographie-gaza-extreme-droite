@@ -420,7 +420,7 @@ for _n in N:
     assert _n["id"] in CAT, "catégorie manquante : "+_n["id"]
     _n["category"], _n["subcategory"] = CAT[_n["id"]]
 assert set(CAT) == {n["id"] for n in N}, set(CAT) - {n["id"] for n in N}
-CATEGORY_ORDER=[POL,MED,JOU,INT,ORG,EVT]
+CATEGORY_ORDER=[POL,MED,JOU,INT,ORG,"Associations & représentants",EVT]
 # ---------- ajouts du 03/11/2026 ----------
 # (a) ajouts de la routine quotidienne (commit c7dcb49), repris ici pour que la reconstruction ne les perde pas
 HUFF_ARCOM_EZ="https://www.huffingtonpost.fr/france/article/l-arcom-a-directement-saisi-la-justice-pour-ces-sorties-d-eric-zemmour-apres-le-17-octobre_351273.html"
@@ -1043,6 +1043,8 @@ import v44_content
 v44_content.apply(N, E, _b, _step, _node, L, _st)
 import v45_content
 v45_content.apply(N, E, _b, _step, _node, L, _st)
+import v46_content
+v46_content.apply(N, E, _b, _step, _node, L, _st)
 # v24 ajoute des fiches après le premier passage photos : on réapplique.
 for n in N:
     if n["id"] in PIMG: n.update(PIMG[n["id"]])
