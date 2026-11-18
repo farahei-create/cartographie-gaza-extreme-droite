@@ -1,0 +1,41 @@
+name: Revenir à une version
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Nom exact de la version (exemple : version-2026-11-18-avant-cartes)"
+        required: true
+        type: string
+      confirmer:
+        description: "Écris REVENIR en majuscules pour confirmer"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: onrecord-daily
+  cancel-in-progress: false
+
+jobs:
+  revenir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Identité git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Revenir
+        env:
+          VERSION: ${{ github.event.inputs.version }}
+          CONFIRM: ${{ github.event.inputs.confirmer }}
+        run: python3 -m tools.versions.restore --apply --push

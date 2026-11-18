@@ -34,6 +34,9 @@ Site statique à la racine. Pas de CDN. Pas d'étape de build côté Vercel : `d
 | `tools/people_images.json`, `tools/org_logos.json` | Crédits (auteur, licence, lien). `build.py` les recopie sur les fiches |
 | `tools/archive.py`, `tools/archives.json` | Copies Wayback |
 | `.github/workflows/daily-update.yml`, `tools/daily/` | Relevé du matin. Section 10 |
+| `.github/workflows/enregistrer-version.yml`, `.github/workflows/revenir-version.yml`, `tools/versions/` | Enregistrer une version, y revenir. Section 11 |
+| `versions.json` | Liste de secours des versions, lue par `/admin.html` |
+| `c/<id>/<n>.html` | Page d'une citation : lien profond et aperçu des réseaux. Générée par `build.py` |
 | `tools/build.v*.py` | Anciens scripts, conservés pour l'historique. Ne pas les lancer |
 | `tests/test_v*.py` | Playwright |
 | `docs/JOURNAL.md` | Journal daté des mises à jour |
@@ -89,7 +92,7 @@ Elles viennent du droit français de la diffamation. Aucune exception, y compris
 4. **Pas de particuliers.** Personnalités publiques, organisations, décisions d'institutions.
 5. **Contexte et démentis** sur la même fiche (thème `Nuance / contexte`, ou précision dans `medium`).
 6. **Ne rien inventer.** Si aucune source fiable ne donne une phrase exacte sur les thèmes du site, la fiche reste sans citation nouvelle. Le dire dans le compte rendu.
-7. **Photos.** Commons d'abord, licence libre seulement : CC BY, CC BY-SA, CC0, domaine public. Vérifier sur la page du fichier via l'API (`imageinfo` + `extmetadata`) : `LicenseShortName`, auteur, `NonFree` absent. Refuser CC BY-NC, CC BY-ND, fair use. Ensuite, portrait officiel dont le texte autorise la réutilisation : Parlement européen, avec « © European Union » et lien vers https://www.europarl.europa.eu/legal-notice/ . Assemblée nationale et Sénat : seulement si leurs conditions, lues ce jour-là, autorisent la réutilisation ; citer cette condition dans `image_credit`. Jamais : photo de presse, Google Images, capture X ou Instagram, image générée. Héberger un webp d'environ 400 px dans `img/people/`, crédit dans `tools/people_images.json` (auteur, licence, `license_url`, `source_url`). Le crédit s'affiche sur la fiche et, en petit, sur la carte de partage.
+7. **Photos.** Commons d'abord, licence libre seulement : CC BY, CC BY-SA, CC0, domaine public. Vérifier sur la page du fichier via l'API (`imageinfo` + `extmetadata`) : `LicenseShortName`, auteur, `NonFree` absent. Refuser CC BY-NC, CC BY-ND, fair use. Ensuite, portrait officiel dont le texte autorise la réutilisation : Parlement européen, avec « © European Union » et lien vers https://www.europarl.europa.eu/legal-notice/ . Assemblée nationale et Sénat : seulement si leurs conditions, lues ce jour-là, autorisent la réutilisation ; citer cette condition dans `image_credit`. Jamais : photo de presse, Google Images, capture X ou Instagram, image générée. Héberger un webp d'environ 400 px dans `img/people/`, crédit dans `tools/people_images.json` (auteur, licence, `license_url`, `source_url`). Le crédit s'affiche sur la fiche. L'image à partager (carré et story) ne montre pas la photo : monogramme seulement. S'il y a un contexte ou un démenti, l'image indique « Contexte sur Onrecord ».
 8. **Logos.** Uniquement si le fichier Commons a une licence ou un statut qui l'autorise (domaine public, PD-textlogo, CC BY, CC BY-SA, CC0). Sinon monogramme. Pas de logo « à peu près » : un sigle historique d'un autre parti ne remplace pas le bon.
 9. **Sans photo libre :** monogramme (initiales, dégradé selon la sphère, sinon selon le type). Pas d'initiales nues sur un aplat.
 10. **Vidéos** : diffuseur d'origine ou compte officiel seulement, lien vérifié. YouTube via `youtube-nocookie`, chargé au clic.
@@ -104,6 +107,8 @@ Elles viennent du droit français de la diffamation. Aucune exception, y compris
 ```bash
 git pull origin main
 ```
+
+Une grosse modification de `app.js`, `style.css` ou `index.html` enregistre toute seule la version d'avant (tag `version-…-avant-modif`). Tu peux aussi en poser une à la main avant de commencer : page `/admin.html`, « Enregistrer la version actuelle ». Détail en section 11.
 
 1. Lire `docs/JOURNAL.md` pour ne pas refaire la veille.
 2. Chercher les **48 dernières heures** : presse française et internationale, décisions Arcom, Conseil d'État, justice, comptes vérifiés des personnes déjà sur le site, et d'autres personnalités publiques françaises. Deux sujets seulement : (a) propos publics sur la campagne israélienne à Gaza ; (b) faits qui documentent la normalisation ou la montée de l'extrême droite en France. Repérer aussi une vidéo officielle du moment cité.
@@ -182,11 +187,12 @@ Lis d'abord AGENTS.md et docs/REPRISE.md. Respecte toutes les règles éditorial
 2. Règles de publication (droit français de la diffamation), sans exception : citation exacte, datée, URL qui répond ; formulation neutre ; pas de lien de causalité que les sources n'écrivent pas ; jamais de particuliers ; contexte et démentis ; ne rien inventer ; photos seulement sous licence libre ou portrait officiel réutilisable ; vidéos seulement du diffuseur d'origine ou d'un compte officiel ; Wikipédia jamais comme source unique. Si rien ne qualifie, ne rien publier.
 3. Travailler dans le dépôt. Lancer tools/archive.py sur les URL nouvelles et réessayer les archives manquantes. python3 build.py. Valider data.json. Tests Playwright (test_v8.py échoue déjà : ne pas le réparer en remettant une clé votes). Monter la version du cache dans sw.js. Compléter docs/JOURNAL.md. Commit « Mise à jour du JJ/MM : … », git pull, puis push. Vérifier en ligne avec curl que sw.js et data.json servent la nouvelle version.
 4. Compte rendu en français, avec « tu » : liste courte (personne, date, résumé d'une ligne, lien source) et lien du site. S'il n'y a rien de nouveau, dis-le et n'ajoute rien.
+5. Ne casse pas le relevé du matin ni les workflows de versions. Pas de force-push. Une grosse modification de app.js, style.css ou index.html enregistre la version d'avant. Le retour se fait avec « Revenir à une version ».
 ```
 
 ## 6. Versions
 
-Le numéro vivant est celui de `sw.js`. Il n'y a pas de tag git `v11`, `v17`, `v19`, `v20`, `v21` : ces numéros n'ont pas été publiés comme version du site. `tools/build.v11.py` et les scripts voisins sont d'anciens générateurs, pas la version en ligne.
+Le numéro vivant du cache est celui de `sw.js`. Les tags `version-…` sont les points de restauration (section 11), pas ces numéros. Il n'y a pas de tag git `v11`, `v17`, `v19`, `v20`, `v21` : ces numéros n'ont pas été publiés comme version du site. `tools/build.v11.py` et les scripts voisins sont d'anciens générateurs, pas la version en ligne.
 
 | Version | Commit | Quoi |
 |---|---|---|
@@ -228,6 +234,7 @@ Le numéro vivant est celui de `sw.js`. Il n'y a pas de tag git `v11`, `v17`, `v
 | v46 | Mise à jour du 17/11 | Débat LCI (Le Pen, Attal, Glucksmann, Mélenchon, Retailleau), Mélenchon et Arfi sur l'enquête de l'AJC, Rodwell sur Europe 1, Bruno Le Maire sur CNews. Module `v46_content.py` |
 | v47 | Mise à jour du 18/11 | Relevé automatique du matin (GitHub Actions, Gemini gratuit). Aucune phrase nouvelle. |
 | v48 | Mise à jour du 18/11 | La file d'attente est `auto_pending.json`, à la racine : le dossier `tools/` n'est pas servi par le site. |
+| v49 | Mise à jour du 18/11 | Versions enregistrées et retour en arrière. Cartes de citation carrée et story, monogramme, lien `/c/…`. Tag de départ : `version-2026-11-18-avant-cartes`. |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 
@@ -333,3 +340,73 @@ Ce n'est pas une revue humaine.
 - Une phrase qui contient « complice », « génocidaire », « pantin », « infiltré », « marionnette », « protégé », « copinage » ou « occulte » n'est pas publiée, même si la personne l'a dite. Tu peux la reprendre à la main si la section 3 le permet.
 - Google News sert d'index. Son flux est réservé par Google à un lecteur personnel et non commercial : on n'en recopie pas le texte, seulement l'adresse de l'éditeur quand elle se résout.
 - `CORRECTION_EMAIL` reste vide. Le programme n'y touche pas.
+
+Un retour à une version remet aussi `tools/auto_published.json`. Les phrases parues après cette version quittent le site, et le prochain `build.py` ne les réinjecte pas. Si l'une d'elles est encore dans les 48 heures, le relevé du lendemain peut la retrouver : les mêmes contrôles s'appliquent. `auto_pending.json` n'est pas remis en arrière : la file d'attente reste celle d'aujourd'hui. Le code du relevé, ses workflows et `tests/test_daily.py` non plus.
+
+## 11. Versions et retour en arrière
+
+Le numéro `onrecord-vN` de `sw.js` est le cache du téléphone. Une **version** est autre chose : un tag git annoté `version-AAAA-MM-JJ-…`, que l'on peut remettre en ligne.
+
+Le premier tag, posé avant ces changements, est `version-2026-11-18-avant-cartes` (commit `cbc87d2`, cache `onrecord-v48`).
+
+Tout se fait depuis GitHub, sans serveur payant et sans jeton dans la page. Le dépôt est public : `/admin.html` lit les tags par l'API publique, et `versions.json` sert de secours. GitHub ne préremplit pas les champs d'un workflow. Le bouton copie le nom, ouvre la page, et le mode d'emploi dit quoi coller.
+
+### Enregistrer
+
+Workflow **Enregistrer une version** (`.github/workflows/enregistrer-version.yml`).
+
+- À la main : Actions → Enregistrer une version → Run workflow. Note facultative, mot court facultatif (`avant-cartes`). Le tag est `version-AAAA-MM-JJ-mot`, ou avec l'heure s'il n'y a pas de mot.
+- Chaque dimanche, 18 h UTC (19 h à Paris en hiver, 20 h en été), si ce commit n'a pas déjà une version.
+- À chaque push sur `main` qui touche `app.js`, `style.css` ou `index.html` : tag du commit d'avant, `version-…-avant-modif`. Pas de second tag si ce commit en a déjà un.
+
+Le tag est annoté. Rien n'est écrasé s'il existe déjà.
+
+### Revenir
+
+Workflow **Revenir à une version**. Il faut le nom exact, et le mot `REVENIR`.
+
+1. Il enregistre l'état courant (`version-…-avant-retour`).
+2. Il crée un **nouveau** commit sur `main` qui remet le site public à ce tag : pages, style, script, `data.json`, modules de contenu, images, `tools/auto_published.json`.
+3. Il ne fait pas de force-push. L'historique reste. Le retour se défait en revenant au tag `avant-retour`.
+4. Il monte le cache `sw.js` d'un cran, pour que les téléphones prennent la copie remise.
+
+Il ne remet pas en arrière :
+
+- la file `auto_pending.json` ;
+- le code et les workflows du relevé du matin, ni `tests/test_daily.py` ;
+- la page admin, `AGENTS.md`, `docs/REPRISE.md` (le journal reçoit une ligne, il n'est pas effacé).
+
+Ainsi un retour ne casse pas le geste qui permet d'en faire un autre, ni le relevé du lendemain. Les phrases automatiques d'après la version choisie ne sont pas réinjectées par `build.py`, parce que `tools/auto_published.json` revient avec elles. Voir la fin de la section 10.
+
+Le site en ligne ne montre qu'une version à la fois (celle de `main`). Le lien « Voir les fichiers » ouvre l'arbre GitHub du tag. Ce n'est pas le site tel que les visiteurs le voient : pour le revoir en ligne, il faut revenir à cette version.
+
+### Essai
+
+`tests/test_versions.py` joue un retour dans un dépôt temporaire. Il ne pousse pas, et il ne touche pas à `main`.
+
+## 12. Cartes à partager
+
+Chaque citation a « Partager ». Le navigateur dessine deux images, sans service extérieur :
+
+- carré, 1080×1080, pour un post ;
+- verticale, 1080×1920, pour une story.
+
+Sur l'image : la citation entière, le nom, la fonction, la date, le média, `onrecord-fr.vercel.app`, et le monogramme. Pas de photo. Pas de commentaire ajouté. S'il y a un contexte ou un démenti (thème « Nuance / contexte », ou les mots « Contexte », « démenti », « Précision ou réponse » dans le média), une ligne dit « Contexte sur Onrecord ».
+
+La taille du texte baisse pour que la phrase tienne. Si elle ne tient pas en entier, même en story, le bouton d'image est éteint et le texte le dit. On ne coupe pas la citation avec des points de suspension inventés.
+
+« Copier le lien » copie `https://onrecord-fr.vercel.app/c/<id>/<n>.html`. Cette page, écrite par `build.py`, montre la citation entière et les balises Open Graph (titre, description, icône du site). Les applications qui ne lisent pas le JavaScript s'en servent. L'image dessinée dans le navigateur n'est pas l'aperçu du lien : elle part par le partage du téléphone, ou par le téléchargement. Sur ordinateur, le bouton télécharge le PNG. Sur téléphone, si le partage de fichier existe, il s'ouvre.
+
+`build.py` régénère `c/` seulement quand il écrit le vrai `data.json`. Le relevé du matin commit ces pages avec le reste, s'il y en a de nouvelles.
+
+## 13. Premier jour pour reprendre
+
+1. Compte GitHub avec le droit d'écrire sur `farahei-create/cartographie-gaza-extreme-droite`, branche `main`. La publication est un commit poussé sur `main`. Pas de pull request. Vercel (équipe valladeaus-projects) redéploie.
+2. Lis `AGENTS.md`, puis ce fichier en entier, puis le haut de `docs/JOURNAL.md`.
+3. Ouvre https://onrecord-fr.vercel.app/ et `curl -fsS https://onrecord-fr.vercel.app/sw.js | head -n 8`. Le numéro doit être celui de `sw.js` dans `main`.
+4. Règles, sans exception : citation exacte, datée, URL qui répond ; ton neutre ; mots à ne pas employer pour qualifier quelqu'un : complice, génocidaire, pantin, infiltré, marionnette, protégé, copinage, occulte ; pas de lien causal que la source n'écrit pas ; pas de personnes privées ; contexte et démenti sur la même fiche ; Wikipédia jamais seule source ; pas de photo hors licence libre ou portrait officiel réutilisable.
+5. `config.js` : `CORRECTION_EMAIL` reste `""`. N'invente pas d'adresse.
+6. Relevé du matin : secret `GEMINI_API_KEY` (clé gratuite, sans facturation). Sans cette clé, le workflow de 6 h 30 UTC s'arrête et ne touche pas à `main`. Garde-fous, file d'attente, plafonds : section 10. Essai : `python3 tests/test_daily.py` et `python3 -m tools.daily.run --mock --dry-run`.
+7. Versions : la liste est sur https://onrecord-fr.vercel.app/admin.html . Enregistrer ou revenir se fait sur GitHub (Actions), pas dans la page. Le tag de secours d'avant les cartes est `version-2026-11-18-avant-cartes`.
+8. Pour publier : `git pull`, sources (pas `data.json` à la main), `python3 tools/archive.py` sur les URL nouvelles, `python3 build.py`, monter `sw.js`, tests (sauf `tests/test_v8.py`, et les quatre échecs « graph built lazily on Réseau » de `tests/test_v5.py`), `docs/JOURNAL.md`, commit `Mise à jour du JJ/MM : …`, push, vérifier `sw.js` en ligne.
+9. Si un changement casse le site : admin → Revenir à cette version → coller le nom → écrire REVENIR → Run workflow. Attendre une minute. Pour annuler ce retour, revenir au tag `avant-retour` créé juste avant.

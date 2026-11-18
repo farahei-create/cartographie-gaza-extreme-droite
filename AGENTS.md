@@ -13,7 +13,7 @@ Droit français de la diffamation. Si une source ne les respecte pas, on ne publ
 - Pas de lien de causalité que la source n'écrit pas.
 - Pas de particuliers. Personnes publiques et organisations seulement.
 - Contexte, nuances et démentis dans la même fiche.
-- Photos : Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel dont la réutilisation est explicite (Parlement européen, mention « © European Union »). Jamais de photo de presse, Google Images, capture X/Instagram, image générée. Crédit auteur + licence + lien, sur la fiche et en petit sur la carte de partage.
+- Photos : Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel dont la réutilisation est explicite (Parlement européen, mention « © European Union »). Jamais de photo de presse, Google Images, capture X/Instagram, image générée. Crédit auteur + licence + lien sur la fiche. L'image de partage (carré et story) : monogramme seulement, pas la photo. Contexte ou démenti : la carte dit « Contexte sur Onrecord ».
 - Logos d'organisations : Commons seulement, si la licence ou le statut l'autorise (y compris PD-textlogo). Sinon monogramme.
 - Vidéos : compte du diffuseur d'origine ou compte officiel uniquement.
 - Wikipédia n'est jamais la source unique d'une citation.
@@ -32,5 +32,7 @@ Droit français de la diffamation. Si une source ne les respecte pas, on ne publ
 9. Ajouter une ligne à `docs/JOURNAL.md`. Compte rendu court, en français, avec « tu ».
 
 Le relevé du matin est le workflow `.github/workflows/daily-update.yml`. Il publie sur `main` tout seul si le secret `GEMINI_API_KEY` est posé. Sans cette clé, il s'arrête et ne touche pas à `main`. Le détail est dans `docs/REPRISE.md`, section Automatisation.
+
+Versions : tags `version-AAAA-MM-JJ-…`, pas un force-push. Workflows « Enregistrer une version » et « Revenir à une version ». La page `/admin.html` explique les trois gestes. Avant une grosse modification de `app.js`, `style.css` ou `index.html`, le tag du commit précédent est posé tout seul. Le retour remet le site public et `tools/auto_published.json`, garde la file d'attente, le relevé, l'admin et ce guide, et enregistre l'état courant juste avant. Détail : `docs/REPRISE.md`, sections 11 à 13.
 
 Le détail, les commandes et le prompt quotidien sont dans `docs/REPRISE.md`.

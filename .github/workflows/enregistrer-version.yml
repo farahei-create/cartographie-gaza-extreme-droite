@@ -1,0 +1,52 @@
+name: Enregistrer une version
+
+on:
+  workflow_dispatch:
+    inputs:
+      note:
+        description: "Note pour retrouver cette version plus tard"
+        required: false
+        default: "Version enregistrée à la main."
+        type: string
+      nom:
+        description: "Mot court facultatif, sans espace (exemple : avant-cartes)"
+        required: false
+        default: ""
+        type: string
+  schedule:
+    # Dimanche 18:00 UTC : 19 h à Paris en hiver, 20 h en été.
+    - cron: "0 18 * * 0"
+  push:
+    branches: [main]
+    paths:
+      - "app.js"
+      - "style.css"
+      - "index.html"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: onrecord-versions
+  cancel-in-progress: false
+
+jobs:
+  enregistrer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Identité git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Enregistrer
+        env:
+          EVENT: ${{ github.event_name }}
+          NOTE: ${{ github.event.inputs.note }}
+          NOM: ${{ github.event.inputs.nom }}
+          BEFORE: ${{ github.event.before }}
+        run: python3 -m tools.versions.save

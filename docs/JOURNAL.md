@@ -4,6 +4,12 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-18 — v49
+
+Tu ne publies aucune phrase. Tu enregistres d'abord l'état du site sous le tag `version-2026-11-18-avant-cartes`. Tu ajoutes deux gestes sur la page admin : enregistrer une version, revenir à une version, sans réécrire l'historique. Tu ajoutes aussi, sur chaque citation, une image carrée et une image story (monogramme, citation entière, lien `/c/…`).
+
+Cache `onrecord-v49`.
+
 ## 2026-11-18 — relevé, citations entières
 
 Tu ne publies aucune phrase. Tu corriges le relevé du matin après le test à blanc : une citation coupée au milieu d'un mot ne passe plus, les points de suspension ajoutés non plus, et une ellipse `[…]` seulement si chaque morceau est dans la page. Les seize lectures se répartissent (deux pages par personne, trois par média, deux phrases publiées par personne). Une phrase déjà en ligne, même plus courte, n'est pas reprise. Le résumé nomme le flux qui a échoué. Le cache reste `onrecord-v48`.

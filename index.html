@@ -17,8 +17,13 @@
 <meta property="og:title" content="Onrecord — Leurs mots, datés et sourcés">
 <meta property="og:description" content="Déclarations publiques et liens publics, datés et sourcés, avec copies archivées.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://onrecord-fr.vercel.app/">
 <meta property="og:site_name" content="Onrecord">
 <meta property="og:locale" content="fr_FR">
+<meta property="og:image" content="https://onrecord-fr.vercel.app/icons/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Onrecord — Leurs mots, datés et sourcés">
+<meta name="twitter:description" content="Déclarations publiques et liens publics, datés et sourcés, avec copies archivées.">
 <meta name="apple-mobile-web-app-title" content="Onrecord">
 <meta name="application-name" content="Onrecord">
 <link rel="stylesheet" href="style.css">
@@ -405,6 +410,17 @@
   </div>
 </footer>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<div id="share-sheet" class="share-sheet" hidden>
+  <div class="share-panel" role="dialog" aria-modal="true" aria-labelledby="share-title">
+    <h2 id="share-title">Partager la citation</h2>
+    <p id="share-who"></p>
+    <p id="share-note"></p>
+    <button type="button" class="share-btn" id="share-square">Image carrée</button>
+    <button type="button" class="share-btn" id="share-story">Image story</button>
+    <button type="button" class="share-btn ghost" id="share-copy">Copier le lien</button>
+    <button type="button" class="share-btn ghost" id="share-close">Fermer</button>
+  </div>
+</div>
 <div id="pow-sheet" class="pow-sheet" hidden></div>
 
 <script src="vendor/vis-network.min.js"></script>

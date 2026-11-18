@@ -636,6 +636,95 @@
       el.textContent = list.join(" ");
     }
     function clearStatus() { $("pub-status").textContent = ""; }
+    var RESTORE_URL = "https://github.com/" + OWNER + "/" + REPO + "/actions/workflows/revenir-version.yml";
+    function copyPlain(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).catch(function () {});
+        return;
+      }
+      var ta = document.createElement("textarea");
+      ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); } catch (e) {}
+      ta.remove();
+    }
+    function versionDate(iso) {
+      var d = new Date(iso || "");
+      if (isNaN(d.getTime())) return iso || "";
+      return d.toLocaleString("fr-FR", { timeZone: "Europe/Paris", dateStyle: "long", timeStyle: "short" });
+    }
+    function paintVersions(list, source) {
+      var box = $("version-list");
+      if (!box) return;
+      $("version-status").textContent = source || "";
+      if (!list.length) { box.textContent = "Aucune version enregistrée pour l’instant."; return; }
+      box.innerHTML = list.map(function (v) {
+        var tree = v.github || ("https://github.com/" + OWNER + "/" + REPO + "/tree/" + encodeURIComponent(v.name));
+        return '<article class="pv"><p class="k">' + esc(versionDate(v.date)) + "</p><h3>" + esc(v.name) + "</h3>" +
+          (v.note ? "<p>" + esc(v.note) + "</p>" : "") +
+          '<p><a href="' + esc(tree) + '" target="_blank" rel="noopener noreferrer">Voir les fichiers de cette version</a></p>' +
+          '<button type="button" class="btn" data-restore="' + esc(v.name) + '">Revenir à cette version</button></article>';
+      }).join("");
+    }
+    function loadVersions() {
+      var box = $("version-list");
+      if (!box) return;
+      var fileList = [];
+      function fromFile() {
+        return fetch("versions.json", { cache: "no-store" }).then(function (r) {
+          if (!r.ok) return [];
+          return r.json();
+        }).then(function (d) { return (d && d.versions) || []; }).catch(function () { return []; });
+      }
+      function tagNote(ref) {
+        if (!ref || !ref.object || ref.object.type !== "tag") return Promise.resolve(null);
+        return fetch(ref.object.url).then(function (r) { return r.ok ? r.json() : null; }).then(function (tag) {
+          if (!tag) return null;
+          var commit = (tag.object && tag.object.sha) || "";
+          return {
+            name: tag.tag,
+            date: (tag.tagger && tag.tagger.date) || "",
+            note: String(tag.message || "").split("\n")[0],
+            commit: commit,
+            github: "https://github.com/" + OWNER + "/" + REPO + "/tree/" + tag.tag
+          };
+        }).catch(function () { return null; });
+      }
+      fromFile().then(function (saved) {
+        fileList = saved;
+        paintVersions(saved, "");
+        return fetch("https://api.github.com/repos/" + OWNER + "/" + REPO + "/git/matching-refs/tags/version-");
+      }).then(function (r) {
+        if (!r || !r.ok) throw new Error("liste");
+        return r.json();
+      }).then(function (refs) {
+        var slice = (refs || []).filter(function (ref) { return ref.ref && ref.ref.indexOf("refs/tags/version-") === 0; }).slice(0, 25);
+        return Promise.all(slice.map(tagNote));
+      }).then(function (apiItems) {
+        var by = {};
+        fileList.forEach(function (v) { if (v && v.name) by[v.name] = v; });
+        (apiItems || []).forEach(function (v) {
+          if (!v || !v.name) return;
+          by[v.name] = Object.assign({}, by[v.name] || {}, v);
+        });
+        var list = Object.keys(by).map(function (k) { return by[k]; });
+        list.sort(function (a, b) { return String(b.date || "").localeCompare(String(a.date || "")); });
+        paintVersions(list, "Liste à jour, lue sur GitHub.");
+      }).catch(function () {
+        if (fileList.length) paintVersions(fileList, "GitHub n’a pas répondu. Voici la liste enregistrée avec le site.");
+        else $("version-list").textContent = "Liste des versions indisponible.";
+      });
+      box.addEventListener("click", function (ev) {
+        var b = ev.target.closest && ev.target.closest("button[data-restore]");
+        if (!b) return;
+        var name = b.getAttribute("data-restore") || "";
+        copyPlain(name);
+        $("version-status").textContent = "Nom copié : " + name + ". Sur la page GitHub, colle-le dans Version, écris REVENIR, puis Run workflow.";
+        var a = document.createElement("a");
+        a.href = RESTORE_URL; a.target = "_blank"; a.rel = "noopener noreferrer";
+        document.body.appendChild(a); a.click(); a.remove();
+      });
+    }
     function loadPending() {
       var box = $("pending-list");
       if (!box) return;
@@ -782,6 +871,7 @@
     $("btn-publish").addEventListener("click", publish);
     renderPreview();
     loadPending();
+    loadVersions();
     token = readToken();
     if (!token) { showGate(""); return; }
     showApp();

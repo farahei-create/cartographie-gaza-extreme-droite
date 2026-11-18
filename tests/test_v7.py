@@ -47,8 +47,10 @@ with sync_playwright() as p:
     path = dl.value.path(); data = open(path, "rb").read()
     check(data[:4] == b"\x89PNG" and len(data) > 20000, "png duo téléchargé")
     open("v7-card-duo.png", "wb").write(data)
+    pg.click("#d0 button[data-act=share]")
+    pg.wait_for_selector("#share-sheet:not([hidden])")
     with pg.expect_download() as dl:
-        pg.click("#d0 button[data-act=share]")
+        pg.click("#share-square")
     data = open(dl.value.path(), "rb").read(); check(len(data) > 20000, "png déclaration téléchargé")
     open("v7-card.png", "wb").write(data)
     pg.goto(BASE + "#/personne/" + z + "#am"); pg.reload(); pg.wait_for_selector("#am"); pg.wait_for_timeout(1500)

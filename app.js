@@ -1714,44 +1714,171 @@
     var h = hostOf(s.url); if (h) { ctx.fillText("Source : " + h, x, y + 28 + 6); y += 44; }
     return y;
   }
-  function renderCard(n, s) {
-    var c = document.createElement("canvas"); c.width = CARD_W; c.height = CARD_H;
-    var ctx = c.getContext("2d"), W = CARD_W - 2 * CARD_PAD;
-    var im = readyImg(n.image);
-    cardBase(ctx, null, im);
-    ctx.fillStyle = "#ffffff";
-    var qh = im ? 560 : 580;
-    var r = fitQuote(ctx, s.quote, W, qh, 72, 34, "600");
-    drawLines(ctx, r, CARD_PAD, 300);
-    var y = 300 + qh + 40, tx = CARD_PAD, tw = W;
-    if (im) { var R = 100; drawPortraitRing(ctx, im, CARD_PAD + R, y + R, R); tx = CARD_PAD + 2 * R + 40; tw = W - 2 * R - 40; }
-    else { var Rm = 68; drawMonogram(ctx, n, CARD_PAD + Rm, y + Rm, Rm); tx = CARD_PAD + 2 * Rm + 32; tw = W - 2 * Rm - 32; }
-    ctx.fillStyle = "#ffffff"; ctx.font = "700 44px " + CARD_FONT; ctx.fillText(clampText(ctx, n.name, tw, 1)[0], tx, y + 44); y += 64;
-    ctx.fillStyle = "rgba(255,255,255,.9)"; ctx.font = "600 32px " + CARD_FONT; ctx.fillText(dmy(s.date), tx, y + 32); y += 44;
-    drawSource(ctx, s, tx, y, tw, 2);
-    drawPhotoCredit(ctx, n);
-    c.__truncated = r.truncated; c.__fontSize = r.size; c.__portrait = !!im; window.__lastCardHadPortrait = !!im;
+  var CARD_DISPLAY = '"Anton", Impact, "Arial Narrow", sans-serif';
+  var CARD_FORMATS = {
+    square: { w: 1080, h: 1080, pad: 72, qMax: 58, qMin: 26, top: 156, foot: 490 },
+    story: { w: 1080, h: 1920, pad: 84, qMax: 78, qMin: 32, top: 190, foot: 560 }
+  };
+  function hasContext(s) {
+    if (!s) return false;
+    if (s.context || s.denial) return true;
+    if (s.theme === "Nuance / contexte") return true;
+    var m = String(s.medium || "");
+    return /contexte\s*:/i.test(m) || /d[eé]menti/i.test(m) || /pr[eé]cision ou r[eé]ponse\s*:/i.test(m);
+  }
+  function mediaLabel(s) {
+    var m = String((s && s.medium) || "").trim();
+    m = m.split(/\s+Contexte\s*:/i)[0].trim();
+    m = m.split(/\s+Pr[eé]cision ou r[eé]ponse\s*:/i)[0].trim();
+    var cut = m.split(/\s;\s|\.\s/)[0].trim();
+    if (cut.length >= 8 && cut.length <= 110) return cut;
+    if (m.length <= 110) return m || "source non précisée";
+    var t = m.slice(0, 90), sp = t.lastIndexOf(" ");
+    if (sp > 40) t = t.slice(0, sp);
+    return t.replace(/[\s,;:.]+$/, "") + " […]";
+  }
+  function sharePageUrl(n, i) {
+    return (location.origin || "https://onrecord-fr.vercel.app") + "/c/" + encodeURIComponent(n.id) + "/" + i + ".html";
+  }
+  function quoteShown(q) { return "«\u00a0" + String(q || "").replace(/\s+/g, " ").trim() + "\u00a0»"; }
+  function measureQuote(ctx, quote, maxW, maxH, maxSize, minSize) {
+    var raw = String(quote || "").replace(/\s+/g, " ").trim();
+    if (!raw) return null;
+    var shown = quoteShown(raw);
+    for (var size = maxSize; size >= minSize; size -= 2) {
+      ctx.font = "600 " + size + "px " + CARD_FONT;
+      var lines = wrapLines(ctx, shown, maxW);
+      var lh = Math.round(size * 1.28);
+      if (lines.length * lh <= maxH) return { lines: lines, size: size, lh: lh, text: raw };
+    }
+    return null;
+  }
+  function linesFit(ctx, text, maxW, size, maxLines, weight) {
+    ctx.font = weight + " " + size + "px " + CARD_FONT;
+    var lines = wrapLines(ctx, text, maxW);
+    if (lines.length <= maxLines) return lines;
+    var kept = lines.slice(0, maxLines), last = kept[maxLines - 1], spare = " […]";
+    while (last.length > 1 && ctx.measureText(last + spare).width > maxW) last = last.slice(0, -1);
+    kept[maxLines - 1] = last.replace(/[\s,;:.]+$/, "") + spare;
+    return kept;
+  }
+  function paintBackdrop(ctx, w, h) {
+    var g = ctx.createLinearGradient(0, 0, w, h);
+    g.addColorStop(0, "#07030f"); g.addColorStop(0.42, "#160826"); g.addColorStop(1, "#3b1464");
+    ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
+    var glow = ctx.createRadialGradient(w * 0.78, h * 0.06, 10, w * 0.72, h * 0.12, w * 0.72);
+    glow.addColorStop(0, "rgba(192,132,252,.42)"); glow.addColorStop(1, "rgba(192,132,252,0)");
+    ctx.fillStyle = glow; ctx.fillRect(0, 0, w, h);
+    ctx.save(); ctx.globalAlpha = 0.045; ctx.strokeStyle = "#d8b4fe"; ctx.lineWidth = 1;
+    for (var x = 54; x < w; x += 54) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke(); }
+    for (var y = 54; y < h; y += 54) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke(); }
+    ctx.restore();
+    ctx.strokeStyle = "rgba(192,132,252,.62)"; ctx.lineWidth = 3;
+    ctx.strokeRect(26, 26, w - 52, h - 52);
+  }
+  function renderFormat(kind, n, s) {
+    var spec = CARD_FORMATS[kind] || CARD_FORMATS.square;
+    var quoteW = spec.w - 2 * spec.pad - 28;
+    var quoteH = spec.h - spec.top - spec.foot;
+    var probe = document.createElement("canvas").getContext("2d");
+    var fit = measureQuote(probe, s && s.quote, quoteW, quoteH, spec.qMax, spec.qMin);
+    if (!fit) return null;
+    var c = document.createElement("canvas"); c.width = spec.w; c.height = spec.h;
+    var ctx = c.getContext("2d");
+    paintBackdrop(ctx, spec.w, spec.h);
+    ctx.textBaseline = "alphabetic"; ctx.textAlign = "left";
+    ctx.fillStyle = "#ffffff"; ctx.font = "400 64px " + CARD_DISPLAY;
+    ctx.shadowColor = "rgba(139,61,255,.9)"; ctx.shadowBlur = 16;
+    ctx.fillText("ONRECORD", spec.pad, spec.pad + 58);
+    ctx.shadowBlur = 0;
+    ctx.fillStyle = "#c084fc";
+    ctx.fillRect(spec.pad, spec.top, 4, fit.lines.length * fit.lh);
+    ctx.fillStyle = "#ffffff"; ctx.font = "600 " + fit.size + "px " + CARD_FONT;
+    fit.lines.forEach(function (line, k) { ctx.fillText(line, spec.pad + 22, spec.top + fit.size + k * fit.lh); });
+    var y = spec.h - spec.foot + 8;
+    var inner = spec.w - 2 * spec.pad;
+    drawMonogram(ctx, n, spec.pad + 46, y + 46, 42);
+    var nx = spec.pad + 108, nw = inner - 108;
+    ctx.fillStyle = "#ffffff"; ctx.font = "700 40px " + CARD_FONT;
+    var nameLines = linesFit(ctx, n.name || "", nw, 40, 2, "700");
+    nameLines.forEach(function (line, k) { ctx.fillText(line, nx, y + 36 + k * 46); });
+    y += Math.max(96, 20 + nameLines.length * 46);
+    ctx.fillStyle = "#d8c7ff";
+    var roleLines = linesFit(ctx, n.role || "", inner, 26, 3, "500");
+    ctx.font = "500 26px " + CARD_FONT;
+    roleLines.forEach(function (line, k) { ctx.fillText(line, spec.pad, y + 26 + k * 34); });
+    y += 12 + roleLines.length * 34;
+    ctx.fillStyle = "#ffffff"; ctx.font = "600 28px " + CARD_FONT;
+    ctx.fillText(dmy(s.date), spec.pad, y + 32); y += 48;
+    ctx.fillStyle = "rgba(255,255,255,.82)";
+    var mediaLines = linesFit(ctx, "Média : " + mediaLabel(s), inner, 24, 3, "500");
+    ctx.font = "500 24px " + CARD_FONT;
+    mediaLines.forEach(function (line, k) { ctx.fillText(line, spec.pad, y + 24 + k * 32); });
+    y += 16 + mediaLines.length * 32;
+    if (hasContext(s)) {
+      ctx.font = "600 22px " + CARD_FONT;
+      var label = "Contexte sur Onrecord";
+      var tw = ctx.measureText(label).width + 36;
+      roundBox(ctx, spec.pad, y, tw, 40, 20, "rgba(124,58,237,.35)", "rgba(192,132,252,.8)");
+      ctx.fillStyle = "#f3e8ff"; ctx.fillText(label, spec.pad + 18, y + 27);
+      y += 52;
+    }
+    ctx.fillStyle = "rgba(255,255,255,.72)"; ctx.font = "600 26px " + CARD_FONT;
+    ctx.fillText(SITE_HOST, spec.pad, spec.h - 58);
+    c.__truncated = false; c.__fontSize = fit.size; c.__portrait = false; c.__context = hasContext(s);
+    c.__quote = fit.text; c.__format = kind; window.__lastCardHadPortrait = false;
     return c;
   }
+  function roundBox(ctx, x, y, w, h, r, fill, stroke) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+    ctx.fillStyle = fill; ctx.fill();
+    ctx.strokeStyle = stroke; ctx.lineWidth = 2; ctx.stroke();
+  }
+  function formatFits(kind, s) {
+    var spec = CARD_FORMATS[kind] || CARD_FORMATS.square;
+    var probe = document.createElement("canvas").getContext("2d");
+    return !!measureQuote(probe, s && s.quote, spec.w - 2 * spec.pad - 28, spec.h - spec.top - spec.foot, spec.qMax, spec.qMin);
+  }
+  function renderCard(n, s) { return renderFormat("square", n, s); }
   function renderDuoCard(n, a, b) {
-    var c = document.createElement("canvas"); c.width = CARD_W; c.height = CARD_H;
-    var ctx = c.getContext("2d"), W = CARD_W - 2 * CARD_PAD, tr = false, y = 268;
-    var im = readyImg(n.image);
-    cardBase(ctx, "Avant / maintenant · écart : " + gapText(a.date, b.date), im);
-    if (im) drawPortraitRing(ctx, im, CARD_PAD + 36, y + 30, 36);
-    else drawMonogram(ctx, n, CARD_PAD + 36, y + 30, 36);
-    var nx = CARD_PAD + 92;
-    ctx.fillStyle = "#ffffff"; ctx.font = "700 44px " + CARD_FONT; ctx.fillText(clampText(ctx, n.name, W - (nx - CARD_PAD), 1)[0], nx, y + 44); y += 76;
+    var pad = 72, W = 1080, maxW = W - 2 * pad;
+    var probe = document.createElement("canvas").getContext("2d");
+    var fa = measureQuote(probe, a.quote, maxW, 460, 48, 22);
+    var fb = measureQuote(probe, b.quote, maxW, 460, 48, 22);
+    if (!fa || !fb) return null;
+    var H = 340 + fa.lines.length * fa.lh + fb.lines.length * fb.lh + 280;
+    var c = document.createElement("canvas"); c.width = W; c.height = H;
+    var ctx = c.getContext("2d"), y = 150;
+    paintBackdrop(ctx, W, H);
+    ctx.textAlign = "left"; ctx.textBaseline = "alphabetic";
+    ctx.fillStyle = "#ffffff"; ctx.font = "400 56px " + CARD_DISPLAY;
+    ctx.fillText("ONRECORD", pad, 110);
+    drawMonogram(ctx, n, pad + 36, y + 8, 32);
+    ctx.fillStyle = "#ffffff"; ctx.font = "700 36px " + CARD_FONT;
+    ctx.fillText(linesFit(ctx, n.name || "", maxW - 90, 36, 1, "700")[0], pad + 84, y + 16);
+    ctx.fillStyle = "#d8c7ff"; ctx.font = "500 24px " + CARD_FONT;
+    ctx.fillText("Écart : " + gapText(a.date, b.date), pad + 84, y + 52);
+    y += 100;
     [a, b].forEach(function (s, k) {
-      ctx.fillStyle = "rgba(255,255,255,.9)"; ctx.font = "700 32px " + CARD_FONT; ctx.fillText((k ? "Maintenant · " : "Avant · ") + dmy(s.date), CARD_PAD, y + 32); y += 50;
-      ctx.fillStyle = "#ffffff";
-      var r = fitQuote(ctx, s.quote, W, 250, 50, 28, "600"); tr = tr || r.truncated;
-      drawLines(ctx, r, CARD_PAD, y); y += 250 + 6;
-      y = drawSource(ctx, s, CARD_PAD, y, W, 1) + (k ? 0 : 24);
-      if (!k) { ctx.fillStyle = "rgba(255,255,255,.2)"; ctx.fillRect(CARD_PAD, y, W, 2); y += 26; }
+      var fit = k ? fb : fa;
+      ctx.fillStyle = "#e9d5ff"; ctx.font = "700 26px " + CARD_FONT;
+      ctx.fillText((k ? "Maintenant · " : "Avant · ") + dmy(s.date), pad, y + 26); y += 44;
+      ctx.fillStyle = "#ffffff"; ctx.font = "600 " + fit.size + "px " + CARD_FONT;
+      fit.lines.forEach(function (line, i) { ctx.fillText(line, pad, y + fit.size + i * fit.lh); });
+      y += fit.lines.length * fit.lh + 16;
+      ctx.fillStyle = "rgba(255,255,255,.78)"; ctx.font = "500 22px " + CARD_FONT;
+      ctx.fillText(linesFit(ctx, "Média : " + mediaLabel(s), maxW, 22, 2, "500")[0], pad, y + 22);
+      y += 48;
+      if (!k) { ctx.fillStyle = "rgba(192,132,252,.45)"; ctx.fillRect(pad, y, maxW, 2); y += 28; }
     });
-    drawPhotoCredit(ctx, n);
-    c.__truncated = tr; c.__portrait = !!im; window.__lastCardHadPortrait = !!im;
+    ctx.fillStyle = "rgba(255,255,255,.72)"; ctx.font = "600 24px " + CARD_FONT;
+    ctx.fillText(SITE_HOST, pad, H - 52);
+    c.__truncated = false; c.__portrait = false; c.__fontSize = Math.min(fa.size, fb.size);
+    window.__lastCardHadPortrait = false;
     return c;
   }
   function canvasBlob(c) {
@@ -1822,19 +1949,51 @@
       '<div class="meta actions am-act"><button type="button" class="act" data-act="share-duo" data-n="' + esc(n.id) + '" data-a="' + p[0] + '" data-b="' + p[1] + '">Partager</button>' +
       '<button type="button" class="act" data-act="copy-duo" data-n="' + esc(n.id) + '">Copier le lien</button></div></section>';
   }
+  var shareState = null;
+  function closeShare() { var sheet = $("share-sheet"); if (sheet) sheet.hidden = true; }
+  function openShare(n, s, i) {
+    shareState = { n: n, s: s, i: i };
+    var squareOk = formatFits("square", s);
+    var storyOk = formatFits("story", s);
+    $("share-square").disabled = !squareOk;
+    $("share-story").disabled = !storyOk;
+    $("share-who").textContent = n.name + (n.role ? " — " + n.role : "");
+    var note = $("share-note");
+    if (squareOk && storyOk) note.textContent = "L'image reprend la citation entière. Sur le téléphone, elle s'ouvre dans le partage. Sur l'ordinateur, elle se télécharge.";
+    else if (storyOk) note.textContent = "La citation est trop longue pour une image carrée. Elle tient en entier sur l'image verticale. Elle n'est pas coupée.";
+    else note.textContent = "Cette citation est trop longue pour une image, même verticale. Elle n'est pas coupée. Copie le lien : la fiche la montre en entier.";
+    $("share-sheet").hidden = false;
+    ($("share-copy")).focus();
+  }
+  function emitCard(kind) {
+    if (!shareState) return;
+    var c = renderFormat(kind, shareState.n, shareState.s);
+    if (!c) { toast("Cette citation ne tient pas en entier sur cette image."); return; }
+    var fname = "onrecord-" + slug(shareState.n.name) + "-" + (shareState.s.date || "sd") + "-" + (kind === "story" ? "story" : "carre") + ".png";
+    window.__lastShare = shareCanvas(c, fname, shareState.n.name + " — Onrecord", sharePageUrl(shareState.n, shareState.i));
+  }
   function bindCards() {
+    if (document.fonts && document.fonts.load) document.fonts.load("64px Anton").catch(function () {});
+    $("share-close").addEventListener("click", closeShare);
+    $("share-sheet").addEventListener("click", function (e) { if (e.target.id === "share-sheet") closeShare(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeShare(); });
+    $("share-square").addEventListener("click", function () { emitCard("square"); });
+    $("share-story").addEventListener("click", function () { emitCard("story"); });
+    $("share-copy").addEventListener("click", function () { if (shareState) copyLink(sharePageUrl(shareState.n, shareState.i)); });
     document.addEventListener("click", function (e) {
       var b = e.target.closest && e.target.closest("button.act[data-act]"); if (!b) return;
       var n = byId[b.getAttribute("data-n")]; if (!n) return;
       var act = b.getAttribute("data-act");
       if (act === "share" || act === "copy") {
         var i = +b.getAttribute("data-i"), s = n.statements[i];
-        if (act === "copy") return copyLink(stLink(n, i));
-        window.__lastShare = shareCanvas(renderCard(n, s), "onrecord-" + slug(n.name) + "-" + (s.date || "sd") + ".png", n.name + " — Onrecord", stLink(n, i));
+        if (act === "copy") return copyLink(sharePageUrl(n, i));
+        openShare(n, s, i);
       } else if (act === "copy-duo") copyLink(duoLink(n));
       else if (act === "share-duo") {
         var A = n.statements[+b.getAttribute("data-a")], B = n.statements[+b.getAttribute("data-b")];
-        window.__lastShare = shareCanvas(renderDuoCard(n, A, B), "onrecord-" + slug(n.name) + "-avant-maintenant.png", n.name + " — Avant / maintenant — Onrecord", duoLink(n));
+        var card = renderDuoCard(n, A, B);
+        if (!card) { toast("Ces deux citations ne tiennent pas entières sur une image."); return; }
+        window.__lastShare = shareCanvas(card, "onrecord-" + slug(n.name) + "-avant-maintenant.png", n.name + " — Avant / maintenant — Onrecord", duoLink(n));
       }
     });
     document.addEventListener("change", function (e) {
@@ -1844,8 +2003,13 @@
       else amSel[curFiche.id] = [na, nb];
       var sec = $("am"); var tmp = document.createElement("div"); tmp.innerHTML = amHtml(curFiche); sec.replaceWith(tmp.firstChild);
     });
-    window.__renderCard = function (id, i) { var c = renderCard(byId[id], byId[id].statements[i]); return { dataUrl: c.toDataURL("image/png"), truncated: c.__truncated, size: c.__fontSize }; };
-    window.__renderCardQuote = function (id, q) { var c = renderCard(byId[id], { quote: q, date: "2026-01-01", medium: "Test", url: "https://example.org/" }); return { dataUrl: c.toDataURL("image/png"), truncated: c.__truncated, size: c.__fontSize }; };
+    function cardResult(c, statement) {
+      if (!c) return { dataUrl: "", truncated: true, refused: true, size: 0, context: hasContext(statement), portrait: false };
+      return { dataUrl: c.toDataURL("image/png"), truncated: false, refused: false, size: c.__fontSize, context: !!c.__context, portrait: false, quote: c.__quote, w: c.width, h: c.height };
+    }
+    window.__renderCard = function (id, i) { var s = byId[id].statements[i]; return cardResult(renderFormat("square", byId[id], s), s); };
+    window.__renderStory = function (id, i) { var s = byId[id].statements[i]; return cardResult(renderFormat("story", byId[id], s), s); };
+    window.__renderCardQuote = function (id, q) { var s = { quote: q, date: "2026-01-01", medium: "Test", url: "https://example.org/" }; return cardResult(renderFormat("square", byId[id], s), s); };
   }
   function renderMethode() {
     var mail = String(CFG.CORRECTION_EMAIL || "").trim(), el = $("methode-contact");
@@ -2601,6 +2765,7 @@
     }
   }
   function route() {
+    if (typeof closeShare === "function") closeShare();
     var h = location.hash.replace(/^#/, "");
     /* anciennes adresses (v1–v4) */
     var legacy = /^(graphe|liste|methodologie)(?:\/(.*))?$/.exec(h);

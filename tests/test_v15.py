@@ -1,34 +1,82 @@
-"""Tests v15 : portrait sur les cartes de partage (fond + médaillon), sans photo inchangé."""
-import base64
+"""Cartes de citation : monogramme, carré et story, citation entière, pas de portrait."""
+import base64, html, json, os
 from playwright.sync_api import sync_playwright
 BASE="http://localhost:8765/"; ok=fail=0; errs=[]
 def check(c,m):
     global ok,fail
     if c: ok+=1
     else: fail+=1; print("FAIL:",m)
-import re as _re; check(int(_re.search(r"onrecord-v(\d+)",open("site/sw.js").read()).group(1))>=15,"sw v15+")
+import re as _re
+check(int(_re.search(r"onrecord-v(\d+)",open("site/sw.js").read()).group(1))>=49,"sw v49+")
+os.makedirs("/opt/cursor/artifacts", exist_ok=True)
+os.makedirs("/workspace", exist_ok=True)
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path="/usr/bin/google-chrome")
     pg=b.new_context(viewport={"width":390,"height":844},device_scale_factor=2,accept_downloads=True).new_page()
     pg.on("console",lambda m: m.type=="error" and errs.append(m.text)); pg.on("pageerror",lambda e: errs.append(str(e)))
-    def share(pid, sel="[data-act='share']"):
-        pg.goto(BASE+"#/personne/"+pid); pg.wait_for_selector(".fiche"); pg.wait_for_timeout(900)
-        pg.evaluate("window.__lastCard=null"); pg.locator(".fiche "+sel).first.click(); pg.wait_for_timeout(500)
-        return pg.evaluate("window.__lastCard && {w:__lastCard.w,h:__lastCard.h,size:__lastCard.size,portrait:__lastCard.portrait,d:__lastCard.dataUrl}")
-    c=share("emmanuel-macron")
-    check(c and c["w"]==1080 and c["h"]==1350,"taille carte photo"); check(c and c["portrait"] is True,"portrait dessiné")
-    check(pg.evaluate("window.__lastCardHadPortrait") is True,"hook portrait")
+    pg.goto(BASE+"#/personne/emmanuel-macron"); pg.wait_for_selector(".fiche [data-act='share']"); pg.wait_for_timeout(400)
+    pg.locator(".fiche [data-act='share']").first.click()
+    pg.wait_for_selector("#share-sheet:not([hidden])")
+    check(pg.locator("#share-square").is_enabled() and pg.locator("#share-story").is_enabled(),"deux formats proposés")
+    def grab(fmt):
+        pg.evaluate("window.__lastCard=null")
+        pg.locator("#share-"+fmt).click(); pg.wait_for_timeout(400)
+        return pg.evaluate("window.__lastCard && {w:__lastCard.w,h:__lastCard.h,portrait:__lastCard.portrait,d:__lastCard.dataUrl}")
+    c=grab("square")
+    check(c and c["w"]==1080 and c["h"]==1080 and c["portrait"] is False,"carré sans portrait")
+    open("/opt/cursor/artifacts/carte-carree.png","wb").write(base64.b64decode(c["d"].split(",")[1]))
     open("/workspace/v15-card-portrait.png","wb").write(base64.b64decode(c["d"].split(",")[1]))
-    c0=share("jules-torres")
-    check(c0 and c0["w"]==1080 and c0["h"]==1350,"carte sans photo"); check(c0 and c0["portrait"] is False,"pas de portrait sans photo")
-    check(c["size"]>c0["size"],"carte photo plus lourde")
-    pg.goto(BASE+"#/personne/marine-le-pen"); pg.wait_for_selector(".fiche"); pg.wait_for_timeout(900)
+    st=grab("story")
+    check(st and st["w"]==1080 and st["h"]==1920 and st["portrait"] is False,"story sans portrait")
+    open("/opt/cursor/artifacts/carte-story.png","wb").write(base64.b64decode(st["d"].split(",")[1]))
+    check(pg.evaluate("window.__lastCardHadPortrait") is False,"pas de portrait en mémoire")
+    info=pg.evaluate("()=>window.__renderCard('emmanuel-macron',0)")
+    check(info and info["truncated"] is False and info["context"] is True and info["quote"],"citation entière et contexte signalé")
+    long=pg.evaluate("()=>window.__renderCardQuote('eric-zemmour','mot '.repeat(600))")
+    check(long["truncated"] is True and long["dataUrl"]=="","citation impossible : pas d'image coupée")
+    pg.goto(BASE+"#/personne/jules-torres"); pg.wait_for_selector(".fiche [data-act='share']"); pg.wait_for_timeout(300)
+    pg.locator(".fiche [data-act='share']").first.click(); pg.wait_for_selector("#share-sheet:not([hidden])")
+    bare=grab("square")
+    check(bare and bare["portrait"] is False,"monogramme sans photo")
+    pg.goto(BASE+"#/personne/marine-le-pen"); pg.wait_for_selector(".fiche"); pg.wait_for_timeout(400)
     if pg.locator(".fiche [data-act='share-duo']").count():
         pg.evaluate("window.__lastCard=null"); pg.locator(".fiche [data-act='share-duo']").first.click(); pg.wait_for_timeout(500)
         d=pg.evaluate("window.__lastCard && {w:__lastCard.w,portrait:__lastCard.portrait,d:__lastCard.dataUrl}")
-        check(d and d["w"]==1080 and d["portrait"] is True,"duo portrait")
+        check(d and d["w"]==1080 and d["portrait"] is False,"duo sans portrait")
         if d: open("/workspace/v15-card-duo.png","wb").write(base64.b64decode(d["d"].split(",")[1]))
     else: check(False,"pas de duo Le Pen")
+    page=pg.request.get(BASE+"c/emmanuel-macron/0.html")
+    body=page.text()
+    check(page.status==200 and 'property="og:title"' in body and "onrecord-citation" in body,"page de citation")
+    check("og:image" in body and 'property="og:description"' in body,"aperçu Open Graph")
+    quote=next(s["quote"] for n in json.load(open("data.json"))["nodes"] if n["id"]=="emmanuel-macron" for s in n["statements"][:1])
+    check(quote in html.unescape(body),"citation intégrale dans la page")
+    check("<img" not in body,"pas de photo sur la page de partage")
+    pg.goto(BASE+"admin.html")
+    pg.wait_for_selector("#versions")
+    pg.wait_for_selector("text=version-2026-11-18-avant-cartes", timeout=15000)
+    pg.screenshot(path="/opt/cursor/artifacts/admin-versions-mobile.png", full_page=True)
+    desk=b.new_context(viewport={"width":1280,"height":800}).new_page()
+    desk.goto(BASE+"admin.html")
+    desk.wait_for_selector("text=Enregistrer la version actuelle")
+    desk.screenshot(path="/opt/cursor/artifacts/admin-versions-desktop.png", full_page=True)
+    desk.goto(BASE+"#/personne/emmanuel-macron")
+    desk.wait_for_selector(".fiche [data-act='share']")
+    desk.locator(".fiche [data-act='share']").first.click()
+    desk.wait_for_selector("#share-sheet:not([hidden])")
+    check(desk.locator("#share-square").is_enabled(),"partage bureau")
+    desk.screenshot(path="/opt/cursor/artifacts/partage-bureau.png")
+    desk.close()
+    pg.goto(BASE+"#/personne/emmanuel-macron"); pg.wait_for_selector(".fiche [data-act='share']")
+    pg.evaluate("""() => {
+      window.__shared = null;
+      navigator.canShare = () => true;
+      navigator.share = (d) => { window.__shared = { title: d.title, n: (d.files || []).length, type: d.files && d.files[0] && d.files[0].type }; return Promise.resolve(); };
+    }""")
+    pg.locator(".fiche [data-act='share']").first.click()
+    pg.locator("#share-story").click(); pg.wait_for_timeout(300)
+    shared = pg.evaluate("window.__shared")
+    check(shared and shared.get("n") == 1 and shared.get("type") == "image/png", "partage natif du fichier")
     b.close()
 check(not errs,"console "+str(errs[:3]))
 print(f"{ok} ok, {fail} fail"); raise SystemExit(1 if fail else 0)

@@ -1114,3 +1114,6 @@ data["meta"]["counts"]={"persons":sum(n["type"]=="person" for n in N),"orgs":sum
 _out=os.environ.get("ONRECORD_DATA_OUT") or os.path.join(_root,"data.json")
 json.dump(data,open(_out,"w"),ensure_ascii=False,indent=2)
 print(data["meta"]["counts"])
+if os.path.abspath(_out)==os.path.abspath(os.path.join(_root,"data.json")):
+    from tools.share_pages import write_pages
+    print("pages", write_pages(_root, data))

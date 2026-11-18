@@ -1,0 +1,12 @@
+{
+  "_notice": "Versions enregistrées du site. Le retour se fait depuis la page admin, sur GitHub.",
+  "versions": [
+    {
+      "name": "version-2026-11-18-avant-cartes",
+      "date": "2026-11-18T03:49:37+00:00",
+      "note": "Point de restauration avant les cartes partageables et le mécanisme de versions.",
+      "commit": "cbc87d2b0a09ca53b29c308a72e804b03984828f",
+      "github": "https://github.com/farahei-create/cartographie-gaza-extreme-droite/tree/version-2026-11-18-avant-cartes"
+    }
+  ]
+}

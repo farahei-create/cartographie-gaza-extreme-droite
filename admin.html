@@ -53,8 +53,9 @@
     background:#1c1230;color:#f7f3ff;font:inherit;font-weight:700;cursor:pointer;
   }
   .tabs button[aria-selected="true"]{background:#7c3aed;box-shadow:0 0 16px rgba(124,58,237,.55)}
-  button.btn{
+  a.btn,button.btn{
     display:flex;align-items:center;justify-content:center;width:100%;min-height:52px;margin:8px 0;
+    text-decoration:none;box-sizing:border-box;
     border:0;border-radius:999px;background:#7c3aed;color:#fff;font:inherit;font-weight:750;font-size:1.05rem;
     box-shadow:0 0 16px rgba(124,58,237,.45);cursor:pointer;
   }
@@ -66,6 +67,7 @@
   .pv blockquote{margin:8px 0;font-size:1.02rem}
   .pv .k{margin:0;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:#b388ff}
   .pv button{min-height:44px;margin-top:8px;padding:8px 14px;border-radius:999px;border:1px solid rgba(168,85,247,.6);background:transparent;color:#f7f3ff;font:inherit}
+  #version-list button.btn{background:#7c3aed;color:#fff;border:0;width:100%;box-shadow:0 0 16px rgba(124,58,237,.45)}
   #pub-status{font-weight:650}
   #pending-list, #pending-list a{overflow-wrap:anywhere}
   fieldset{border:0;margin:0;padding:0}
@@ -77,6 +79,20 @@
   <p class="mark">ONRECORD</p>
   <h1 class="page-h">Mise à jour</h1>
   <p class="lead">Cette page n’est pas liée depuis le site. Le jeton reste sur cet appareil et ne part que vers api.github.com.</p>
+
+  <section id="versions" class="card">
+    <h2>Versions du site</h2>
+    <p class="hint">Une version est une copie datée du site. Tu peux y revenir plus tard. Rien n’est effacé de l’historique : un retour peut lui-même être annulé.</p>
+    <ol>
+      <li>Choisis « Enregistrer la version actuelle », ou « Revenir à cette version ». Pour un retour, le nom est copié.</li>
+      <li>La page GitHub s’ouvre. Connecte-toi si on te le demande. Clique <strong>Run workflow</strong>. Pour un retour, colle le nom dans Version et écris <strong>REVENIR</strong>.</li>
+      <li>Attends environ une minute. Le site se met à jour tout seul.</li>
+    </ol>
+    <p class="hint">Un retour remet les pages et les citations à cette version, y compris celles du relevé automatique. Elles ne reviennent pas toutes seules, sauf si le relevé du lendemain les retrouve encore dans les 48 heures. La file d’attente, elle, est gardée. Juste avant le retour, l’état actuel est enregistré.</p>
+    <p><a class="btn" href="https://github.com/farahei-create/cartographie-gaza-extreme-droite/actions/workflows/enregistrer-version.yml">Enregistrer la version actuelle</a></p>
+    <div id="version-list">Chargement…</div>
+    <p id="version-status" class="hint"></p>
+  </section>
 
   <section id="pending-queue" class="card">
     <h2>File d’attente du matin</h2>

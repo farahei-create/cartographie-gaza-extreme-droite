@@ -86,6 +86,16 @@ def publish():
         untracked = git("ls-files", "--others", "--exclude-standard", "--", rel)
         if diff.stdout.strip() or staged.stdout.strip() or untracked.stdout.strip():
             paths.append(rel)
+    share = git("status", "--porcelain", "-uall", "--", "c")
+    share_hit = False
+    for line in (share.stdout or "").splitlines():
+        path = line[3:].strip().strip('"')
+        if path.startswith("c/") and path.endswith(".html"):
+            share_hit = True
+            break
+    if share_hit:
+        git("add", "-A", "--", "c")
+        paths.append("c/")
     if not paths:
         print("Arbre inchangé.")
         return 0
