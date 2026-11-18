@@ -112,6 +112,9 @@
 
     computeDerived();
     assignPower();
+    data.nodes.forEach(function (n) {
+      if (n.image && String(n.image).indexOf("img/") === 0) preloadImg(n.image);
+    });
     fillMeta();
     bindDonation();
     bindVideos();
@@ -1762,14 +1765,74 @@
     kept[maxLines - 1] = last.replace(/[\s,;:.]+$/, "") + spare;
     return kept;
   }
-  function paintBackdrop(ctx, w, h) {
+  function localPortrait(n) {
+    var src = n && n.image;
+    if (!src || /^(https?:)?\/\//i.test(String(src))) return null;
+    if (String(src).indexOf("img/") !== 0) return null;
+    var im = readyImg(src);
+    if (!im) return null;
+    try {
+      var probe = document.createElement("canvas"); probe.width = probe.height = 1;
+      probe.getContext("2d").drawImage(im, 0, 0, 1, 1);
+      probe.toDataURL();
+      return im;
+    } catch (e) { return null; }
+  }
+  function creditLine(n) {
+    var cr = n && n.image_credit;
+    if (!cr) return "";
+    var lic = String(cr.license || "");
+    var low = lic.toLowerCase();
+    if (!lic || /cc0|cc-0|public domain|domaine public/.test(low)) return "";
+    var needs = /cc\s*by|cc-by/.test(low) || /european union|portrait officiel|mention|©/.test(low);
+    if (!needs) return "";
+    return "Photo : " + (cr.author || "auteur non précisé") + " · " + lic;
+  }
+  function whiteContrast(r, g, b) {
+    function f(c) { c /= 255; return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); }
+    var L = 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b);
+    return 1.05 / (L + 0.05);
+  }
+  function sampleContrast(ctx, x0, y0, x1, y1) {
+    var min = 21, x, y, d, c;
+    for (y = y0; y <= y1; y += 28) {
+      for (x = x0; x <= x1; x += 36) {
+        d = ctx.getImageData(x, y, 1, 1).data;
+        c = whiteContrast(d[0], d[1], d[2]);
+        if (c < min) min = c;
+      }
+    }
+    return min;
+  }
+  function drawFadedPortrait(ctx, im, w, h) {
+    var x0 = Math.round(w * 0.22), pw = w - x0, cr = coverCrop(im, pw, h);
+    var o = document.createElement("canvas"); o.width = pw; o.height = h;
+    var oc = o.getContext("2d");
+    try { oc.filter = "saturate(.5) contrast(1.04)"; } catch (e) {}
+    oc.drawImage(im, cr[0], cr[1], cr[2], cr[3], 0, 0, pw, h);
+    try { oc.filter = "none"; } catch (e) {}
+    oc.fillStyle = "rgba(18,6,32,.38)"; oc.fillRect(0, 0, pw, h);
+    oc.globalCompositeOperation = "destination-in";
+    var gl = oc.createLinearGradient(0, 0, pw, 0);
+    gl.addColorStop(0, "rgba(0,0,0,0)"); gl.addColorStop(0.22, "rgba(0,0,0,.45)"); gl.addColorStop(0.7, "rgba(0,0,0,.8)"); gl.addColorStop(1, "rgba(0,0,0,.9)");
+    oc.fillStyle = gl; oc.fillRect(0, 0, pw, h);
+    var gb = oc.createLinearGradient(0, 0, 0, h);
+    gb.addColorStop(0, "rgba(0,0,0,.75)"); gb.addColorStop(0.72, "rgba(0,0,0,1)"); gb.addColorStop(1, "rgba(0,0,0,.35)");
+    oc.fillStyle = gb; oc.fillRect(0, 0, pw, h);
+    ctx.save(); ctx.globalAlpha = 0.92; ctx.drawImage(o, x0, 0); ctx.restore();
+    var veil = ctx.createLinearGradient(0, 0, w, 0);
+    veil.addColorStop(0, "rgba(7,3,15,.9)"); veil.addColorStop(0.42, "rgba(7,3,15,.72)"); veil.addColorStop(1, "rgba(7,3,15,.5)");
+    ctx.fillStyle = veil; ctx.fillRect(0, 0, w, h);
+  }
+  function paintBackdrop(ctx, w, h, im) {
     var g = ctx.createLinearGradient(0, 0, w, h);
     g.addColorStop(0, "#07030f"); g.addColorStop(0.42, "#160826"); g.addColorStop(1, "#3b1464");
     ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
+    if (im) drawFadedPortrait(ctx, im, w, h);
     var glow = ctx.createRadialGradient(w * 0.78, h * 0.06, 10, w * 0.72, h * 0.12, w * 0.72);
-    glow.addColorStop(0, "rgba(192,132,252,.42)"); glow.addColorStop(1, "rgba(192,132,252,0)");
+    glow.addColorStop(0, "rgba(192,132,252,.28)"); glow.addColorStop(1, "rgba(192,132,252,0)");
     ctx.fillStyle = glow; ctx.fillRect(0, 0, w, h);
-    ctx.save(); ctx.globalAlpha = 0.045; ctx.strokeStyle = "#d8b4fe"; ctx.lineWidth = 1;
+    ctx.save(); ctx.globalAlpha = 0.04; ctx.strokeStyle = "#d8b4fe"; ctx.lineWidth = 1;
     for (var x = 54; x < w; x += 54) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke(); }
     for (var y = 54; y < h; y += 54) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke(); }
     ctx.restore();
@@ -1785,7 +1848,10 @@
     if (!fit) return null;
     var c = document.createElement("canvas"); c.width = spec.w; c.height = spec.h;
     var ctx = c.getContext("2d");
-    paintBackdrop(ctx, spec.w, spec.h);
+    var im = localPortrait(n);
+    paintBackdrop(ctx, spec.w, spec.h, im);
+    var quoteBottom = Math.min(spec.h - spec.foot, spec.top + fit.lines.length * fit.lh + 8);
+    c.__minContrast = sampleContrast(ctx, spec.pad + 8, spec.top, spec.w - spec.pad - 8, Math.max(spec.top + 24, quoteBottom));
     ctx.textBaseline = "alphabetic"; ctx.textAlign = "left";
     ctx.fillStyle = "#ffffff"; ctx.font = "400 64px " + CARD_DISPLAY;
     ctx.shadowColor = "rgba(139,61,255,.9)"; ctx.shadowBlur = 16;
@@ -1794,7 +1860,9 @@
     ctx.fillStyle = "#c084fc";
     ctx.fillRect(spec.pad, spec.top, 4, fit.lines.length * fit.lh);
     ctx.fillStyle = "#ffffff"; ctx.font = "600 " + fit.size + "px " + CARD_FONT;
+    ctx.shadowColor = "rgba(0,0,0,.72)"; ctx.shadowBlur = 10;
     fit.lines.forEach(function (line, k) { ctx.fillText(line, spec.pad + 22, spec.top + fit.size + k * fit.lh); });
+    ctx.shadowBlur = 0;
     var y = spec.h - spec.foot + 8;
     var inner = spec.w - 2 * spec.pad;
     drawMonogram(ctx, n, spec.pad + 46, y + 46, 42);
@@ -1823,10 +1891,16 @@
       ctx.fillStyle = "#f3e8ff"; ctx.fillText(label, spec.pad + 18, y + 27);
       y += 52;
     }
-    ctx.fillStyle = "rgba(255,255,255,.72)"; ctx.font = "600 26px " + CARD_FONT;
-    ctx.fillText(SITE_HOST, spec.pad, spec.h - 58);
-    c.__truncated = false; c.__fontSize = fit.size; c.__portrait = false; c.__context = hasContext(s);
-    c.__quote = fit.text; c.__format = kind; window.__lastCardHadPortrait = false;
+    ctx.fillStyle = "rgba(255,255,255,.78)"; ctx.font = "600 26px " + CARD_FONT;
+    ctx.fillText(SITE_HOST, spec.pad, spec.h - 64);
+    var credit = im ? creditLine(n) : "";
+    if (credit) {
+      ctx.fillStyle = "rgba(247,243,255,.8)"; ctx.font = "400 16px " + CARD_FONT;
+      ctx.fillText(linesFit(ctx, credit, spec.w - 2 * spec.pad, 16, 1, "400")[0], spec.pad, spec.h - 38);
+    }
+    c.__truncated = false; c.__fontSize = fit.size; c.__portrait = !!im; c.__context = hasContext(s);
+    c.__quote = fit.text; c.__format = kind; c.__credit = credit; c.__tainted = false;
+    window.__lastCardHadPortrait = !!im;
     return c;
   }
   function roundBox(ctx, x, y, w, h, r, fill, stroke) {
@@ -2005,7 +2079,7 @@
     });
     function cardResult(c, statement) {
       if (!c) return { dataUrl: "", truncated: true, refused: true, size: 0, context: hasContext(statement), portrait: false };
-      return { dataUrl: c.toDataURL("image/png"), truncated: false, refused: false, size: c.__fontSize, context: !!c.__context, portrait: false, quote: c.__quote, w: c.width, h: c.height };
+      return { dataUrl: c.toDataURL("image/png"), truncated: false, refused: false, size: c.__fontSize, context: !!c.__context, portrait: !!c.__portrait, quote: c.__quote, w: c.width, h: c.height, credit: c.__credit || "", contrast: c.__minContrast || 0, tainted: !!c.__tainted };
     }
     window.__renderCard = function (id, i) { var s = byId[id].statements[i]; return cardResult(renderFormat("square", byId[id], s), s); };
     window.__renderStory = function (id, i) { var s = byId[id].statements[i]; return cardResult(renderFormat("story", byId[id], s), s); };

@@ -13,7 +13,7 @@ Droit français de la diffamation. Si une source ne les respecte pas, on ne publ
 - Pas de lien de causalité que la source n'écrit pas.
 - Pas de particuliers. Personnes publiques et organisations seulement.
 - Contexte, nuances et démentis dans la même fiche.
-- Photos : Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel dont la réutilisation est explicite (Parlement européen, mention « © European Union »). Jamais de photo de presse, Google Images, capture X/Instagram, image générée. Crédit auteur + licence + lien sur la fiche. L'image de partage (carré et story) : monogramme seulement, pas la photo. Contexte ou démenti : la carte dit « Contexte sur Onrecord ».
+- Photos : Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel dont la réutilisation est explicite (Parlement européen, mention « © European Union »). Jamais de photo de presse, Google Images, capture X/Instagram, image générée. Crédit auteur + licence + lien sur la fiche. L'image de partage reprend cette photo en fondu, seulement si le fichier est déjà dans `img/`. Sans photo : monogramme. Si la licence l'exige (CC BY, mention « © European Union »), le crédit est sur la carte. Contexte ou démenti : la carte dit « Contexte sur Onrecord ».
 - Logos d'organisations : Commons seulement, si la licence ou le statut l'autorise (y compris PD-textlogo). Sinon monogramme.
 - Vidéos : compte du diffuseur d'origine ou compte officiel uniquement.
 - Wikipédia n'est jamais la source unique d'une citation.

@@ -1,4 +1,4 @@
-"""Cartes de citation : monogramme, carré et story, citation entière, pas de portrait."""
+"""Cartes de citation : photo en fondu si elle est hébergée, sinon monogramme."""
 import base64, html, json, os
 from playwright.sync_api import sync_playwright
 BASE="http://localhost:8765/"; ok=fail=0; errs=[]
@@ -7,14 +7,14 @@ def check(c,m):
     if c: ok+=1
     else: fail+=1; print("FAIL:",m)
 import re as _re
-check(int(_re.search(r"onrecord-v(\d+)",open("site/sw.js").read()).group(1))>=49,"sw v49+")
+check(int(_re.search(r"onrecord-v(\d+)",open("site/sw.js").read()).group(1))>=50,"sw v50+")
 os.makedirs("/opt/cursor/artifacts", exist_ok=True)
 os.makedirs("/workspace", exist_ok=True)
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path="/usr/bin/google-chrome")
     pg=b.new_context(viewport={"width":390,"height":844},device_scale_factor=2,accept_downloads=True).new_page()
     pg.on("console",lambda m: m.type=="error" and errs.append(m.text)); pg.on("pageerror",lambda e: errs.append(str(e)))
-    pg.goto(BASE+"#/personne/emmanuel-macron"); pg.wait_for_selector(".fiche [data-act='share']"); pg.wait_for_timeout(400)
+    pg.goto(BASE+"#/personne/emmanuel-macron"); pg.wait_for_selector(".fiche img"); pg.wait_for_function("() => { var im=document.querySelector('.fiche img'); return im && im.complete && im.naturalWidth>0; }")
     pg.locator(".fiche [data-act='share']").first.click()
     pg.wait_for_selector("#share-sheet:not([hidden])")
     check(pg.locator("#share-square").is_enabled() and pg.locator("#share-story").is_enabled(),"deux formats proposés")
@@ -23,21 +23,28 @@ with sync_playwright() as p:
         pg.locator("#share-"+fmt).click(); pg.wait_for_timeout(400)
         return pg.evaluate("window.__lastCard && {w:__lastCard.w,h:__lastCard.h,portrait:__lastCard.portrait,d:__lastCard.dataUrl}")
     c=grab("square")
-    check(c and c["w"]==1080 and c["h"]==1080 and c["portrait"] is False,"carré sans portrait")
+    check(c and c["w"]==1080 and c["h"]==1080 and c["portrait"] is True,"carré avec photo")
     open("/opt/cursor/artifacts/carte-carree.png","wb").write(base64.b64decode(c["d"].split(",")[1]))
     open("/workspace/v15-card-portrait.png","wb").write(base64.b64decode(c["d"].split(",")[1]))
     st=grab("story")
-    check(st and st["w"]==1080 and st["h"]==1920 and st["portrait"] is False,"story sans portrait")
+    check(st and st["w"]==1080 and st["h"]==1920 and st["portrait"] is True,"story avec photo")
     open("/opt/cursor/artifacts/carte-story.png","wb").write(base64.b64decode(st["d"].split(",")[1]))
-    check(pg.evaluate("window.__lastCardHadPortrait") is False,"pas de portrait en mémoire")
+    check(pg.evaluate("window.__lastCardHadPortrait") is True,"portrait en mémoire")
     info=pg.evaluate("()=>window.__renderCard('emmanuel-macron',0)")
-    check(info and info["truncated"] is False and info["context"] is True and info["quote"],"citation entière et contexte signalé")
+    check(info and info["truncated"] is False and info["context"] is True and info["quote"] and info["portrait"] is True,"citation entière, photo, contexte")
+    check(info["tainted"] is False and info["dataUrl"].startswith("data:image/png"),"canvas non tainted")
+    check(info["contrast"] >= 4.5, "contraste du fond sous la citation "+str(info.get("contrast")))
+    check(info["credit"]=="","domaine public : pas de crédit obligatoire")
     long=pg.evaluate("()=>window.__renderCardQuote('eric-zemmour','mot '.repeat(600))")
     check(long["truncated"] is True and long["dataUrl"]=="","citation impossible : pas d'image coupée")
     pg.goto(BASE+"#/personne/jules-torres"); pg.wait_for_selector(".fiche [data-act='share']"); pg.wait_for_timeout(300)
     pg.locator(".fiche [data-act='share']").first.click(); pg.wait_for_selector("#share-sheet:not([hidden])")
     bare=grab("square")
     check(bare and bare["portrait"] is False,"monogramme sans photo")
+    open("/opt/cursor/artifacts/carte-monogramme.png","wb").write(base64.b64decode(bare["d"].split(",")[1]))
+    pg.goto(BASE+"#/personne/caroline-yadan"); pg.wait_for_function("() => { var im=document.querySelector('.fiche img'); return im && im.complete && im.naturalWidth>0; }")
+    credited=pg.evaluate("()=>window.__renderCard('caroline-yadan',0)")
+    check(credited["portrait"] is True and "CC BY" in credited["credit"] and "TrisHR" in credited["credit"], "crédit CC BY "+credited.get("credit",""))
     pg.goto(BASE+"#/personne/marine-le-pen"); pg.wait_for_selector(".fiche"); pg.wait_for_timeout(400)
     if pg.locator(".fiche [data-act='share-duo']").count():
         pg.evaluate("window.__lastCard=null"); pg.locator(".fiche [data-act='share-duo']").first.click(); pg.wait_for_timeout(500)

@@ -4,6 +4,12 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-18 — v50
+
+Tu remets la photo en fondu sur les cartes carrée et story, seulement quand elle est déjà sur la fiche. Sans photo : le monogramme. Le crédit apparaît si la licence le demande. Tu ne touches pas au relevé du matin.
+
+Cache `onrecord-v50`.
+
 ## 2026-11-18 — v49
 
 Tu ne publies aucune phrase. Tu enregistres d'abord l'état du site sous le tag `version-2026-11-18-avant-cartes`. Tu ajoutes deux gestes sur la page admin : enregistrer une version, revenir à une version, sans réécrire l'historique. Tu ajoutes aussi, sur chaque citation, une image carrée et une image story (monogramme, citation entière, lien `/c/…`).
