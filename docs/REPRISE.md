@@ -66,7 +66,11 @@ Thèmes usuels : `Gaza – déclarations`, `France – normalisation de l'extrê
 
 ### Vues
 
-`#/` accueil · `#/sections` · `#/chronologie` · `#/reseau` · `#/pouvoir` échelle · `#/coulisses` · `#/methodologie` · `#/methode` · `#/contribuer` · `#/credits` · `#/personne/<id>` · `#/organisation/<id>`
+`#/` accueil · `#/sections` et `#/chronologie` (onglet Citations) · `#/reseau`, `#/pouvoir`, `#/coulisses` (onglet Liens) · `#/enquete` et `#/enquete/<id>` · `#/methodologie` · `#/methode` · `#/contribuer` · `#/credits` · `#/personne/<id>` · `#/organisation/<id>`
+
+La barre du bas a quatre onglets : Accueil, Citations, Liens, Enquête. Méthode est au pied de page et sur l'accueil. Les anciennes adresses continuent d'ouvrir la même vue. `#/enquete/relier/<id>/<id>` montre le plus court chemin documenté.
+
+`enquete.json` est produit par `python3 tools/hatvp_sync.py` (liste CSV et XML publics de la HATVP, licence ouverte). Le script ne recopie pas l'adresse, la date de naissance, le patrimoine, les enfants, ni le nom du conjoint. L'activité du conjoint n'entre que si la HATVP la publie. Les propriétaires de médias repris dans le fichier viennent des liens déjà datés et sourcés du site. Un montant d'argent n'est ajouté dans `argent` que avec une date et une URL.
 
 ### Service worker
 
@@ -236,6 +240,7 @@ Le numéro vivant du cache est celui de `sw.js`. Les tags `version-…` sont les
 | v48 | Mise à jour du 18/11 | La file d'attente est `auto_pending.json`, à la racine : le dossier `tools/` n'est pas servi par le site. |
 | v49 | Mise à jour du 18/11 | Versions enregistrées et retour en arrière. Cartes de citation carrée et story, monogramme, lien `/c/…`. Tag de départ : `version-2026-11-18-avant-cartes`. |
 | v50 | Mise à jour du 18/11 | Photo déjà hébergée, en fondu, sur les cartes carrée et story. Crédit si la licence l'exige. |
+| v51 | Mise à jour du 18/11 | Barre à quatre onglets, réseau en cartes, enquête HATVP. Tag `version-2026-11-18-avant-enquete`. |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 

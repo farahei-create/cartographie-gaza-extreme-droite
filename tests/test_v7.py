@@ -23,7 +23,7 @@ with sync_playwright() as p:
     pg.goto(BASE + "#/methode"); pg.wait_for_function("window.__route==='methode'")
     check(pg.is_visible("#view-methode h2"), "methode visible")
     check(pg.locator("#view-methode a[href=\"#/contribuer\"]").count() >= 1 and "GitHub" not in pg.content(), "fallback -> contribuer")
-    check(pg.locator("#tabnav a[aria-current=page]").get_attribute("data-tab") == "methodologie", "tab méthode active")
+    check(pg.locator("#view-methode").is_visible() and pg.locator("#footer-methode").count()==1 and pg.locator("#home-methode").count()==1, "méthode au pied et à l'accueil")
     check("mailto" not in pg.inner_html("#view-methode"), "pas d'adresse inventée")
     pg.screenshot(path="v7-methode-mobile.png", full_page=True)
     pg.goto(BASE); pg.wait_for_function("window.__route==='accueil'")

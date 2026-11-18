@@ -1,0 +1,1815 @@
+{
+  "_notice": "Faits publics. Intérêts : open data HATVP (licence ouverte). Pas d'adresse, pas de patrimoine, pas d'enfants, pas de nom de conjoint. L'activité du conjoint n'est recopiée que si la HATVP la publie.",
+  "updated": "2026-11-18",
+  "hatvp_list": "https://www.hatvp.fr/livraison/opendata/liste.csv",
+  "hatvp": {
+    "charles-alloncle": {
+      "person_id": "charles-alloncle",
+      "published": "2025-06-17",
+      "document": "dia",
+      "qualite": "Député de l'Hérault",
+      "url": "https://www.hatvp.fr/pages_nominatives/alloncle-charles-27438",
+      "mandates": [],
+      "activities": [
+        {
+          "value": "Directeur des Opérations — Blank / Pomok (01/2020 – 07/2024)",
+          "date": "01/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/alloncle-charles-27438"
+        },
+        {
+          "value": "Chef de Projet — La Fabrique by CA (01/2019 – 12/2019)",
+          "date": "01/2019",
+          "url": "https://www.hatvp.fr/pages_nominatives/alloncle-charles-27438"
+        },
+        {
+          "value": "Membre jury d'admission Sciences Po - HEC — Fondation Nationale Sciences Politiques (01/2019)",
+          "date": "01/2019",
+          "url": "https://www.hatvp.fr/pages_nominatives/alloncle-charles-27438"
+        }
+      ],
+      "participations": [
+        {
+          "value": "Association politique Unis Pour Servir — Trésorier de l'association",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/alloncle-charles-27438"
+        },
+        {
+          "value": "Association politique Agir en France et en Europe avec François-Xavier Bellamy — Trésorier",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/alloncle-charles-27438"
+        }
+      ],
+      "collaborators": [
+        {
+          "value": "Tabusse Raphaël",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/alloncle-charles-27438"
+        },
+        {
+          "value": "Christophe Coraux",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/alloncle-charles-27438"
+        },
+        {
+          "value": "Dethès Tristan",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/alloncle-charles-27438"
+        },
+        {
+          "value": "Khandani Sheherazade",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/alloncle-charles-27438"
+        }
+      ],
+      "spouse_activity": []
+    },
+    "gabriel-attal": {
+      "person_id": "gabriel-attal",
+      "published": "2025-02-24",
+      "document": "dia",
+      "qualite": "Député des Hauts-de-Seine",
+      "url": "https://www.hatvp.fr/pages_nominatives/attal-gabriel",
+      "mandates": [
+        {
+          "value": "Conseiller municipal (01/2019 – 09/2024)",
+          "date": "01/2019",
+          "url": "https://www.hatvp.fr/pages_nominatives/attal-gabriel"
+        }
+      ],
+      "activities": [
+        {
+          "value": "Secrétaire d'Etat — Ministère de l'Education nationale et de la Jeunsse (01/2019 – 06/2020)",
+          "date": "01/2019",
+          "url": "https://www.hatvp.fr/pages_nominatives/attal-gabriel"
+        },
+        {
+          "value": "Secrétaire d'Etat Porte-parole du Gouvernement — Secrétaire d'Etat Porte-parole du Gouvernement (07/2020 – 05/2022)",
+          "date": "07/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/attal-gabriel"
+        },
+        {
+          "value": "Ministre — Ministère des Comptes Publics (07/2022 – 07/2023)",
+          "date": "07/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/attal-gabriel"
+        },
+        {
+          "value": "Ministre — Ministère de l'Education nationale et de la jeunesse (07/2023 – 01/2024)",
+          "date": "07/2023",
+          "url": "https://www.hatvp.fr/pages_nominatives/attal-gabriel"
+        },
+        {
+          "value": "Premier ministre — Premier ministre (01/2024 – 09/2024)",
+          "date": "01/2024",
+          "url": "https://www.hatvp.fr/pages_nominatives/attal-gabriel"
+        }
+      ],
+      "participations": [],
+      "collaborators": [
+        {
+          "value": "Maxime Cordier",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/attal-gabriel"
+        },
+        {
+          "value": "Antoine Lesieur",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/attal-gabriel"
+        },
+        {
+          "value": "Charlie Vairetty",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/attal-gabriel"
+        }
+      ],
+      "spouse_activity": []
+    },
+    "jordan-bardella": {
+      "person_id": "jordan-bardella",
+      "published": "2025-07-23",
+      "document": "di",
+      "qualite": "Député européen",
+      "url": "https://www.hatvp.fr/pages_nominatives/bardella-jordan-15999",
+      "mandates": [
+        {
+          "value": "Conseiller régional d'Île-de-France (11/2021 – 02/2025)",
+          "date": "11/2021",
+          "url": "https://www.hatvp.fr/pages_nominatives/bardella-jordan-15999"
+        },
+        {
+          "value": "Député au Parlement européen (07/2019)",
+          "date": "07/2019",
+          "url": "https://www.hatvp.fr/pages_nominatives/bardella-jordan-15999"
+        }
+      ],
+      "activities": [
+        {
+          "value": "Auteur — Fayard - Groupe Hachette (11/2024)",
+          "date": "11/2024",
+          "url": "https://www.hatvp.fr/pages_nominatives/bardella-jordan-15999"
+        }
+      ],
+      "participations": [
+        {
+          "value": "Conseil d administration du Rassemblement National — Membre de l'assemblée (Vice-président de 2019 à 2021 Président par intérim de 2021 à 2022 Président de 2022 à aujourd hui)",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bardella-jordan-15999"
+        },
+        {
+          "value": "Groupe Identité & Démocratie (Parlement européen) — 1er Vice-président du groupe",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bardella-jordan-15999"
+        },
+        {
+          "value": "Parti politique européen Identité & Démocratie — Membre du Bureau",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bardella-jordan-15999"
+        },
+        {
+          "value": "Groupe Patriots of Europe (Parlement européen) — Président",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bardella-jordan-15999"
+        },
+        {
+          "value": "Parti politique européen Patriots of Europe — Membre du Bureau",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bardella-jordan-15999"
+        }
+      ],
+      "collaborators": [],
+      "spouse_activity": []
+    },
+    "jean-noel-barrot": {
+      "person_id": "jean-noel-barrot",
+      "published": "2026-04-20",
+      "document": "di",
+      "qualite": "Ministre de l'Europe et des Affaires étrangères",
+      "url": "https://www.hatvp.fr/pages_nominatives/barrot-jean-noel",
+      "mandates": [
+        {
+          "value": "Conseiller régional (06/2021 – 10/2025)",
+          "date": "06/2021",
+          "url": "https://www.hatvp.fr/pages_nominatives/barrot-jean-noel"
+        },
+        {
+          "value": "Député des Yvelines (01/2020 – 07/2022)",
+          "date": "01/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/barrot-jean-noel"
+        },
+        {
+          "value": "Député des Yvelines (07/2024 – 09/2024)",
+          "date": "07/2024",
+          "url": "https://www.hatvp.fr/pages_nominatives/barrot-jean-noel"
+        }
+      ],
+      "activities": [
+        {
+          "value": "Enseignement et recherche — HEC Paris (01/2020 – 07/2022)",
+          "date": "01/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/barrot-jean-noel"
+        },
+        {
+          "value": "Ministre délégué chargé de la Transition numérique et des Télécommunications ministre de l'Economie des Finances et de la Souveraineté industrielle et numérique — République Française (07/2022 – 01/2024)",
+          "date": "07/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/barrot-jean-noel"
+        },
+        {
+          "value": "Ministre délégué auprès du ministre de l'Europe et des Affaires étrangères chargé de l'Europe. — République Française (02/2024 – 09/2024)",
+          "date": "02/2024",
+          "url": "https://www.hatvp.fr/pages_nominatives/barrot-jean-noel"
+        },
+        {
+          "value": "Ministre de l'Europe et des Affaires étrangères — République Française (09/2024 – 09/2025)",
+          "date": "09/2024",
+          "url": "https://www.hatvp.fr/pages_nominatives/barrot-jean-noel"
+        }
+      ],
+      "participations": [
+        {
+          "value": "Gérant",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/barrot-jean-noel"
+        },
+        {
+          "value": "Mouvement Démocrate — Secrétaire général",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/barrot-jean-noel"
+        },
+        {
+          "value": "Mouvement Européen — Vice-président",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/barrot-jean-noel"
+        },
+        {
+          "value": "Mouvement Démocrate — Vice-Président",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/barrot-jean-noel"
+        },
+        {
+          "value": "Commission des Finances de l'Assemblée Nationale — Vice-Président",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/barrot-jean-noel"
+        },
+        {
+          "value": "Etablissement Public Local ILE DE FRANCE MOBILITES — Membre du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/barrot-jean-noel"
+        },
+        {
+          "value": "Sciences Po Ecole d'Affaires Publiques — Membre du Conseil stratégique",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/barrot-jean-noel"
+        },
+        {
+          "value": "Commission des Affaires Etrangères de L'Assemblée Nationale — Président",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/barrot-jean-noel"
+        },
+        {
+          "value": "Liegey Muller Pons (eXplain)",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/barrot-jean-noel"
+        }
+      ],
+      "collaborators": [],
+      "spouse_activity": [
+        {
+          "value": "Sage-femme — Conseil départemental des Yvelines",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/barrot-jean-noel"
+        }
+      ]
+    },
+    "aurore-berge": {
+      "person_id": "aurore-berge",
+      "published": "2026-04-20",
+      "document": "di",
+      "qualite": "Ministre déléguée auprès du Premier ministre, chargée de l'égalité entre les femmes et les hommes et de la lutte contre les discriminations",
+      "url": "https://www.hatvp.fr/pages_nominatives/berge-aurore",
+      "mandates": [
+        {
+          "value": "Conseillère régionale d'Ile de France (06/2021)",
+          "date": "06/2021",
+          "url": "https://www.hatvp.fr/pages_nominatives/berge-aurore"
+        },
+        {
+          "value": "Députée des Yvelines (06/2017 – 07/2023)",
+          "date": "06/2017",
+          "url": "https://www.hatvp.fr/pages_nominatives/berge-aurore"
+        },
+        {
+          "value": "Députée des Yvelines (07/2024 – 12/2024)",
+          "date": "07/2024",
+          "url": "https://www.hatvp.fr/pages_nominatives/berge-aurore"
+        }
+      ],
+      "activities": [
+        {
+          "value": "Ministre des solidarités et des familles — Ministère des solidarités et des familles (07/2023 – 01/2024)",
+          "date": "07/2023",
+          "url": "https://www.hatvp.fr/pages_nominatives/berge-aurore"
+        },
+        {
+          "value": "Ministre — Ministère chargé de l'égalité entre les femmes et les hommes et de la lutte contre les discriminations (01/2024 – 09/2024)",
+          "date": "01/2024",
+          "url": "https://www.hatvp.fr/pages_nominatives/berge-aurore"
+        },
+        {
+          "value": "Ministre — Ministère chargé de l'égalité entre les femmes et les hommes et de la lutte contre les discriminations (12/2024)",
+          "date": "12/2024",
+          "url": "https://www.hatvp.fr/pages_nominatives/berge-aurore"
+        }
+      ],
+      "participations": [
+        {
+          "value": "Centre national du livre — membre bénévole du conseil d'administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/berge-aurore"
+        },
+        {
+          "value": "France Télévisions — Membre bénévole du Conseil d'administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/berge-aurore"
+        },
+        {
+          "value": "Agence Régionale des Espaces Verts d'Ile de France — membre bénévole du conseil d'administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/berge-aurore"
+        },
+        {
+          "value": "PROSONOR — Gérante",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/berge-aurore"
+        },
+        {
+          "value": "OFB — Membre bénévole du Conseil d'administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/berge-aurore"
+        },
+        {
+          "value": "SARL PROSONOR",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/berge-aurore"
+        }
+      ],
+      "collaborators": [],
+      "spouse_activity": [
+        {
+          "value": "Président de la société Victory — Victory",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/berge-aurore"
+        }
+      ]
+    },
+    "xavier-bertrand": {
+      "person_id": "xavier-bertrand",
+      "published": "2022-02-15",
+      "document": "di",
+      "qualite": "Président du conseil régional des Hauts-de-France",
+      "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier",
+      "mandates": [
+        {
+          "value": "President de la Région Hauts de France (06/2021)",
+          "date": "06/2021",
+          "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier"
+        },
+        {
+          "value": "Vice-Président de la Communauté d'agglomération du Saint-Quentinois (07/2020)",
+          "date": "07/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier"
+        },
+        {
+          "value": "conseiller municipal de saint quentin (06/2020)",
+          "date": "06/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier"
+        }
+      ],
+      "activities": [
+        {
+          "value": "Formateur — ESG RH (05/2023)",
+          "date": "05/2023",
+          "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier"
+        },
+        {
+          "value": "Formateur — ESCP Europe (09/2023)",
+          "date": "09/2023",
+          "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier"
+        },
+        {
+          "value": "formateur — Heip (02/2025)",
+          "date": "02/2025",
+          "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier"
+        }
+      ],
+      "participations": [
+        {
+          "value": "Conseil de surveillance du canal seine nord Europe — Président",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier"
+        },
+        {
+          "value": "Grand port de dunkerque — membre du conseil de surveillance",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier"
+        },
+        {
+          "value": "conseil portuaire de de Boulogne et calais — membre de droit",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier"
+        },
+        {
+          "value": "Series Mania — membre du conseil d'administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier"
+        },
+        {
+          "value": "Institut pour la photo — membre de l'assemblée générale",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier"
+        },
+        {
+          "value": "Fonds de garantie — membre",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier"
+        },
+        {
+          "value": "Musee du louvre lens — membre du conseil d'administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier"
+        },
+        {
+          "value": "comité des investisseurs des ports de boulogne et calais — membre du comité stratégique",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier"
+        },
+        {
+          "value": "comité régional de l'emploi — membre du comité plénier",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier"
+        },
+        {
+          "value": "Smalim — membre du comité syndical",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier"
+        },
+        {
+          "value": "comité de pilotage natura 2000 — membre",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier"
+        },
+        {
+          "value": "comité consultatif de la reserve des marais d'isle — membre",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bertrand-xavier"
+        }
+      ],
+      "collaborators": [],
+      "spouse_activity": []
+    },
+    "manuel-bompard": {
+      "person_id": "manuel-bompard",
+      "published": "2025-06-17",
+      "document": "dia",
+      "qualite": "Député des Bouches-du-Rhône",
+      "url": "https://www.hatvp.fr/pages_nominatives/bompard-manuel-16003",
+      "mandates": [
+        {
+          "value": "Député (06/2022 – 06/2024)",
+          "date": "06/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/bompard-manuel-16003"
+        }
+      ],
+      "activities": [],
+      "participations": [
+        {
+          "value": "La France insoumise — Président",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bompard-manuel-16003"
+        }
+      ],
+      "collaborators": [
+        {
+          "value": "Brochart Eve",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bompard-manuel-16003"
+        },
+        {
+          "value": "Bruno Mazel",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bompard-manuel-16003"
+        },
+        {
+          "value": "Serier Cassandra",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bompard-manuel-16003"
+        },
+        {
+          "value": "Bourdier Antoine",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bompard-manuel-16003"
+        }
+      ],
+      "spouse_activity": [
+        {
+          "value": "Directrice de cabinet — La France insoumise",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/bompard-manuel-16003"
+        }
+      ]
+    },
+    "yael-braun-pivet": {
+      "person_id": "yael-braun-pivet",
+      "published": "2025-06-17",
+      "document": "dia",
+      "qualite": "Députée des Yvelines",
+      "url": "https://www.hatvp.fr/pages_nominatives/braun-pivet-yael",
+      "mandates": [
+        {
+          "value": "Conseillère municipale Le Vésinet (06/2020 – 03/2026)",
+          "date": "06/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/braun-pivet-yael"
+        },
+        {
+          "value": "Députée (06/2022 – 06/2024)",
+          "date": "06/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/braun-pivet-yael"
+        }
+      ],
+      "activities": [
+        {
+          "value": "Ministre des Outre-Mer — Ministère des Outre-Mer (05/2022 – 06/2022)",
+          "date": "05/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/braun-pivet-yael"
+        }
+      ],
+      "participations": [
+        {
+          "value": "La Chaîne Parlementaire — Membre du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/braun-pivet-yael"
+        },
+        {
+          "value": "L'OREAL",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/braun-pivet-yael"
+        },
+        {
+          "value": "Sopra Steria Group",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/braun-pivet-yael"
+        },
+        {
+          "value": "Crédit Agricole",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/braun-pivet-yael"
+        },
+        {
+          "value": "Totalénergies",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/braun-pivet-yael"
+        },
+        {
+          "value": "Axa",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/braun-pivet-yael"
+        },
+        {
+          "value": "LVMH",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/braun-pivet-yael"
+        },
+        {
+          "value": "Hermès intl",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/braun-pivet-yael"
+        },
+        {
+          "value": "BNP Parisbas",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/braun-pivet-yael"
+        },
+        {
+          "value": "Engie",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/braun-pivet-yael"
+        }
+      ],
+      "collaborators": [
+        {
+          "value": "Rober Sabine",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/braun-pivet-yael"
+        },
+        {
+          "value": "Halberstadt Thomas",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/braun-pivet-yael"
+        }
+      ],
+      "spouse_activity": [
+        {
+          "value": "L'OREAL",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/braun-pivet-yael"
+        }
+      ]
+    },
+    "sebastien-chenu": {
+      "person_id": "sebastien-chenu",
+      "published": "2025-06-17",
+      "document": "dia",
+      "qualite": "Député du Nord",
+      "url": "https://www.hatvp.fr/pages_nominatives/chenu-sebastien",
+      "mandates": [
+        {
+          "value": "Conseiller régional des hauts de france (06/2021)",
+          "date": "06/2021",
+          "url": "https://www.hatvp.fr/pages_nominatives/chenu-sebastien"
+        },
+        {
+          "value": "Député (06/2022 – 06/2024)",
+          "date": "06/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/chenu-sebastien"
+        }
+      ],
+      "activities": [
+        {
+          "value": "Cellule idées images co-responsable — Front national (01/2017 – 05/2017)",
+          "date": "01/2017",
+          "url": "https://www.hatvp.fr/pages_nominatives/chenu-sebastien"
+        },
+        {
+          "value": "correcteur/examinateur de jury — INSEEC (08/2023 – 08/2023)",
+          "date": "08/2023",
+          "url": "https://www.hatvp.fr/pages_nominatives/chenu-sebastien"
+        }
+      ],
+      "participations": [],
+      "collaborators": [
+        {
+          "value": "Andris Régine",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/chenu-sebastien"
+        },
+        {
+          "value": "VALENTIN Oceane",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/chenu-sebastien"
+        },
+        {
+          "value": "Maximilien MENAND-CHAMBON",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/chenu-sebastien"
+        },
+        {
+          "value": "Théo Lemaire",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/chenu-sebastien"
+        },
+        {
+          "value": "Séverine Bouillez",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/chenu-sebastien"
+        }
+      ],
+      "spouse_activity": [
+        {
+          "value": "Député",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/chenu-sebastien"
+        }
+      ]
+    },
+    "eric-ciotti": {
+      "person_id": "eric-ciotti",
+      "published": "2025-06-17",
+      "document": "dia",
+      "qualite": "Député des Alpes-Maritimes",
+      "url": "https://www.hatvp.fr/pages_nominatives/ciotti-eric",
+      "mandates": [
+        {
+          "value": "Conseiller départemental (06/2021)",
+          "date": "06/2021",
+          "url": "https://www.hatvp.fr/pages_nominatives/ciotti-eric"
+        },
+        {
+          "value": "Député (06/2022)",
+          "date": "06/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/ciotti-eric"
+        }
+      ],
+      "activities": [],
+      "participations": [
+        {
+          "value": "Syndicat mixte pour le developpement de la vallée de la Vésubie et du Valdeblore — Membre du comité syndical désigné par le Département des Alpes-Maritimes",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/ciotti-eric"
+        },
+        {
+          "value": "SMIAGE — Membre représentant désigné par le Département des Alpes-Maritimes",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/ciotti-eric"
+        },
+        {
+          "value": "EHPAD Sainte Croix — Membre représentant désigné par le Département des Alpes-Maritimes",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/ciotti-eric"
+        },
+        {
+          "value": "Syndicat mixte pour l'aménagement et l''exploitation de la station d'Isola 2000 — Membre représentant désigné par le Département des Alpes-Maritimes",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/ciotti-eric"
+        },
+        {
+          "value": "Association Côte d'Azur France Tourisme — Membre au CA représentant désigné par le Département des Alpes-Maritimes",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/ciotti-eric"
+        },
+        {
+          "value": "SDIS — Membre représentant désigné par le Département des Alpes-Maritimes",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/ciotti-eric"
+        },
+        {
+          "value": "Syndicat mixte de la station de Roubion Les Buisses — Membre représentant désigné par le Département des Alpes-Maritimes",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/ciotti-eric"
+        },
+        {
+          "value": "Syndicat mixte des stations du Mercantour — Membre délégué représentant désigné par le Département des Alpes-Maritimes",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/ciotti-eric"
+        },
+        {
+          "value": "Société anonyme Aéroports de la Côte d'Azur — Membre désigné par le Département des Alpes-Maritimes",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/ciotti-eric"
+        }
+      ],
+      "collaborators": [
+        {
+          "value": "ROS Carine",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/ciotti-eric"
+        },
+        {
+          "value": "FARRUGIA-PASCUAL Cécile",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/ciotti-eric"
+        },
+        {
+          "value": "LANGENFELD Frédéric",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/ciotti-eric"
+        },
+        {
+          "value": "INARD Gaëtan",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/ciotti-eric"
+        }
+      ],
+      "spouse_activity": []
+    },
+    "gerald-darmanin": {
+      "person_id": "gerald-darmanin",
+      "published": "2026-04-20",
+      "document": "di",
+      "qualite": "Garde des Sceaux, ministre de la Justice",
+      "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald",
+      "mandates": [
+        {
+          "value": "Maire de Tourcoing (04/2014 – 09/2017)",
+          "date": "04/2014",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Vice Président au Conseil Régional (01/2016 – 09/2017)",
+          "date": "01/2016",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Vice Président de la MEL (05/2014 – 11/2018)",
+          "date": "05/2014",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Premier adjoint à la Mairie de Tourcoing (09/2017 – 03/2020)",
+          "date": "09/2017",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Conseiller régional (09/2017 – 07/2020)",
+          "date": "09/2017",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Conseiller métropolitain (01/2022 – 12/2022)",
+          "date": "01/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Maire de Tourcoing (05/2020 – 09/2020)",
+          "date": "05/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Conseiller municipal délégué à l'attractivité de la ville de Tourcoing (01/2022 – 12/2022)",
+          "date": "01/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Conseiller départemental (06/2021 – 08/2022)",
+          "date": "06/2021",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Député du Nord (07/2024 – 12/2024)",
+          "date": "07/2024",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Conseiller municipal délégué Chargé de l'attractivité de Tourcoing (01/2025 – 09/2025)",
+          "date": "01/2025",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Conseiller métropolitain (01/2025 – 09/2025)",
+          "date": "01/2025",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        }
+      ],
+      "activities": [
+        {
+          "value": "Ministre — Ministère de l'action et des comptes publics (05/2017 – 07/2020)",
+          "date": "05/2017",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Ministre — Ministère de l'Intérieur (07/2020)",
+          "date": "07/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Droits d'auteurs suite à la publication d'ouvrages — Humensis (11/2017 – 01/2021)",
+          "date": "11/2017",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Député du Nord — Assemblée Nationale (08/2024 – 12/2024)",
+          "date": "08/2024",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "HUMENSIS (01/2024 – 12/2024)",
+          "date": "01/2024",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Ministre de la Justice — ministère de la justice (01/2025 – 09/2025)",
+          "date": "01/2025",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Droits d'auteurs suite à la publication d'ouvrages — Humensis (01/2025 – 09/2025)",
+          "date": "01/2025",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        }
+      ],
+      "participations": [
+        {
+          "value": "SEM VR — Président du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "SPL Euralille — Membre du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "CH Dron — Présidence du Conseil de Surveillance",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Tourcoing Lille Métropole — Présidence du Conseil de Surveillance",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Lille Agency — Administrateur",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "LMH — Administrateur",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Opéra de Lille — Membre du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Pictanovo — Membre du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Le Fresnoy — Membre du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "SPEL — Membre du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "IEP de Lille — Membre du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "Assemblée des Régions d'Europe — Membre",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        }
+      ],
+      "collaborators": [],
+      "spouse_activity": [
+        {
+          "value": "Psychologue en libéral",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        },
+        {
+          "value": "psychologue — Association Les yeux dans la tête",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/darmanin-gerald"
+        }
+      ]
+    },
+    "raphael-glucksmann": {
+      "person_id": "raphael-glucksmann",
+      "published": "2025-07-22",
+      "document": "di",
+      "qualite": "Député européen",
+      "url": "https://www.hatvp.fr/pages_nominatives/glucksmann-raphael-16012",
+      "mandates": [
+        {
+          "value": "Député européen (07/2019 – 07/2024)",
+          "date": "07/2019",
+          "url": "https://www.hatvp.fr/pages_nominatives/glucksmann-raphael-16012"
+        }
+      ],
+      "activities": [
+        {
+          "value": "Ecrivain - droits d'auteur — Allary editions (01/2019)",
+          "date": "01/2019",
+          "url": "https://www.hatvp.fr/pages_nominatives/glucksmann-raphael-16012"
+        }
+      ],
+      "participations": [
+        {
+          "value": "Place publique - parti politique — Co-Président",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/glucksmann-raphael-16012"
+        }
+      ],
+      "collaborators": [],
+      "spouse_activity": [
+        {
+          "value": "Journaliste — Radio France et Marinca Prod",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/glucksmann-raphael-16012"
+        }
+      ]
+    },
+    "yannick-jadot": {
+      "person_id": "yannick-jadot",
+      "published": "2024-05-13",
+      "document": "dia",
+      "qualite": "Sénateur de Paris",
+      "url": "https://www.hatvp.fr/pages_nominatives/jadot-yannick",
+      "mandates": [
+        {
+          "value": "Député européen (07/2018 – 09/2023)",
+          "date": "07/2018",
+          "url": "https://www.hatvp.fr/pages_nominatives/jadot-yannick"
+        }
+      ],
+      "activities": [
+        {
+          "value": "Editions les Liens qui libèrent (11/2018 – 12/2018)",
+          "date": "11/2018",
+          "url": "https://www.hatvp.fr/pages_nominatives/jadot-yannick"
+        },
+        {
+          "value": "Editions Les petits Matins (01/2022 – 02/2022)",
+          "date": "01/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/jadot-yannick"
+        }
+      ],
+      "participations": [
+        {
+          "value": "Energie Partagée Investissement",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/jadot-yannick"
+        }
+      ],
+      "collaborators": [
+        {
+          "value": "Dumont Axel",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/jadot-yannick"
+        },
+        {
+          "value": "Valtille Bastien",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/jadot-yannick"
+        }
+      ],
+      "spouse_activity": []
+    },
+    "sarah-knafo": {
+      "person_id": "sarah-knafo",
+      "published": "2025-07-22",
+      "document": "di",
+      "qualite": "Députée européenne",
+      "url": "https://www.hatvp.fr/pages_nominatives/knafo-sarah-24426",
+      "mandates": [],
+      "activities": [
+        {
+          "value": "Secrétaire générale fondatrice des Parents Vigilants — Reconquête (09/2021 – 06/2024)",
+          "date": "09/2021",
+          "url": "https://www.hatvp.fr/pages_nominatives/knafo-sarah-24426"
+        },
+        {
+          "value": "Magistrate — Cour des comptes (01/2020 – 09/2021)",
+          "date": "01/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/knafo-sarah-24426"
+        },
+        {
+          "value": "Elève — Ecole nationale d'administration (01/2018 – 12/2019)",
+          "date": "01/2018",
+          "url": "https://www.hatvp.fr/pages_nominatives/knafo-sarah-24426"
+        },
+        {
+          "value": "Maître de conférences (droit constitutionnel) et jury d admission — Sciences Po Paris (09/2020 – 05/2021)",
+          "date": "09/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/knafo-sarah-24426"
+        },
+        {
+          "value": "Enseignante en Prep'ENA — INST ETUDES ECONOMIQUES COMMERCIALES (01/2021 – 12/2021)",
+          "date": "01/2021",
+          "url": "https://www.hatvp.fr/pages_nominatives/knafo-sarah-24426"
+        },
+        {
+          "value": "Enseignante en Prep'ENA — IPESUP (01/2020 – 12/2023)",
+          "date": "01/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/knafo-sarah-24426"
+        },
+        {
+          "value": "Série droits d auteur — Inof production (07/2024 – 12/2024)",
+          "date": "07/2024",
+          "url": "https://www.hatvp.fr/pages_nominatives/knafo-sarah-24426"
+        }
+      ],
+      "participations": [
+        {
+          "value": "Reconquête — Co-fondatrice et membre du bureau exécutif",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/knafo-sarah-24426"
+        },
+        {
+          "value": "Alexandre et Aristote — Présidente-Fondatrice",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/knafo-sarah-24426"
+        }
+      ],
+      "collaborators": [],
+      "spouse_activity": [
+        {
+          "value": "Fondateur et Président — Reconquête",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/knafo-sarah-24426"
+        }
+      ]
+    },
+    "marine-le-pen": {
+      "person_id": "marine-le-pen",
+      "published": "2025-06-17",
+      "document": "dia",
+      "qualite": "Députée du Pas-de-Calais",
+      "url": "https://www.hatvp.fr/pages_nominatives/le-pen-marine",
+      "mandates": [
+        {
+          "value": "Conseiller départemental (06/2021 – 11/2025)",
+          "date": "06/2021",
+          "url": "https://www.hatvp.fr/pages_nominatives/le-pen-marine"
+        },
+        {
+          "value": "Député (06/2022 – 06/2024)",
+          "date": "06/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/le-pen-marine"
+        }
+      ],
+      "activities": [
+        {
+          "value": "Élevage de chats — Marine Le Pen (02/2021)",
+          "date": "02/2021",
+          "url": "https://www.hatvp.fr/pages_nominatives/le-pen-marine"
+        }
+      ],
+      "participations": [
+        {
+          "value": "Rassemblement National — Membre du bureau exécutif (bureau du conseil d'administration du RN) et présidente de groupe à l'AN",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/le-pen-marine"
+        }
+      ],
+      "collaborators": [
+        {
+          "value": "RIBLE Raphael",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/le-pen-marine"
+        },
+        {
+          "value": "de RIGNÉ Arnaud",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/le-pen-marine"
+        },
+        {
+          "value": "Ambroise de RANCOURT",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/le-pen-marine"
+        }
+      ],
+      "spouse_activity": []
+    },
+    "julien-odoul": {
+      "person_id": "julien-odoul",
+      "published": "2025-06-17",
+      "document": "dia",
+      "qualite": "Député de l'Yonne",
+      "url": "https://www.hatvp.fr/pages_nominatives/odoul-julien-24148",
+      "mandates": [
+        {
+          "value": "Conseiller régional de Bourgogne-Franche-Comté (06/2021)",
+          "date": "06/2021",
+          "url": "https://www.hatvp.fr/pages_nominatives/odoul-julien-24148"
+        },
+        {
+          "value": "Député (06/2022 – 06/2024)",
+          "date": "06/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/odoul-julien-24148"
+        }
+      ],
+      "activities": [
+        {
+          "value": "Collaborateur parlementaire — Assemblée nationale (03/2018 – 06/2022)",
+          "date": "03/2018",
+          "url": "https://www.hatvp.fr/pages_nominatives/odoul-julien-24148"
+        },
+        {
+          "value": "Chargé de mission — Rassemblement National (05/2021 – 06/2021)",
+          "date": "05/2021",
+          "url": "https://www.hatvp.fr/pages_nominatives/odoul-julien-24148"
+        }
+      ],
+      "participations": [],
+      "collaborators": [
+        {
+          "value": "Madeleine Patricia",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/odoul-julien-24148"
+        },
+        {
+          "value": "Perret Thomas",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/odoul-julien-24148"
+        },
+        {
+          "value": "Massard Ludovic",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/odoul-julien-24148"
+        },
+        {
+          "value": "Fernique Alexandre",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/odoul-julien-24148"
+        }
+      ],
+      "spouse_activity": [
+        {
+          "value": "néant — néant",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/odoul-julien-24148"
+        }
+      ]
+    },
+    "philippe-olivier": {
+      "person_id": "philippe-olivier",
+      "published": "2025-07-22",
+      "document": "di",
+      "qualite": "Député européen",
+      "url": "https://www.hatvp.fr/pages_nominatives/olivier-philippe-16022",
+      "mandates": [
+        {
+          "value": "Député européen (07/2019 – 08/2024)",
+          "date": "07/2019",
+          "url": "https://www.hatvp.fr/pages_nominatives/olivier-philippe-16022"
+        }
+      ],
+      "activities": [
+        {
+          "value": "Conseiller Spécial — FNUF (01/2019 – 06/2019)",
+          "date": "01/2019",
+          "url": "https://www.hatvp.fr/pages_nominatives/olivier-philippe-16022"
+        }
+      ],
+      "participations": [
+        {
+          "value": "100% Draveil — Association loi 1901",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/olivier-philippe-16022"
+        },
+        {
+          "value": "Kherillo SARL",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/olivier-philippe-16022"
+        }
+      ],
+      "collaborators": [],
+      "spouse_activity": [
+        {
+          "value": "Mandat électif — Conseillère régionale",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/olivier-philippe-16022"
+        }
+      ]
+    },
+    "mathilde-panot": {
+      "person_id": "mathilde-panot",
+      "published": "2025-06-17",
+      "document": "dia",
+      "qualite": "Députée du Val-de-Marne",
+      "url": "https://www.hatvp.fr/pages_nominatives/panot-mathilde",
+      "mandates": [
+        {
+          "value": "Députée (06/2022 – 06/2024)",
+          "date": "06/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/panot-mathilde"
+        }
+      ],
+      "activities": [],
+      "participations": [
+        {
+          "value": "Fonds de Dotation Institut la Boétie — Trésorière",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/panot-mathilde"
+        },
+        {
+          "value": "Formation Politique \"Union Populaire\" — Secrétaire",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/panot-mathilde"
+        }
+      ],
+      "collaborators": [
+        {
+          "value": "Helmi M'Rabet",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/panot-mathilde"
+        },
+        {
+          "value": "Elise TROUVE-BUISSON",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/panot-mathilde"
+        },
+        {
+          "value": "Clément Morel",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/panot-mathilde"
+        },
+        {
+          "value": "François Jarlier",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/panot-mathilde"
+        },
+        {
+          "value": "Lara Bigorre",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/panot-mathilde"
+        },
+        {
+          "value": "Maxime Dacalor",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/panot-mathilde"
+        }
+      ],
+      "spouse_activity": []
+    },
+    "valerie-pecresse": {
+      "person_id": "valerie-pecresse",
+      "published": "2022-02-15",
+      "document": "di",
+      "qualite": "Présidente du conseil régional d'Île-de-France",
+      "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie",
+      "mandates": [
+        {
+          "value": "Conseillère Municipale de Vélizy Villacoublay (03/2020)",
+          "date": "03/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        },
+        {
+          "value": "Conseillère communautaire de Versailles Grand Parc (07/2020)",
+          "date": "07/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        }
+      ],
+      "activities": [
+        {
+          "value": "Président — Conseil Régional Ile de France (01/2016)",
+          "date": "01/2016",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        },
+        {
+          "value": "Auteur — Editions Robert Laffont (01/2016 – 12/2023)",
+          "date": "01/2016",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        }
+      ],
+      "participations": [
+        {
+          "value": "Ile de France Mobilités — Présidente du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        },
+        {
+          "value": "Etablissement Public d'Aménagement Paris Saclay — Présidente du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        },
+        {
+          "value": "Etablissement Public Foncier d'Ile de France — Membre du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        },
+        {
+          "value": "Institut Paris Region — Présidente du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        },
+        {
+          "value": "Comité d'Organisation des Jeux Olympiques et Paralympiques (COJO) — Membre du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        },
+        {
+          "value": "Etablissement public Société de Livraison des Ouvrages Olympiques (SOLIDEO) — Membre du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        },
+        {
+          "value": "Grand Paris Aménagement — Membre du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        },
+        {
+          "value": "Fondation Universités de Paris — Membre du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        },
+        {
+          "value": "Aéroports de Paris — Censeur du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        },
+        {
+          "value": "Syndicat Mixte Paris Métropole — Membre du Bureau",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        },
+        {
+          "value": "Association des Régions de France — Premier Vice Président",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        },
+        {
+          "value": "SEM Régionale Ile de France Loisirs — Membre du Conseil d'Administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        }
+      ],
+      "collaborators": [],
+      "spouse_activity": [
+        {
+          "value": "Président Exécutif - Aluminium — Rio Tinto (Royaume Uni)",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        },
+        {
+          "value": "Gérant — JPCR Conseil SAS",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        },
+        {
+          "value": "Administrateur — John Cockerill (Belgique)",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pecresse-valerie"
+        }
+      ]
+    },
+    "kevin-pfeffer": {
+      "person_id": "kevin-pfeffer",
+      "published": "2025-06-17",
+      "document": "dia",
+      "qualite": "Député de la Moselle",
+      "url": "https://www.hatvp.fr/pages_nominatives/pfeffer-kevin-24162",
+      "mandates": [
+        {
+          "value": "Conseiller régional GRAND EST (01/2017 – 08/2022)",
+          "date": "01/2017",
+          "url": "https://www.hatvp.fr/pages_nominatives/pfeffer-kevin-24162"
+        },
+        {
+          "value": "Conseiller municipal Stiring-Wendel (06/2020)",
+          "date": "06/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/pfeffer-kevin-24162"
+        },
+        {
+          "value": "Conseiller communautaire Forbach Porte de France (06/2020)",
+          "date": "06/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/pfeffer-kevin-24162"
+        },
+        {
+          "value": "Député de la Moselle (06/2022)",
+          "date": "06/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/pfeffer-kevin-24162"
+        }
+      ],
+      "activities": [
+        {
+          "value": "Chargé de mission — Front National puis Rassemblement National (01/2019 – 06/2022)",
+          "date": "01/2019",
+          "url": "https://www.hatvp.fr/pages_nominatives/pfeffer-kevin-24162"
+        }
+      ],
+      "participations": [
+        {
+          "value": "RASSEMBLEMENT NATIONAL — Membre du conseil d'administration (bureau national)",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pfeffer-kevin-24162"
+        },
+        {
+          "value": "Association M LA FRANCE — Président",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pfeffer-kevin-24162"
+        },
+        {
+          "value": "Association de financement du RASSEMBLEMENT NATIONAL — Trésorier",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pfeffer-kevin-24162"
+        },
+        {
+          "value": "Associations de financement des fédérations départementales RN — Trésorier",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pfeffer-kevin-24162"
+        },
+        {
+          "value": "Associations de gestion des fédérations départementales RN — Trésorier",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pfeffer-kevin-24162"
+        },
+        {
+          "value": "RASSEMBLEMENT BLEU MARINE — Trésorier",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pfeffer-kevin-24162"
+        },
+        {
+          "value": "IFOREL — Membre du conseil d'administration",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pfeffer-kevin-24162"
+        }
+      ],
+      "collaborators": [
+        {
+          "value": "Louis CLISSON",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pfeffer-kevin-24162"
+        },
+        {
+          "value": "Josiane MARISON",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pfeffer-kevin-24162"
+        },
+        {
+          "value": "Krysten RICHARD",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/pfeffer-kevin-24162"
+        }
+      ],
+      "spouse_activity": []
+    },
+    "chloe-ridel": {
+      "person_id": "chloe-ridel",
+      "published": "2025-07-23",
+      "document": "di",
+      "qualite": "Députée européenne",
+      "url": "https://www.hatvp.fr/pages_nominatives/ridel-chloe-27400",
+      "mandates": [],
+      "activities": [
+        {
+          "value": "Administratrice civile — Ministère de l'économie et des finances (07/2019 – 07/2020)",
+          "date": "07/2019",
+          "url": "https://www.hatvp.fr/pages_nominatives/ridel-chloe-27400"
+        },
+        {
+          "value": "Rapporteure au sein de la délégation interministérielle aux restructurations d'entreprises — Ministère de l'économie et des finances (07/2020 – 04/2023)",
+          "date": "07/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/ridel-chloe-27400"
+        },
+        {
+          "value": "Cheffe de bureau — Ministère des affaires sociales (05/2023 – 06/2024)",
+          "date": "05/2023",
+          "url": "https://www.hatvp.fr/pages_nominatives/ridel-chloe-27400"
+        }
+      ],
+      "participations": [
+        {
+          "value": "Association Mieux Voter — Présidente",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/ridel-chloe-27400"
+        }
+      ],
+      "collaborators": [],
+      "spouse_activity": [
+        {
+          "value": "Parti socialiste de Belgique francophone",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/ridel-chloe-27400"
+        }
+      ]
+    },
+    "charles-rodwell": {
+      "person_id": "charles-rodwell",
+      "published": "2025-06-17",
+      "document": "dia",
+      "qualite": "Député des Yvelines",
+      "url": "https://www.hatvp.fr/pages_nominatives/rodwell-charles-24279",
+      "mandates": [
+        {
+          "value": "Adjoint au maire de Versailles (05/2020 – 06/2022)",
+          "date": "05/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/rodwell-charles-24279"
+        },
+        {
+          "value": "Conseiller communautaire de Versailles Grand Parc (07/2020 – 06/2024)",
+          "date": "07/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/rodwell-charles-24279"
+        },
+        {
+          "value": "Conseiller municipal de Versailles (06/2022 – 06/2024)",
+          "date": "06/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/rodwell-charles-24279"
+        },
+        {
+          "value": "Député de la première circonscription des Yvelines (06/2022 – 06/2024)",
+          "date": "06/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/rodwell-charles-24279"
+        }
+      ],
+      "activities": [
+        {
+          "value": "Conseiller discours et prospective — Direction Générale du Trésor Ministère de l'Economie et des Finances (09/2021 – 05/2022)",
+          "date": "09/2021",
+          "url": "https://www.hatvp.fr/pages_nominatives/rodwell-charles-24279"
+        },
+        {
+          "value": "Chargé de mission auprès du Directeur de la Stratégie — Enedis (02/2021 – 07/2021)",
+          "date": "02/2021",
+          "url": "https://www.hatvp.fr/pages_nominatives/rodwell-charles-24279"
+        }
+      ],
+      "participations": [],
+      "collaborators": [
+        {
+          "value": "Guillaume Adrien Anglars",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/rodwell-charles-24279"
+        },
+        {
+          "value": "Alexandre Teyssandier",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/rodwell-charles-24279"
+        },
+        {
+          "value": "Lucas del Castillo",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/rodwell-charles-24279"
+        }
+      ],
+      "spouse_activity": []
+    },
+    "sandrine-rousseau": {
+      "person_id": "sandrine-rousseau",
+      "published": "2025-06-17",
+      "document": "dia",
+      "qualite": "Députée de Paris",
+      "url": "https://www.hatvp.fr/pages_nominatives/rousseau-sandrine-24202",
+      "mandates": [
+        {
+          "value": "Deputé (06/2022 – 06/2024)",
+          "date": "06/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/rousseau-sandrine-24202"
+        }
+      ],
+      "activities": [
+        {
+          "value": "Enseignante Chercheuse — Université de Lille (01/2016)",
+          "date": "01/2016",
+          "url": "https://www.hatvp.fr/pages_nominatives/rousseau-sandrine-24202"
+        },
+        {
+          "value": "Enseignement — SciencesPo Lille (01/2022 – 07/2022)",
+          "date": "01/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/rousseau-sandrine-24202"
+        },
+        {
+          "value": "Editorial — BFM TV (01/2022 – 07/2022)",
+          "date": "01/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/rousseau-sandrine-24202"
+        }
+      ],
+      "participations": [
+        {
+          "value": "Co-gérante",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/rousseau-sandrine-24202"
+        }
+      ],
+      "collaborators": [
+        {
+          "value": "Théo Garcia Badin",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/rousseau-sandrine-24202"
+        },
+        {
+          "value": "Fourniguet Alexandra",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/rousseau-sandrine-24202"
+        },
+        {
+          "value": "Bikouloulou Annah",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/rousseau-sandrine-24202"
+        }
+      ],
+      "spouse_activity": [
+        {
+          "value": "Ministère de l'Agriculture",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/rousseau-sandrine-24202"
+        }
+      ]
+    },
+    "caroline-yadan": {
+      "person_id": "caroline-yadan",
+      "published": "2025-06-17",
+      "document": "dia",
+      "qualite": "Députée représentant les Français établis hors de France",
+      "url": "https://www.hatvp.fr/pages_nominatives/yadan-caroline-24503",
+      "mandates": [
+        {
+          "value": "DEPUTEE (06/2022 – 06/2024)",
+          "date": "06/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/yadan-caroline-24503"
+        }
+      ],
+      "activities": [
+        {
+          "value": "avocat (01/2023 – 12/2023)",
+          "date": "01/2023",
+          "url": "https://www.hatvp.fr/pages_nominatives/yadan-caroline-24503"
+        },
+        {
+          "value": "Avocat (01/2022 – 12/2022)",
+          "date": "01/2022",
+          "url": "https://www.hatvp.fr/pages_nominatives/yadan-caroline-24503"
+        },
+        {
+          "value": "AVOCAT (01/2024 – 12/2024)",
+          "date": "01/2024",
+          "url": "https://www.hatvp.fr/pages_nominatives/yadan-caroline-24503"
+        },
+        {
+          "value": "AVOCAT (01/2019 – 12/2019)",
+          "date": "01/2019",
+          "url": "https://www.hatvp.fr/pages_nominatives/yadan-caroline-24503"
+        },
+        {
+          "value": "AVOCAT (01/2020 – 12/2020)",
+          "date": "01/2020",
+          "url": "https://www.hatvp.fr/pages_nominatives/yadan-caroline-24503"
+        },
+        {
+          "value": "AVOCAT (01/2021 – 12/2021)",
+          "date": "01/2021",
+          "url": "https://www.hatvp.fr/pages_nominatives/yadan-caroline-24503"
+        }
+      ],
+      "participations": [
+        {
+          "value": "CO GERANTE",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/yadan-caroline-24503"
+        },
+        {
+          "value": "SELARL YADAN &BENGHOZI AVOCATS — CO GERANTE",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/yadan-caroline-24503"
+        },
+        {
+          "value": "SELARL Yadan & Benghozi avocats",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/yadan-caroline-24503"
+        },
+        {
+          "value": "YAD FAMILY",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/yadan-caroline-24503"
+        }
+      ],
+      "collaborators": [
+        {
+          "value": "LEVEQUE ALINE",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/yadan-caroline-24503"
+        },
+        {
+          "value": "LEOPOLD Sebastien",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/yadan-caroline-24503"
+        },
+        {
+          "value": "PITON SAINT MARTIN JULIE",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/yadan-caroline-24503"
+        }
+      ],
+      "spouse_activity": [
+        {
+          "value": "COMEDIEN — INTERMITTENT DU SPECTACLE",
+          "date": "",
+          "url": "https://www.hatvp.fr/pages_nominatives/yadan-caroline-24503"
+        }
+      ]
+    }
+  },
+  "argent": [],
+  "medias": [
+    {
+      "value": "Vivendi / Groupe Canal+ — propriétaire (i-Télé renommée CNews)",
+      "date": "2023-06-25",
+      "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "media_id": "cnews",
+      "owner_id": "vivendi-canal"
+    },
+    {
+      "value": "Lagardère — propriétaire",
+      "date": "2023-06-25",
+      "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "media_id": "europe1",
+      "owner_id": "lagardere"
+    },
+    {
+      "value": "Lagardère — propriétaire",
+      "date": "2023-06-25",
+      "url": "https://www.franceinfo.fr/economie/medias/canal-i-tele-paris-match-avant-le-jdd-la-mainmise-de-vincent-bollore-sur-d-autres-medias-a-braque-de-nombreuses-redactions_5910392.html",
+      "media_id": "jdd",
+      "owner_id": "lagardere"
+    },
+    {
+      "value": "Vivendi / Groupe Canal+ — filiale de Hachette Livre, dont l'actionnaire est Vivendi",
+      "date": "2024-11-09",
+      "url": "https://www.radiofrance.fr/franceculture/podcasts/l-economie-du-livre/les-livres-des-politiques-une-sortie-hors-normes-pour-le-premier-ouvrage-de-jordan-bardella-2577554",
+      "media_id": "fayard",
+      "owner_id": "vivendi-canal"
+    },
+    {
+      "value": "Vivendi / Groupe Canal+ — propriétaire (Groupe Canal+)",
+      "date": "2024-07-24",
+      "url": "https://www.franceinfo.fr/economie/medias/c8-et-nrj12-en-voie-de-perdre-leur-frequence-tnt-cinq-questions-sur-la-decision-de-l-arcom_6684051.html",
+      "media_id": "c8",
+      "owner_id": "vivendi-canal"
+    },
+    {
+      "value": "Vincent Bolloré — BFMTV/AFP présente le groupe Bolloré comme « maison-mère » de Fayard ; à la soirée du 04/11/2026 au Pavillon Wagram, les médias de ce groupe sont restés après le départ de la quasi-totalité des autres journalistes inscrits",
+      "date": "2026-11-04",
+      "url": "https://www.bfmtv.com/politique/front-national/mediapart-s-est-vu-refuser-l-acces-a-la-soiree-de-lancement-du-livre-de-jordan-bardella_AD-202611050240.html",
+      "media_id": "fayard",
+      "owner_id": "vincent-bollore"
+    }
+  ]
+}

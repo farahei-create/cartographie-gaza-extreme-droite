@@ -94,7 +94,7 @@ async def mobile(b, w, h, scheme, errs):
     ok(f"{T} landing is Accueil", await pg.evaluate("window.__route")=="accueil")
     ok(f"{T} tab bar visible at bottom", await pg.evaluate("(()=>{const r=document.querySelector('.tabnav').getBoundingClientRect();return Math.abs(r.bottom-innerHeight)<1&&r.height>=56})()"))
     tabs=await pg.evaluate("[...document.querySelectorAll('#tabnav a')].map(a=>[a.textContent.trim(),a.getBoundingClientRect().height,a.getBoundingClientRect().width])")
-    ok(f"{T} 7 tabs with big targets", [t[0] for t in tabs]==["Accueil","Sections","Chronologie","Réseau","Échelle","Coulisses","Méthode"] and all(t[1]>=44 and t[2]>=44 for t in tabs), tabs)
+    ok(f"{T} 4 tabs with big targets", [t[0] for t in tabs]==["Accueil","Citations","Liens","Enquête"] and all(t[1]>=44 and t[2]>=44 for t in tabs), tabs)
     ok(f"{T} home stats", await pg.locator("#home-stats .stat").count()==7)
     ok(f"{T} home stats values", (await pg.locator("#home-stats .stat").nth(2).locator("dd").inner_text()).strip()==str(NST))
     ok(f"{T} home entry cards", await pg.locator("#home-entries .entry").count()==8)
@@ -222,7 +222,7 @@ async def mobile(b, w, h, scheme, errs):
     await pg.goto(URL+f"#/personne/{pid}#d0"); await pg.wait_for_timeout(1200)
     ok(f"{T} statement anchor in view", await pg.evaluate("(()=>{const r=document.getElementById('d0').getBoundingClientRect();return r.top<innerHeight&&r.bottom>0})()"))
     # chronologie
-    await pg.locator("#tab-chronologie").tap(); await pg.wait_for_timeout(600)
+    await pg.goto(URL+"#/chronologie"); await pg.wait_for_timeout(600)
     ok(f"{T} chronologie all items", await pg.locator("#timeline .tl-item").count()==NST+NDATED_E, (await pg.locator("#timeline .tl-item").count(), NST+NDATED_E))
     d=await pg.evaluate("[...document.querySelectorAll('#timeline .tl-date')].map(t=>t.getAttribute('datetime'))")
     ok(f"{T} chronologie ascending", d==sorted(d))
@@ -253,7 +253,7 @@ async def mobile(b, w, h, scheme, errs):
     ok(f"{T} order toggle desc", d2==sorted(d2, reverse=True))
     await pg.locator("#tl-order").tap()
     # réseau
-    await pg.locator("#tab-reseau").tap()
+    await pg.locator("#tab-liens").tap()
     await pg.wait_for_function("window.__graphReady===true", timeout=30000); await pg.wait_for_timeout(800)
     ok(f"{T} graph built lazily on Réseau", await pg.evaluate("window.__route")=="reseau" and len(await pg.evaluate("__visible()"))==NN)
     gh=await pg.evaluate("(()=>{const r=document.getElementById('graph').getBoundingClientRect();return [r.height,r.bottom,document.querySelector('.tabnav').getBoundingClientRect().top]})()")
@@ -285,7 +285,7 @@ async def mobile(b, w, h, scheme, errs):
     await pg.locator("#btn-fs").tap(); await pg.wait_for_timeout(700)
     ok(f"{T} fullscreen off", not await pg.evaluate("__fs()"))
     # méthodologie
-    await pg.locator("#tab-methodologie").tap(); await pg.wait_for_timeout(500)
+    await pg.goto(URL+"#/methodologie"); await pg.wait_for_timeout(500)
     ok(f"{T} méthodologie view", await pg.evaluate("window.__route")=="methodologie" and await pg.locator("#view-methodologie h3:has-text('Archivage des sources')").count()==1)
     await check("methodologie")
     # anciennes adresses

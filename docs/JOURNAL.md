@@ -4,6 +4,12 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-18 — v51
+
+Tu enregistres d'abord `version-2026-11-18-avant-enquete`. La barre passe à quatre onglets. Les anciennes adresses restent. Le réseau se feuillette en cartes. L'enquête rapproche les déclarations d'intérêts publiques de la HATVP, sans adresse, sans patrimoine, sans nom de conjoint. Le relevé du matin n'est pas modifié.
+
+Cache `onrecord-v51`.
+
 ## 2026-11-18 — v50
 
 Tu remets la photo en fondu sur les cartes carrée et story, seulement quand elle est déjà sur la fiche. Sans photo : le monogramme. Le crédit apparaît si la licence le demande. Tu ne touches pas au relevé du matin.

@@ -125,6 +125,7 @@
     buildTimeline(); initContrib();
     bindFiche();
     bindCards();
+    bindRail();
     bindRouter();
     registerSW();
   }
@@ -324,6 +325,7 @@
       if (input) c.classList.toggle("is-on", input.checked);
     });
     syncReseau3d();
+    if (typeof renderRail === "function") renderRail();
   }
 
   function nodeStyle(n, dim) {
@@ -445,7 +447,6 @@
     var onScheme = function () { readPalette(); applyFilters(); network.redraw(); };
     if (MQ_DARK.addEventListener) MQ_DARK.addEventListener("change", onScheme); else if (MQ_DARK.addListener) MQ_DARK.addListener(onScheme);
     applyFilters();
-    maybeStart3d();
   }
   /* ---------- images des nœuds (chargement différé, repli sur la forme colorée) ---------- */
   function nodeImageUrl(n) { return n.image || n.logo || null; }
@@ -2819,8 +2820,201 @@
   }
 
   /* ---------- Routage par ancre (#/…) ---------- */
-  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "pouvoir", "coulisses", "methodologie", "methode", "contribuer", "credits"];
-  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Sections", chronologie: "Chronologie", reseau: "Réseau des relations", pouvoir: "Échelle du pouvoir", coulisses: "Coulisses", methodologie: "Méthodologie", methode: "Méthode", contribuer: "Proposer une mise à jour", credits: "Crédits photos" };
+  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "pouvoir", "coulisses", "methodologie", "methode", "contribuer", "credits", "enquete"];
+  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Citations", chronologie: "Citations", reseau: "Réseau des relations", pouvoir: "Échelle du pouvoir", coulisses: "Coulisses", methodologie: "Méthodologie", methode: "Méthode", contribuer: "Proposer une mise à jour", credits: "Crédits photos", enquete: "Enquête" };
+  var railIndex = 0, railIds = [], enqData = null, enqBound = false;
+  function renderRail() {
+    var track = $("rail-track");
+    if (!track || !DATA) return;
+    var vis = (typeof visibleSet === "function") ? visibleSet() : null;
+    var q = norm(state.search).trim();
+    var matched = {};
+    if (q) matches().forEach(function (n) { matched[n.id] = true; });
+    railIds = DATA.nodes.filter(function (n) {
+      if (vis && !vis[n.id]) return false;
+      if (q && !matched[n.id]) return false;
+      return true;
+    }).map(function (n) { return n.id; });
+    if (!railIds.length) { track.innerHTML = '<p class="empty">Aucune fiche avec ces filtres.</p>'; $("rail-links").textContent = ""; return; }
+    if (railIndex >= railIds.length) railIndex = 0;
+    var center = railIds[railIndex];
+    var linked = {};
+    (edgesOf[center] || []).forEach(function (e) { linked[e.source === center ? e.target : e.source] = true; });
+    track.innerHTML = railIds.map(function (id, i) {
+      var n = byId[id];
+      var cls = "rail-card" + (i === railIndex ? " is-center" : "") + (linked[id] ? " is-linked" : "");
+      return '<button type="button" class="' + cls + '" data-rail="' + i + '" id="rail-' + esc(id) + '">' + avatar(n, "av-sm") + '<strong>' + esc(n.name) + '</strong><small>' + esc(n.role || n.category || "") + '</small></button>';
+    }).join("");
+    var box = $("rail-links");
+    var n = byId[center];
+    var lines = (edgesOf[center] || []).slice(0, 8).map(function (e) {
+      var other = byId[e.source === center ? e.target : e.source];
+      if (!other) return "";
+      return '<li><a href="' + ficheHref(other) + '">' + esc(other.name) + '</a> <span class="nat nat-' + edgeNature(e) + '">' + esc(natureLabel(edgeNature(e))) + '</span> <time>' + esc(fmtDate(e.date)) + '</time> ' + srcLink(e.url, "Source") + '<p>' + esc(e.relation) + '</p></li>';
+    }).join("");
+    box.innerHTML = '<p class="rail-k">' + esc(n.name) + '</p>' + (lines ? '<ul>' + lines + '</ul>' : '<p class="empty">Aucun lien documenté.</p>');
+    var card = track.querySelector(".is-center");
+    if (card && track.scrollWidth > track.clientWidth) card.scrollIntoView({ inline: "center", block: "nearest", behavior: "auto" });
+  }
+  function moveRail(delta) {
+    if (!railIds.length) return;
+    railIndex = (railIndex + delta + railIds.length) % railIds.length;
+    renderRail();
+    var card = $("rail-track").querySelector(".is-center");
+    if (card) card.focus();
+  }
+  function shortestPath(start, end) {
+    if (!start || !end || !byId[start] || !byId[end]) return null;
+    if (start === end) return [];
+    var adj = {};
+    DATA.edges.forEach(function (e) {
+      (adj[e.source] = adj[e.source] || []).push([e.target, e]);
+      (adj[e.target] = adj[e.target] || []).push([e.source, e]);
+    });
+    var seen = {}, q = [start], prev = {};
+    seen[start] = 1;
+    while (q.length) {
+      var cur = q.shift();
+      var list = adj[cur] || [];
+      for (var i = 0; i < list.length; i++) {
+        var nxt = list[i][0], edge = list[i][1];
+        if (seen[nxt]) continue;
+        seen[nxt] = 1;
+        prev[nxt] = [cur, edge];
+        if (nxt === end) { q = []; break; }
+        q.push(nxt);
+      }
+    }
+    if (!prev[end]) return null;
+    var steps = [], node = end;
+    while (node !== start) { var step = prev[node]; steps.push(step[1]); node = step[0]; }
+    steps.reverse();
+    return steps;
+  }
+  function findByName(q) {
+    var nq = norm(q);
+    if (!nq) return null;
+    var hit = null;
+    DATA.nodes.forEach(function (n) {
+      if (hit) return;
+      if (norm(n.name) === nq || norm(n.name).indexOf(nq) >= 0) hit = n;
+    });
+    return hit;
+  }
+  function enqSearch(q) {
+    var nq = norm(q);
+    if (nq.length < 2) return [];
+    return DATA.nodes.filter(function (n) {
+      var blob = norm(n.name + " " + (n.role || "") + " " + (n.category || "") + " " + (n.subcategory || ""));
+      if (blob.indexOf(nq) >= 0) return true;
+      return (n.statements || []).some(function (s) { return norm(s.quote + " " + (s.medium || "")).indexOf(nq) >= 0; });
+    }).slice(0, 12);
+  }
+  function factList(items) {
+    if (!items || !items.length) return '<p class="empty">Rien de publié ici pour cette fiche.</p>';
+    return '<ul class="enq-facts">' + items.map(function (it) {
+      return '<li><p>' + esc(it.value) + '</p><p class="meta">' + (it.date ? '<time>' + esc(it.date) + '</time> ' : '') + (it.url ? srcLink(it.url, "Source officielle") : '') + '</p></li>';
+    }).join("") + '</ul>';
+  }
+  function mediaDossier(n) {
+    var facts = ((enqData && enqData.medias) || []).filter(function (it) { return it.media_id === n.id; });
+    var counts = {};
+    DATA.nodes.forEach(function (person) {
+      (person.statements || []).forEach(function (s) {
+        if (norm(s.medium || "").indexOf(norm(n.name)) >= 0) counts[person.id] = (counts[person.id] || 0) + 1;
+      });
+    });
+    var ranked = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; }).slice(0, 5);
+    var who = ranked.map(function (id) { return '<li><a href="#/enquete/' + encodeURIComponent(id) + '">' + esc(byId[id].name) + '</a> · ' + counts[id] + '</li>'; }).join("");
+    return '<section><h2>Qui le possède</h2>' + factList(facts) + '<h2>Qui y parle le plus sur le site</h2>' + (who ? '<ul>' + who + '</ul>' : '<p class="empty">Aucune citation du site ne nomme ce média dans le support.</p>') + '</section>';
+  }
+  function personDossier(n) {
+    var hat = enqData && enqData.hatvp && enqData.hatvp[n.id];
+    var money = ((enqData && enqData.argent) || []).filter(function (it) { return it.person_id === n.id; });
+    var st = (n.statements || []).slice().sort(function (a, b) { return String(a.date).localeCompare(String(b.date)); });
+    var medias = {};
+    st.forEach(function (s) { if (s.medium) medias[s.medium] = (medias[s.medium] || 0) + 1; });
+    var med = Object.keys(medias).slice(0, 8).map(function (m) { return '<li>' + esc(m) + ' · ' + medias[m] + '</li>'; }).join("");
+    var links = (edgesOf[n.id] || []).slice(0, 8).map(function (e) {
+      var other = byId[e.source === n.id ? e.target : e.source];
+      return '<li><a href="' + ficheHref(other) + '">' + esc(other.name) + '</a> · ' + esc(natureLabel(edgeNature(e))) + ' · ' + esc(fmtDate(e.date)) + ' ' + srcLink(e.url, "Source") + '<p>' + esc(e.relation) + '</p></li>';
+    }).join("");
+    var quotes = st.map(function (s, i) {
+      return '<li><time datetime="' + esc(s.date || "") + '">' + fmtDate(s.date) + '</time> <blockquote>' + quoteHtml(s.quote) + '</blockquote><p class="meta">' + esc(s.medium || "") + ' ' + srcLink(s.url, "Lire la source") + '</p></li>';
+    }).join("");
+    var interests = '<p class="empty">Pas de déclaration d\'intérêts HATVP rapprochée de cette fiche.</p>';
+    if (hat) {
+      interests = '<p><a href="' + esc(hat.url) + '" target="_blank" rel="noopener noreferrer">Déclaration officielle HATVP</a>' + (hat.published ? ' · publiée le ' + esc(hat.published) : '') + (hat.qualite ? ' · ' + esc(hat.qualite) : '') + '</p>' +
+        '<h3>Mandats</h3>' + factList(hat.mandates) + '<h3>Activités</h3>' + factList(hat.activities) + '<h3>Participations</h3>' + factList(hat.participations) + '<h3>Collaborateurs</h3>' + factList(hat.collaborators) + '<h3>Activité du conjoint publiée par la HATVP</h3>' + factList(hat.spouse_activity);
+    }
+    return '<header class="enq-head">' + avatar(n, "av") + '<div><h2>' + esc(n.name) + '</h2><p>' + esc(n.role || "") + '</p><p><a href="' + ficheHref(n) + '">Fiche de l\'archive</a></p></div></header>' +
+      '<section><h2>Prises de parole</h2><ol class="enq-tl">' + (quotes || '<li class="empty">Aucune citation.</li>') + '</ol></section>' +
+      '<section><h2>Médias où la fiche parle</h2>' + (med ? '<ul>' + med + '</ul>' : '<p class="empty">Aucun support renseigné.</p>') + '</section>' +
+      '<section><h2>Liens documentés</h2>' + (links ? '<ul>' + links + '</ul>' : '<p class="empty">Aucun lien.</p>') + '</section>' +
+      '<section id="enq-interets"><h2>Intérêts déclarés</h2>' + interests + '</section>' +
+      '<section id="enq-argent"><h2>Argent</h2>' + factList(money) + '<p class="hint">Financement public, compte de campagne ou prêt : seulement avec un montant, une date et une URL. Rien n\'est ajouté sans cela.</p></section>' +
+      (n.subcategory === "Chaînes, radios & titres" || n.subcategory === "Édition" ? mediaDossier(n) : "");
+  }
+  function renderEnquete(slug, extra, extra2) {
+    loadEnquete().then(function () { paintEnquete(slug, extra, extra2); });
+  }
+  function loadEnquete() {
+    if (enqData) return Promise.resolve(enqData);
+    return fetch("enquete.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : {}; }).then(function (d) { enqData = d || {}; return enqData; }).catch(function () { enqData = {}; return enqData; });
+  }
+  function paintEnquete(slug, extra, extra2) {
+    if (!enqBound) {
+      enqBound = true;
+      $("enq-q").addEventListener("input", function () {
+        var list = enqSearch($("enq-q").value);
+        $("enq-results").innerHTML = list.map(function (n) { return '<a href="#/enquete/' + encodeURIComponent(n.id) + '">' + esc(n.name) + '<small>' + esc(n.role || n.category || "") + '</small></a>'; }).join("") || ($("enq-q").value.trim().length >= 2 ? '<p class="empty">Aucun résultat.</p>' : "");
+      });
+      $("enq-relier").addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var a = findByName($("enq-a").value), b = findByName($("enq-b").value);
+        if (!a || !b) { $("enq-path").innerHTML = '<p class="empty">Les deux noms doivent être des fiches du site.</p>'; return; }
+        location.hash = "#/enquete/relier/" + encodeURIComponent(a.id) + "/" + encodeURIComponent(b.id);
+      });
+    }
+    var box = $("enq-dossier"), pathBox = $("enq-path");
+    if (slug === "relier" && extra && extra2) {
+      var steps = shortestPath(extra, extra2);
+      var left = byId[extra], right = byId[extra2];
+      if (!left || !right) { pathBox.innerHTML = '<p class="empty">Fiche inconnue.</p>'; box.innerHTML = ""; return; }
+      $("enq-a").value = left.name; $("enq-b").value = right.name;
+      if (steps === null) { pathBox.innerHTML = '<p class="empty">Aucun chemin documenté entre ' + esc(left.name) + ' et ' + esc(right.name) + '.</p>'; }
+      else if (!steps.length) { pathBox.innerHTML = '<p>Même fiche.</p>'; }
+      else pathBox.innerHTML = '<ol class="enq-path">' + steps.map(function (e) {
+        return '<li><strong>' + esc(byId[e.source].name) + '</strong> → <strong>' + esc(byId[e.target].name) + '</strong> <span class="nat nat-' + edgeNature(e) + '">' + esc(natureLabel(edgeNature(e))) + '</span> <time>' + esc(fmtDate(e.date)) + '</time> ' + srcLink(e.url, "Source") + '<p>' + esc(e.relation) + '</p></li>';
+      }).join("") + '</ol>';
+      box.innerHTML = "";
+      document.title = "Relier — Onrecord";
+      return;
+    }
+    pathBox.innerHTML = "";
+    var n = byId[slug];
+    if (!n) { box.innerHTML = '<p class="empty">Choisissez une fiche, ou reliez deux noms.</p>'; return; }
+    box.innerHTML = personDossier(n);
+    document.title = n.name + " — Enquête — Onrecord";
+  }
+  function bindRail() {
+    var rail = $("rail");
+    if (!rail) return;
+    rail.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { e.preventDefault(); moveRail(1); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); moveRail(-1); }
+      else if (e.key === "Enter") {
+        var id = railIds[railIndex];
+        if (id) openNode(id, false);
+      }
+    });
+    $("rail-track").addEventListener("click", function (e) {
+      var b = e.target.closest && e.target.closest("[data-rail]");
+      if (!b) return;
+      railIndex = +b.getAttribute("data-rail");
+      renderRail();
+    });
+  }
   function renderCredits() {
     var rows = DATA.nodes.filter(function (n) { return n.image || n.logo; }).slice().sort(function (a, b) { return a.name.localeCompare(b.name, "fr"); });
     $("credits-count").textContent = rows.length + (rows.length > 1 ? " images" : " image");
@@ -2849,12 +3043,23 @@
     }
     var parts = h.replace(/^\//, "").split("#")[0].split("/"), v = parts[0] || "accueil";
     var anchor = (h.split("#")[1]) || null;
+    if (v === "citations") v = parts[1] === "date" ? "chronologie" : "sections";
+    if (v === "liens") v = parts[1] === "coulisses" ? "coulisses" : parts[1] === "echelle" ? "pouvoir" : "reseau";
     if (v === "personne" || v === "organisation") v = "fiche";
     if (VIEWS.indexOf(v) < 0) v = "accueil";
-    VIEWS.forEach(function (k) { $("view-" + k).hidden = k !== v; });
-    var tab = v === "fiche" ? "sections" : (v === "methode" || v === "contribuer" || v === "credits") ? "methodologie" : v;
+    VIEWS.forEach(function (k) { var el = $("view-" + k); if (el) el.hidden = k !== v; });
+    var tab = "";
+    if (v === "accueil") tab = "accueil";
+    else if (v === "sections" || v === "chronologie" || v === "fiche") tab = "citations";
+    else if (v === "reseau" || v === "pouvoir" || v === "coulisses") tab = "liens";
+    else if (v === "enquete") tab = "enquete";
     document.querySelectorAll("#tabnav a").forEach(function (a) {
-      if (a.getAttribute("data-tab") === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+      if (tab && a.getAttribute("data-tab") === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+    });
+    document.querySelectorAll(".subnav a").forEach(function (a) {
+      var sub = a.getAttribute("data-sub");
+      var on = (sub === "theme" && v === "sections") || (sub === "date" && v === "chronologie") || (sub === "reseau" && v === "reseau") || (sub === "coulisses" && v === "coulisses") || (sub === "echelle" && v === "pouvoir");
+      if (on) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
     document.body.setAttribute("data-view", v);
     if (v !== "reseau") {
@@ -2884,7 +3089,8 @@
     var stay = (v === "reseau" && lastView && lastView.indexOf("reseau") === 0) || (v === "pouvoir" && lastView && lastView.indexOf("pouvoir") === 0) || (v === "coulisses" && lastView && lastView.indexOf("coulisses") === 0);
     if (key !== lastView && !stay) window.scrollTo(0, 0);
     lastView = key;
-    if (v === "reseau") requestAnimationFrame(function () { ensureGraph(parts[1] ? decodeURIComponent(parts[1]) : null); });
+    if (v === "reseau") { renderRail(); requestAnimationFrame(function () { ensureGraph(parts[1] ? decodeURIComponent(parts[1]) : null); }); }
+    if (v === "enquete") renderEnquete(parts[1] ? decodeURIComponent(parts[1]) : "", parts[2] ? decodeURIComponent(parts[2]) : "", parts[3] ? decodeURIComponent(parts[3]) : "");
     if (v === "pouvoir") renderPouvoir(parts[1] ? decodeURIComponent(parts[1]) : null);
     if (v === "coulisses") renderCoulisses(parts[1] ? decodeURIComponent(parts[1]) : "");
     window.__route = v;

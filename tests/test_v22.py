@@ -20,7 +20,7 @@ def check(c, m):
         print("FAIL:", m)
 
 sw = open(os.path.join(ROOT, "sw.js")).read()
-check('var VERSION = "onrecord-v50"' in sw, "sw onrecord-v50")
+check('var VERSION = "onrecord-v51"' in sw, "sw onrecord-v51")
 js = open(os.path.join(ROOT, "app.js")).read()
 html = open(os.path.join(ROOT, "index.html")).read()
 check("Échelle du pouvoir" in html and 'href="#/pouvoir"' in html, "lien navigation")
@@ -43,7 +43,7 @@ with sync_playwright() as p:
     pg.wait_for_function("window.__route==='pouvoir' && window.__power")
     pg.wait_for_selector("#pow-ladder .pow-node")
     info = pg.evaluate("window.__power()")
-    check(pg.locator("#tab-pouvoir[aria-current='page']").count() == 1, "onglet courant")
+    check(pg.locator("#tab-liens[aria-current='page']").count() == 1, "onglet courant")
     check(sum(t["n"] for t in info["tiers"]) == len(D["nodes"]) == pg.locator(".pow-node").count(), "toutes les fiches")
     for t in info["tiers"]:
         check(t["n"] == EXPECT.get(t["id"]), t["id"] + " " + str(t["n"]))
@@ -51,7 +51,7 @@ with sync_playwright() as p:
     pg.goto(BASE + "#/")
     pg.wait_for_function("window.__route==='accueil'")
     check(pg.locator("#home-entries a[href='#/pouvoir']").count() == 1, "carte accueil")
-    pg.locator("#tab-pouvoir").tap()
+    pg.goto(BASE + "#/pouvoir")
     pg.wait_for_function("window.__route==='pouvoir'")
     # filtre France : moins de fiches, pas de débordement
     pg.locator("#pow-france").click()

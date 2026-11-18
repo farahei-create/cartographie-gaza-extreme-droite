@@ -38,12 +38,9 @@
 </header>
 <nav class="tabnav" id="tabnav" aria-label="Navigation principale">
     <a href="#/" data-tab="accueil" id="tab-accueil"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5.5h-5V20H5a1 1 0 0 1-1-1z"/></svg><span>Accueil</span></a>
-    <a href="#/sections" data-tab="sections" id="tab-sections"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/></svg><span>Sections</span></a>
-    <a href="#/chronologie" data-tab="chronologie" id="tab-chronologie"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18"/><circle cx="12" cy="7" r="2"/><circle cx="12" cy="17" r="2"/><path d="M14 7h6M4 17h6"/></svg><span>Chronologie</span></a>
-    <a href="#/reseau" data-tab="reseau" id="tab-reseau"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18" r="2.2"/><circle cx="19" cy="18" r="2.2"/><circle cx="12" cy="12.5" r="2.2"/><path d="M12 7.2v3.1M10.3 14 6.6 16.5M13.7 14l3.7 2.5"/></svg><span>Réseau</span></a>
-    <a href="#/pouvoir" data-tab="pouvoir" id="tab-pouvoir"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v18M17 3v18M7 8h10M7 12h10M7 16h10"/></svg><span>Échelle</span></a>
-    <a href="#/coulisses" data-tab="coulisses" id="tab-coulisses"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M4 9h16M9 5v14M15 5v14"/></svg><span>Coulisses</span></a>
-    <a href="#/methodologie" data-tab="methodologie" id="tab-methodologie"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h9l3 3v13H6z"/><path d="M9 10h6M9 14h6M9 18h3"/></svg><span>Méthode</span></a>
+    <a href="#/sections" data-tab="citations" id="tab-sections"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h9l3 3v13H6z"/><path d="M9 11h6M9 15h4"/></svg><span>Citations</span></a>
+    <a href="#/reseau" data-tab="liens" id="tab-liens"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M12 7.2v3.1M10.3 14 6.6 16.5M13.7 14l3.7 2.5"/></svg><span>Liens</span></a>
+    <a href="#/enquete" data-tab="enquete" id="tab-enquete"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><span>Enquête</span></a>
 </nav>
 
 <main id="main">
@@ -106,14 +103,15 @@
       <div class="star-rule" aria-hidden="true"><span>✦</span></div>
       <p class="home-sub">Les déclarations les plus récentes, par date.</p>
       <ol class="latest" id="home-latest"></ol>
-      <p class="more"><a href="#/chronologie" class="btn-pill">Toute la chronologie</a> <a href="data.json" download="onrecord-donnees.json" class="btn-pill ghost dl-link">Télécharger les données (JSON)</a> <a href="#/methode" class="btn-pill ghost" id="home-methode">Méthode</a></p>
+      <p class="more"><a href="#/chronologie" class="btn-pill">Toute la chronologie</a> <a href="#/enquete" class="btn-pill ghost">Enquête</a> <a href="data.json" download="onrecord-donnees.json" class="btn-pill ghost dl-link">Télécharger les données (JSON)</a> <a href="#/methode" class="btn-pill ghost" id="home-methode">Méthode</a></p>
     </div>
   </section>
 
   <!-- SECTIONS -->
   <section id="view-sections" class="view" aria-labelledby="sections-title" hidden>
     <div class="wrap page">
-      <h1 class="view-title" id="sections-title">Sections</h1>
+      <nav class="subnav" aria-label="Afficher les citations"><a href="#/sections" data-sub="theme">Par thème</a><a href="#/chronologie" data-sub="date">Par date</a></nav>
+      <h1 class="view-title" id="sections-title">Citations</h1>
       <div class="star-rule" aria-hidden="true"><span>✦</span></div>
       <div class="seg" role="tablist" aria-label="Choisir une section" id="sec-seg"></div>
       <p class="sec-intro" id="sec-intro"></p>
@@ -138,7 +136,8 @@
   <!-- CHRONOLOGIE -->
   <section id="view-chronologie" class="view" aria-labelledby="chrono-title" hidden>
     <div class="wrap page">
-      <h1 class="view-title" id="chrono-title">Chronologie</h1>
+      <nav class="subnav" aria-label="Afficher les citations"><a href="#/sections" data-sub="theme">Par thème</a><a href="#/chronologie" data-sub="date">Par date</a></nav>
+      <h1 class="view-title" id="chrono-title">Citations</h1>
       <div class="star-rule" aria-hidden="true"><span>✦</span></div>
       <p class="sec-intro">Toutes les déclarations et tous les liens datés, dans l'ordre chronologique.</p>
       <div class="chrono-filters" id="chrono-filters">
@@ -169,11 +168,8 @@
             <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M7 12h10M10 17h4"/></svg>
             <span class="dot" aria-hidden="true"></span>
           </button>
-          <button type="button" id="btn-3d" class="view3d" aria-pressed="false">
-            <span class="view3d-k" aria-hidden="true"></span>
-            <span>Vue 3D</span>
-          </button>
         </div>
+        <nav class="subnav subnav-lien" aria-label="Vues des liens"><a href="#/reseau" data-sub="reseau">Réseau</a><a href="#/coulisses" data-sub="coulisses">Coulisses</a><a href="#/pouvoir" data-sub="echelle">Échelle</a></nav>
         <p class="view3d-help" id="g3-note" hidden>Couleur selon le type, taille selon les liens. Glisser pour tourner, pincer pour zoomer. Un toucher ouvre la fiche.</p>
         <div class="filters" id="filters">
           <div class="filters-inner">
@@ -190,7 +186,11 @@
       </div>
       <div class="graph-layout">
         <div class="graph-wrap">
-          <div id="graph" aria-label="Graphe interactif des relations. Une version textuelle est disponible dans la vue Sections et dans la Chronologie."></div>
+          <div id="rail" class="rail" tabindex="0" aria-label="Cartes du réseau. Flèches gauche et droite pour changer la carte centrale.">
+            <div id="rail-track" class="rail-track"></div>
+            <div id="rail-links" class="rail-links" aria-live="polite"></div>
+          </div>
+          <div id="graph" aria-hidden="true" aria-label="Graphe des relations, conservé pour les filtres."></div>
           <canvas id="graph-3d" class="graph-3d" hidden aria-label="Réseau en trois dimensions. Glisser pour tourner, pincer pour zoomer, toucher un nœud pour ouvrir sa fiche."></canvas>
           <div class="field actions graph-controls">
             <button type="button" id="btn-fit" class="btn">
@@ -228,6 +228,7 @@
   <!-- ÉCHELLE DU POUVOIR -->
   <section id="view-pouvoir" class="view" aria-labelledby="pouvoir-title" hidden>
     <div class="wrap page pow-page">
+      <nav class="subnav subnav-lien" aria-label="Vues des liens"><a href="#/reseau" data-sub="reseau">Réseau</a><a href="#/coulisses" data-sub="coulisses">Coulisses</a><a href="#/pouvoir" data-sub="echelle">Échelle</a></nav>
       <h1 class="view-title" id="pouvoir-title">Échelle du pouvoir</h1>
       <div class="star-rule" aria-hidden="true"><span>✦</span></div>
       <p class="sec-intro" id="pow-method">Classement par fonction publique documentée, fortune seulement si sourcée. Le sommet est en haut. Le mode Ascension montre les nominations, investitures, recrutements, soutiens publics et financements documentés. Le fil « Remonter » ne suit que ces liens. L'opposition et le contrôle s'affichent à part, avec un autre style.</p>
@@ -249,6 +250,7 @@
   <!-- COULISSES -->
   <section id="view-coulisses" class="view" aria-labelledby="coulisses-title" hidden>
     <div class="wrap page cou-page">
+      <nav class="subnav subnav-lien" aria-label="Vues des liens"><a href="#/reseau" data-sub="reseau">Réseau</a><a href="#/coulisses" data-sub="coulisses">Coulisses</a><a href="#/pouvoir" data-sub="echelle">Échelle</a></nav>
       <h1 class="view-title" id="coulisses-title">Coulisses</h1>
       <div class="star-rule" aria-hidden="true"><span>✦</span></div>
       <p class="sec-intro" id="cou-lead"></p>
@@ -396,6 +398,27 @@
         <p><button type="button" class="btn-pill ghost" id="cf-copy">Copier le message</button></p>
       </div>
     </article></div>
+  </section>
+  <section id="view-enquete" class="view" aria-labelledby="enquete-title" hidden>
+    <div class="wrap page">
+      <h1 class="view-title" id="enquete-title">Enquête</h1>
+      <div class="star-rule" aria-hidden="true"><span>✦</span></div>
+      <p class="sec-intro">Recherche dans les fiches déjà publiées. Intérêts : déclarations HATVP rendues publiques. Argent et propriétaires : seulement un fait daté avec son URL.</p>
+      <form id="enq-search-form" class="field search" role="search">
+        <label for="enq-q" class="sr-only">Rechercher une personne, un média, une organisation</label>
+        <div class="search-box"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><input id="enq-q" type="search" placeholder="Nom, média, mot-clé…" autocomplete="off" enterkeyhint="search"></div>
+      </form>
+      <div id="enq-results" class="enq-results"></div>
+      <form id="enq-relier" class="enq-relier">
+        <h2 class="h-sec">Relier deux noms</h2>
+        <p class="sec-intro">Le plus court chemin déjà documenté sur le site. Chaque étape a une nature, une date et une source.</p>
+        <label>De <input id="enq-a" type="search" placeholder="Premier nom" autocomplete="off"></label>
+        <label>Vers <input id="enq-b" type="search" placeholder="Second nom" autocomplete="off"></label>
+        <button type="submit" class="btn-pill">Relier</button>
+      </form>
+      <div id="enq-path"></div>
+      <article id="enq-dossier"></article>
+    </div>
   </section>
 </main>
 
