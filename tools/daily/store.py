@@ -41,7 +41,8 @@ def published_path(root):
 
 
 def pending_path(root):
-    return os.environ.get("ONRECORD_PENDING_JSON") or os.path.join(root, "tools", "auto_pending.json")
+    # À la racine : Vercel ne sert pas le dossier tools/.
+    return os.environ.get("ONRECORD_PENDING_JSON") or os.path.join(root, "auto_pending.json")
 
 
 def load_json(path, fallback):

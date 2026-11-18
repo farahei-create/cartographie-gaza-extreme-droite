@@ -226,7 +226,8 @@ Le numéro vivant est celui de `sw.js`. Il n'y a pas de tag git `v11`, `v17`, `v
 | v44 | Mise à jour du 16/11 (relevé X) | 52 posts du 13 au 16/11, quinze fiches nouvelles. Module `v44_content.py` |
 | v45 | Mise à jour du 16/11 (matin) | AJC, Anne-Sophie Sebban-Bécache, Olivier Rioult, Sarkozy (CNews et interdiction du RN). Module `v45_content.py` |
 | v46 | Mise à jour du 17/11 | Débat LCI (Le Pen, Attal, Glucksmann, Mélenchon, Retailleau), Mélenchon et Arfi sur l'enquête de l'AJC, Rodwell sur Europe 1, Bruno Le Maire sur CNews. Module `v46_content.py` |
-| v47 | Mise à jour du 18/11 | Relevé automatique du matin (GitHub Actions, Gemini gratuit). Aucune phrase nouvelle. La file d'attente est sur la page admin. |
+| v47 | Mise à jour du 18/11 | Relevé automatique du matin (GitHub Actions, Gemini gratuit). Aucune phrase nouvelle. |
+| v48 | Mise à jour du 18/11 | La file d'attente est `auto_pending.json`, à la racine : le dossier `tools/` n'est pas servi par le site. |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 
@@ -272,7 +273,7 @@ Vercel ne lance pas `build.py` (le site est statique, `data.json` est dans le d�
 
 Les règles éditoriales de la section 3 s'appliquent aussi à ce qui entre par cette page. Une URL Wikipédia, un mot interdit dans un texte rédigé par le site, ou une licence NC/ND, font échouer `build.py` : le `data.json` en ligne ne bouge pas.
 
-Le relevé du matin écrit `tools/auto_published.json`. `auto_content.py` l'applique juste avant `admin_content.py`. La page admin affiche aussi la file d'attente (`tools/auto_pending.json`), qui n'est pas une publication.
+Le relevé du matin écrit `tools/auto_published.json`. `auto_content.py` l'applique juste avant `admin_content.py`. La page admin affiche aussi la file d'attente (`auto_pending.json`, à la racine du site), qui n'est pas une publication.
 
 ## 10. Automatisation
 
@@ -308,7 +309,7 @@ Le résumé du run est dans l'onglet Actions, en tête de la page (GITHUB_STEP_S
 
 ### File d'attente
 
-`tools/auto_pending.json`, et le bloc « File d'attente du matin » sur https://onrecord-fr.vercel.app/admin.html . Ce n'est pas une publication : `noindex`, et `robots.txt` l'interdit. Une phrase qui contient un mot interdit, et un particulier, n'y sont pas recopiés : la raison et l'URL restent, pour que tu ouvres la source. Le fichier est dans le dépôt, qui est public : n'y mets pas à la main une phrase que tu ne montrerais pas.
+`auto_pending.json` (à la racine, le site ne sert pas le dossier `tools/`), et le bloc « File d'attente du matin » sur https://onrecord-fr.vercel.app/admin.html . Ce n'est pas une publication : `noindex`, et `robots.txt` l'interdit. Une phrase qui contient un mot interdit, et un particulier, n'y sont pas recopiés : la raison et l'URL restent, pour que tu ouvres la source. Le fichier est dans le dépôt, qui est public : n'y mets pas à la main une phrase que tu ne montrerais pas.
 
 Tu peux reprendre un élément à la main, depuis la page admin, si tu le juges publiable. Le programme ne le republiera pas tant que la phrase exacte est déjà en ligne.
 

@@ -13,7 +13,7 @@
       ]
     },
     {
-      "source": "/tools/auto_pending.json",
+      "source": "/auto_pending.json",
       "headers": [
         { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
       ]

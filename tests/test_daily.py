@@ -160,7 +160,7 @@ check("auto_pending" not in open("index.html", encoding="utf-8").read(), "pas de
 check("File d’attente" in open("admin.html", encoding="utf-8").read() and "auto_pending.json" in open("admin.js", encoding="utf-8").read(), "file sur la page admin")
 
 published_before = open("tools/auto_published.json", encoding="utf-8").read()
-pending_before = open("tools/auto_pending.json", encoding="utf-8").read()
+pending_before = open("auto_pending.json", encoding="utf-8").read()
 data_before = open("data.json", encoding="utf-8").read()
 env = os.environ.copy()
 env.pop("GEMINI_API_KEY", None)
@@ -171,7 +171,7 @@ check(missing.returncode == 0 and "GEMINI_API_KEY" in missing.stdout, "sans clé
 mock = subprocess.run([sys.executable, "-m", "tools.daily.run", "--mock", "--dry-run"], cwd=ROOT, env=env, capture_output=True, text=True)
 check(mock.returncode == 0 and "à blanc" in mock.stdout, "simulation à blanc : " + (mock.stderr or "")[-300:])
 check(open("tools/auto_published.json", encoding="utf-8").read() == published_before, "rien écrit dans auto_published")
-check(open("tools/auto_pending.json", encoding="utf-8").read() == pending_before, "rien écrit dans la file")
+check(open("auto_pending.json", encoding="utf-8").read() == pending_before, "rien écrit dans la file")
 check(open("data.json", encoding="utf-8").read() == data_before, "data.json intact")
 check("ne doit pas être publiée" not in data_before, "la phrase de contrôle n'est pas dans l'archive")
 

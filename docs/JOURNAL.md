@@ -6,9 +6,9 @@ Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. L
 
 ## 2026-11-18 — v47
 
-Tu ne publies aucune phrase. Tu poses le relevé du matin dans le dépôt : chaque jour, vers 8 h (heure de Paris), un workflow lit les flux publics, fait relire les pages par Gemini avec une clé gratuite, et ne publie que ce qui passe les contrôles. Le reste va dans la file d'attente, sur la page admin. Sans clé, le workflow s'arrête et ne touche pas à main. Le mode d'emploi est dans `docs/REPRISE.md`, section Automatisation.
+Tu ne publies aucune phrase. Tu poses le relevé du matin dans le dépôt : chaque jour, vers 8 h (heure de Paris), un workflow lit les flux publics, fait relire les pages par Gemini avec une clé gratuite, et ne publie que ce qui passe les contrôles. Le reste va dans la file d'attente, sur la page admin (`auto_pending.json`, à la racine, parce que le dossier `tools/` n'est pas servi). Sans clé, le workflow s'arrête et ne touche pas à main. Le mode d'emploi est dans `docs/REPRISE.md`, section Automatisation.
 
-Cache `onrecord-v47`.
+Cache `onrecord-v48`.
 
 ## 2026-11-17 — v46
 

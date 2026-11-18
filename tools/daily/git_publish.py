@@ -11,7 +11,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 STATE = "/tmp/onrecord-daily-state.json"
 ALLOWED = (
     "tools/auto_published.json",
-    "tools/auto_pending.json",
+    "auto_pending.json",
     "tools/archives.json",
     "data.json",
     "sw.js",

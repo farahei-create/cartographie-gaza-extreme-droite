@@ -639,7 +639,7 @@
     function loadPending() {
       var box = $("pending-list");
       if (!box) return;
-      fetch("tools/auto_pending.json", { cache: "no-store" }).then(function (r) {
+      fetch("auto_pending.json", { cache: "no-store" }).then(function (r) {
         if (!r.ok) throw new Error("introuvable");
         return r.json();
       }).then(function (d) {

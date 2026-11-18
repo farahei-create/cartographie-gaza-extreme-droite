@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /admin.html
 Disallow: /admin
-Disallow: /tools/auto_pending.json
+Disallow: /auto_pending.json
