@@ -636,6 +636,27 @@
       el.textContent = list.join(" ");
     }
     function clearStatus() { $("pub-status").textContent = ""; }
+    function loadPending() {
+      var box = $("pending-list");
+      if (!box) return;
+      fetch("tools/auto_pending.json", { cache: "no-store" }).then(function (r) {
+        if (!r.ok) throw new Error("introuvable");
+        return r.json();
+      }).then(function (d) {
+        var items = (d && d.items) || [];
+        if (!items.length) { box.textContent = "Rien en attente."; return; }
+        box.innerHTML = items.map(function (it) {
+          var who = it.person ? esc(it.person) : "Sans nom";
+          var date = it.date ? " · " + esc(it.date) : "";
+          var quote = it.quote ? "<blockquote>" + esc(it.quote) + "</blockquote>" : "";
+          var link = it.url ? '<p><a href="' + esc(it.url) + '" target="_blank" rel="noopener noreferrer">Ouvrir la source</a></p>' : "";
+          var title = it.title ? "<p>" + esc(it.title) + "</p>" : "";
+          return '<article class="pv"><p class="k">' + esc(it.reason || "à relire") + "</p><h3>" + who + date + "</h3>" + title + quote + link + "</article>";
+        }).join("");
+      }).catch(function () {
+        box.textContent = "File d’attente illisible.";
+      });
+    }
     function loadCatalog() {
       return fetch("data.json", { cache: "no-store" }).then(function (r) {
         if (!r.ok) throw new Error("data.json introuvable");
@@ -760,6 +781,7 @@
     });
     $("btn-publish").addEventListener("click", publish);
     renderPreview();
+    loadPending();
     token = readToken();
     if (!token) { showGate(""); return; }
     showApp();

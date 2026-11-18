@@ -31,4 +31,6 @@ Droit français de la diffamation. Si une source ne les respecte pas, on ne publ
 8. Vérifier que le `sw.js` en ligne porte la nouvelle version.
 9. Ajouter une ligne à `docs/JOURNAL.md`. Compte rendu court, en français, avec « tu ».
 
+Le relevé du matin est le workflow `.github/workflows/daily-update.yml`. Il publie sur `main` tout seul si le secret `GEMINI_API_KEY` est posé. Sans cette clé, il s'arrête et ne touche pas à `main`. Le détail est dans `docs/REPRISE.md`, section Automatisation.
+
 Le détail, les commandes et le prompt quotidien sont dans `docs/REPRISE.md`.

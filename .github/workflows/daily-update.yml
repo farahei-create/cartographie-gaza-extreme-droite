@@ -1,0 +1,88 @@
+name: Relevé du matin
+
+on:
+  schedule:
+    # 06:30 UTC. À Paris : 7 h 30 en hiver (CET), 8 h 30 en été (CEST).
+    # GitHub démarre souvent en retard. Un seul cron ne peut pas tomber à 8 h 00 toute l'année.
+    - cron: "30 6 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "À blanc (ne pas pousser)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: onrecord-daily
+  cancel-in-progress: false
+
+jobs:
+  releve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Garde-fous
+        run: python3 tests/test_daily.py
+
+      - name: Relevé
+        id: releve
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ONRECORD_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '' }}
+        run: python3 -m tools.daily.run
+
+      - name: Navigateur de test
+        if: steps.releve.outputs.ready == 'true'
+        run: |
+          wget -q -O /tmp/chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo apt-get update
+          sudo apt-get install -y /tmp/chrome.deb || sudo apt-get install -y -f
+          if [ ! -x /usr/bin/google-chrome ]; then
+            sudo ln -s /usr/bin/google-chrome-stable /usr/bin/google-chrome
+          fi
+          python3 -m pip install --user playwright pillow
+          sudo mkdir -p /workspace /opt/cursor/artifacts
+          sudo chmod 777 /workspace /opt/cursor/artifacts
+
+      - name: Archives des pages nouvelles
+        if: steps.releve.outputs.ready == 'true' && steps.releve.outputs.content == 'true'
+        run: |
+          python3 - << 'PY'
+          import json, subprocess, sys
+          state = json.load(open("/tmp/onrecord-daily-state.json"))
+          urls = [u for u in state.get("urls") or [] if u.startswith("https://")]
+          if not urls:
+              sys.exit(0)
+          subprocess.run([sys.executable, "tools/archive.py", *urls], check=False)
+          PY
+
+      - name: Reconstruire data.json
+        if: steps.releve.outputs.ready == 'true' && steps.releve.outputs.content == 'true'
+        run: python3 build.py
+
+      - name: Version, compteurs, journal
+        if: steps.releve.outputs.ready == 'true'
+        run: python3 -m tools.daily.git_publish finalize
+
+      - name: Tests du site
+        if: steps.releve.outputs.ready == 'true'
+        run: python3 -m tools.daily.run_tests
+
+      - name: Site en ligne, avant le push
+        if: steps.releve.outputs.ready == 'true'
+        run: python3 -m tools.daily.livecheck preflight
+
+      - name: Pousser sur main
+        if: steps.releve.outputs.ready == 'true'
+        run: python3 -m tools.daily.git_publish publish
+
+      - name: Site en ligne, après le push
+        if: steps.releve.outputs.ready == 'true'
+        run: python3 -m tools.daily.livecheck postflight

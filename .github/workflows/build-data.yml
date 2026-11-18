@@ -6,6 +6,8 @@ on:
     paths:
       - "build.py"
       - "admin_content.py"
+      - "auto_content.py"
+      - "tools/auto_published.json"
       - "v*.py"
       - "tools/admin_additions.json"
       - "tools/people_images.json"

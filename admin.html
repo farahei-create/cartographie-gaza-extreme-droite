@@ -67,6 +67,7 @@
   .pv .k{margin:0;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:#b388ff}
   .pv button{min-height:44px;margin-top:8px;padding:8px 14px;border-radius:999px;border:1px solid rgba(168,85,247,.6);background:transparent;color:#f7f3ff;font:inherit}
   #pub-status{font-weight:650}
+  #pending-list, #pending-list a{overflow-wrap:anywhere}
   fieldset{border:0;margin:0;padding:0}
   [hidden]{display:none !important}
 </style>
@@ -76,6 +77,12 @@
   <p class="mark">ONRECORD</p>
   <h1 class="page-h">Mise à jour</h1>
   <p class="lead">Cette page n’est pas liée depuis le site. Le jeton reste sur cet appareil et ne part que vers api.github.com.</p>
+
+  <section id="pending-queue" class="card">
+    <h2>File d’attente du matin</h2>
+    <p class="hint">Ce que le relevé automatique n’a pas publié. Ce n’est pas dans l’archive. Une phrase n’y entre que pour être relue.</p>
+    <div id="pending-list">Chargement…</div>
+  </section>
 
   <section id="gate">
     <div class="guide">

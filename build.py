@@ -1050,6 +1050,8 @@ for n in N:
     if n["id"] in PIMG: n.update(PIMG[n["id"]])
     if n["id"] in OLOG: n.update(OLOG[n["id"]])
 
+import auto_content
+auto_content.apply(N, E, PIMG)
 import admin_content
 admin_content.apply(N, E, PIMG)
 

@@ -33,6 +33,7 @@ Site statique à la racine. Pas de CDN. Pas d'étape de build côté Vercel : `d
 | `img/people/`, `img/orgs/` | Portraits et logos hébergés (webp, environ 400 px) |
 | `tools/people_images.json`, `tools/org_logos.json` | Crédits (auteur, licence, lien). `build.py` les recopie sur les fiches |
 | `tools/archive.py`, `tools/archives.json` | Copies Wayback |
+| `.github/workflows/daily-update.yml`, `tools/daily/` | Relevé du matin. Section 10 |
 | `tools/build.v*.py` | Anciens scripts, conservés pour l'historique. Ne pas les lancer |
 | `tests/test_v*.py` | Playwright |
 | `docs/JOURNAL.md` | Journal daté des mises à jour |
@@ -162,6 +163,8 @@ curl -fsS https://onrecord-fr.vercel.app/data.json | python3 -c "import json,sys
 
 Le `sw.js` servi doit contenir la version que tu viens de pousser, et `counts.statements` doit coller au dépôt.
 
+Le relevé du matin peut déjà avoir tourné tout seul. Voir la section 10. Une phrase déjà en ligne, ou déjà dans `tools/auto_published.json`, ne se republie pas.
+
 11. Compte rendu court, en français, tutoiement : pour chaque ajout, la personne, la date, une ligne, le lien. Lien du site. S'il n'y a rien de nouveau : le dire, et s'arrêter.
 
 ## 5. Prompt quotidien
@@ -223,6 +226,7 @@ Le numéro vivant est celui de `sw.js`. Il n'y a pas de tag git `v11`, `v17`, `v
 | v44 | Mise à jour du 16/11 (relevé X) | 52 posts du 13 au 16/11, quinze fiches nouvelles. Module `v44_content.py` |
 | v45 | Mise à jour du 16/11 (matin) | AJC, Anne-Sophie Sebban-Bécache, Olivier Rioult, Sarkozy (CNews et interdiction du RN). Module `v45_content.py` |
 | v46 | Mise à jour du 17/11 | Débat LCI (Le Pen, Attal, Glucksmann, Mélenchon, Retailleau), Mélenchon et Arfi sur l'enquête de l'AJC, Rodwell sur Europe 1, Bruno Le Maire sur CNews. Module `v46_content.py` |
+| v47 | Mise à jour du 18/11 | Relevé automatique du matin (GitHub Actions, Gemini gratuit). Aucune phrase nouvelle. La file d'attente est sur la page admin. |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 
@@ -267,3 +271,64 @@ Formulaires : personnalité (nom, fonction, parti ou organisation, catégorie, s
 Vercel ne lance pas `build.py` (le site est statique, `data.json` est dans le dépôt). Le workflow `.github/workflows/build-data.yml` part sur un push des sources, lance `python3 build.py`, et `tools/commit_data_if_content.py` ne commit `data.json` que si le contenu change. Si seule la date de génération change, pas de commit. Ce second push redéploie Vercel. `data.json` est en réseau d'abord dans `sw.js` : le téléphone récupère le fichier nouveau sans geste de plus. Compte environ une minute.
 
 Les règles éditoriales de la section 3 s'appliquent aussi à ce qui entre par cette page. Une URL Wikipédia, un mot interdit dans un texte rédigé par le site, ou une licence NC/ND, font échouer `build.py` : le `data.json` en ligne ne bouge pas.
+
+Le relevé du matin écrit `tools/auto_published.json`. `auto_content.py` l'applique juste avant `admin_content.py`. La page admin affiche aussi la file d'attente (`tools/auto_pending.json`), qui n'est pas une publication.
+
+## 10. Automatisation
+
+Le workflow `.github/workflows/daily-update.yml` (« Relevé du matin ») fait la mise à jour du jour sans personne aux commandes. Il ne part que sur l'horloge, ou quand tu le lances à la main. Un push ordinaire ne le déclenche pas.
+
+### Heure
+
+Le cron est `30 6 * * *`, donc **06:30 UTC**.
+
+- En hiver (CET, UTC+1) : 7 h 30 à Paris.
+- En été (CEST, UTC+2) : 8 h 30 à Paris.
+
+GitHub ne connaît pas l'heure de Paris, et un cron peut partir en retard, parfois d'une heure. 06:30 UTC reste à une demi-heure de 8 h, dans un sens ou dans l'autre. La fenêtre des phrases est d'environ 48 heures, plus 6 heures de marge pour une dépêche du matin.
+
+### Activer
+
+1. Ouvre [Google AI Studio](https://aistudio.google.com/apikey) avec un compte Google. Crée une clé API. Ne lie pas de compte de facturation au projet : le relevé est prévu pour le quota gratuit. Le modèle appelé est `gemini-3.5-flash-lite` (gratuit au 18 novembre 2026). S'il disparaît, le programme essaie `gemini-2.5-flash-lite`, puis `gemini-3.1-flash-lite`.
+2. Sur GitHub, dépôt `farahei-create/cartographie-gaza-extreme-droite` : **Settings → Secrets and variables → Actions → New repository secret**. Nom exact : `GEMINI_API_KEY`. Valeur : la clé. Rien d'autre.
+3. Le lendemain matin, le workflow part tout seul. Pour le lancer tout de suite : onglet **Actions → Relevé du matin → Run workflow**. Coche « À blanc » pour un essai qui n'écrit rien et ne pousse pas. L'essai à blanc lit quand même les flux et appelle Gemini : il consomme un peu du quota.
+
+Sans ce secret, le workflow écrit un résumé, s'arrête avec un succès, et ne modifie pas `main`. Une clé refusée (401 ou 403) arrête aussi le run, sans push.
+
+### Ce qu'il fait
+
+1. Il lit des flux RSS qui répondaient le 18 novembre 2026 (franceinfo, BFMTV, CNews, Europe 1, France Inter, Sud Radio, Le Monde, Le Figaro, Libération, le JDD, le HuffPost, LCP, l'Arcom, le Conseil d'État, Public Sénat) et quatre recherches Google News des dernières 48 heures. Google News ne sert qu'à trouver l'article : la phrase est relue sur la page de l'éditeur. RTL, LCI, TF1 Info et l'Assemblée nationale n'avaient pas de flux stable ce jour-là ; ils entrent quand Google News résout leur page.
+2. Il ne télécharge que les pages dont le titre ou le chapeau touche aux deux sujets, ou nomme une fiche déjà en ligne. Plafond : 18 pages, 12 liens Google News, 16 requêtes au modèle. Cinq secondes entre chaque requête. Un 429 est réessayé, puis le run s'arrête et le reste va dans la file.
+3. Le modèle propose des phrases. Il ne décide pas. Le programme publie seulement si, après normalisation des espaces et des apostrophes : la phrase est dans la page, et la page la présente entre guillemets ; la date est dans la fenêtre et dans la page (ou, à défaut, celle du flux) ; l'URL est en https et n'est ni Wikipédia, ni X, ni Google News ; aucun mot interdit dans les champs écrits, y compris dans la citation ; la personne est déjà dans l'archive, ou la page la présente avec une fonction publique recopiée (député, ministre, candidat, journaliste…) ; le sujet est dans la phrase ou juste à côté ; ce n'est pas un doublon de `data.json`. Un doute du modèle, un particulier, une causalité absente de la page : file d'attente, pas le site. Pas de photo (monogramme). Pas de lien de réseau créé tout seul. Une vidéo seulement si son URL est déjà dans la page et vient du diffuseur.
+4. Ce qui passe est ajouté à `tools/auto_published.json`. `build.py` reconstruit `data.json`. Les URL nouvelles passent par `tools/archive.py`. `sw.js` monte d'un numéro, ainsi que les tests qui citent cette version. `tests/test_v22.py` recalcule `EXPECT` avec la même règle que l'échelle du pouvoir. Le journal reçoit une entrée.
+5. Les tests Playwright tournent. `tests/test_v8.py` est ignoré. Dans `tests/test_v5.py`, seuls les échecs « graph built lazily on Réseau » sont admis. Tout autre échec annule le push. Le site en ligne doit répondre avant le push. Après le push, le workflow attend que `sw.js` serve la nouvelle version.
+6. Le commit, en français, est `Mise à jour du JJ/MM : relevé automatique, N phrases`, ou `Mise à jour du JJ/MM : file d'attente, rien publié`. Il est poussé sur `main`.
+
+Le résumé du run est dans l'onglet Actions, en tête de la page (GITHUB_STEP_SUMMARY) : publié, écarté, flux en échec, nombre de requêtes.
+
+### File d'attente
+
+`tools/auto_pending.json`, et le bloc « File d'attente du matin » sur https://onrecord-fr.vercel.app/admin.html . Ce n'est pas une publication : `noindex`, et `robots.txt` l'interdit. Une phrase qui contient un mot interdit, et un particulier, n'y sont pas recopiés : la raison et l'URL restent, pour que tu ouvres la source. Le fichier est dans le dépôt, qui est public : n'y mets pas à la main une phrase que tu ne montrerais pas.
+
+Tu peux reprendre un élément à la main, depuis la page admin, si tu le juges publiable. Le programme ne le republiera pas tant que la phrase exacte est déjà en ligne.
+
+### Arrêter, relancer
+
+- Arrêter : Actions → Relevé du matin → les trois points → **Disable workflow**. Ou supprime le secret `GEMINI_API_KEY` : le run du matin s'arrête proprement.
+- Relancer : **Enable workflow**, ou Run workflow. Décoche « À blanc » pour publier.
+- Essai local, sans clé et sans écrire : `python3 -m tools.daily.run --mock --dry-run`. Les garde-fous seuls : `python3 tests/test_daily.py`.
+
+### Limites
+
+Ce n'est pas une revue humaine.
+
+- La télé et la radio n'entrent que si un article en reprend la phrase mot pour mot. Un direct sans article est absent.
+- L'API X n'est pas utilisée. Un post n'est publié que si une page de presse qui répond le cite tel quel, et l'URL publiée est celle de cette page.
+- Le quota gratuit est court : au plus 16 pages relues par matin. Le reste attend, ou n'est pas ouvert. Un 429 arrête la relecture.
+- Si un compte de facturation est lié au projet Google, le plafond de 16 requêtes limite la dépense, mais le seul moyen d'être certain de ne rien payer est de ne pas lier de facturation. Les extraits de pages sont envoyés à Google, qui peut s'en servir pour améliorer ses modèles sur l'offre gratuite.
+- Certains sites bloquent les serveurs de GitHub. La page est alors « inaccessible » et rien n'est publié.
+- Le programme rate l'ironie, un second degré, un démenti publié sur une autre page que celle qu'il a lue, et une personne publique dont la fonction n'est pas écrite à côté de la phrase. Ces cas vont dans la file, ou passent à côté.
+- Il ne crée pas de fiche sans fonction publique lue dans la page, pas d'organisation nouvelle, pas de photo, pas de lien du réseau.
+- Une phrase qui contient « complice », « génocidaire », « pantin », « infiltré », « marionnette », « protégé », « copinage » ou « occulte » n'est pas publiée, même si la personne l'a dite. Tu peux la reprendre à la main si la section 3 le permet.
+- Google News sert d'index. Son flux est réservé par Google à un lecteur personnel et non commercial : on n'en recopie pas le texte, seulement l'adresse de l'éditeur quand elle se résout.
+- `CORRECTION_EMAIL` reste vide. Le programme n'y touche pas.
