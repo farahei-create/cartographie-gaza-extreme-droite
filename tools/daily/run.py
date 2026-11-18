@@ -32,6 +32,8 @@ def summary_markdown(stats, decision, model, requests, dry, key_missing=False, k
     published = decision.get("published") or []
     pending = decision.get("pending") or []
     lines.append("- Flux lus : %d (%d en échec)" % (stats.get("feeds_ok", 0), stats.get("feeds_fail", 0)))
+    for err in stats.get("feed_errors") or []:
+        lines.append("  - échec : %s — %s — %s" % (err.get("outlet") or "flux", err.get("error") or "échec", err.get("url") or ""))
     lines.append("- Articles repérés : %d ; pages ouvertes : %d ; pages inaccessibles : %d" % (stats.get("items", 0), stats.get("fetched", 0), stats.get("fetch_fail", 0)))
     lines.append("- Liens Google News non résolus : %d" % stats.get("google_unresolved", 0))
     lines.append("- Requêtes Gemini : %d (modèle %s)" % (requests, model or "—"))
@@ -46,10 +48,8 @@ def summary_markdown(stats, decision, model, requests, dry, key_missing=False, k
     else:
         for item in published:
             statement = item["statement"]
-            quote = statement["quote"]
-            if len(quote) > 160:
-                quote = quote[:157] + "…"
-            lines.append("- %s, %s — %s — %s" % (item.get("label") or statement["person_id"], statement["date"], quote, statement["url"]))
+            lines.append("- %s, %s — %s — %s" % (
+                item.get("label") or statement["person_id"], statement["date"], statement["quote"], statement["url"]))
     lines.append("")
     lines.append("### Écarté")
     if not pending:

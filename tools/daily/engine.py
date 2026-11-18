@@ -28,9 +28,14 @@ from tools.daily.textutil import (
 )
 
 WINDOW_HOURS = 54
-MAX_QUOTES_PER_PAGE = 6
+MAX_QUOTES_PER_PAGE = 3
+MAX_QUOTES_PER_PERSON = 2
+MAX_QUOTES_PER_OUTLET = 4
 MIN_QUOTE = 12
 MAX_QUOTE = 500
+# Une phrase déjà en ligne plus courte que ça peut être un fragment trop banal.
+DUP_CONTAINS = 18
+ELLIPSIS = re.compile(r"\s*(?:\[\s*(?:…|\.\.\.)\s*\]|…|\.\.\.)\s*")
 
 
 def load_index(data):
@@ -49,7 +54,8 @@ def load_index(data):
 
 def _window(text, quote, radius=700):
     page = norm_literal(text)
-    needle = norm_literal(quote)
+    parts = split_ellipsis(quote)
+    needle = parts[0] if parts else ""
     if not needle:
         return ""
     at = page.find(needle)
@@ -58,28 +64,97 @@ def _window(text, quote, radius=700):
     return page[max(0, at - radius): at + len(needle) + radius]
 
 
-def quote_in_page(quote, text):
-    needle = norm_literal(quote)
-    if len(needle) < MIN_QUOTE:
+def _word(char):
+    return char.isalnum() or char in "'’"
+
+
+def bounded(text, start, end):
+    """Le passage commence et finit sur un mot entier."""
+    if start < 0 or end > len(text) or start >= end:
         return False
-    return needle in norm_literal(text)
+    if start > 0 and _word(text[start - 1]) and _word(text[start]):
+        return False
+    if end < len(text) and _word(text[end - 1]) and _word(text[end]):
+        return False
+    return True
 
 
-def inside_quotes(quote, text):
-    """La phrase est un passage que la page présente entre guillemets."""
+def ends_clean(text, end):
+    """Fin de phrase, ou fin du passage entre guillemets. Pas la suite d'une phrase."""
+    if end <= 0 or end > len(text):
+        return False
+    if text[end - 1] in ".!?…":
+        return True
+    rest = text[end:].lstrip()
+    return (not rest) or rest[0] in "»\"”"
+
+
+def split_ellipsis(quote):
     needle = norm_literal(quote)
-    page = norm_literal(text)
+    if not needle or not ELLIPSIS.search(needle):
+        return [needle] if needle else []
+    return [part.strip() for part in ELLIPSIS.split(needle) if part.strip()]
+
+
+def quoted_spans(page):
+    """Repère les passages entre guillemets avant de normaliser toute la page."""
+    raw = page or ""
     spans = []
-    for pattern in (r"«([^»]{8,600})»", r"“([^”]{8,600})”", r'"([^"\n]{8,600})"'):
-        spans.extend(norm_literal(match.group(1)) for match in re.finditer(pattern, page))
+    for pattern in (r"«([^»]{8,800})»", r"“([^”]{8,800})”", r'"([^"\n]{8,800})"'):
+        spans.extend(norm_literal(match.group(1)) for match in re.finditer(pattern, raw))
+    return [span for span in spans if span]
+
+
+def ground_quote(quote, text):
+    """'' si la citation est entière et fidèle. Jamais une coupe au milieu d'un mot."""
+    raw = norm_literal(quote)
+    parts = split_ellipsis(quote)
+    page = norm_literal(text)
+    if not parts or sum(len(part) for part in parts) < MIN_QUOTE:
+        return "citation trop courte"
+    if len(raw) > MAX_QUOTE:
+        return "citation trop longue"
+    trailing = bool(re.search(r"(?:…|\.\.\.)\s*$", raw))
+    if trailing and len(parts) < 2:
+        return "points de suspension ajoutés en fin de citation"
+    spans = quoted_spans(text)
+    if len(parts) == 1:
+        needle = parts[0]
+        if needle not in page:
+            return "citation absente de la page"
+        if not any(needle in span for span in spans):
+            return "citation non présentée entre guillemets"
+        at = page.find(needle)
+        if not bounded(page, at, at + len(needle)):
+            return "citation coupée au milieu d'un mot"
+        if not ends_clean(page, at + len(needle)):
+            return "citation coupée au milieu d'une phrase"
+        return ""
+    if any(len(part) < 8 for part in parts):
+        return "ellipse au milieu d'un mot"
+    saw_broken_word = False
     for span in spans:
-        if not span:
+        pos = 0
+        broken = False
+        missing = False
+        for part in parts:
+            at = span.find(part, pos)
+            if at < 0:
+                missing = True
+                break
+            if not bounded(span, at, at + len(part)):
+                broken = True
+                break
+            pos = at + len(part)
+        if missing or broken:
+            saw_broken_word = saw_broken_word or broken
             continue
-        if needle == span or needle in span:
-            return True
-        if len(needle) >= 20 and len(span) >= 20 and span in needle:
-            return True
-    return False
+        if ends_clean(span, pos):
+            return ""
+        return "citation coupée au milieu d'une phrase"
+    if saw_broken_word:
+        return "ellipse au milieu d'un mot"
+    return "ellipse : un segment n'est pas dans la page tel quel"
 
 
 def duplicate(quote, quotes):
@@ -92,7 +167,8 @@ def duplicate(quote, quotes):
             continue
         if needle == other:
             return True
-        if len(needle) >= 40 and len(other) >= 40 and (needle in other or other in needle):
+        short, long = (needle, other) if len(needle) <= len(other) else (other, needle)
+        if len(short) >= DUP_CONTAINS and short in long:
             return True
     return False
 
@@ -258,10 +334,9 @@ def review_item(raw, page, index, now, accepted_quotes, new_ids, new_people):
     hits = forbidden_hits(quote)
     if hits:
         return _pending(page, "mot interdit dans la citation", person_name, quote, detail=hits[0])
-    if not quote_in_page(quote, page_text):
-        return _pending(page, "citation absente de la page", person_name, quote)
-    if not inside_quotes(quote, page_text):
-        return _pending(page, "citation non présentée entre guillemets", person_name, quote)
+    grounded = ground_quote(quote, page_text)
+    if grounded:
+        return _pending(page, grounded, person_name, quote)
 
     iso = parse_french_date(raw.get("date") or "")
     if not iso:
@@ -388,6 +463,8 @@ def review_pages(pages, proposals, index, now):
     new_ids = set()
     new_people = {}
     notes = []
+    per_person = {}
+    per_outlet = {}
     for page in pages:
         url = page.get("url") or ""
         got = proposals.get(url)
@@ -408,8 +485,23 @@ def review_pages(pages, proposals, index, now):
                 continue
             result = review_item(raw, page, index, now, accepted, new_ids, new_people)
             if result["kind"] == "publish":
+                person_key = fold(result.get("label") or result["statement"]["person_id"])
+                outlet_key = fold(page.get("outlet") or "")
+                if per_person.get(person_key, 0) >= MAX_QUOTES_PER_PERSON:
+                    pending.append(_pending(
+                        page, "plafond : deux phrases déjà retenues pour cette personne",
+                        result.get("label") or "", result["statement"]["quote"], result["statement"]["date"]))
+                    continue
+                if outlet_key and per_outlet.get(outlet_key, 0) >= MAX_QUOTES_PER_OUTLET:
+                    pending.append(_pending(
+                        page, "plafond : ce média a déjà plusieurs phrases dans ce relevé",
+                        result.get("label") or "", result["statement"]["quote"], result["statement"]["date"]))
+                    continue
                 published.append(result)
                 accepted.append(result["statement"]["quote"])
+                per_person[person_key] = per_person.get(person_key, 0) + 1
+                if outlet_key:
+                    per_outlet[outlet_key] = per_outlet.get(outlet_key, 0) + 1
                 if result["person"]:
                     new_ids.add(result["person"]["id"])
                     new_people[result["person"]["id"]] = result["person"]

@@ -13,7 +13,9 @@ os.chdir(ROOT)
 sys.path.insert(0, ROOT)
 
 from tools.daily.collect import extract_html, parse_feed, publisher_from_batch
-from tools.daily.engine import load_index, review_item, review_pages
+from tools.daily.collect import select_diverse
+from tools.daily.engine import ground_quote, load_index, review_item, review_pages
+from tools.daily.run import summary_markdown
 from tools.daily.store import expect_line, merge_pending, merge_published, tier_counts
 from tools.daily.textutil import forbidden_hits, norm_literal
 
@@ -100,6 +102,53 @@ check(review(raw_over={"quote": "déjà publiée telle quelle dans l'archive", "
     "Article du 17 novembre 2026. Marine Le Pen parle d'immigration. « déjà publiée telle quelle dans l'archive »"
 ), raw_over={"quote": "déjà publiée telle quelle dans l'archive"})["reason"] == "déjà en ligne", "doublon")
 check(review(raw_over={"doubt": "attribution incertaine"})["reason"].startswith("doute"), "doute en file")
+cut_page = page(
+    "Article du 17 novembre 2026. Éric Zemmour, au sujet de l'immigration : "
+    "« Une des plus stables, une des plus sérieuses où l'État de droit tient bon. »"
+)
+cut_quote = "Une des plus stables, une des plus sérieuses où l'État d"
+check(review(pg=cut_page, raw_over={"quote": cut_quote, "person_name": "Éric Zemmour"})["reason"] == "citation coupée au milieu d'un mot", "coupe au milieu d'un mot")
+mid = "Une des plus stables, une des plus sérieuses où l'État de droit"
+check(review(pg=cut_page, raw_over={"quote": mid, "person_name": "Éric Zemmour"})["reason"] == "citation coupée au milieu d'une phrase", "coupe au milieu d'une phrase")
+check(ground_quote("Elle s'arrête ici…", "« Elle s'arrête ici et la phrase continue. »").startswith("points de suspension"), "points de suspension ajoutés")
+whole = "On retire la nationalité aux binationaux quand l'immigration est en cause."
+ellipsis = "On retire la nationalité […] l'immigration est en cause."
+ell_page = page("Article du 17 novembre 2026. Marine Le Pen déclare : « %s »" % whole)
+kept_ell = review(pg=ell_page, raw_over={"quote": ellipsis})
+check(kept_ell["kind"] == "publish" and "[…]" in kept_ell["statement"]["quote"], "ellipse dont les deux bouts sont dans la page : " + str(kept_ell.get("reason")))
+check(ground_quote("On retire la nation […] l'immigration est en cause.", "« %s »" % whole) == "ellipse au milieu d'un mot", "ellipse au milieu d'un mot")
+check(ground_quote("On retire la nationalité […] cette formule n'est pas écrite.", "« %s »" % whole).startswith("ellipse"), "ellipse inventée")
+longer = "ramassis de gauchistes, d'une violence à l'égard des institutions qui est une véritable honte."
+idx_pen = load_index({"nodes": [{"id": "marine-le-pen", "name": "Marine Le Pen", "type": "person", "statements": [{"quote": "ramassis de gauchistes"}]}]})
+again = review_item(
+    raw(quote=longer),
+    page("Article du 17 novembre 2026. Marine Le Pen, immigration : « %s »" % longer),
+    idx_pen, NOW, [], set(), {},
+)
+check(again["reason"] == "déjà en ligne", "ramassis de gauchistes déjà en ligne")
+q2 = "L'immigration doit baisser dès cette année, dit-elle dans la même émission."
+q3 = "Le logement social reste soumis à cette priorité nationale, ajoute-t-elle."
+trio = page("Article du 17 novembre 2026. Marine Le Pen : « %s » « %s » « %s »" % (QUOTE, q2, q3))
+spread = review_pages([trio], {trio["url"]: [
+    raw(), raw(quote=q2), raw(quote=q3),
+]}, INDEX, NOW)
+check(sum(1 for item in spread["published"] if item["statement"]["person_id"] == "marine-le-pen") == 2, "plafond de deux phrases par personne")
+check(any(item.get("reason", "").startswith("plafond") for item in spread["pending"]), "le surplus va dans la file")
+found = []
+for i in range(8):
+    found.append({"url": "https://www.europe1.fr/b%d" % i, "outlet": "Europe 1", "title": "Jordan Bardella et l'immigration %d" % i, "summary": "", "score": 20 - i})
+found.append({"url": "https://www.lemonde.fr/z", "outlet": "Le Monde", "title": "Éric Zemmour et l'immigration", "summary": "", "score": 3})
+found.append({"url": "https://www.liberation.fr/m", "outlet": "Libération", "title": "Jean-Luc Mélenchon parle de Gaza", "summary": "", "score": 2})
+picked = select_diverse(found, ["Jordan Bardella", "Éric Zemmour", "Jean-Luc Mélenchon"], limit=6)
+check(sum(1 for item in picked if "Bardella" in item["title"]) <= 2, "au plus deux pages Bardella")
+check(any("Zemmour" in item["title"] for item in picked) and any("Mélenchon" in item["title"] for item in picked), "les autres personnes sont lues")
+report = summary_markdown(
+    {"feeds_ok": 25, "feeds_fail": 1, "feed_errors": [{"outlet": "Sud Radio", "url": "https://www.sudradio.fr/feed/", "error": "HTTP Error 404: Not Found"}],
+     "items": 1, "fetched": 1, "fetch_fail": 0, "google_unresolved": 0},
+    {"published": [{"label": "Éric Zemmour", "statement": {"person_id": "eric-zemmour", "date": "2026-11-17", "quote": whole, "url": "https://www.europe1.fr/zemmour"}}], "pending": []},
+    "gemini-3.5-flash-lite", 1, True)
+check("Sud Radio" in report and "HTTP Error 404" in report, "le flux en échec est nommé")
+check(whole in report and "État d…" not in report, "le résumé ne coupe pas la phrase")
 check(review(raw_over={"context": "Il a nommé son successeur sans que la page le dise ici."})["kind"] == "publish", "contexte inventé ignoré, phrase gardée")
 off = page("Article du 17 novembre 2026. Marine Le Pen a parlé du prix du carburant. « %s »" % QUOTE)
 # La phrase de contrôle contient « priorité nationale » et « logement social » : elle reste dans le sujet.

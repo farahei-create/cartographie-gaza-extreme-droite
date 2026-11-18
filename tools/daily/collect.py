@@ -274,31 +274,46 @@ def extract_html(html):
     return {"title": norm_literal(parser.title)[:180], "text": text[:80000], "dates": dates}
 
 
+def _on_space(text, start, end):
+    """Évite de couper un mot quand on découpe un extrait pour le modèle."""
+    start = max(0, start)
+    end = min(len(text), end)
+    if start > 0:
+        space = text.rfind(" ", 0, start + 1)
+        if space != -1 and start - space < 40:
+            start = space + 1
+    if end < len(text):
+        space = text.find(" ", end)
+        if space != -1 and space - end < 40:
+            end = space
+    return text[start:end].strip()
+
+
 def excerpt(page, limit=11000):
-    """Morceaux envoyés au modèle : le début, puis les passages qui portent les sujets."""
+    """Morceaux envoyés au modèle : le début, puis les passages qui portent les sujets.
+
+    Le séparateur n'est pas une ellipse : le modèle ne doit pas la recopier.
+    """
     text = page.get("text") or ""
-    chunks = [text[:3500]]
+    chunks = [_on_space(text, 0, 3500)]
     folded = fold(text)
-    # Repères grossiers, le garde-fou relit le texte entier.
     for needle in ("gaza", "le pen", "extreme droite", "immigration", "rassemblement national", "israel", "zemmour", "bardella"):
-        start = 0
         n = fold(needle)
-        while len(chunks) < 5:
-            at = folded.find(n, start)
-            if at < 0:
-                break
-            chunks.append(text[max(0, at - 600): at + 1800])
-            start = at + len(n)
-            break
+        at = folded.find(n)
+        if at < 0 or len(chunks) >= 5:
+            continue
+        chunks.append(_on_space(text, at - 600, at + 1800))
     out = []
     seen = set()
     for chunk in chunks:
-        key = chunk[:80]
-        if key in seen:
+        if not chunk or chunk[:80] in seen:
             continue
-        seen.add(key)
+        seen.add(chunk[:80])
         out.append(chunk)
-    return "\n\n[…]\n\n".join(out)[:limit]
+    body = "\n\n---\n\n".join(out)
+    if len(body) <= limit:
+        return body
+    return _on_space(body, 0, limit)
 
 
 def relevant(item, names):
@@ -328,15 +343,74 @@ def score_item(item, names, known_urls):
     return score
 
 
+def primary_person(item, names):
+    title = "%s %s" % (item.get("title") or "", item.get("summary") or "")
+    hits = [name for name in names if name_in_text(name, title)]
+    if not hits:
+        return ""
+    hits.sort(key=len, reverse=True)
+    return hits[0]
+
+
+def select_diverse(found, names, limit=16, per_person=2, per_outlet=3):
+    """Choisit les pages à lire : d'abord une personne ou un média encore absent."""
+    pool = [dict(item) for item in found]
+    for item in pool:
+        item["_person"] = primary_person(item, names)
+    chosen = []
+    while pool and len(chosen) < limit:
+        people = {}
+        outlets = {}
+        for item in chosen:
+            people[item.get("_person") or ""] = people.get(item.get("_person") or "", 0) + 1
+            outlets[item.get("outlet") or ""] = outlets.get(item.get("outlet") or "", 0) + 1
+
+        def rank(item):
+            person = item.get("_person") or ""
+            outlet = item.get("outlet") or ""
+            return (
+                0 if person and people.get(person, 0) == 0 else 1,
+                0 if outlets.get(outlet, 0) == 0 else 1,
+                people.get(person, 0),
+                outlets.get(outlet, 0),
+                -(item.get("score") or 0),
+            )
+
+        pool.sort(key=rank)
+        pick = None
+        for item in pool:
+            person = item.get("_person") or ""
+            outlet = item.get("outlet") or ""
+            if person and people.get(person, 0) >= per_person:
+                continue
+            if outlets.get(outlet, 0) >= per_outlet:
+                continue
+            pick = item
+            break
+        if pick is None:
+            break
+        pool.remove(pick)
+        chosen.append(pick)
+    for item in chosen:
+        item.pop("_person", None)
+    return chosen
+
+
 def google_feed_url(query):
     q = urllib.parse.quote(query + " when:2d")
     return "https://news.google.com/rss/search?q=%s&hl=fr&gl=FR&ceid=FR:fr" % q
 
 
-def collect(index, now, sleep=0.3, max_pages=18, max_google=12):
+def collect(index, now, sleep=0.3, max_pages=16, max_google=12):
     """Retourne (pages, stats). N'écrit rien."""
-    import datetime
-    stats = {"feeds_ok": 0, "feeds_fail": 0, "items": 0, "google_unresolved": 0, "fetched": 0, "fetch_fail": 0}
+    stats = {
+        "feeds_ok": 0, "feeds_fail": 0, "feed_errors": [],
+        "items": 0, "google_unresolved": 0, "fetched": 0, "fetch_fail": 0,
+    }
+
+    def note_feed(outlet, url, error):
+        stats["feeds_fail"] += 1
+        stats["feed_errors"].append({"outlet": outlet, "url": url, "error": (error or "échec")[:180]})
     names = [n.get("name") or "" for n in index["nodes"] if n.get("name")]
     found = []
     seen_urls = set()
@@ -365,14 +439,14 @@ def collect(index, now, sleep=0.3, max_pages=18, max_google=12):
             _, body = _get(url)
             items = parse_feed(body)
             if not items:
-                stats["feeds_fail"] += 1
+                note_feed(outlet, url, "flux vide ou illisible")
                 continue
             stats["feeds_ok"] += 1
             for item in items:
                 add(item, outlet)
             time.sleep(sleep)
-        except (urllib.error.URLError, socket.timeout, TimeoutError, ET.ParseError, ValueError):
-            stats["feeds_fail"] += 1
+        except (urllib.error.URLError, socket.timeout, TimeoutError, ET.ParseError, ValueError) as exc:
+            note_feed(outlet, url, str(exc))
     google_used = 0
     for query in GOOGLE_QUERIES:
         if google_used >= max_google:
@@ -404,13 +478,12 @@ def collect(index, now, sleep=0.3, max_pages=18, max_google=12):
                 copied["url"] = publisher
                 add(copied, item.get("source_name") or outlet_for(publisher))
             time.sleep(sleep)
-        except (urllib.error.URLError, socket.timeout, TimeoutError, ET.ParseError, ValueError):
-            stats["feeds_fail"] += 1
+        except (urllib.error.URLError, socket.timeout, TimeoutError, ET.ParseError, ValueError) as exc:
+            note_feed("Google News", query[:80], str(exc))
 
-    found.sort(key=lambda it: it.get("score") or 0, reverse=True)
     stats["items"] = len(found)
     pages = []
-    for item in found:
+    for item in select_diverse(found, names, limit=max_pages):
         if len(pages) >= max_pages:
             break
         try:

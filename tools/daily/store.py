@@ -228,10 +228,8 @@ def journal_entry(day, published, pending_count, version):
         lines.append("")
         for item in published:
             statement = item["statement"]
-            quote = statement["quote"]
-            if len(quote) > 180:
-                quote = quote[:177] + "…"
-            lines.append("- %s, %s : « %s » — %s" % (item.get("label") or statement["person_id"], french_date(statement["date"]), quote, statement["url"]))
+            lines.append("- %s, %s : « %s » — %s" % (
+                item.get("label") or statement["person_id"], french_date(statement["date"]), statement["quote"], statement["url"]))
         lines.append("")
         lines.append(
             "Écarté, en file d'attente (%d) : ce qui n'était pas dans la page mot pour mot, hors date, hors sujet, déjà en ligne, douteux, ou personne non établie. La page admin les montre."

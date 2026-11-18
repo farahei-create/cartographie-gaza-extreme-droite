@@ -4,6 +4,10 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-18 — relevé, citations entières
+
+Tu ne publies aucune phrase. Tu corriges le relevé du matin après le test à blanc : une citation coupée au milieu d'un mot ne passe plus, les points de suspension ajoutés non plus, et une ellipse `[…]` seulement si chaque morceau est dans la page. Les seize lectures se répartissent (deux pages par personne, trois par média, deux phrases publiées par personne). Une phrase déjà en ligne, même plus courte, n'est pas reprise. Le résumé nomme le flux qui a échoué. Le cache reste `onrecord-v48`.
+
 ## 2026-11-18 — v47
 
 Tu ne publies aucune phrase. Tu poses le relevé du matin dans le dépôt : chaque jour, vers 8 h (heure de Paris), un workflow lit les flux publics, fait relire les pages par Gemini avec une clé gratuite, et ne publie que ce qui passe les contrôles. Le reste va dans la file d'attente, sur la page admin (`auto_pending.json`, à la racine, parce que le dossier `tools/` n'est pas servi). Sans clé, le workflow s'arrête et ne touche pas à main. Le mode d'emploi est dans `docs/REPRISE.md`, section Automatisation.
