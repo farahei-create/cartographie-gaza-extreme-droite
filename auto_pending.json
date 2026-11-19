@@ -1,4 +1,197 @@
 {
   "_notice": "File d'attente du relevé automatique. Ce n'est pas une publication.",
-  "items": []
+  "items": [
+    {
+      "id": "39d948801ad8fd4f",
+      "seen": "2026-11-19",
+      "reason": "relecture automatique impossible",
+      "detail": "",
+      "person": "",
+      "date": "",
+      "quote": "",
+      "url": "https://www.cnews.fr/france/2026-11-19/argent-public-marine-le-pen-veut-mettre-fin-aux-derives-financieres-et-ethiques",
+      "title": "Argent public : Marine Le Pen veut «mettre fin aux dérives financières et éthiques des associations politisées»",
+      "outlet": "CNews"
+    },
+    {
+      "id": "17cabc06285698ab",
+      "seen": "2026-11-19",
+      "reason": "relecture automatique impossible",
+      "detail": "",
+      "person": "",
+      "date": "",
+      "quote": "",
+      "url": "https://lcp.fr/actualites/israel-interdit-son-territoire-a-jean-luc-melenchon-la-reponse-cinglante-du-gouvernement",
+      "title": "Israël interdit son territoire à Jean-Luc Mélenchon: la réponse cinglante du gouvernement français | LCP - Assemblée nationale",
+      "outlet": "LCP"
+    },
+    {
+      "id": "e48770eed57b5ed1",
+      "seen": "2026-11-19",
+      "reason": "aucune citation exacte retenue",
+      "detail": "",
+      "person": "",
+      "date": "",
+      "quote": "",
+      "url": "https://www.msf.fr/communiques-presse/nous-ne-dormons-jamais-en-cisjordanie-l-occupation-israelienne-organise-la-peur-et-detruit-la-sante-mentale-des-palestiniens",
+      "title": "« Nous ne dormons jamais » : en Cisjordanie, l'occupation israélienne organise la peur et détruit la santé mentale des Palestiniens, alerte MSF | Médecins sans frontières",
+      "outlet": "Médecins Sans Frontières"
+    },
+    {
+      "id": "babec882c1dd76c1",
+      "seen": "2026-11-19",
+      "reason": "relecture automatique impossible",
+      "detail": "",
+      "person": "",
+      "date": "",
+      "quote": "",
+      "url": "https://www.bfmtv.com/politique/jean-luc-melenchon_DN-201701010040.html",
+      "title": "Jean-Luc Mélenchon",
+      "outlet": "BFMTV"
+    },
+    {
+      "id": "15d23f909919f2e4",
+      "seen": "2026-11-19",
+      "reason": "relecture automatique impossible",
+      "detail": "",
+      "person": "",
+      "date": "",
+      "quote": "",
+      "url": "https://www.lejdd.fr/politique/retraites-dette-insecurite-lfi-ce-quil-faut-retenir-de-la-grande-interview-de-jordan-bardella-sur-cnews-189033",
+      "title": "Présidentielle : ce qu'il faut retenir de l'interview de Jordan Bardella sur CNews",
+      "outlet": "Le JDD"
+    },
+    {
+      "id": "bd078278d38f19fe",
+      "seen": "2026-11-19",
+      "reason": "relecture automatique impossible",
+      "detail": "",
+      "person": "",
+      "date": "",
+      "quote": "",
+      "url": "https://www.franceinfo.fr/elections/edito-edouard-philippe-est-il-trop-serieux-pour-gagner-la-presidentielle_8289995.html#xtor=RSS-3-%5Bpolitique%5D",
+      "title": "ÉDITO. Édouard Philippe est-il trop sérieux pour gagner la présidentielle ? – franceinfo",
+      "outlet": "franceinfo"
+    },
+    {
+      "id": "3d6de88295a81ee6",
+      "seen": "2026-11-19",
+      "reason": "relecture automatique impossible",
+      "detail": "",
+      "person": "",
+      "date": "",
+      "quote": "",
+      "url": "https://www.europe1.fr/societe/info-europe-1-tirs-de-mortiers-dans-un-lycee-des-yvelines-trois-blesses-dont-un-professeur-1240390?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "title": "INFO EUROPE 1 – Tirs de mortiers dans un lycée des Yvelines, trois blessés dont un professeur",
+      "outlet": "Europe 1"
+    },
+    {
+      "id": "080d3cc60916fd9a",
+      "seen": "2026-11-19",
+      "reason": "relecture automatique impossible",
+      "detail": "",
+      "person": "",
+      "date": "",
+      "quote": "",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-dominique-de-villepin-les-coulisses-d-une-entree-en-campagne-imminente-20261118",
+      "title": "Présidentielle 2027 : Dominique de Villepin, les coulisses d'une entrée en campagne imminente",
+      "outlet": "Le Figaro"
+    },
+    {
+      "id": "af886c3ba9a93b7f",
+      "seen": "2026-11-19",
+      "reason": "relecture automatique impossible",
+      "detail": "",
+      "person": "",
+      "date": "",
+      "quote": "",
+      "url": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-la-participation-deric-zemmour-flinguerait-la-primaire-estime-bruno-retailleau",
+      "title": "Présidentielle 2027 : la participation d'Éric Zemmour « flinguerait la primaire », estime Bruno Retailleau",
+      "outlet": "Public Sénat"
+    },
+    {
+      "id": "f5a37e821d3cf639",
+      "seen": "2026-11-19",
+      "reason": "page inaccessible",
+      "detail": "",
+      "person": "",
+      "date": "",
+      "quote": "",
+      "url": "https://www.liberation.fr/politique/elections/boris-vallaud-raphael-glucksmann-est-le-troisieme-homme-de-cette-presidentielle-20261118_LTHCSKKZYNEY5NCUX6CVRSCL54/",
+      "title": "Boris Vallaud : «Raphaël Glucksmann est le troisième homme de cette présidentielle»",
+      "outlet": "Libération"
+    },
+    {
+      "id": "fdde278aec2449ac",
+      "seen": "2026-11-19",
+      "reason": "page trop courte pour être relue",
+      "detail": "",
+      "person": "",
+      "date": "",
+      "quote": "",
+      "url": "https://www.lemonde.fr/sport/article/2026/11/19/le-soutien-strategique-d-emmanuel-macron-a-la-candidature-de-philippe-diallo-pour-la-presidence-de-la-fifa_6813300_3242.html",
+      "title": "Client Challenge",
+      "outlet": "Le Monde"
+    },
+    {
+      "id": "b05d989fb0435ccd",
+      "seen": "2026-11-19",
+      "reason": "relecture automatique impossible",
+      "detail": "",
+      "person": "",
+      "date": "",
+      "quote": "",
+      "url": "https://www.sudradio.fr/societe/inondations-dans-le-pas-de-calais-plan-durgence-active-deux-ecoles-evacuees-selon-la-prefecture",
+      "title": "Inondations dans le Pas-de-Calais",
+      "outlet": "Sud Radio"
+    },
+    {
+      "id": "97486fca9058a9af",
+      "seen": "2026-11-19",
+      "reason": "relecture automatique impossible",
+      "detail": "",
+      "person": "",
+      "date": "",
+      "quote": "",
+      "url": "https://www.europe1.fr/politique/epuisement-des-forces-de-lordre-on-nen-prend-pas-la-mesure-salarme-robert-menard-1240137?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+      "title": "Épuisement des forces de l'ordre : «On n'en prend pas la mesure», s'alarme Robert Ménard",
+      "outlet": "Europe 1"
+    },
+    {
+      "id": "0833755537155b46",
+      "seen": "2026-11-19",
+      "reason": "relecture automatique impossible",
+      "detail": "",
+      "person": "",
+      "date": "",
+      "quote": "",
+      "url": "https://www.franceinfo.fr/elections/je-veux-qu-on-alerte-sur-les-10-ans-d-inaction-climatique-des-deux-quinquennats-macron-lance-marine-tondelier-candidate-les-ecologistes-a-l-election-presidentielle_8289020.html#xtor=RSS-3-%5Bpolitique%5D",
+      "title": "\"Je veux qu'on alerte sur les 10 ans d'inaction climatique des deux quinquennats Macron\", lance Marine Tondelier, candidate Les Écologistes à l'élection présidentielle – franceinfo",
+      "outlet": "franceinfo"
+    },
+    {
+      "id": "3fbc2660475d5740",
+      "seen": "2026-11-19",
+      "reason": "relecture automatique impossible",
+      "detail": "",
+      "person": "",
+      "date": "",
+      "quote": "",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-logement-le-grand-oral-de-fabien-roussel_VN-202611190716.html",
+      "title": "Logement: le grand oral de Fabien Roussel",
+      "outlet": "BFMTV"
+    },
+    {
+      "id": "c6e811cb66f187cd",
+      "seen": "2026-11-19",
+      "reason": "relecture automatique impossible",
+      "detail": "",
+      "person": "",
+      "date": "",
+      "quote": "",
+      "url": "https://www.cnews.fr/france/2026-11-19/bienvenue-en-absurdie-valerie-pecresse-en-colere-apres-linvalidation-de-son",
+      "title": "«Bienvenue en Absurdie» : Valérie Pécresse en colère après l'invalidation de son «bouclier de sécurité» à la demande des communistes",
+      "outlet": "CNews"
+    }
+  ]
 }
