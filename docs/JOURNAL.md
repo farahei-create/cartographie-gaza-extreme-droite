@@ -4,6 +4,21 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-22 — relevé automatique
+
+Tu pars des flux publics des dernières 48 heures. Tu publies 6 phrases et 1 fiche. Pas de photo : monogramme.
+
+- Marine Le Pen, 22 novembre 2026 : « Je n'ai jamais reçu d'information confidentielle et je n'en ai jamais demandé » — https://www.radiofrance.fr/franceinter/podcasts/franc-jeu/franc-jeu-du-dimanche-22-novembre-2026-2672721
+- Marine Le Pen, 22 novembre 2026 : « Il n'y a pas de discrimination d'État ou systémique. » — https://www.radiofrance.fr/franceinter/podcasts/franc-jeu/franc-jeu-du-dimanche-22-novembre-2026-2672721
+- Éric Zemmour, 22 novembre 2026 : « Un vent mauvais souffle sur notre pays. Un vent liberticide, qui fait régner un totalitarisme d'atmosphère. On veut interdire des mots, des expressions, des théories » — https://www.europe1.fr/politique/presidentielle-eric-zemmour-se-pose-en-candidat-de-la-liberte-de-parler-face-au-totalitarisme-datmosphere-1241899?at_medium=RSS%20feeds&at_campaign=Flux%20Generique
+- Éric Zemmour, 22 novembre 2026 : « On nous dit que nos mots sont trop durs. Mais ce ne sont pas nos mots, le problème : c'est le réel qu'ils décrivent [...] Je serai le candidat de la liberté, la liberté de penser, la liberté de parler » — https://www.europe1.fr/politique/presidentielle-eric-zemmour-se-pose-en-candidat-de-la-liberte-de-parler-face-au-totalitarisme-datmosphere-1241899?at_medium=RSS%20feeds&at_campaign=Flux%20Generique
+- Sandrine Rousseau, 21 novembre 2026 : « Il doit être mis à pied » — https://www.franceinfo.fr/france/centre-val-de-loire/loiret/prefet-soupconne-de-fuites-vers-le-rn-il-doit-etre-mis-a-pied-estime-la-depute-ecologiste-sandrine-rousseau_8293574.html#xtor=RSS-3-%5Bpolitique%5D
+- Mette Frederiksen, 20 novembre 2026 : « Je suis Européenne, Danoise et originaire d'Aalborg. Et je ne suis pas non plus favorable à un grand remplacement de la population. Je crois qu'il doit y avoir une culture majoritaire forte » — https://www.lefigaro.fr/international/danemark-concurrencee-a-droite-sur-l-immigration-la-premiere-ministre-mette-frederiksen-evoque-un-grand-remplacement-20261120
+
+Écarté, en file d'attente (23) : ce qui n'était pas dans la page mot pour mot, hors date, hors sujet, déjà en ligne, douteux, ou personne non établie. La page admin les montre.
+
+Cache `onrecord-v53`.
+
 ## 2026-11-22 — v52 : dimensions
 
 Tu enregistres d'abord `version-2026-11-22-avant-dimensions`. Aucune donnée ni le relevé du matin ne changent.

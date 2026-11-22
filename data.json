@@ -1,16 +1,16 @@
 {
   "meta": {
-    "generated": "2026-11-17",
-    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-17 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
+    "generated": "2026-11-22",
+    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-22 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
-      "persons": 79,
+      "persons": 80,
       "orgs": 56,
       "edges": 196,
-      "statements": 346,
+      "statements": 352,
       "photos": 45,
       "logos": 21,
-      "videos": 25,
-      "france_nodes": 106
+      "videos": 27,
+      "france_nodes": 107
     },
     "category_order": [
       "Responsables politiques",
@@ -579,6 +579,42 @@
           },
           "archive_url": "https://web.archive.org/web/20261117072122/https://www.tf1info.fr/replay-lci/videos/video-elue-presidente-que-ferait-marine-le-pen-avec-la-ligue-des-droits-de-l-homme-17197-2476252.html",
           "archived": "2026-11-17"
+        },
+        {
+          "quote": "Je n'ai jamais reçu d'information confidentielle et je n'en ai jamais demandé",
+          "date": "2026-11-22",
+          "medium": "France Inter, page du 22 novembre 2026. La phrase est reproduite telle que cette page la publie. La page précise : Interrogée sur les soupçons de fuites d'informations confidentielles depuis le ministère de l'Intérieur vers le Rassemblement national, la candidate du RN à la présidentielle affirme n'avoir jamais été destinataire de telles informations.",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/franc-jeu/franc-jeu-du-dimanche-22-novembre-2026-2672721",
+          "theme": "Proximité extrême droite",
+          "section": "france",
+          "video": {
+            "url": "https://www.radiofrance.fr/franceinter/podcasts/franc-jeu/franc-jeu-du-dimanche-22-novembre-2026-2672721",
+            "platform": "radiofrance.fr",
+            "title": "Soupçon de fuites de Beauvau vers le RN : \"Je n'ai jamais reçu d'information confidentielle\", assure Marine Le Pen | France Inter",
+            "source": "France Inter",
+            "archive_url": "https://web.archive.org/web/20261122194651/https://www.radiofrance.fr/franceinter/podcasts/franc-jeu/franc-jeu-du-dimanche-22-novembre-2026-2672721",
+            "archived": "2026-11-22"
+          },
+          "archive_url": "https://web.archive.org/web/20261122194651/https://www.radiofrance.fr/franceinter/podcasts/franc-jeu/franc-jeu-du-dimanche-22-novembre-2026-2672721",
+          "archived": "2026-11-22"
+        },
+        {
+          "quote": "Il n'y a pas de discrimination d'État ou systémique.",
+          "date": "2026-11-22",
+          "medium": "France Inter, page du 22 novembre 2026. La phrase est reproduite telle que cette page la publie. La page précise : Alors que trois policiers viennent d'être condamnés à des peines de prison ferme pour avoir tabassé le producteur de musique Michel Zecler et que le caractère raciste des violences a été retenu, Marine Le Pen maintient ses propos tenus dans un entretien accordé au média américain CBS.",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/franc-jeu/franc-jeu-du-dimanche-22-novembre-2026-2672721",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "video": {
+            "url": "https://www.radiofrance.fr/franceinter/podcasts/franc-jeu/franc-jeu-du-dimanche-22-novembre-2026-2672721",
+            "platform": "radiofrance.fr",
+            "title": "Soupçon de fuites de Beauvau vers le RN : \"Je n'ai jamais reçu d'information confidentielle\", assure Marine Le Pen | France Inter",
+            "source": "France Inter",
+            "archive_url": "https://web.archive.org/web/20261122194651/https://www.radiofrance.fr/franceinter/podcasts/franc-jeu/franc-jeu-du-dimanche-22-novembre-2026-2672721",
+            "archived": "2026-11-22"
+          },
+          "archive_url": "https://web.archive.org/web/20261122194651/https://www.radiofrance.fr/franceinter/podcasts/franc-jeu/franc-jeu-du-dimanche-22-novembre-2026-2672721",
+          "archived": "2026-11-22"
         }
       ],
       "sections": [
@@ -1303,6 +1339,26 @@
           "url": "https://x.com/leJDD/status/2121828049071050926",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "Un vent mauvais souffle sur notre pays. Un vent liberticide, qui fait régner un totalitarisme d'atmosphère. On veut interdire des mots, des expressions, des théories",
+          "date": "2026-11-22",
+          "medium": "Europe 1, page du 22 novembre 2026. La phrase est reproduite telle que cette page la publie. La page précise : En meeting à Toulon, samedi, pour tenter de véritablement lancer sa campagne présidentielle",
+          "url": "https://www.europe1.fr/politique/presidentielle-eric-zemmour-se-pose-en-candidat-de-la-liberte-de-parler-face-au-totalitarisme-datmosphere-1241899?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261122194408/https://www.europe1.fr/politique/presidentielle-eric-zemmour-se-pose-en-candidat-de-la-liberte-de-parler-face-au-totalitarisme-datmosphere-1241899?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "archived": "2026-11-22"
+        },
+        {
+          "quote": "On nous dit que nos mots sont trop durs. Mais ce ne sont pas nos mots, le problème : c'est le réel qu'ils décrivent [...] Je serai le candidat de la liberté, la liberté de penser, la liberté de parler",
+          "date": "2026-11-22",
+          "medium": "Europe 1, page du 22 novembre 2026. La phrase est reproduite telle que cette page la publie. La page précise : En meeting à Toulon, samedi, pour tenter de véritablement lancer sa campagne présidentielle",
+          "url": "https://www.europe1.fr/politique/presidentielle-eric-zemmour-se-pose-en-candidat-de-la-liberte-de-parler-face-au-totalitarisme-datmosphere-1241899?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261122194408/https://www.europe1.fr/politique/presidentielle-eric-zemmour-se-pose-en-candidat-de-la-liberte-de-parler-face-au-totalitarisme-datmosphere-1241899?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "archived": "2026-11-22"
         }
       ],
       "sections": [
@@ -7018,6 +7074,14 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261116004803/https://www.tf1info.fr/politique/elections/presidentielle/presidentielle-2027-sandrine-rousseau-appelle-marine-tondelier-a-retirer-sa-candidature-2475969.html",
           "archived": "2026-11-16"
+        },
+        {
+          "quote": "Il doit être mis à pied",
+          "date": "2026-11-21",
+          "medium": "franceinfo, page du 21 novembre 2026. La phrase est reproduite telle que cette page la publie. La page précise : Sandrine Rousseau appelle le ministre de l'Intérieur Laurent Nuñez à mettre à pied “immédiatement” le préfet du Loiret Hugues Moutouh, accusé d'avoir organisé des fuites depuis le ministère de l'Intérieur vers le Rassemblement national.",
+          "url": "https://www.franceinfo.fr/france/centre-val-de-loire/loiret/prefet-soupconne-de-fuites-vers-le-rn-il-doit-etre-mis-a-pied-estime-la-depute-ecologiste-sandrine-rousseau_8293574.html#xtor=RSS-3-%5Bpolitique%5D",
+          "theme": "Proximité extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -8062,6 +8126,37 @@
           "source": "CNews",
           "archive_url": "https://web.archive.org/web/20261117072309/https://www.cnews.fr/france/2026-11-16/cnews-fait-partie-de-la-liberte-et-de-la-diversite-de-la-presse-considere-bruno",
           "archived": "2026-11-17"
+        }
+      ]
+    },
+    {
+      "id": "mette-frederiksen",
+      "name": "Mette Frederiksen",
+      "type": "person",
+      "role": "première ministre",
+      "description": "Mette Frederiksen. La page présente cette personne comme : première ministre.",
+      "statements": [
+        {
+          "quote": "Je suis Européenne, Danoise et originaire d'Aalborg. Et je ne suis pas non plus favorable à un grand remplacement de la population. Je crois qu'il doit y avoir une culture majoritaire forte",
+          "date": "2026-11-20",
+          "medium": "Le Figaro, page du 20 novembre 2026. La phrase est reproduite telle que cette page la publie.",
+          "url": "https://www.lefigaro.fr/international/danemark-concurrencee-a-droite-sur-l-immigration-la-premiere-ministre-mette-frederiksen-evoque-un-grand-remplacement-20261120",
+          "theme": "Proximité extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Gouvernement & exécutif",
+      "parcours": [
+        {
+          "date": "2026-11-20",
+          "title": "première ministre",
+          "text": "Mette Frederiksen. La page présente cette personne comme : première ministre.",
+          "url": "https://www.lefigaro.fr/international/danemark-concurrencee-a-droite-sur-l-immigration-la-premiere-ministre-mette-frederiksen-evoque-un-grand-remplacement-20261120",
+          "source": "Le Figaro, page du 20 novembre 2026"
         }
       ]
     }
