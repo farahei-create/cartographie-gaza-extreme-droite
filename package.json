@@ -1,0 +1,8 @@
+{
+  "name": "onrecord",
+  "private": true,
+  "description": "Site statique Onrecord. Seule dépendance : @vercel/blob, pour les fonctions /api/contrib (contributions des lecteurs).",
+  "dependencies": {
+    "@vercel/blob": "2.9.0"
+  }
+}

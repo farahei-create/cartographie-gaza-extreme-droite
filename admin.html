@@ -100,6 +100,14 @@
     <div id="pending-list">Chargement…</div>
   </section>
 
+  <section id="ctb-admin" class="card">
+    <h2>Contributions des lecteurs</h2>
+    <p class="hint">Rien ne paraît sans « Publier ». La page utilise le jeton GitHub enregistré plus bas ; le serveur vérifie qu'il ouvre le dépôt en écriture.</p>
+    <p><button type="button" class="btn ghost" id="ctb-admin-refresh">Actualiser</button></p>
+    <p id="ctb-admin-status" class="hint" aria-live="polite"></p>
+    <div id="ctb-admin-list">Chargement…</div>
+  </section>
+
   <section id="gate">
     <div class="guide">
       <h2>Créer le jeton GitHub</h2>
@@ -251,5 +259,6 @@
   </section>
 </main>
 <script src="admin.js"></script>
+<script src="admin-contrib.js"></script>
 </body>
 </html>

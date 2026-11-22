@@ -8,7 +8,9 @@ On ne revient pas sur :
 - le relevé du matin (code, workflow, tests de garde-fous) ;
 - la file d'attente auto_pending.json (ce n'est pas publié) ;
 - la page admin et ce mode d'emploi, pour pouvoir encore enregistrer ou revenir ;
-- le journal, qui reçoit une ligne nouvelle.
+- le journal, qui reçoit une ligne nouvelle ;
+- les contributions des lecteurs (contributions.json, api/, lib/contrib/) : un
+  retour ne republie pas un contenu retiré et n'efface pas un contenu validé.
 
 tools/auto_published.json est remis avec la version. Sinon le prochain
 build.py réinjecterait les phrases parues après, et le retour ne tiendrait pas.
@@ -28,11 +30,17 @@ KEEP_EXACT = {
     "admin.js",
     "tests/test_daily.py",
     "versions.json",
+    "contributions.json",
+    "admin-contrib.js",
+    "package.json",
+    "package-lock.json",
 }
 KEEP_PREFIXES = (
     ".github/",
     "tools/daily/",
     "tools/versions/",
+    "api/",
+    "lib/contrib/",
 )
 VERSION_FILES = (
     "sw.js",

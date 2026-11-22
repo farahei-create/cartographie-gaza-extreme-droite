@@ -36,3 +36,5 @@ Le relevé du matin est le workflow `.github/workflows/daily-update.yml`. Il pub
 Versions : tags `version-AAAA-MM-JJ-…`, pas un force-push. Workflows « Enregistrer une version » et « Revenir à une version ». La page `/admin.html` explique les trois gestes. Avant une grosse modification de `app.js`, `style.css` ou `index.html`, le tag du commit précédent est posé tout seul. Le retour remet le site public et `tools/auto_published.json`, garde la file d'attente, le relevé, l'admin et ce guide, et enregistre l'état courant juste avant. Détail : `docs/REPRISE.md`, sections 11 à 13.
 
 Le détail, les commandes et le prompt quotidien sont dans `docs/REPRISE.md`.
+
+Contributions des lecteurs : `#/contributions`, fonction `api/contrib/[action].js`, modération dans `/admin.html`. Rien ne paraît sans validation. Ne mets jamais d'e-mail ni de donnée privée dans `contributions.json`. Détail : `docs/REPRISE.md`, section 14.

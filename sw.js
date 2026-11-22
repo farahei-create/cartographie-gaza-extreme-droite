@@ -3,9 +3,9 @@
    - pages (navigation) : réseau d'abord, index.html en cache en secours ;
    - autres fichiers du site : cache, puis mise à jour en arrière-plan.
    Les requêtes vers d'autres domaines (sources, YouTube, archives) ne sont pas interceptées. */
-var VERSION = "onrecord-v55";
+var VERSION = "onrecord-v56";
 var SHELL = [
-  "./", "index.html", "style.css", "app.js", "config.js", "data.json", "versions.json", "manifest.webmanifest",
+  "./", "index.html", "style.css", "app.js", "contrib.js", "config.js", "data.json", "versions.json", "manifest.webmanifest",
   "admin.html", "admin.js", "robots.txt",
   "fonts/anton-latin.woff2",
   "vendor/vis-network.min.js",
@@ -51,7 +51,9 @@ self.addEventListener("fetch", function (ev) {
   if (req.method !== "GET") return;
   var url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
+  /* fonctions Vercel (contributions) : jamais de cache */
+  if (url.pathname.indexOf("/api/") === 0) return;
   if (req.mode === "navigate") { ev.respondWith(networkFirst(req, "index.html")); return; }
-  if (/\/(data\.json|config\.js|auto_pending\.json|versions\.json|enquete\.json)$/.test(url.pathname)) { ev.respondWith(networkFirst(req)); return; }
+  if (/\/(data\.json|config\.js|auto_pending\.json|versions\.json|enquete\.json|contributions\.json)$/.test(url.pathname)) { ev.respondWith(networkFirst(req)); return; }
   ev.respondWith(staleWhileRevalidate(req));
 });

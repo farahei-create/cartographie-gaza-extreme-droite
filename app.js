@@ -126,6 +126,7 @@
     bindFiche();
     bindCards();
     bindRail();
+    if (window.OnrecordContrib) window.OnrecordContrib.init({ nodes: data.nodes, toast: toast });
     bindRouter();
     registerSW();
   }
@@ -1504,7 +1505,9 @@
         (st.length ? '<ol class="tl">' + st.map(function (x) { return tlItem(x.s, n, x.i, false); }).join("") + "</ol>" : '<p class="empty">Aucune déclaration répertoriée.</p>') : "") +
       '<h2 class="h-sec">Relations <span class="h-n">' + es.length + "</span></h2>" +
       (es.length ? '<ul class="rel-list">' + es.map(function (e) { return relItem(e, n); }).join("") + "</ul>" : '<p class="empty">Aucune relation répertoriée.</p>') +
+      '<section class="ctb" id="ctb-fiche" aria-label="Contributions des lecteurs"></section>' +
       exploreHtml(n);
+    if (window.OnrecordContrib) window.OnrecordContrib.fiche(n, $("ctb-fiche"));
     try { localStorage.setItem("onrecord:last", n.id); } catch (e) {}
     preloadImg(n.image);
     document.title = n.name + " — Onrecord";
@@ -2820,8 +2823,8 @@
   }
 
   /* ---------- Routage par ancre (#/…) ---------- */
-  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "pouvoir", "coulisses", "methodologie", "methode", "contribuer", "credits", "enquete"];
-  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Citations", chronologie: "Citations", reseau: "Réseau des relations", pouvoir: "Échelle du pouvoir", coulisses: "Coulisses", methodologie: "Méthodologie", methode: "Méthode", contribuer: "Proposer une mise à jour", credits: "Crédits photos", enquete: "Enquête" };
+  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "pouvoir", "coulisses", "methodologie", "methode", "contribuer", "credits", "enquete", "contributions"];
+  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Citations", chronologie: "Citations", reseau: "Réseau des relations", pouvoir: "Échelle du pouvoir", coulisses: "Coulisses", methodologie: "Méthodologie", methode: "Méthode", contribuer: "Proposer une mise à jour", credits: "Crédits photos", enquete: "Enquête", contributions: "Contributions des lecteurs" };
   var railIndex = 0, railIds = [], enqData = null, enqBound = false;
   function renderRail() {
     var track = $("rail-track");
@@ -3095,6 +3098,7 @@
     }
     if (v === "methode") renderMethode();
     if (v === "credits") renderCredits();
+    if (v === "contributions" && window.OnrecordContrib) window.OnrecordContrib.view(parts[1] ? decodeURIComponent(parts[1]) : "");
     if (v === "accueil") { renderResume(); renderQotd(); }
     if (v === "fiche") renderFiche(decodeURIComponent(parts[1] || ""), anchor);
     var key = v + "/" + ((v === "fiche" || v === "pouvoir") ? (parts[1] || "") : "");

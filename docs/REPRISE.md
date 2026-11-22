@@ -40,6 +40,10 @@ Site statique à la racine. Pas de CDN. Pas d'étape de build côté Vercel : `d
 | `tools/build.v*.py` | Anciens scripts, conservés pour l'historique. Ne pas les lancer |
 | `tests/test_v*.py` | Playwright |
 | `docs/JOURNAL.md` | Journal daté des mises à jour |
+| `contrib.js`, `admin-contrib.js` | Contributions des lecteurs : vue `#/contributions`, bloc des fiches, modération dans `/admin.html`. Section 14 |
+| `api/contrib/[action].js`, `lib/contrib/` | Fonction Vercel des contributions (code e-mail, dépôt, signalement, modération). Section 14 |
+| `contributions.json` | Contributions validées, écrites par la modération. Ne pas y mettre de donnée privée |
+| `package.json`, `vendor/blob-upload.js` | Seule dépendance : `@vercel/blob` (fonction et envoi direct des fichiers). `bash tools/contrib/build_blob_client.sh` reconstruit le fichier du navigateur |
 
 ### Données
 
@@ -241,6 +245,7 @@ Le numéro vivant du cache est celui de `sw.js`. Les tags `version-…` sont les
 | v49 | Mise à jour du 18/11 | Versions enregistrées et retour en arrière. Cartes de citation carrée et story, monogramme, lien `/c/…`. Tag de départ : `version-2026-11-18-avant-cartes`. |
 | v50 | Mise à jour du 18/11 | Photo déjà hébergée, en fondu, sur les cartes carrée et story. Crédit si la licence l'exige. |
 | v51 | Mise à jour du 18/11 | Barre à quatre onglets, réseau en cartes, enquête HATVP. Tag `version-2026-11-18-avant-enquete`. |
+| v56 | Mise à jour du 22/11 (soir) | Contributions des lecteurs, validées dans l'admin. Tag `version-2026-11-22-avant-contributions`. Section 14 |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 
@@ -416,3 +421,52 @@ La taille du texte baisse pour que la phrase tienne. Si elle ne tient pas en ent
 7. Versions : la liste est sur https://onrecord-fr.vercel.app/admin.html . Enregistrer ou revenir se fait sur GitHub (Actions), pas dans la page. Le tag de secours d'avant les cartes est `version-2026-11-18-avant-cartes`.
 8. Pour publier : `git pull`, sources (pas `data.json` à la main), `python3 tools/archive.py` sur les URL nouvelles, `python3 build.py`, monter `sw.js`, tests (sauf `tests/test_v8.py`, et les quatre échecs « graph built lazily on Réseau » de `tests/test_v5.py`), `docs/JOURNAL.md`, commit `Mise à jour du JJ/MM : …`, push, vérifier `sw.js` en ligne.
 9. Si un changement casse le site : admin → Revenir à cette version → coller le nom → écrire REVENIR → Run workflow. Attendre une minute. Pour annuler ce retour, revenir au tag `avant-retour` créé juste avant.
+
+## 14. Contributions des lecteurs
+
+Section gratuite, sans Supabase. Un lecteur s'inscrit avec son e-mail, reçoit un code, choisit un pseudonyme, puis dépose une note sur une fiche existante : titre, texte, date des faits (facultative), liens `https://`, jusqu'à quatre photos (5 Mo) ou vidéos (50 Mo). **Rien ne paraît sans validation** dans `/admin.html`. Chaque contribution affichée porte : « Contenu publié par un contributeur, sous sa seule responsabilité. Onrecord ne l'a pas vérifié comme ses propres sources. Signaler un contenu ». Le pseudonyme et l'heure du dépôt (heure de Paris) sont affichés, jamais l'e-mail.
+
+### Comment c'est fait
+
+- Une seule fonction Vercel : `api/contrib/[action].js` (actions `status`, `me`, `send-code`, `verify`, `logout`, `upload`, `submit`, `report`, `admin`). La logique est dans `lib/contrib/core.js`, testée sans réseau.
+- Code e-mail : six chiffres, valable 15 minutes, cinq essais, usage unique. Une minute entre deux codes, cinq par heure et par adresse, vingt par heure et par réseau. Le défi est signé (HMAC, `SESSION_SECRET`). Rien n'est stocké en clair.
+- Adresses jetables : `lib/contrib/disposable_domains.json` (liste CC0 disposable-email-domains, copie du 22/11/2026, plus quelques domaines français), sous-domaines compris. Un domaine qui n'existe pas (DNS) est refusé.
+- Session : cookie `onrecord_s` signé, `HttpOnly`, `Secure`, `SameSite=Lax`, 30 jours.
+- Fichiers : envoyés directement du navigateur vers **Vercel Blob** (`vendor/blob-upload.js`, chargé seulement au moment de l'envoi). Types acceptés : JPEG, PNG, WebP, GIF ; MP4, WebM, MOV. Vingt fichiers par jour et par compte.
+- File d'attente et signalements : JSON dans Blob (`contrib/pending/`, `contrib/reports/`), noms à suffixe aléatoire, e-mail chiffré (AES-GCM, clé tirée de `SESSION_SECRET`). Cinq dépôts par jour et par compte.
+- Mots interdits (section 3) et indices de données privées (téléphone, e-mail, adresse postale) : signalés en rouge dans l'admin, pas refusés automatiquement. C'est toi qui décides.
+- Modération : la section « Contributions des lecteurs » de `/admin.html` utilise le **jeton GitHub déjà enregistré** sur la page. La fonction vérifie côté serveur que ce jeton ouvre le dépôt en écriture. Pas de mot de passe de plus.
+  - **Publier** écrit `contributions.json` sur `main` par l'API GitHub (commit `contributions: publication …`). Vercel redéploie en une minute environ. Une trace privée (`contrib/archive/`) garde l'e-mail chiffré de l'auteur : la LCEN impose de pouvoir l'identifier sur réquisition.
+  - **Refuser et effacer** supprime la contribution et ses fichiers.
+  - **Retirer** enlève une contribution publiée de `contributions.json` et efface ses fichiers.
+  - **Classer** ferme un signalement.
+- Un retour à une version (section 11) ne touche pas à `contributions.json`, `api/`, `lib/contrib/`, `admin-contrib.js` : un contenu retiré ne revient pas, un contenu validé ne disparaît pas.
+- Sans les variables ci-dessous, tout répond « Bientôt disponible » (code 503), sans erreur.
+
+### Ouvrir la section (dans Vercel, une fois)
+
+1. Vercel → projet Onrecord (équipe valladeaus-projects) → **Storage** → **Create Database** → **Blob** → accès **Public** → **Connect** au projet. Vercel ajoute seul `BLOB_READ_WRITE_TOKEN`.
+2. **Settings → Environment Variables**, pour Production (et Preview si tu veux tester) :
+   - `SESSION_SECRET` : une longue phrase au hasard, 32 caractères ou plus. Ne la change pas ensuite (sinon les sessions et les e-mails chiffrés deviennent illisibles).
+   - `RESEND_API_KEY` : clé Resend (`re_…`).
+   - `MAIL_FROM` : facultatif avec Resend (par défaut `Onrecord <onboarding@resend.dev>`).
+3. **Deployments → Redeploy** pour que les variables soient lues.
+4. Vérifier : `https://onrecord-fr.vercel.app/api/contrib/status` doit afficher `"enabled":true`.
+
+### Envoyeur d'e-mails gratuit
+
+- **Resend** (gratuit : 3 000 e-mails par mois, 100 par jour). resend.com → Sign up → API Keys → Create API Key (permission Sending access) → copier `re_…` dans Vercel. Limite : avec l'adresse de test `onboarding@resend.dev`, Resend n'envoie **qu'à l'adresse du compte Resend**. Pour écrire aux lecteurs, il faut un nom de domaine à toi vérifié dans Resend (Domains → Add Domain, puis les enregistrements DNS), et `MAIL_FROM` = `Onrecord <code@ton-domaine.fr>`. Un domaine `vercel.app` ne peut pas être vérifié.
+- **Sans nom de domaine : Brevo** (gratuit : 300 e-mails par jour). brevo.com → compte gratuit → Senders → ajouter et confirmer ton adresse e-mail d'envoi → SMTP & API → API Keys → créer une clé. Dans Vercel : `BREVO_API_KEY` = la clé, `MAIL_FROM` = `Onrecord <ton-adresse@…>` (l'adresse confirmée), et **pas** de `RESEND_API_KEY` (Resend est pris en premier s'il est présent). Les codes peuvent arriver dans les indésirables.
+
+### Limites
+
+- Vercel Blob gratuit (Hobby) : environ 1 Go stocké et un quota mensuel d'opérations. Les marqueurs de débit (`rl/`) sont nettoyés au fil de l'eau. Une vidéo de 50 Mo prend vite de la place : refuse ce qui n'est pas utile.
+- Fonctions Vercel Hobby : une seule fonction ici, loin de la limite de 12.
+- Une publication attend le redéploiement (une minute environ).
+- Pas de modification par l'auteur après dépôt : il redépose, tu refuses l'ancienne.
+- Demandes de retrait : bouton « Signaler un contenu » (motif, e-mail facultatif). Retire promptement tout contenu manifestement illicite.
+
+### Essai
+
+`node --test tests/test_contributions.mjs` (code, jetables, débit, dépôt, modération, fonction sans variables). `python3 tests/test_contributions_ui.py` avec le serveur local sur `:8765` (bloc des fiches, bandeau, heure de Paris, « bientôt disponible », captures dans `shots/`).
+

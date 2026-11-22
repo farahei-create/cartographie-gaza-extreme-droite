@@ -4,6 +4,10 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-22 (soir) — contributions des lecteurs (cache `onrecord-v56`)
+
+Tu enregistres d'abord `version-2026-11-22-avant-contributions` (commit `8cdb488`, cache `onrecord-v55`). Nouvelle section gratuite : inscription par e-mail avec code à six chiffres (adresses jetables refusées), dépôt d'une note avec liens, photos ou vidéos sur une fiche existante, validation obligatoire dans `/admin.html`, bouton « Signaler un contenu » sur chaque contribution, charte et mentions sur `#/contributions`. Bloc « Contributions des lecteurs » en bas de chaque fiche, en ambre pointillé, distinct des citations sourcées. Fichiers : `contrib.js`, `admin-contrib.js`, `api/contrib/[action].js`, `lib/contrib/`, `contributions.json` (vide), `vendor/blob-upload.js`, `package.json`. Tant que les variables Vercel manquent, la section affiche « Bientôt disponible ». Mode d'emploi : `docs/REPRISE.md`, section 14. Aucune phrase nouvelle.
+
 ## 2026-11-22 — rattrapage du 18 au 22/11
 
 Tu enregistres d'abord `version-2026-11-22-avant-maj` (commit `07db852`, cache `onrecord-v53`). Module `v54_content.py`. Tu publies 29 phrases, dont 7 nouvelles fiches (Jean-Philippe Tanguy, Laurent Nuñez, Hugues Moutouh, Edwige Diaz, David Lisnard, Gérard Larcher, Laure Lavalette). Chaque URL est ouverte ce jour et chaque phrase y figure mot pour mot. Pas de photo : monogramme.

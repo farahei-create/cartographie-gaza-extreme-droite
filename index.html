@@ -399,6 +399,29 @@
       </div>
     </article></div>
   </section>
+  <section id="view-contributions" class="view" aria-labelledby="ctb-title" hidden>
+    <div class="wrap page"><article class="prose card ctb-page">
+      <h1 class="view-title" id="ctb-title">Contributions des lecteurs</h1>
+      <div class="star-rule" aria-hidden="true"><span>✦</span></div>
+      <p>Tu as une preuve publique sur une personnalité ou une organisation déjà présente dans l'archive : une capture, une vidéo, un lien ? Inscris-toi gratuitement avec ton e-mail, puis dépose une note sur sa fiche. La date et l'heure du dépôt sont affichées.</p>
+      <p class="ctb-banner" role="note"><span>Les contributions sont publiées par leurs auteurs, sous leur seule responsabilité. Onrecord ne les a pas vérifiées comme ses propres sources et n'en reprend pas le contenu à son compte.</span></p>
+      <p>Chaque contribution est relue avant publication. Rien ne paraît sans validation.</p>
+      <div id="ctb-app" aria-live="polite"></div>
+      <h2 id="ctb-charte">Charte</h2>
+      <ol class="ctb-charter">
+        <li><strong>Personnes publiques seulement.</strong> Aucune donnée privée sur un particulier : pas d'adresse, de téléphone, de famille, de photo d'une personne privée.</li>
+        <li><strong>Des faits, pas des insultes.</strong> Pas d'injure, de menace, de harcèlement, de propos haineux. Pas de qualification de la personne.</li>
+        <li><strong>Sourcé.</strong> Chaque affirmation renvoie à une preuve : lien public, capture, vidéo. La date des faits est indiquée quand tu la connais.</li>
+        <li><strong>Rien d'illicite.</strong> Pas de contenu volé, de document confidentiel, de fichier dont tu n'as pas les droits, d'appel à la violence.</li>
+        <li><strong>Responsabilité.</strong> Tu publies sous ton pseudonyme et sous ta seule responsabilité. Ton e-mail n'est jamais affiché. Il est conservé pour pouvoir t'identifier si la loi l'exige.</li>
+        <li><strong>Modération.</strong> Onrecord peut refuser ou retirer une contribution à tout moment, sans avoir à se justifier.</li>
+      </ol>
+      <h2 id="ctb-mentions">Retrait d'un contenu et mentions</h2>
+      <p>Pour faire retirer une contribution, utilise le bouton « Signaler un contenu » sous celle-ci : indique le motif et, si tu veux une réponse, ton e-mail. Un contenu manifestement illicite est retiré promptement dès qu'il est signalé (loi pour la confiance dans l'économie numérique, article 6). Une demande peut aussi passer par la page <a href="#/contribuer">Proposer une mise à jour</a> (« Demande de retrait »).</p>
+      <p>Éditeur : Onrecord, archive citoyenne non professionnelle et non commerciale. Hébergeur : Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis (vercel.com). Les fichiers déposés sont stockés par Vercel Blob.</p>
+      <p>Données : ton e-mail sert à l'inscription et à la confirmation par code. Il est chiffré, n'est jamais publié et n'est communiqué qu'à la justice sur réquisition. Pour le supprimer, signale une de tes contributions avec le motif « Autre ».</p>
+    </article></div>
+  </section>
   <section id="view-enquete" class="view" aria-labelledby="enquete-title" hidden>
     <div class="wrap page">
       <h1 class="view-title" id="enquete-title">Enquête</h1>
@@ -426,7 +449,7 @@
   <div class="wrap">
     <div class="star-rule" aria-hidden="true"><span>✦</span></div>
     <p>Données sourcées, citations reproduites telles que publiées. Aucune qualification juridique des personnes. Dernière mise à jour : <span id="footer-update">—</span>.</p>
-    <p>Une erreur, une précision ou une nouvelle source ? <a href="#/contribuer" id="footer-contribuer">Proposer une mise à jour</a> · <a href="#/methode" id="footer-methode">Méthode</a></p>
+    <p>Une erreur, une précision ou une nouvelle source ? <a href="#/contribuer" id="footer-contribuer">Proposer une mise à jour</a> · <a href="#/methode" id="footer-methode">Méthode</a> · <a href="#/contributions" id="footer-contributions">Contributions des lecteurs</a></p>
     <p><a href="data.json" download="onrecord-donnees.json" class="dl-link">Télécharger les données (JSON)</a></p>
     <p class="donate-wrap"><a class="donate donate-foot" hidden target="_blank" rel="noopener noreferrer">Soutenir</a></p>
     <p class="img-note">Photos et logos : licences libres ou réutilisation officielle, détail sur <a href="#/credits">Crédits photos</a>. Sans portrait libre : monogramme. Copies archivées : Internet Archive (Wayback Machine).</p>
@@ -448,6 +471,7 @@
 
 <script src="vendor/vis-network.min.js"></script>
 <script src="config.js"></script>
+<script src="contrib.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
