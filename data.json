@@ -3,14 +3,14 @@
     "generated": "2026-11-22",
     "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-22 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
-      "persons": 80,
+      "persons": 87,
       "orgs": 56,
-      "edges": 196,
-      "statements": 352,
+      "edges": 200,
+      "statements": 381,
       "photos": 45,
       "logos": 21,
       "videos": 27,
-      "france_nodes": 107
+      "france_nodes": 117
     },
     "category_order": [
       "Responsables politiques",
@@ -581,6 +581,14 @@
           "archived": "2026-11-17"
         },
         {
+          "quote": "Je ne sais absolument pas comment ce mail a pu se retrouver chez un de nos anciens prestataires. Mais en l'espèce, encore une fois, ce n'est pas passé par moi",
+          "date": "2026-11-22",
+          "medium": "Affaire des fuites présumées du ministère de l'Intérieur vers le RN : le préfet du Loiret Hugues Moutouh, secrétaire général du ministère de l'Intérieur d'avril 2025 à mai 2026, est soupçonné d'avoir renseigné le Rassemblement national sur des affaires en cours ; une enquête judiciaire est ouverte et le siège du RN a été perquisitionné. Il conteste et a demandé à être relevé de ses fonctions (JDD, 21 novembre 2026). franceinfo, 22 novembre 2026 : la page écrit qu'un mail du service de Hugues Moutouh a été retrouvé par les enquêteurs chez Frédéric Chatillon, qu'elle présente comme une figure de l'extrême droite proche du RN et de sa dirigeante. Le même jour, sur France Inter, elle dit n'avoir jamais reçu ni demandé d'information confidentielle.",
+          "url": "https://www.franceinfo.fr/politique/front-national/je-n-ai-jamais-recu-d-informations-confidentielles-affirme-marine-le-pen-au-sujet-du-prefet-hugues-moutouh-soupconne-d-avoir-renseigne-le-rn_8294876.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
           "quote": "Je n'ai jamais reçu d'information confidentielle et je n'en ai jamais demandé",
           "date": "2026-11-22",
           "medium": "France Inter, page du 22 novembre 2026. La phrase est reproduite telle que cette page la publie. La page précise : Interrogée sur les soupçons de fuites d'informations confidentielles depuis le ministère de l'Intérieur vers le Rassemblement national, la candidate du RN à la présidentielle affirme n'avoir jamais été destinataire de telles informations.",
@@ -916,6 +924,22 @@
           "date": "2026-11-13",
           "medium": "LCI, 13 novembre 2026, 21:28, heure de Paris, rubrique « Immigration » du post de @LCI. Les parenthèses et points de suspension sont dans le post.",
           "url": "https://x.com/LCI/status/2121339447790678133",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Il y a un certain nombre de gens qui ont été mis en cause par Mediapart et qui ont nié les accusations. Vous-même vous avez été mis en cause.",
+          "date": "2026-11-18",
+          "medium": "Mediapart a publié en septembre 2026 une enquête sur des messages privés à caractère antisémite qu'il lui attribue. Jordan Bardella dit ne pas avoir tenu ces propos et a porté plainte ; la justice doit se prononcer. JDD, 18-19 novembre 2026 : « C à vous », France 5, 18 novembre, face à Patrick Cohen, qui lui demandait pourquoi il ne réactivait pas son compte Messenger. La page cite la réponse de Patrick Cohen : « Pas pour une affaire pénale ».",
+          "url": "https://www.lejdd.fr/politique/vous-meme-vous-avez-ete-mis-en-cause-dans-une-affaire-de-harcelement-jordan-bardella-repond-a-patrick-cohen-sur-mediapart-189114",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Je n'ai pas de leçons à recevoir, encore une fois, en matière de lutte contre l'antisémitisme. Mon parcours en la matière a toujours été exemplaire.",
+          "date": "2026-11-18",
+          "medium": "Mediapart a publié en septembre 2026 une enquête sur des messages privés à caractère antisémite qu'il lui attribue. Jordan Bardella dit ne pas avoir tenu ces propos et a porté plainte ; la justice doit se prononcer. Closer, 18 novembre 2026, même émission. La page écrit qu'il a ajouté : « Je ne peux pas prouver une conversation que je n'ai pas tenue. »",
+          "url": "https://www.closermag.fr/politique/jordan-bardella-accuse-dantisemitisme-il-patauge-dans-la-semoule-et-finit-par-sortir-de-ses-gonds-je-nai-pas-de-lecons-a-recevoir-3670179",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
         }
@@ -1341,9 +1365,17 @@
           "section": "france"
         },
         {
+          "quote": "Ma position est simple : j'ai été convié à cette primaire, j'ai accepté, donc j'y serai... si elle a lieu bien sûr",
+          "date": "2026-11-21",
+          "medium": "Projet de primaire de la droite et du centre (équipes de Gabriel Attal, Bruno Retailleau et David Lisnard, novembre 2026) : la participation d'Éric Zemmour (Reconquête) est en débat. Europe 1, 21 novembre 2026, meeting de Toulon. Gérard Larcher, Édouard Philippe et Bruno Retailleau s'opposent à sa participation (BFMTV, Public Sénat).",
+          "url": "https://www.europe1.fr/politique/jy-serai-si-elle-a-lieu-eric-zemmour-confirme-sa-volonte-de-participer-a-la-primaire-de-la-droite-et-du-centre-1241887",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
           "quote": "Un vent mauvais souffle sur notre pays. Un vent liberticide, qui fait régner un totalitarisme d'atmosphère. On veut interdire des mots, des expressions, des théories",
-          "date": "2026-11-22",
-          "medium": "Europe 1, page du 22 novembre 2026. La phrase est reproduite telle que cette page la publie. La page précise : En meeting à Toulon, samedi, pour tenter de véritablement lancer sa campagne présidentielle",
+          "date": "2026-11-21",
+          "medium": "Europe 1, page du 22 novembre 2026 (meeting du samedi 21 novembre à Toulon). La phrase est reproduite telle que cette page la publie. La page précise : En meeting à Toulon, samedi, pour tenter de véritablement lancer sa campagne présidentielle",
           "url": "https://www.europe1.fr/politique/presidentielle-eric-zemmour-se-pose-en-candidat-de-la-liberte-de-parler-face-au-totalitarisme-datmosphere-1241899?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france",
@@ -1352,8 +1384,8 @@
         },
         {
           "quote": "On nous dit que nos mots sont trop durs. Mais ce ne sont pas nos mots, le problème : c'est le réel qu'ils décrivent [...] Je serai le candidat de la liberté, la liberté de penser, la liberté de parler",
-          "date": "2026-11-22",
-          "medium": "Europe 1, page du 22 novembre 2026. La phrase est reproduite telle que cette page la publie. La page précise : En meeting à Toulon, samedi, pour tenter de véritablement lancer sa campagne présidentielle",
+          "date": "2026-11-21",
+          "medium": "Europe 1, page du 22 novembre 2026 (meeting du samedi 21 novembre à Toulon). La phrase est reproduite telle que cette page la publie. La page précise : En meeting à Toulon, samedi, pour tenter de véritablement lancer sa campagne présidentielle",
           "url": "https://www.europe1.fr/politique/presidentielle-eric-zemmour-se-pose-en-candidat-de-la-liberte-de-parler-face-au-totalitarisme-datmosphere-1241899?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france",
@@ -1652,10 +1684,19 @@
           "section": "gaza",
           "archive_url": "https://web.archive.org/web/20251005110802/https://www.rtl.fr/actu/international/une-ignominie-robert-menard-tance-eric-coquerel-sur-rtl-et-refute-le-terme-de-genocide-a-gaza-7900507815",
           "archived": "2025-10-05"
+        },
+        {
+          "quote": "Ils veulent vraiment perdre ? Ils sont fous. Ils portent une responsabilité personnelle dans cette histoire.",
+          "date": "2026-11-19",
+          "medium": "Projet de primaire de la droite et du centre (équipes de Gabriel Attal, Bruno Retailleau et David Lisnard, novembre 2026) : la participation d'Éric Zemmour (Reconquête) est en débat. Europe 1, La Grande Interview, 19 novembre 2026 : à propos d'Édouard Philippe et de Gabriel Attal, réticents à la primaire. La page le présente comme maire divers droite de Béziers.",
+          "url": "https://www.europe1.fr/politique/edouard-philippe-gabriel-attal-ils-veulent-vraiment-perdre-ironise-robert-menard-1240143",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
-        "gaza"
+        "gaza",
+        "france"
       ],
       "image": "img/people/robert-menard.webp",
       "image_credit": {
@@ -3263,6 +3304,16 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20250902174618/https://www.franceinfo.fr/politique/le-ministre-de-l-interieur-gerald-darmanin-va-proposer-la-dissolution-du-groupe-d-ultradroite-gud_6613242.html",
           "archived": "2025-09-02"
+        },
+        {
+          "quote": "Cette primaire, c'est un marché de dupes, et aujourd'hui, elle ne va pas désigner le prochain candidat à la présidence de la République",
+          "date": "2026-11-18",
+          "medium": "Projet de primaire de la droite et du centre (équipes de Gabriel Attal, Bruno Retailleau et David Lisnard, novembre 2026) : la participation d'Éric Zemmour (Reconquête) est en débat. BFMTV, 18 novembre 2026 : la page écrit qu'il voit dans la primaire « l'antichambre de l'union des droites » et de l'extrême droite, et qu'il estime que Jean-Luc Mélenchon « gagnera » face à Marine Le Pen en cas de duel.",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/gerald-darmanin-estime-que-jean-luc-melenchon-gagnera-face-a-marine-le-pen-en-cas-de-duel-au-second-tour-de-l-election-presidentielle_AD-202611180359.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261118083708/https://www.bfmtv.com/politique/elections/presidentielle/gerald-darmanin-estime-que-jean-luc-melenchon-gagnera-face-a-marine-le-pen-en-cas-de-duel-au-second-tour-de-l-election-presidentielle_AD-202611180359.html",
+          "archived": "2026-11-18"
         }
       ],
       "sections": [
@@ -3408,6 +3459,22 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261117040744/https://lcp.fr/actualites/logement-associations-jeunesse-ce-qu-il-faut-retenir-du-debat-presidentiel-sur-lci",
           "archived": "2026-11-17"
+        },
+        {
+          "quote": "Si on veut que la primaire se tienne, il faut être raisonnable. Si vous dites demain qu'Eric Zemmour doit faire partie de la primaire, en réalité, vous flinguez la primaire. Car ni les uns, ni les autres, ni participeront",
+          "date": "2026-11-18",
+          "medium": "Projet de primaire de la droite et du centre (équipes de Gabriel Attal, Bruno Retailleau et David Lisnard, novembre 2026) : la participation d'Éric Zemmour (Reconquête) est en débat. Public Sénat, 19 novembre 2026, au micro de Public Sénat (« ni participeront » est l'orthographe de la page). Sur Sud Radio le même mercredi : « Si Eric Zemmour y participe, il n'y a pas de primaire, vous le savez bien ».",
+          "url": "https://www.publicsenat.fr/actualites/politique/primaire-en-incluant-eric-zemmour-david-lisnard-cherche-t-il-a-planter-le-processus-ou-a-en-faire-un-pre-premier-tour-de-la-presidentielle",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Un appel d'air",
+          "date": "2026-11-19",
+          "medium": "BFMTV, vidéo du 19 novembre 2026 : la page écrit qu'il s'oppose ainsi à la régularisation de travailleurs sans papiers dans le secteur du bâtiment.",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-un-appel-d-air-bruno-retailleau-s-oppose-a-la-regularisation-de-travailleurs-sans-papiers-dans-le-secteur-du-batiment_VN-202611190728.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -4346,6 +4413,14 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261104194954/https://www.rtl.fr/actu/justice-faits-divers/23-procedures-sur-rtl-le-procureur-national-antiterroriste-affirme-que-les-menaces-de-l-ultra-droite-radicale-violente-sont-en-croissance-7900692013",
           "archived": "2026-11-04"
+        },
+        {
+          "quote": "la première s'inscrit dans des projets de violences contre les personnes, la seconde dans des actions contre des biens et des infrastructures",
+          "date": "2026-11-22",
+          "medium": "BFMTV, 22 novembre 2026 : le procureur national antiterroriste Olivier Christen distingue ainsi l'ultra-droite radicale violente (la première) de l'ultra-gauche radicale violente (la seconde). La France reste sous « fortes tensions » de la menace terroriste, selon la page.",
+          "url": "https://www.bfmtv.com/police-justice/terrorisme/islamisme-ultra-droite-radicale-violente-la-france-reste-sous-fortes-tensions-de-la-menace-terroriste-selon-le-procureur-antiterroriste_AD-202611220124.html",
+          "theme": "Nuance / contexte",
+          "section": "france"
         }
       ],
       "sections": [
@@ -4657,6 +4732,22 @@
           "section": "gaza",
           "archive_url": "https://web.archive.org/web/20261117072149/https://www.i24news.tv/fr/actu/france/artc-antisemitisme-melenchon-denonce-un-sondage-bidon-arfi-l-accuse-de-complotisme",
           "archived": "2026-11-17"
+        },
+        {
+          "quote": "Franchement, Pierre Perret dans le rôle où le place sa chanson contre les prétendus \"antisémites\" que nous serions, cela me fait de la peine",
+          "date": "2026-11-17",
+          "medium": "Message publié sur X après la sortie de la chanson « Les Antisémites » de Pierre Perret, qui vise La France insoumise ; cité par le JDD le 19 novembre 2026. franceinfo date sa réaction du mardi 17 novembre 2026. Les guillemets intérieurs sont ceux de la page.",
+          "url": "https://www.lejdd.fr/politique/on-lefface-de-nos-tablettes-pour-les-repas-jean-luc-melenchon-appelle-a-ne-plus-ecouter-pierre-perret-189138",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
+        },
+        {
+          "quote": "Il sait très bien que \"antisémite\" désigne les adversaires du génocide à Gaza.",
+          "date": "2026-11-17",
+          "medium": "Message publié sur X après la chanson « Les Antisémites » de Pierre Perret, cité par le JDD le 19 novembre 2026. « génocide » est le mot de l'auteur du message.",
+          "url": "https://www.lejdd.fr/politique/on-lefface-de-nos-tablettes-pour-les-repas-jean-luc-melenchon-appelle-a-ne-plus-ecouter-pierre-perret-189138",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
         }
       ],
       "sections": [
@@ -5007,10 +5098,27 @@
           "section": "gaza",
           "archive_url": "https://web.archive.org/web/20250805133134/https://www.bfmtv.com/politique/est-ce-le-bon-moment-les-doutes-d-edouard-phillipe-quant-a-la-reconnaissance-de-l-etat-de-palestine_AN-202507250488.html",
           "archived": "2025-08-05"
+        },
+        {
+          "quote": "Ça n'est pas mon camp politique",
+          "date": "2026-11-19",
+          "medium": "Projet de primaire de la droite et du centre (équipes de Gabriel Attal, Bruno Retailleau et David Lisnard, novembre 2026) : la participation d'Éric Zemmour (Reconquête) est en débat. BFMTV, 19 novembre 2026 : la page écrit que le candidat d'Horizons s'est « fermement opposé » à participer à une telle primaire.",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-gerard-larcher-ne-ressent-pas-de-proximite-avec-eric-zemmour-et-ne-souhaite-pas-l-inclure-dans-la-primaire-de-la-droite_AV-202611190987.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "espèce de fascination malsaine",
+          "date": "2026-11-18",
+          "medium": "BFMTV, 18 novembre 2026 : la page écrit qu'il prête à Jean-Luc Mélenchon et à Marine Le Pen une « espèce de fascination malsaine » pour Vladimir Poutine, ce qu'il juge « profondément » inquiétant « pour la sécurité de notre pays ».",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/guerre-en-ukraine-edouard-philippe-denonce-la-fascination-malsaine-de-jean-luc-melenchon-et-marine-le-pen-pour-vladimir-poutine_AD-202611180518.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
-        "gaza"
+        "gaza",
+        "france"
       ],
       "category": "Responsables politiques",
       "subcategory": "Candidats à la présidentielle 2027",
@@ -5290,10 +5398,19 @@
           "section": "gaza",
           "archive_url": "https://web.archive.org/web/20261015215248/https://www.franceinfo.fr/monde/palestine/mieux-vaut-tard-que-jamais-decision-courageuse-les-reactions-politiques-apres-l-annonce-d-emmanuel-macron-de-reconnaitre-l-etat-de-palestine_7396984.html",
           "archived": "2026-10-15"
+        },
+        {
+          "quote": "Je ne mets pas le RN et LFI sur le même plan",
+          "date": "2026-11-20",
+          "medium": "BFMTV, vidéo du 20 novembre 2026, jour de sa déclaration de candidature : la page écrit qu'il déclare que le RN « porte un héritage de xénophobie, de racisme et d'antisémitisme ».",
+          "url": "https://www.bfmtv.com/politique/front-national/video-je-ne-mets-pas-le-rn-et-lfi-sur-le-meme-plan-assure-dominique-de-villepin-declarant-que-le-rn-porte-un-heritage-de-xenophobie-de-racisme-et-d-antisemitisme_VN-202611200484.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
-        "gaza"
+        "gaza",
+        "france"
       ],
       "category": "Responsables politiques",
       "subcategory": "Candidats à la présidentielle 2027",
@@ -7076,6 +7193,14 @@
           "archived": "2026-11-16"
         },
         {
+          "quote": "C'était une proposition du Rassemblement national, qui a été mise à l'agenda politique par les LR, et qui maintenant a été soutenue par le ministre de l'Intérieur. C'est honteux!",
+          "date": "2026-11-21",
+          "medium": "BFMTV, 21 novembre 2026 : au micro de franceinfo, à propos de la loi sur la présomption d'usage légal des armes par les forces de l'ordre, adoptée par le Parlement. La page cite aussi sa phrase « la Macronie a complètement dérivé sur ses valeurs ». Boris Vallaud (PS) annonce saisir le Conseil constitutionnel.",
+          "url": "https://www.bfmtv.com/politique/parlement/honteux-marchepied-a-marine-le-pen-la-gauche-denonce-l-adoption-de-la-loi-de-presomption-d-usage-legal-des-armes-par-les-forces-de-l-ordre_AD-202611210292.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
           "quote": "Il doit être mis à pied",
           "date": "2026-11-21",
           "medium": "franceinfo, page du 21 novembre 2026. La phrase est reproduite telle que cette page la publie. La page précise : Sandrine Rousseau appelle le ministre de l'Intérieur Laurent Nuñez à mettre à pied “immédiatement” le préfet du Loiret Hugues Moutouh, accusé d'avoir organisé des fuites depuis le ministère de l'Intérieur vers le Rassemblement national.",
@@ -7347,6 +7472,14 @@
           "url": "https://x.com/JulienOdoul/status/2121994894306693279",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "J'observe qu'il faudrait que le secret de l'instruction soit préservé",
+          "date": "2026-11-20",
+          "medium": "Affaire des fuites présumées du ministère de l'Intérieur vers le RN : le préfet du Loiret Hugues Moutouh, secrétaire général du ministère de l'Intérieur d'avril 2025 à mai 2026, est soupçonné d'avoir renseigné le Rassemblement national sur des affaires en cours ; une enquête judiciaire est ouverte et le siège du RN a été perquisitionné. Il conteste et a demandé à être relevé de ses fonctions (JDD, 21 novembre 2026). franceinfo, direct du 20 novembre 2026 : porte-parole du RN, invité de franceinfo. La page écrit qu'il a dénoncé « l'instrumentalisation de cette affaire, notamment par Jean-Luc Mélenchon ».",
+          "url": "https://www.franceinfo.fr/societe/justice/direct-si-les-faits-sont-averes-ils-sont-evidemment-tres-graves-laurent-nunez-convoque-le-prefet-hugues-moutouh-soupconne-d-avoir-transmis-des-informations-sensibles-au-rassemblement-national_8291756.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -7508,6 +7641,14 @@
           "date": "2026-11-14",
           "medium": "CNews, « Face à Michel Onfray », 14 novembre 2026, 13:48, heure de Paris. Phrase entre guillemets dans le post de @CNEWS. Il est présenté comme philosophe et essayiste.",
           "url": "https://x.com/CNEWS/status/2121586073255960975",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Que va-t-on faire de cet antisémitisme que Jean-Luc Mélenchon libère comme des chiens furieux ?",
+          "date": "2026-11-21",
+          "medium": "CNews, vidéo du 21 novembre 2026. C'est son jugement sur Jean-Luc Mélenchon. La réponse de Jean-Luc Mélenchon à la chanson « Les Antisémites » de Pierre Perret (17 novembre 2026) est sur sa fiche.",
+          "url": "https://www.cnews.fr/videos/france/2026-11-21/que-va-t-faire-de-cet-antisemitisme-que-jean-luc-melenchon-libere-comme",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
         }
@@ -7821,6 +7962,14 @@
           "url": "https://x.com/sebchenu/status/2121923164955668823",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "Je le dis aux électeurs de David Lisnard, Bruno Retailleau et Edouard Philippe : tournez-vous vers nous",
+          "date": "2026-11-18",
+          "medium": "CNews, La Grande Interview, 18 novembre 2026 : la page le présente comme député RN du Nord.",
+          "url": "https://www.cnews.fr/france/2026-11-18/je-le-dis-aux-electeurs-de-david-lisnard-bruno-retailleau-et-edouard-philippe",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -8126,6 +8275,255 @@
           "source": "CNews",
           "archive_url": "https://web.archive.org/web/20261117072309/https://www.cnews.fr/france/2026-11-16/cnews-fait-partie-de-la-liberte-et-de-la-diversite-de-la-presse-considere-bruno",
           "archived": "2026-11-17"
+        }
+      ]
+    },
+    {
+      "id": "jean-philippe-tanguy",
+      "name": "Jean-Philippe Tanguy",
+      "type": "person",
+      "role": "Député RN de la Somme (franceinfo, 20 novembre 2026)",
+      "description": "Député du Rassemblement national (Somme). Le 20 novembre 2026, il qualifie de « rumeurs » et d'« accusations sans fondement » les soupçons de fuites du ministère de l'Intérieur vers le RN. Pas de photo libre : monogramme.",
+      "statements": [
+        {
+          "quote": "Ce sont des rumeurs et des accusations sans fondement en pleine campagne. Ça n'indigne personne parce que ça touche le RN. On prend les coups et on reste dignes",
+          "date": "2026-11-20",
+          "medium": "Affaire des fuites présumées du ministère de l'Intérieur vers le RN : le préfet du Loiret Hugues Moutouh, secrétaire général du ministère de l'Intérieur d'avril 2025 à mai 2026, est soupçonné d'avoir renseigné le Rassemblement national sur des affaires en cours ; une enquête judiciaire est ouverte et le siège du RN a été perquisitionné. Il conteste et a demandé à être relevé de ses fonctions (JDD, 21 novembre 2026). Le Figaro, 20 novembre 2026 : la page écrit qu'il l'a dit sur France Inter et qu'il assure n'avoir « jamais vu » Hugues Moutouh « à une seule réunion programmatique ».",
+          "url": "https://www.lefigaro.fr/actualite-france/soupcons-de-fuites-au-profit-du-rn-si-les-faits-concernant-le-prefet-moutouh-sont-averes-ils-sont-tres-graves-reagit-laurent-nunez-20261120",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "On n'a donc plus le droit d'être ami avec quelqu'un du Rassemblement national et de venir voir son ami au siège du Rassemblement national ?",
+          "date": "2026-11-20",
+          "medium": "Affaire des fuites présumées du ministère de l'Intérieur vers le RN : le préfet du Loiret Hugues Moutouh, secrétaire général du ministère de l'Intérieur d'avril 2025 à mai 2026, est soupçonné d'avoir renseigné le Rassemblement national sur des affaires en cours ; une enquête judiciaire est ouverte et le siège du RN a été perquisitionné. Il conteste et a demandé à être relevé de ses fonctions (JDD, 21 novembre 2026). franceinfo, 20 novembre 2026 : à propos du magistrat présent au siège du RN lors de la perquisition. Il ajoute : « Les autorités elles-mêmes disent que ce monsieur, magistrat, était là et n'avait rien à faire avec la perquisition ».",
+          "url": "https://www.franceinfo.fr/politique/front-national/des-rumeurs-et-des-accusations-sans-fondement-reagit-jean-philippe-tanguy-dans-l-affaire-du-prefet-soupconne-d-avoir-renseigne-le-rn-sur-des-affaires-en-cours_8291828.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-20",
+          "title": "Fuites présumées vers le RN",
+          "text": "Il qualifie les soupçons de « rumeurs » et d'« accusations sans fondement ».",
+          "url": "https://www.lefigaro.fr/actualite-france/soupcons-de-fuites-au-profit-du-rn-si-les-faits-concernant-le-prefet-moutouh-sont-averes-ils-sont-tres-graves-reagit-laurent-nunez-20261120",
+          "source": "Le Figaro"
+        }
+      ]
+    },
+    {
+      "id": "laurent-nunez",
+      "name": "Laurent Nuñez",
+      "type": "person",
+      "role": "Ministre de l'Intérieur (BFMTV, 20 novembre 2026)",
+      "description": "Ministre de l'Intérieur. Le 20 novembre 2026, il convoque le préfet Hugues Moutouh, soupçonné d'avoir renseigné le RN, et dit que les faits seraient « très graves » s'ils étaient avérés. Pas de photo libre : monogramme.",
+      "statements": [
+        {
+          "quote": "Si ces faits sont avérés, c'est très grave, ça jettera le discrédit sur le ministère de l'Intérieur.",
+          "date": "2026-11-20",
+          "medium": "Affaire des fuites présumées du ministère de l'Intérieur vers le RN : le préfet du Loiret Hugues Moutouh, secrétaire général du ministère de l'Intérieur d'avril 2025 à mai 2026, est soupçonné d'avoir renseigné le Rassemblement national sur des affaires en cours ; une enquête judiciaire est ouverte et le siège du RN a été perquisitionné. Il conteste et a demandé à être relevé de ses fonctions (JDD, 21 novembre 2026). franceinfo, direct du 20 novembre 2026 : la page écrit qu'il l'a dit sur BFMTV et qu'il devait rencontrer le préfet à 11 heures.",
+          "url": "https://www.franceinfo.fr/societe/justice/direct-si-les-faits-sont-averes-ils-sont-evidemment-tres-graves-laurent-nunez-convoque-le-prefet-hugues-moutouh-soupconne-d-avoir-transmis-des-informations-sensibles-au-rassemblement-national_8291756.html",
+          "theme": "Nuance / contexte",
+          "section": "france"
+        },
+        {
+          "quote": "J'ai besoin de l'entendre, d'écouter ce qu'il a à me dire. Ma main n'a jamais tremblé quand il y avait des décisions à prendre, croyez-le bien",
+          "date": "2026-11-20",
+          "medium": "Affaire des fuites présumées du ministère de l'Intérieur vers le RN : le préfet du Loiret Hugues Moutouh, secrétaire général du ministère de l'Intérieur d'avril 2025 à mai 2026, est soupçonné d'avoir renseigné le Rassemblement national sur des affaires en cours ; une enquête judiciaire est ouverte et le siège du RN a été perquisitionné. Il conteste et a demandé à être relevé de ses fonctions (JDD, 21 novembre 2026). CNews, 20 novembre 2026.",
+          "url": "https://www.cnews.fr/france/2026-11-20/si-les-faits-sont-averes-ils-sont-tres-graves-laurent-nunez-reagit-laffaire-des",
+          "theme": "Nuance / contexte",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Gouvernement & exécutif",
+      "parcours": [
+        {
+          "date": "2026-11-20",
+          "title": "Convocation du préfet Moutouh",
+          "text": "Il convoque le préfet soupçonné d'avoir renseigné le RN.",
+          "url": "https://www.franceinfo.fr/societe/justice/direct-si-les-faits-sont-averes-ils-sont-evidemment-tres-graves-laurent-nunez-convoque-le-prefet-hugues-moutouh-soupconne-d-avoir-transmis-des-informations-sensibles-au-rassemblement-national_8291756.html",
+          "source": "franceinfo"
+        }
+      ]
+    },
+    {
+      "id": "hugues-moutouh",
+      "name": "Hugues Moutouh",
+      "type": "person",
+      "role": "Préfet du Loiret, ancien secrétaire général du ministère de l'Intérieur (JDD, 21 novembre 2026)",
+      "description": "Préfet du Loiret, secrétaire général du ministère de l'Intérieur d'avril 2025 à mai 2026, conseiller au cabinet de Nicolas Sarkozy de 2011 à 2012 (JDD). En novembre 2026, il est soupçonné d'avoir renseigné le RN sur des affaires en cours ; une enquête judiciaire est ouverte. Il conteste, dit n'avoir « rien à se reprocher » et a demandé à être relevé de ses fonctions. Aucune mise en examen au 20 novembre 2026 selon le ministre (CNews). Pas de photo libre : monogramme.",
+      "statements": [
+        {
+          "quote": "Me faire passer pour un nervi à la solde d'un parti est odieux, me désigner comme étant une taupe est immonde.",
+          "date": "2026-11-21",
+          "medium": "Affaire des fuites présumées du ministère de l'Intérieur vers le RN : le préfet du Loiret Hugues Moutouh, secrétaire général du ministère de l'Intérieur d'avril 2025 à mai 2026, est soupçonné d'avoir renseigné le Rassemblement national sur des affaires en cours ; une enquête judiciaire est ouverte et le siège du RN a été perquisitionné. Il conteste et a demandé à être relevé de ses fonctions (JDD, 21 novembre 2026). JDD, 21 novembre 2026 : entretien téléphonique, « sa seule prise de parole » selon la page, quelques heures avant un communiqué à l'AFP où il demande à « être relevé de [s]es fonctions ». C'est sa réponse aux soupçons ; l'enquête est en cours.",
+          "url": "https://www.lejdd.fr/politique/me-designer-comme-une-taupe-est-immonde-le-prefet-hugues-moutouh-se-defend-et-dit-sa-verite-au-jdd-189351",
+          "theme": "Nuance / contexte",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Organisations & institutions",
+      "subcategory": "Institutions publiques",
+      "parcours": [
+        {
+          "date": "2026-11-21",
+          "title": "Il conteste les soupçons",
+          "text": "Dans le JDD, il conteste les soupçons de fuites vers le RN et demande à être relevé de ses fonctions.",
+          "url": "https://www.lejdd.fr/politique/me-designer-comme-une-taupe-est-immonde-le-prefet-hugues-moutouh-se-defend-et-dit-sa-verite-au-jdd-189351",
+          "source": "JDD"
+        }
+      ]
+    },
+    {
+      "id": "edwige-diaz",
+      "name": "Edwige Diaz",
+      "type": "person",
+      "role": "Sénatrice RN (BFMTV, 21 novembre 2026)",
+      "description": "Élue du Rassemblement national, présentée par BFMTV le 21 novembre 2026 comme sénatrice RN. Pas de photo libre : monogramme.",
+      "statements": [
+        {
+          "quote": "C'est une victoire idéologique",
+          "date": "2026-11-21",
+          "medium": "BFMTV, vidéo du 21 novembre 2026 : à propos de l'adoption par le Parlement de la loi sur la présomption d'usage légal des armes par les forces de l'ordre. La page écrit qu'elle s'en félicite « pour le Rassemblement national ». La gauche dénonce le même jour une loi « honteuse » (BFMTV).",
+          "url": "https://www.bfmtv.com/politique/video-loi-sur-la-presomption-d-usage-legal-des-armes-par-les-forces-de-l-ordre-adoptee-c-est-une-victoire-ideologique-pour-le-rassemblement-national-se-felicite-edwige-diaz-senatrice-rn_VN-202611210430.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-21",
+          "title": "Loi sur l'usage des armes",
+          "text": "Elle salue une « victoire idéologique » pour le RN.",
+          "url": "https://www.bfmtv.com/politique/video-loi-sur-la-presomption-d-usage-legal-des-armes-par-les-forces-de-l-ordre-adoptee-c-est-une-victoire-ideologique-pour-le-rassemblement-national-se-felicite-edwige-diaz-senatrice-rn_VN-202611210430.html",
+          "source": "BFMTV"
+        }
+      ]
+    },
+    {
+      "id": "david-lisnard",
+      "name": "David Lisnard",
+      "type": "person",
+      "role": "Maire de Cannes, candidat Nouvelle Énergie à la présidentielle 2027 (CNews, 22 novembre 2026)",
+      "description": "Maire de Cannes, candidat de Nouvelle Énergie à l'élection présidentielle de 2027. En novembre 2026, il plaide pour une primaire de la droite et du centre ouverte à Reconquête, ce que refusent les équipes de Gabriel Attal et d'Édouard Philippe. Pas de photo libre : monogramme.",
+      "statements": [
+        {
+          "quote": "Je confirme que cette primaire devrait se tenir entre tous ceux qui se prétendent de la droite et du centre. Gabriel Attal dit qu'il est de droite, ce dont je doute, fort bien, qu'il participe. Reconquête devrait aussi pouvoir y concourir s'il en respecte les conditions d'accès",
+          "date": "2026-11-22",
+          "medium": "Projet de primaire de la droite et du centre (équipes de Gabriel Attal, Bruno Retailleau et David Lisnard, novembre 2026) : la participation d'Éric Zemmour (Reconquête) est en débat. CNews, 22 novembre 2026, reprenant son entretien au JDD. Il ajoute : « Il faut un certain nombre de parrainages et une charte commune engageant chacun ». Édouard Philippe et Gabriel Attal sont opposés à la participation d'Éric Zemmour, selon la page.",
+          "url": "https://www.cnews.fr/france/2026-11-22/primaire-de-la-droite-et-du-centre-je-ne-demanderai-pas-gabriel-attal-de-me",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Je veux l'éliminer de la compétition",
+          "date": "2026-11-22",
+          "medium": "Projet de primaire de la droite et du centre (équipes de Gabriel Attal, Bruno Retailleau et David Lisnard, novembre 2026) : la participation d'Éric Zemmour (Reconquête) est en débat. BFMTV, Le Grand Oral 2027, 22 novembre 2026 : la page écrit qu'il le dit pour justifier d'ouvrir la primaire à Éric Zemmour.",
+          "url": "https://www.bfmtv.com/replay-emissions/le-grand-oral-2027/video-je-veux-l-eliminer-de-la-competition-declare-david-lisnard-candidat-a-l-election-presidentielle-pour-justifier-d-ouvrir-a-eric-zemmour-une-primaire-de-la-droite-et-du-centre_VN-202611220360.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Candidats à la présidentielle 2027",
+      "parcours": [
+        {
+          "date": "2026-11-22",
+          "title": "Primaire ouverte à Reconquête",
+          "text": "Il plaide pour une primaire de la droite et du centre ouverte à Reconquête.",
+          "url": "https://www.cnews.fr/france/2026-11-22/primaire-de-la-droite-et-du-centre-je-ne-demanderai-pas-gabriel-attal-de-me",
+          "source": "CNews"
+        }
+      ]
+    },
+    {
+      "id": "gerard-larcher",
+      "name": "Gérard Larcher",
+      "type": "person",
+      "role": "Président du Sénat (BFMTV, 19 novembre 2026)",
+      "description": "Président du Sénat. Le 19 novembre 2026, sur BFMTV, il dit qu'Éric Zemmour n'est « pas de la droite républicaine » et ne souhaite pas l'inclure dans la primaire de la droite et du centre. Pas de photo libre : monogramme.",
+      "statements": [
+        {
+          "quote": "ne fait pas partie de ceux que je souhaite convier à débattre",
+          "date": "2026-11-19",
+          "medium": "Projet de primaire de la droite et du centre (équipes de Gabriel Attal, Bruno Retailleau et David Lisnard, novembre 2026) : la participation d'Éric Zemmour (Reconquête) est en débat. BFMTV, 19 novembre 2026. Le sujet de la phrase est Éric Zemmour. La page écrit qu'il cite Gabriel Attal, Bruno Retailleau, Édouard Philippe et David Lisnard comme « le périmètre du centre et de la droite républicaine ».",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-gerard-larcher-ne-ressent-pas-de-proximite-avec-eric-zemmour-et-ne-souhaite-pas-l-inclure-dans-la-primaire-de-la-droite_AV-202611190987.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-19",
+          "title": "Primaire sans Éric Zemmour",
+          "text": "Il ne souhaite pas inclure Éric Zemmour dans la primaire de la droite et du centre.",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-gerard-larcher-ne-ressent-pas-de-proximite-avec-eric-zemmour-et-ne-souhaite-pas-l-inclure-dans-la-primaire-de-la-droite_AV-202611190987.html",
+          "source": "BFMTV"
+        }
+      ]
+    },
+    {
+      "id": "laure-lavalette",
+      "name": "Laure Lavalette",
+      "type": "person",
+      "role": "Députée RN du Var, porte-parole de la campagne présidentielle de Marine Le Pen (Sud Ouest, 19 novembre 2026)",
+      "description": "Députée du Rassemblement national (Var), porte-parole de la campagne présidentielle de Marine Le Pen. Le média Les Jours a publié le 18 novembre 2026 une enquête sur une publication étudiante de Bordeaux, il y a une trentaine d'années ; Laure Lavalette est accusée d'avoir cautionné des écrits antisémites. Elle répond que le climat était « tout à fait différent » et qualifie Les Jours d'« officine d'extrême gauche » (Sud Ouest). Pas de photo libre : monogramme.",
+      "statements": [
+        {
+          "quote": "Je ne vais pas me justifier de ce qu'il s'est passé il y a 30 ans dans un climat qui était tout à fait différent. Peut-être que je ne ferais pas la même chose maintenant",
+          "date": "2026-11-19",
+          "medium": "Le média Les Jours a publié le 18 novembre 2026 une enquête sur une publication étudiante de Bordeaux, il y a une trentaine d'années ; Laure Lavalette est accusée d'avoir cautionné des écrits antisémites. Elle répond que le climat était « tout à fait différent » et qualifie Les Jours d'« officine d'extrême gauche » (Sud Ouest). Le Figaro, 19 novembre 2026. Selon Sud Ouest, elle s'exprimait sur BFMTV et a dit n'avoir « aucune leçon à recevoir sur l'antisémitisme ».",
+          "url": "https://www.lefigaro.fr/elections/presidentielles/le-climat-n-etait-pas-le-meme-accusee-d-avoir-cautionne-des-ecrits-antisemites-laure-lavalette-invoque-des-faits-vieux-de-30-ans-20261119",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "J'ai marché, moi, contrairement à d'autres, à la marche contre l'antisémitisme",
+          "date": "2026-11-19",
+          "medium": "Le média Les Jours a publié le 18 novembre 2026 une enquête sur une publication étudiante de Bordeaux, il y a une trentaine d'années ; Laure Lavalette est accusée d'avoir cautionné des écrits antisémites. Elle répond que le climat était « tout à fait différent » et qualifie Les Jours d'« officine d'extrême gauche » (Sud Ouest). Sud Ouest, 19 novembre 2026 : la page précise « en novembre 2023 » et y voit une allusion apparente à Jean-Luc Mélenchon.",
+          "url": "https://www.sudouest.fr/politique/marine-le-pen/laure-lavalette-je-ne-vais-pas-me-justifier-dit-la-deputee-du-rn-accusee-d-avoir-cautionne-des-ecrits-antisemites-durant-ses-etudes-a-bordeaux-31582634.php",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-19",
+          "title": "Enquête des Jours",
+          "text": "Accusée d'avoir cautionné des écrits antisémites il y a trente ans, elle invoque un climat « tout à fait différent ».",
+          "url": "https://www.sudouest.fr/politique/marine-le-pen/laure-lavalette-je-ne-vais-pas-me-justifier-dit-la-deputee-du-rn-accusee-d-avoir-cautionne-des-ecrits-antisemites-durant-ses-etudes-a-bordeaux-31582634.php",
+          "source": "Sud Ouest"
         }
       ]
     },
@@ -10483,6 +10881,42 @@
       "nature": "autre",
       "archive_url": "https://web.archive.org/web/20261117072309/https://www.cnews.fr/france/2026-11-16/cnews-fait-partie-de-la-liberte-et-de-la-diversite-de-la-presse-considere-bruno",
       "archived": "2026-11-17"
+    },
+    {
+      "source": "laurent-nunez",
+      "target": "rn",
+      "relation": "le 20/11/2026, il convoque le préfet Hugues Moutouh, soupçonné d'avoir renseigné le RN, et dit que les faits seraient « très graves » s'ils étaient avérés",
+      "url": "https://www.franceinfo.fr/societe/justice/direct-si-les-faits-sont-averes-ils-sont-evidemment-tres-graves-laurent-nunez-convoque-le-prefet-hugues-moutouh-soupconne-d-avoir-transmis-des-informations-sensibles-au-rassemblement-national_8291756.html",
+      "date": "2026-11-20",
+      "section": "france",
+      "nature": "autre"
+    },
+    {
+      "source": "david-lisnard",
+      "target": "eric-zemmour",
+      "relation": "le 22/11/2026, il plaide pour que Reconquête puisse concourir à la primaire de la droite et du centre, et dit vouloir « l'éliminer de la compétition »",
+      "url": "https://www.bfmtv.com/replay-emissions/le-grand-oral-2027/video-je-veux-l-eliminer-de-la-competition-declare-david-lisnard-candidat-a-l-election-presidentielle-pour-justifier-d-ouvrir-a-eric-zemmour-une-primaire-de-la-droite-et-du-centre_VN-202611220360.html",
+      "date": "2026-11-22",
+      "section": "france",
+      "nature": "autre"
+    },
+    {
+      "source": "gerard-larcher",
+      "target": "eric-zemmour",
+      "relation": "le 19/11/2026, il dit qu'Éric Zemmour n'est « pas de la droite républicaine » et ne souhaite pas l'inclure dans la primaire",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-gerard-larcher-ne-ressent-pas-de-proximite-avec-eric-zemmour-et-ne-souhaite-pas-l-inclure-dans-la-primaire-de-la-droite_AV-202611190987.html",
+      "date": "2026-11-19",
+      "section": "france",
+      "nature": "opposition"
+    },
+    {
+      "source": "laure-lavalette",
+      "target": "marine-le-pen",
+      "relation": "porte-parole de sa campagne présidentielle (Sud Ouest, 19/11/2026)",
+      "url": "https://www.sudouest.fr/politique/marine-le-pen/laure-lavalette-je-ne-vais-pas-me-justifier-dit-la-deputee-du-rn-accusee-d-avoir-cautionne-des-ecrits-antisemites-durant-ses-etudes-a-bordeaux-31582634.php",
+      "date": "2026-11-19",
+      "section": "france",
+      "nature": "ascension"
     }
   ]
 }

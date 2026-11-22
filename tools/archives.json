@@ -1713,5 +1713,30 @@
   "archive_url": "https://web.archive.org/web/20261122194651/https://www.radiofrance.fr/franceinter/podcasts/franc-jeu/franc-jeu-du-dimanche-22-novembre-2026-2672721",
   "archived": "2026-11-22",
   "status": "saved"
+ },
+ "https://www.bfmtv.com/police-justice/terrorisme/islamisme-ultra-droite-radicale-violente-la-france-reste-sous-fortes-tensions-de-la-menace-terroriste-selon-le-procureur-antiterroriste_AD-202611220124.html": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://www.bfmtv.com/politique/elections/presidentielle/gerald-darmanin-estime-que-jean-luc-melenchon-gagnera-face-a-marine-le-pen-en-cas-de-duel-au-second-tour-de-l-election-presidentielle_AD-202611180359.html": {
+  "archive_url": "https://web.archive.org/web/20261118083708/https://www.bfmtv.com/politique/elections/presidentielle/gerald-darmanin-estime-que-jean-luc-melenchon-gagnera-face-a-marine-le-pen-en-cas-de-duel-au-second-tour-de-l-election-presidentielle_AD-202611180359.html",
+  "archived": "2026-11-18",
+  "status": "existing"
+ },
+ "https://www.bfmtv.com/politique/elections/presidentielle/guerre-en-ukraine-edouard-philippe-denonce-la-fascination-malsaine-de-jean-luc-melenchon-et-marine-le-pen-pour-vladimir-poutine_AD-202611180518.html": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-gerard-larcher-ne-ressent-pas-de-proximite-avec-eric-zemmour-et-ne-souhaite-pas-l-inclure-dans-la-primaire-de-la-droite_AV-202611190987.html": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://www.bfmtv.com/politique/elections/presidentielle/video-un-appel-d-air-bruno-retailleau-s-oppose-a-la-regularisation-de-travailleurs-sans-papiers-dans-le-secteur-du-batiment_VN-202611190728.html": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
  }
 }
