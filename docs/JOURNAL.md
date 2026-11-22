@@ -4,6 +4,10 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-22 — relevé automatique
+
+Tu ne publies aucune phrase. 16 éléments attendent une relecture sur la page admin.
+
 ## 2026-11-19 — relevé automatique
 
 Tu ne publies aucune phrase. 16 éléments attendent une relecture sur la page admin.
