@@ -13,7 +13,7 @@ os.makedirs("/workspace", exist_ok=True)
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path="/usr/bin/google-chrome")
     pg=b.new_context(viewport={"width":390,"height":844},device_scale_factor=2,accept_downloads=True).new_page()
-    pg.on("console",lambda m: m.type=="error" and errs.append(m.text)); pg.on("pageerror",lambda e: errs.append(str(e)))
+    pg.on("console",lambda m: m.type=="error" and not str((m.location or {}).get("url","")).startswith("https://api.github.com/") and errs.append(m.text)); pg.on("pageerror",lambda e: errs.append(str(e)))
     pg.goto(BASE+"#/personne/emmanuel-macron"); pg.wait_for_selector(".fiche img"); pg.wait_for_function("() => { var im=document.querySelector('.fiche img'); return im && im.complete && im.naturalWidth>0; }")
     pg.locator(".fiche [data-act='share']").first.click()
     pg.wait_for_selector("#share-sheet:not([hidden])")

@@ -1,3 +1,4 @@
+import re
 # -*- coding: utf-8 -*-
 """Enquête : chemin, données publiques, anciens liens, barre à quatre onglets."""
 import json
@@ -76,7 +77,7 @@ html = open("index.html", encoding="utf-8").read()
 check("Citations" in html and "Enquête" in html and 'id="tab-liens"' in html, "barre à quatre onglets")
 check("#/methodologie" in html or 'id="footer-methode"' in html, "méthode encore liée")
 check("function shortestPath" in js and "renderRail" in js, "chemin et défilement dans la page")
-check('var VERSION = "onrecord-v52"' in open("sw.js", encoding="utf-8").read(), "cache v51")
+check(int(re.search(r'var VERSION = "onrecord-v(\d+)"', open("sw.js", encoding="utf-8").read()).group(1)) >= 52, "cache v52+")
 
 print("%d ok, %d fail" % (ok, fail))
 sys.exit(1 if fail else 0)

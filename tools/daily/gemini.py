@@ -15,7 +15,8 @@ from tools.daily.collect import excerpt
 from tools.daily.textutil import THEMES
 
 MODELS = ("gemini-3.5-flash-lite", "gemini-2.5-flash-lite", "gemini-3.1-flash-lite")
-MAX_REQUESTS = 16
+MAX_REQUESTS = 60
+RETRIES = 3
 PAUSE_SECONDS = 5
 ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/%s:generateContent"
 
@@ -113,6 +114,7 @@ class Gemini:
         self.requests = 0
         self.model = MODELS[0]
         self._chosen = False
+        self.dead = set()
 
     def _post(self, model, prompt, schema):
         self.requests += 1
@@ -131,7 +133,7 @@ class Gemini:
             method="POST",
         )
         try:
-            with urllib.request.urlopen(req, timeout=60) as res:
+            with urllib.request.urlopen(req, timeout=90) as res:
                 return res.status, res.read().decode("utf-8", "replace")
         except urllib.error.HTTPError as exc:
             detail = exc.read().decode("utf-8", "replace")[:500]
@@ -141,42 +143,58 @@ class Gemini:
         if self.requests >= self.max_requests:
             raise QuotaError("plafond de requêtes du relevé")
         prompt = _prompt(page, names)
-        models = (self.model,) if self._chosen else MODELS
+        # Le modèle qui a déjà répondu passe en premier ; les autres restent en secours.
+        models = [self.model] + [m for m in MODELS if m != self.model]
         last = ""
+        saturated = 0
         for model in models:
+            if model in self.dead:
+                continue
             status, body = self._call(model, prompt)
+            if status == 400 and "responseSchema" in body:
+                status, body = self._call(model, prompt, schema=False)
             if status == 200:
                 self.model = model
                 self._chosen = True
                 return _parse_body(body)
-            if status in (401, 403) and "API_KEY" in body.upper() or status == 400 and "API key" in body:
+            if (status in (401, 403) and "API_KEY" in body.upper()) or (status == 400 and "API key" in body):
                 raise KeyErrorRejected("clé Gemini refusée")
-            if status == 404:
-                last = "modèle %s introuvable" % model
-                continue
-            if status == 400 and "responseSchema" in body:
-                status, body = self._call(model, prompt, schema=False)
-                if status == 200:
-                    self.model = model
-                    self._chosen = True
-                    return _parse_body(body)
-            if status == 429:
-                raise QuotaError("quota Gemini (429)")
-            last = "HTTP %s" % status
             if status in (401, 403):
                 raise KeyErrorRejected("clé Gemini refusée (%s)" % status)
+            if status == 404:
+                self.dead.add(model)
+                last = "modèle %s introuvable" % model
+                continue
+            if status == 429:
+                # Quota de ce modèle épuisé : le suivant a son propre quota gratuit.
+                saturated += 1
+                self.dead.add(model)
+                last = "quota Gemini (429) sur %s" % model
+                continue
+            if status in (0, 500, 502, 503, 504):
+                # Surcharge passagère : on essaie le modèle suivant pour cette page.
+                last = "HTTP %s sur %s" % (status, model)
+                continue
+            last = "HTTP %s sur %s" % (status, model)
             break
+        if saturated and all(m in self.dead for m in MODELS):
+            raise QuotaError("quota Gemini (429) sur tous les modèles")
         raise ValueError(last or "relecture impossible")
 
     def _call(self, model, prompt, schema=True):
         delay = PAUSE_SECONDS
         status, body = 0, ""
-        for attempt in range(3):
-            status, body = self._post(model, prompt, SCHEMA if schema else None)
-            if status != 429:
+        for attempt in range(RETRIES):
+            try:
+                status, body = self._post(model, prompt, SCHEMA if schema else None)
+            except (OSError, ValueError) as exc:
+                # Délai dépassé ou coupure réseau : même traitement qu'un 503.
+                status, body = 0, str(exc)
+            if status not in (0, 429, 500, 502, 503, 504):
                 return status, body
-            self.sleep(delay)
-            delay *= 2
+            if attempt + 1 < RETRIES:
+                self.sleep(delay)
+                delay *= 2
         return status, body
 
 

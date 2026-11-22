@@ -294,12 +294,12 @@ Le workflow `.github/workflows/daily-update.yml` (« Relevé du matin ») fait l
 
 ### Heure
 
-Le cron est `30 6 * * *`, donc **06:30 UTC**.
+Le cron est `17 5 * * *`, donc **05:17 UTC**.
 
-- En hiver (CET, UTC+1) : 7 h 30 à Paris.
-- En été (CEST, UTC+2) : 8 h 30 à Paris.
+- En hiver (CET, UTC+1) : 6 h 17 à Paris.
+- En été (CEST, UTC+2) : 7 h 17 à Paris.
 
-GitHub ne connaît pas l'heure de Paris, et un cron peut partir en retard, parfois d'une heure. 06:30 UTC reste à une demi-heure de 8 h, dans un sens ou dans l'autre. La fenêtre des phrases est d'environ 48 heures, plus 6 heures de marge pour une dépêche du matin.
+GitHub ne connaît pas l'heure de Paris, et un cron peut partir en retard. Avec `30 6 * * *`, les runs du 18 au 22/11/2026 sont partis vers 15 h UTC, plus de huit heures après l'heure prévue : les minutes rondes sont les plus chargées chez GitHub. D'où une minute creuse, tôt. La fenêtre des phrases est d'environ 48 heures, plus 6 heures de marge pour une dépêche du matin.
 
 ### Activer
 
@@ -312,10 +312,10 @@ Sans ce secret, le workflow écrit un résumé, s'arrête avec un succès, et ne
 ### Ce qu'il fait
 
 1. Il lit des flux RSS qui répondaient le 18 novembre 2026 (franceinfo, BFMTV, CNews, Europe 1, France Inter, Sud Radio, Le Monde, Le Figaro, Libération, le JDD, le HuffPost, LCP, l'Arcom, le Conseil d'État, Public Sénat) et quatre recherches Google News des dernières 48 heures. Google News ne sert qu'à trouver l'article : la phrase est relue sur la page de l'éditeur. RTL, LCI, TF1 Info et l'Assemblée nationale n'avaient pas de flux stable ce jour-là ; ils entrent quand Google News résout leur page.
-2. Il ne télécharge que les pages dont le titre ou le chapeau touche aux deux sujets, ou nomme une fiche déjà en ligne. Les 16 lectures sont réparties : au plus deux pages par personne et trois par média, en prenant d'abord celles qui ne sont pas encore couvertes. Plafond ensuite : deux phrases publiées par personne et quatre par média. Le surplus va dans la file, il n'est pas jeté. Douze liens Google News au plus, 16 requêtes au modèle. Cinq secondes entre chaque requête. Un 429 est réessayé, puis le run s'arrête et le reste va dans la file. Un flux en échec est nommé dans le résumé, avec l'erreur.
+2. Il ne télécharge que les pages dont le titre ou le chapeau touche aux deux sujets, ou nomme une fiche déjà en ligne (score d'au moins 3). Les pages index (fiche personnalité BFMTV `_DN-…`, émission, tag) sont écartées. Une page bloquée (403, 402, délai) ou un mur anti-robot (« Client Challenge », « Accès restreint ») ne prend pas de place : on passe à la suivante. Le Monde, Libération, Mediapart, L'Express et Le Point, qui bloquent les robots, sont essayés en dernier. Le modèle reçoit les paragraphes de l'article (balises `p`, `blockquote`, `h1`), pas les menus : avant le 22/11, l'extrait commençait par 3 500 caractères de menu, et le modèle ne trouvait aucune citation. Les 24 lectures sont réparties : au plus deux pages par personne et trois par média, en prenant d'abord celles qui ne sont pas encore couvertes. Plafond ensuite : deux phrases publiées par personne et quatre par média. Le surplus va dans la file, il n'est pas jeté. Douze liens Google News au plus, 60 requêtes au modèle au plus (retries compris). Cinq secondes entre chaque requête. Un 429, un 5xx ou un délai dépassé est réessayé trois fois avec attente croissante ; ensuite la page passe au modèle de secours. Un 429 retire le modèle pour la suite du run. Le run ne s'arrête que si les trois modèles sont en 429 ; le reste va dans la file. Un flux en échec est nommé dans le résumé, avec l'erreur.
 3. Le modèle propose des phrases. Il ne décide pas. Le programme publie seulement si, après normalisation des espaces et des apostrophes : la phrase est dans la page, entre guillemets, et elle n'est pas coupée au milieu d'un mot ou d'une phrase. Une ellipse `[…]` ne passe que si chaque morceau est dans la page, dans l'ordre, sur des mots entiers. Le programme n'ajoute pas de points de suspension et ne raccourcit pas une phrase pour l'afficher. La date est dans la fenêtre et dans la page (ou, à défaut, celle du flux). L'URL est en https et n'est ni Wikipédia, ni X, ni Google News. Aucun mot interdit dans les champs écrits, y compris dans la citation. La personne est déjà dans l'archive, ou la page la présente avec une fonction publique recopiée (député, ministre, candidat, journaliste…). Le sujet est dans la phrase ou juste à côté. Ce n'est pas un doublon : une phrase déjà en ligne, même plus courte (« ramassis de gauchistes »), bloque une reprise qui la contient. Un doute du modèle, un particulier, une causalité absente de la page : file d'attente, pas le site. Pas de photo (monogramme). Pas de lien de réseau créé tout seul. Une vidéo seulement si son URL est déjà dans la page et vient du diffuseur.
 4. Ce qui passe est ajouté à `tools/auto_published.json`. `build.py` reconstruit `data.json`. Les URL nouvelles passent par `tools/archive.py`. `sw.js` monte d'un numéro, ainsi que les tests qui citent cette version. `tests/test_v22.py` recalcule `EXPECT` avec la même règle que l'échelle du pouvoir. Le journal reçoit une entrée.
-5. Les tests Playwright tournent. `tests/test_v8.py` est ignoré. Dans `tests/test_v5.py`, seuls les échecs « graph built lazily on Réseau » sont admis. Tout autre échec annule le push. Le site en ligne doit répondre avant le push. Après le push, le workflow attend que `sw.js` serve la nouvelle version.
+5. Les tests Playwright tournent. Un test ne doit jamais écrire un numéro de cache en dur sans être dans la liste de `tools/daily/store.py` : du 18 au 21/11, `tests/test_enquete.py` attendait `onrecord-v52` exactement, et chaque run qui publiait (donc montait le cache) échouait sans push. Il vérifie maintenant « v52 ou plus ». `tests/test_v8.py` est ignoré. Dans `tests/test_v5.py`, seuls les échecs « graph built lazily on Réseau » sont admis. Tout autre échec annule le push. Le site en ligne doit répondre avant le push. Après le push, le workflow attend que `sw.js` serve la nouvelle version.
 6. Le commit, en français, est `Mise à jour du JJ/MM : relevé automatique, N phrases`, ou `Mise à jour du JJ/MM : file d'attente, rien publié`. Il est poussé sur `main`.
 
 Le résumé du run est dans l'onglet Actions, en tête de la page (GITHUB_STEP_SUMMARY) : publié, écarté, flux en échec, nombre de requêtes.
@@ -338,8 +338,8 @@ Ce n'est pas une revue humaine.
 
 - La télé et la radio n'entrent que si un article en reprend la phrase mot pour mot. Un direct sans article est absent.
 - L'API X n'est pas utilisée. Un post n'est publié que si une page de presse qui répond le cite tel quel, et l'URL publiée est celle de cette page.
-- Le quota gratuit est court : au plus 16 pages relues par matin. Le reste attend, ou n'est pas ouvert. Un 429 arrête la relecture.
-- Si un compte de facturation est lié au projet Google, le plafond de 16 requêtes limite la dépense, mais le seul moyen d'être certain de ne rien payer est de ne pas lier de facturation. Les extraits de pages sont envoyés à Google, qui peut s'en servir pour améliorer ses modèles sur l'offre gratuite.
+- Le quota gratuit est court : au plus 24 pages relues par matin. Le reste attend, ou n'est pas ouvert. Un 429 sur les trois modèles arrête la relecture.
+- Si un compte de facturation est lié au projet Google, le plafond de 60 requêtes limite la dépense, mais le seul moyen d'être certain de ne rien payer est de ne pas lier de facturation. Les extraits de pages sont envoyés à Google, qui peut s'en servir pour améliorer ses modèles sur l'offre gratuite.
 - Certains sites bloquent les serveurs de GitHub. La page est alors « inaccessible » et rien n'est publié.
 - Le programme rate l'ironie, un second degré, un démenti publié sur une autre page que celle qu'il a lue, et une personne publique dont la fonction n'est pas écrite à côté de la phrase. Ces cas vont dans la file, ou passent à côté.
 - Il ne crée pas de fiche sans fonction publique lue dans la page, pas d'organisation nouvelle, pas de photo, pas de lien du réseau.

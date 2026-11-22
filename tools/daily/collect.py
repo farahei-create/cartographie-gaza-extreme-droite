@@ -215,6 +215,16 @@ def resolve_google_news(article_url, opener=_get):
     return publisher_from_batch(body)
 
 
+BLOCK_TAGS = (
+    "p", "br", "div", "li", "h1", "h2", "h3", "h4", "h5", "h6", "tr", "td", "th",
+    "ul", "ol", "section", "article", "header", "footer", "nav", "aside", "blockquote",
+    "figure", "figcaption", "main", "form", "button", "label", "option", "dt", "dd",
+)
+# Paragraphes de l'article : c'est là que sont les citations, pas dans les menus.
+PARA_TAGS = ("p", "blockquote", "h1")
+CHALLENGE_TITLES = ("client challenge", "acces restreint", "just a moment", "attention required", "access denied", "are you a robot")
+
+
 class _Text(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
@@ -223,6 +233,9 @@ class _Text(HTMLParser):
         self._skip = 0
         self.title = ""
         self._in_title = False
+        self.paras = []
+        self._para = None
+        self._para_depth = 0
 
     def handle_starttag(self, tag, attrs):
         ad = dict(attrs)
@@ -230,8 +243,15 @@ class _Text(HTMLParser):
             self._skip += 1
         if tag == "title":
             self._in_title = True
-        if tag in ("p", "br", "div", "li", "h1", "h2", "h3", "tr"):
+        if tag in BLOCK_TAGS:
             self.parts.append("\n")
+        if tag in PARA_TAGS:
+            if self._para is None:
+                self._para = []
+                self._para_depth = 0
+            self._para_depth += 1
+        elif tag == "br" and self._para is not None:
+            self._para.append(" ")
         if tag == "time" and ad.get("datetime"):
             self.dates.append(ad["datetime"][:10])
         if tag == "meta":
@@ -240,11 +260,25 @@ class _Text(HTMLParser):
             if key in ("article:published_time", "pubdate", "date", "dc.date") and content:
                 self.dates.append(content[:10])
 
+    def _close_para(self):
+        if self._para is not None:
+            text = norm_literal("".join(self._para))
+            if text:
+                self.paras.append(text)
+        self._para = None
+        self._para_depth = 0
+
     def handle_endtag(self, tag):
         if tag in ("script", "style", "noscript", "svg") and self._skip:
             self._skip -= 1
         if tag == "title":
             self._in_title = False
+        if tag in PARA_TAGS and self._para is not None:
+            self._para_depth -= 1
+            if self._para_depth <= 0:
+                self._close_para()
+        if tag in BLOCK_TAGS:
+            self.parts.append("\n")
 
     def handle_data(self, data):
         if self._skip:
@@ -252,6 +286,29 @@ class _Text(HTMLParser):
         if self._in_title:
             self.title += data
         self.parts.append(data)
+        if self._para is not None:
+            self._para.append(data)
+
+
+def article_text(paras):
+    """Paragraphes utiles : assez longs, ou porteurs de guillemets."""
+    kept = []
+    seen = set()
+    for para in paras:
+        if para in seen:
+            continue
+        if len(para) >= 60 or any(mark in para for mark in "«“\""):
+            kept.append(para)
+            seen.add(para)
+    return "\n".join(kept)
+
+
+def is_challenge(title, text):
+    """Page anti-robot ou mur d'accès : ce n'est pas l'article."""
+    folded = fold(title or "")
+    if any(mark in folded for mark in CHALLENGE_TITLES):
+        return True
+    return len(norm_literal(text or "")) < 400
 
 
 def extract_html(html):
@@ -259,9 +316,12 @@ def extract_html(html):
     try:
         parser.feed(html)
         parser.close()
+        parser._close_para()
     except Exception:
-        return {"title": "", "text": norm_literal(re.sub(r"<[^>]+>", " ", html))[:20000], "dates": []}
-    text = norm_literal(" ".join(parser.parts))
+        return {"title": "", "text": norm_literal(re.sub(r"<[^>]+>", " ", html))[:20000], "dates": [], "article": ""}
+    # Les morceaux sont collés tels que le navigateur les affiche : un lien au
+    # milieu d'une phrase n'ajoute pas d'espace avant une virgule.
+    text = norm_literal("".join(parser.parts))
     dates = []
     for raw in parser.dates:
         iso = parse_french_date(raw) or (raw[:10] if re.match(r"20\d{2}-\d{2}-\d{2}", raw or "") else "")
@@ -271,7 +331,8 @@ def extract_html(html):
     body_date = parse_french_date(text[:4000])
     if body_date and body_date not in dates:
         dates.append(body_date)
-    return {"title": norm_literal(parser.title)[:180], "text": text[:80000], "dates": dates}
+    article = article_text(parser.paras)
+    return {"title": norm_literal(parser.title)[:180], "text": text[:80000], "dates": dates, "article": article[:60000]}
 
 
 def _on_space(text, start, end):
@@ -290,10 +351,32 @@ def _on_space(text, start, end):
 
 
 def excerpt(page, limit=11000):
-    """Morceaux envoyés au modèle : le début, puis les passages qui portent les sujets.
+    """Morceaux envoyés au modèle.
 
+    D'abord les paragraphes de l'article (sans menus), en commençant par ceux
+    qui portent des guillemets. Sinon, l'ancien découpage sur le texte entier.
     Le séparateur n'est pas une ellipse : le modèle ne doit pas la recopier.
     """
+    article = page.get("article") or ""
+    if len(article) >= 400:
+        paras = [p for p in article.split("\n") if p.strip()]
+        head = []
+        size = 0
+        for para in paras[:4]:
+            head.append(para)
+            size += len(para)
+        quoted = [p for p in paras[4:] if any(mark in p for mark in "«“\"")]
+        rest = [p for p in paras[4:] if p not in quoted]
+        out = list(head)
+        for para in quoted + rest:
+            if size + len(para) > limit:
+                continue
+            out.append(para)
+            size += len(para)
+        # Ordre de la page, pour garder le fil (qui parle, quand).
+        order = {p: i for i, p in enumerate(paras)}
+        out.sort(key=lambda p: order.get(p, 0))
+        return "\n\n".join(out)
     text = page.get("text") or ""
     chunks = [_on_space(text, 0, 3500)]
     folded = fold(text)
@@ -314,6 +397,25 @@ def excerpt(page, limit=11000):
     if len(body) <= limit:
         return body
     return _on_space(body, 0, limit)
+
+
+# Pages index (fiche personnalité, émission, tag) : pas un article daté.
+HUB_PATTERNS = (
+    r"_DN-\d+\.html$", r"/emission/", r"/tag/", r"/tags/", r"/personnalites?/", r"/sujet/", r"/theme/",
+    r"/replay-radio/?$", r"/videos?/?$",
+)
+# Éditeurs qui renvoient un mur anti-robot aux requêtes automatiques : lus en dernier.
+LOW_PRIORITY_HOSTS = ("lemonde.fr", "liberation.fr", "mediapart.fr", "lexpress.fr", "lepoint.fr")
+
+
+def is_hub(url):
+    path = urllib.parse.urlparse(url or "").path
+    return any(re.search(pattern, path) for pattern in HUB_PATTERNS)
+
+
+def low_priority(url):
+    host = (urllib.parse.urlparse(url or "").hostname or "").lower()
+    return any(host == h or host.endswith("." + h) for h in LOW_PRIORITY_HOSTS)
 
 
 def relevant(item, names):
@@ -401,7 +503,10 @@ def google_feed_url(query):
     return "https://news.google.com/rss/search?q=%s&hl=fr&gl=FR&ceid=FR:fr" % q
 
 
-def collect(index, now, sleep=0.3, max_pages=16, max_google=12):
+MIN_SCORE = 3
+
+
+def collect(index, now, sleep=0.3, max_pages=24, max_google=12):
     """Retourne (pages, stats). N'écrit rien."""
     stats = {
         "feeds_ok": 0, "feeds_fail": 0, "feed_errors": [],
@@ -483,33 +588,38 @@ def collect(index, now, sleep=0.3, max_pages=16, max_google=12):
 
     stats["items"] = len(found)
     pages = []
-    for item in select_diverse(found, names, limit=max_pages):
-        if len(pages) >= max_pages:
+    # Pages index écartées ; titres sans sujet ni nom connu écartés ;
+    # éditeurs à mur anti-robot gardés pour la fin.
+    pool = [item for item in found if not is_hub(item["url"]) and (item.get("score") or 0) >= MIN_SCORE]
+    first = [item for item in pool if not low_priority(item["url"])]
+    last = [item for item in pool if low_priority(item["url"])]
+    ordered = select_diverse(first, names, limit=max_pages * 3) + select_diverse(last, names, limit=max_pages)
+    tried = 0
+    for item in ordered:
+        if len(pages) >= max_pages or tried >= max_pages * 3:
             break
+        tried += 1
         try:
             final, html = _get(item["url"], ua=BROWSER_UA)
-        except (urllib.error.URLError, socket.timeout, TimeoutError, ValueError):
+        except (urllib.error.URLError, socket.timeout, TimeoutError, ValueError, ConnectionError):
+            # Page bloquée (403, 402, délai) : on passe à la suivante, sans perdre une place.
             stats["fetch_fail"] += 1
-            pages.append({
-                "url": item["url"],
-                "outlet": item.get("outlet") or outlet_for(item["url"]),
-                "title": item.get("title") or "",
-                "text": "",
-                "html": "",
-                "dates": [],
-                "feed_date": item.get("feed_date") or "",
-                "fetch_error": "page inaccessible",
-            })
             continue
         if "news.google.com" in final or any(final.find(b) >= 0 for b in ("wikipedia.org", "x.com/", "twitter.com/")):
             stats["fetch_fail"] += 1
             continue
+        if is_hub(final):
+            continue
         extracted = extract_html(html)
+        if is_challenge(extracted["title"], extracted["text"]):
+            stats["fetch_fail"] += 1
+            continue
         pages.append({
             "url": final,
             "outlet": outlet_for(final, item.get("outlet") or ""),
             "title": extracted["title"] or item.get("title") or "",
             "text": extracted["text"],
+            "article": extracted.get("article") or "",
             "html": html,
             "dates": extracted["dates"],
             "feed_date": item.get("feed_date") or "",

@@ -2,9 +2,10 @@ name: Relevé du matin
 
 on:
   schedule:
-    # 06:30 UTC. À Paris : 7 h 30 en hiver (CET), 8 h 30 en été (CEST).
-    # GitHub démarre souvent en retard. Un seul cron ne peut pas tomber à 8 h 00 toute l'année.
-    - cron: "30 6 * * *"
+    # 05:17 UTC. À Paris : 6 h 17 en hiver (CET), 7 h 17 en été (CEST).
+    # Minute creuse exprès : aux heures rondes, GitHub retardait le départ de
+    # plus de huit heures (départs vers 15 h UTC du 18 au 22/11/2026).
+    - cron: "17 5 * * *"
   workflow_dispatch:
     inputs:
       dry_run:

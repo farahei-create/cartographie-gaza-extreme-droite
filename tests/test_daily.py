@@ -274,5 +274,42 @@ bad = subprocess.run([sys.executable, "build.py"], cwd=ROOT, env={**os.environ, 
 check(bad.returncode != 0 and "pantin" in (bad.stderr + bad.stdout).lower(), "build refuse un mot interdit")
 check(open("data.json", encoding="utf-8").read() == data_before, "le build de contrôle n'a pas touché data.json")
 
+# --- 22/11 : extraction, pages bloquées, secours Gemini ---
+from tools.daily.collect import extract_html, excerpt as _excerpt, is_challenge, is_hub
+_html = ("<html><head><title>Article</title></head><body><nav><a>Gaza</a><a>Rassemblement national</a></nav>"
+         "<p>Marine Le Pen, députée, a déclaré : « Nous ne <a href='#'>céderons</a> rien, jamais. »</p>"
+         "<p>%s</p></body></html>") % ("Texte de contexte assez long pour compter comme un paragraphe utile. " * 3)
+_ex = extract_html(_html)
+check("Nous ne céderons rien, jamais." in _ex["text"], "lien dans une citation : pas d'espace ajouté")
+check(_ex["article"].startswith("Marine Le Pen") and "Rassemblement national" not in _ex["article"], "paragraphes sans le menu")
+check(_excerpt({"article": _ex["article"] + "\n" + "Autre paragraphe sans guillemets mais long, pour dépasser la limite basse. " * 5, "text": _ex["text"]}).startswith("Marine Le Pen"), "extrait = article")
+check(is_challenge("Client Challenge", "x" * 1000) and is_challenge("Accès restreint - Le Monde", "x" * 1000) and not is_challenge("Un article", "x" * 1000), "mur anti-robot repéré")
+check(is_hub("https://www.bfmtv.com/politique/marine-le-pen_DN-201201010011.html") and not is_hub("https://www.bfmtv.com/politique/elections/article_AN-1.html"), "page index écartée")
+
+from tools.daily import gemini as _g
+class _FakeGemini(_g.Gemini):
+    def __init__(self, answers):
+        super().__init__("cle", sleep=lambda s: None)
+        self.answers = answers
+        self.calls = []
+    def _post(self, model, prompt, schema):
+        self.requests += 1
+        self.calls.append(model)
+        status = self.answers.get(model, 200)
+        if status == 200:
+            return 200, json.dumps({"candidates": [{"content": {"parts": [{"text": json.dumps({"items": []})}]}}]})
+        return status, "erreur"
+_pg = {"url": "https://www.franceinfo.fr/x", "text": "texte " * 100, "outlet": "franceinfo", "title": "t"}
+_f = _FakeGemini({_g.MODELS[0]: 503})
+check(_f.extract(_pg, []) == [] and _f.model == _g.MODELS[1], "503 : modèle de secours")
+_f = _FakeGemini({_g.MODELS[0]: 429})
+check(_f.extract(_pg, []) == [] and _f.model == _g.MODELS[1] and _g.MODELS[0] in _f.dead, "429 : quota de secours")
+_f = _FakeGemini({m: 429 for m in _g.MODELS})
+try:
+    _f.extract(_pg, [])
+    check(False, "429 partout : arrêt")
+except _g.QuotaError:
+    check(True, "429 partout : arrêt")
+
 print("%d ok, %d fail" % (ok, fail))
 sys.exit(1 if fail else 0)
