@@ -2,6 +2,20 @@
   "_notice": "Versions enregistrées du site. Le retour se fait depuis la page admin, sur GitHub.",
   "versions": [
     {
+      "name": "version-2026-11-22-avant-contributions",
+      "date": "2026-11-22T21:09:10Z",
+      "note": "Avant la section Contributions",
+      "commit": "8cdb4885d25db0337615480d10de2d1cafa64b1b",
+      "github": "https://github.com/farahei-create/cartographie-gaza-extreme-droite/tree/version-2026-11-22-avant-contributions"
+    },
+    {
+      "name": "version-2026-11-22-avant-modif",
+      "date": "2026-11-22T20:49:15Z",
+      "note": "Version enregistrée avant une modification de l'interface.",
+      "commit": "fbb6845d4c1c0a7ed6b504ffcb28b7c7c8e13071",
+      "github": "https://github.com/farahei-create/cartographie-gaza-extreme-droite/tree/version-2026-11-22-avant-modif"
+    },
+    {
       "name": "version-2026-11-22-avant-maj",
       "date": "2026-11-22T19:54:43Z",
       "note": "Version avant la mise à jour du 22/11 (rattrapage du 18 au 22/11).",
