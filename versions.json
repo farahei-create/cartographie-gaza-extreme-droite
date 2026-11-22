@@ -2,6 +2,13 @@
   "_notice": "Versions enregistrées du site. Le retour se fait depuis la page admin, sur GitHub.",
   "versions": [
     {
+      "name": "version-2026-11-23-hebdo",
+      "date": "2026-11-22T23:26:23Z",
+      "note": "Version automatique du dimanche.",
+      "commit": "542af3cd1e960a8b6bc3f77d1da7efdd566e9900",
+      "github": "https://github.com/farahei-create/cartographie-gaza-extreme-droite/tree/version-2026-11-23-hebdo"
+    },
+    {
       "name": "version-2026-11-22-avant-contributions",
       "date": "2026-11-22T21:09:10Z",
       "note": "Avant la section Contributions",
