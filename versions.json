@@ -2,15 +2,36 @@
   "_notice": "Versions enregistrées du site. Le retour se fait depuis la page admin, sur GitHub.",
   "versions": [
     {
+      "name": "version-2026-11-22-avant-dimensions",
+      "date": "2026-11-22T18:33:15Z",
+      "note": "Version avant la correction des dimensions et le centrage de la barre du bas.",
+      "commit": "d3076e83fa380dcff5eaf3f7c885a5fdea0a438b",
+      "github": "https://github.com/farahei-create/cartographie-gaza-extreme-droite/tree/version-2026-11-22-avant-dimensions"
+    },
+    {
+      "name": "version-2026-11-18-avant-argent",
+      "date": "2026-11-18T04:44:15Z",
+      "note": "Version avant le volet argent CNCCFP et l'élargissement HATVP.",
+      "commit": "9c9cb4963c7554cb1a507a9ad2e107b2b2bbcb82",
+      "github": "https://github.com/farahei-create/cartographie-gaza-extreme-droite/tree/version-2026-11-18-avant-argent"
+    },
+    {
       "name": "version-2026-11-18-avant-enquete",
-      "date": "2026-11-18T04:22:48+00:00",
+      "date": "2026-11-18T04:22:48Z",
       "note": "Version avant la barre à quatre onglets, le défilement du réseau et l'enquête.",
       "commit": "abf64bd82cbe4b872f8b95a687244ed8f9be71e8",
       "github": "https://github.com/farahei-create/cartographie-gaza-extreme-droite/tree/version-2026-11-18-avant-enquete"
     },
     {
+      "name": "version-2026-11-18-avant-modif",
+      "date": "2026-11-18T04:21:58Z",
+      "note": "Version enregistrée avant une modification de l'interface.",
+      "commit": "e210209db9e99d29599e5ce7f8a850ac9b6369b6",
+      "github": "https://github.com/farahei-create/cartographie-gaza-extreme-droite/tree/version-2026-11-18-avant-modif"
+    },
+    {
       "name": "version-2026-11-18-avant-cartes",
-      "date": "2026-11-18T03:49:37+00:00",
+      "date": "2026-11-18T03:49:37Z",
       "note": "Point de restauration avant les cartes partageables et le mécanisme de versions.",
       "commit": "cbc87d2b0a09ca53b29c308a72e804b03984828f",
       "github": "https://github.com/farahei-create/cartographie-gaza-extreme-droite/tree/version-2026-11-18-avant-cartes"

@@ -4,6 +4,16 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-22 — v52 : dimensions
+
+Tu enregistres d'abord `version-2026-11-22-avant-dimensions`. Aucune donnée ni le relevé du matin ne changent.
+- Barre du bas : quatre colonnes égales et centrées (elle en comptait encore sept, les onglets se tassaient à gauche) ; largeur limitée sur tablette. Sur ordinateur, les onglets sont centrés dans la barre du haut.
+- `html,body{overflow-x:hidden}` faisait de `body` un conteneur de défilement : la barre du haut (sticky) partait au défilement et les onglets restaient seuls, en blanc sur la page. Remplacé par `overflow-x:clip` ; les en-têtes collants de l'Échelle et des listes marchent aussi. `scroll-margin-top` sur les cartes pour qu'un saut ne finisse pas sous ces en-têtes.
+- Enquête : champ de recherche à pleine largeur, champs « Relier deux noms » au même style (côte à côte sur grand écran), dossier et chemin amenés à l'écran quand on les ouvre. Les URL longues des citations reviennent à la ligne (le dossier débordait de 55 px sur mobile).
+- Champs à 16 px minimum (pas de zoom iOS), segments de filtre dimensionnés selon le texte.
+
+Cache `onrecord-v52`.
+
 ## 2026-11-22 — relevé automatique
 
 Tu ne publies aucune phrase. 16 éléments attendent une relecture sur la page admin.

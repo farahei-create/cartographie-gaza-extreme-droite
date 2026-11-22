@@ -2955,6 +2955,16 @@
       '<section id="enq-argent"><h2>Argent</h2>' + factList(money) + '<p class="hint">Financement public, compte de campagne ou prêt : seulement avec un montant, une date et une URL. Rien n\'est ajouté sans cela.</p></section>' +
       (n.subcategory === "Chaînes, radios & titres" || n.subcategory === "Édition" ? mediaDossier(n) : "");
   }
+  // le dossier et le chemin s'affichent sous le formulaire : on les amène à l'écran
+  function enqReveal(el) {
+    if (!el || !el.firstChild) return;
+    setTimeout(function () {
+      var top = el.getBoundingClientRect().top + window.scrollY;
+      var bar = document.querySelector(".appbar");
+      var off = (bar ? bar.getBoundingClientRect().height : 52) + 12;
+      window.scrollTo({ top: Math.max(0, top - off), behavior: "auto" });
+    }, 60);
+  }
   function renderEnquete(slug, extra, extra2) {
     loadEnquete().then(function () { paintEnquete(slug, extra, extra2); });
   }
@@ -2989,6 +2999,7 @@
       }).join("") + '</ol>';
       box.innerHTML = "";
       document.title = "Relier — Onrecord";
+      enqReveal(pathBox);
       return;
     }
     pathBox.innerHTML = "";
@@ -2996,6 +3007,7 @@
     if (!n) { box.innerHTML = '<p class="empty">Choisissez une fiche, ou reliez deux noms.</p>'; return; }
     box.innerHTML = personDossier(n);
     document.title = n.name + " — Enquête — Onrecord";
+    enqReveal(box);
   }
   function bindRail() {
     var rail = $("rail");

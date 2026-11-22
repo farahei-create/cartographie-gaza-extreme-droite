@@ -1766,3 +1766,42 @@ body{
 .enq-facts li,.enq-tl li,.enq-path li{margin:0 0 12px}
 .hint-2d,.hint-3d,#g3-note{display:none}
 
+
+/* 22/11 : dimensions — barre centrée, champs de recherche, textes longs */
+/* barre du bas : 4 onglets égaux, centrés, largeur limitée sur tablette */
+.tabnav{
+  grid-template-columns:repeat(var(--tabs,4),minmax(0,1fr));justify-content:center;
+  padding-left:max(var(--safe-l), calc((100% - 560px) / 2));
+  padding-right:max(var(--safe-r), calc((100% - 560px) / 2));
+}
+.tabnav a{width:100%}
+/* bureau : onglets centrés dans la barre d'application */
+@media (min-width:861px){
+  .tabnav{left:50%;right:auto;transform:translateX(-50%);justify-content:center;padding:0;max-width:calc(100% - 340px)}
+  .tabnav a{width:auto;flex:0 0 auto}
+}
+/* champs de recherche : pleine largeur du conteneur, jamais plus */
+.search-box,.field.search,#enq-search-form{width:100%;max-width:100%;min-width:0}
+.search-box input{flex:1 1 auto;min-width:0;width:100%;max-width:100%}
+input[type=search],input[type=text],input[type=url],input[type=email],input[type=date],select,textarea{max-width:100%;font-size:max(16px,1rem)}
+#enq-search-form{margin:0 0 4px}
+.enq-results:empty{display:none}
+/* Relier deux noms : mêmes champs que la recherche */
+.enq-relier input{width:100%;padding:10px 12px;background:var(--fill);color:var(--ink);font-size:max(16px,1rem);font-weight:500;-webkit-appearance:none;appearance:none}
+.enq-relier input:focus{outline:none;background:var(--surface);box-shadow:0 0 0 3px var(--focus)}
+.enq-relier .btn-pill{justify-self:stretch}
+@media (min-width:700px){
+  .enq-relier{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .enq-relier h2,.enq-relier .sec-intro,.enq-relier .btn-pill{grid-column:1 / -1}
+}
+/* textes longs (URL, identifiants) : retour à la ligne au lieu de déborder */
+main p,main li,main dd,main td,main small,.enq-results a,#enq-dossier,#enq-path{overflow-wrap:anywhere}
+#enq-dossier,#enq-path,#enq-dossier section{min-width:0;max-width:100%}
+/* filtres en segments : largeur selon le texte, sans chevauchement */
+.seg{max-width:100%}
+.seg-b{flex:1 1 auto}
+/* overflow-x:hidden sur html et body faisait de body un conteneur de défilement :
+   la barre du haut (sticky) partait au défilement et les onglets restaient seuls. */
+@supports (overflow:clip){ html,body{overflow-x:clip} }
+/* les en-têtes collants fonctionnent de nouveau : les sauts de défilement s'arrêtent dessous */
+.pow-node,.cou-person,.tl-card,.stmt,.rel-card{scroll-margin-top:calc(var(--appbar-h) + var(--safe-t) + 56px)}
