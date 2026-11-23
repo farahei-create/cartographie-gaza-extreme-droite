@@ -1,16 +1,16 @@
 {
   "meta": {
-    "generated": "2026-11-22",
-    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-22 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
+    "generated": "2026-11-23",
+    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-23 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
-      "persons": 87,
+      "persons": 93,
       "orgs": 56,
-      "edges": 200,
-      "statements": 381,
+      "edges": 204,
+      "statements": 396,
       "photos": 45,
       "logos": 21,
       "videos": 27,
-      "france_nodes": 117
+      "france_nodes": 123
     },
     "category_order": [
       "Responsables politiques",
@@ -623,6 +623,14 @@
           },
           "archive_url": "https://web.archive.org/web/20261122194651/https://www.radiofrance.fr/franceinter/podcasts/franc-jeu/franc-jeu-du-dimanche-22-novembre-2026-2672721",
           "archived": "2026-11-22"
+        },
+        {
+          "quote": "L'Égypte a joué un rôle extrêmement important dans le conflit israélo-palestien, elle détient la clé de la solution. Je soutiens la solution à deux États, mais reconnaître aujourd'hui l'État palestinien, c'est reconnaître le Hamas. Cela ne l'affaiblira pas, au contraire.",
+          "date": "2026-11-22",
+          "medium": "Message sur X (@MLP_officiel), 22 novembre 2026, 21:27, heure de Paris, avec un extrait vidéo de son entretien à une chaîne égyptienne. Texte recopié tel que le compte le publie (« israélo-palestien » compris). Dans la version française de l'entretien publiée par Le Progrès Égyptien (22 novembre 2026), elle dit aussi : « Je ne confonds pas les civils avec le Hamas ».",
+          "url": "https://x.com/MLP_officiel/status/2124600571608924656",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
         }
       ],
       "sections": [
@@ -1391,6 +1399,16 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261122194408/https://www.europe1.fr/politique/presidentielle-eric-zemmour-se-pose-en-candidat-de-la-liberte-de-parler-face-au-totalitarisme-datmosphere-1241899?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
           "archived": "2026-11-22"
+        },
+        {
+          "quote": "Défendre le droit du peuple français à rester majoritaire sur sa terre, ce n'est pas une faute, c'est un devoir, c'est moral, c'est beau et c'est juste",
+          "date": "2026-11-21",
+          "medium": "Meeting de Toulon, 21 novembre 2026, cité par le JDD le 22 novembre 2026. Le JDD écrit qu'il y a « invoqué ses thèmes de prédilection : l'identité et l'immigration ».",
+          "url": "https://www.lejdd.fr/politique/jai-ete-convie-jy-serai-zemmour-martele-sa-volonte-de-participer-a-une-primaire-de-la-droite-189375",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261123072137/https://www.lejdd.fr/politique/jai-ete-convie-jy-serai-zemmour-martele-sa-volonte-de-participer-a-une-primaire-de-la-droite-189375",
+          "archived": "2026-11-23"
         }
       ],
       "sections": [
@@ -4748,6 +4766,14 @@
           "url": "https://www.lejdd.fr/politique/on-lefface-de-nos-tablettes-pour-les-repas-jean-luc-melenchon-appelle-a-ne-plus-ecouter-pierre-perret-189138",
           "theme": "Gaza – déclarations",
           "section": "gaza"
+        },
+        {
+          "quote": "Il faut sauver le docteur palestinien Hussam Abu Safiya !",
+          "date": "2026-11-22",
+          "medium": "Message sur X (@JLMelenchon), 22 novembre 2026, 11:00, heure de Paris, avec une vidéo et le lien d'une pétition d'Amnesty International. Mathilde Panot a publié le même message. Selon l'agence Anadolu, le Dr Abou Safiya, directeur de l'hôpital Kamal Adwan, est détenu par Israël depuis décembre 2024.",
+          "url": "https://x.com/JLMelenchon/status/2124442900591173906",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
         }
       ],
       "sections": [
@@ -5470,6 +5496,16 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261111190742/https://www.bfmtv.com/politique/reconquete/vrai-faux-gerald-darmanin-a-t-il-dit-la-meme-chose-qu-eric-zemmour-sur-l-immigration-et-la-delinquance-comme-l-affirme-sarah-knafo_AV-202611090761.html",
           "archived": "2026-11-11"
+        },
+        {
+          "quote": "On a tous les moyens de l'emporter, je pense qu'elle doit avoir lieu",
+          "date": "2026-11-23",
+          "medium": "Projet de primaire de la droite et du centre (novembre 2026) : la participation d'Éric Zemmour (Reconquête) est en débat ; Gabriel Attal et Bruno Retailleau s'y opposent (JDD, 22 novembre 2026). RTL Matin, 23 novembre 2026. Elle parle de la primaire de la droite, avec Éric Zemmour. Elle ajoute : « Il n'est absolument pas question de se retirer ». Le baromètre Toluna Harris Interactive pour RTL, M6 et L'Express crédite Éric Zemmour de 3 à 4 % des intentions de vote, selon la page.",
+          "url": "https://www.rtl.fr/actu/politique/on-ne-craint-pas-la-concurrence-sur-rtl-sarah-knafo-dit-croire-plus-que-jamais-a-une-primaire-a-droite-et-assure-qu-il-n-est-absolument-pas-question-qu-eric-zemmour-se-retire-7900699235",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261123072342/https://www.rtl.fr/actu/politique/on-ne-craint-pas-la-concurrence-sur-rtl-sarah-knafo-dit-croire-plus-que-jamais-a-une-primaire-a-droite-et-assure-qu-il-n-est-absolument-pas-question-qu-eric-zemmour-se-retire-7900699235",
+          "archived": "2026-11-23"
         }
       ],
       "sections": [
@@ -7410,6 +7446,14 @@
           "url": "https://x.com/MathildePanot/status/2121941033516757057",
           "theme": "Gaza – déclarations",
           "section": "gaza"
+        },
+        {
+          "quote": "Nous n'arrêterons jamais de nous battre pour la liberté et la dignité du peuple palestinien.",
+          "date": "2026-11-21",
+          "medium": "Message sur X (@MathildePanot), 21 novembre 2026, 18:42, heure de Paris : elle dit avoir rencontré « Dana et sa famille, évacués de Gaza ».",
+          "url": "https://x.com/MathildePanot/status/2124196732355662032",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
         }
       ],
       "sections": [
@@ -7478,6 +7522,14 @@
           "date": "2026-11-20",
           "medium": "Affaire des fuites présumées du ministère de l'Intérieur vers le RN : le préfet du Loiret Hugues Moutouh, secrétaire général du ministère de l'Intérieur d'avril 2025 à mai 2026, est soupçonné d'avoir renseigné le Rassemblement national sur des affaires en cours ; une enquête judiciaire est ouverte et le siège du RN a été perquisitionné. Il conteste et a demandé à être relevé de ses fonctions (JDD, 21 novembre 2026). franceinfo, direct du 20 novembre 2026 : porte-parole du RN, invité de franceinfo. La page écrit qu'il a dénoncé « l'instrumentalisation de cette affaire, notamment par Jean-Luc Mélenchon ».",
           "url": "https://www.franceinfo.fr/societe/justice/direct-si-les-faits-sont-averes-ils-sont-evidemment-tres-graves-laurent-nunez-convoque-le-prefet-hugues-moutouh-soupconne-d-avoir-transmis-des-informations-sensibles-au-rassemblement-national_8291756.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "« Raciste », « xénophobe » : les accusations fusent dès qu'on évoque la priorité nationale. J'ai rappelé à @LeaBalage que la proposition du RN se fonde sur la nationalité, non sur l'origine ou la couleur de peau !",
+          "date": "2026-11-22",
+          "medium": "Message sur X (@JulienOdoul), 22 novembre 2026, 23:33, heure de Paris, avec l'extrait d'un débat sur BFMTV face à la députée écologiste Léa Balage El Mariky. Les mots « raciste » et « xénophobe » sont ceux qu'il dit avoir entendus ; la réponse de la députée n'est pas reprise ici.",
+          "url": "https://x.com/JulienOdoul/status/2124632436822970683",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
         }
@@ -7931,10 +7983,21 @@
           "url": "https://x.com/CNEWS/status/2121269070070952381",
           "theme": "Gaza – déclarations",
           "section": "gaza"
+        },
+        {
+          "quote": "On est là dans du pur délire",
+          "date": "2026-11-23",
+          "medium": "CNews, La Matinale, 23 novembre 2026 (message du compte @CNEWS reproduit dans l'article). Il réagit aux propos de Ségolène Royal sur LCI la veille. Il ajoute : « C'est une vision apocalyptique et délirante ».",
+          "url": "https://www.cnews.fr/france/2026-11-23/si-le-rn-arrive-au-pouvoir-les-gens-dextreme-droite-vont-tuer-des-noirs-et-des",
+          "theme": "Nuance / contexte",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261123071754/https://www.cnews.fr/france/2026-11-23/si-le-rn-arrive-au-pouvoir-les-gens-dextreme-droite-vont-tuer-des-noirs-et-des",
+          "archived": "2026-11-23"
         }
       ],
       "sections": [
-        "gaza"
+        "gaza",
+        "france"
       ],
       "category": "Journalistes & éditorialistes",
       "subcategory": "Journalistes & chroniqueurs",
@@ -8370,6 +8433,26 @@
           "url": "https://www.lejdd.fr/politique/me-designer-comme-une-taupe-est-immonde-le-prefet-hugues-moutouh-se-defend-et-dit-sa-verite-au-jdd-189351",
           "theme": "Nuance / contexte",
           "section": "france"
+        },
+        {
+          "quote": "Je veux savoir qui veut ma tête et pourquoi. Donc, je vais me battre.",
+          "date": "2026-11-23",
+          "medium": "Affaire des fuites présumées du ministère de l'Intérieur vers le RN : le préfet Hugues Moutouh est soupçonné d'avoir renseigné le Rassemblement national sur des affaires en cours ; une enquête judiciaire est ouverte. Il conteste. Europe 1 matin, 23 novembre 2026, au micro de Dimitri Pavlenko. Il annonce porter plainte « pour violation du secret de l'enquête, recel et complicité » et dit : « Je n'ai jamais fait de politique dans les fonctions que j'ai exercées ».",
+          "url": "https://www.europe1.fr/politique/soupcons-de-fuites-vers-le-rn-je-veux-savoir-qui-veut-ma-tete-le-prefet-hugues-moutouh-annonce-porter-plainte-1242523",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261123071856/https://www.europe1.fr/politique/soupcons-de-fuites-vers-le-rn-je-veux-savoir-qui-veut-ma-tete-le-prefet-hugues-moutouh-annonce-porter-plainte-1242523",
+          "archived": "2026-11-23"
+        },
+        {
+          "quote": "C'est un lynchage médiatique qui est commandé",
+          "date": "2026-11-23",
+          "medium": "Affaire des fuites présumées du ministère de l'Intérieur vers le RN : le préfet Hugues Moutouh est soupçonné d'avoir renseigné le Rassemblement national sur des affaires en cours ; une enquête judiciaire est ouverte. Il conteste. Europe 1 matin, 23 novembre 2026. Le Figaro, dans la version mise à jour de son article, rapporte la phrase ainsi : « C'est un lynchage médiatique. Et je pense que ce lynchage est organisé ». Il ne dit pas, dans ces pages, qui l'organiserait.",
+          "url": "https://www.europe1.fr/politique/soupcons-de-fuites-vers-le-rn-je-veux-savoir-qui-veut-ma-tete-le-prefet-hugues-moutouh-annonce-porter-plainte-1242523",
+          "theme": "Nuance / contexte",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261123071856/https://www.europe1.fr/politique/soupcons-de-fuites-vers-le-rn-je-veux-savoir-qui-veut-ma-tete-le-prefet-hugues-moutouh-annonce-porter-plainte-1242523",
+          "archived": "2026-11-23"
         }
       ],
       "sections": [
@@ -8384,6 +8467,15 @@
           "text": "Dans le JDD, il conteste les soupçons de fuites vers le RN et demande à être relevé de ses fonctions.",
           "url": "https://www.lejdd.fr/politique/me-designer-comme-une-taupe-est-immonde-le-prefet-hugues-moutouh-se-defend-et-dit-sa-verite-au-jdd-189351",
           "source": "JDD"
+        },
+        {
+          "date": "2026-11-23",
+          "title": "Annonce d'une plainte",
+          "text": "Sur Europe 1, il annonce porter plainte pour violation du secret de l'enquête, recel et complicité.",
+          "url": "https://www.europe1.fr/politique/soupcons-de-fuites-vers-le-rn-je-veux-savoir-qui-veut-ma-tete-le-prefet-hugues-moutouh-annonce-porter-plainte-1242523",
+          "source": "Europe 1",
+          "archive_url": "https://web.archive.org/web/20261123071856/https://www.europe1.fr/politique/soupcons-de-fuites-vers-le-rn-je-veux-savoir-qui-veut-ma-tete-le-prefet-hugues-moutouh-annonce-porter-plainte-1242523",
+          "archived": "2026-11-23"
         }
       ]
     },
@@ -8555,6 +8647,205 @@
           "text": "Mette Frederiksen. La page présente cette personne comme : première ministre.",
           "url": "https://www.lefigaro.fr/international/danemark-concurrencee-a-droite-sur-l-immigration-la-premiere-ministre-mette-frederiksen-evoque-un-grand-remplacement-20261120",
           "source": "Le Figaro, page du 20 novembre 2026"
+        }
+      ]
+    },
+    {
+      "id": "olivier-faure",
+      "name": "Olivier Faure",
+      "type": "person",
+      "role": "Premier secrétaire du Parti socialiste, député (i24NEWS, 21 novembre 2026)",
+      "description": "Premier secrétaire du Parti socialiste. Auteur d'une proposition de loi visant à interdire le commerce avec les implantations israéliennes en Cisjordanie et sur le Golan, adoptée en commission le 9 novembre 2026 ; la séance du 19 novembre s'est achevée à minuit sans vote sur le texte (i24NEWS, NosParlementaires). Pas de photo libre : monogramme.",
+      "statements": [
+        {
+          "quote": "Voilà ce que le RN et Renaissance ont souhaité couvrir par leur obstruction jeudi. Nous n'avons pas pu aller au terme de la proposition de loi. Je demande au gouvernement de procéder par voie réglementaire pour que toute complicité soit désormais interdite. Commerce, services et investissements doivent être interdits dans les colonies illégales israéliennes en Cisjordanie.",
+          "date": "2026-11-21",
+          "medium": "Message sur X (@faureolivier), 21 novembre 2026, 14:43, heure de Paris, en réponse à un reportage de franceinfo sur une nouvelle colonie près de Jéricho. « obstruction » et « complicité » sont ses mots. i24NEWS écrit qu'il accuse le RN et Renaissance d'obstruction parlementaire ; la réponse de ces groupes n'est pas citée dans ces pages.",
+          "url": "https://x.com/faureolivier/status/2124136628478169240",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
+        }
+      ],
+      "sections": [
+        "gaza",
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Partis & dirigeants de parti",
+      "parcours": [
+        {
+          "date": "2026-11-19",
+          "title": "Proposition de loi sur les implantations",
+          "text": "Le texte, inscrit à la journée réservée aux socialistes, n'est pas voté avant minuit.",
+          "url": "https://www.i24news.tv/fr/actu/france/artc-france-la-loi-contre-le-commerce-avec-les-implantations-israeliennes-bloquee-a-l-assemblee-nationale",
+          "source": "i24NEWS",
+          "archive_url": "https://web.archive.org/web/20261123071934/https://www.i24news.tv/fr/actu/france/artc-france-la-loi-contre-le-commerce-avec-les-implantations-israeliennes-bloquee-a-l-assemblee-nationale",
+          "archived": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "rima-hassan",
+      "name": "Rima Hassan",
+      "type": "person",
+      "role": "Députée européenne (LFI) (compte X officiel, 22 novembre 2026)",
+      "description": "Députée européenne de La France insoumise, membre de la commission des affaires étrangères et des droits humains (présentation de son compte X). Pas de photo libre : monogramme.",
+      "statements": [
+        {
+          "quote": "Le génocide à Gaza c'est : • 74 702 Palestiniens tués par Israël depuis octobre 2023 • 176 105 Palestiniens blessés par Israël depuis octobre 2023 • 1 613 Palestiniens tués par Israël depuis l'accord d'octobre 2025",
+          "date": "2026-11-22",
+          "medium": "Message sur X (@RimaHas), 22 novembre 2026, 13:02, heure de Paris : début de la liste, qui se poursuit avec des chiffres sur les blessés, l'insécurité alimentaire et les destructions. « génocide » est son mot. Les chiffres sont ceux du message, qui n'en donne pas la source.",
+          "url": "https://x.com/RimaHas/status/2124473578150048248",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
+        }
+      ],
+      "sections": [
+        "gaza"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-22",
+          "title": "Message sur Gaza",
+          "text": "Sur X, elle publie une liste de chiffres sur les morts, les blessés et les destructions à Gaza.",
+          "url": "https://x.com/RimaHas/status/2124473578150048248",
+          "source": "X (@RimaHas)"
+        }
+      ]
+    },
+    {
+      "id": "francois-ruffin",
+      "name": "François Ruffin",
+      "type": "person",
+      "role": "Député de la Somme (JDD, 22 novembre 2026)",
+      "description": "Député de la Somme, ancien proche de Jean-Luc Mélenchon, avec qui il a rompu en 2024 (JDD). Le 21 novembre 2026, il retire sa candidature à la présidentielle de 2027 ; le JDD écrit qu'il justifie ce retrait en estimant que le Rassemblement national est « aux portes du pouvoir ». Pas de photo libre : monogramme.",
+      "statements": [
+        {
+          "quote": "« Vous allez vous faire avoir ! » Avec Debout!, nous lançons une campagne contre le Rassemblement national. Pour démasquer l'aRNaque sociale de Marine Le Pen. Sur l'économie, le social, c'est Macron avec un autre visage !",
+          "date": "2026-11-22",
+          "medium": "Message sur X (@Francois_Ruffin), 22 novembre 2026, 22:26, heure de Paris, avec une vidéo et le lien de la campagne de son mouvement Debout!.",
+          "url": "https://x.com/Francois_Ruffin/status/2124615432292438516",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-21",
+          "title": "Retrait de la présidentielle",
+          "text": "Il retire sa candidature à la présidentielle de 2027 et ne soutient aucun candidat ; il dit le RN « aux portes du pouvoir ».",
+          "url": "https://www.lejdd.fr/politique/le-rn-est-aux-portes-du-pouvoir-francois-ruffin-jette-leponge-pour-2027-189369",
+          "source": "JDD",
+          "archive_url": "https://web.archive.org/web/20261123073133/https://www.lejdd.fr/politique/le-rn-est-aux-portes-du-pouvoir-francois-ruffin-jette-leponge-pour-2027-189369",
+          "archived": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "manon-aubry",
+      "name": "Manon Aubry",
+      "type": "person",
+      "role": "Députée européenne (LFI) (compte X officiel, 22 novembre 2026)",
+      "description": "Députée européenne de La France insoumise, présidente du groupe de la Gauche au Parlement européen (présentation de son compte X). Pas de photo libre : monogramme.",
+      "statements": [
+        {
+          "quote": "Je confronte Agnès Panier-Runacher sur la responsabilité des macronistes dans la montée de l'extrême droite. Ils ont fait voter la loi asile-immigration Ils entretiennent la confusion entre musulmans & islamistes Ils s'attaquent à l'Etat de droit Les conséquences sont terribles",
+          "date": "2026-11-22",
+          "medium": "Message sur X (@ManonAubryFr), 22 novembre 2026, 12:00, heure de Paris, avec l'extrait d'un débat face à Agnès Pannier-Runacher (orthographe du message conservée). C'est son jugement sur les macronistes ; la réponse d'Agnès Pannier-Runacher n'est pas reprise ici.",
+          "url": "https://x.com/ManonAubryFr/status/2124457878874681827",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-22",
+          "title": "Débat face à Agnès Pannier-Runacher",
+          "text": "Sur X, elle publie l'extrait d'un débat sur la responsabilité des macronistes dans la montée de l'extrême droite.",
+          "url": "https://x.com/ManonAubryFr/status/2124457878874681827",
+          "source": "X (@ManonAubryFr)"
+        }
+      ]
+    },
+    {
+      "id": "segolene-royal",
+      "name": "Ségolène Royal",
+      "type": "person",
+      "role": "Ancienne ministre socialiste (CNews, 23 novembre 2026)",
+      "description": "Ancienne ministre socialiste (CNews). Le 22 novembre 2026, sur LCI, elle dit craindre des violences racistes en cas de victoire du RN ; d'autres invités du plateau la contredisent (CNews). Pas de photo libre : monogramme.",
+      "statements": [
+        {
+          "quote": "les gens d'extrême droite vont tuer des noirs et tuer des arabes",
+          "date": "2026-11-22",
+          "medium": "LCI, 22 novembre 2026, cité par CNews le 23 novembre 2026. La phrase est reproduite telle que cette page la publie ; d'autres médias rapportent une formulation voisine. Selon CNews, elle parlait d'une victoire du RN à la présidentielle et prenait l'exemple de crimes racistes de ces dernières années ; les autres invités l'ont contredite et elle n'est pas revenue sur ses propos. Réaction du journaliste Raphaël Stainville sur sa fiche.",
+          "url": "https://www.cnews.fr/france/2026-11-23/si-le-rn-arrive-au-pouvoir-les-gens-dextreme-droite-vont-tuer-des-noirs-et-des",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261123071754/https://www.cnews.fr/france/2026-11-23/si-le-rn-arrive-au-pouvoir-les-gens-dextreme-droite-vont-tuer-des-noirs-et-des",
+          "archived": "2026-11-23"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Gouvernement & exécutif",
+      "parcours": [
+        {
+          "date": "2026-11-22",
+          "title": "Propos sur LCI",
+          "text": "Sur LCI, elle dit craindre des violences racistes en cas de victoire du RN ; d'autres invités la contredisent.",
+          "url": "https://www.cnews.fr/france/2026-11-23/si-le-rn-arrive-au-pouvoir-les-gens-dextreme-droite-vont-tuer-des-noirs-et-des",
+          "source": "CNews",
+          "archive_url": "https://web.archive.org/web/20261123071754/https://www.cnews.fr/france/2026-11-23/si-le-rn-arrive-au-pouvoir-les-gens-dextreme-droite-vont-tuer-des-noirs-et-des",
+          "archived": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "philippe-ballard",
+      "name": "Philippe Ballard",
+      "type": "person",
+      "role": "Député RN de l'Oise, porte-parole du RN (TF1 Info, 23 novembre 2026)",
+      "description": "Député du Rassemblement national (Oise) et porte-parole du parti. Le 23 novembre 2026, sur TF1, il dit que le RN votera la règle d'or budgétiaire qu'Emmanuel Macron envisage d'inscrire dans la Constitution. Pas de photo libre : monogramme.",
+      "statements": [
+        {
+          "quote": "On le votera bien sûr. On va regarder le texte précisément, mais le principe nous convient très, très bien",
+          "date": "2026-11-23",
+          "medium": "Bonjour ! La Matinale TF1, 23 novembre 2026, cité par le direct de TF1 Info. Il parle de la règle d'or budgétaire qu'Emmanuel Macron envisage d'inscrire dans la Constitution en janvier ; la page écrit que cette règle est réclamée par Marine Le Pen et Jordan Bardella.",
+          "url": "https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-colere-sociale-son-combat-est-le-mien-l-hommage-appuye-de-glucksmann-a-ruffin-apres-son-retrait-les-dernieres-informations-de-ce-lundi-23-novembre-2026-2477497.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261123072506/https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-colere-sociale-son-combat-est-le-mien-l-hommage-appuye-de-glucksmann-a-ruffin-apres-son-retrait-les-dernieres-informations-de-ce-lundi-23-novembre-2026-2477497.html",
+          "archived": "2026-11-23"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Responsables politiques",
+      "subcategory": "Parlementaires & élus",
+      "parcours": [
+        {
+          "date": "2026-11-23",
+          "title": "Règle d'or budgétaire",
+          "text": "Sur TF1, il annonce que le RN votera la règle d'or envisagée par Emmanuel Macron.",
+          "url": "https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-colere-sociale-son-combat-est-le-mien-l-hommage-appuye-de-glucksmann-a-ruffin-apres-son-retrait-les-dernieres-informations-de-ce-lundi-23-novembre-2026-2477497.html",
+          "source": "TF1 Info",
+          "archive_url": "https://web.archive.org/web/20261123072506/https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-colere-sociale-son-combat-est-le-mien-l-hommage-appuye-de-glucksmann-a-ruffin-apres-son-retrait-les-dernieres-informations-de-ce-lundi-23-novembre-2026-2477497.html",
+          "archived": "2026-11-23"
         }
       ]
     }
@@ -10917,6 +11208,46 @@
       "date": "2026-11-19",
       "section": "france",
       "nature": "ascension"
+    },
+    {
+      "source": "francois-ruffin",
+      "target": "rn",
+      "relation": "le 22/11/2026, il lance avec Debout! une campagne contre le Rassemblement national",
+      "url": "https://x.com/Francois_Ruffin/status/2124615432292438516",
+      "date": "2026-11-22",
+      "section": "france",
+      "nature": "opposition"
+    },
+    {
+      "source": "olivier-faure",
+      "target": "rn",
+      "relation": "le 21/11/2026, il reproche au RN et à Renaissance leur « obstruction » sur sa proposition de loi sur les implantations israéliennes",
+      "url": "https://x.com/faureolivier/status/2124136628478169240",
+      "date": "2026-11-21",
+      "section": "gaza",
+      "nature": "opposition"
+    },
+    {
+      "source": "raphael-stainville",
+      "target": "segolene-royal",
+      "relation": "le 23/11/2026 sur CNews, il qualifie ses propos sur LCI de « pur délire »",
+      "url": "https://www.cnews.fr/france/2026-11-23/si-le-rn-arrive-au-pouvoir-les-gens-dextreme-droite-vont-tuer-des-noirs-et-des",
+      "date": "2026-11-23",
+      "section": "france",
+      "nature": "autre",
+      "archive_url": "https://web.archive.org/web/20261123071754/https://www.cnews.fr/france/2026-11-23/si-le-rn-arrive-au-pouvoir-les-gens-dextreme-droite-vont-tuer-des-noirs-et-des",
+      "archived": "2026-11-23"
+    },
+    {
+      "source": "philippe-ballard",
+      "target": "rn",
+      "relation": "porte-parole du RN (TF1 Info, 23/11/2026)",
+      "url": "https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-colere-sociale-son-combat-est-le-mien-l-hommage-appuye-de-glucksmann-a-ruffin-apres-son-retrait-les-dernieres-informations-de-ce-lundi-23-novembre-2026-2477497.html",
+      "date": "2026-11-23",
+      "section": "france",
+      "nature": "ascension",
+      "archive_url": "https://web.archive.org/web/20261123072506/https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-colere-sociale-son-combat-est-le-mien-l-hommage-appuye-de-glucksmann-a-ruffin-apres-son-retrait-les-dernieres-informations-de-ce-lundi-23-novembre-2026-2477497.html",
+      "archived": "2026-11-23"
     }
   ]
 }

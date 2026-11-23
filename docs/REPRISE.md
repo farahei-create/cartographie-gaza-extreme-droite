@@ -26,7 +26,7 @@ Site statique à la racine. Pas de CDN. Pas d'étape de build côté Vercel : `d
 | `style.css`, `app.js` | Mise en forme et routage |
 | `data.json` | Contenu. **Généré.** Ne pas l'éditer à la main |
 | `build.py` | Construit `data.json` (personnes, liens, archives, compteurs) |
-| `v24_content.py`, `v26_content.py`, `v27_content.py`, `v28_content.py`, `v30_content.py`, `v31_content.py`, `v35_content.py`, `v41_content.py`, `v42_content.py`, `v43_content.py`, `v44_content.py`, `v45_content.py` | Ajouts branchés à la fin de `build.py` |
+| `v24_content.py`, `v26_content.py`, `v27_content.py`, `v28_content.py`, `v30_content.py`, `v31_content.py`, `v35_content.py`, `v41_content.py`, `v42_content.py`, `v43_content.py`, `v44_content.py`, `v45_content.py`, `v46_content.py`, `v54_content.py`, `v61_content.py` | Ajouts branchés à la fin de `build.py` (`v61_content.py` après `auto_content` et `admin_content` : un module branché avant eux décale les numéros des pages `c/` des phrases automatiques) |
 | `config.js` | `DONATION_URL`, `CORRECTION_EMAIL` |
 | `sw.js` | Service worker. La constante `VERSION` doit monter à chaque publication |
 | `manifest.webmanifest`, `icons/` | PWA |
@@ -256,16 +256,18 @@ Le numéro vivant du cache est celui de `sw.js`. Les tags `version-…` sont les
 | v58 | Mise à jour du 23/11 (nuit) | Bouton mode clair / sombre dans la barre du haut. Tag `version-2026-11-23-avant-theme`. Voir « Mode clair / sombre » (section 2) |
 | v59 | Mise à jour du 23/11 (nuit) | Enquête allégée : « Relier deux noms » retiré, « Proposer une mise à jour » remplacé par « Ajouter une contribution ». Tag `version-2026-11-23-avant-enquete-condamnations` |
 | v60 | Mise à jour du 23/11 (nuit) | Cinquième onglet « Condamnations » (`condamnations.json`, 16 décisions, 2 procédures en cours). Tag `version-2026-11-23-avant-condamnations`. Voir section 15 |
+| v61 | Mise à jour du 23/11 (matin) | Contenu : 15 phrases, 6 fiches nouvelles (`v61_content.py`, branché après `admin_content` pour que les liens `c/<id>/<n>.html` déjà partagés ne bougent pas). Tag `version-2026-11-23-avant-maj` |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 
 ## 7. Points en suspens
 
 - **Archive Le Parisien (Nantes).** L'URL `https://www.leparisien.fr/faits-divers/alcool-solitude-et-cnews-en-boucle-un-technicien-de-45-ans-condamne-apres-ses-menaces-de-mort-racistes-sur-facebook-03-11-2026-J4YLXBPWUVEEPFJLRLRLUVL22Q.php` est dans `tools/archives.json` avec `"status": "failed"` (`HTTP Error 520`). France 3 et Ouest-France, sur la même affaire, ont une copie. Réessayer `python3 tools/archive.py` avec cette URL seule. Ne pas retirer la source d'origine. Toujours en échec le 11/11/2026 au soir (520), comme les deux autres pages du Parisien.
-- **`tests/test_v22.py`** compte les fiches par groupe (`EXPECT`) : l'aligner quand tu ajoutes une fiche (v35 : `asso` 19). `test_v22`, `test_v23` et `test_v24` écrivent une capture dans `/opt/cursor/artifacts` : hors de cet environnement, lance une copie qui écrit ailleurs.
+- **`tests/test_v22.py`** compte les fiches par groupe (`EXPECT`) : l'aligner quand tu ajoutes une fiche (v35 : `asso` 19). v61 : `elu` 54, `gouv` 14. `test_v22`, `test_v23` et `test_v24` écrivent une capture dans `/opt/cursor/artifacts` : hors de cet environnement, lance une copie qui écrit ailleurs.
 - **`tests/test_v5.py`** : quatre échecs « graph built lazily on Réseau » existaient déjà avant v35.
 - **`tests/test_v8.py` échoue** : il lit `data["votes"]`. La section a été retirée (`9201279`). Ne pas la remettre pour faire passer le test. Les autres tests doivent passer.
 - **`CORRECTION_EMAIL`** dans `config.js` est une chaîne vide. Ne pas en inventer une.
+- **Port 8765 déjà pris sur la machine partagée.** Le 23/11/2026, un autre site occupait `localhost:8765` : les tests Playwright échouaient tous en délai dépassé. Sers le site sur un autre port (`python3 -m http.server 8766`) et lance une copie des tests avec ce port, placée dans `tests/` (les tests lisent `data.json` à côté de leur dossier), puis efface la copie.
 
 ## 8. Contrôle rapide avant de pousser
 

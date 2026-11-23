@@ -1738,5 +1738,95 @@
   "archive_url": null,
   "status": "failed",
   "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://www.aa.com.tr/fr/politique/le-candidat-%C3%A0-la-pr%C3%A9sidentielle-m%C3%A9lenchon-appelle-%C3%A0-la-lib%C3%A9ration-du-m%C3%A9decin-palestinien-abou-safiya-d%C3%A9tenu-par-isra%C3%ABl/4133641": {
+  "archive_url": "https://web.archive.org/web/20261123071701/https://www.aa.com.tr/fr/politique/le-candidat-%C3%A0-la-pr%C3%A9sidentielle-m%C3%A9lenchon-appelle-%C3%A0-la-lib%C3%A9ration-du-m%C3%A9decin-palestinien-abou-safiya-d%C3%A9tenu-par-isra%C3%ABl/4133641",
+  "archived": "2026-11-23",
+  "status": "existing"
+ },
+ "https://www.cnews.fr/france/2026-11-23/si-le-rn-arrive-au-pouvoir-les-gens-dextreme-droite-vont-tuer-des-noirs-et-des": {
+  "archive_url": "https://web.archive.org/web/20261123071754/https://www.cnews.fr/france/2026-11-23/si-le-rn-arrive-au-pouvoir-les-gens-dextreme-droite-vont-tuer-des-noirs-et-des",
+  "archived": "2026-11-23",
+  "status": "existing"
+ },
+ "https://www.europe1.fr/politique/soupcons-de-fuites-vers-le-rn-je-veux-savoir-qui-veut-ma-tete-le-prefet-hugues-moutouh-annonce-porter-plainte-1242523": {
+  "archive_url": "https://web.archive.org/web/20261123071856/https://www.europe1.fr/politique/soupcons-de-fuites-vers-le-rn-je-veux-savoir-qui-veut-ma-tete-le-prefet-hugues-moutouh-annonce-porter-plainte-1242523",
+  "archived": "2026-11-23",
+  "status": "existing"
+ },
+ "https://www.i24news.tv/fr/actu/france/artc-france-la-loi-contre-le-commerce-avec-les-implantations-israeliennes-bloquee-a-l-assemblee-nationale": {
+  "archive_url": "https://web.archive.org/web/20261123071934/https://www.i24news.tv/fr/actu/france/artc-france-la-loi-contre-le-commerce-avec-les-implantations-israeliennes-bloquee-a-l-assemblee-nationale",
+  "archived": "2026-11-23",
+  "status": "saved"
+ },
+ "https://www.lefigaro.fr/politique/soupcons-de-fuites-vers-le-rn-c-est-un-lynchage-mediatique-qui-est-commande-le-prefet-hugues-moutouh-annonce-deposer-plainte-20261123": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://www.lejdd.fr/politique/jai-ete-convie-jy-serai-zemmour-martele-sa-volonte-de-participer-a-une-primaire-de-la-droite-189375": {
+  "archive_url": "https://web.archive.org/web/20261123072137/https://www.lejdd.fr/politique/jai-ete-convie-jy-serai-zemmour-martele-sa-volonte-de-participer-a-une-primaire-de-la-droite-189375",
+  "archived": "2026-11-23",
+  "status": "saved"
+ },
+ "https://www.lejdd.fr/politique/le-rn-est-aux-portes-du-pouvoir-francois-ruffin-jette-leponge-pour-2027-189369": {
+  "archive_url": "https://web.archive.org/web/20261123073133/https://www.lejdd.fr/politique/le-rn-est-aux-portes-du-pouvoir-francois-ruffin-jette-leponge-pour-2027-189369",
+  "archived": "2026-11-23",
+  "status": "saved"
+ },
+ "https://www.progres.net.eg/marine-le-pen-devoile-les-grandes-lignes-de-sa-politique-etrangere-en-cas-daccession-a-lelysee/": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://www.rtl.fr/actu/politique/on-ne-craint-pas-la-concurrence-sur-rtl-sarah-knafo-dit-croire-plus-que-jamais-a-une-primaire-a-droite-et-assure-qu-il-n-est-absolument-pas-question-qu-eric-zemmour-se-retire-7900699235": {
+  "archive_url": "https://web.archive.org/web/20261123072342/https://www.rtl.fr/actu/politique/on-ne-craint-pas-la-concurrence-sur-rtl-sarah-knafo-dit-croire-plus-que-jamais-a-une-primaire-a-droite-et-assure-qu-il-n-est-absolument-pas-question-qu-eric-zemmour-se-retire-7900699235",
+  "archived": "2026-11-23",
+  "status": "existing"
+ },
+ "https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-colere-sociale-son-combat-est-le-mien-l-hommage-appuye-de-glucksmann-a-ruffin-apres-son-retrait-les-dernieres-informations-de-ce-lundi-23-novembre-2026-2477497.html": {
+  "archive_url": "https://web.archive.org/web/20261123072506/https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-colere-sociale-son-combat-est-le-mien-l-hommage-appuye-de-glucksmann-a-ruffin-apres-son-retrait-les-dernieres-informations-de-ce-lundi-23-novembre-2026-2477497.html",
+  "archived": "2026-11-23",
+  "status": "existing"
+ },
+ "https://x.com/Francois_Ruffin/status/2124615432292438516": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/JLMelenchon/status/2124442900591173906": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://x.com/JulienOdoul/status/2124632436822970683": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/MLP_officiel/status/2124600571608924656": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://x.com/ManonAubryFr/status/2124457878874681827": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/MathildePanot/status/2124196732355662032": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://x.com/RimaHas/status/2124473578150048248": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://x.com/faureolivier/status/2124136628478169240": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
  }
 }

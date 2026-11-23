@@ -1056,6 +1056,9 @@ import auto_content
 auto_content.apply(N, E, PIMG)
 import admin_content
 admin_content.apply(N, E, PIMG)
+# Ajouts du 23/11 (matin) après les phrases automatiques : les liens c/<id>/<n>.html déjà partagés ne bougent pas.
+import v61_content
+v61_content.apply(N, E, _b, _step, _node, L, _st)
 
 def _nature(e):
     if e.get("nature") in ("ascension","opposition","autre","coulisses"):

@@ -4,6 +4,29 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-23 (matin) — mise à jour du 21 au 23/11, 8 h (cache `onrecord-v61`)
+
+Tu enregistres d'abord `version-2026-11-23-avant-maj` (commit `bf25ad6`, cache `onrecord-v60`). Module `v61_content.py`, branché après `auto_content` et `admin_content` (les liens `c/<id>/<n>.html` déjà en ligne ne bougent pas). 15 phrases, dont 6 nouvelles fiches (Olivier Faure, Rima Hassan, François Ruffin, Manon Aubry, Ségolène Royal, Philippe Ballard). Chaque URL est ouverte ce jour et chaque phrase y figure mot pour mot ; messages X lus sur le compte officiel. Pas de photo : monogramme. Aucune décision de justice nouvelle : `condamnations.json` inchangé.
+Point de départ : le relevé X du 23/11 (52 posts), plus presse, matinales et émissions du dimanche. 12 posts ont mené à une publication ; 40 sont laissés de côté (5 déjà en ligne, 2 doublons, 20 hors des deux sujets, 11 attaques personnelles ou accusations sans élément vérifiable, 1 fait local d'une seule source, 1 message ambigu).
+
+- Hugues Moutouh, 23 novembre 2026 : « Je veux savoir qui veut ma tête et pourquoi. Donc, je vais me battre. » — https://www.europe1.fr/politique/soupcons-de-fuites-vers-le-rn-je-veux-savoir-qui-veut-ma-tete-le-prefet-hugues-moutouh-annonce-porter-plainte-1242523
+- Hugues Moutouh, 23 novembre 2026 : « C'est un lynchage médiatique qui est commandé » (Le Figaro, mis à jour, écrit « organisé ») — même URL Europe 1
+- Marine Le Pen, 22 novembre 2026 (X) : « […] reconnaître aujourd'hui l'État palestinien, c'est reconnaître le Hamas. […] » (phrase entière sur la fiche) — https://x.com/MLP_officiel/status/2124600571608924656
+- Jean-Luc Mélenchon, 22 novembre 2026 (X) : « Il faut sauver le docteur palestinien Hussam Abu Safiya ! » — https://x.com/JLMelenchon/status/2124442900591173906
+- Mathilde Panot, 21 novembre 2026 (X) : « Nous n'arrêterons jamais de nous battre pour la liberté et la dignité du peuple palestinien. » — https://x.com/MathildePanot/status/2124196732355662032
+- Olivier Faure, 21 novembre 2026 (X) : obstruction du RN et de Renaissance sur sa proposition de loi sur les colonies — https://x.com/faureolivier/status/2124136628478169240
+- Rima Hassan, 22 novembre 2026 (X) : « Le génocide à Gaza c'est : […] » (début de la liste) — https://x.com/RimaHas/status/2124473578150048248
+- François Ruffin, 22 novembre 2026 (X) : campagne de Debout! contre le RN ; retrait de la présidentielle le 21/11 (JDD) — https://x.com/Francois_Ruffin/status/2124615432292438516
+- Manon Aubry, 22 novembre 2026 (X) : « […] la responsabilité des macronistes dans la montée de l'extrême droite. […] » — https://x.com/ManonAubryFr/status/2124457878874681827
+- Ségolène Royal, 22 novembre 2026 (LCI, cité par CNews) : « les gens d'extrême droite vont tuer des noirs et tuer des arabes » — https://www.cnews.fr/france/2026-11-23/si-le-rn-arrive-au-pouvoir-les-gens-dextreme-droite-vont-tuer-des-noirs-et-des
+- Raphaël Stainville, 23 novembre 2026 (CNews) : « On est là dans du pur délire » — même URL CNews
+- Julien Odoul, 22 novembre 2026 (X) : priorité nationale « fondée sur la nationalité » — https://x.com/JulienOdoul/status/2124632436822970683
+- Philippe Ballard, 23 novembre 2026 (TF1) : « On le votera bien sûr. […] » (règle d'or) — https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-colere-sociale-son-combat-est-le-mien-l-hommage-appuye-de-glucksmann-a-ruffin-apres-son-retrait-les-dernieres-informations-de-ce-lundi-23-novembre-2026-2477497.html
+- Éric Zemmour, 21 novembre 2026 (Toulon, JDD) : « Défendre le droit du peuple français à rester majoritaire sur sa terre, ce n'est pas une faute, c'est un devoir, c'est moral, c'est beau et c'est juste » — https://www.lejdd.fr/politique/jai-ete-convie-jy-serai-zemmour-martele-sa-volonte-de-participer-a-une-primaire-de-la-droite-189375
+- Sarah Knafo, 23 novembre 2026 (RTL) : « On a tous les moyens de l'emporter, je pense qu'elle doit avoir lieu » — https://www.rtl.fr/actu/politique/on-ne-craint-pas-la-concurrence-sur-rtl-sarah-knafo-dit-croire-plus-que-jamais-a-une-primaire-a-droite-et-assure-qu-il-n-est-absolument-pas-question-qu-eric-zemmour-se-retire-7900699235
+
+Archives : les pages de presse sont copiées, sauf Le Progrès Égyptien ; les messages X échouent encore (523, SSL). À relancer. Tests : le port 8765 était pris par un autre site de la machine ; tests lancés sur 8766 (voir `docs/REPRISE.md`, section 7).
+
 ## 2026-11-23 (nuit) — onglet Condamnations (cache `onrecord-v60`)
 
 Tu enregistres d'abord `version-2026-11-23-avant-condamnations` (commit `c53d692`, cache `onrecord-v59`). Cinquième onglet « Condamnations » dans la barre du bas, icône à barreaux dessinée au trait. Données dans `condamnations.json` : 16 décisions (Marine Le Pen, RN en personne morale, Julien Odoul, Nicolas Sarkozy ×3, Éric Zemmour ×8, Cyril Hanouna, Geoffroy Lejeune relaxé en appel) et 2 procédures en cours (Vincent Bolloré, Robert Ménard). Chaque URL a été ouverte ce jour. Laissées de côté : condamnations réhabilitées ou non avenues (art. 133-11, 133-13, 132-35 du code pénal), décisions dont le caractère définitif ou la source n'est pas établi. Filtres personne, statut, année ; lien depuis la fiche. Mode d'emploi : `docs/REPRISE.md`, section 15. Aucune phrase nouvelle dans `data.json`.
