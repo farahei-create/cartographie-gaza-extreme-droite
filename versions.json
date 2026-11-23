@@ -2,11 +2,25 @@
   "_notice": "Versions enregistrées du site. Le retour se fait depuis la page admin, sur GitHub.",
   "versions": [
     {
+      "name": "version-2026-11-23-avant-condamnations",
+      "date": "2026-11-23T00:58:31Z",
+      "note": "Avant la section Condamnations (v59)",
+      "commit": "c53d692cbbfcd6539e31c558109a94a84511f8c9",
+      "github": "https://github.com/farahei-create/cartographie-gaza-extreme-droite/tree/version-2026-11-23-avant-condamnations"
+    },
+    {
       "name": "version-2026-11-23-avant-enquete-condamnations",
       "date": "2026-11-23T00:50:38Z",
       "note": "Version enregistrée avant le nettoyage de l'Enquête et la section Condamnations (cache onrecord-v58).",
       "commit": "4a8e6266593d8941b4ff2fcb720ecc319f646fad",
       "github": "https://github.com/farahei-create/cartographie-gaza-extreme-droite/tree/version-2026-11-23-avant-enquete-condamnations"
+    },
+    {
+      "name": "version-2026-11-23-avant-modif-2",
+      "date": "2026-11-23T00:30:46Z",
+      "note": "Version enregistrée avant une modification de l'interface.",
+      "commit": "127be2bb151da904322ad523827bb129218887e9",
+      "github": "https://github.com/farahei-create/cartographie-gaza-extreme-droite/tree/version-2026-11-23-avant-modif-2"
     },
     {
       "name": "version-2026-11-23-avant-theme",
