@@ -4,6 +4,10 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-23 (nuit) — onglet Condamnations (cache `onrecord-v60`)
+
+Tu enregistres d'abord `version-2026-11-23-avant-condamnations` (commit `c53d692`, cache `onrecord-v59`). Cinquième onglet « Condamnations » dans la barre du bas, icône à barreaux dessinée au trait. Données dans `condamnations.json` : 16 décisions (Marine Le Pen, RN en personne morale, Julien Odoul, Nicolas Sarkozy ×3, Éric Zemmour ×8, Cyril Hanouna, Geoffroy Lejeune relaxé en appel) et 2 procédures en cours (Vincent Bolloré, Robert Ménard). Chaque URL a été ouverte ce jour. Laissées de côté : condamnations réhabilitées ou non avenues (art. 133-11, 133-13, 132-35 du code pénal), décisions dont le caractère définitif ou la source n'est pas établi. Filtres personne, statut, année ; lien depuis la fiche. Mode d'emploi : `docs/REPRISE.md`, section 15. Aucune phrase nouvelle dans `data.json`.
+
 ## 2026-11-23 (nuit) — Enquête allégée (cache `onrecord-v59`)
 
 Tu enregistres d'abord `version-2026-11-23-avant-enquete-condamnations` (commit `4a8e626`, cache `onrecord-v58`). « Relier deux noms » quitte l'onglet Enquête (formulaire, chemin, `tools/enquete_path.py`). La page « Proposer une mise à jour » (`#/contribuer`) est retirée : elle faisait doublon avec les contributions des lecteurs. Les liens du pied de page, de l'accueil, de Méthode et de la méthodologie mènent à « Ajouter une contribution » (`#/contributions`). Les anciennes adresses renvoient vers `#/enquete` et `#/contributions`. Aucune phrase nouvelle.

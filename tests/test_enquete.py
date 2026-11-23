@@ -1,6 +1,6 @@
 import re
 # -*- coding: utf-8 -*-
-"""Enquête : données publiques, anciens liens, barre à quatre onglets."""
+"""Enquête : données publiques, anciens liens, barre à cinq onglets."""
 import json
 import os
 import sys
@@ -55,7 +55,7 @@ check(all(m.get("url", "").startswith("https://") and m.get("media_id") in ids f
 
 js = open("app.js", encoding="utf-8").read()
 html = open("index.html", encoding="utf-8").read()
-check("Citations" in html and "Enquête" in html and 'id="tab-liens"' in html, "barre à quatre onglets")
+check("Citations" in html and "Enquête" in html and 'id="tab-liens"' in html and 'id="tab-condamnations"' in html, "barre à cinq onglets")
 check("#/methodologie" in html or 'id="footer-methode"' in html, "méthode encore liée")
 check("function shortestPath" not in js and "enquete/relier" not in html and "renderRail" in js, "Relier deux noms retiré, défilement gardé")
 check(int(re.search(r'var VERSION = "onrecord-v(\d+)"', open("sw.js", encoding="utf-8").read()).group(1)) >= 52, "cache v52+")

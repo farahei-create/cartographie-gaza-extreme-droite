@@ -70,9 +70,9 @@ Thèmes usuels : `Gaza – déclarations`, `France – normalisation de l'extrê
 
 ### Vues
 
-`#/` accueil · `#/sections` et `#/chronologie` (onglet Citations) · `#/reseau`, `#/pouvoir`, `#/coulisses` (onglet Liens) · `#/enquete` et `#/enquete/<id>` · `#/methodologie` · `#/methode` · · `#/credits` · `#/personne/<id>` · `#/organisation/<id>`
+`#/` accueil · `#/sections` et `#/chronologie` (onglet Citations) · `#/reseau`, `#/pouvoir`, `#/coulisses` (onglet Liens) · `#/enquete` et `#/enquete/<id>` · `#/condamnations` et `#/condamnations/<id>` · `#/methodologie` · `#/methode` · · `#/credits` · `#/personne/<id>` · `#/organisation/<id>`
 
-La barre du bas a quatre onglets : Accueil, Citations, Liens, Enquête. Méthode est au pied de page et sur l'accueil. Les anciennes adresses continuent d'ouvrir la même vue. Depuis v59, « Relier deux noms » et la page « Proposer une mise à jour » sont retirés : `#/enquete/relier/…` renvoie vers `#/enquete`, et `#/contribuer` vers `#/contributions` (« Ajouter une contribution »).
+La barre du bas a cinq onglets : Accueil, Citations, Liens, Enquête, Condamnations (depuis v60, `--tabs:5`). Méthode est au pied de page et sur l'accueil. Les anciennes adresses continuent d'ouvrir la même vue. Depuis v59, « Relier deux noms » et la page « Proposer une mise à jour » sont retirés : `#/enquete/relier/…` renvoie vers `#/enquete`, et `#/contribuer` vers `#/contributions` (« Ajouter une contribution »).
 
 Onglet Liens (depuis v57) : style épuré, filets fins (`--lx-line`), segments compacts à 13 px, chiffres en chasse fixe (`--lx-mono`), une seule couleur d'accent. Ces règles sont dans le bloc « 23/11 » en fin de `style.css` et ne visent que `#/reseau`, `#/pouvoir` et `#/coulisses`. Garde des cibles de 44 px.
 
@@ -255,6 +255,7 @@ Le numéro vivant du cache est celui de `sw.js`. Les tags `version-…` sont les
 | v57 | Mise à jour du 23/11 | Onglet Liens épuré : filets fins, segments compacts, cartes du Réseau plus petites, détail en liste. Tag `version-2026-11-23-avant-liens`. Styles en fin de `style.css` (bloc « 23/11 »), limités aux vues Réseau, Coulisses et Échelle |
 | v58 | Mise à jour du 23/11 (nuit) | Bouton mode clair / sombre dans la barre du haut. Tag `version-2026-11-23-avant-theme`. Voir « Mode clair / sombre » (section 2) |
 | v59 | Mise à jour du 23/11 (nuit) | Enquête allégée : « Relier deux noms » retiré, « Proposer une mise à jour » remplacé par « Ajouter une contribution ». Tag `version-2026-11-23-avant-enquete-condamnations` |
+| v60 | Mise à jour du 23/11 (nuit) | Cinquième onglet « Condamnations » (`condamnations.json`, 16 décisions, 2 procédures en cours). Tag `version-2026-11-23-avant-condamnations`. Voir section 15 |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 
@@ -479,3 +480,23 @@ Section gratuite, sans Supabase. Un lecteur s'inscrit avec son e-mail, reçoit u
 
 `node --test tests/test_contributions.mjs` (code, jetables, débit, dépôt, modération, fonction sans variables). `python3 tests/test_contributions_ui.py` avec le serveur local sur `:8765` (bloc des fiches, bandeau, heure de Paris, « bientôt disponible », captures dans `shots/`).
 
+## 15. Condamnations
+
+Onglet `#/condamnations` (depuis v60), icône à barreaux (fenêtre grillagée, trait fin, dessin original). `#/condamnations/<id>` filtre sur une personne ; les fiches concernées ont un bouton « Décisions de justice · N ». Filtres : personne (dans l'adresse), statut (Toutes, Définitives, Non définitives, Relaxes), année.
+
+Données : `condamnations.json`, écrit à la main (ce n'est pas `data.json`). `decisions` : `id`, `person` (id de `data.json`), `person_name`, `affaire`, `date` (AAAA-MM-JJ, ou AAAA-MM si le jour n'est pas sourcé), `court`, `offence` (qualification de la juridiction), `sentence`, `status` (`definitive`, `appel`, `cassation`, `relaxe`, `non_confirme`), `history` (étapes antérieures), `note`, `reaction`, `sources` (`url`, `media`, `title`). `procedures` : procès ou renvois sans décision au fond, affichés à part.
+
+Garde-fous (rappelés sur la page, bloc « Méthode et garde-fous ») :
+- personnalités publiques et personnes morales déjà dans les fiches, faits de vie publique seulement ;
+- sources : décision publiée (Légifrance, Judilibre, Conseil constitutionnel) ou presse reconnue ; jamais Wikipédia ; chaque URL ouverte avant publication ;
+- rien d'amnistié, réhabilité ou effacé (art. 133-11 code pénal) : une amende seule est réhabilitée 3 ans après son paiement (art. 133-13), un sursis simple est non avenu après 5 ans (art. 132-35) ; retire l'entrée quand le délai est atteint ;
+- toute décision non définitive affiche « Présomption d'innocence : décision non définitive » ; `non_confirme` = on ne sait pas si un pourvoi a été formé, la mention s'affiche aussi ;
+- relaxes et décisions infirmées incluses ;
+- une mise en examen n'est jamais une condamnation : seulement dans `procedures` ;
+- vocabulaire neutre, réaction publique de la personne quand elle est connue.
+
+À suivre : arrêt d'appel Sarkozy (financement libyen) annoncé le 30/11/2026 ; jugement Ménard (Montpellier) le 01/12/2026 ; procès Bolloré du 7 au 17/12/2026 ; Cour de cassation sur le dossier des assistants FN (QPC le 16/12/2026). Mets à jour le statut et la date le jour même, avec la source.
+
+### Essai
+
+`python3 tests/test_condamnations.py` avec le serveur local sur `:8765` : schéma, ids présents dans `data.json`, sources https sans Wikipédia, vocabulaire neutre, mention sur chaque décision non définitive, cinq onglets de 44 px à 390 px, filtres, lien depuis la fiche, clair et sombre.

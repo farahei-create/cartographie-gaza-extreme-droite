@@ -1,0 +1,566 @@
+{
+ "meta": {
+  "updated": "2026-11-23",
+  "statuses": {
+   "definitive": "Définitive",
+   "appel": "En appel",
+   "cassation": "Pourvoi en cassation",
+   "relaxe": "Relaxe en appel",
+   "non_confirme": "Caractère définitif non vérifié"
+  },
+  "note": "Décisions de justice publiques concernant des personnalités publiques et des personnes morales déjà présentes dans les fiches. Sources : décisions publiées ou presse reconnue."
+ },
+ "decisions": [
+  {
+   "id": "le-pen-assistants-fn",
+   "person": "marine-le-pen",
+   "affaire": "Assistants parlementaires européens du FN",
+   "date": "2026-07-07",
+   "court": "Cour d'appel de Paris",
+   "offence": "Détournement de fonds publics et complicité de ce délit",
+   "sentence": "3 ans d'emprisonnement dont 2 avec sursis (1 an ferme aménageable sous bracelet électronique), 100 000 € d'amende, 45 mois d'inéligibilité dont 30 avec sursis",
+   "status": "cassation",
+   "history": [
+    {
+     "date": "2025-03-31",
+     "court": "Tribunal correctionnel de Paris",
+     "text": "4 ans d'emprisonnement dont 2 ferme, 100 000 € d'amende, 5 ans d'inéligibilité avec exécution provisoire"
+    }
+   ],
+   "note": "Audience de la Cour de cassation sur les questions prioritaires de constitutionnalité fixée au 16 décembre 2026.",
+   "reaction": "A annoncé un pourvoi en cassation.",
+   "sources": [
+    {
+     "url": "https://www.franceinfo.fr/politique/front-national/affaire-des-assistants-fn-au-parlement-europeen/marine-le-pen-condamnee-en-appel-a-trois-ans-de-prison-dont-un-an-sous-bracelet-electronique-mais-eligible-en-2027_8097896.html",
+     "media": "franceinfo",
+     "title": "Marine Le Pen condamnée en appel à trois ans de prison, dont un an sous bracelet électronique, mais éligible en 2027 (7/07/2026)"
+    },
+    {
+     "url": "https://www.franceinfo.fr/politique/front-national/affaire-des-assistants-fn-au-parlement-europeen/ineligibilite-peine-de-prison-pourquoi-la-condamnation-de-marine-le-pen-a-ete-reduite-en-appel_8098121.html",
+     "media": "franceinfo",
+     "title": "Inéligibilité, peine de prison : pourquoi la condamnation de Marine Le Pen a été réduite en appel"
+    },
+    {
+     "url": "https://www.rtl.fr/actu/justice-faits-divers/proces-des-assistants-parlementaires-du-rn-la-cour-de-cassation-examinera-les-qpc-le-16-decembre-une-date-cruciale-avant-la-presidentielle-2027-7900686372",
+     "media": "RTL",
+     "title": "La Cour de cassation examinera les QPC le 16 décembre"
+    }
+   ],
+   "person_name": "Marine Le Pen"
+  },
+  {
+   "id": "rn-assistants-fn",
+   "person": "rn",
+   "affaire": "Assistants parlementaires européens du FN",
+   "date": "2026-07-07",
+   "court": "Cour d'appel de Paris",
+   "offence": "Complicité de détournement de fonds publics et recel (personne morale)",
+   "sentence": "2 000 000 € d'amende dont 1 000 000 € avec sursis",
+   "status": "cassation",
+   "history": [
+    {
+     "date": "2025-03-31",
+     "court": "Tribunal correctionnel de Paris",
+     "text": "Condamnation du parti en tant que personne morale"
+    }
+   ],
+   "note": "Le parti est condamné en tant que personne morale.",
+   "reaction": "",
+   "sources": [
+    {
+     "url": "https://www.bfmtv.com/police-justice/marine-le-pen-louis-aliot-julien-odoul-quelles-sont-les-peines-prononcees-a-l-issue-du-proces-en-appel-du-rn_AN-202607070608.html",
+     "media": "BFMTV",
+     "title": "Quelles sont les peines prononcées à l'issue du procès en appel du RN ? (7/07/2026)"
+    },
+    {
+     "url": "https://www.franceinfo.fr/politique/front-national/affaire-des-assistants-fn-au-parlement-europeen/marine-le-pen-bruno-gollnisch-louis-aliot-voici-les-11-condamnations-a-l-issue-du-proces-en-appel-des-assistants-parlementaires-du-fn_8089790.html",
+     "media": "franceinfo",
+     "title": "Voici les 11 condamnations à l'issue du procès en appel des assistants parlementaires du FN"
+    },
+    {
+     "url": "https://www.rtl.fr/actu/justice-faits-divers/proces-des-assistants-parlementaires-du-rn-la-cour-de-cassation-examinera-les-qpc-le-16-decembre-une-date-cruciale-avant-la-presidentielle-2027-7900686372",
+     "media": "RTL",
+     "title": "La Cour de cassation examinera les QPC le 16 décembre"
+    }
+   ],
+   "person_name": "Rassemblement national (ex-Front national)"
+  },
+  {
+   "id": "odoul-assistants-fn",
+   "person": "julien-odoul",
+   "affaire": "Assistants parlementaires européens du FN",
+   "date": "2026-07-07",
+   "court": "Cour d'appel de Paris",
+   "offence": "Recel de détournement de fonds publics",
+   "sentence": "8 mois d'emprisonnement avec sursis, 1 an d'inéligibilité avec sursis",
+   "status": "cassation",
+   "history": [],
+   "note": "",
+   "reaction": "",
+   "sources": [
+    {
+     "url": "https://www.bfmtv.com/police-justice/marine-le-pen-louis-aliot-julien-odoul-quelles-sont-les-peines-prononcees-a-l-issue-du-proces-en-appel-du-rn_AN-202607070608.html",
+     "media": "BFMTV",
+     "title": "Quelles sont les peines prononcées à l'issue du procès en appel du RN ? (7/07/2026)"
+    },
+    {
+     "url": "https://www.franceinfo.fr/politique/front-national/affaire-des-assistants-fn-au-parlement-europeen/marine-le-pen-bruno-gollnisch-louis-aliot-voici-les-11-condamnations-a-l-issue-du-proces-en-appel-des-assistants-parlementaires-du-fn_8089790.html",
+     "media": "franceinfo",
+     "title": "Voici les 11 condamnations à l'issue du procès en appel des assistants parlementaires du FN"
+    }
+   ],
+   "person_name": "Julien Odoul"
+  },
+  {
+   "id": "zemmour-obono",
+   "person": "eric-zemmour",
+   "affaire": "Propos visant la députée Danièle Obono (CNews, août 2020)",
+   "date": "2026-06",
+   "court": "Cour de cassation",
+   "offence": "Complicité de diffamation publique",
+   "sentence": "1 000 € d'amende avec sursis",
+   "status": "definitive",
+   "history": [
+    {
+     "date": "2024-02-07",
+     "court": "Tribunal correctionnel de Paris",
+     "text": "1 000 € d'amende avec sursis"
+    }
+   ],
+   "note": "Caractère définitif annoncé le 25 juin 2026.",
+   "reaction": "Dénonce un « harcèlement judiciaire » et des « délits d'opinions » (novembre 2026).",
+   "sources": [
+    {
+     "url": "https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-condamne-pour-complicite-de-diffamation-a-l-encontre-de-daniele-obono_6351307.html",
+     "media": "franceinfo",
+     "title": "Éric Zemmour condamné pour complicité de diffamation à l'encontre de Danièle Obono (7/02/2024)"
+    },
+    {
+     "url": "https://www.aa.com.tr/fr/monde/france-l%C3%A9lue-lfi-dani%C3%A8le-obono-annonce-la-condamnation-d%C3%A9finitive-de-cnews-et-d%C3%A9ric-zemmour-pour-diffamation/3977867",
+     "media": "Anadolu",
+     "title": "Condamnation définitive annoncée (25/06/2026)"
+    }
+   ],
+   "person_name": "Éric Zemmour"
+  },
+  {
+   "id": "hanouna-boyard",
+   "person": "cyril-hanouna",
+   "affaire": "Propos visant le député Louis Boyard (TPMP, 10 novembre 2022)",
+   "date": "2026-03-19",
+   "court": "Cour d'appel de Paris",
+   "offence": "Injure publique",
+   "sentence": "2 000 € d'amende",
+   "status": "non_confirme",
+   "history": [
+    {
+     "date": "2025-02",
+     "court": "Tribunal correctionnel de Paris",
+     "text": "4 000 € d'amende"
+    }
+   ],
+   "note": "Les sources consultées ne disent pas si un pourvoi a été formé.",
+   "reaction": "Affirmait avoir répondu « aux invectives » du député.",
+   "sources": [
+    {
+     "url": "https://www.leparisien.fr/culture-loisirs/tv/espece-dabruti-bouffon-cyril-hanouna-a-nouveau-condamne-pour-insultes-en-appel-face-au-depute-lfi-louis-boyard-19-03-2026-2GMEKPBIIFDPHPUV4W2KF7VHXY.php",
+     "media": "Le Parisien",
+     "title": "Cyril Hanouna à nouveau condamné en appel (19/03/2026)"
+    },
+    {
+     "url": "https://www.franceinfo.fr/culture/tv/cyril-hanouna/l-animateur-cyril-hanouna-condamne-a-4-000-euros-d-amende-pour-avoir-injurie-le-depute-lfi-louis-boyard-en-2022_7086117.html",
+     "media": "franceinfo",
+     "title": "Cyril Hanouna condamné à 4 000 euros d'amende (février 2025)"
+    }
+   ],
+   "person_name": "Cyril Hanouna"
+  },
+  {
+   "id": "zemmour-ined",
+   "person": "eric-zemmour",
+   "affaire": "Propos sur l'Ined (CNews, avril 2021)",
+   "date": "2026-01-27",
+   "court": "Cour de cassation (rejet du pourvoi n° 24-87.310)",
+   "offence": "Complicité de diffamation publique envers une administration publique",
+   "sentence": "1 500 € d'amende avec sursis",
+   "status": "definitive",
+   "history": [
+    {
+     "date": "2024-01-29",
+     "court": "Tribunal correctionnel de Paris",
+     "text": "1 500 € d'amende avec sursis"
+    },
+    {
+     "date": "2024-12-11",
+     "court": "Cour d'appel de Paris",
+     "text": "Condamnation confirmée"
+    }
+   ],
+   "note": "",
+   "reaction": "Dénonce un « harcèlement judiciaire » et des « délits d'opinions » (novembre 2026).",
+   "sources": [
+    {
+     "url": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000053452175",
+     "media": "Légifrance",
+     "title": "Cass. crim., 27 janvier 2026, n° 24-87.310"
+    },
+    {
+     "url": "https://www.ined.fr/fr/presse/condamnation-definitive-monsieur-eric-zemmour-et-monsieur-jean-christophe-thiery-bercegol-du",
+     "media": "Ined",
+     "title": "Communiqué : condamnation définitive pour diffamation publique envers l'Ined"
+    }
+   ],
+   "person_name": "Éric Zemmour"
+  },
+  {
+   "id": "zemmour-mineurs-isoles",
+   "person": "eric-zemmour",
+   "affaire": "Propos sur les mineurs isolés (CNews, septembre 2020)",
+   "date": "2025-12-02",
+   "court": "Cour de cassation (rejet du pourvoi)",
+   "offence": "Complicité d'injure publique et de provocation à la haine",
+   "sentence": "100 jours-amende de 100 € (10 000 €)",
+   "status": "definitive",
+   "history": [
+    {
+     "date": "2024-09",
+     "court": "Cour d'appel de Paris",
+     "text": "100 jours-amende de 100 €"
+    }
+   ],
+   "note": "",
+   "reaction": "Dénonce un « harcèlement judiciaire » et des « délits d'opinions » (novembre 2026).",
+   "sources": [
+    {
+     "url": "https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-a-ete-definitivement-condamne-pour-complicite-de-provocation-a-la-haine-apres-ses-propos-tenus-sur-des-mineurs-isoles_7653920.html",
+     "media": "franceinfo",
+     "title": "Éric Zemmour définitivement condamné pour complicité de provocation à la haine (2/12/2025)"
+    },
+    {
+     "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-face-a-ses-multiples-condamnations-judiciaires-eric-zemmour-denonce-un-harcelement-judiciaire-11-11-2026-RKZEHX7ATZFWNOVMKPJ4IGSZPI.php",
+     "media": "Le Parisien",
+     "title": "Face à ses multiples condamnations judiciaires, Éric Zemmour dénonce un « harcèlement judiciaire » (11/11/2026)"
+    }
+   ],
+   "person_name": "Éric Zemmour"
+  },
+  {
+   "id": "zemmour-klugman",
+   "person": "eric-zemmour",
+   "affaire": "Propos visant l'avocat Patrick Klugman (affaire Jérémie Cohen, 2022)",
+   "date": "2025-12-02",
+   "court": "Cour de cassation (rejet du pourvoi n° 24-87.311)",
+   "offence": "Diffamation",
+   "sentence": "1 000 € d'amende",
+   "status": "definitive",
+   "history": [
+    {
+     "date": "2024-01-18",
+     "court": "Tribunal correctionnel de Paris",
+     "text": "1 000 € d'amende"
+    },
+    {
+     "date": "2024-12-05",
+     "court": "Cour d'appel de Paris",
+     "text": "Jugement confirmé"
+    }
+   ],
+   "note": "",
+   "reaction": "Dénonce un « harcèlement judiciaire » et des « délits d'opinions » (novembre 2026).",
+   "sources": [
+    {
+     "url": "https://www.lemondedudroit.fr/judiciaire/326-droit-penal/102159-diffamation-envers-un-avocat-confirmation-de-la-condamnation-d-eric-zemmour.html",
+     "media": "Le Monde du droit",
+     "title": "Diffamation envers un avocat : confirmation de la condamnation d'Éric Zemmour"
+    },
+    {
+     "url": "https://www.franceinfo.fr/politique/eric-zemmour/mort-de-jeremie-cohen-en-2022-eric-zemmour-condamne-a-1-000-euros-d-amende-pour-diffamation_6312012.html",
+     "media": "franceinfo",
+     "title": "Éric Zemmour condamné à 1 000 euros d'amende pour diffamation (18/01/2024)"
+    }
+   ],
+   "person_name": "Éric Zemmour"
+  },
+  {
+   "id": "sarkozy-bygmalion",
+   "person": "nicolas-sarkozy",
+   "affaire": "Bygmalion (campagne présidentielle de 2012)",
+   "date": "2025-11-26",
+   "court": "Cour de cassation (rejet du pourvoi)",
+   "offence": "Financement illégal de campagne électorale",
+   "sentence": "1 an d'emprisonnement dont 6 mois ferme aménageables",
+   "status": "definitive",
+   "history": [
+    {
+     "date": "2024-02-14",
+     "court": "Cour d'appel de Paris",
+     "text": "1 an d'emprisonnement dont 6 mois ferme aménageables"
+    }
+   ],
+   "note": "",
+   "reaction": "« Prend acte » de la décision ; avait contesté « vigoureusement toute responsabilité pénale ».",
+   "sources": [
+    {
+     "url": "https://www.franceinfo.fr/societe/affaire/les-affaires-sarkozy/affaire-bygmalion-nicolas-sarkozy-definitivement-condamne-pour-le-financement-illegal-de-sa-campagne-presidentielle-de-2012-apres-le-rejet-de-son-pourvoi-en-cassation_7638986.html",
+     "media": "franceinfo",
+     "title": "Affaire Bygmalion : Nicolas Sarkozy définitivement condamné (26/11/2025)"
+    },
+    {
+     "url": "https://www.leparisien.fr/politique/affaire-bygmalion-la-cour-de-cassation-condamne-definitivement-nicolas-sarkozy-26-11-2025-YYGK2YCIGNBBPPMLSR7SJNFRSI.php",
+     "media": "Le Parisien",
+     "title": "La Cour de cassation condamne définitivement Nicolas Sarkozy, l'ex-président « prend acte »"
+    }
+   ],
+   "person_name": "Nicolas Sarkozy"
+  },
+  {
+   "id": "sarkozy-financement-libyen",
+   "person": "nicolas-sarkozy",
+   "affaire": "Soupçons de financement libyen de la campagne de 2007",
+   "date": "2025-09-25",
+   "court": "Tribunal correctionnel de Paris",
+   "offence": "Association de malfaiteurs (relaxé des chefs de corruption passive, de détournement de fonds publics libyens et de financement illicite de campagne électorale)",
+   "sentence": "5 ans d'emprisonnement, mandat de dépôt à effet différé avec exécution provisoire",
+   "status": "appel",
+   "history": [],
+   "note": "Procès en appel tenu du 16 mars au 27 mai 2026 ; arrêt de la cour d'appel de Paris annoncé pour le 30 novembre 2026.",
+   "reaction": "Clame son innocence ; ses avocats ont plaidé la relaxe. « Je n'ai pas trahi la confiance des Français » (27 mai 2026).",
+   "sources": [
+    {
+     "url": "https://www.franceinfo.fr/politique/affaire/financement-de-la-campagne-de-sarkozy/nicolas-sarkozy-condamne-a-cinq-ans-de-prison-dans-l-affaire-du-financement-libyen-de-sa-campagne-electorale-en-2007_7510897.html",
+     "media": "franceinfo",
+     "title": "Nicolas Sarkozy condamné à cinq ans de prison pour association de malfaiteurs (25/09/2025)"
+    },
+    {
+     "url": "https://www.france24.com/fr/france/20260527-fin-du-proces-libyen-en-appel-nicolas-sarkozy-presidentielle-2007-financement-kadhafi-prison",
+     "media": "France 24",
+     "title": "Fin du procès libyen en appel (27/05/2026)"
+    }
+   ],
+   "person_name": "Nicolas Sarkozy"
+  },
+  {
+   "id": "zemmour-convention-droite",
+   "person": "eric-zemmour",
+   "affaire": "Discours à la « Convention de la droite » (28 septembre 2019)",
+   "date": "2025-09-16",
+   "court": "Cour de cassation (rejet du pourvoi)",
+   "offence": "Provocation publique à la haine ou à la violence et injure publique à raison de l'origine, de l'ethnie, de la nation, de la race ou de la religion",
+   "sentence": "15 000 € d'amende",
+   "status": "definitive",
+   "history": [
+    {
+     "date": "2020-09",
+     "court": "Tribunal correctionnel de Paris",
+     "text": "Condamnation"
+    },
+    {
+     "date": "2021",
+     "court": "Cour d'appel de Paris",
+     "text": "Relaxe, cassée en février 2023"
+    },
+    {
+     "date": "2024-02-22",
+     "court": "Cour d'appel de Paris (renvoi)",
+     "text": "15 000 € d'amende"
+    }
+   ],
+   "note": "",
+   "reaction": "Dénonce un « harcèlement judiciaire » et des « délits d'opinions » (novembre 2026).",
+   "sources": [
+    {
+     "url": "https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-definitivement-condamne-pour-des-propos-racistes-en-2019_7497130.html",
+     "media": "franceinfo",
+     "title": "Éric Zemmour définitivement condamné pour des propos racistes en 2019 (17/09/2025)"
+    },
+    {
+     "url": "https://www.leparisien.fr/elections/presidentielle/presidentielle-2027-face-a-ses-multiples-condamnations-judiciaires-eric-zemmour-denonce-un-harcelement-judiciaire-11-11-2026-RKZEHX7ATZFWNOVMKPJ4IGSZPI.php",
+     "media": "Le Parisien",
+     "title": "Face à ses multiples condamnations judiciaires, Éric Zemmour dénonce un « harcèlement judiciaire » (11/11/2026)"
+    }
+   ],
+   "person_name": "Éric Zemmour"
+  },
+  {
+   "id": "zemmour-hapsatou-sy",
+   "person": "eric-zemmour",
+   "affaire": "Propos sur le prénom d'Hapsatou Sy (2018)",
+   "date": "2025-09-02",
+   "court": "Cour de cassation (rejet du pourvoi)",
+   "offence": "Injure publique en raison de l'origine, l'ethnie, la nation, la race ou la religion",
+   "sentence": "4 000 € d'amende",
+   "status": "definitive",
+   "history": [
+    {
+     "date": "2024-03",
+     "court": "Cour d'appel de Paris",
+     "text": "Condamnation confirmée"
+    }
+   ],
+   "note": "",
+   "reaction": "Avait dénoncé en 2024 des « juges politisés » qui veulent le « condamner pour intimider les Français ».",
+   "sources": [
+    {
+     "url": "https://www.leparisien.fr/politique/le-prenom-dhapsatou-sy-insulte-a-la-france-la-cour-de-cassation-confirme-la-condamnation-deric-zemmour-03-09-2025-DWAHRZ6GFNFTXH7ZVRMEGYZJPU.php",
+     "media": "Le Parisien",
+     "title": "La Cour de cassation confirme la condamnation d'Éric Zemmour (3/09/2025)"
+    }
+   ],
+   "person_name": "Éric Zemmour"
+  },
+  {
+   "id": "zemmour-petain",
+   "person": "eric-zemmour",
+   "affaire": "Propos sur le maréchal Pétain (CNews, octobre 2019)",
+   "date": "2025-04-02",
+   "court": "Cour d'appel de Paris (renvoi après cassation)",
+   "offence": "Contestation de crime contre l'humanité",
+   "sentence": "10 000 € d'amende",
+   "status": "cassation",
+   "history": [
+    {
+     "date": "2021-02",
+     "court": "Tribunal correctionnel de Paris",
+     "text": "Relaxe"
+    },
+    {
+     "date": "2022-05-12",
+     "court": "Cour d'appel de Paris",
+     "text": "Relaxe, annulée par la Cour de cassation"
+    }
+   ],
+   "note": "",
+   "reaction": "« À aucun moment souhaité “défendre Pétain” » ; a annoncé un pourvoi en cassation.",
+   "sources": [
+    {
+     "url": "https://www.tf1info.fr/justice-faits-divers/eric-zemmour-condamne-a-10-000-euros-d-amende-pour-avoir-affirme-que-petain-avait-sauve-les-juifs-francais-2362813.html",
+     "media": "TF1 Info",
+     "title": "Éric Zemmour condamné à 10 000 euros d'amende (2/04/2025)"
+    }
+   ],
+   "person_name": "Éric Zemmour"
+  },
+  {
+   "id": "zemmour-crepol",
+   "person": "eric-zemmour",
+   "affaire": "Propos après la mort de Thomas à Crépol (30 novembre 2023)",
+   "date": "2025-03-26",
+   "court": "Tribunal correctionnel de Paris",
+   "offence": "Injure raciale",
+   "sentence": "9 000 € d'amende",
+   "status": "appel",
+   "history": [],
+   "note": "",
+   "reaction": "A fait appel : « Il est inadmissible que la vérité soit à ce point bâillonnée dans notre pays ».",
+   "sources": [
+    {
+     "url": "https://www.ici.fr/infos/faits-divers-justice/meurtre-de-thomas-a-crepol-eric-zemmour-condamne-pour-injure-raciale-4519526",
+     "media": "ICI (France Bleu)",
+     "title": "Eric Zemmour condamné pour injure raciale (26/03/2025)"
+    },
+    {
+     "url": "https://www.lejdd.fr/Societe/il-est-inadmissible-que-la-verite-soit-a-ce-point-baillonnee-zemmour-fait-appel-de-sa-condamnation-pour-ses-propos-sur-crepol-156416",
+     "media": "Le JDD",
+     "title": "Zemmour fait appel de sa condamnation pour ses propos sur Crépol"
+    }
+   ],
+   "person_name": "Éric Zemmour"
+  },
+  {
+   "id": "sarkozy-ecoutes",
+   "person": "nicolas-sarkozy",
+   "affaire": "Écoutes, dite « Paul Bismuth »",
+   "date": "2024-12-18",
+   "court": "Cour de cassation (rejet du pourvoi)",
+   "offence": "Corruption et trafic d'influence",
+   "sentence": "3 ans d'emprisonnement dont 2 avec sursis (1 an ferme sous bracelet électronique), 3 ans d'inéligibilité",
+   "status": "definitive",
+   "history": [
+    {
+     "date": "2023-05-17",
+     "court": "Cour d'appel de Paris",
+     "text": "Condamnation confirmée en appel"
+    }
+   ],
+   "note": "",
+   "reaction": "« La vérité finira par triompher » ; dénonce une « injustice profonde » et annonce saisir la Cour européenne des droits de l'homme.",
+   "sources": [
+    {
+     "url": "https://www.franceinfo.fr/societe/affaire/les-affaires-sarkozy/affaire-des-ecoutes-nicolas-sarkozy-definitivement-condamne-a-un-an-ferme-sous-bracelet-electronique-l-ex-president-annonce-saisir-la-cour-europeenne-des-droits-de-l-homme_6962612.html",
+     "media": "franceinfo",
+     "title": "Affaire des écoutes : Nicolas Sarkozy définitivement condamné (18/12/2024)"
+    }
+   ],
+   "person_name": "Nicolas Sarkozy"
+  },
+  {
+   "id": "lejeune-obono",
+   "person": "geoffroy-lejeune",
+   "affaire": "Récit « Obono l'Africaine » (Valeurs actuelles, août 2020)",
+   "date": "2022-11-17",
+   "court": "Cour d'appel de Paris",
+   "offence": "Poursuivi pour injure à caractère raciste",
+   "sentence": "Relaxe",
+   "status": "relaxe",
+   "history": [
+    {
+     "date": "2021-10",
+     "court": "Tribunal correctionnel de Paris",
+     "text": "1 500 € d'amende, infirmé en appel"
+    }
+   ],
+   "note": "Le directeur de la publication et l'auteur du récit ont, eux, été condamnés définitivement (Cour de cassation, 16 janvier 2024).",
+   "reaction": "",
+   "sources": [
+    {
+     "url": "https://www.leparisien.fr/faits-divers/daniele-obono-en-esclave-valeurs-actuelles-condamne-en-appel-geoffroy-lejune-relaxe-17-11-2022-CWC2VZQRUJCLHEM3ZEEDAVHOGU.php",
+     "media": "Le Parisien",
+     "title": "Valeurs actuelles condamné en appel, Geoffroy Lejeune relaxé (17/11/2022)"
+    },
+    {
+     "url": "https://www.franceinfo.fr/societe/justice/daniele-obono-depeinte-en-esclave-le-directeur-et-un-journaliste-de-valeurs-actuelles-definitivement-condamnes_6309954.html",
+     "media": "franceinfo",
+     "title": "Le directeur et un journaliste de Valeurs actuelles définitivement condamnés (17/01/2024)"
+    }
+   ],
+   "person_name": "Geoffroy Lejeune"
+  }
+ ],
+ "procedures": [
+  {
+   "id": "bollore-ports-africains",
+   "person": "vincent-bollore",
+   "affaire": "Dossier des « ports africains » (Togo, 2009-2011)",
+   "date": "2026-12-07",
+   "text": "Renvoyé devant le tribunal correctionnel de Paris, notamment pour corruption d'agent public étranger. Procès prévu du 7 au 17 décembre 2026. Sa requête pour changer de tribunal a été rejetée par la Cour de cassation (juillet 2026). Aucune décision sur le fond à ce jour.",
+   "sources": [
+    {
+     "url": "https://www.letelegramme.fr/monde/affaire-des-ports-africains-vincent-bollore-echoue-a-faire-recuser-ses-juges-7092699.php",
+     "media": "Le Télégramme",
+     "title": "Vincent Bolloré échoue à faire récuser ses juges (30/07/2026)"
+    }
+   ],
+   "person_name": "Vincent Bolloré"
+  },
+  {
+   "id": "menard-mariage",
+   "person": "robert-menard",
+   "affaire": "Refus de célébrer un mariage (Béziers, 7 juillet 2023)",
+   "date": "2026-12-01",
+   "text": "Jugé le 30 septembre 2026 par le tribunal correctionnel de Montpellier. Le parquet a requis 7 500 € d'amende ; ses avocats ont plaidé la relaxe. Décision mise en délibéré au 1er décembre 2026.",
+   "sources": [
+    {
+     "url": "https://www.france24.com/fr/info-en-continu/20260930-robert-m%C3%A9nard-assume-au-tribunal-son-refus-de-marier-un-alg%C3%A9rien-sous-oqtf",
+     "media": "France 24 (AFP)",
+     "title": "Amende requise contre Robert Ménard (30/09/2026)"
+    },
+    {
+     "url": "https://www.rfi.fr/fr/france/20260930-france-le-maire-de-b%C3%A9ziers-robert-m%C3%A9nard-jug%C3%A9-pour-avoir-refus%C3%A9-de-marier-un-alg%C3%A9rien-sous-oqtf",
+     "media": "RFI",
+     "title": "Robert Ménard jugé (30/09/2026)"
+    }
+   ],
+   "person_name": "Robert Ménard"
+  }
+ ]
+}

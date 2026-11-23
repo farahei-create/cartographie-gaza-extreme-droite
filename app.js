@@ -1540,6 +1540,7 @@
       '<section class="ctb" id="ctb-fiche" aria-label="Contributions des lecteurs"></section>' +
       exploreHtml(n);
     if (window.OnrecordContrib) window.OnrecordContrib.fiche(n, $("ctb-fiche"));
+    ficheCondLink(n);
     try { localStorage.setItem("onrecord:last", n.id); } catch (e) {}
     preloadImg(n.image);
     document.title = n.name + " — Onrecord";
@@ -2819,8 +2820,8 @@
   }
 
   /* ---------- Routage par ancre (#/…) ---------- */
-  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "pouvoir", "coulisses", "methodologie", "methode", "credits", "enquete", "contributions"];
-  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Citations", chronologie: "Citations", reseau: "Réseau des relations", pouvoir: "Échelle du pouvoir", coulisses: "Coulisses", methodologie: "Méthodologie", methode: "Méthode", credits: "Crédits photos", enquete: "Enquête", contributions: "Contributions des lecteurs" };
+  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "pouvoir", "coulisses", "methodologie", "methode", "credits", "enquete", "contributions", "condamnations"];
+  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Citations", chronologie: "Citations", reseau: "Réseau des relations", pouvoir: "Échelle du pouvoir", coulisses: "Coulisses", methodologie: "Méthodologie", methode: "Méthode", credits: "Crédits photos", enquete: "Enquête", contributions: "Contributions des lecteurs", condamnations: "Condamnations" };
   var railIndex = 0, railIds = [], enqData = null, enqBound = false;
   function pad3(x) { return ("00" + x).slice(-Math.max(3, String(x).length)); }
   function railDate(d) {
@@ -2990,6 +2991,97 @@
       return '<li class="cred"><img src="' + esc(url) + '" alt="" width="72" height="72"><div><a href="' + ficheHref(n) + '"><strong>' + esc(n.name) + "</strong></a><span>" + (photo ? "Photo" : "Logo") + " · " + esc(cr.author || "auteur non précisé") + "</span><span>" + lic + " · " + src + "</span></div></li>";
     }).join("");
   }
+  /* ---------- 23/11 : Condamnations (v60) ----------
+     Décisions de justice publiques, lues dans condamnations.json. Filtres : personne (dans l'adresse), statut, année. */
+  var condData = null, condBound = false, condStatus = "", condYear = "";
+  var COND_NONFINAL = { appel: 1, cassation: 1, non_confirme: 1 };
+  function loadCond() {
+    if (condData) return Promise.resolve(condData);
+    return fetch("condamnations.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : {}; })
+      .then(function (d) { condData = d && d.decisions ? d : { decisions: [], procedures: [], meta: {} }; return condData; })
+      .catch(function () { condData = { decisions: [], procedures: [], meta: {} }; return condData; });
+  }
+  var MOIS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
+  function condDate(d) {
+    var p = String(d || "").split("-");
+    if (p.length === 3) return (+p[2]) + " " + MOIS[+p[1] - 1] + " " + p[0];
+    if (p.length === 2) return MOIS[+p[1] - 1] + " " + p[0];
+    return p[0] || "";
+  }
+  function condStatusLabel(s) { return ((condData && condData.meta && condData.meta.statuses) || {})[s] || s; }
+  function condItem(e) {
+    var n = byId[e.person], who = n ? '<a href="' + ficheHref(n) + '">' + esc(e.person_name) + "</a>" : esc(e.person_name);
+    var nonfinal = !!COND_NONFINAL[e.status];
+    return '<li class="cond st-' + esc(e.status) + '" id="c-' + esc(e.id) + '" data-person="' + esc(e.person) + '" data-status="' + esc(e.status) + '">' +
+      '<div class="cond-top"><time datetime="' + esc(e.date) + '">' + condDate(e.date) + '</time><span class="cond-st">' + esc(condStatusLabel(e.status)) + "</span></div>" +
+      '<h3 class="cond-who">' + who + "</h3>" +
+      '<p class="cond-aff">' + esc(e.affaire) + "</p>" +
+      (nonfinal ? '<p class="cond-pi">Présomption d\'innocence : décision non définitive</p>' : "") +
+      '<dl class="cond-dl"><dt>Juridiction</dt><dd>' + esc(e.court) + "</dd><dt>" + (e.status === "relaxe" ? "Poursuite" : "Infraction") + "</dt><dd>" + esc(e.offence) + "</dd><dt>" + (e.status === "relaxe" ? "Décision" : "Peine") + "</dt><dd>" + esc(e.sentence) + "</dd></dl>" +
+      ((e.history || []).length ? '<ol class="cond-hist">' + e.history.map(function (h) { return "<li><time>" + condDate(h.date) + "</time> " + esc(h.court) + " : " + esc(h.text) + "</li>"; }).join("") + "</ol>" : "") +
+      (e.note ? '<p class="cond-note">' + esc(e.note) + "</p>" : "") +
+      (e.reaction ? '<p class="cond-rea"><span>Réaction</span>' + esc(e.reaction) + "</p>" : "") +
+      '<p class="cond-src">' + (e.sources || []).map(function (s) { return '<a href="' + esc(s.url) + '" target="_blank" rel="noopener noreferrer" title="' + esc(s.title) + '">' + esc(s.media) + "</a>"; }).join("") + "</p></li>";
+  }
+  function procItem(p) {
+    var n = byId[p.person], who = n ? '<a href="' + ficheHref(n) + '">' + esc(p.person_name) + "</a>" : esc(p.person_name);
+    return '<li class="cond cond-proc-i" id="c-' + esc(p.id) + '" data-person="' + esc(p.person) + '"><h3 class="cond-who">' + who + '</h3><p class="cond-aff">' + esc(p.affaire) + "</p>" +
+      '<p class="cond-pi">Présomption d\'innocence : aucune décision sur le fond</p><p class="cond-note">' + esc(p.text) + "</p>" +
+      '<p class="cond-src">' + (p.sources || []).map(function (s) { return '<a href="' + esc(s.url) + '" target="_blank" rel="noopener noreferrer" title="' + esc(s.title) + '">' + esc(s.media) + "</a>"; }).join("") + "</p></li>";
+  }
+  function condFor(id) {
+    if (!condData) return 0;
+    return condData.decisions.filter(function (e) { return e.person === id; }).length + condData.procedures.filter(function (p) { return p.person === id; }).length;
+  }
+  function renderCond(person) { loadCond().then(function () { paintCond(person); }); }
+  function paintCond(person) {
+    var d = condData;
+    if (!condBound) {
+      condBound = true;
+      var people = {}, years = {};
+      d.decisions.concat(d.procedures).forEach(function (e) { people[e.person] = e.person_name; });
+      d.decisions.forEach(function (e) { years[String(e.date).slice(0, 4)] = 1; });
+      $("cond-person").innerHTML = '<option value="">Toutes</option>' + Object.keys(people).sort(function (a, b) { return people[a].localeCompare(people[b], "fr"); }).map(function (k) { return '<option value="' + esc(k) + '">' + esc(people[k]) + "</option>"; }).join("");
+      $("cond-year").innerHTML = '<option value="">Toutes</option>' + Object.keys(years).sort().reverse().map(function (y) { return '<option value="' + y + '">' + y + "</option>"; }).join("");
+      $("cond-person").addEventListener("change", function () { location.hash = "#/condamnations" + (this.value ? "/" + encodeURIComponent(this.value) : ""); });
+      $("cond-year").addEventListener("change", function () { condYear = this.value; paintCond(curCondPerson); });
+      $("cond-status").addEventListener("click", function (e) {
+        var b = e.target.closest && e.target.closest("[data-st]");
+        if (!b) return;
+        condStatus = b.getAttribute("data-st");
+        paintCond(curCondPerson);
+      });
+    }
+    curCondPerson = d.decisions.concat(d.procedures).some(function (e) { return e.person === person; }) ? person : "";
+    $("cond-person").value = curCondPerson;
+    $("cond-year").value = condYear;
+    document.querySelectorAll("#cond-status [data-st]").forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-st") === condStatus ? "true" : "false"); });
+    var rows = d.decisions.filter(function (e) {
+      if (curCondPerson && e.person !== curCondPerson) return false;
+      if (condYear && String(e.date).slice(0, 4) !== condYear) return false;
+      if (condStatus === "definitive" && e.status !== "definitive") return false;
+      if (condStatus === "nonfinal" && !COND_NONFINAL[e.status]) return false;
+      if (condStatus === "relaxe" && e.status !== "relaxe") return false;
+      return true;
+    });
+    $("cond-list").innerHTML = rows.map(condItem).join("") || '<li class="empty">Aucune décision pour ces filtres.</li>';
+    $("cond-count").textContent = rows.length + (rows.length > 1 ? " décisions" : " décision");
+    var procs = d.procedures.filter(function (p) { return !curCondPerson || p.person === curCondPerson; });
+    $("cond-proc-wrap").hidden = !procs.length;
+    $("cond-proc").innerHTML = procs.map(procItem).join("");
+    if (curCondPerson && byId[curCondPerson]) document.title = byId[curCondPerson].name + " — Condamnations — Onrecord";
+  }
+  var curCondPerson = "";
+  function ficheCondLink(n) {
+    loadCond().then(function () {
+      var k = condFor(n.id), box = document.querySelector("#fiche-body .f-actions");
+      if (!k || !box || !curFiche || curFiche.id !== n.id || $("fiche-cond")) return;
+      var a = document.createElement("a");
+      a.className = "btn-pill ghost small"; a.id = "fiche-cond"; a.href = "#/condamnations/" + encodeURIComponent(n.id);
+      a.textContent = "Décisions de justice · " + k;
+      box.appendChild(a);
+    });
+  }
   var lastView = null;
   function ensureGraph(focusId) {
     if (!network) buildGraph(); else { sizeGraph(); network.redraw(); if (reseau3dOn) syncReseau3d(); }
@@ -3021,6 +3113,7 @@
     else if (v === "sections" || v === "chronologie" || v === "fiche") tab = "citations";
     else if (v === "reseau" || v === "pouvoir" || v === "coulisses") tab = "liens";
     else if (v === "enquete") tab = "enquete";
+    else if (v === "condamnations") tab = "condamnations";
     document.querySelectorAll("#tabnav a").forEach(function (a) {
       if (tab && a.getAttribute("data-tab") === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
     });
@@ -3060,6 +3153,7 @@
     lastView = key;
     if (v === "reseau") { renderRail(); requestAnimationFrame(function () { ensureGraph(parts[1] ? decodeURIComponent(parts[1]) : null); }); }
     if (v === "enquete") renderEnquete(parts[1] ? decodeURIComponent(parts[1]) : "", parts[2] ? decodeURIComponent(parts[2]) : "", parts[3] ? decodeURIComponent(parts[3]) : "");
+    if (v === "condamnations") renderCond(parts[1] ? decodeURIComponent(parts[1]) : "");
     if (v === "pouvoir") renderPouvoir(parts[1] ? decodeURIComponent(parts[1]) : null);
     if (v === "coulisses") renderCoulisses(parts[1] ? decodeURIComponent(parts[1]) : "");
     window.__route = v;
