@@ -115,7 +115,7 @@
       api("report", { id: id, kind: f.kind.value, reason: f.reason.value, contact: f.contact.value }).then(function (r) {
         btn.disabled = false;
         if (r.ok) { box.innerHTML = '<p class="ctb-ok">Merci. Le signalement est transmis à la modération.</p>'; return; }
-        err.textContent = r.body.soon ? "Le signalement en ligne arrive bientôt. En attendant, passe par la page « Proposer une mise à jour » (demande de retrait)." : (r.body.error || "Envoi impossible.");
+        err.textContent = r.body.soon ? "Le signalement en ligne arrive bientôt. Réessaie un peu plus tard." : (r.body.error || "Envoi impossible.");
         err.hidden = false;
       });
     });

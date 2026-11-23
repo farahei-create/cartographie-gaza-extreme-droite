@@ -13,7 +13,7 @@ check(re.search(r'CORRECTION_EMAIL:\s*""',cfg),"CORRECTION_EMAIL vide")
 import re as _re
 _sw=open("site/sw.js").read()
 check(int(_re.search(r"onrecord-v(\d+)",_sw).group(1))>=18,"sw >= v18")
-check('var VERSION = "onrecord-v58"' in _sw,"sw onrecord-v58")
+check('var VERSION = "onrecord-v59"' in _sw,"sw onrecord-v59")
 BAN=["pantin","revirement","complice","contradiction"]
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path="/usr/bin/google-chrome")
@@ -46,7 +46,7 @@ with sync_playwright() as p:
     check(pg.is_visible("#home-resume") and "Reprendre" in pg.inner_text("#home-resume"),"chip reprendre")
     pg.screenshot(path="/workspace/v13-home-mobile.png",full_page=True)
     pg.goto(BASE+"#/methode"); pg.wait_for_timeout(400); mt=pg.inner_text("#view-methode")
-    check("dons" in mt and "Leetchi" in mt,"méthode dons/leetchi"); check("Proposer une mise à jour" in mt,"contact -> contribuer")
+    check("dons" in mt and "Leetchi" in mt,"méthode dons/leetchi"); check("Ajouter une contribution" in mt and "Proposer une mise à jour" not in mt,"contact -> contributions")
     check(pg.is_visible(".donate-methode"),"cta méthode")
     for r in ["", "#/methode", "#/personne/cyril-hanouna"]:
         pg.goto(BASE+r); pg.wait_for_timeout(300); body=pg.inner_text("body").lower()

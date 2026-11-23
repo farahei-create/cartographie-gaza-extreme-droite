@@ -70,9 +70,9 @@ Thèmes usuels : `Gaza – déclarations`, `France – normalisation de l'extrê
 
 ### Vues
 
-`#/` accueil · `#/sections` et `#/chronologie` (onglet Citations) · `#/reseau`, `#/pouvoir`, `#/coulisses` (onglet Liens) · `#/enquete` et `#/enquete/<id>` · `#/methodologie` · `#/methode` · `#/contribuer` · `#/credits` · `#/personne/<id>` · `#/organisation/<id>`
+`#/` accueil · `#/sections` et `#/chronologie` (onglet Citations) · `#/reseau`, `#/pouvoir`, `#/coulisses` (onglet Liens) · `#/enquete` et `#/enquete/<id>` · `#/methodologie` · `#/methode` · · `#/credits` · `#/personne/<id>` · `#/organisation/<id>`
 
-La barre du bas a quatre onglets : Accueil, Citations, Liens, Enquête. Méthode est au pied de page et sur l'accueil. Les anciennes adresses continuent d'ouvrir la même vue. `#/enquete/relier/<id>/<id>` montre le plus court chemin documenté.
+La barre du bas a quatre onglets : Accueil, Citations, Liens, Enquête. Méthode est au pied de page et sur l'accueil. Les anciennes adresses continuent d'ouvrir la même vue. Depuis v59, « Relier deux noms » et la page « Proposer une mise à jour » sont retirés : `#/enquete/relier/…` renvoie vers `#/enquete`, et `#/contribuer` vers `#/contributions` (« Ajouter une contribution »).
 
 Onglet Liens (depuis v57) : style épuré, filets fins (`--lx-line`), segments compacts à 13 px, chiffres en chasse fixe (`--lx-mono`), une seule couleur d'accent. Ces règles sont dans le bloc « 23/11 » en fin de `style.css` et ne visent que `#/reseau`, `#/pouvoir` et `#/coulisses`. Garde des cibles de 44 px.
 
@@ -94,7 +94,7 @@ Par défaut, le système décide (`prefers-color-scheme`). Le bouton `#theme-btn
 
 ### `config.js`
 
-`CORRECTION_EMAIL` est **vide**. Les pages `#/methode` et `#/contribuer` demandent alors de copier le message. Ne pas inventer d'adresse.
+`CORRECTION_EMAIL` est **vide**. La page `#/methode` n'affiche alors pas d'adresse ; les corrections passent par `#/contributions`. Ne pas inventer d'adresse.
 
 ## 3. Règles éditoriales
 
@@ -254,6 +254,7 @@ Le numéro vivant du cache est celui de `sw.js`. Les tags `version-…` sont les
 | v56 | Mise à jour du 22/11 (soir) | Contributions des lecteurs, validées dans l'admin. Tag `version-2026-11-22-avant-contributions`. Section 14 |
 | v57 | Mise à jour du 23/11 | Onglet Liens épuré : filets fins, segments compacts, cartes du Réseau plus petites, détail en liste. Tag `version-2026-11-23-avant-liens`. Styles en fin de `style.css` (bloc « 23/11 »), limités aux vues Réseau, Coulisses et Échelle |
 | v58 | Mise à jour du 23/11 (nuit) | Bouton mode clair / sombre dans la barre du haut. Tag `version-2026-11-23-avant-theme`. Voir « Mode clair / sombre » (section 2) |
+| v59 | Mise à jour du 23/11 (nuit) | Enquête allégée : « Relier deux noms » retiré, « Proposer une mise à jour » remplacé par « Ajouter une contribution ». Tag `version-2026-11-23-avant-enquete-condamnations` |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 

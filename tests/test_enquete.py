@@ -1,6 +1,6 @@
 import re
 # -*- coding: utf-8 -*-
-"""Enquête : chemin, données publiques, anciens liens, barre à quatre onglets."""
+"""Enquête : données publiques, anciens liens, barre à quatre onglets."""
 import json
 import os
 import sys
@@ -9,7 +9,6 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
 sys.path.insert(0, ROOT)
 
-from tools.enquete_path import shortest_path
 
 ok = fail = 0
 FORBIDDEN = ("complice", "génocidaire", "genocidaire", "pantin", "infiltré", "infiltre", "marionnette", "protégé", "protege", "copinage", "occulte")
@@ -39,24 +38,6 @@ data = json.load(open("data.json", encoding="utf-8"))
 enq = json.load(open("enquete.json", encoding="utf-8"))
 edges = data["edges"]
 ids = {n["id"] for n in data["nodes"]}
-check(shortest_path(edges, "marine-le-pen", "marine-le-pen") == [], "même fiche")
-check(shortest_path(edges, "personne-absente", "marine-le-pen") is None, "fiche inconnue")
-# un lien direct, s'il existe
-direct = next((e for e in edges if e["source"] == "marine-le-pen" and e.get("url")), None)
-if direct:
-    path = shortest_path(edges, direct["source"], direct["target"])
-    check(path and path[0]["url"].startswith("https://") and path[0].get("date"), "étape directe sourcée")
-else:
-    check(False, "pas de lien Le Pen")
-# deux fiches sans lien forcé : le résultat est une liste ou None, jamais une relation inventée
-ghost = shortest_path([{"source": "a", "target": "b", "url": "https://exemple.fr", "date": "2020-01-01", "nature": "autre", "relation": "x"}], "a", "c")
-check(ghost is None, "aucun chemin")
-one = shortest_path([
-    {"source": "a", "target": "b", "url": "https://exemple.fr/1", "date": "2020-01-01", "nature": "ascension", "relation": "a nommé"},
-    {"source": "b", "target": "c", "url": "https://exemple.fr/2", "date": "2021-01-01", "nature": "opposition", "relation": "a critiqué"},
-], "a", "c")
-check(one and len(one) == 2 and one[0]["date"] == "2020-01-01" and one[1]["url"].endswith("/2"), "chemin de deux étapes")
-
 found = set()
 keys(enq, found)
 check(not (found & PRIVATE_KEYS), "pas de champ privé " + str(found & PRIVATE_KEYS))
@@ -76,7 +57,7 @@ js = open("app.js", encoding="utf-8").read()
 html = open("index.html", encoding="utf-8").read()
 check("Citations" in html and "Enquête" in html and 'id="tab-liens"' in html, "barre à quatre onglets")
 check("#/methodologie" in html or 'id="footer-methode"' in html, "méthode encore liée")
-check("function shortestPath" in js and "renderRail" in js, "chemin et défilement dans la page")
+check("function shortestPath" not in js and "enquete/relier" not in html and "renderRail" in js, "Relier deux noms retiré, défilement gardé")
 check(int(re.search(r'var VERSION = "onrecord-v(\d+)"', open("sw.js", encoding="utf-8").read()).group(1)) >= 52, "cache v52+")
 
 print("%d ok, %d fail" % (ok, fail))

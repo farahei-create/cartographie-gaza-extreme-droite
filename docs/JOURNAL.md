@@ -4,6 +4,10 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-23 (nuit) — Enquête allégée (cache `onrecord-v59`)
+
+Tu enregistres d'abord `version-2026-11-23-avant-enquete-condamnations` (commit `4a8e626`, cache `onrecord-v58`). « Relier deux noms » quitte l'onglet Enquête (formulaire, chemin, `tools/enquete_path.py`). La page « Proposer une mise à jour » (`#/contribuer`) est retirée : elle faisait doublon avec les contributions des lecteurs. Les liens du pied de page, de l'accueil, de Méthode et de la méthodologie mènent à « Ajouter une contribution » (`#/contributions`). Les anciennes adresses renvoient vers `#/enquete` et `#/contributions`. Aucune phrase nouvelle.
+
 ## 2026-11-23 (nuit) — bouton mode clair / sombre (cache `onrecord-v58`)
 
 Tu enregistres d'abord `version-2026-11-23-avant-theme` (commit `9a65bb0`, cache `onrecord-v57`). Petit bouton à icône (lune en sombre, soleil en clair, bascule animée) dans la barre du haut, à côté de « Soutenir », cible de 44 px, libellé « Passer en mode clair / sombre ». Par défaut le site suit le réglage du téléphone ; un toucher force l'autre mode et le garde (`localStorage`, clé `onrecord-theme`). Un petit script dans le `<head>` de `index.html` et `admin.html` applique ce choix avant l'affichage, et met à jour `theme-color`. Dans `style.css`, chaque bloc `@media (prefers-color-scheme: light)` ne s'applique plus si `data-theme="dark"`, et il est recopié pour `data-theme="light"` (sélecteurs dans `:where()`, même priorité qu'avant). Vérifié : le clair forcé et le sombre forcé sont identiques pixel par pixel au clair et au sombre du système, sur l'accueil, Citations, Liens, Enquête, Contributions, Méthode et l'admin. Aucune phrase nouvelle.

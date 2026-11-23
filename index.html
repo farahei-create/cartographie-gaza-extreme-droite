@@ -301,7 +301,7 @@
         <p id="methode-dons">Onrecord est gratuit et non commercial. Le projet vit uniquement de dons, y compris anonymes, collectés via Leetchi. Ils couvrent l'hébergement, l'archivage des sources et le temps de vérification. Les dons n'ont aucune influence sur le contenu.</p>
         <p class="methode-cta"><a class="donate donate-methode btn-pill ghost" hidden target="_blank" rel="noopener noreferrer">Soutenir Onrecord sur Leetchi</a></p>
         <h3>Demander une correction ou un retrait</h3>
-        <p>Une erreur, une précision, une nouvelle source ou une demande de retrait : utilisez le formulaire <a href="#/contribuer">Proposer une mise à jour</a>. Chaque proposition est vérifiée avant publication.</p>
+        <p>Une erreur, une précision ou une nouvelle source : <a href="#/contributions">Ajouter une contribution</a>. Chaque contribution est relue avant publication. Pour faire retirer une contribution, utilisez le bouton « Signaler un contenu » placé sous celle-ci.</p>
         <p id="methode-contact"></p>
         <p><a href="#/methodologie">Méthodologie détaillée</a></p>
       </article>
@@ -367,7 +367,7 @@
       <h3>Note méthodologique du jeu de données</h3>
       <blockquote id="meta-methodology"></blockquote>
       <h3>Corrections et mises à jour</h3>
-      <p class="contact">Pour signaler une erreur, apporter une précision ou demander un retrait : <a href="#/contribuer">Proposer une mise à jour</a>.</p>
+      <p class="contact">Pour signaler une erreur ou apporter une précision : <a href="#/contributions">Ajouter une contribution</a>. Pour un retrait, bouton « Signaler un contenu » sous la contribution.</p>
     </article></div>
   </section>
   <section id="view-credits" class="view" hidden>
@@ -377,37 +377,6 @@
       <p>Chaque image est hébergée dans le dépôt. La licence et l'auteur sont ceux indiqués sur la page du fichier au moment de l'ajout. Les fiches sans portrait libre utilisent un monogramme, pas une photo.</p>
       <p class="count" id="credits-count"></p>
       <ul class="credits" id="credits-list"></ul>
-    </article></div>
-  </section>
-  <section id="view-contribuer" class="view" hidden>
-    <div class="wrap page"><article class="prose card contrib">
-      <h2>Proposer une mise à jour</h2>
-      <div class="star-rule" aria-hidden="true"><span>✦</span></div>
-      <p>Onrecord est une archive collaborative de faits sourcés. Toute proposition est vérifiée avant publication. Merci d'indiquer une source consultable.</p>
-      <form id="contrib-form" novalidate>
-        <label>Type de proposition *
-          <select id="cf-type" required>
-            <option value="">— Choisir —</option>
-            <option>Correction d'une citation existante</option>
-            <option>Nouvelle déclaration</option>
-            <option>Nouveau lien ou relation</option>
-            <option>Demande de retrait</option>
-            <option>Autre précision</option>
-          </select></label>
-        <label>Personne ou organisation concernée<input id="cf-who" type="text" autocomplete="off"></label>
-        <label>Lien de la fiche Onrecord (facultatif)<input id="cf-fiche" type="url" placeholder="https://onrecord-fr.vercel.app/#/personne/…"></label>
-        <label>Date du propos (facultatif)<input id="cf-date" type="date"></label>
-        <label>Citation ou description *<textarea id="cf-text" rows="5"></textarea></label>
-        <label>URL de la source *<input id="cf-src" type="url" required placeholder="https://…"></label>
-        <label>Votre e-mail (facultatif, pour un suivi)<input id="cf-mail" type="email" autocomplete="email"></label>
-        <p id="cf-err" class="cf-err" role="alert" hidden></p>
-        <p><button type="submit" class="btn-pill" id="cf-submit">Envoyer la proposition</button></p>
-      </form>
-      <div id="cf-out" hidden>
-        <p class="cf-note">L'adresse de contact sera bientôt disponible ; en attendant, copiez ce message.</p>
-        <textarea id="cf-msg" rows="12" readonly></textarea>
-        <p><button type="button" class="btn-pill ghost" id="cf-copy">Copier le message</button></p>
-      </div>
     </article></div>
   </section>
   <section id="view-contributions" class="view" aria-labelledby="ctb-title" hidden>
@@ -428,7 +397,7 @@
         <li><strong>Modération.</strong> Onrecord peut refuser ou retirer une contribution à tout moment, sans avoir à se justifier.</li>
       </ol>
       <h2 id="ctb-mentions">Retrait d'un contenu et mentions</h2>
-      <p>Pour faire retirer une contribution, utilise le bouton « Signaler un contenu » sous celle-ci : indique le motif et, si tu veux une réponse, ton e-mail. Un contenu manifestement illicite est retiré promptement dès qu'il est signalé (loi pour la confiance dans l'économie numérique, article 6). Une demande peut aussi passer par la page <a href="#/contribuer">Proposer une mise à jour</a> (« Demande de retrait »).</p>
+      <p>Pour faire retirer une contribution, utilise le bouton « Signaler un contenu » sous celle-ci : indique le motif et, si tu veux une réponse, ton e-mail. Un contenu manifestement illicite est retiré promptement dès qu'il est signalé (loi pour la confiance dans l'économie numérique, article 6).</p>
       <p>Éditeur : Onrecord, archive citoyenne non professionnelle et non commerciale. Hébergeur : Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis (vercel.com). Les fichiers déposés sont stockés par Vercel Blob.</p>
       <p>Données : ton e-mail sert à l'inscription et à la confirmation par code. Il est chiffré, n'est jamais publié et n'est communiqué qu'à la justice sur réquisition. Pour le supprimer, signale une de tes contributions avec le motif « Autre ».</p>
     </article></div>
@@ -443,14 +412,6 @@
         <div class="search-box"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></svg><input id="enq-q" type="search" placeholder="Nom, média, mot-clé…" autocomplete="off" enterkeyhint="search"></div>
       </form>
       <div id="enq-results" class="enq-results"></div>
-      <form id="enq-relier" class="enq-relier">
-        <h2 class="h-sec">Relier deux noms</h2>
-        <p class="sec-intro">Le plus court chemin déjà documenté sur le site. Chaque étape a une nature, une date et une source.</p>
-        <label>De <input id="enq-a" type="search" placeholder="Premier nom" autocomplete="off"></label>
-        <label>Vers <input id="enq-b" type="search" placeholder="Second nom" autocomplete="off"></label>
-        <button type="submit" class="btn-pill">Relier</button>
-      </form>
-      <div id="enq-path"></div>
       <article id="enq-dossier"></article>
     </div>
   </section>
@@ -460,7 +421,7 @@
   <div class="wrap">
     <div class="star-rule" aria-hidden="true"><span>✦</span></div>
     <p>Données sourcées, citations reproduites telles que publiées. Aucune qualification juridique des personnes. Dernière mise à jour : <span id="footer-update">—</span>.</p>
-    <p>Une erreur, une précision ou une nouvelle source ? <a href="#/contribuer" id="footer-contribuer">Proposer une mise à jour</a> · <a href="#/methode" id="footer-methode">Méthode</a> · <a href="#/contributions" id="footer-contributions">Contributions des lecteurs</a></p>
+    <p>Une erreur, une précision ou une nouvelle source ? <a href="#/contributions" id="footer-contributions">Ajouter une contribution</a> · <a href="#/methode" id="footer-methode">Méthode</a></p>
     <p><a href="data.json" download="onrecord-donnees.json" class="dl-link">Télécharger les données (JSON)</a></p>
     <p class="donate-wrap"><a class="donate donate-foot" hidden target="_blank" rel="noopener noreferrer">Soutenir</a></p>
     <p class="img-note">Photos et logos : licences libres ou réutilisation officielle, détail sur <a href="#/credits">Crédits photos</a>. Sans portrait libre : monogramme. Copies archivées : Internet Archive (Wayback Machine).</p>

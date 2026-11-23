@@ -153,7 +153,7 @@
     buildFilters();
     buildHome();
     buildSections();
-    buildTimeline(); initContrib();
+    buildTimeline();
     bindFiche();
     bindCards();
     bindRail();
@@ -1302,7 +1302,7 @@
       ["#/pouvoir", "Vue", "Échelle du pouvoir", "Les fiches, rangées par fonction documentée.", plural(DATA.nodes.length, "fiche", "fiches") + " · " + plural(DATA.edges.length, "lien", "liens"), "c-pow"],
       ["#/coulisses", "Vue", "Coulisses", "Partis, médias, argent, idées, édition.", "Ponts datés et sourcés", "c-cou"],
       ["#/methodologie", "À propos", "Méthode", "Ce qui entre. Ce qui n'entre pas.", "Sources vérifiées, copies archivées", "c-meth"],
-      ["#/contribuer", "Participer", "Une correction", "Une erreur, une précision, une phrase à vérifier.", "Chaque proposition est relue", "c-contrib"]
+      ["#/contributions", "Participer", "Ajouter une contribution", "Une preuve publique, une précision, une erreur.", "Chaque contribution est relue", "c-contrib"]
     ];
     $("home-entries").innerHTML = cards.map(function (c) {
       return '<a class="entry ' + c[5] + '" href="' + c[0] + '"><span class="entry-k">' + esc(c[1]) + '</span><span class="entry-t">' + esc(c[2]) + '</span><span class="entry-d">' + esc(c[3]) + '</span><span class="entry-c">' + esc(c[4]) + '</span><span class="entry-go" aria-hidden="true">›</span></a>';
@@ -2126,42 +2126,6 @@
     if (/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail)) el.innerHTML = 'Écrire à <a href="mailto:' + esc(mail) + '?subject=' + encodeURIComponent("Onrecord : demande de correction ou de retrait") + '">' + esc(mail) + "</a> en indiquant la fiche concernée (lien), l'élément en cause et, si possible, une source.";
     else el.textContent = "";
   }
-  /* ---------- Proposer une mise à jour (#/contribuer) ---------- */
-  var EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
-  function contribMessage() {
-    function v(id) { return String($(id).value || "").trim(); }
-    var f = { type: v("cf-type"), who: v("cf-who"), fiche: v("cf-fiche"), date: v("cf-date"), text: v("cf-text"), src: v("cf-src"), mail: v("cf-mail") };
-    var err = [];
-    if (!f.type) err.push("choisir un type de proposition");
-    if (!f.text) err.push("indiquer une citation ou une description");
-    if (!/^https?:\/\/\S+\.\S+/.test(f.src)) err.push("indiquer une URL de source valide (https://…)");
-    if (f.mail && !EMAIL_RE.test(f.mail)) err.push("vérifier l'adresse e-mail");
-    var body = ["Proposition de mise à jour — Onrecord", "",
-      "Type : " + f.type, "Personne ou organisation : " + (f.who || "—"), "Fiche Onrecord : " + (f.fiche || "—"),
-      "Date du propos : " + (f.date ? fmtDate(f.date) : "—"), "", "Citation ou description :", f.text, "",
-      "Source : " + f.src, "E-mail pour le suivi : " + (f.mail || "—")].join("\n");
-    return { err: err, body: body };
-  }
-  function initContrib() {
-    $("contrib-form").addEventListener("submit", function (ev) {
-      ev.preventDefault();
-      var r = contribMessage(), e = $("cf-err");
-      if (r.err.length) { e.textContent = "Merci de " + r.err.join(", ") + "."; e.hidden = false; $("cf-out").hidden = true; return; }
-      e.hidden = true;
-      var mail = String(CFG.CORRECTION_EMAIL || "").trim();
-      if (EMAIL_RE.test(mail)) {
-        var href = "mailto:" + mail + "?subject=" + encodeURIComponent("Onrecord : proposition de mise à jour") + "&body=" + encodeURIComponent(r.body);
-        window.__lastMailto = href; $("cf-out").hidden = true;
-        toast("Votre application mail s'ouvre…"); location.href = href;
-      } else {
-        $("cf-msg").value = r.body; $("cf-out").hidden = false; $("cf-out").scrollIntoView({ block: "nearest" });
-      }
-    });
-    $("cf-copy").addEventListener("click", function () {
-      copyText($("cf-msg").value).then(function () { toast("Message copié"); }, function () { $("cf-msg").select(); toast("Sélectionnez puis copiez le message"); });
-    });
-  }
-
   /* ---------- Chronologie ---------- */
   var TL_ITEMS = [], tlDesc = false, LINKS = "__links__";
   function buildTimeline() {
@@ -2855,8 +2819,8 @@
   }
 
   /* ---------- Routage par ancre (#/…) ---------- */
-  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "pouvoir", "coulisses", "methodologie", "methode", "contribuer", "credits", "enquete", "contributions"];
-  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Citations", chronologie: "Citations", reseau: "Réseau des relations", pouvoir: "Échelle du pouvoir", coulisses: "Coulisses", methodologie: "Méthodologie", methode: "Méthode", contribuer: "Proposer une mise à jour", credits: "Crédits photos", enquete: "Enquête", contributions: "Contributions des lecteurs" };
+  var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "pouvoir", "coulisses", "methodologie", "methode", "credits", "enquete", "contributions"];
+  var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Citations", chronologie: "Citations", reseau: "Réseau des relations", pouvoir: "Échelle du pouvoir", coulisses: "Coulisses", methodologie: "Méthodologie", methode: "Méthode", credits: "Crédits photos", enquete: "Enquête", contributions: "Contributions des lecteurs" };
   var railIndex = 0, railIds = [], enqData = null, enqBound = false;
   function pad3(x) { return ("00" + x).slice(-Math.max(3, String(x).length)); }
   function railDate(d) {
@@ -2911,44 +2875,6 @@
     renderRail();
     var card = $("rail-track").querySelector(".is-center");
     if (card) card.focus();
-  }
-  function shortestPath(start, end) {
-    if (!start || !end || !byId[start] || !byId[end]) return null;
-    if (start === end) return [];
-    var adj = {};
-    DATA.edges.forEach(function (e) {
-      (adj[e.source] = adj[e.source] || []).push([e.target, e]);
-      (adj[e.target] = adj[e.target] || []).push([e.source, e]);
-    });
-    var seen = {}, q = [start], prev = {};
-    seen[start] = 1;
-    while (q.length) {
-      var cur = q.shift();
-      var list = adj[cur] || [];
-      for (var i = 0; i < list.length; i++) {
-        var nxt = list[i][0], edge = list[i][1];
-        if (seen[nxt]) continue;
-        seen[nxt] = 1;
-        prev[nxt] = [cur, edge];
-        if (nxt === end) { q = []; break; }
-        q.push(nxt);
-      }
-    }
-    if (!prev[end]) return null;
-    var steps = [], node = end;
-    while (node !== start) { var step = prev[node]; steps.push(step[1]); node = step[0]; }
-    steps.reverse();
-    return steps;
-  }
-  function findByName(q) {
-    var nq = norm(q);
-    if (!nq) return null;
-    var hit = null;
-    DATA.nodes.forEach(function (n) {
-      if (hit) return;
-      if (norm(n.name) === nq || norm(n.name).indexOf(nq) >= 0) hit = n;
-    });
-    return hit;
   }
   function enqSearch(q) {
     var nq = norm(q);
@@ -3028,32 +2954,10 @@
         var list = enqSearch($("enq-q").value);
         $("enq-results").innerHTML = list.map(function (n) { return '<a href="#/enquete/' + encodeURIComponent(n.id) + '">' + esc(n.name) + '<small>' + esc(n.role || n.category || "") + '</small></a>'; }).join("") || ($("enq-q").value.trim().length >= 2 ? '<p class="empty">Aucun résultat.</p>' : "");
       });
-      $("enq-relier").addEventListener("submit", function (ev) {
-        ev.preventDefault();
-        var a = findByName($("enq-a").value), b = findByName($("enq-b").value);
-        if (!a || !b) { $("enq-path").innerHTML = '<p class="empty">Les deux noms doivent être des fiches du site.</p>'; return; }
-        location.hash = "#/enquete/relier/" + encodeURIComponent(a.id) + "/" + encodeURIComponent(b.id);
-      });
     }
-    var box = $("enq-dossier"), pathBox = $("enq-path");
-    if (slug === "relier" && extra && extra2) {
-      var steps = shortestPath(extra, extra2);
-      var left = byId[extra], right = byId[extra2];
-      if (!left || !right) { pathBox.innerHTML = '<p class="empty">Fiche inconnue.</p>'; box.innerHTML = ""; return; }
-      $("enq-a").value = left.name; $("enq-b").value = right.name;
-      if (steps === null) { pathBox.innerHTML = '<p class="empty">Aucun chemin documenté entre ' + esc(left.name) + ' et ' + esc(right.name) + '.</p>'; }
-      else if (!steps.length) { pathBox.innerHTML = '<p>Même fiche.</p>'; }
-      else pathBox.innerHTML = '<ol class="enq-path">' + steps.map(function (e) {
-        return '<li><strong>' + esc(byId[e.source].name) + '</strong> → <strong>' + esc(byId[e.target].name) + '</strong> <span class="nat nat-' + edgeNature(e) + '">' + esc(natureLabel(edgeNature(e))) + '</span> <time>' + esc(fmtDate(e.date)) + '</time> ' + srcLink(e.url, "Source") + '<p>' + esc(e.relation) + '</p></li>';
-      }).join("") + '</ol>';
-      box.innerHTML = "";
-      document.title = "Relier — Onrecord";
-      enqReveal(pathBox);
-      return;
-    }
-    pathBox.innerHTML = "";
+    var box = $("enq-dossier");
     var n = byId[slug];
-    if (!n) { box.innerHTML = '<p class="empty">Choisissez une fiche, ou reliez deux noms.</p>'; return; }
+    if (!n) { box.innerHTML = '<p class="empty">Choisissez une fiche.</p>'; return; }
     box.innerHTML = personDossier(n);
     document.title = n.name + " — Enquête — Onrecord";
     enqReveal(box);
@@ -3102,6 +3006,9 @@
       var to = legacy[1] === "graphe" ? "/reseau" + (legacy[2] ? "/" + legacy[2] : "") : legacy[1] === "liste" ? "/sections" : "/methodologie";
       history.replaceState(null, "", "#" + to); h = to;
     }
+    /* pages retirées le 23/11 : « Proposer une mise à jour » et « Relier deux noms » */
+    if (/^\/?contribuer(\/|$)/.test(h)) { history.replaceState(null, "", "#/contributions"); h = "/contributions"; }
+    if (/^\/?enquete\/relier(\/|$)/.test(h)) { history.replaceState(null, "", "#/enquete"); h = "/enquete"; }
     var parts = h.replace(/^\//, "").split("#")[0].split("/"), v = parts[0] || "accueil";
     var anchor = (h.split("#")[1]) || null;
     if (v === "citations") v = parts[1] === "date" ? "chronologie" : "sections";
