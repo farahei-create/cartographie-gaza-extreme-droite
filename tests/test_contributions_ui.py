@@ -16,7 +16,7 @@ def check(c, m):
         fail += 1; print("FAIL:", m)
 
 sw = open(os.path.join(ROOT, "sw.js"), encoding="utf-8").read()
-check('var VERSION = "onrecord-v57"' in sw, "sw onrecord-v57")
+check('var VERSION = "onrecord-v58"' in sw, "sw onrecord-v58")
 check('"contrib.js"' in sw and 'indexOf("/api/") === 0' in sw, "sw : contrib.js en cache, /api jamais")
 check("contributions\\.json" in sw, "contributions.json en réseau d'abord")
 pub = json.load(open(os.path.join(ROOT, "contributions.json"), encoding="utf-8"))

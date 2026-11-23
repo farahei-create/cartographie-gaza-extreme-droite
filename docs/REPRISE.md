@@ -78,6 +78,10 @@ Onglet Liens (depuis v57) : style épuré, filets fins (`--lx-line`), segments c
 
 `enquete.json` est produit par `python3 tools/hatvp_sync.py` (liste CSV et XML publics de la HATVP, licence ouverte). Le script ne recopie pas l'adresse, la date de naissance, le patrimoine, les enfants, ni le nom du conjoint. L'activité du conjoint n'entre que si la HATVP la publie. Les propriétaires de médias repris dans le fichier viennent des liens déjà datés et sourcés du site. Un montant d'argent n'est ajouté dans `argent` que avec une date et une URL.
 
+### Mode clair / sombre
+
+Par défaut, le système décide (`prefers-color-scheme`). Le bouton `#theme-btn` (barre du haut) force l'autre mode : attribut `data-theme="light"` ou `"dark"` sur `<html>`, gardé dans `localStorage` sous `onrecord-theme`. Le script du `<head>` (`index.html`, `admin.html`) l'applique avant l'affichage et règle `theme-color`. Dans `style.css`, chaque bloc `@media (prefers-color-scheme: light)` est écrit deux fois : dans le `@media`, sélecteurs précédés de `:where(:root:not([data-theme="dark"]))` ; juste après, la copie précédée de `:where(:root[data-theme="light"])`. Si tu ajoutes une règle pour le mode clair, fais les deux. L'événement `onrecord:theme` redessine le graphe. Les pages `c/…` suivent seulement le système.
+
 ### Service worker
 
 `sw.js` met en cache la coque, `data.json`, `config.js` et, à l'installation, chaque `image` et `logo` lu dans `data.json`.
@@ -249,6 +253,7 @@ Le numéro vivant du cache est celui de `sw.js`. Les tags `version-…` sont les
 | v51 | Mise à jour du 18/11 | Barre à quatre onglets, réseau en cartes, enquête HATVP. Tag `version-2026-11-18-avant-enquete`. |
 | v56 | Mise à jour du 22/11 (soir) | Contributions des lecteurs, validées dans l'admin. Tag `version-2026-11-22-avant-contributions`. Section 14 |
 | v57 | Mise à jour du 23/11 | Onglet Liens épuré : filets fins, segments compacts, cartes du Réseau plus petites, détail en liste. Tag `version-2026-11-23-avant-liens`. Styles en fin de `style.css` (bloc « 23/11 »), limités aux vues Réseau, Coulisses et Échelle |
+| v58 | Mise à jour du 23/11 (nuit) | Bouton mode clair / sombre dans la barre du haut. Tag `version-2026-11-23-avant-theme`. Voir « Mode clair / sombre » (section 2) |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 

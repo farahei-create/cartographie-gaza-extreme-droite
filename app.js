@@ -28,6 +28,37 @@
   var MQ_RM = window.matchMedia("(prefers-reduced-motion: reduce)");
   function anim(d) { return MQ_RM.matches ? false : { duration: d, easingFunction: "easeInOutCubic" }; }
   function cssv(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  /* ---------- Bouton mode clair / sombre ----------
+     Par défaut, le système décide (prefers-color-scheme). Un toucher force l'autre mode,
+     gardé dans localStorage (« onrecord-theme »). Le script du <head> l'applique avant l'affichage. */
+  var MQ_LIGHT = window.matchMedia("(prefers-color-scheme: light)");
+  function themeNow() {
+    var t = document.documentElement.getAttribute("data-theme");
+    return t === "light" || t === "dark" ? t : (MQ_LIGHT.matches ? "light" : "dark");
+  }
+  function paintThemeBtn() {
+    var b = document.getElementById("theme-btn");
+    if (!b) return;
+    var label = themeNow() === "dark" ? "Passer en mode clair" : "Passer en mode sombre";
+    b.setAttribute("aria-label", label); b.title = label;
+  }
+  function setTheme(t) {
+    var d = document.documentElement;
+    d.setAttribute("data-theme", t); d.style.colorScheme = t;
+    try { localStorage.setItem("onrecord-theme", t); } catch (e) {}
+    var c = t === "light" ? "#f7f4fa" : "#07030f";
+    document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) { m.setAttribute("content", c); m.removeAttribute("media"); });
+    paintThemeBtn();
+    try { window.dispatchEvent(new CustomEvent("onrecord:theme", { detail: t })); } catch (e) {}
+  }
+  (function bindTheme() {
+    var b = document.getElementById("theme-btn");
+    if (!b) return;
+    paintThemeBtn();
+    b.addEventListener("click", function () { setTheme(themeNow() === "dark" ? "light" : "dark"); });
+    var onSys = function () { paintThemeBtn(); };
+    if (MQ_LIGHT.addEventListener) MQ_LIGHT.addEventListener("change", onSys); else if (MQ_LIGHT.addListener) MQ_LIGHT.addListener(onSys);
+  })();
   var PAL = {};
   function readPalette() {
     PAL = {
@@ -447,6 +478,7 @@
     bindSheet();
     var onScheme = function () { readPalette(); applyFilters(); network.redraw(); };
     if (MQ_DARK.addEventListener) MQ_DARK.addEventListener("change", onScheme); else if (MQ_DARK.addListener) MQ_DARK.addListener(onScheme);
+    window.addEventListener("onrecord:theme", onScheme);
     applyFilters();
   }
   /* ---------- images des nœuds (chargement différé, repli sur la forme colorée) ---------- */

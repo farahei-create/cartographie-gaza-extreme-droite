@@ -7,6 +7,8 @@
 <meta name="referrer" content="no-referrer">
 <meta name="theme-color" content="#07030f">
 <meta name="color-scheme" content="dark">
+<script>/* thème choisi avec le bouton (clair / sombre), appliqué avant le premier affichage */
+(function(){try{var t=localStorage.getItem("onrecord-theme");if(t!=="light"&&t!=="dark")return;var d=document.documentElement;d.setAttribute("data-theme",t);d.style.colorScheme=t;var c=t==="light"?"#f7f4fa":"#07030f";document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){m.setAttribute("content",c);m.removeAttribute("media");});}catch(e){}})();</script>
 <title>Admin — Onrecord</title>
 <link rel="icon" href="icons/favicon-64.png">
 <link rel="stylesheet" href="style.css">

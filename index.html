@@ -6,6 +6,8 @@
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#07030f">
 <meta name="theme-color" content="#f7f4fa" media="(prefers-color-scheme: light)">
+<script>/* thème choisi avec le bouton (clair / sombre), appliqué avant le premier affichage */
+(function(){try{var t=localStorage.getItem("onrecord-theme");if(t!=="light"&&t!=="dark")return;var d=document.documentElement;d.setAttribute("data-theme",t);d.style.colorScheme=t;var c=t==="light"?"#f7f4fa":"#07030f";document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){m.setAttribute("content",c);m.removeAttribute("media");});}catch(e){}})();</script>
 <title>Onrecord — Leurs mots, datés et sourcés</title>
 <meta name="description" content="Onrecord : cartographie sourcée de déclarations publiques sur Gaza et sur la normalisation de l'extrême droite en France, et de liens publics entre personnalités et organisations. Chaque élément renvoie à sa source.">
 <link rel="manifest" href="manifest.webmanifest">
@@ -33,7 +35,15 @@
 <header class="appbar">
   <div class="appbar-in">
     <a class="brand" href="#/" aria-label="Accueil — Onrecord"><img src="icons/favicon-64.png" alt="" width="28" height="28"><span>Onrecord</span></a>
-    <a class="donate donate-head" hidden target="_blank" rel="noopener noreferrer">Soutenir</a>
+    <div class="appbar-act">
+      <button type="button" class="theme-btn" id="theme-btn" aria-label="Passer en mode clair" title="Passer en mode clair">
+        <svg class="theme-ic" viewBox="0 0 24 24" aria-hidden="true">
+          <g class="ic-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></g>
+          <g class="ic-moon"><path d="M19.5 14.6A7.8 7.8 0 0 1 9.4 4.5a7.8 7.8 0 1 0 10.1 10.1z"/></g>
+        </svg>
+      </button>
+      <a class="donate donate-head" hidden target="_blank" rel="noopener noreferrer">Soutenir</a>
+    </div>
   </div>
 </header>
 <nav class="tabnav" id="tabnav" aria-label="Navigation principale">
