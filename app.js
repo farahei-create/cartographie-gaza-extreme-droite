@@ -2826,6 +2826,12 @@
   var VIEWS = ["accueil", "sections", "fiche", "chronologie", "reseau", "pouvoir", "coulisses", "methodologie", "methode", "contribuer", "credits", "enquete", "contributions"];
   var TITLES = { accueil: "Onrecord — Leurs mots, datés et sourcés", sections: "Citations", chronologie: "Citations", reseau: "Réseau des relations", pouvoir: "Échelle du pouvoir", coulisses: "Coulisses", methodologie: "Méthodologie", methode: "Méthode", contribuer: "Proposer une mise à jour", credits: "Crédits photos", enquete: "Enquête", contributions: "Contributions des lecteurs" };
   var railIndex = 0, railIds = [], enqData = null, enqBound = false;
+  function pad3(x) { return ("00" + x).slice(-Math.max(3, String(x).length)); }
+  function railDate(d) {
+    var m = /^(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?/.exec(d || "");
+    if (!m) return d || "";
+    return (m[3] ? m[3] + "." : "") + (m[2] ? m[2] + "." : "") + m[1];
+  }
   function renderRail() {
     var track = $("rail-track");
     if (!track || !DATA) return;
@@ -2838,7 +2844,7 @@
       if (q && !matched[n.id]) return false;
       return true;
     }).map(function (n) { return n.id; });
-    if (!railIds.length) { track.innerHTML = '<p class="empty">Aucune fiche avec ces filtres.</p>'; $("rail-links").textContent = ""; return; }
+    if (!railIds.length) { track.innerHTML = '<p class="empty">Aucune fiche avec ces filtres.</p>'; $("rail-links").textContent = ""; if ($("rail-meta")) $("rail-meta").textContent = "0 fiche"; return; }
     if (railIndex >= railIds.length) railIndex = 0;
     var center = railIds[railIndex];
     var linked = {};
@@ -2846,18 +2852,26 @@
     track.innerHTML = railIds.map(function (id, i) {
       var n = byId[id];
       var cls = "rail-card" + (i === railIndex ? " is-center" : "") + (linked[id] ? " is-linked" : "");
-      return '<button type="button" class="' + cls + '" data-rail="' + i + '" id="rail-' + esc(id) + '">' + avatar(n, "av-sm") + '<strong>' + esc(n.name) + '</strong><small>' + esc(n.role || n.category || "") + '</small></button>';
+      return '<button type="button" class="' + cls + '" data-rail="' + i + '" id="rail-' + esc(id) + '" aria-pressed="' + (i === railIndex ? "true" : "false") + '">' + avatar(n, "av-sm") + '<strong>' + esc(n.name) + '</strong><small>' + esc(n.role || n.category || "") + '</small></button>';
     }).join("");
     var box = $("rail-links");
     var n = byId[center];
-    var lines = (edgesOf[center] || []).slice(0, 8).map(function (e) {
+    var all = edgesOf[center] || [];
+    var lines = all.slice(0, 8).map(function (e) {
       var other = byId[e.source === center ? e.target : e.source];
       if (!other) return "";
-      return '<li><a href="' + ficheHref(other) + '">' + esc(other.name) + '</a> <span class="nat nat-' + edgeNature(e) + '">' + esc(natureLabel(edgeNature(e))) + '</span> <time>' + esc(fmtDate(e.date)) + '</time> ' + srcLink(e.url, "Source") + '<p>' + esc(e.relation) + '</p></li>';
+      var nat = edgeNature(e);
+      return '<li class="rl"><div class="rl-top"><a class="rl-name" href="' + ficheHref(other) + '">' + esc(other.name) + '</a>' + (e.date ? '<time class="rl-date" datetime="' + esc(e.date) + '" title="' + esc(fmtDate(e.date)) + '">' + esc(railDate(e.date)) + '</time>' : '') + '</div>' + (e.relation ? '<p class="rl-rel">' + esc(e.relation) + '</p>' : '') + '<div class="rl-meta"><span class="nat nat-' + nat + '">' + esc(natureLabel(nat)) + '</span>' + srcLink(e.url, "Source") + '</div></li>';
     }).join("");
-    box.innerHTML = '<p class="rail-k">' + esc(n.name) + '</p>' + (lines ? '<ul>' + lines + '</ul>' : '<p class="empty">Aucun lien documenté.</p>');
+    var cnt = all.length + (all.length > 1 ? " liens" : " lien");
+    box.innerHTML = '<div class="rail-k-row"><p class="rail-k">' + esc(n.name) + '</p><span class="rail-kn">' + cnt + '</span></div>' + (n.role ? '<p class="rail-role">' + esc(n.role) + '</p>' : '') + (lines ? '<ul class="rl-list">' + lines + '</ul>' : '<p class="empty">Aucun lien documenté.</p>') + '<a class="rail-more" href="' + ficheHref(n) + '">' + (all.length > 8 ? "Les " + all.length + " liens sur la fiche" : "Ouvrir la fiche") + '</a>';
+    var meta = $("rail-meta");
+    if (meta) meta.innerHTML = '<span>Fiche <b>' + pad3(railIndex + 1) + '</b> / ' + pad3(railIds.length) + '</span><span class="rail-key"><i aria-hidden="true"></i>liée</span>';
     var card = track.querySelector(".is-center");
-    if (card && track.scrollWidth > track.clientWidth) card.scrollIntoView({ inline: "center", block: "nearest", behavior: "auto" });
+    if (card && track.scrollWidth > track.clientWidth) {
+      var l = card.offsetLeft - track.offsetLeft, r = l + card.offsetWidth;
+      if (l < track.scrollLeft || r > track.scrollLeft + track.clientWidth) track.scrollLeft = l;
+    }
   }
   function moveRail(delta) {
     if (!railIds.length) return;

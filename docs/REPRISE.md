@@ -74,6 +74,8 @@ Thèmes usuels : `Gaza – déclarations`, `France – normalisation de l'extrê
 
 La barre du bas a quatre onglets : Accueil, Citations, Liens, Enquête. Méthode est au pied de page et sur l'accueil. Les anciennes adresses continuent d'ouvrir la même vue. `#/enquete/relier/<id>/<id>` montre le plus court chemin documenté.
 
+Onglet Liens (depuis v57) : style épuré, filets fins (`--lx-line`), segments compacts à 13 px, chiffres en chasse fixe (`--lx-mono`), une seule couleur d'accent. Ces règles sont dans le bloc « 23/11 » en fin de `style.css` et ne visent que `#/reseau`, `#/pouvoir` et `#/coulisses`. Garde des cibles de 44 px.
+
 `enquete.json` est produit par `python3 tools/hatvp_sync.py` (liste CSV et XML publics de la HATVP, licence ouverte). Le script ne recopie pas l'adresse, la date de naissance, le patrimoine, les enfants, ni le nom du conjoint. L'activité du conjoint n'entre que si la HATVP la publie. Les propriétaires de médias repris dans le fichier viennent des liens déjà datés et sourcés du site. Un montant d'argent n'est ajouté dans `argent` que avec une date et une URL.
 
 ### Service worker
@@ -246,6 +248,7 @@ Le numéro vivant du cache est celui de `sw.js`. Les tags `version-…` sont les
 | v50 | Mise à jour du 18/11 | Photo déjà hébergée, en fondu, sur les cartes carrée et story. Crédit si la licence l'exige. |
 | v51 | Mise à jour du 18/11 | Barre à quatre onglets, réseau en cartes, enquête HATVP. Tag `version-2026-11-18-avant-enquete`. |
 | v56 | Mise à jour du 22/11 (soir) | Contributions des lecteurs, validées dans l'admin. Tag `version-2026-11-22-avant-contributions`. Section 14 |
+| v57 | Mise à jour du 23/11 | Onglet Liens épuré : filets fins, segments compacts, cartes du Réseau plus petites, détail en liste. Tag `version-2026-11-23-avant-liens`. Styles en fin de `style.css` (bloc « 23/11 »), limités aux vues Réseau, Coulisses et Échelle |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 
