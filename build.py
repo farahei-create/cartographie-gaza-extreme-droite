@@ -1062,6 +1062,9 @@ v61_content.apply(N, E, _b, _step, _node, L, _st)
 # Ajouts du 24/11 (matin), après v61 pour la même raison.
 import v62_content
 v62_content.apply(N, E, _b, _step, _node, L, _st)
+# Rattrapage du 16/11 au soir (jamais poussé), après v62 pour ne pas décaler les pages c/.
+import v63_content
+v63_content.apply(N, E, _b, _step, _node, L, _st)
 
 def _nature(e):
     if e.get("nature") in ("ascension","opposition","autre","coulisses"):

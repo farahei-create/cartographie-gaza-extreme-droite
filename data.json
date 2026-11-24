@@ -3,14 +3,14 @@
     "generated": "2026-11-24",
     "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-24 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
-      "persons": 93,
+      "persons": 94,
       "orgs": 56,
-      "edges": 209,
-      "statements": 427,
+      "edges": 214,
+      "statements": 441,
       "photos": 45,
       "logos": 21,
-      "videos": 27,
-      "france_nodes": 124
+      "videos": 28,
+      "france_nodes": 126
     },
     "category_order": [
       "Responsables politiques",
@@ -647,6 +647,14 @@
           "url": "https://x.com/MLP_officiel/status/2124603800631578687",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "Nous voulons aussi mettre en place la priorité nationale dans l’accès aux logements étudiants. C’est la moindre des choses que d’offrir à nos jeunes une priorité d’accès dans leur propre pays.",
+          "date": "2026-11-16",
+          "medium": "Message sur X (@MLP_officiel), 16 novembre 2026, 12:30, heure de Paris, avec un extrait vidéo. Selon l'AFP (France 24, 16 novembre), la vidéo publiée ce lundi est un entretien avec le président du mouvement de jeunesse du RN et Louise Montangon, responsable de l'UNI à Bordeaux.",
+          "url": "https://x.com/MLP_officiel/status/2122291088513962173",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -1046,6 +1054,22 @@
           "url": "https://x.com/J_Bardella/status/2124827436319699309",
           "theme": "Nuance / contexte",
           "section": "france"
+        },
+        {
+          "quote": "On ne propose plus l'interdiction de la double nationalité, en revanche, nous sommes favorables à la déchéance de nationalité pour les terroristes islamistes ou pour toute personne qui s'en prend aux intérêts fondamentaux de la Nation française.",
+          "date": "2026-11-16",
+          "medium": "Message sur X (@J_Bardella), 16 novembre 2026, 12:11, heure de Paris, extrait de son passage dans Les Grandes Gueules (RMC). La veille, Marine Le Pen disait avoir « commis une erreur » en proposant l'interdiction de la double nationalité.",
+          "url": "https://x.com/J_Bardella/status/2122286328653951449",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "video": {
+            "url": "https://rmc.bfmtv.com/replay-emissions/les-grandes-gueules/video-jordan-bardella-face-aux-gg-16-11_VN-202611160436.html",
+            "platform": "rmc.bfmtv.com",
+            "title": "Jordan Bardella face aux GG - 16/11",
+            "source": "RMC (site officiel)",
+            "archive_url": "https://web.archive.org/web/20261116191106/https://rmc.bfmtv.com/replay-emissions/les-grandes-gueules/video-jordan-bardella-face-aux-gg-16-11_VN-202611160436.html",
+            "archived": "2026-11-16"
+          }
         }
       ],
       "sections": [
@@ -2217,6 +2241,14 @@
           "url": "https://x.com/GWGoldnadel/status/2122100789132894676",
           "theme": "Gaza – déclarations",
           "section": "gaza"
+        },
+        {
+          "quote": "19h : Très bel exploit journalistique de @franceinter qui réussit à faire un reportage sur l’antisémitisme en progression sans prononcer les mots « islamistes » « extrême gauche » et « France Insoumise » . Déni et mauvaise foi sont les 2 mamelles de l’odieux visuel  public .",
+          "date": "2026-11-16",
+          "medium": "Message sur X (@GWGoldnadel), 16 novembre 2026, 19:19, heure de Paris. Il cite un message du Parisien sur l'enquête selon laquelle l'antisémitisme est en hausse pour 8 Français sur 10.",
+          "url": "https://x.com/GWGoldnadel/status/2122394263153762732",
+          "theme": "Médias – structure",
+          "section": "france"
         }
       ],
       "sections": [
@@ -3630,6 +3662,22 @@
           "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-un-appel-d-air-bruno-retailleau-s-oppose-a-la-regularisation-de-travailleurs-sans-papiers-dans-le-secteur-du-batiment_VN-202611190728.html",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "Si je suis élu, la France rejoindra sans délai cette initiative. Un étranger en situation irrégulière doit partir. S'il ne peut pas être renvoyé chez lui, il le sera vers un pays tiers qui l'accueillera.",
+          "date": "2026-11-16",
+          "medium": "Message sur X (@BrunoRetailleau), 16 novembre 2026, 18:18, heure de Paris. Il parle de l'accord annoncé à Vienne par l'Allemagne, l'Autriche, le Danemark, la Grèce et les Pays-Bas avec le Rwanda pour des « centres de retour ». Le Figaro rappelle le même jour qu'Emmanuel Macron avait jugé ces centres « ni efficaces », ni conformes aux valeurs de l'UE, et que 45 ONG se disent « fermement opposées » au projet.",
+          "url": "https://x.com/BrunoRetailleau/status/2122378866601730339",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "La France, elle, ne fait pas partie de cet accord en raison de l’opposition du Président de la République.",
+          "date": "2026-11-16",
+          "medium": "Même message sur X, 16 novembre 2026. Il ajoute : « Un centre de retour au Rwanda sera notamment la meilleure solution pour lutter contre l'immigration irrégulière venue de l'Afrique des Grands Lacs vers Mayotte. »",
+          "url": "https://x.com/BrunoRetailleau/status/2122378866601730339",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -4921,6 +4969,14 @@
           "url": "https://x.com/JLMelenchon/status/2124442900591173906",
           "theme": "Gaza – déclarations",
           "section": "gaza"
+        },
+        {
+          "quote": "Manque de vocabulaire ? « Le Monde » de dimanche caractérise l'offensive de Le Pen d'« illibérale ». Mot creux et protecteur de ceux qui protégeront l'extrême droite jusqu'au bout et diffameront la gauche radicale jusqu'à la mort.",
+          "date": "2026-11-16",
+          "medium": "Message sur X (@JLMelenchon), 16 novembre 2026, 9:31, heure de Paris. La phrase suivante, sur le référendum en Ukraine, n'est pas reprise. Il ne nomme personne au Monde.",
+          "url": "https://x.com/JLMelenchon/status/2122246135523787044",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -5760,6 +5816,26 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20250912122303/https://www.lefigaro.fr/medias/l-arcom-saisie-apres-une-question-de-pascal-praud-liant-punaises-de-lit-et-immigration-20230929",
           "archived": "2025-09-12"
+        },
+        {
+          "quote": "France Inter est un média engagé dans la campagne électorale.",
+          "date": "2026-11-16",
+          "medium": "CNews, L'Heure des pros, 16 novembre 2026, cité par TV Magazine (Le Figaro). Il réagit à une question de Benjamin Duhamel, sur France Inter, demandant à Guillaume Debré (LCI) si CNews est une chaîne d'opinion. Guillaume Debré avait répondu que CNews est « un concurrent, considéré par l'Arcom comme une chaîne Info ».",
+          "url": "https://tvmag.lefigaro.fr/programme-tv/actu-tele/mais-pour-qui-il-se-prend-la-colere-de-pascal-praud-cnews-contre-benjamin-duhamel-france-inter-20261116",
+          "theme": "Médias – structure",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261117080627/https://tvmag.lefigaro.fr/programme-tv/actu-tele/mais-pour-qui-il-se-prend-la-colere-de-pascal-praud-cnews-contre-benjamin-duhamel-france-inter-20261116",
+          "archived": "2026-11-17"
+        },
+        {
+          "quote": "Je rappelle que nous sommes une chaîne d’information qui montre le réel, contrairement aux autres.",
+          "date": "2026-11-16",
+          "medium": "CNews, 16 novembre 2026, cité par TV Magazine. Il dit aussi : « Nous ne sommes pas un média d’opinion ».",
+          "url": "https://tvmag.lefigaro.fr/programme-tv/actu-tele/mais-pour-qui-il-se-prend-la-colere-de-pascal-praud-cnews-contre-benjamin-duhamel-france-inter-20261116",
+          "theme": "Médias – structure",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261117080627/https://tvmag.lefigaro.fr/programme-tv/actu-tele/mais-pour-qui-il-se-prend-la-colere-de-pascal-praud-cnews-contre-benjamin-duhamel-france-inter-20261116",
+          "archived": "2026-11-17"
         }
       ],
       "sections": [
@@ -7651,10 +7727,19 @@
           "url": "https://x.com/MathildePanot/status/2124812448393777604",
           "theme": "Gaza – déclarations",
           "section": "gaza"
+        },
+        {
+          "quote": "Une partie de nos concitoyens vit aujourd’hui dans la peur de mourir sous les balles des racistes.\n\nQuand est-ce que le gouvernement va prendre au sérieux la montée de l’islamophobie et de la négrophobie dans notre pays ?",
+          "date": "2026-11-16",
+          "medium": "Message sur X (@MathildePanot), 16 novembre 2026, 15:46, heure de Paris. Avant ces phrases, elle écrit qu'un policier hors service a été arrêté à Paris alors qu'il menaçait de « tuer des personnes de couleur », et cite l'attentat de Trappes. Aucun suspect n'est nommé sur le site.",
+          "url": "https://x.com/MathildePanot/status/2122340463986258359",
+          "theme": "France – montée des violences",
+          "section": "france"
         }
       ],
       "sections": [
-        "gaza"
+        "gaza",
+        "france"
       ],
       "category": "Responsables politiques",
       "subcategory": "Parlementaires & élus",
@@ -8552,6 +8637,16 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261117072309/https://www.cnews.fr/france/2026-11-16/cnews-fait-partie-de-la-liberte-et-de-la-diversite-de-la-presse-considere-bruno",
           "archived": "2026-11-17"
+        },
+        {
+          "quote": "Poser ce genre de débats à un moment où les nationalismes peuvent gagner en Europe, où nous risquons de voir l’Europe de disloquer entre la Chine d’un côté et les États-Unis de l’autre, s’occuper de voir si l’on va interdire une chaîne, je trouve cela déplacé et dérisoire",
+          "date": "2026-11-16",
+          "medium": "CNews/Europe 1, 16 novembre 2026, cité par le direct du Figaro. « de disloquer » est la graphie du Figaro. Le journal rappelle que la pétition pour la fermeture de CNews a été écartée par les parlementaires et que La France insoumise défend encore la mesure.",
+          "url": "https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-marine-le-pen-edouard-philippe-emmanuel-macron-ukraine-teddy-riner-20261116",
+          "theme": "Médias – structure",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261118034052/https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-marine-le-pen-edouard-philippe-emmanuel-macron-ukraine-teddy-riner-20261116",
+          "archived": "2026-11-18"
         }
       ],
       "sections": [
@@ -8568,6 +8663,15 @@
           "source": "CNews",
           "archive_url": "https://web.archive.org/web/20261117072309/https://www.cnews.fr/france/2026-11-16/cnews-fait-partie-de-la-liberte-et-de-la-diversite-de-la-presse-considere-bruno",
           "archived": "2026-11-17"
+        },
+        {
+          "date": "2026-11-16",
+          "title": "CNews/Europe 1, débat sur l'interdiction de CNews",
+          "text": "Il juge « déplacé et dérisoire » le débat sur l'interdiction d'une chaîne.",
+          "url": "https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-marine-le-pen-edouard-philippe-emmanuel-macron-ukraine-teddy-riner-20261116",
+          "source": "Le Figaro",
+          "archive_url": "https://web.archive.org/web/20261118034052/https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-marine-le-pen-edouard-philippe-emmanuel-macron-ukraine-teddy-riner-20261116",
+          "archived": "2026-11-18"
         }
       ]
     },
@@ -8593,6 +8697,26 @@
           "url": "https://www.franceinfo.fr/politique/front-national/des-rumeurs-et-des-accusations-sans-fondement-reagit-jean-philippe-tanguy-dans-l-affaire-du-prefet-soupconne-d-avoir-renseigne-le-rn-sur-des-affaires-en-cours_8291828.html",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "Aucune banque française n'a voulu nous prêter. C'est un échec pour ce gouvernement qui avait promis un accès à une banque de la démocratie. Le RN est mal traité par le système bancaire.",
+          "date": "2026-11-16",
+          "medium": "France 2, Les 4 Vérités (Télématin), 16 novembre 2026, phrase publiée par @telematin et reprise par La Dépêche. Le Parisien et La Dépêche rappellent que Bruno Retailleau dit lui aussi n'avoir « pas de prêt bancaire », que la Société générale et la Banque postale ne financent plus aucune campagne, et que le RN a annoncé un préaccord avec deux banques européennes.",
+          "url": "https://www.ladepeche.fr/2026/11/16/presidentielle-2027-aucune-banque-francaise-ne-veut-financer-la-campagne-du-rn-denonce-jean-philippe-tanguy-qui-pointe-un-echec-de-letat-13655212.php",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261117052158/https://www.ladepeche.fr/2026/11/16/presidentielle-2027-aucune-banque-francaise-ne-veut-financer-la-campagne-du-rn-denonce-jean-philippe-tanguy-qui-pointe-un-echec-de-letat-13655212.php",
+          "archived": "2026-11-17"
+        },
+        {
+          "quote": "Les banques françaises ne sont pas très contentes de notre programme et c’est plutôt bon signe. Aucune n’a voulu nous prêter pour la campagne présidentielle",
+          "date": "2026-11-16",
+          "medium": "France 2, 16 novembre 2026, cité par le direct du Figaro. Le journal écrit qu'il a aussi appelé les maires à parrainer Marine Le Pen.",
+          "url": "https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-marine-le-pen-edouard-philippe-emmanuel-macron-ukraine-teddy-riner-20261116",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261118034052/https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-marine-le-pen-edouard-philippe-emmanuel-macron-ukraine-teddy-riner-20261116",
+          "archived": "2026-11-18"
         }
       ],
       "sections": [
@@ -8607,6 +8731,15 @@
           "text": "Il qualifie les soupçons de « rumeurs » et d'« accusations sans fondement ».",
           "url": "https://www.lefigaro.fr/actualite-france/soupcons-de-fuites-au-profit-du-rn-si-les-faits-concernant-le-prefet-moutouh-sont-averes-ils-sont-tres-graves-reagit-laurent-nunez-20261120",
           "source": "Le Figaro"
+        },
+        {
+          "date": "2026-11-16",
+          "title": "France 2, financement de la campagne",
+          "text": "Il dit qu'aucune banque française n'a voulu prêter au RN et que le parti a sollicité des banques de l'Union européenne, comme la loi le permet.",
+          "url": "https://www.ladepeche.fr/2026/11/16/presidentielle-2027-aucune-banque-francaise-ne-veut-financer-la-campagne-du-rn-denonce-jean-philippe-tanguy-qui-pointe-un-echec-de-letat-13655212.php",
+          "source": "La Dépêche",
+          "archive_url": "https://web.archive.org/web/20261117052158/https://www.ladepeche.fr/2026/11/16/presidentielle-2027-aucune-banque-francaise-ne-veut-financer-la-campagne-du-rn-denonce-jean-philippe-tanguy-qui-pointe-un-echec-de-letat-13655212.php",
+          "archived": "2026-11-17"
         }
       ]
     },
@@ -9117,6 +9250,45 @@
           "source": "TF1 Info",
           "archive_url": "https://web.archive.org/web/20261123072506/https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-colere-sociale-son-combat-est-le-mien-l-hommage-appuye-de-glucksmann-a-ruffin-apres-son-retrait-les-dernieres-informations-de-ce-lundi-23-novembre-2026-2477497.html",
           "archived": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "amine-el-khatmi",
+      "name": "Amine El-Khatmi",
+      "type": "person",
+      "role": "Essayiste, chroniqueur sur CNews jusqu'en novembre 2026 (X, 15 novembre 2026)",
+      "description": "Le 15 novembre 2026, il annonce sur X qu'il n'est plus chroniqueur sur CNews, l'Arcom ayant décidé de décompter son temps de parole comme personnalité politique divers droite. Il critique ce décompte. Pas de photo libre : monogramme.",
+      "statements": [
+        {
+          "quote": "Après dix années de présence sur CNews, je ne serai plus chroniqueur sur la chaîne, l’ARCOM ayant décidé de décompter mon temps de parole comme « personnalité politique divers droite ».",
+          "date": "2026-11-15",
+          "medium": "Message sur X (@Aminelkhatmi), 15 novembre 2026, 19:16, heure de Paris. CGTV écrit le 16 novembre qu'il s'est présenté aux municipales de Paris sur la liste LR menée par Rachida Dati, et que l'Arcom ne le contraint pas à quitter la chaîne tant que celle-ci équilibre son temps de parole.",
+          "url": "https://x.com/Aminelkhatmi/status/2122031054991262063",
+          "theme": "Médias – structure",
+          "section": "france"
+        },
+        {
+          "quote": "En France, tout se casse la gueule, mais des fonctionnaires sont payés pour fliquer le débat public. Une hérésie de plus au pays de toutes les hérésies.",
+          "date": "2026-11-15",
+          "medium": "Même message sur X, 15 novembre 2026. Il termine par « Vive CNews et vive la liberté d’expression ! ».",
+          "url": "https://x.com/Aminelkhatmi/status/2122031054991262063",
+          "theme": "Médias – structure",
+          "section": "france"
+        }
+      ],
+      "sections": [
+        "france"
+      ],
+      "category": "Journalistes & éditorialistes",
+      "subcategory": "Journalistes & chroniqueurs",
+      "parcours": [
+        {
+          "date": "2026-11-15",
+          "title": "Départ de CNews",
+          "text": "Il annonce qu'il n'est plus chroniqueur sur CNews après le décompte de son temps de parole par l'Arcom comme personnalité politique divers droite.",
+          "url": "https://x.com/Aminelkhatmi/status/2122031054991262063",
+          "source": "X"
         }
       ]
     }
@@ -11568,6 +11740,57 @@
       "date": "2026-11-23",
       "section": "france",
       "nature": "autre"
+    },
+    {
+      "source": "louise-montangon",
+      "target": "marine-le-pen",
+      "relation": "interroge Marine Le Pen, avec le président du mouvement de jeunesse du RN, dans une vidéo publiée le 16/11/2026 sur les réseaux de la candidate (AFP)",
+      "url": "https://www.france24.com/fr/info-en-continu/20261116-lyc%C3%A9e-le-pen-veut-supprimer-parcoursup-le-contr%C3%B4le-continu-et-avancer-le-bac-en-mai",
+      "date": "2026-11-16",
+      "section": "france",
+      "nature": "autre",
+      "archive_url": "https://web.archive.org/web/20261116191040/https://www.france24.com/fr/info-en-continu/20261116-lyc%C3%A9e-le-pen-veut-supprimer-parcoursup-le-contr%C3%B4le-continu-et-avancer-le-bac-en-mai",
+      "archived": "2026-11-16"
+    },
+    {
+      "source": "jean-philippe-tanguy",
+      "target": "rn",
+      "relation": "député RN de la Somme, chargé du programme économique du parti (La Dépêche, 16/11/2026)",
+      "url": "https://www.ladepeche.fr/2026/11/16/presidentielle-2027-aucune-banque-francaise-ne-veut-financer-la-campagne-du-rn-denonce-jean-philippe-tanguy-qui-pointe-un-echec-de-letat-13655212.php",
+      "date": "2026-11-16",
+      "section": "france",
+      "nature": "ascension",
+      "archive_url": "https://web.archive.org/web/20261117052158/https://www.ladepeche.fr/2026/11/16/presidentielle-2027-aucune-banque-francaise-ne-veut-financer-la-campagne-du-rn-denonce-jean-philippe-tanguy-qui-pointe-un-echec-de-letat-13655212.php",
+      "archived": "2026-11-17"
+    },
+    {
+      "source": "amine-el-khatmi",
+      "target": "cnews",
+      "relation": "annonce le 15/11/2026 qu'il n'est plus chroniqueur sur la chaîne, après dix ans",
+      "url": "https://x.com/Aminelkhatmi/status/2122031054991262063",
+      "date": "2026-11-15",
+      "section": "france",
+      "nature": "autre"
+    },
+    {
+      "source": "amine-el-khatmi",
+      "target": "arcom",
+      "relation": "critique la décision de décompter son temps de parole comme « personnalité politique divers droite » (X, 15/11/2026)",
+      "url": "https://x.com/Aminelkhatmi/status/2122031054991262063",
+      "date": "2026-11-15",
+      "section": "france",
+      "nature": "opposition"
+    },
+    {
+      "source": "bruno-le-maire",
+      "target": "cnews",
+      "relation": "juge « déplacé et dérisoire » le débat sur l'interdiction de la chaîne (CNews/Europe 1, 16/11/2026, cité par Le Figaro)",
+      "url": "https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-marine-le-pen-edouard-philippe-emmanuel-macron-ukraine-teddy-riner-20261116",
+      "date": "2026-11-16",
+      "section": "france",
+      "nature": "autre",
+      "archive_url": "https://web.archive.org/web/20261118034052/https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-marine-le-pen-edouard-philippe-emmanuel-macron-ukraine-teddy-riner-20261116",
+      "archived": "2026-11-18"
     }
   ]
 }

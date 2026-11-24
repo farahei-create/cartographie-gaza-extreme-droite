@@ -1943,5 +1943,70 @@
   "archive_url": "https://web.archive.org/web/20261124073525/https://www.20minutes.fr/justice/4265204-20261123-propos-racistes-saluts-nazis-ecole-police-tourmente-enquete-ouverte",
   "archived": "2026-11-24",
   "status": "saved"
+ },
+ "https://www.cg-tv.com/articles/amine-el-khatmi-annonce-quitter-c-news-et-s-en-prend-a-l-arcom-des-fonctionnaires-sont-payes-pour-fliquer-le-debat-public": {
+  "archive_url": "https://web.archive.org/web/20261116190754/https://www.cg-tv.com/articles/amine-el-khatmi-annonce-quitter-c-news-et-s-en-prend-a-l-arcom-des-fonctionnaires-sont-payes-pour-fliquer-le-debat-public",
+  "archived": "2026-11-16",
+  "status": "existing"
+ },
+ "https://www.ladepeche.fr/2026/11/16/presidentielle-2027-aucune-banque-francaise-ne-veut-financer-la-campagne-du-rn-denonce-jean-philippe-tanguy-qui-pointe-un-echec-de-letat-13655212.php": {
+  "archive_url": "https://web.archive.org/web/20261117052158/https://www.ladepeche.fr/2026/11/16/presidentielle-2027-aucune-banque-francaise-ne-veut-financer-la-campagne-du-rn-denonce-jean-philippe-tanguy-qui-pointe-un-echec-de-letat-13655212.php",
+  "archived": "2026-11-17",
+  "status": "existing"
+ },
+ "https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-marine-le-pen-edouard-philippe-emmanuel-macron-ukraine-teddy-riner-20261116": {
+  "archive_url": "https://web.archive.org/web/20261118034052/https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-marine-le-pen-edouard-philippe-emmanuel-macron-ukraine-teddy-riner-20261116",
+  "archived": "2026-11-18",
+  "status": "existing"
+ },
+ "https://tvmag.lefigaro.fr/programme-tv/actu-tele/mais-pour-qui-il-se-prend-la-colere-de-pascal-praud-cnews-contre-benjamin-duhamel-france-inter-20261116": {
+  "archive_url": "https://web.archive.org/web/20261117080627/https://tvmag.lefigaro.fr/programme-tv/actu-tele/mais-pour-qui-il-se-prend-la-colere-de-pascal-praud-cnews-contre-benjamin-duhamel-france-inter-20261116",
+  "archived": "2026-11-17",
+  "status": "existing"
+ },
+ "https://www.france24.com/fr/info-en-continu/20261116-lyc%C3%A9e-le-pen-veut-supprimer-parcoursup-le-contr%C3%B4le-continu-et-avancer-le-bac-en-mai": {
+  "archive_url": "https://web.archive.org/web/20261116191040/https://www.france24.com/fr/info-en-continu/20261116-lyc%C3%A9e-le-pen-veut-supprimer-parcoursup-le-contr%C3%B4le-continu-et-avancer-le-bac-en-mai",
+  "archived": "2026-11-16",
+  "status": "existing"
+ },
+ "https://rmc.bfmtv.com/replay-emissions/les-grandes-gueules/video-jordan-bardella-face-aux-gg-16-11_VN-202611160436.html": {
+  "archive_url": "https://web.archive.org/web/20261116191106/https://rmc.bfmtv.com/replay-emissions/les-grandes-gueules/video-jordan-bardella-face-aux-gg-16-11_VN-202611160436.html",
+  "archived": "2026-11-16",
+  "status": "existing"
+ },
+ "https://x.com/BrunoRetailleau/status/2122378866601730339": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/MLP_officiel/status/2122291088513962173": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/J_Bardella/status/2122286328653951449": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/JLMelenchon/status/2122246135523787044": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/MathildePanot/status/2122340463986258359": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/GWGoldnadel/status/2122394263153762732": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/Aminelkhatmi/status/2122031054991262063": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
  }
 }

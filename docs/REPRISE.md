@@ -26,7 +26,7 @@ Site statique à la racine. Pas de CDN. Pas d'étape de build côté Vercel : `d
 | `style.css`, `app.js` | Mise en forme et routage |
 | `data.json` | Contenu. **Généré.** Ne pas l'éditer à la main |
 | `build.py` | Construit `data.json` (personnes, liens, archives, compteurs) |
-| `v24_content.py`, `v26_content.py`, `v27_content.py`, `v28_content.py`, `v30_content.py`, `v31_content.py`, `v35_content.py`, `v41_content.py`, `v42_content.py`, `v43_content.py`, `v44_content.py`, `v45_content.py`, `v46_content.py`, `v54_content.py`, `v61_content.py`, `v62_content.py` | Ajouts branchés à la fin de `build.py` (`v61_content.py` et `v62_content.py` après `auto_content` et `admin_content` : un module branché avant eux décale les numéros des pages `c/` des phrases automatiques) |
+| `v24_content.py`, `v26_content.py`, `v27_content.py`, `v28_content.py`, `v30_content.py`, `v31_content.py`, `v35_content.py`, `v41_content.py`, `v42_content.py`, `v43_content.py`, `v44_content.py`, `v45_content.py`, `v46_content.py`, `v54_content.py`, `v61_content.py`, `v62_content.py`, `v63_content.py` | Ajouts branchés à la fin de `build.py` (`v61_content.py`, `v62_content.py` et `v63_content.py` après `auto_content` et `admin_content` : un module branché avant eux décale les numéros des pages `c/` des phrases automatiques) |
 | `config.js` | `DONATION_URL`, `CORRECTION_EMAIL` |
 | `sw.js` | Service worker. La constante `VERSION` doit monter à chaque publication |
 | `manifest.webmanifest`, `icons/` | PWA |
