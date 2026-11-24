@@ -6,6 +6,10 @@ on:
     # Minute creuse exprès : aux heures rondes, GitHub retardait le départ de
     # plus de huit heures (départs vers 15 h UTC du 18 au 22/11/2026).
     - cron: "17 5 * * *"
+    # Filet si le premier cron part en retard (souvent l'après-midi).
+    # 09:43 UTC : 10 h 43 à Paris en hiver, 11 h 43 en été. Après la routine
+    # de 8 h. Si le jour est déjà couvert, le run s'arrête sans rien publier.
+    - cron: "43 9 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -28,6 +32,7 @@ jobs:
       - uses: actions/checkout@v7
         with:
           fetch-depth: 0
+          fetch-tags: true
 
       - name: Garde-fous
         run: python3 tests/test_daily.py
@@ -49,6 +54,8 @@ jobs:
             sudo ln -s /usr/bin/google-chrome-stable /usr/bin/google-chrome
           fi
           python3 -m pip install --user playwright pillow
+          # Les tests utilisent /usr/bin/google-chrome (installé ci-dessus),
+          # pas le Chromium empaqueté de Playwright. Ne pas omettre Chrome.
           sudo mkdir -p /workspace /opt/cursor/artifacts
           sudo chmod 777 /workspace /opt/cursor/artifacts
 

@@ -4,6 +4,10 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-24 — filet de secours du relevé GitHub
+
+Tu répares le workflow « Relevé du matin » pour qu'il serve de vrai filet, sans toucher au cache ni aux phrases. Deux crons (05:17 et 09:43 UTC). S'il existe déjà une mise à jour du jour (tag `version-AAAA-MM-JJ-avant-maj`, ou commit « relevé automatique », « file d'attente » ou « N phrases »), le run s'arrête en succès et ne pousse rien. Les tests Playwright du relevé utilisent Chrome système ; un numéro de cache en dur dans `tests/test_contributions_ui.py` ne peut plus faire échouer une publication. Le site en ligne reste `onrecord-v62`.
+
 ## 2026-11-24 (matin) — mise à jour du 23 au 24/11, 9 h (cache `onrecord-v62`)
 
 Tu enregistres d'abord `version-2026-11-24-avant-maj` (commit `fb02876`, cache `onrecord-v61`). Module `v62_content.py`, branché après `v61_content` (les liens `c/<id>/<n>.html` déjà en ligne ne bougent pas). 31 phrases, aucune nouvelle fiche ; une étape de parcours (Laure Lavalette, écrits des années 1990) et 5 liens (Bardella → Lavalette, Bardella → Royal, Pécresse → Zemmour et Portelli → Zemmour en opposition, Rioufol → Renaud Camus). Chaque URL est ouverte ce jour et chaque phrase y figure mot pour mot ; messages X lus sur le compte officiel. Pas de photo : monogramme. Aucune décision de justice nouvelle : `condamnations.json` inchangé.

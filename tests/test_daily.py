@@ -2,6 +2,7 @@
 """Garde-fous du relevé du matin. Aucune écriture dans data.json."""
 import datetime
 import json
+import re
 import os
 import subprocess
 import sys
@@ -310,6 +311,103 @@ try:
     check(False, "429 partout : arrêt")
 except _g.QuotaError:
     check(True, "429 partout : arrêt")
+
+# --- Filet de secours : déjà fait aujourd'hui, Chrome des tests ---
+from tools.daily.already_done import is_daily_update_subject, update_already_done, avant_maj_tag
+from tools.daily.browser import chrome_executable, launch_chromium
+
+day = datetime.date(2026, 11, 24)
+check(is_daily_update_subject("Mise à jour du 24/11 : relevé automatique, 6 phrases", day), "sujet relevé automatique")
+check(is_daily_update_subject("Mise à jour du 24/11 : file d'attente, rien publié", day), "sujet file d'attente")
+check(is_daily_update_subject("Mise à jour du 24/11 : 31 phrases du 22 au 24/11 (Bardella…) (cache v62)", day), "sujet routine 8 h")
+check(is_daily_update_subject("Mise à jour du 24/11 : 1 phrase", day), "sujet une phrase")
+check(not is_daily_update_subject("Mise à jour du 24/11 : liste des versions", day), "liste des versions ignorée")
+check(not is_daily_update_subject("Mise à jour du 24/11 : onglet Condamnations, décisions de justice", day), "changement d'onglet ignoré")
+check(not is_daily_update_subject("Mise à jour du 24/11 : filet de secours du relevé du matin", day), "correctif technique ignoré")
+check(not is_daily_update_subject("Mise à jour du 23/11 : relevé automatique, 2 phrases", day), "jour précédent ignoré")
+check(avant_maj_tag(day) == "version-2026-11-24-avant-maj", "nom du tag avant-maj")
+
+def _git_init(path):
+    subprocess.run(["git", "init", "-b", "main"], cwd=path, check=True, capture_output=True)
+    subprocess.run(["git", "config", "user.name", "Test"], cwd=path, check=True, capture_output=True)
+    subprocess.run(["git", "config", "user.email", "test@example.com"], cwd=path, check=True, capture_output=True)
+
+def _git_commit(path, message, when="2026-11-24T08:00:00+01:00"):
+    env = os.environ.copy()
+    env["GIT_AUTHOR_DATE"] = when
+    env["GIT_COMMITTER_DATE"] = when
+    marker = os.path.join(path, "README")
+    with open(marker, "a", encoding="utf-8") as handle:
+        handle.write(message + "\n")
+    subprocess.run(["git", "add", "-A"], cwd=path, check=True, capture_output=True)
+    done = subprocess.run(["git", "commit", "-m", message], cwd=path, capture_output=True, text=True, env=env)
+    if done.returncode != 0:
+        raise RuntimeError(done.stderr or done.stdout)
+
+sandbox = tempfile.mkdtemp()
+try:
+    repo = os.path.join(sandbox, "repo")
+    os.makedirs(repo)
+    _git_init(repo)
+    open(os.path.join(repo, "README"), "w").write("x\n")
+    _git_commit(repo, "départ", "2026-11-23T18:00:00+01:00")
+    hit = update_already_done(repo, day=day, ref="HEAD", fetch=False)
+    check(not hit["done"], "dépôt sans mise à jour du jour")
+    _git_commit(repo, "Mise à jour du 24/11 : liste des versions", "2026-11-24T07:50:00+01:00")
+    hit = update_already_done(repo, day=day, ref="HEAD", fetch=False)
+    check(not hit["done"], "liste des versions seule : pas encore fait")
+    _git_commit(repo, "Mise à jour du 24/11 : 31 phrases du 22 au 24/11 (cache v62)", "2026-11-24T08:30:00+01:00")
+    hit = update_already_done(repo, day=day, ref="HEAD", fetch=False)
+    check(hit["done"] and "31 phrases" in hit["reason"], "phrases de la routine : déjà fait")
+
+    repo2 = os.path.join(sandbox, "tag-only")
+    os.makedirs(repo2)
+    _git_init(repo2)
+    open(os.path.join(repo2, "README"), "w").write("ok\n")
+    _git_commit(repo2, "veille", "2026-11-23T18:00:00+01:00")
+    subprocess.run(["git", "tag", "-a", "version-2026-11-24-avant-maj", "-m", "avant maj"], cwd=repo2, check=True, capture_output=True)
+    hit = update_already_done(repo2, day=day, ref="HEAD", fetch=False)
+    check(hit["done"] and "version-2026-11-24-avant-maj" in hit["reason"], "tag avant-maj : déjà fait")
+
+    repo3 = os.path.join(sandbox, "auto")
+    os.makedirs(repo3)
+    _git_init(repo3)
+    open(os.path.join(repo3, "README"), "w").write("ok\n")
+    _git_commit(repo3, "Mise à jour du 24/11 : relevé automatique, 2 phrases", "2026-11-24T06:30:00+01:00")
+    hit = update_already_done(repo3, day=day, ref="HEAD", fetch=False)
+    check(hit["done"] and "relevé automatique" in hit["reason"], "workflow déjà passé")
+
+    repo4 = os.path.join(sandbox, "hier")
+    os.makedirs(repo4)
+    _git_init(repo4)
+    open(os.path.join(repo4, "README"), "w").write("ok\n")
+    _git_commit(repo4, "Mise à jour du 23/11 : relevé automatique, 2 phrases", "2026-11-23T08:00:00+01:00")
+    hit = update_already_done(repo4, day=day, ref="HEAD", fetch=False)
+    check(not hit["done"], "relevé de la veille : pas encore fait")
+finally:
+    import shutil
+    shutil.rmtree(sandbox, ignore_errors=True)
+
+# Les tests Playwright du site doivent viser Chrome système, comme en CI.
+# Un launch() nu cherche le Chromium de Playwright, absent du runner.
+bare = []
+for name in sorted(os.listdir(os.path.join(ROOT, "tests"))):
+    if not name.endswith(".py"):
+        continue
+    src = open(os.path.join(ROOT, "tests", name), encoding="utf-8").read()
+    if "chromium.launch" not in src:
+        continue
+    for match in re.finditer(r"chromium\.launch\((.*?)\)", src, re.S):
+        args = match.group(1)
+        if "executable_path" not in args:
+            bare.append("%s: %s" % (name, match.group(0).replace("\n", " ")[:80]))
+check(not bare, "launch Playwright sans Chrome système : " + ", ".join(bare))
+check(chrome_executable() or True, "helper Chrome importable")
+check(callable(launch_chromium), "launch_chromium disponible")
+
+# Sur le dépôt réel, le 24/11/2026 a déjà sa mise à jour (routine de 8 h).
+live = update_already_done(ROOT, day=datetime.date(2026, 11, 24), fetch=False)
+check(live["done"], "main du 24/11 déjà à jour : " + (live.get("reason") or "sans raison"))
 
 print("%d ok, %d fail" % (ok, fail))
 sys.exit(1 if fail else 0)

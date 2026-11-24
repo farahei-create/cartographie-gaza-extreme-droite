@@ -161,6 +161,17 @@ def main(argv=None):
         set_output("publish_count", "0")
         return 0
 
+    if not args.mock:
+        from tools.daily.already_done import summary_already_done, update_already_done
+        hit = update_already_done(root, fetch=os.environ.get("GITHUB_ACTIONS") == "true")
+        if hit.get("done"):
+            write_summary(summary_already_done(hit))
+            set_output("ready", "false")
+            set_output("already_done", "true")
+            set_output("content", "false")
+            set_output("publish_count", "0")
+            return 0
+
     index_data = json.load(open(os.path.join(root, "data.json"), encoding="utf-8"))
     index = load_index(index_data)
     now = now_paris()

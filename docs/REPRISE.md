@@ -312,12 +312,37 @@ Le workflow `.github/workflows/daily-update.yml` (« Relevé du matin ») fait l
 
 ### Heure
 
-Le cron est `17 5 * * *`, donc **05:17 UTC**.
+Deux crons, minutes creuses exprès (aux heures rondes, GitHub retardait le départ de plus de huit heures : départs vers 15 h UTC du 18 au 22/11/2026).
 
-- En hiver (CET, UTC+1) : 6 h 17 à Paris.
-- En été (CEST, UTC+2) : 7 h 17 à Paris.
+- `17 5 * * *` : **05:17 UTC** — 6 h 17 à Paris en hiver (CET), 7 h 17 en été (CEST).
+- `43 9 * * *` : **09:43 UTC** — 10 h 43 à Paris en hiver, 11 h 43 en été. Filet si le premier cron part en retard, après la routine de 8 h.
 
-GitHub ne connaît pas l'heure de Paris, et un cron peut partir en retard. Avec `30 6 * * *`, les runs du 18 au 22/11/2026 sont partis vers 15 h UTC, plus de huit heures après l'heure prévue : les minutes rondes sont les plus chargées chez GitHub. D'où une minute creuse, tôt. La fenêtre des phrases est d'environ 48 heures, plus 6 heures de marge pour une dépêche du matin.
+GitHub ne connaît pas l'heure de Paris, et un cron peut quand même partir en retard. Le premier qui trouve du nouveau publie ; les suivants s'arrêtent proprement si la journée est déjà couverte (voir ci-dessous). La fenêtre des phrases est d'environ 48 heures, plus 6 heures de marge pour une dépêche du matin.
+
+### Déjà fait aujourd'hui (filet de secours)
+
+Le workflow est le **filet de secours** de la routine humaine de 8 h (Europe/Paris). Il ne doit jamais republier par-dessus une mise à jour du jour, ni ramener le site à une vieille version de cache.
+
+Avant de lire les flux, `tools/daily/already_done.py` regarde `origin/main` (et les tags). Si **l'un** de ces signes est vrai pour la date du jour en Europe/Paris, le run se termine en succès, sans appel au modèle, sans commit et sans push :
+
+1. Le tag `version-AAAA-MM-JJ-avant-maj` existe (point de restauration posé juste avant la routine de 8 h).
+2. Un commit du jour, sur `main`, dont le sujet est :
+   - `Mise à jour du JJ/MM : relevé automatique, N phrase(s)` (le workflow lui-même) ;
+   - `Mise à jour du JJ/MM : file d'attente, rien publié` (le workflow, rien à publier) ;
+   - `Mise à jour du JJ/MM : N phrases …` (la routine de 8 h, par exemple « 31 phrases du 22 au 24/11 »).
+
+Un commit « liste des versions », un changement d'onglet ou un correctif technique du jour ne comptent pas : le relevé des phrases peut encore avoir lieu.
+
+**Avant une routine de 8 h**, un agent vérifie les mêmes signes (`git fetch origin main --tags`, puis le tag du jour et `git log --since` de minuit à Paris). Si le workflow a déjà publié :
+
+- ne pas relancer le même relevé automatique, et ne pas reparcourir les mêmes flux « pour faire un second passage » ;
+- on peut encore ajouter des phrases que le workflow n'a pas vues (posts X, interview sans article au moment du cron, etc.). `tools/auto_published.json` et les citations déjà en ligne bloquent les doublons exacts ;
+- monter le cache d'un cran seulement s'il y a réellement du contenu nouveau ;
+- poser le tag `version-AAAA-MM-JJ-avant-maj` seulement s'il n'existe pas encore (il pointe vers le commit d'avant la mise à jour du jour).
+
+Si la routine de 8 h a déjà tourné, un cron en retard (comme le 23/11/2026, parti à 17 h 07 à Paris) doit s'arrêter tout seul. Rien n'est publié en double.
+
+Les lignes de journal de test `Mise à jour du … : retour à version-2026-01-01-base` et `Cache onrecord-v4` viennent de `tests/test_versions.py` : elles s'exécutent dans un dépôt temporaire et ne touchent jamais `main` ni le site en ligne.
 
 ### Activer
 
@@ -333,7 +358,7 @@ Sans ce secret, le workflow écrit un résumé, s'arrête avec un succès, et ne
 2. Il ne télécharge que les pages dont le titre ou le chapeau touche aux deux sujets, ou nomme une fiche déjà en ligne (score d'au moins 3). Les pages index (fiche personnalité BFMTV `_DN-…`, émission, tag) sont écartées. Une page bloquée (403, 402, délai) ou un mur anti-robot (« Client Challenge », « Accès restreint ») ne prend pas de place : on passe à la suivante. Le Monde, Libération, Mediapart, L'Express et Le Point, qui bloquent les robots, sont essayés en dernier. Le modèle reçoit les paragraphes de l'article (balises `p`, `blockquote`, `h1`), pas les menus : avant le 22/11, l'extrait commençait par 3 500 caractères de menu, et le modèle ne trouvait aucune citation. Les 24 lectures sont réparties : au plus deux pages par personne et trois par média, en prenant d'abord celles qui ne sont pas encore couvertes. Plafond ensuite : deux phrases publiées par personne et quatre par média. Le surplus va dans la file, il n'est pas jeté. Douze liens Google News au plus, 60 requêtes au modèle au plus (retries compris). Cinq secondes entre chaque requête. Un 429, un 5xx ou un délai dépassé est réessayé trois fois avec attente croissante ; ensuite la page passe au modèle de secours. Un 429 retire le modèle pour la suite du run. Le run ne s'arrête que si les trois modèles sont en 429 ; le reste va dans la file. Un flux en échec est nommé dans le résumé, avec l'erreur.
 3. Le modèle propose des phrases. Il ne décide pas. Le programme publie seulement si, après normalisation des espaces et des apostrophes : la phrase est dans la page, entre guillemets, et elle n'est pas coupée au milieu d'un mot ou d'une phrase. Une ellipse `[…]` ne passe que si chaque morceau est dans la page, dans l'ordre, sur des mots entiers. Le programme n'ajoute pas de points de suspension et ne raccourcit pas une phrase pour l'afficher. La date est dans la fenêtre et dans la page (ou, à défaut, celle du flux). L'URL est en https et n'est ni Wikipédia, ni X, ni Google News. Aucun mot interdit dans les champs écrits, y compris dans la citation. La personne est déjà dans l'archive, ou la page la présente avec une fonction publique recopiée (député, ministre, candidat, journaliste…). Le sujet est dans la phrase ou juste à côté. Ce n'est pas un doublon : une phrase déjà en ligne, même plus courte (« ramassis de gauchistes »), bloque une reprise qui la contient. Un doute du modèle, un particulier, une causalité absente de la page : file d'attente, pas le site. Pas de photo (monogramme). Pas de lien de réseau créé tout seul. Une vidéo seulement si son URL est déjà dans la page et vient du diffuseur.
 4. Ce qui passe est ajouté à `tools/auto_published.json`. `build.py` reconstruit `data.json`. Les URL nouvelles passent par `tools/archive.py`. `sw.js` monte d'un numéro, ainsi que les tests qui citent cette version. `tests/test_v22.py` recalcule `EXPECT` avec la même règle que l'échelle du pouvoir. Le journal reçoit une entrée.
-5. Les tests Playwright tournent. Un test ne doit jamais écrire un numéro de cache en dur sans être dans la liste de `tools/daily/store.py` : du 18 au 21/11, `tests/test_enquete.py` attendait `onrecord-v52` exactement, et chaque run qui publiait (donc montait le cache) échouait sans push. Il vérifie maintenant « v52 ou plus ». `tests/test_v8.py` est ignoré. Dans `tests/test_v5.py`, seuls les échecs « graph built lazily on Réseau » sont admis. Tout autre échec annule le push. Le site en ligne doit répondre avant le push. Après le push, le workflow attend que `sw.js` serve la nouvelle version.
+5. Les tests Playwright tournent, avec `/usr/bin/google-chrome` (helper `tools/daily/browser.py`). Un `chromium.launch()` nu cherche le Chromium de Playwright, qui n'est pas installé sur le runner : le 23/11/2026, `tests/test_condamnations.py`, `tests/test_contributions_ui.py` et `tests/test_v16.py` ont fait échouer le run avant le push. Un test ne doit jamais écrire un numéro de cache en dur sans être dans la liste de `tools/daily/store.py` : du 18 au 21/11, `tests/test_enquete.py` attendait `onrecord-v52` exactement, et chaque run qui publiait (donc montait le cache) échouait sans push. Il vérifie maintenant « v52 ou plus » ; `tests/test_contributions_ui.py` vérifie « v56 ou plus ». `tests/test_v8.py` est ignoré. Dans `tests/test_v5.py`, seuls les échecs « graph built lazily on Réseau » sont admis. Tout autre échec annule le push. Le site en ligne doit répondre avant le push. Après le push, le workflow attend que `sw.js` serve la nouvelle version.
 6. Le commit, en français, est `Mise à jour du JJ/MM : relevé automatique, N phrases`, ou `Mise à jour du JJ/MM : file d'attente, rien publié`. Il est poussé sur `main`.
 
 Le résumé du run est dans l'onglet Actions, en tête de la page (GITHUB_STEP_SUMMARY) : publié, écarté, flux en échec, nombre de requêtes.
@@ -430,7 +455,7 @@ La taille du texte baisse pour que la phrase tienne. Si elle ne tient pas en ent
 3. Ouvre https://onrecord-fr.vercel.app/ et `curl -fsS https://onrecord-fr.vercel.app/sw.js | head -n 8`. Le numéro doit être celui de `sw.js` dans `main`.
 4. Règles, sans exception : citation exacte, datée, URL qui répond ; ton neutre ; mots à ne pas employer pour qualifier quelqu'un : complice, génocidaire, pantin, infiltré, marionnette, protégé, copinage, occulte ; pas de lien causal que la source n'écrit pas ; pas de personnes privées ; contexte et démenti sur la même fiche ; Wikipédia jamais seule source ; pas de photo hors licence libre ou portrait officiel réutilisable.
 5. `config.js` : `CORRECTION_EMAIL` reste `""`. N'invente pas d'adresse.
-6. Relevé du matin : secret `GEMINI_API_KEY` (clé gratuite, sans facturation). Sans cette clé, le workflow de 6 h 30 UTC s'arrête et ne touche pas à `main`. Garde-fous, file d'attente, plafonds : section 10. Essai : `python3 tests/test_daily.py` et `python3 -m tools.daily.run --mock --dry-run`.
+6. Relevé du matin : secret `GEMINI_API_KEY` (clé gratuite, sans facturation). Sans cette clé, le workflow (05:17 et 09:43 UTC) s'arrête et ne touche pas à `main`. S'il trouve déjà une mise à jour du jour (tag `version-AAAA-MM-JJ-avant-maj` ou commit de relevé), il s'arrête aussi, en succès. Garde-fous, file d'attente, plafonds, filet de secours : section 10. Essai : `python3 tests/test_daily.py` et `python3 -m tools.daily.run --mock --dry-run`.
 7. Versions : la liste est sur https://onrecord-fr.vercel.app/admin.html . Enregistrer ou revenir se fait sur GitHub (Actions), pas dans la page. Le tag de secours d'avant les cartes est `version-2026-11-18-avant-cartes`.
 8. Pour publier : `git pull`, sources (pas `data.json` à la main), `python3 tools/archive.py` sur les URL nouvelles, `python3 build.py`, monter `sw.js`, tests (sauf `tests/test_v8.py`, et les quatre échecs « graph built lazily on Réseau » de `tests/test_v5.py`), `docs/JOURNAL.md`, commit `Mise à jour du JJ/MM : …`, push, vérifier `sw.js` en ligne.
 9. Si un changement casse le site : admin → Revenir à cette version → coller le nom → écrire REVENIR → Run workflow. Attendre une minute. Pour annuler ce retour, revenir au tag `avant-retour` créé juste avant.

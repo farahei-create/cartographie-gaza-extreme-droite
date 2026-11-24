@@ -1,7 +1,10 @@
 """Section « Condamnations » (v60) : données condamnations.json, garde-fous juridiques,
 cinquième onglet de la barre, filtres personne / statut / année, lien depuis les fiches."""
-import json, re
+import json, os, re, sys
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT)
 from playwright.sync_api import sync_playwright
+from tools.daily.browser import launch_chromium
 B = "http://localhost:8765/"; ok = fail = 0
 def chk(c, m):
     global ok, fail
@@ -37,7 +40,7 @@ chk(any(e["status"] == "relaxe" for e in dec), "les relaxes figurent")
 chk(all(e["date"] >= "2022" for e in dec), "pas de décision ancienne (réhabilitation, sursis non avenu)")
 
 with sync_playwright() as p:
-    br = p.chromium.launch()
+    br = launch_chromium(p)
     for theme in ("dark", "light"):
         ctx = br.new_context(viewport={"width": 390, "height": 844}, color_scheme=theme)
         ctx.add_init_script("localStorage.setItem('onrecord-theme','%s')" % theme)

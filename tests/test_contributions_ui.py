@@ -1,11 +1,12 @@
 """Contributions des lecteurs, côté page (Playwright, serveur sur :8765).
 Le dépôt contributions.json reste vide en ligne : ici une contribution de démonstration
 est servie par interception, pour vérifier l'affichage. Captures : shots/ (ou CTB_SHOTS)."""
-import json, os
-from playwright.sync_api import sync_playwright
-
+import json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
+sys.path.insert(0, ROOT)
+from playwright.sync_api import sync_playwright
+from tools.daily.browser import launch_chromium
 BASE = "http://localhost:8765/"
 SHOTS = os.environ.get("CTB_SHOTS") or os.path.join(ROOT, "shots")
 ok = fail = 0
@@ -16,7 +17,8 @@ def check(c, m):
         fail += 1; print("FAIL:", m)
 
 sw = open(os.path.join(ROOT, "sw.js"), encoding="utf-8").read()
-check('var VERSION = "onrecord-v62"' in sw, "sw onrecord-v62")
+_ver = re.search(r'var VERSION = "onrecord-v(\d+)"', sw)
+check(_ver and int(_ver.group(1)) >= 56, "sw v56 ou plus")
 check('"contrib.js"' in sw and 'indexOf("/api/") === 0' in sw, "sw : contrib.js en cache, /api jamais")
 check("contributions\\.json" in sw, "contributions.json en réseau d'abord")
 pub = json.load(open(os.path.join(ROOT, "contributions.json"), encoding="utf-8"))
@@ -33,7 +35,7 @@ DEMO = {"items": [{
     "links": ["https://www.example.org/source"], "media": []}]}
 
 with sync_playwright() as p:
-    b = p.chromium.launch()
+    b = launch_chromium(p)
     for scheme in ("dark", "light"):
         ctx = b.new_context(viewport={"width": 390, "height": 844}, device_scale_factor=2, color_scheme=scheme, service_workers="block")
         pg = ctx.new_page()

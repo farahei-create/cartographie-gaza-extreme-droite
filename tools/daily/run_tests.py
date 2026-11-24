@@ -34,6 +34,7 @@ def unexpected(name, lines):
 
 def main():
     os.chdir(ROOT)
+    os.environ["PYTHONPATH"] = ROOT + os.pathsep + os.environ.get("PYTHONPATH", "")
     os.makedirs("/workspace", exist_ok=True)
     os.makedirs("/opt/cursor/artifacts", exist_ok=True)
     link = os.path.join(ROOT, "site")

@@ -1,15 +1,18 @@
 """Ancienne page « Proposer une mise à jour » : retirée le 23/11 au profit des contributions.
 Vérifie les liens « Ajouter une contribution », la redirection des anciennes adresses
 (#/contribuer, #/enquete/relier/…) et l'absence de « Relier deux noms »."""
-import re
+import os, re, sys
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT)
 from playwright.sync_api import sync_playwright
+from tools.daily.browser import launch_chromium
 B="http://localhost:8765/";ok=fail=0
 def chk(c,m):
     global ok,fail
     if c: ok+=1
     else: fail+=1; print("FAIL",m)
 with sync_playwright() as p:
-    br=p.chromium.launch()
+    br=launch_chromium(p)
     pg=br.new_page(viewport={"width":390,"height":844});errs=[]
     pg.on("console",lambda m: m.type=="error" and "Failed to load resource" not in m.text and errs.append(m.text)); pg.on("pageerror",lambda e: errs.append(str(e)))
     pg.goto(B+"#/accueil");pg.wait_for_function("window.__route=='accueil'")

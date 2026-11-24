@@ -31,7 +31,7 @@ Droit français de la diffamation. Si une source ne les respecte pas, on ne publ
 8. Vérifier que le `sw.js` en ligne porte la nouvelle version.
 9. Ajouter une ligne à `docs/JOURNAL.md`. Compte rendu court, en français, avec « tu ».
 
-Le relevé du matin est le workflow `.github/workflows/daily-update.yml`. Il publie sur `main` tout seul si le secret `GEMINI_API_KEY` est posé. Sans cette clé, il s'arrête et ne touche pas à `main`. Le détail est dans `docs/REPRISE.md`, section Automatisation.
+Le relevé du matin est le workflow `.github/workflows/daily-update.yml` (crons 05:17 et 09:43 UTC). C'est le filet de secours de la routine de 8 h (Europe/Paris). Il publie sur `main` seulement si le secret `GEMINI_API_KEY` est posé et si la journée n'a pas déjà sa mise à jour (tag `version-AAAA-MM-JJ-avant-maj`, ou commit `relevé automatique` / `file d'attente` / « N phrases »). Sans clé, ou si le jour est déjà couvert, il s'arrête sans toucher à `main`. Avant une routine de 8 h, vérifie ces signes : le détail est dans `docs/REPRISE.md`, section Automatisation.
 
 Versions : tags `version-AAAA-MM-JJ-…`, pas un force-push. Workflows « Enregistrer une version » et « Revenir à une version ». La page `/admin.html` explique les trois gestes. Avant une grosse modification de `app.js`, `style.css` ou `index.html`, le tag du commit précédent est posé tout seul. Le retour remet le site public et `tools/auto_published.json`, garde la file d'attente, le relevé, l'admin et ce guide, et enregistre l'état courant juste avant. Détail : `docs/REPRISE.md`, sections 11 à 13.
 
