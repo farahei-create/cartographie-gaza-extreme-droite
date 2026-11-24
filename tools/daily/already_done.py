@@ -89,9 +89,9 @@ def update_already_done(root, day=None, ref=None, fetch=False):
     day = day or now_paris().date()
     fetch_error = ""
     if fetch:
-        ok, fetch_error = fetch_origin(root)
-        if not ok and not fetch_error:
-            fetch_error = "git fetch a échoué"
+        ok, output = fetch_origin(root)
+        if not ok:
+            fetch_error = output or "git fetch a échoué"
     ref = _resolve_ref(root, ref)
     tag = avant_maj_tag(day)
     listed = _git(root, "tag", "-l", tag)
