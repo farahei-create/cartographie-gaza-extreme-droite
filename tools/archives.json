@@ -1828,5 +1828,120 @@
   "archive_url": null,
   "status": "failed",
   "error": "save:<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of "
+ },
+ "https://x.com/MLP_officiel/status/2124770105695363546": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/J_Bardella/status/2124879203531165891": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/J_Bardella/status/2124827436319699309": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/J_Bardella/status/2124971919099203963": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/J_Bardella/status/2124938652451033217": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/J_Bardella/status/2124949234562617531": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/ZemmourEric/status/2124865874024694043": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/ZemmourEric/status/2124828952330187066": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/MarionMarechal/status/2124955638421959117": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/RoyalSegolene/status/2124840365018452123": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/FloPortelli/status/2124844479991689270": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/faureolivier/status/2124977592986120564": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/marinetondelier/status/2124932626096238956": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://x.com/Fabien_Roussel/status/2124921318282023202": {
+  "archive_url": null,
+  "status": "failed",
+  "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://www.bfmtv.com/politique/front-national/jordan-bardella-assure-n-avoir-recu-aucune-information-de-la-part-du-prefet-hugues-moutouh-vise-par-des-soupcons-de-fuites-du-ministere-de-l-interieur-vers-le-rn_AV-202611230795.html": {
+  "archive_url": "https://web.archive.org/web/20261124072930/https://www.bfmtv.com/politique/front-national/jordan-bardella-assure-n-avoir-recu-aucune-information-de-la-part-du-prefet-hugues-moutouh-vise-par-des-soupcons-de-fuites-du-ministere-de-l-interieur-vers-le-rn_AV-202611230795.html",
+  "archived": "2026-11-24",
+  "status": "saved"
+ },
+ "https://www.franceinfo.fr/politique/front-national/jordan-bardella-affirme-qu-a-sa-connaissance-personne-au-rn-n-a-beneficie-de-fuites-et-juge-etrange-le-timing-de-la-perquisition-du-siege-de-son-parti_8296713.html": {
+  "archive_url": "https://web.archive.org/web/20261124073002/https://www.franceinfo.fr/politique/front-national/jordan-bardella-affirme-qu-a-sa-connaissance-personne-au-rn-n-a-beneficie-de-fuites-et-juge-etrange-le-timing-de-la-perquisition-du-siege-de-son-parti_8296713.html",
+  "archived": "2026-11-24",
+  "status": "saved"
+ },
+ "https://www.bfmtv.com/politique/front-national/ecrits-antisemites-jordan-bardella-reconnait-une-faute-de-laure-lavalette-mais-invoque-une-inattention_AD-202611230926.html": {
+  "archive_url": "https://web.archive.org/web/20261124073039/https://www.bfmtv.com/politique/front-national/ecrits-antisemites-jordan-bardella-reconnait-une-faute-de-laure-lavalette-mais-invoque-une-inattention_AD-202611230926.html",
+  "archived": "2026-11-24",
+  "status": "saved"
+ },
+ "https://www.nicematin.com/societe/politique/ecrits-antisemites-jordan-bardella-reconnait-une-faute-de-la-deputee-varoise-laure-lavalette-mais-lui-garde-son-total-soutien-10767750": {
+  "archive_url": "https://web.archive.org/web/20261124073203/https://www.nicematin.com/societe/politique/ecrits-antisemites-jordan-bardella-reconnait-une-faute-de-la-deputee-varoise-laure-lavalette-mais-lui-garde-son-total-soutien-10767750",
+  "archived": "2026-11-24",
+  "status": "saved"
+ },
+ "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-la-premiere-mesure-que-nous-prendrons-sera-la-dissolution-de-tous-les-groupuscules-d-ultragauche-et-d-ultradroite-qui-pronent-la-violence-contre-la-democratie-et-les-institutions-assure-jordan-bardella_VN-202611230799.html": {
+  "archive_url": "https://web.archive.org/web/20261124073233/https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-la-premiere-mesure-que-nous-prendrons-sera-la-dissolution-de-tous-les-groupuscules-d-ultragauche-et-d-ultradroite-qui-pronent-la-violence-contre-la-democratie-et-les-institutions-assure-jordan-bardella_VN-202611230799.html",
+  "archived": "2026-11-24",
+  "status": "saved"
+ },
+ "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-valerie-pecresse-estime-que-la-primaire-de-la-droite-et-du-centre-est-morte-nee_AN-202611230330.html": {
+  "archive_url": "https://web.archive.org/web/20261124073302/https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-valerie-pecresse-estime-que-la-primaire-de-la-droite-et-du-centre-est-morte-nee_AN-202611230330.html",
+  "archived": "2026-11-24",
+  "status": "saved"
+ },
+ "https://www.franceinfo.fr/replay-magazine/franceinfo/le-grand-enjeu/presidentielle-2027-je-ne-me-resoudrai-jamais-a-ce-que-marine-le-pen-entre-a-l-elysee-lache-raphael-glucksman-candidat-ps-et-place-publique_8295134.html": {
+  "archive_url": "https://web.archive.org/web/20261124073419/https://www.franceinfo.fr/replay-magazine/franceinfo/le-grand-enjeu/presidentielle-2027-je-ne-me-resoudrai-jamais-a-ce-que-marine-le-pen-entre-a-l-elysee-lache-raphael-glucksman-candidat-ps-et-place-publique_8295134.html",
+  "archived": "2026-11-24",
+  "status": "saved"
+ },
+ "https://www.lejdd.fr/politique/on-a-le-droit-ideologiquement-detre-islamiste-linsoumise-nadege-abomangoli-souleve-un-tolle-189486": {
+  "archive_url": "https://web.archive.org/web/20261124073450/https://www.lejdd.fr/politique/on-a-le-droit-ideologiquement-detre-islamiste-linsoumise-nadege-abomangoli-souleve-un-tolle-189486",
+  "archived": "2026-11-24",
+  "status": "saved"
+ },
+ "https://www.20minutes.fr/justice/4265204-20261123-propos-racistes-saluts-nazis-ecole-police-tourmente-enquete-ouverte": {
+  "archive_url": "https://web.archive.org/web/20261124073525/https://www.20minutes.fr/justice/4265204-20261123-propos-racistes-saluts-nazis-ecole-police-tourmente-enquete-ouverte",
+  "archived": "2026-11-24",
+  "status": "saved"
  }
 }

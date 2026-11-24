@@ -26,7 +26,7 @@ Site statique à la racine. Pas de CDN. Pas d'étape de build côté Vercel : `d
 | `style.css`, `app.js` | Mise en forme et routage |
 | `data.json` | Contenu. **Généré.** Ne pas l'éditer à la main |
 | `build.py` | Construit `data.json` (personnes, liens, archives, compteurs) |
-| `v24_content.py`, `v26_content.py`, `v27_content.py`, `v28_content.py`, `v30_content.py`, `v31_content.py`, `v35_content.py`, `v41_content.py`, `v42_content.py`, `v43_content.py`, `v44_content.py`, `v45_content.py`, `v46_content.py`, `v54_content.py`, `v61_content.py` | Ajouts branchés à la fin de `build.py` (`v61_content.py` après `auto_content` et `admin_content` : un module branché avant eux décale les numéros des pages `c/` des phrases automatiques) |
+| `v24_content.py`, `v26_content.py`, `v27_content.py`, `v28_content.py`, `v30_content.py`, `v31_content.py`, `v35_content.py`, `v41_content.py`, `v42_content.py`, `v43_content.py`, `v44_content.py`, `v45_content.py`, `v46_content.py`, `v54_content.py`, `v61_content.py`, `v62_content.py` | Ajouts branchés à la fin de `build.py` (`v61_content.py` et `v62_content.py` après `auto_content` et `admin_content` : un module branché avant eux décale les numéros des pages `c/` des phrases automatiques) |
 | `config.js` | `DONATION_URL`, `CORRECTION_EMAIL` |
 | `sw.js` | Service worker. La constante `VERSION` doit monter à chaque publication |
 | `manifest.webmanifest`, `icons/` | PWA |
@@ -257,6 +257,7 @@ Le numéro vivant du cache est celui de `sw.js`. Les tags `version-…` sont les
 | v59 | Mise à jour du 23/11 (nuit) | Enquête allégée : « Relier deux noms » retiré, « Proposer une mise à jour » remplacé par « Ajouter une contribution ». Tag `version-2026-11-23-avant-enquete-condamnations` |
 | v60 | Mise à jour du 23/11 (nuit) | Cinquième onglet « Condamnations » (`condamnations.json`, 16 décisions, 2 procédures en cours). Tag `version-2026-11-23-avant-condamnations`. Voir section 15 |
 | v61 | Mise à jour du 23/11 (matin) | Contenu : 15 phrases, 6 fiches nouvelles (`v61_content.py`, branché après `admin_content` pour que les liens `c/<id>/<n>.html` déjà partagés ne bougent pas). Tag `version-2026-11-23-avant-maj` |
+| v62 | Mise à jour du 24/11 (matin) | Contenu : 31 phrases, aucune fiche nouvelle (`v62_content.py`, branché après `v61_content`). Tag `version-2026-11-24-avant-maj` |
 
 Mises à jour de contenu entre les versions : voir `docs/JOURNAL.md`.
 

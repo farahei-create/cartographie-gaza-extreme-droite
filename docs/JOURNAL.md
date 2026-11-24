@@ -4,6 +4,46 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-24 (matin) — mise à jour du 23 au 24/11, 9 h (cache `onrecord-v62`)
+
+Tu enregistres d'abord `version-2026-11-24-avant-maj` (commit `fb02876`, cache `onrecord-v61`). Module `v62_content.py`, branché après `v61_content` (les liens `c/<id>/<n>.html` déjà en ligne ne bougent pas). 31 phrases, aucune nouvelle fiche ; une étape de parcours (Laure Lavalette, écrits des années 1990) et 5 liens (Bardella → Lavalette, Bardella → Royal, Pécresse → Zemmour et Portelli → Zemmour en opposition, Rioufol → Renaud Camus). Chaque URL est ouverte ce jour et chaque phrase y figure mot pour mot ; messages X lus sur le compte officiel. Pas de photo : monogramme. Aucune décision de justice nouvelle : `condamnations.json` inchangé.
+Point de départ : le relevé X du 24/11 (150 posts, du 22/11 8 h au 24/11 9 h ; 62 antérieurs au 23/11 8 h, dont 20 déjà relevés hier), plus presse et émissions du 22 et du 23/11. Sur les 88 posts de la fenêtre, 23 ont mené à une publication ; 65 sont laissés de côté (36 hors des deux sujets, 12 attaques personnelles ou propos injurieux, 8 doublons, dont 3 messages republiés corrigés, 8 accusations ou faits sans élément vérifiable, 1 réponse à un compte non public). Parmi les 42 posts du 22/11 absents du relevé d'hier, deux sont repris (Marine Le Pen, Éric Ciotti) et un écarté comme doublon (Florence Portelli). L'interview d'Éric Ciotti du 24/11 (Europe 1 / CNews, 8 h 10) n'a pas encore d'article : à reprendre demain.
+
+- Jordan Bardella, 23 novembre 2026 (BFMTV) : « Je n'ai reçu aucune information de la part du préfet Moutouh, à caractère sensible encore moins […] » — https://www.bfmtv.com/politique/front-national/jordan-bardella-assure-n-avoir-recu-aucune-information-de-la-part-du-prefet-hugues-moutouh-vise-par-des-soupcons-de-fuites-du-ministere-de-l-interieur-vers-le-rn_AV-202611230795.html
+- Jordan Bardella, 23 novembre 2026 (franceinfo) : « Chacun est juge, je dis juste que le timing est étrange » — https://www.franceinfo.fr/politique/front-national/jordan-bardella-affirme-qu-a-sa-connaissance-personne-au-rn-n-a-beneficie-de-fuites-et-juge-etrange-le-timing-de-la-perquisition-du-siege-de-son-parti_8296713.html
+- Jordan Bardella, 23 novembre 2026 (X) : « Nous sommes donnés gagnants de l'élection présidentielle […] » — https://x.com/J_Bardella/status/2124938652451033217
+- Jordan Bardella, 23 novembre 2026 (BFMTV) : « Effectivement, c'était une erreur » (écrits de Laure Lavalette ; Nice-Matin cité en contexte) — https://www.bfmtv.com/politique/front-national/ecrits-antisemites-jordan-bardella-reconnait-une-faute-de-laure-lavalette-mais-invoque-une-inattention_AD-202611230926.html
+- Jordan Bardella, 23 novembre 2026 (X) : soutien à Laure Lavalette — https://x.com/J_Bardella/status/2124971919099203963
+- Jordan Bardella, 23 novembre 2026 (BFMTV) : « La première mesure que nous prendrons sera la dissolution de tous les groupuscules d'ultragauche et d'ultradroite […] » — https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-la-premiere-mesure-que-nous-prendrons-sera-la-dissolution-de-tous-les-groupuscules-d-ultragauche-et-d-ultradroite-qui-pronent-la-violence-contre-la-democratie-et-les-institutions-assure-jordan-bardella_VN-202611230799.html
+- Jordan Bardella, 23 novembre 2026 (X) : propos de Nadège Abomangoli sur l'islamisme — https://x.com/J_Bardella/status/2124879203531165891
+- Jordan Bardella, 23 novembre 2026 (X) : la Cimade — https://x.com/J_Bardella/status/2124949234562617531
+- Jordan Bardella, 23 novembre 2026 (X) : « Naufrage moral de Ségolène Royal […] » (réponse de Ségolène Royal en regard) — https://x.com/J_Bardella/status/2124827436319699309
+- Laure Lavalette, étape de parcours du 23 novembre 2026 : écrits des années 1990 (BFMTV) — même URL BFMTV que ci-dessus
+- Marine Le Pen, 23 novembre 2026 (X) : « Pour la France insoumise, l'islamisme est une opinion. Pour nous, il sera interdit. » — https://x.com/MLP_officiel/status/2124770105695363546
+- Marine Le Pen, 22 novembre 2026 (X) : « Ma première décision sera de lancer un référendum pour modifier la Constitution sur l'immigration. » — https://x.com/MLP_officiel/status/2124603800631578687
+- Éric Zemmour, 23 novembre 2026 (X) : Nadège Abomangoli et « invasion migratoire » — https://x.com/ZemmourEric/status/2124865874024694043
+- Éric Zemmour, 23 novembre 2026 (X) : « Nous supprimerons l'Arcom ! » — https://x.com/ZemmourEric/status/2124828952330187066
+- Marion Maréchal, 23 novembre 2026 (X) : invitée à Milan par le parti de Giorgia Meloni — https://x.com/MarionMarechal/status/2124955638421959117
+- Éric Ciotti, 22 novembre 2026 (X) : « Les actes antisémites ont triplé en France depuis 2022. […] » — https://x.com/eciotti/status/2124566777950818682
+- Ségolène Royal, 23 novembre 2026 (X) : « Je vous laisse le naufrage moral. […] » — https://x.com/RoyalSegolene/status/2124840365018452123
+- Valérie Pécresse, 23 novembre 2026 (BFMTV) : « C'est totalement non » (Éric Zemmour dans une primaire) — https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-valerie-pecresse-estime-que-la-primaire-de-la-droite-et-du-centre-est-morte-nee_AN-202611230330.html
+- Florence Portelli, 23 novembre 2026 (X) : primaire « jusqu'à Éric Zemmour » — https://x.com/FloPortelli/status/2124844479991689270
+- Olivier Faure, 23 novembre 2026 (X) : David Lisnard et l'AMF — https://x.com/faureolivier/status/2124977592986120564
+- Raphaël Glucksmann, 22 novembre 2026 (franceinfo, Le grand enjeu) : « Il y a toute une partie de l'appareil d'État qui est en train de se préparer à l'arrivée au pouvoir de Mme Le Pen. » — https://www.franceinfo.fr/replay-magazine/franceinfo/le-grand-enjeu/presidentielle-2027-je-ne-me-resoudrai-jamais-a-ce-que-marine-le-pen-entre-a-l-elysee-lache-raphael-glucksman-candidat-ps-et-place-publique_8295134.html
+- Marine Tondelier, 23 novembre 2026 (X) : « La droite et l'extrême droite mènent une offensive assumée contre l'État de droit. […] » — https://x.com/marinetondelier/status/2124932626096238956
+- Sébastien Chenu, 23 novembre 2026 (X) : le RN « ne trouve pas de banque » — https://x.com/sebchenu/status/2124860519081521252
+- Julien Odoul, 23 novembre 2026 (X) : « Comparer la Shoah à Gaza avec autant de légèreté ? […] » — https://x.com/JulienOdoul/status/2124996856954372309
+- Julien Odoul, 23 novembre 2026 (X) : examen des demandes d'asile avant l'entrée — https://x.com/JulienOdoul/status/2125000799915004278
+- Fabien Roussel, 23 novembre 2026 (X) : attentat de Trappes et extrême droite — https://x.com/Fabien_Roussel/status/2124921318282023202
+- Fabien Roussel, 23 novembre 2026 (X) : école de police (20 Minutes en contexte) — https://x.com/Fabien_Roussel/status/2124765353595072842
+- Mathilde Panot, 23 novembre 2026 (X) : sanctions et embargo, interpellation d'Emmanuel Macron et de Jean-Noël Barrot — https://x.com/MathildePanot/status/2124812448393777604
+- Rima Hassan, 24 novembre 2026 (X) : loi sur la propriété des absents de 1950 — https://x.com/RimaHas/status/2125101607239196936
+- Rima Hassan, 23 novembre 2026 (X) : « C'est l'ensemble de l'Etat colonial israélien […] » — https://x.com/RimaHas/status/2124777597175533955
+- Ivan Rioufol, 23 novembre 2026 (X) : Renaud Camus et « le Grand Remplacement » — https://x.com/ivanrioufol/status/2124776482878681371
+- Caroline Fourest, 24 novembre 2026 (X) : « Le RN est le seul parti à vouloir faire taire ses détracteurs en les assommant de procès. » — https://x.com/CarolineFourest/status/2125122118463455627
+
+Archives : les 9 pages de presse sont copiées ; les messages X échouent encore (523). À relancer. Tests : port 8765 pris par un autre site de la machine, tests lancés sur 8766 (voir `docs/REPRISE.md`, section 7) ; échecs connus seulement (test_v8, 4 cas de test_v5).
+
 ## 2026-11-23 (matin) — mise à jour du 21 au 23/11, 8 h (cache `onrecord-v61`)
 
 Tu enregistres d'abord `version-2026-11-23-avant-maj` (commit `bf25ad6`, cache `onrecord-v60`). Module `v61_content.py`, branché après `auto_content` et `admin_content` (les liens `c/<id>/<n>.html` déjà en ligne ne bougent pas). 15 phrases, dont 6 nouvelles fiches (Olivier Faure, Rima Hassan, François Ruffin, Manon Aubry, Ségolène Royal, Philippe Ballard). Chaque URL est ouverte ce jour et chaque phrase y figure mot pour mot ; messages X lus sur le compte officiel. Pas de photo : monogramme. Aucune décision de justice nouvelle : `condamnations.json` inchangé.

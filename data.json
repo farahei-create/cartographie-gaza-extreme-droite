@@ -1,16 +1,16 @@
 {
   "meta": {
-    "generated": "2026-11-23",
-    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-23 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
+    "generated": "2026-11-24",
+    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-24 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
       "persons": 93,
       "orgs": 56,
-      "edges": 204,
-      "statements": 396,
+      "edges": 209,
+      "statements": 427,
       "photos": 45,
       "logos": 21,
       "videos": 27,
-      "france_nodes": 123
+      "france_nodes": 124
     },
     "category_order": [
       "Responsables politiques",
@@ -631,6 +631,22 @@
           "url": "https://x.com/MLP_officiel/status/2124600571608924656",
           "theme": "Gaza – déclarations",
           "section": "gaza"
+        },
+        {
+          "quote": "Pour la France insoumise, l'islamisme est une opinion. Pour nous, il sera interdit.",
+          "date": "2026-11-23",
+          "medium": "Il réagit aux propos de la députée LFI Nadège Abomangoli, vice-présidente de l'Assemblée nationale, le 18 novembre 2026 dans l'émission « Sous les radars » : « on a le droit idéologiquement d'être islamiste, on n'a juste pas le droit d'être dangereux et de commettre des attentats » (JDD, 23 novembre 2026). Message sur X (@MLP_officiel), 23 novembre 2026, 08:40, heure de Paris, cité aussi par le JDD. Elle écrit : « Il ne s'agit pas de s'attaquer à une religion, il s'agit de dénoncer et de combattre avec la plus grande fermeté une idéologie totalitaire qui a fait des morts ».",
+          "url": "https://x.com/MLP_officiel/status/2124770105695363546",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Ma première décision sera de lancer un référendum pour modifier la Constitution sur l'immigration.",
+          "date": "2026-11-22",
+          "medium": "Message sur X (@MLP_officiel), 22 novembre 2026, 21:39, heure de Paris, avec une vidéo. Elle ajoute : « Si l'on ne contrôle pas ses frontières, on ne contrôle rien. »",
+          "url": "https://x.com/MLP_officiel/status/2124603800631578687",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -950,6 +966,86 @@
           "url": "https://www.closermag.fr/politique/jordan-bardella-accuse-dantisemitisme-il-patauge-dans-la-semoule-et-finit-par-sortir-de-ses-gonds-je-nai-pas-de-lecons-a-recevoir-3670179",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "Je n'ai reçu aucune information de la part du préfet Moutouh, à caractère sensible encore moins, j'ai été en contact avec le préfet à l'occasion de notre meeting du lancement de la campagne présidentielle (...) il y a quelques semaines",
+          "date": "2026-11-23",
+          "medium": "Affaire des fuites présumées du ministère de l'Intérieur vers le RN : le parquet de Paris a ouvert fin juillet une information judiciaire pour violation du secret professionnel, violation du secret de l'enquête et recel ; le siège du RN a été perquisitionné le 9 novembre (franceinfo). Le préfet Hugues Moutouh conteste ; selon BFMTV, aucune mise en examen n'est intervenue. BFMTV, 23 novembre 2026. La coupure (...) est celle de la page.",
+          "url": "https://www.bfmtv.com/politique/front-national/jordan-bardella-assure-n-avoir-recu-aucune-information-de-la-part-du-prefet-hugues-moutouh-vise-par-des-soupcons-de-fuites-du-ministere-de-l-interieur-vers-le-rn_AV-202611230795.html",
+          "theme": "Nuance / contexte",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261124072930/https://www.bfmtv.com/politique/front-national/jordan-bardella-assure-n-avoir-recu-aucune-information-de-la-part-du-prefet-hugues-moutouh-vise-par-des-soupcons-de-fuites-du-ministere-de-l-interieur-vers-le-rn_AV-202611230795.html",
+          "archived": "2026-11-24"
+        },
+        {
+          "quote": "Chacun est juge, je dis juste que le timing est étrange",
+          "date": "2026-11-23",
+          "medium": "Affaire des fuites présumées du ministère de l'Intérieur vers le RN : le parquet de Paris a ouvert fin juillet une information judiciaire pour violation du secret professionnel, violation du secret de l'enquête et recel ; le siège du RN a été perquisitionné le 9 novembre (franceinfo). Le préfet Hugues Moutouh conteste ; selon BFMTV, aucune mise en examen n'est intervenue. BFMTV, 23 novembre 2026, cité par franceinfo (avec AFP). Il parle de la perquisition du siège du RN ; franceinfo écrit qu'il dit croire « dans la bonne foi » des « enquêteurs » et de « nos institutions », et qu'aucun bénéfice de fuites n'a eu lieu au RN « en tout cas pas à ma connaissance, ni à celle de Marine Le Pen ».",
+          "url": "https://www.franceinfo.fr/politique/front-national/jordan-bardella-affirme-qu-a-sa-connaissance-personne-au-rn-n-a-beneficie-de-fuites-et-juge-etrange-le-timing-de-la-perquisition-du-siege-de-son-parti_8296713.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261124073002/https://www.franceinfo.fr/politique/front-national/jordan-bardella-affirme-qu-a-sa-connaissance-personne-au-rn-n-a-beneficie-de-fuites-et-juge-etrange-le-timing-de-la-perquisition-du-siege-de-son-parti_8296713.html",
+          "archived": "2026-11-24"
+        },
+        {
+          "quote": "Nous sommes donnés gagnants de l'élection présidentielle : il est normal que nous ayons des liens de travail avec des dirigeants d'entreprise, des représentants de la société civile ou des hauts fonctionnaires !",
+          "date": "2026-11-23",
+          "medium": "Affaire des fuites présumées du ministère de l'Intérieur vers le RN : le parquet de Paris a ouvert fin juillet une information judiciaire pour violation du secret professionnel, violation du secret de l'enquête et recel ; le siège du RN a été perquisitionné le 9 novembre (franceinfo). Le préfet Hugues Moutouh conteste ; selon BFMTV, aucune mise en examen n'est intervenue. Message sur X (@J_Bardella), 23 novembre 2026, 19:50, heure de Paris, extrait de son passage sur BFMTV.",
+          "url": "https://x.com/J_Bardella/status/2124938652451033217",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Effectivement, c'était une erreur",
+          "date": "2026-11-23",
+          "medium": "Laure Lavalette, députée RN du Var et porte-parole de campagne de Marine Le Pen, est accusée par le média Les Jours d'avoir, quand elle présidait l'antenne bordelaise du Renouveau étudiant (1996-1998), signé la présentation d'un livret comportant une caricature antisémite. Elle avait évoqué des faits vieux de « 30 ans », survenus « dans un climat qui était tout à fait différent » (BFMTV). BFMTV, 23 novembre 2026. Selon BFMTV, il évoque « une inattention », lui garde son soutien et refuse de l'écarter de l'équipe de campagne : elle « n'a de comptes à rendre qu'à ses électeurs ». Selon Nice-Matin, il dit aussi : « Bien sûr que c'est une faute » et « Il faut combattre l'antisémitisme matin, midi et soir ». Sur les messages de 2013 que lui attribue Mediapart, il répète : « je ne vais pas reconnaître des propos que je n'ai pas tenus » ; il a porté plainte pour diffamation, puis pour faux et usage de faux (BFMTV).",
+          "url": "https://www.bfmtv.com/politique/front-national/ecrits-antisemites-jordan-bardella-reconnait-une-faute-de-laure-lavalette-mais-invoque-une-inattention_AD-202611230926.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261124073039/https://www.bfmtv.com/politique/front-national/ecrits-antisemites-jordan-bardella-reconnait-une-faute-de-laure-lavalette-mais-invoque-une-inattention_AD-202611230926.html",
+          "archived": "2026-11-24"
+        },
+        {
+          "quote": ".@LaureLavalette est une députée élue et réélue, c'est une battante, c'est une femme courageuse et sincère, qui mène un combat indéfectible contre l'antisémitisme.",
+          "date": "2026-11-23",
+          "medium": "Laure Lavalette, députée RN du Var et porte-parole de campagne de Marine Le Pen, est accusée par le média Les Jours d'avoir, quand elle présidait l'antenne bordelaise du Renouveau étudiant (1996-1998), signé la présentation d'un livret comportant une caricature antisémite. Elle avait évoqué des faits vieux de « 30 ans », survenus « dans un climat qui était tout à fait différent » (BFMTV). Message sur X (@J_Bardella), 23 novembre 2026, 22:02, heure de Paris, extrait de son passage sur BFMTV.",
+          "url": "https://x.com/J_Bardella/status/2124971919099203963",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "La première mesure que nous prendrons sera la dissolution de tous les groupuscules d'ultragauche et d'ultradroite qui prônent la violence contre la démocratie et les institutions",
+          "date": "2026-11-23",
+          "medium": "BFMTV, 23 novembre 2026 (vidéo publiée par BFMTV). Il parle d'une victoire du RN à la présidentielle de 2027.",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-la-premiere-mesure-que-nous-prendrons-sera-la-dissolution-de-tous-les-groupuscules-d-ultragauche-et-d-ultradroite-qui-pronent-la-violence-contre-la-democratie-et-les-institutions-assure-jordan-bardella_VN-202611230799.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261124073233/https://www.bfmtv.com/politique/elections/presidentielle/video-presidentielle-2027-la-premiere-mesure-que-nous-prendrons-sera-la-dissolution-de-tous-les-groupuscules-d-ultragauche-et-d-ultradroite-qui-pronent-la-violence-contre-la-democratie-et-les-institutions-assure-jordan-bardella_VN-202611230799.html",
+          "archived": "2026-11-24"
+        },
+        {
+          "quote": "Les propos de cette députée de la France insoumise sur le \"droit\" d'être islamiste sont une insulte à la mémoire de tous nos compatriotes morts à cause de cette idéologie totalitaire.",
+          "date": "2026-11-23",
+          "medium": "Il réagit aux propos de la députée LFI Nadège Abomangoli, vice-présidente de l'Assemblée nationale, le 18 novembre 2026 dans l'émission « Sous les radars » : « on a le droit idéologiquement d'être islamiste, on n'a juste pas le droit d'être dangereux et de commettre des attentats » (JDD, 23 novembre 2026). Message sur X (@J_Bardella), 23 novembre 2026, 15:54, heure de Paris. Le message se poursuit : il reproche à LFI de vouloir « obtenir les voix de ceux qui détestent la France » et conclut : « Nous serons, à chaque instant, le rempart de la République française contre l'islamisme. »",
+          "url": "https://x.com/J_Bardella/status/2124879203531165891",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Les Français vivent dans un pays devenu un étouffoir fiscal, et l'Etat distribue notamment leur argent à des associations comme la CIMADE, dont le leitmotiv est d'attaquer l'Etat au bénéfice des migrants !",
+          "date": "2026-11-23",
+          "medium": "Message sur X (@J_Bardella), 23 novembre 2026, 20:32, heure de Paris, extrait de son passage sur BFMTV. C'est son jugement sur la Cimade, association d'aide aux migrants ; la réponse de l'association n'est pas citée ici.",
+          "url": "https://x.com/J_Bardella/status/2124949234562617531",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Naufrage moral de Ségolène Royal, qui a voulu un jour présider la République française, et qui est désormais abonnée aux sorties les plus indignes pour jouer les supplétifs de Jean-Luc Mélenchon.",
+          "date": "2026-11-23",
+          "medium": "Message sur X (@J_Bardella), 23 novembre 2026, 12:28, heure de Paris, en réaction aux propos de Ségolène Royal sur LCI le 22 novembre (voir sa fiche). Il ajoute que « la gauche sera prête à toutes les ignominies pour tenter d'effrayer le peuple français et d'hystériser l'élection ». Réponse de Ségolène Royal sur sa fiche.",
+          "url": "https://x.com/J_Bardella/status/2124827436319699309",
+          "theme": "Nuance / contexte",
+          "section": "france"
         }
       ],
       "sections": [
@@ -1146,6 +1242,14 @@
           "date": "2026-11-16",
           "medium": "Message sur X (@MarionMarechal), 16 novembre 2026, 0:12, heure de Paris. Elle ne nomme aucun particulier. Le post est coupé à 280 caractères. BFMTV et CNews relatent les mêmes faits le 15 novembre, sans nommer les personnes. Texte du post lu via l'API X, heure de Paris. Le post s'arrête à la limite des 280 caractères lorsqu'il est incomplet.",
           "url": "https://x.com/MarionMarechal/status/2122105573546050039",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "À Milan, j'étais l'invitée du parti de Giorgia Meloni, aux côtés du président du Sénat italien, des vice-ministres de la Justice et de l'Éducation, ainsi que des présidents des groupes parlementaires de Fratelli d'Italia à la Chambre des députés, au Sénat et au Parlement européen, à l'occasion de la présentation du projet de loi visant à interdire le voile intégral dans tous les espaces publics en Italie. Je leur ai promis de m'engager pleinement pour mener une lutte coordonnée entre la France et l'Italie contre l'islamisation de nos nations.",
+          "date": "2026-11-23",
+          "medium": "Message sur X (@MarionMarechal), 23 novembre 2026, 20:57, heure de Paris. Fratelli d'Italia est le parti de la présidente du Conseil italienne Giorgia Meloni. « islamisation » est son mot.",
+          "url": "https://x.com/MarionMarechal/status/2124955638421959117",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
         }
@@ -1409,6 +1513,22 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261123072137/https://www.lejdd.fr/politique/jai-ete-convie-jy-serai-zemmour-martele-sa-volonte-de-participer-a-une-primaire-de-la-droite-189375",
           "archived": "2026-11-23"
+        },
+        {
+          "quote": "Pour la vice-présidente LFI de l'Assemblée nationale, on a le droit d'être islamiste. Mais on ne devrait pas être contre l'invasion migratoire, que tous les Français voient. Chère Madame, choisissez votre camp : la liberté ou la censure. Moi, je suis pour la liberté absolue.",
+          "date": "2026-11-23",
+          "medium": "Il réagit aux propos de la députée LFI Nadège Abomangoli, vice-présidente de l'Assemblée nationale, le 18 novembre 2026 dans l'émission « Sous les radars » : « on a le droit idéologiquement d'être islamiste, on n'a juste pas le droit d'être dangereux et de commettre des attentats » (JDD, 23 novembre 2026). Message sur X (@ZemmourEric), 23 novembre 2026, 15:01, heure de Paris, avec une vidéo ; cité aussi par le JDD. « invasion migratoire » est son expression.",
+          "url": "https://x.com/ZemmourEric/status/2124865874024694043",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Nous supprimerons l'Arcom !",
+          "date": "2026-11-23",
+          "medium": "Message sur X (@ZemmourEric), 23 novembre 2026, 12:34, heure de Paris, avec une vidéo. L'Arcom est l'autorité publique de régulation de l'audiovisuel et du numérique (fiche Arcom).",
+          "url": "https://x.com/ZemmourEric/status/2124828952330187066",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -1564,6 +1684,14 @@
           "date": "2026-11-14",
           "medium": "Message sur X (@eciotti), 14 novembre 2026, 20:31, heure de Paris. Le slogan entre guillemets est celui qu’il dit avoir entendu ; la phrase sur l’immigration est la sienne.",
           "url": "https://x.com/eciotti/status/2121687539006292151",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Les actes antisémites ont triplé en France depuis 2022. Des élèves juifs sont déscolarisés, d'autres retirent la mezouza de leur porte. C'est une honte pour notre pays.",
+          "date": "2026-11-22",
+          "medium": "Message sur X (@eciotti), 22 novembre 2026, 19:12, heure de Paris, avec deux photos. Le chiffre est le sien. Il ajoute, comme maire de Nice : « Nous protégeons nos synagogues, nous effaçons chaque inscription antisémite, et nous faisons vivre la mémoire des Justes. »",
+          "url": "https://x.com/eciotti/status/2124566777950818682",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
         }
@@ -1955,10 +2083,19 @@
           "section": "gaza",
           "archive_url": "https://web.archive.org/web/20261103045125/https://www.huffingtonpost.fr/politique/article/guerre-israel-hamas-apres-les-propos-de-fourest-sur-les-morts-de-gaza-les-deputes-lfi-saisissent-l-arcom_225122.html",
           "archived": "2026-11-03"
+        },
+        {
+          "quote": "Le RN est le seul parti à vouloir faire taire ses détracteurs en les assommant de procès.",
+          "date": "2026-11-24",
+          "medium": "Message sur X (@CarolineFourest), 24 novembre 2026, 07:59, heure de Paris. Elle écrit que Frédéric Chatillon, prestataire du RN, menace de procès Éric Dupond-Moretti, elle-même et un journaliste de Mediapart, et renvoie à un article de Franc-Tireur. C'est son jugement ; la réponse du RN ou de M. Chatillon n'est pas citée ici.",
+          "url": "https://x.com/CarolineFourest/status/2125122118463455627",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
-        "gaza"
+        "gaza",
+        "france"
       ],
       "image": "img/people/caroline-fourest.webp",
       "image_credit": {
@@ -3581,6 +3718,16 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261108191541/https://www.franceinfo.fr/politique/valerie-pecresse/presidentielle-2022-valerie-pecresse-radicalise-son-discours_4961262.html",
           "archived": "2026-11-08"
+        },
+        {
+          "quote": "C'est totalement non",
+          "date": "2026-11-23",
+          "medium": "Projet de primaire de la droite et du centre (novembre 2026) : David Lisnard propose d'y associer Éric Zemmour ; Valérie Pécresse s'y oppose (BFMTV, 23 novembre 2026). BFMTV-RMC, 23 novembre 2026, au sujet d'une primaire de la droite et du centre avec Éric Zemmour. Elle rappelle qu'il a appelé à voter Marine Le Pen en 2022 et ajoute : « Je veux une absence totale de porosité avec les extrêmes ».",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-valerie-pecresse-estime-que-la-primaire-de-la-droite-et-du-centre-est-morte-nee_AN-202611230330.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261124073302/https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-valerie-pecresse-estime-que-la-primaire-de-la-droite-et-du-centre-est-morte-nee_AN-202611230330.html",
+          "archived": "2026-11-24"
         }
       ],
       "sections": [
@@ -4918,6 +5065,16 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261117071710/https://www.franceinfo.fr/elections/marine-le-pen-critiquee-en-plein-debat-de-la-presidentielle-pour-sa-volonte-de-couper-les-subventions-des-associations-politisees_8285558.html",
           "archived": "2026-11-17"
+        },
+        {
+          "quote": "Il y a toute une partie de l'appareil d'État qui est en train de se préparer à l'arrivée au pouvoir de Mme Le Pen.",
+          "date": "2026-11-22",
+          "medium": "Affaire des fuites présumées du ministère de l'Intérieur vers le RN : le parquet de Paris a ouvert fin juillet une information judiciaire pour violation du secret professionnel, violation du secret de l'enquête et recel ; le siège du RN a été perquisitionné le 9 novembre (franceinfo). Le préfet Hugues Moutouh conteste ; selon BFMTV, aucune mise en examen n'est intervenue. franceinfo, Le Grand enjeu, 22 novembre 2026 (retranscription publiée par franceinfo). Il commence par : « Si les faits sont avérés, cette affaire est extrêmement grave », et ajoute : « Vous avez des hauts fonctionnaires qui préparent déjà le terrain pour elle ».",
+          "url": "https://www.franceinfo.fr/replay-magazine/franceinfo/le-grand-enjeu/presidentielle-2027-je-ne-me-resoudrai-jamais-a-ce-que-marine-le-pen-entre-a-l-elysee-lache-raphael-glucksman-candidat-ps-et-place-publique_8295134.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261124073419/https://www.franceinfo.fr/replay-magazine/franceinfo/le-grand-enjeu/presidentielle-2027-je-ne-me-resoudrai-jamais-a-ce-que-marine-le-pen-entre-a-l-elysee-lache-raphael-glucksman-candidat-ps-et-place-publique_8295134.html",
+          "archived": "2026-11-24"
         }
       ],
       "sections": [
@@ -4978,6 +5135,22 @@
           "date": "2026-11-13",
           "medium": "Message sur X (@Fabien_Roussel), 13 novembre 2026, 15:43, heure de Paris. Compte non certifié dans le relevé ; c’est le compte public du secrétaire national du PCF.",
           "url": "https://x.com/Fabien_Roussel/status/2121252617825247563",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Il y a tout juste un mois, un attentat raciste frappait Trappes. Depuis, qu'a fait le gouvernement face au danger de l'extrême droite ? Rien. Rien du tout. Cette tentative de faire oublier ce drame et ses causes fait froid dans le dos.",
+          "date": "2026-11-23",
+          "medium": "Message sur X (@Fabien_Roussel), 23 novembre 2026, 18:41, heure de Paris. L'attentat de Trappes et de La Verrière a eu lieu le 23 octobre 2026 ; la presse le qualifie d'attentat raciste (franceinfo). La réponse du gouvernement n'est pas citée ici.",
+          "url": "https://x.com/Fabien_Roussel/status/2124921318282023202",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Mein Kampf, salut nazi, photo d'enfants nus… Voilà ce que l'on trouve dans des conversations entre élèves officiers de l'école de Police. Heureusement ils ont été dénoncés par des élèves de cette école. Le racisme n'a pas sa place parmi les gardiens de la Paix.",
+          "date": "2026-11-23",
+          "medium": "Message sur X (@Fabien_Roussel), 23 novembre 2026, 08:21, heure de Paris. Selon 20 Minutes (23 novembre 2026), une enquête préliminaire est ouverte à Fontainebleau et confiée à l'IGPN après des révélations sur des propos racistes et un salut nazi à l'École nationale supérieure de police de Cannes-Écluse.",
+          "url": "https://x.com/Fabien_Roussel/status/2124765353595072842",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
         }
@@ -5058,6 +5231,14 @@
           "date": "2026-11-15",
           "medium": "Message sur X (@marinetondelier), 15 novembre 2026, 20:07, heure de Paris. « Elle » désigne, dans son texte, l’extrême droite.",
           "url": "https://x.com/marinetondelier/status/2122043729414357402",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "La droite et l'extrême droite mènent une offensive assumée contre l'État de droit. Les contre-pouvoirs y sont présentés comme des obstacles à la « volonté du peuple ». C'est une bascule autoritaire qui se dessine.",
+          "date": "2026-11-23",
+          "medium": "Message sur X (@marinetondelier), 23 novembre 2026, 19:26, heure de Paris, en présentant le carnet de doctrine des Écologistes « Défendre et étendre l'État de droit ». C'est son jugement ; les réponses de la droite et du RN ne sont pas citées ici.",
+          "url": "https://x.com/marinetondelier/status/2124932626096238956",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
         }
@@ -7294,6 +7475,14 @@
           },
           "archive_url": "https://web.archive.org/web/20261116005233/https://www.bfmtv.com/politique/elections/presidentielle/video-teddy-riner-credite-de-4-5-des-intentions-de-vote-dans-un-sondage-ce-qui-est-tres-inquietant-au-dela-des-personnes-c-est-surtout-que-les-deux-extremes-sont-en-train-d-arriver-au-second-tour-declare-florence-portelli-vice-presidente-des-lr_VN-202611140375.html",
           "archived": "2026-11-16"
+        },
+        {
+          "quote": "C'est scandaleux et fou de proposer d'organiser une primaire de la droite et du centre jusqu'à Éric Zemmour qui défend le programme le plus raciste de l'échiquier politique.",
+          "date": "2026-11-23",
+          "medium": "Projet de primaire de la droite et du centre (novembre 2026) : David Lisnard propose d'y associer Éric Zemmour ; Valérie Pécresse s'y oppose (BFMTV, 23 novembre 2026). Message sur X (@FloPortelli), 23 novembre 2026, 13:36, heure de Paris. C'est son jugement sur le programme d'Éric Zemmour ; la réponse de Reconquête n'est pas citée ici.",
+          "url": "https://x.com/FloPortelli/status/2124844479991689270",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -7454,6 +7643,14 @@
           "url": "https://x.com/MathildePanot/status/2124196732355662032",
           "theme": "Gaza – déclarations",
           "section": "gaza"
+        },
+        {
+          "quote": "Emmanuel Macron, Jean-Noël Barrot : qu'est-ce qu'il vous faut de plus pour sanctionner ? Jusqu'où laisserez-vous aller l'horreur ? Nous exigeons un embargo total sur les armes et l'accès des enquêteurs de l'ONU aux lieux de détention.",
+          "date": "2026-11-23",
+          "medium": "Message sur X (@MathildePanot), 23 novembre 2026, 11:28, heure de Paris. Elle y décrit, « selon le média israélien N12 », les sévices subis par un détenu palestinien, et cite l'ONU sur des « tortures systématiques » et « au moins 98 Palestiniens » morts en détention depuis octobre 2023 ; ce sont les chiffres du message. La réponse du gouvernement n'est pas citée ici.",
+          "url": "https://x.com/MathildePanot/status/2124812448393777604",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
         }
       ],
       "sections": [
@@ -7532,10 +7729,27 @@
           "url": "https://x.com/JulienOdoul/status/2124632436822970683",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "Comparer la Shoah à Gaza avec autant de légèreté ? Six millions de Juifs exterminés par les nazis ! @FraPiquemal et LFI doivent mesurer la gravité de leurs comparaisons historiques.",
+          "date": "2026-11-23",
+          "medium": "Message sur X (@JulienOdoul), 23 novembre 2026, 23:41, heure de Paris, avec l'extrait d'un débat sur BFMTV face au député LFI François Piquemal. C'est sa lecture des propos de son contradicteur, qui ne sont pas cités dans le message.",
+          "url": "https://x.com/JulienOdoul/status/2124996856954372309",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
+        },
+        {
+          "quote": "Examiner les demandes d'asile avant l'entrée sur notre territoire : c'est la réforme proposée par @MLP_officiel pour reprendre le contrôle de nos frontières !",
+          "date": "2026-11-23",
+          "medium": "Message sur X (@JulienOdoul), 23 novembre 2026, 23:57, heure de Paris, avec l'extrait d'un débat sur BFMTV.",
+          "url": "https://x.com/JulienOdoul/status/2125000799915004278",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
-        "france"
+        "france",
+        "gaza"
       ],
       "category": "Responsables politiques",
       "subcategory": "Parlementaires & élus",
@@ -7592,6 +7806,14 @@
           "date": "2026-11-13",
           "medium": "Réponse sur X (@ivanrioufol), 13 novembre 2026, 18:47, heure de Paris. Il dit que des propos lui ont été attribués à tort.",
           "url": "https://x.com/ivanrioufol/status/2121298910794903629",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Renaud Camus, paria des Lettres et des médias, vient de remporter une première victoire. Ses alertes sur « le Grand Remplacement », qualifié de « théorie complotiste d'extrême droite » par les dénégationnistes, viennent d'être avalisées par la gauche danoise modérée.",
+          "date": "2026-11-23",
+          "medium": "Message sur X (@ivanrioufol), 23 novembre 2026, 09:06, heure de Paris, intitulé « Les victoires de l'infréquentable @RenaudCamus », qui reprend un texte de son blog. Il s'appuie sur une phrase de la Première ministre danoise Mette Frederiksen (fiche). « dénégationnistes » est son mot.",
+          "url": "https://x.com/ivanrioufol/status/2124776482878681371",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
         }
@@ -8031,6 +8253,14 @@
           "date": "2026-11-18",
           "medium": "CNews, La Grande Interview, 18 novembre 2026 : la page le présente comme député RN du Nord.",
           "url": "https://www.cnews.fr/france/2026-11-18/je-le-dis-aux-electeurs-de-david-lisnard-bruno-retailleau-et-edouard-philippe",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
+        },
+        {
+          "quote": "Le @RNational_off , premier parti de France en nombre d'adhérents, le premier groupe à l'Assemblée nationale, ne trouve pas de banque dans le pays. M. Mélenchon, lui, n'aura pas de difficultés. C'est un scandale démocratique.",
+          "date": "2026-11-23",
+          "medium": "Message sur X (@sebchenu), 23 novembre 2026, 14:40, heure de Paris, avec une vidéo. Ce sont ses affirmations ; aucune banque n'est nommée et aucune réponse n'est citée ici.",
+          "url": "https://x.com/sebchenu/status/2124860519081521252",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
         }
@@ -8616,6 +8846,15 @@
           "text": "Accusée d'avoir cautionné des écrits antisémites il y a trente ans, elle invoque un climat « tout à fait différent ».",
           "url": "https://www.sudouest.fr/politique/marine-le-pen/laure-lavalette-je-ne-vais-pas-me-justifier-dit-la-deputee-du-rn-accusee-d-avoir-cautionne-des-ecrits-antisemites-durant-ses-etudes-a-bordeaux-31582634.php",
           "source": "Sud Ouest"
+        },
+        {
+          "date": "2026-11-23",
+          "title": "Écrits des années 1990",
+          "text": "Accusée par Les Jours d'avoir cautionné des écrits antisémites dans son syndicat étudiant, elle garde le soutien de Jordan Bardella, qui parle d'« une faute ».",
+          "url": "https://www.bfmtv.com/politique/front-national/ecrits-antisemites-jordan-bardella-reconnait-une-faute-de-laure-lavalette-mais-invoque-une-inattention_AD-202611230926.html",
+          "source": "BFMTV",
+          "archive_url": "https://web.archive.org/web/20261124073039/https://www.bfmtv.com/politique/front-national/ecrits-antisemites-jordan-bardella-reconnait-une-faute-de-laure-lavalette-mais-invoque-une-inattention_AD-202611230926.html",
+          "archived": "2026-11-24"
         }
       ]
     },
@@ -8664,6 +8903,14 @@
           "url": "https://x.com/faureolivier/status/2124136628478169240",
           "theme": "Gaza – déclarations",
           "section": "gaza"
+        },
+        {
+          "quote": "Le bureau national du PS unanime : pas une voix pour David Lisnard à la présidence de l'Association des Maires de France. Pas une voix pour la réincarnation de Milei qui prône la fusion entre la droite ultra libérale et l'extrême droite de Zemmour",
+          "date": "2026-11-23",
+          "medium": "Projet de primaire de la droite et du centre (novembre 2026) : David Lisnard propose d'y associer Éric Zemmour ; Valérie Pécresse s'y oppose (BFMTV, 23 novembre 2026). Message sur X (@faureolivier), 23 novembre 2026, 22:25, heure de Paris, à la veille du congrès des maires de France. C'est son jugement sur David Lisnard ; la réponse de David Lisnard n'est pas citée ici.",
+          "url": "https://x.com/faureolivier/status/2124977592986120564",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -8696,6 +8943,22 @@
           "date": "2026-11-22",
           "medium": "Message sur X (@RimaHas), 22 novembre 2026, 13:02, heure de Paris : début de la liste, qui se poursuit avec des chiffres sur les blessés, l'insécurité alimentaire et les destructions. « génocide » est son mot. Les chiffres sont ceux du message, qui n'en donne pas la source.",
           "url": "https://x.com/RimaHas/status/2124473578150048248",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
+        },
+        {
+          "quote": "Du vol du vol et encore du vol. De la loi israélienne sur la propriété des absents de 1950 à aujourd'hui le colonialisme israélien pille méthodiquement les biens et les propriétés des palestiniens.",
+          "date": "2026-11-24",
+          "medium": "Message sur X (@RimaHas), 24 novembre 2026, 06:38, heure de Paris, version corrigée d'un message publié une minute plus tôt. « colonialisme » est son mot.",
+          "url": "https://x.com/RimaHas/status/2125101607239196936",
+          "theme": "Gaza – déclarations",
+          "section": "gaza"
+        },
+        {
+          "quote": "C'est l'ensemble de l'Etat colonial israélien dans son intégralité qui est fondamentalement, structurellement et historiquement raciste.",
+          "date": "2026-11-23",
+          "medium": "Message sur X (@RimaHas), 23 novembre 2026, 09:10, heure de Paris, en citant une vidéo. C'est son jugement ; aucune réponse israélienne n'est citée ici.",
+          "url": "https://x.com/RimaHas/status/2124777597175533955",
           "theme": "Gaza – déclarations",
           "section": "gaza"
         }
@@ -8795,6 +9058,14 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261123071754/https://www.cnews.fr/france/2026-11-23/si-le-rn-arrive-au-pouvoir-les-gens-dextreme-droite-vont-tuer-des-noirs-et-des",
           "archived": "2026-11-23"
+        },
+        {
+          "quote": "Je vous laisse le naufrage moral. Je suis une des rares à gauche à n'avoir jamais insulté ou caricaturé les électeurs du #RN.",
+          "date": "2026-11-23",
+          "medium": "Message sur X (@RoyalSegolene), 23 novembre 2026, 13:19, heure de Paris, en réponse à Jordan Bardella (voir sa fiche). Début du message. Elle poursuit en dénonçant « la banalisation des discours #racistes », une « #Arcom dépassée et inerte » et la place de la théorie du « grand remplacement » sur CNews, qu'elle relie à l'attentat de Trappes ; ce sont ses affirmations, qu'Onrecord ne reprend pas à son compte.",
+          "url": "https://x.com/RoyalSegolene/status/2124840365018452123",
+          "theme": "Nuance / contexte",
+          "section": "france"
         }
       ],
       "sections": [
@@ -11248,6 +11519,55 @@
       "nature": "ascension",
       "archive_url": "https://web.archive.org/web/20261123072506/https://www.tf1info.fr/politique/elections/presidentielle/en-direct-presidentielle-2027-colere-sociale-son-combat-est-le-mien-l-hommage-appuye-de-glucksmann-a-ruffin-apres-son-retrait-les-dernieres-informations-de-ce-lundi-23-novembre-2026-2477497.html",
       "archived": "2026-11-23"
+    },
+    {
+      "source": "jordan-bardella",
+      "target": "laure-lavalette",
+      "relation": "le 23/11/2026 sur BFMTV, il parle d'« une faute » et lui garde son soutien",
+      "url": "https://www.bfmtv.com/politique/front-national/ecrits-antisemites-jordan-bardella-reconnait-une-faute-de-laure-lavalette-mais-invoque-une-inattention_AD-202611230926.html",
+      "date": "2026-11-23",
+      "section": "france",
+      "nature": "autre",
+      "archive_url": "https://web.archive.org/web/20261124073039/https://www.bfmtv.com/politique/front-national/ecrits-antisemites-jordan-bardella-reconnait-une-faute-de-laure-lavalette-mais-invoque-une-inattention_AD-202611230926.html",
+      "archived": "2026-11-24"
+    },
+    {
+      "source": "valerie-pecresse",
+      "target": "eric-zemmour",
+      "relation": "le 23/11/2026, elle refuse une primaire de la droite et du centre avec lui",
+      "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-valerie-pecresse-estime-que-la-primaire-de-la-droite-et-du-centre-est-morte-nee_AN-202611230330.html",
+      "date": "2026-11-23",
+      "section": "france",
+      "nature": "opposition",
+      "archive_url": "https://web.archive.org/web/20261124073302/https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-2027-valerie-pecresse-estime-que-la-primaire-de-la-droite-et-du-centre-est-morte-nee_AN-202611230330.html",
+      "archived": "2026-11-24"
+    },
+    {
+      "source": "florence-portelli",
+      "target": "eric-zemmour",
+      "relation": "le 23/11/2026, elle juge « scandaleux » de l'associer à une primaire de la droite",
+      "url": "https://x.com/FloPortelli/status/2124844479991689270",
+      "date": "2026-11-23",
+      "section": "france",
+      "nature": "opposition"
+    },
+    {
+      "source": "jordan-bardella",
+      "target": "segolene-royal",
+      "relation": "le 23/11/2026, il critique ses propos sur LCI ; elle lui répond",
+      "url": "https://x.com/J_Bardella/status/2124827436319699309",
+      "date": "2026-11-23",
+      "section": "france",
+      "nature": "autre"
+    },
+    {
+      "source": "ivan-rioufol",
+      "target": "renaud-camus",
+      "relation": "le 23/11/2026, il salue « les victoires » de Renaud Camus sur le « Grand Remplacement »",
+      "url": "https://x.com/ivanrioufol/status/2124776482878681371",
+      "date": "2026-11-23",
+      "section": "france",
+      "nature": "autre"
     }
   ]
 }
