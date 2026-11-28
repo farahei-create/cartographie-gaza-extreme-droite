@@ -6,7 +6,7 @@
       "persons": 94,
       "orgs": 56,
       "edges": 214,
-      "statements": 454,
+      "statements": 457,
       "photos": 45,
       "logos": 21,
       "videos": 28,
@@ -8448,6 +8448,14 @@
           "url": "https://x.com/sebchenu/status/2124860519081521252",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "Il ne s'agit pas de François Paradol, j'ai du mal à croire qu'un seul jour vous ayez été journaliste ! Merci pour ce moment de bêtise insondable",
+          "date": "2026-11-27",
+          "medium": "Le JDD, page du 27 novembre 2026. La phrase est reproduite telle que cette page la publie. La page précise : Plusieurs élus du Rassemblement national ont immédiatement dénoncé la fausse information relayée par Valérie Trierweiler.",
+          "url": "https://www.lejdd.fr/Societe/chant-negationniste-valerie-trierweiler-relaie-une-fake-news-visant-un-proche-de-jordan-bardella-189819",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france"
         }
       ],
       "sections": [
@@ -9235,6 +9243,16 @@
           "url": "https://x.com/Francois_Ruffin/status/2124615432292438516",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "Je dis aux autres faites mieux",
+          "date": "2026-11-27",
+          "medium": "BFMTV, page du 27 novembre 2026. La phrase est reproduite telle que cette page la publie. La page précise : Retrait de sa candidature à l'élection présidentielle",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-programme-de-david-lisnard-sur-la-politique-penale-il-y-a-des-similitudes-qui-prouvent-bien-que-la-droite-et-le-centre-doivent-se-rassembler-lance-jeremie-patrier-leitus-porte-parole-d-edouard-philippe_VN-202611270851.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261128060910/https://www.bfmtv.com/politique/elections/presidentielle/video-programme-de-david-lisnard-sur-la-politique-penale-il-y-a-des-similitudes-qui-prouvent-bien-que-la-droite-et-le-centre-doivent-se-rassembler-lance-jeremie-patrier-leitus-porte-parole-d-edouard-philippe_VN-202611270851.html",
+          "archived": "2026-11-28"
         }
       ],
       "sections": [
@@ -9329,6 +9347,16 @@
           "url": "https://x.com/RoyalSegolene/status/2124840365018452123",
           "theme": "Nuance / contexte",
           "section": "france"
+        },
+        {
+          "quote": "On voit une surenchère entre la droite et l'extrême droite sur les questions d'immigration et de sécurité",
+          "date": "2026-11-28",
+          "medium": "BFMTV, page du 28 novembre 2026. La phrase est reproduite telle que cette page la publie.",
+          "url": "https://www.bfmtv.com/politique/direct-presidentielle-2027-a-bruxelles-emmanuel-macron-tacle-la-drole-d-arrogance-de-marine-le-pen-et-reagit-aux-propos-de-teddy-riner_LN-202611270192.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261128033606/https://www.bfmtv.com/politique/direct-presidentielle-2027-a-bruxelles-emmanuel-macron-tacle-la-drole-d-arrogance-de-marine-le-pen-et-reagit-aux-propos-de-teddy-riner_LN-202611270192.html",
+          "archived": "2026-11-28"
         }
       ],
       "sections": [

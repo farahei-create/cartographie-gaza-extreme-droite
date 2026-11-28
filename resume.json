@@ -120,10 +120,37 @@
           "medium": "franceinfo, page du 27 novembre 2026",
           "url": "https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-place-sous-le-statut-de-temoin-assiste-dans-l-affaire-des-prets-accordes-au-parti-reconquete_8303232.html#xtor=RSS-3-[lestitres]",
           "slot": "matin"
+        },
+        {
+          "person_id": "francois-ruffin",
+          "name": "François Ruffin",
+          "quote": "Je dis aux autres faites mieux",
+          "date": "2026-11-27",
+          "medium": "BFMTV, page du 27 novembre 2026",
+          "url": "https://www.bfmtv.com/politique/elections/presidentielle/video-programme-de-david-lisnard-sur-la-politique-penale-il-y-a-des-similitudes-qui-prouvent-bien-que-la-droite-et-le-centre-doivent-se-rassembler-lance-jeremie-patrier-leitus-porte-parole-d-edouard-philippe_VN-202611270851.html",
+          "slot": "matin"
+        },
+        {
+          "person_id": "sebastien-chenu",
+          "name": "Sébastien Chenu",
+          "quote": "Il ne s'agit pas de François Paradol, j'ai du mal à croire qu'un seul jour vous ayez été journaliste ! Merci pour ce moment de bêtise insondable",
+          "date": "2026-11-27",
+          "medium": "Le JDD, page du 27 novembre 2026",
+          "url": "https://www.lejdd.fr/Societe/chant-negationniste-valerie-trierweiler-relaie-une-fake-news-visant-un-proche-de-jordan-bardella-189819",
+          "slot": "matin"
+        },
+        {
+          "person_id": "segolene-royal",
+          "name": "Ségolène Royal",
+          "quote": "On voit une surenchère entre la droite et l'extrême droite sur les questions d'immigration et de sécurité",
+          "date": "2026-11-28",
+          "medium": "BFMTV, page du 28 novembre 2026",
+          "url": "https://www.bfmtv.com/politique/direct-presidentielle-2027-a-bruxelles-emmanuel-macron-tacle-la-drole-d-arrogance-de-marine-le-pen-et-reagit-aux-propos-de-teddy-riner_LN-202611270192.html",
+          "slot": "matin"
         }
       ],
-      "count": 13,
-      "updated": "2026-11-28T06:50:16+01:00"
+      "count": 16,
+      "updated": "2026-11-28T07:11:58+01:00"
     }
   ]
 }

@@ -4,6 +4,18 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-28 — relevé automatique
+
+Tu pars des flux publics des dernières 48 heures. Tu publies 3 phrases. Pas de photo : monogramme.
+
+- François Ruffin, 27 novembre 2026 : « Je dis aux autres faites mieux » — https://www.bfmtv.com/politique/elections/presidentielle/video-programme-de-david-lisnard-sur-la-politique-penale-il-y-a-des-similitudes-qui-prouvent-bien-que-la-droite-et-le-centre-doivent-se-rassembler-lance-jeremie-patrier-leitus-porte-parole-d-edouard-philippe_VN-202611270851.html
+- Sébastien Chenu, 27 novembre 2026 : « Il ne s'agit pas de François Paradol, j'ai du mal à croire qu'un seul jour vous ayez été journaliste ! Merci pour ce moment de bêtise insondable » — https://www.lejdd.fr/Societe/chant-negationniste-valerie-trierweiler-relaie-une-fake-news-visant-un-proche-de-jordan-bardella-189819
+- Ségolène Royal, 28 novembre 2026 : « On voit une surenchère entre la droite et l'extrême droite sur les questions d'immigration et de sécurité » — https://www.bfmtv.com/politique/direct-presidentielle-2027-a-bruxelles-emmanuel-macron-tacle-la-drole-d-arrogance-de-marine-le-pen-et-reagit-aux-propos-de-teddy-riner_LN-202611270192.html
+
+Écarté, en file d'attente (31) : ce qui n'était pas dans la page mot pour mot, hors date, hors sujet, déjà en ligne, douteux, ou personne non établie. La page admin les montre.
+
+Cache `onrecord-v66`.
+
 ## 2026-11-28 — site autonome, problèmes dans l'admin, résumé du jour (cache `onrecord-v65`)
 
 Tu rends le relevé autonome : déclencheur Vercel Cron matin et soir (workflow_dispatch), IA de secours (`XAI_API_KEY`) en plus de l'IA principale, journal `incidents.json` et catégorie « Problèmes » dans l'admin, plus de fiche créée automatiquement (file d'attente), build qui écarte un élément au lieu de s'arrêter, publication qui ne bloque plus sur les captures de tests. Accueil : « Le résumé du jour » (`resume.json`), seulement les phrases publiées du jour, avec leur source. Détail : `docs/REPRISE.md`, section 10.
