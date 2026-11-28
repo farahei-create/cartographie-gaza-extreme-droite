@@ -308,6 +308,18 @@ Le relevé du matin écrit `tools/auto_published.json`. `auto_content.py` l'appl
 
 ## 10. Automatisation
 
+### Depuis le 28/11 (v65) : site autonome, deux créneaux par jour
+
+- **Déclencheur fiable** : Vercel Cron (`vercel.json`) appelle `/api/cron/releve?slot=matin` à 06:00 UTC (7 h Paris en hiver) et `?slot=soir` à 18:00 UTC (19 h Paris en hiver). Sur le plan Hobby, Vercel peut partir n'importe quand dans l'heure. La fonction `api/cron/releve.js` lance le workflow `daily-update.yml` (workflow_dispatch, entrée `slot`). Variables Vercel : `GITHUB_DISPATCH_TOKEN` (obligatoire, jeton fine-grained limité au dépôt, permission **Actions : Read and write**), `CRON_SECRET` (conseillé).
+- **Secours** : les crons GitHub (05:17 et 09:43 UTC) restent. Ils partent souvent avec des heures de retard ; le créneau se déduit alors de l'heure de Paris (avant 14 h = matin, après = soir). Un créneau déjà couvert ne republie rien (`tools/daily/already_done.py`, sujets « Mise à jour du JJ/MM (matin|soir) : … » ; l'ancien format sans créneau compte comme le matin).
+- **Deux IA** : `GEMINI_API_KEY` (IA principale) puis `XAI_API_KEY` (IA de secours, API xAI, modèle `grok-4.3` sans raisonnement, `XAI_MODEL` pour changer). Une seule clé suffit. Quota, clé refusée ou panne : bascule automatique (`tools/daily/ai.py`).
+- **Problèmes** : `incidents.json` (racine), écrit par le relevé, le build et l'étape finale `if: failure()` du workflow. Page admin, catégorie « Problèmes » : badge, dates à l'heure de Paris, « Marquer comme réglé » (jeton de l'admin, écrit `incidents.json` sur main), et les derniers passages du workflow (API GitHub publique).
+- **Plus de fiche créée automatiquement** : une phrase d'une personne sans fiche part dans la File d'attente (`auto_pending.json`) et dans « Problèmes ». La fiche se crée à la main (Ajouter). `ONRECORD_AUTO_PEOPLE=1` réactive l'ancien comportement.
+- **Build** : `auto_content.py` écarte un élément invalide au lieu d'arrêter le build (noté dans les Problèmes et la file). Les phrases dont la fiche vient d'un module vNN sont appliquées à la fin : **garder `auto_content.apply_deferred(...)` après le dernier module vNN de `build.py`** (panne Manon Aubry du 27/11).
+- **Publication** : les tests remettent les captures suivies (`tests/*.png`) après coup, et `git_publish` met de côté tout fichier non publié avant le `pull --rebase` (panne du 25 au 27/11).
+- **Résumé du jour** : `resume.json` (14 jours), écrit par `git_publish finalize` à partir des seules phrases publiées par le passage (nom de la fiche, citation exacte, date, lien source). Affiché en haut de l'accueil (`#home-day`), « Rien de nouveau aujourd'hui » sinon.
+
+
 Le workflow `.github/workflows/daily-update.yml` (« Relevé du matin ») fait la mise à jour du jour sans personne aux commandes. Il ne part que sur l'horloge, ou quand tu le lances à la main. Un push ordinaire ne le déclenche pas.
 
 ### Heure

@@ -1312,7 +1312,7 @@
       return '<li><a class="latest-it" href="' + ficheHref(x.n) + '#d' + x.i + '">' + avatar(x.n, "av-sm") + '<span class="latest-txt"><span class="latest-who">' + esc(x.n.name) +
         '</span><span class="latest-q">' + quoteHtml(x.s.quote) + '</span><span class="latest-m"><time datetime="' + esc(x.s.date) + '">' + fmtDate(x.s.date) + "</time> · " + esc(x.s.medium) + "</span></span></a></li>";
     }).join("");
-    renderQotd(); renderResume();
+    renderQotd(); renderResume(); renderDaySummary();
     bindSearch($("home-search"), $("home-results"));
     var qotdEl = $("home-qotd");
     if (qotdEl && !qotdEl._bound) {
@@ -1366,6 +1366,59 @@
   }
   window.__renderCard = function (id, i) { var n = byId[id]; return n ? renderCard(n, n.statements[i || 0]) : null; };
   window.__qotd = function (d) { var x = qotdPick(d || parisDay()); return x ? { id: x.n.id, i: x.i } : null; };
+  /* Le résumé du jour : seulement les phrases publiées ce jour-là par le relevé (resume.json).
+     Nom de la fiche, citation exacte (coupure signalée par […]), média, lien source. Aucun commentaire. */
+  var DAY_SUM = null;
+  function parisDay(d) {
+    try { return new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Paris", year: "numeric", month: "2-digit", day: "2-digit" }).format(d || new Date()); } catch (e) { return (d || new Date()).toISOString().slice(0, 10); }
+  }
+  function cutQuote(q, max) {
+    q = String(q || "");
+    if (q.length <= max) return q;
+    var cut = q.slice(0, max);
+    var sp = cut.lastIndexOf(" ");
+    return (sp > max * 0.6 ? cut.slice(0, sp) : cut).replace(/[\s,;:]+$/, "") + " […]";
+  }
+  function daySumItem(it) {
+    var n = (DATA.nodes || []).filter(function (x) { return x.id === it.person_id; })[0];
+    var idx = n ? (n.statements || []).map(function (s) { return s.quote; }).indexOf(it.quote) : -1;
+    var who = n ? '<a class="qotd-who" href="' + ficheHref(n) + (idx >= 0 ? "#d" + idx : "") + '">' + esc(n.name) + "</a>" : "<strong>" + esc(it.name) + "</strong>";
+    var host = "";
+    try { host = new URL(it.url).hostname.replace(/^www\./, ""); } catch (e) {}
+    var src = it.url ? ' <a class="day-src" href="' + esc(it.url) + '" target="_blank" rel="noopener noreferrer">Source' + (host ? " : " + esc(host) : "") + "</a>" : "";
+    return "<li>" + who + ' <span class="day-q">' + quoteHtml(cutQuote(it.quote, 150)) + "</span>" + (it.date ? ' <time datetime="' + esc(it.date) + '">' + fmtDate(it.date) + "</time>" : "") + src + "</li>";
+  }
+  function paintDaySummary() {
+    var el = $("home-day");
+    if (!el || !DAY_SUM) return;
+    var days = (DAY_SUM.days || []).filter(function (d) { return d && d.date && (d.items || []).length; });
+    days.sort(function (a, b) { return b.date.localeCompare(a.date); });
+    var today = parisDay();
+    var cur = days[0] && days[0].date === today ? days[0] : null;
+    var older = days.filter(function (d) { return d !== cur; }).slice(0, 6);
+    var html = '<p class="qotd-k" id="home-day-title">Le résumé du jour · <time datetime="' + today + '">' + fmtDate(today) + "</time></p>";
+    if (cur) {
+      html += '<p class="day-count">' + plural(cur.items.length, "nouvelle déclaration versée", "nouvelles déclarations versées") + " aujourd'hui</p>";
+      html += '<ul class="day-list">' + cur.items.map(daySumItem).join("") + "</ul>";
+    } else {
+      html += '<p class="day-count">Rien de nouveau aujourd\'hui.</p>' + (older[0] ? '<p class="qotd-m">Dernier résumé : <time datetime="' + esc(older[0].date) + '">' + fmtDate(older[0].date) + "</time></p>" : "");
+    }
+    if (older.length) {
+      html += '<details class="day-arch"><summary>Jours précédents</summary>' + older.map(function (d) {
+        return '<p class="day-arch-d"><time datetime="' + esc(d.date) + '">' + fmtDate(d.date) + "</time> · " + plural(d.items.length, "déclaration", "déclarations") + '</p><ul class="day-list">' + d.items.map(daySumItem).join("") + "</ul>";
+      }).join("") + "</details>";
+    }
+    html += '<p class="qotd-m day-note">Phrases relevées automatiquement dans la presse, vérifiées mot pour mot, avec leur source. <a href="#/methode">Méthode</a></p>';
+    el.innerHTML = html;
+    el.hidden = false;
+  }
+  function renderDaySummary() {
+    if (DAY_SUM) { paintDaySummary(); return; }
+    fetch("resume.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+      DAY_SUM = d || { days: [] };
+      paintDaySummary();
+    }).catch(function () { DAY_SUM = { days: [] }; paintDaySummary(); });
+  }
   function renderQotd(x, alt) {
     var el = $("home-qotd"); if (!el) return;
     var day = parisDay();

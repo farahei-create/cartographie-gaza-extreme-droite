@@ -1065,6 +1065,9 @@ v62_content.apply(N, E, _b, _step, _node, L, _st)
 # Rattrapage du 16/11 au soir (jamais poussé), après v62 pour ne pas décaler les pages c/.
 import v63_content
 v63_content.apply(N, E, _b, _step, _node, L, _st)
+# Phrases automatiques dont la fiche vient d'un module vNN ci-dessus (ex. Manon Aubry, v61) :
+# appliquées ici, à la fin. Garder cet appel APRÈS le dernier module vNN.
+auto_content.apply_deferred(N, E, PIMG)
 
 def _nature(e):
     if e.get("nature") in ("ascension","opposition","autre","coulisses"):

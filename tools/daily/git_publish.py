@@ -5,13 +5,16 @@ import os
 import subprocess
 import sys
 
-from tools.daily.store import bump_version, journal_entry, prepend_journal, sync_expect
+from tools.daily import incidents
+from tools.daily.store import bump_version, journal_entry, prepend_journal, sync_expect, write_resume
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 STATE = "/tmp/onrecord-daily-state.json"
 ALLOWED = (
     "tools/auto_published.json",
     "auto_pending.json",
+    "incidents.json",
+    "resume.json",
     "tools/archives.json",
     "data.json",
     "sw.js",
@@ -46,12 +49,16 @@ def finalize():
         return 0
     state = json.loads(open(STATE, encoding="utf-8").read())
     if not state.get("content") and not state.get("pending_changed"):
-        print("Rien à finaliser.")
+        print("Rien à finaliser (journal des problèmes seulement)." if state.get("incidents_changed") else "Rien à finaliser.")
         return 0
     version = ""
     if state.get("content"):
         version = bump_version(ROOT)
         sync_expect(ROOT)
+        try:
+            write_resume(ROOT, state)
+        except Exception as exc:  # le résumé ne bloque jamais la publication
+            incidents.add("resume", "Résumé du jour non écrit", str(exc))
     import datetime
     day = datetime.date.fromisoformat(state["day"])
     entry = journal_entry(day, state.get("published") or [], state.get("pending_count") or 0, version)
@@ -68,7 +75,7 @@ def publish():
         print("Pas d'état : rien à pousser.")
         return 0
     state = json.loads(open(STATE, encoding="utf-8").read())
-    if not state.get("content") and not state.get("pending_changed"):
+    if not state.get("content") and not state.get("pending_changed") and not state.get("incidents_changed"):
         print("Rien à pousser.")
         return 0
     git("config", "user.name", "github-actions[bot]")
@@ -106,27 +113,40 @@ def publish():
     import datetime
     day = datetime.date.fromisoformat(state["day"])
     stamp = day.strftime("%d/%m")
+    if state.get("slot") in ("matin", "soir"):
+        stamp += " (%s)" % state["slot"]
     if state.get("content"):
         message = "Mise à jour du %s : relevé automatique, %d phrase%s" % (
             stamp, state.get("added") or 0, "s" if (state.get("added") or 0) != 1 else "")
-    else:
+    elif state.get("pending_changed"):
         message = "Mise à jour du %s : file d'attente, rien publié" % stamp
+    else:
+        message = "Mise à jour du %s : journal des problèmes" % stamp
     commit = git("commit", "-m", message)
     if commit.returncode != 0:
         print(commit.stderr or commit.stdout)
         return 1
     print(commit.stdout.strip())
-    pull = git("pull", "--rebase", "origin", "main")
-    if pull.returncode != 0:
-        print(pull.stderr or pull.stdout)
-        git("rebase", "--abort")
-        return 1
-    push = git("push", "origin", "HEAD:main")
-    if push.returncode != 0:
-        print(push.stderr or push.stdout)
-        return 1
-    print("Poussé sur main.")
-    return 0
+    # Tout ce qui n'est pas publié (captures de tests, fichiers temporaires) est mis de côté :
+    # un arbre « sale » faisait échouer le pull --rebase (panne du 25 au 27/11).
+    leftovers = git("status", "--porcelain")
+    if (leftovers.stdout or "").strip():
+        print("Mis de côté avant le pull :\n" + leftovers.stdout.strip()[:1500])
+        git("stash", "push", "--include-untracked", "-m", "onrecord-daily-leftovers")
+    for attempt in range(3):
+        pull = git("pull", "--rebase", "origin", "main")
+        if pull.returncode == 0:
+            push = git("push", "origin", "HEAD:main")
+            if push.returncode == 0:
+                print("Poussé sur main.")
+                return 0
+            print(push.stderr or push.stdout)
+        else:
+            print(pull.stderr or pull.stdout)
+            git("rebase", "--abort")
+        import time
+        time.sleep(10 * (attempt + 1))
+    return 1
 
 
 def main(argv):

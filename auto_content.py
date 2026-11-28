@@ -18,18 +18,95 @@ def _path():
     return os.path.join(here, "tools", "auto_published.json")
 
 
-def apply(N, E, PIMG=None):
-    path = _path()
-    if not os.path.exists(path):
+DEFERRED = []
+
+
+def _skip(kind, item, why):
+    """Un élément refusé est écarté et noté ; il n'arrête jamais le build."""
+    who = (item.get("person_id") or item.get("person") or item.get("id") or item.get("source") or "?")
+    quote = (item.get("quote") or item.get("relation") or "")[:200]
+    print("auto_published.json : élément écarté (%s) — %s" % (who, why))
+    try:
+        from tools.daily import incidents
+        if not incidents.enabled():
+            return
+        incidents.add("build_refus", "Phrase écartée à la construction du site (%s)" % who,
+                      "%s. « %s » — %s. Elle n'est pas en ligne ; elle est dans la File d'attente." % (why, quote, item.get("url") or ""),
+                      key="build|" + who + "|" + quote)
+        from tools.daily.store import merge_pending, now_paris
+        import hashlib
+        merge_pending(os.path.dirname(os.path.abspath(__file__)), [{
+            "id": hashlib.sha1(("build|" + who + "|" + quote).encode("utf-8")).hexdigest()[:16],
+            "reason": "écartée au build : " + why[:120],
+            "person": who, "quote": quote, "date": item.get("date") or "", "url": item.get("url") or "",
+        }], now_paris().date())
+    except Exception as exc:
+        print("journal non écrit :", exc)
+
+
+def _filter(data, known, final):
+    """Garde ce qui est valide, élément par élément. Une phrase dont la fiche n'existe
+    pas encore (fiche ajoutée par un module vNN plus loin dans build.py) attend la fin."""
+    out = {"people": [], "statements": [], "edges": [], "photos": []}
+    statements = list(data.get("statements") or [])
+    new_ids = set()
+    for person in data.get("people") or []:
+        pid = (person.get("id") or "").strip()
+        if pid in known:
+            continue  # fiche déjà là (ajoutée ailleurs) : ses phrases restent
+        mine = [s for s in statements if (s.get("person_id") or s.get("person")) == pid]
+        errors = admin_content.validate({"people": [person], "statements": mine, "edges": [], "photos": []}, known | new_ids)
+        if errors:
+            _skip("fiche", person, errors[0])
+            continue
+        out["people"].append(person)
+        new_ids.add(pid)
+    ids = known | new_ids
+    for statement in statements:
+        pid = (statement.get("person_id") or statement.get("person") or "").strip()
+        if statement.get("added") and not final:
+            DEFERRED.append(statement)  # ajout récent : en fin de build (numéros c/ stables)
+            continue
+        if pid not in ids:
+            if not final:
+                DEFERRED.append(statement)
+            else:
+                _skip("phrase", statement, "personne sans fiche dans l'archive (" + pid + ")")
+            continue
+        errors = admin_content.validate({"people": [], "statements": [statement], "edges": [], "photos": []}, ids)
+        if errors:
+            _skip("phrase", statement, errors[0])
+            continue
+        out["statements"].append(statement)
+    for edge in data.get("edges") or []:
+        errors = admin_content.validate({"people": [], "statements": [], "edges": [edge], "photos": []}, ids)
+        if errors:
+            _skip("lien", edge, errors[0])
+            continue
+        out["edges"].append(edge)
+    return out
+
+
+def apply_deferred(N, E, PIMG=None):
+    """À appeler à la fin de build.py, après tous les modules vNN."""
+    if not DEFERRED:
         return
-    with open(path, encoding="utf-8") as handle:
-        data = json.load(handle)
+    pending = list(DEFERRED)
+    del DEFERRED[:]
+    apply(N, E, PIMG, data={"people": [], "statements": pending, "edges": [], "photos": []}, final=True)
+
+
+def apply(N, E, PIMG=None, data=None, final=False):
+    if data is None:
+        path = _path()
+        if not os.path.exists(path):
+            return
+        with open(path, encoding="utf-8") as handle:
+            data = json.load(handle)
     if not any(data.get(key) for key in ("people", "statements", "edges", "photos")):
         return
     known = {n["id"] for n in N}
-    errors = admin_content.validate(data, known)
-    if errors:
-        raise SystemExit("auto_published.json refusé :\n- " + "\n- ".join(errors))
+    data = _filter(data, known, final)
     by = {n["id"]: n for n in N}
     for person in data.get("people") or []:
         pid = person["id"].strip()

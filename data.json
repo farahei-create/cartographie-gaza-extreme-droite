@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generated": "2026-11-24",
-    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-24 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
+    "generated": "2026-11-28",
+    "methodology": "Seules figurent des personnes pour lesquelles au moins une source primaire ou secondaire reconnue a été consultée (citation exacte, date, média, URL). Les citations sont reproduites telles que publiées ; les crochets [ ] signalent une reformulation de contexte par la source ou une coupure. Aucune qualification juridique n'est attribuée aux personnes : le champ « theme » est un simple classement thématique. Les éléments de nuance (rectifications, désaccords, démentis) sont inclus. Chaque URL a été testée le 2026-11-28 (voir sources-check.md). Les dates des messages X sont en UTC. Ce jeu de données ne constitue pas une accusation : il documente des propos publics et des liens publics sourcés. Section « France – normalisation de l'extrême droite » (ajoutée en v4) : propos publics datés et décisions d'institutions (Conseil d'État, Arcom, Conseil constitutionnel) relatifs à la reprise de thèmes ou de termes associés à l'extrême droite et aux liens entre partis, médias et financeurs ; mêmes règles de sourçage, nuances et réponses incluses. Photos : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable (Parlement européen, mention « © European Union »), avec auteur, licence et lien ; logos seulement si Commons l'autorise ; sinon monogramme. Fichiers hébergés dans le dépôt. Vidéos : uniquement des publications du diffuseur d'origine ou d'un compte officiel, vérifiées à la date de mise à jour.",
     "counts": {
       "persons": 94,
       "orgs": 56,
       "edges": 214,
-      "statements": 441,
+      "statements": 454,
       "photos": 45,
       "logos": 21,
       "videos": 28,
@@ -655,6 +655,16 @@
           "url": "https://x.com/MLP_officiel/status/2122291088513962173",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "jamais reçu d'informations confidentielles",
+          "date": "2026-11-25",
+          "medium": "CNews, page du 25 novembre 2026. La phrase est reproduite telle que cette page la publie.",
+          "url": "https://www.cnews.fr/france/2026-11-25/soupcons-de-fuites-vers-le-rn-hugues-moutouh-ete-officiellement-demis-de-ses",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261125194113/https://www.cnews.fr/france/2026-11-25/soupcons-de-fuites-vers-le-rn-hugues-moutouh-ete-officiellement-demis-de-ses",
+          "archived": "2026-11-25"
         }
       ],
       "sections": [
@@ -1070,6 +1080,26 @@
             "archive_url": "https://web.archive.org/web/20261116191106/https://rmc.bfmtv.com/replay-emissions/les-grandes-gueules/video-jordan-bardella-face-aux-gg-16-11_VN-202611160436.html",
             "archived": "2026-11-16"
           }
+        },
+        {
+          "quote": "Je réitère ma contestation formelle des propos que Mediapart, Le Monde et les médias qui relaient ses accusations me prêtent",
+          "date": "2026-11-26",
+          "medium": "Le HuffPost, page du 26 novembre 2026. La phrase est reproduite telle que cette page la publie.",
+          "url": "https://www.huffingtonpost.fr/politique/article/quand-jordan-bardella-jeune-s-en-prenait-a-jean-luc-melenchon-pour-son-soutien-a-israel_365180.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261126153301/https://www.huffingtonpost.fr/politique/article/quand-jordan-bardella-jeune-s-en-prenait-a-jean-luc-melenchon-pour-son-soutien-a-israel_365180.html",
+          "archived": "2026-11-26"
+        },
+        {
+          "quote": "Les éléments qui sont apportés par Le Monde ne sont qu'une copie conforme des éléments développés par Mediapart [...] qui a été décrédibilisé ces dernières semaines par le retrait d'une de leurs sources",
+          "date": "2026-11-27",
+          "medium": "Sud Radio, page du 27 novembre 2026. La phrase est reproduite telle que cette page la publie.",
+          "url": "https://www.sudradio.fr/societe/le-pen-reitere-sa-confiance-a-bardella-apres-de-nouveaux-elements-sur-des-ecrits-antisemites",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261127152415/https://www.sudradio.fr/societe/le-pen-reitere-sa-confiance-a-bardella-apres-de-nouveaux-elements-sur-des-ecrits-antisemites",
+          "archived": "2026-11-27"
         }
       ],
       "sections": [
@@ -1553,6 +1583,16 @@
           "url": "https://x.com/ZemmourEric/status/2124828952330187066",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "C'est elle qui dirige la campagne",
+          "date": "2026-11-27",
+          "medium": "franceinfo, page du 27 novembre 2026. La phrase est reproduite telle que cette page la publie.",
+          "url": "https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-place-sous-le-statut-de-temoin-assiste-dans-l-affaire-des-prets-accordes-au-parti-reconquete_8303232.html#xtor=RSS-3-[lestitres]",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261127150744/https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-place-sous-le-statut-de-temoin-assiste-dans-l-affaire-des-prets-accordes-au-parti-reconquete_8303232.html",
+          "archived": "2026-11-27"
         }
       ],
       "sections": [
@@ -3501,6 +3541,56 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261118083708/https://www.bfmtv.com/politique/elections/presidentielle/gerald-darmanin-estime-que-jean-luc-melenchon-gagnera-face-a-marine-le-pen-en-cas-de-duel-au-second-tour-de-l-election-presidentielle_AD-202611180359.html",
           "archived": "2026-11-18"
+        },
+        {
+          "quote": "J'ai saisi ce matin l'inspection générale de la Justice pour une enquête administrative",
+          "date": "2026-11-25",
+          "medium": "CNews, page du 25 novembre 2026. La phrase est reproduite telle que cette page la publie.",
+          "url": "https://www.cnews.fr/france/2026-11-25/procureur-surpris-au-siege-du-rn-gerald-darmanin-annonce-avoir-saisi-linspection",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261125194038/https://www.cnews.fr/france/2026-11-25/procureur-surpris-au-siege-du-rn-gerald-darmanin-annonce-avoir-saisi-linspection",
+          "archived": "2026-11-25"
+        },
+        {
+          "quote": "Je n'ai aucun élément qui me permet de le dire",
+          "date": "2026-11-25",
+          "medium": "CNews, page du 25 novembre 2026. La phrase est reproduite telle que cette page la publie.",
+          "url": "https://www.cnews.fr/france/2026-11-25/procureur-surpris-au-siege-du-rn-gerald-darmanin-annonce-avoir-saisi-linspection",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261125194038/https://www.cnews.fr/france/2026-11-25/procureur-surpris-au-siege-du-rn-gerald-darmanin-annonce-avoir-saisi-linspection",
+          "archived": "2026-11-25"
+        },
+        {
+          "quote": "On doit lever une ambiguïté : est-ce que des hauts fonctionnaires ont donné des renseignements au Rassemblement national, ce qui serait évidemment un crime contre leur fonction et la haute idée qu'ils se font de leur indépendance?",
+          "date": "2026-11-25",
+          "medium": "CNews, page du 25 novembre 2026. La phrase est reproduite telle que cette page la publie.",
+          "url": "https://www.cnews.fr/france/2026-11-25/procureur-surpris-au-siege-du-rn-gerald-darmanin-annonce-avoir-saisi-linspection",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261125194038/https://www.cnews.fr/france/2026-11-25/procureur-surpris-au-siege-du-rn-gerald-darmanin-annonce-avoir-saisi-linspection",
+          "archived": "2026-11-25"
+        },
+        {
+          "quote": "Ce qui gagne en France, c'est une forme de droite populaire et sociale",
+          "date": "2026-11-27",
+          "medium": "Le Figaro, page du 27 novembre 2026. La phrase est reproduite telle que cette page la publie.",
+          "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-david-lisnard-n-est-plus-dans-mon-espace-politique-declare-gerald-darmanin-20261127",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261127152208/https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-david-lisnard-n-est-plus-dans-mon-espace-politique-declare-gerald-darmanin-20261127",
+          "archived": "2026-11-27"
+        },
+        {
+          "quote": "Un candidat qui, pour moi, ferait une alliance avec l'extrême droite n'est pas dans mon espace politique",
+          "date": "2026-11-27",
+          "medium": "Le Figaro, page du 27 novembre 2026. La phrase est reproduite telle que cette page la publie.",
+          "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-david-lisnard-n-est-plus-dans-mon-espace-politique-declare-gerald-darmanin-20261127",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261127152208/https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-david-lisnard-n-est-plus-dans-mon-espace-politique-declare-gerald-darmanin-20261127",
+          "archived": "2026-11-27"
         }
       ],
       "sections": [
@@ -7940,6 +8030,16 @@
           "url": "https://x.com/mbompard/status/2121983554024362492",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "Ce soir au Vélodrome, un supporter du Levski Sofia a été filmé en train d'effectuer un salut nazi (...) L'extrême droite n'a pas sa place dans nos stades !",
+          "date": "2026-11-27",
+          "medium": "Le HuffPost, page du 27 novembre 2026. La phrase est reproduite telle que cette page la publie.",
+          "url": "https://www.huffingtonpost.fr/sport/article/apres-les-affrontements-qui-ont-emaille-le-match-om-levski-sofia-emmanuel-macron-s-indigne_365477.html",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261127152047/https://www.huffingtonpost.fr/sport/article/apres-les-affrontements-qui-ont-emaille-le-match-om-levski-sofia-emmanuel-macron-s-indigne_365477.html",
+          "archived": "2026-11-27"
         }
       ],
       "sections": [
@@ -8717,6 +8817,16 @@
           "section": "france",
           "archive_url": "https://web.archive.org/web/20261118034052/https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-marine-le-pen-edouard-philippe-emmanuel-macron-ukraine-teddy-riner-20261116",
           "archived": "2026-11-18"
+        },
+        {
+          "quote": "99% de ses propositions viennent du programme de Marine Le Pen",
+          "date": "2026-11-27",
+          "medium": "Europe 1, page du 27 novembre 2026. La phrase est reproduite telle que cette page la publie.",
+          "url": "https://www.europe1.fr/politique/presidentielle-2027-attaque-de-toutes-parts-par-ses-rivaux-le-plus-dur-commence-pour-david-lisnard-1245613?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261128033847/https://www.europe1.fr/politique/presidentielle-2027-attaque-de-toutes-parts-par-ses-rivaux-le-plus-dur-commence-pour-david-lisnard-1245613?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+          "archived": "2026-11-28"
         }
       ],
       "sections": [
@@ -9158,6 +9268,26 @@
           "url": "https://x.com/ManonAubryFr/status/2124457878874681827",
           "theme": "France – normalisation de l'extrême droite",
           "section": "france"
+        },
+        {
+          "quote": "Il est évident, au vu de ces révélations, que ces écrits sont ceux de Jordan Bardella et qu'ils sont absolument graves et ouvertement antisémites",
+          "date": "2026-11-27",
+          "medium": "franceinfo, page du 27 novembre 2026. La phrase est reproduite telle que cette page la publie.",
+          "url": "https://www.franceinfo.fr/politique/jordan-bardella/propos-antisemites-attribues-a-jordan-bardella/ecrits-antisemites-attribues-a-jordan-bardella-on-voit-ici-le-vrai-visage-du-rassemblement-national-selon-l-eurodeputee-lfi-manon-aubry_8302719.html#xtor=RSS-3-%5Bpolitique%5D",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261127191706/https://www.franceinfo.fr/politique/jordan-bardella/propos-antisemites-attribues-a-jordan-bardella/ecrits-antisemites-attribues-a-jordan-bardella-on-voit-ici-le-vrai-visage-du-rassemblement-national-selon-l-eurodeputee-lfi-manon-aubry_8302719.html",
+          "archived": "2026-11-27"
+        },
+        {
+          "quote": "Qui peut être étonné qu'un parti qui a été fondé par des Waffen-SS et par des antisémites soit présidé, aujourd'hui encore, par un antisémite ?",
+          "date": "2026-11-27",
+          "medium": "franceinfo, page du 27 novembre 2026. La phrase est reproduite telle que cette page la publie.",
+          "url": "https://www.franceinfo.fr/politique/jordan-bardella/propos-antisemites-attribues-a-jordan-bardella/ecrits-antisemites-attribues-a-jordan-bardella-on-voit-ici-le-vrai-visage-du-rassemblement-national-selon-l-eurodeputee-lfi-manon-aubry_8302719.html#xtor=RSS-3-%5Bpolitique%5D",
+          "theme": "France – normalisation de l'extrême droite",
+          "section": "france",
+          "archive_url": "https://web.archive.org/web/20261127191706/https://www.franceinfo.fr/politique/jordan-bardella/propos-antisemites-attribues-a-jordan-bardella/ecrits-antisemites-attribues-a-jordan-bardella-on-voit-ici-le-vrai-visage-du-rassemblement-national-selon-l-eurodeputee-lfi-manon-aubry_8302719.html",
+          "archived": "2026-11-27"
         }
       ],
       "sections": [

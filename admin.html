@@ -26,6 +26,8 @@
   }
   h1.page-h{margin:0 0 8px;font-size:1.35rem;font-weight:750}
   .lead,.hint{color:#d8c7ff}
+  /* style.css masque .hint sur mobile (légende du réseau) : pas sur l'admin */
+  body.admin-page .hint{display:block;opacity:1;position:static;max-width:none;padding:0;margin:0 0 1em;background:none;border:0;border-radius:0;-webkit-backdrop-filter:none;backdrop-filter:none;pointer-events:auto;font-size:.92rem;line-height:1.45;color:#d8c7ff}
   .hint{font-size:.92rem}
   .rules,.guide,.card{
     margin:16px 0;padding:14px 14px 6px;border-radius:18px;
@@ -75,13 +77,13 @@
   fieldset{border:0;margin:0;padding:0}
   /* Catégories : un seul bloc affiché à la fois, menu collé en haut */
   .cats{
-    position:sticky;top:0;z-index:20;display:flex;gap:6px;margin:12px -16px 14px;padding:12px 16px 10px;
-    padding-top:calc(12px + env(safe-area-inset-top,0px));overflow-x:auto;-webkit-overflow-scrolling:touch;
+    position:sticky;top:0;z-index:20;display:flex;flex-wrap:wrap;gap:8px 6px;margin:12px -16px 14px;padding:12px 16px 10px;
+    padding-top:calc(12px + env(safe-area-inset-top,0px));
     background:#07030f;border-bottom:1px solid rgba(168,85,247,.35);scrollbar-width:none;
   }
   .cats::-webkit-scrollbar{display:none}
   .cats button{
-    position:relative;flex:1 1 auto;min-height:46px;padding:0 4px;border-radius:12px;border:1px solid rgba(168,85,247,.7);
+    position:relative;flex:1 1 30%;min-height:42px;padding:0 4px;border-radius:12px;border:1px solid rgba(168,85,247,.7);
     background:#1c1230;color:#f7f3ff;font:inherit;font-size:.78rem;font-weight:700;cursor:pointer;white-space:nowrap;
   }
   .cats button[aria-selected="true"]{background:#7c3aed;box-shadow:0 0 16px rgba(124,58,237,.55)}
@@ -114,7 +116,18 @@
     <button type="button" role="tab" data-cat="contributions" aria-selected="false">Contributions<span class="n" id="n-contributions"></span></button>
     <button type="button" role="tab" data-cat="file" aria-selected="false">File d’attente<span class="n" id="n-file"></span></button>
     <button type="button" role="tab" data-cat="versions" aria-selected="false">Versions</button>
+    <button type="button" role="tab" data-cat="problemes" aria-selected="false">Problèmes<span class="n" id="n-problemes"></span></button>
   </nav>
+
+  <section id="problemes" class="card cat-off" data-cat-pane="problemes">
+    <h2>Problèmes du relevé automatique</h2>
+    <p class="hint">Le site se met à jour seul vers 7 h et vers 19 h (Paris). Tout ce qui bloque s'écrit ici : panne, IA indisponible, phrase écartée, personne sans fiche. Rien de tout cela n'est visible sur le site public.</p>
+    <p><button type="button" class="btn ghost" id="pb-refresh">Actualiser</button></p>
+    <p id="pb-status" class="hint" aria-live="polite"></p>
+    <label class="filter">Chercher un problème <input type="search" data-filter="#pb-list" placeholder="Nom, mot…" autocomplete="off"></label>
+    <div id="pb-list">Chargement…</div>
+    <details class="sec"><summary>Derniers passages</summary><div id="pb-runs">Chargement…</div></details>
+  </section>
 
   <section id="versions" class="card cat-off" data-cat-pane="versions">
     <h2>Versions du site</h2>
@@ -303,6 +316,7 @@
 </main>
 <script src="admin.js"></script>
 <script src="admin-contrib.js"></script>
+<script src="admin-problems.js"></script>
 <script src="admin-cats.js"></script>
 </body>
 </html>

@@ -3,6 +3,7 @@
 
 Le modèle propose. Cette étape relit la page déjà téléchargée et écarte.
 """
+import os
 import datetime
 import re
 
@@ -405,6 +406,10 @@ def review_item(raw, page, index, now, accepted_quotes, new_ids, new_people):
             return _pending(page, "mot interdit dans la fiche", person_name, "", iso, detail=(forbidden_hits(role) or forbidden_hits(description) or [""])[0])
         if causal_missing(description, page_text):
             return _pending(page, "lien de causalité absent de la page", person_name, quote, iso)
+        # 28/11 : plus aucune fiche créée automatiquement. La phrase va dans la file
+        # d'attente (page admin) ; la fiche se crée à la main, avec une source vérifiée.
+        if not os.environ.get("ONRECORD_AUTO_PEOPLE"):
+            return _pending(page, PERSON_MISSING, person_name, quote, iso)
         person = {
             "id": pid,
             "name": person_name,
@@ -453,6 +458,9 @@ def review_item(raw, page, index, now, accepted_quotes, new_ids, new_people):
         "statement": statement,
         "label": person_name,
     }
+
+
+PERSON_MISSING = "personne sans fiche dans l'archive : à créer à la main dans l'admin"
 
 
 def review_pages(pages, proposals, index, now):

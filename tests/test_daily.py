@@ -176,7 +176,16 @@ created = review_item(
     raw(person_name="Jeanne Exemple", quote="Il faut réduire les entrées dès cette année, sans autre condition.", public_role="députée"),
     page(new_text), INDEX, NOW, [], set(), {},
 )
-check(created["kind"] == "publish" and created["person"]["id"] == "jeanne-exemple", "nouvelle élue : " + str(created.get("reason") or created.get("kind")))
+# 28/11 : plus de fiche créée automatiquement ; la phrase part en file d'attente.
+from tools.daily.engine import PERSON_MISSING
+check(created["kind"] == "pending" and created["reason"] == PERSON_MISSING and created["person"] == "Jeanne Exemple", "personne sans fiche : file d'attente : " + str(created.get("reason") or created.get("kind")))
+os.environ["ONRECORD_AUTO_PEOPLE"] = "1"
+created = review_item(
+    raw(person_name="Jeanne Exemple", quote="Il faut réduire les entrées dès cette année, sans autre condition.", public_role="députée"),
+    page(new_text), INDEX, NOW, [], set(), {},
+)
+os.environ.pop("ONRECORD_AUTO_PEOPLE", None)
+check(created["kind"] == "publish" and created["person"]["id"] == "jeanne-exemple", "création possible seulement si activée : " + str(created.get("reason") or created.get("kind")))
 check(created["kind"] != "publish" or "image" not in created["person"], "pas de photo inventée")
 
 wiki_batch = ')]}\'\n[["wrb.fr","Fbv4je","[\\"garturlres\\",\\"https://www.lemonde.fr/politique/article/exemple.html\\",1]"]]'
@@ -214,6 +223,7 @@ pending_before = open("auto_pending.json", encoding="utf-8").read()
 data_before = open("data.json", encoding="utf-8").read()
 env = os.environ.copy()
 env.pop("GEMINI_API_KEY", None)
+env.pop("XAI_API_KEY", None)
 env.pop("ONRECORD_AUTO_JSON", None)
 env.pop("ONRECORD_PENDING_JSON", None)
 missing = subprocess.run([sys.executable, "-m", "tools.daily.run"], cwd=ROOT, env=env, capture_output=True, text=True)
@@ -272,7 +282,18 @@ bad_fix["statements"][0]["medium"] = "Un pantin, selon la rédaction du contrôl
 bad_path = os.path.join(tmp, "bad.json")
 json.dump(bad_fix, open(bad_path, "w", encoding="utf-8"))
 bad = subprocess.run([sys.executable, "build.py"], cwd=ROOT, env={**os.environ, "ONRECORD_AUTO_JSON": bad_path, "ONRECORD_DATA_OUT": os.path.join(tmp, "bad-out.json")}, capture_output=True, text=True)
-check(bad.returncode != 0 and "pantin" in (bad.stderr + bad.stdout).lower(), "build refuse un mot interdit")
+# 28/11 : un élément refusé est écarté et noté, le build continue (il ne bloque plus le relevé).
+check(bad.returncode == 0 and "pantin" in (bad.stderr + bad.stdout).lower() and "écarté" in bad.stdout, "build écarte un mot interdit sans s'arrêter")
+if bad.returncode == 0:
+    _bad_out = json.load(open(os.path.join(tmp, "bad-out.json"), encoding="utf-8"))
+    check(not any("pantin" in (s.get("medium") or "").lower() for n in _bad_out["nodes"] for s in n.get("statements") or []), "la phrase refusée n'est pas en ligne")
+# Phrase dont la fiche vient d'un module vNN (Manon Aubry, v61) : appliquée en fin de build.
+late_fix = json.loads(json.dumps(fixture))
+late_fix["statements"][0]["person_id"] = "manon-aubry"
+late_path = os.path.join(tmp, "late.json")
+json.dump(late_fix, open(late_path, "w", encoding="utf-8"))
+late = subprocess.run([sys.executable, "build.py"], cwd=ROOT, env={**os.environ, "ONRECORD_AUTO_JSON": late_path, "ONRECORD_DATA_OUT": os.path.join(tmp, "late-out.json")}, capture_output=True, text=True)
+check(late.returncode == 0 and any(s["quote"] == fixture["statements"][0]["quote"] for n in json.load(open(os.path.join(tmp, "late-out.json"), encoding="utf-8"))["nodes"] if n["id"] == "manon-aubry" for s in n["statements"]), "fiche d'un module vNN : phrase appliquée en fin de build")
 check(open("data.json", encoding="utf-8").read() == data_before, "le build de contrôle n'a pas touché data.json")
 
 # --- 22/11 : extraction, pages bloquées, secours Gemini ---
@@ -312,6 +333,40 @@ try:
 except _g.QuotaError:
     check(True, "429 partout : arrêt")
 
+# --- 28/11 : bascule IA principale -> IA de secours, journal des problèmes ---
+from tools.daily import ai as _ai, incidents as _inc
+_logged = []
+class _P:
+    def __init__(self, behaviour): self.behaviour, self.requests, self.model = behaviour, 0, "m"
+    def extract(self, page, names):
+        self.requests += 1
+        if self.behaviour == "quota": raise _g.QuotaError("quota")
+        if self.behaviour == "key": raise _g.KeyErrorRejected("clé")
+        if self.behaviour == "flaky": raise ValueError("HTTP 503")
+        return [{"ok": 1}]
+_r = _ai.Relecture([("gemini", _P("quota")), ("grok", _P("ok"))], log=lambda *a, **k: _logged.append(a))
+check(_r.extract(_pg, []) == [{"ok": 1}] and "gemini" in _r.dead and _logged, "quota principal : bascule sur le secours, incident noté")
+check(_r.extract(_pg, []) == [{"ok": 1}] and _r.providers[0][1].requests == 1, "principal au quota : plus rappelé")
+_r = _ai.Relecture([("gemini", _P("flaky")), ("grok", _P("ok"))], log=lambda *a, **k: None)
+check(_r.extract(_pg, []) == [{"ok": 1}] and not _r.dead, "panne passagère : page relue par le secours, principal gardé")
+_r = _ai.Relecture([("grok", _P("ok"))], log=lambda *a, **k: None)
+check(_r.extract(_pg, []) == [{"ok": 1}], "une seule clé : elle sert seule")
+_r = _ai.Relecture([("gemini", _P("key")), ("grok", _P("quota"))], log=lambda *a, **k: None)
+try:
+    _r.extract(_pg, []); check(False, "toutes les IA hors service : arrêt")
+except (_g.QuotaError, _g.KeyErrorRejected):
+    check(True, "toutes les IA hors service : arrêt")
+_tmp_inc = os.path.join(tmp, "incidents.json")
+os.environ["ONRECORD_INCIDENTS_JSON"] = _tmp_inc
+_inc.add("workflow", "Panne test", "détail")
+_inc.add("workflow", "Panne test", "détail 2")
+_saved = json.load(open(_tmp_inc, encoding="utf-8"))
+check(len(_saved["items"]) == 1 and _saved["items"][0]["count"] == 2 and _saved["items"][0]["at"].endswith("Z"), "incident non dupliqué, compteur")
+os.environ.pop("ONRECORD_INCIDENTS_JSON", None)
+_blob = open("tools/daily/incidents.py", encoding="utf-8").read() + open("tools/daily/ai.py", encoding="utf-8").read()
+check("Problèmes" in open("admin.html", encoding="utf-8").read() and "incidents.json" in open("admin-problems.js", encoding="utf-8").read(), "catégorie Problèmes sur l'admin")
+check("incidents" not in open("index.html", encoding="utf-8").read(), "pas de lien public vers le journal")
+
 # --- Filet de secours : déjà fait aujourd'hui, Chrome des tests ---
 from tools.daily.already_done import is_daily_update_subject, update_already_done, avant_maj_tag
 from tools.daily.browser import chrome_executable, launch_chromium
@@ -325,6 +380,11 @@ check(not is_daily_update_subject("Mise à jour du 24/11 : liste des versions", 
 check(not is_daily_update_subject("Mise à jour du 24/11 : onglet Condamnations, décisions de justice", day), "changement d'onglet ignoré")
 check(not is_daily_update_subject("Mise à jour du 24/11 : filet de secours du relevé du matin", day), "correctif technique ignoré")
 check(not is_daily_update_subject("Mise à jour du 23/11 : relevé automatique, 2 phrases", day), "jour précédent ignoré")
+check(is_daily_update_subject("Mise à jour du 24/11 (matin) : relevé automatique, 2 phrases", day), "créneau matin")
+check(not is_daily_update_subject("Mise à jour du 24/11 (soir) : relevé automatique, 2 phrases", day), "le soir ne couvre pas le matin")
+check(is_daily_update_subject("Mise à jour du 24/11 (soir) : file d'attente, rien publié", day, "soir"), "créneau soir")
+check(not is_daily_update_subject("Mise à jour du 24/11 : relevé automatique, 6 phrases", day, "soir"), "le matin ne couvre pas le soir")
+check(not is_daily_update_subject("Mise à jour du 24/11 (soir) : journal des problèmes", day, "soir"), "journal des problèmes ignoré")
 check(avant_maj_tag(day) == "version-2026-11-24-avant-maj", "nom du tag avant-maj")
 
 def _git_init(path):

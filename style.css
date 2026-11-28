@@ -2181,3 +2181,15 @@ body[data-view="reseau"] #btn-fs:hover{color:var(--ink)}
 .cond-seg button{flex:1 1 auto;padding:0 8px;white-space:nowrap}
 @media (max-width:360px){ .cond-seg button{padding:0 4px;font-size:12px} }
 @media (max-width:340px){ .tabnav a{font-size:.5rem;letter-spacing:-.03em} }
+
+/* Le résumé du jour (accueil, v65) : mêmes couleurs que la citation du jour */
+.day-sum{margin:0 0 18px}
+.day-sum .day-count{margin:0 0 10px;font-family:var(--font-display);font-size:1.15rem;line-height:1.35}
+.day-sum .day-list{list-style:none;margin:0 0 10px;padding:0;display:flex;flex-direction:column;gap:10px}
+.day-sum .day-list li{font-size:.92rem;line-height:1.45;overflow-wrap:anywhere}
+.day-sum .day-list time{color:var(--muted);font-size:.82rem;margin-left:4px}
+.day-sum .day-src{font-size:.82rem;margin-left:4px;color:var(--accent)}
+.day-sum .day-arch{margin:6px 0 8px}
+.day-sum .day-arch summary{min-height:44px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-weight:650;color:var(--accent)}
+.day-sum .day-arch-d{margin:10px 0 6px;font-size:.8rem;font-weight:650;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.day-sum .day-note{margin:4px 0 0;font-size:.78rem}

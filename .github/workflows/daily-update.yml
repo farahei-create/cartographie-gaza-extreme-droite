@@ -12,6 +12,10 @@ on:
     - cron: "43 9 * * *"
   workflow_dispatch:
     inputs:
+      slot:
+        description: "Créneau : matin ou soir (vide = selon l'heure de Paris)"
+        type: string
+        default: ""
       dry_run:
         description: "À blanc (ne pas pousser)"
         type: boolean
@@ -41,6 +45,8 @@ jobs:
         id: releve
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          ONRECORD_SLOT: ${{ github.event_name == 'workflow_dispatch' && inputs.slot || '' }}
           ONRECORD_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '' }}
         run: python3 -m tools.daily.run
 
@@ -73,6 +79,8 @@ jobs:
 
       - name: Reconstruire data.json
         if: steps.releve.outputs.ready == 'true' && steps.releve.outputs.content == 'true'
+        env:
+          ONRECORD_LOG_INCIDENTS: "1"
         run: python3 build.py
 
       - name: Version, compteurs, journal
@@ -94,3 +102,24 @@ jobs:
       - name: Site en ligne, après le push
         if: steps.releve.outputs.ready == 'true'
         run: python3 -m tools.daily.livecheck postflight
+
+      # Toute panne du workflow est notée dans incidents.json (page admin, catégorie « Problèmes »).
+      - name: Noter la panne pour la page admin
+        if: failure() && !(github.event_name == 'workflow_dispatch' && inputs.dry_run)
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set +e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp incidents.json /tmp/incidents-run.json 2>/dev/null
+          git stash push --include-untracked -m failed-run >/dev/null 2>&1
+          git fetch -q origin main && git checkout -q -B incident origin/main
+          # Garde les problèmes notés pendant ce passage (IA, phrases écartées).
+          [ -s /tmp/incidents-run.json ] && cp /tmp/incidents-run.json incidents.json
+          python3 -m tools.daily.incidents add workflow "Le relevé automatique a échoué" "Une étape du workflow s'est arrêtée avant la publication. Rien n'a été publié pendant ce passage. Détail technique : $RUN_URL"
+          git add incidents.json
+          git commit -q -m "Journal des problèmes : panne du relevé ($(TZ=Europe/Paris date '+%d/%m à %Hh%M'))" || exit 0
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 10; done
+          exit 0
+

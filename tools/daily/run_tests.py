@@ -85,6 +85,23 @@ def main():
             server.kill()
         if created and os.path.islink(link):
             os.unlink(link)
+        restore_screenshots()
+
+
+def restore_screenshots():
+    """Les tests réécrivent des captures suivies par git (tests/*.png…) et en créent à la racine.
+    On les remet en l'état : sinon `git pull --rebase` refuse de publier (panne du 25 au 27/11)."""
+    changed = subprocess.run(["git", "ls-files", "-m", "--", "*.png", "*.jpg", "*.webp"], cwd=ROOT, capture_output=True, text=True).stdout.split()
+    if changed:
+        subprocess.run(["git", "checkout", "--", *changed], cwd=ROOT, check=False)
+    extra = subprocess.run(["git", "ls-files", "--others", "--exclude-standard", "--", "*.png", "shots"], cwd=ROOT, capture_output=True, text=True).stdout.split()
+    for rel in extra:
+        if rel.startswith(("img/", "c/", "icons/")):
+            continue
+        try:
+            os.remove(os.path.join(ROOT, rel))
+        except OSError:
+            pass
 
 
 if __name__ == "__main__":

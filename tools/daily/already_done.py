@@ -18,7 +18,15 @@ def avant_maj_tag(day):
     return "version-%s-avant-maj" % day.isoformat()
 
 
-def is_daily_update_subject(subject, day):
+def slot_prefixes(day, slot="matin"):
+    stamp = day.strftime("%d/%m")
+    if slot == "soir":
+        return ("Mise à jour du %s (soir) :" % stamp,)
+    # Le matin : l'ancien format (sans créneau) compte comme le matin.
+    return ("Mise à jour du %s :" % stamp, "Mise à jour du %s (matin) :" % stamp)
+
+
+def is_daily_update_subject(subject, day, slot="matin"):
     """Un commit de relevé du jour, pas une simple évolution du site.
 
     Exemples retenus :
@@ -30,8 +38,8 @@ def is_daily_update_subject(subject, day):
     de secours technique.
     """
     subject = (subject or "").strip()
-    prefix = "Mise à jour du %s :" % day.strftime("%d/%m")
-    if not subject.startswith(prefix):
+    prefix = next((p for p in slot_prefixes(day, slot) if subject.startswith(p)), None)
+    if not prefix:
         return False
     rest = subject[len(prefix):]
     if "relevé automatique" in rest:
@@ -84,7 +92,7 @@ def _commit_date_paris(stamp):
         return when.astimezone(datetime.timezone(datetime.timedelta(hours=1))).date()
 
 
-def update_already_done(root, day=None, ref=None, fetch=False):
+def update_already_done(root, day=None, ref=None, fetch=False, slot="matin"):
     """Renvoie un dict {done, reason}. done=True si le jour est déjà couvert."""
     day = day or now_paris().date()
     fetch_error = ""
@@ -95,7 +103,7 @@ def update_already_done(root, day=None, ref=None, fetch=False):
     ref = _resolve_ref(root, ref)
     tag = avant_maj_tag(day)
     listed = _git(root, "tag", "-l", tag)
-    if listed.returncode == 0 and listed.stdout.strip() == tag:
+    if slot == "matin" and listed.returncode == 0 and listed.stdout.strip() == tag:
         result = {
             "done": True,
             "reason": "tag %s" % tag,
@@ -122,7 +130,7 @@ def update_already_done(root, day=None, ref=None, fetch=False):
         when = _commit_date_paris(stamp)
         if when != day:
             continue
-        if is_daily_update_subject(subject, day):
+        if is_daily_update_subject(subject, day, slot):
             return {
                 "done": True,
                 "reason": "commit « %s »" % subject,
@@ -135,16 +143,16 @@ def update_already_done(root, day=None, ref=None, fetch=False):
     return result
 
 
-def summary_already_done(hit, day=None):
+def summary_already_done(hit, day=None, slot="matin"):
     day = day or now_paris().date()
-    lines = ["## Relevé du matin", ""]
+    lines = ["## Relevé du %s" % slot, ""]
     if hit.get("done"):
         lines.append(
             "Mise à jour du %s déjà présente sur `main` (%s). "
             "Rien n'est lu, rien n'est écrit, rien n'est poussé. "
             "C'est le filet de secours : la routine de 8 h (Europe/Paris) "
             "ou un précédent passage du workflow a déjà couvert la journée."
-            % (day.strftime("%d/%m"), hit.get("reason") or "déjà fait")
+            % (day.strftime("%d/%m") + " (" + slot + ")", hit.get("reason") or "déjà fait")
         )
     else:
         lines.append("Aucune mise à jour du %s n'a été trouvée sur `main`." % day.strftime("%d/%m"))

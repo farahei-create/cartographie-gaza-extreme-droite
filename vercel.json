@@ -26,6 +26,19 @@
           "value": "noindex, nofollow"
         }
       ]
+    },
+    {
+      "source": "/incidents.json",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
     }
   ],
   "rewrites": [
@@ -38,6 +51,19 @@
     "api/contrib/[action].js": {
       "includeFiles": "{data.json,lib/contrib/disposable_domains.json}",
       "maxDuration": 20
+    },
+    "api/cron/releve.js": {
+      "maxDuration": 15
     }
-  }
+  },
+  "crons": [
+    {
+      "path": "/api/cron/releve?slot=matin",
+      "schedule": "0 6 * * *"
+    },
+    {
+      "path": "/api/cron/releve?slot=soir",
+      "schedule": "0 18 * * *"
+    }
+  ]
 }

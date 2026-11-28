@@ -4,6 +4,10 @@ Les agents complètent ce fichier à chaque publication, en haut de la liste. Un
 
 Les entrées d'avant le 10 novembre 2026 sont reconstituées depuis `git log`. Le détail des phrases est dans `data.json`.
 
+## 2026-11-28 — site autonome, problèmes dans l'admin, résumé du jour (cache `onrecord-v65`)
+
+Tu rends le relevé autonome : déclencheur Vercel Cron matin et soir (workflow_dispatch), IA de secours (`XAI_API_KEY`) en plus de l'IA principale, journal `incidents.json` et catégorie « Problèmes » dans l'admin, plus de fiche créée automatiquement (file d'attente), build qui écarte un élément au lieu de s'arrêter, publication qui ne bloque plus sur les captures de tests. Accueil : « Le résumé du jour » (`resume.json`), seulement les phrases publiées du jour, avec leur source. Détail : `docs/REPRISE.md`, section 10.
+
 ## 2026-11-28 — page admin rangée par catégories (cache `onrecord-v64`)
 
 Tu as demandé que l'admin soit rangée au lieu d'un long défilement. Quatre catégories en haut, collées à l'écran : Ajouter, Contributions, File d'attente, Versions. Un seul bloc affiché à la fois ; choix gardé dans l'adresse (`#versions`). Pastilles de comptage (contributions à traiter, file). Filtres de recherche sur les contributions, la file et les versions ; sections repliables (contributions en attente / signalements / publiées, 5 versions puis « plus anciennes », règles et mode d'emploi). Rien d'autre ne change : mêmes couleurs, mêmes boutons, même publication. Nouveau fichier `admin-cats.js`. `tests/test_v15.py` ouvre désormais `admin.html#versions`.

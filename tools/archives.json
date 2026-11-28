@@ -2008,5 +2008,50 @@
   "archive_url": null,
   "status": "failed",
   "error": "save:HTTP Error 523: UNKNOWN"
+ },
+ "https://www.cnews.fr/france/2026-11-25/procureur-surpris-au-siege-du-rn-gerald-darmanin-annonce-avoir-saisi-linspection": {
+  "archive_url": "https://web.archive.org/web/20261125194038/https://www.cnews.fr/france/2026-11-25/procureur-surpris-au-siege-du-rn-gerald-darmanin-annonce-avoir-saisi-linspection",
+  "archived": "2026-11-25",
+  "status": "existing"
+ },
+ "https://www.cnews.fr/france/2026-11-25/soupcons-de-fuites-vers-le-rn-hugues-moutouh-ete-officiellement-demis-de-ses": {
+  "archive_url": "https://web.archive.org/web/20261125194113/https://www.cnews.fr/france/2026-11-25/soupcons-de-fuites-vers-le-rn-hugues-moutouh-ete-officiellement-demis-de-ses",
+  "archived": "2026-11-25",
+  "status": "existing"
+ },
+ "https://www.europe1.fr/politique/presidentielle-2027-attaque-de-toutes-parts-par-ses-rivaux-le-plus-dur-commence-pour-david-lisnard-1245613?at_medium=RSS%20feeds&at_campaign=Flux%20Generique": {
+  "archive_url": "https://web.archive.org/web/20261128033847/https://www.europe1.fr/politique/presidentielle-2027-attaque-de-toutes-parts-par-ses-rivaux-le-plus-dur-commence-pour-david-lisnard-1245613?at_medium=RSS%20feeds&at_campaign=Flux%20Generique",
+  "archived": "2026-11-28",
+  "status": "existing"
+ },
+ "https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-place-sous-le-statut-de-temoin-assiste-dans-l-affaire-des-prets-accordes-au-parti-reconquete_8303232.html#xtor=RSS-3-[lestitres]": {
+  "archive_url": "https://web.archive.org/web/20261127150744/https://www.franceinfo.fr/politique/eric-zemmour/eric-zemmour-place-sous-le-statut-de-temoin-assiste-dans-l-affaire-des-prets-accordes-au-parti-reconquete_8303232.html",
+  "archived": "2026-11-27",
+  "status": "existing"
+ },
+ "https://www.franceinfo.fr/politique/jordan-bardella/propos-antisemites-attribues-a-jordan-bardella/ecrits-antisemites-attribues-a-jordan-bardella-on-voit-ici-le-vrai-visage-du-rassemblement-national-selon-l-eurodeputee-lfi-manon-aubry_8302719.html#xtor=RSS-3-%5Bpolitique%5D": {
+  "archive_url": "https://web.archive.org/web/20261127191706/https://www.franceinfo.fr/politique/jordan-bardella/propos-antisemites-attribues-a-jordan-bardella/ecrits-antisemites-attribues-a-jordan-bardella-on-voit-ici-le-vrai-visage-du-rassemblement-national-selon-l-eurodeputee-lfi-manon-aubry_8302719.html",
+  "archived": "2026-11-27",
+  "status": "existing"
+ },
+ "https://www.huffingtonpost.fr/politique/article/quand-jordan-bardella-jeune-s-en-prenait-a-jean-luc-melenchon-pour-son-soutien-a-israel_365180.html": {
+  "archive_url": "https://web.archive.org/web/20261126153301/https://www.huffingtonpost.fr/politique/article/quand-jordan-bardella-jeune-s-en-prenait-a-jean-luc-melenchon-pour-son-soutien-a-israel_365180.html",
+  "archived": "2026-11-26",
+  "status": "existing"
+ },
+ "https://www.huffingtonpost.fr/sport/article/apres-les-affrontements-qui-ont-emaille-le-match-om-levski-sofia-emmanuel-macron-s-indigne_365477.html": {
+  "archive_url": "https://web.archive.org/web/20261127152047/https://www.huffingtonpost.fr/sport/article/apres-les-affrontements-qui-ont-emaille-le-match-om-levski-sofia-emmanuel-macron-s-indigne_365477.html",
+  "archived": "2026-11-27",
+  "status": "existing"
+ },
+ "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-david-lisnard-n-est-plus-dans-mon-espace-politique-declare-gerald-darmanin-20261127": {
+  "archive_url": "https://web.archive.org/web/20261127152208/https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-david-lisnard-n-est-plus-dans-mon-espace-politique-declare-gerald-darmanin-20261127",
+  "archived": "2026-11-27",
+  "status": "existing"
+ },
+ "https://www.sudradio.fr/societe/le-pen-reitere-sa-confiance-a-bardella-apres-de-nouveaux-elements-sur-des-ecrits-antisemites": {
+  "archive_url": "https://web.archive.org/web/20261127152415/https://www.sudradio.fr/societe/le-pen-reitere-sa-confiance-a-bardella-apres-de-nouveaux-elements-sur-des-ecrits-antisemites",
+  "archived": "2026-11-27",
+  "status": "existing"
  }
 }

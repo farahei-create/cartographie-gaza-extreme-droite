@@ -83,6 +83,9 @@ def merge_published(root, published, day):
         key = (statement["person_id"], norm_literal(statement["quote"]).lower())
         if key in seen:
             continue
+        # « added » : appliquée en fin de build, après les modules vNN, pour que les
+        # pages de partage c/<id>/<n>.html déjà publiées ne changent pas de numéro.
+        statement = dict(statement, added=day.isoformat())
         data["statements"].append(statement)
         seen.add(key)
         statements_added += 1
@@ -257,3 +260,49 @@ def now_paris():
         return datetime.datetime.now(ZoneInfo("Europe/Paris"))
     except Exception:
         return datetime.datetime.now(datetime.timezone.utc).astimezone(datetime.timezone(datetime.timedelta(hours=1)))
+
+
+RESUME_NOTICE = "Résumé du jour : phrases publiées par le relevé automatique, jour par jour (Europe/Paris). Aucun commentaire : nom, citation exacte, source."
+RESUME_DAYS = 14
+
+
+def write_resume(root, state):
+    """Ajoute les phrases publiées de ce passage au résumé du jour (resume.json).
+
+    Rien d'autre que ce qui vient d'être publié : nom de la fiche, citation exacte,
+    date, média et lien source. Pas de texte généré, pas d'avis.
+    """
+    path = os.path.join(root, "resume.json")
+    data = load_json(path, {"days": []})
+    days = {d.get("date"): d for d in data.get("days") or [] if d.get("date")}
+    try:
+        nodes = {n["id"]: n for n in json.load(open(os.path.join(root, "data.json"), encoding="utf-8")).get("nodes") or []}
+    except (OSError, ValueError):
+        nodes = {}
+    day = state["day"]
+    entry = days.setdefault(day, {"date": day, "items": []})
+    seen = {(i.get("person_id"), i.get("quote")) for i in entry["items"]}
+    for item in state.get("published") or []:
+        st = item.get("statement") or {}
+        pid = st.get("person_id") or ""
+        key = (pid, st.get("quote") or "")
+        if not pid or key in seen:
+            continue
+        node = nodes.get(pid) or {}
+        if node and not any((s.get("quote") or "") == st.get("quote") for s in node.get("statements") or []):
+            continue  # pas dans l'archive publiée : pas dans le résumé
+        seen.add(key)
+        entry["items"].append({
+            "person_id": pid,
+            "name": node.get("name") or item.get("label") or pid,
+            "quote": st.get("quote") or "",
+            "date": st.get("date") or "",
+            "medium": (st.get("medium") or "").split(".")[0][:80],
+            "url": st.get("url") or "",
+            "slot": state.get("slot") or "",
+        })
+    entry["count"] = len(entry["items"])
+    entry["updated"] = now_paris().replace(microsecond=0).isoformat()
+    ordered = sorted((d for d in days.values() if d.get("items")), key=lambda d: d["date"], reverse=True)[:RESUME_DAYS]
+    save_json(path, {"_notice": RESUME_NOTICE, "days": ordered})
+    return entry["count"]

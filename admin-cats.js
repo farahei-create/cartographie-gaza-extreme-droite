@@ -4,7 +4,7 @@
 (function () {
   "use strict";
   var KEY = "onrecord:admin-cat";
-  var CATS = ["ajouter", "contributions", "file", "versions"];
+  var CATS = ["ajouter", "contributions", "file", "versions", "problemes"];
   function $(id) { return document.getElementById(id); }
   function pick(cat) {
     if (CATS.indexOf(cat) < 0) cat = "ajouter";
