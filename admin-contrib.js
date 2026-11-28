@@ -48,25 +48,30 @@
     if (st.mail && !st.from_set) miss.push("MAIL_FROM");
     var html = miss.length ? '<p class="err">Pas encore ouvert au public. Manque dans Vercel : ' + esc(miss.join(", ")) + ". Le mode d'emploi est dans docs/REPRISE.md, section 14.</p>"
       : '<p class="hint">Ouvert au public. Rien ne paraît sans « Publier ».</p>';
-    html += "<h3>En attente (" + (b.pending || []).length + ")</h3>";
+    html += '<details class="sec" open><summary>En attente (' + (b.pending || []).length + ")</summary>";
     html += (b.pending || []).map(function (p) {
       return '<div class="pv"><p class="k">' + who(p.person) + "</p><h3>" + esc(p.title) + "</h3>" +
         "<p class=\"hint\">Par <strong>" + esc(p.pseudo) + "</strong> · " + esc(p.email || "e-mail illisible") + " · déposé le " + esc(when(p.submitted)) + (p.event_date ? " · faits du " + esc(p.event_date) : "") + "</p>" +
         flags(p.flags) + "<blockquote>" + esc(p.text).replace(/\n/g, "<br>") + "</blockquote>" + links(p.links) + media(p.media) +
         '<p><button type="button" data-op="approve" data-id="' + esc(p.id) + '">Publier</button> <button type="button" data-op="reject" data-id="' + esc(p.id) + '">Refuser et effacer</button></p></div>';
     }).join("") || '<p class="hint">Rien en attente.</p>';
-    html += "<h3>Signalements (" + (b.reports || []).length + ")</h3>";
+    html += "</details>";
+    html += '<details class="sec"' + ((b.reports || []).length ? " open" : "") + "><summary>Signalements (" + (b.reports || []).length + ")</summary>";
     html += (b.reports || []).map(function (r) {
       return '<div class="pv"><p class="k">' + esc(r.kind) + " · " + esc(when(r.at)) + "</p><p>" + esc(r.reason) + "</p>" +
         (r.contact ? '<p class="hint">Contact : ' + esc(r.contact) + "</p>" : "") + '<p class="hint">Contribution <code>' + esc(r.id) + "</code></p>" +
         '<p><button type="button" data-op="unpublish" data-id="' + esc(r.id) + '">Retirer la contribution</button> <button type="button" data-op="dismiss" data-rid="' + esc(r.rid) + '">Classer</button></p></div>';
     }).join("") || '<p class="hint">Aucun signalement.</p>';
-    html += "<h3>Publiées (" + (b.published || []).length + ")</h3>";
+    html += "</details>";
+    html += '<details class="sec"><summary>Publiées (' + (b.published || []).length + ")</summary>";
     html += (b.published || []).map(function (p) {
       return '<div class="pv"><p class="k">' + who(p.person) + "</p><h3>" + esc(p.title) + '</h3><p class="hint">' + esc(p.pseudo) + " · " + esc(when(p.submitted)) + " · <code>" + esc(p.id) + "</code></p>" +
         '<p><button type="button" data-op="unpublish" data-id="' + esc(p.id) + '">Retirer</button></p></div>';
     }).join("") || '<p class="hint">Aucune contribution publiée.</p>';
+    html += "</details>";
     box.innerHTML = html;
+    var badge = $("n-contributions");
+    if (badge) badge.textContent = ((b.pending || []).length + (b.reports || []).length) || "";
   }
   function load() {
     var box = $("ctb-admin-list"), msg = $("ctb-admin-status");

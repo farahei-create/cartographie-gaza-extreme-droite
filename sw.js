@@ -3,10 +3,10 @@
    - pages (navigation) : réseau d'abord, index.html en cache en secours ;
    - autres fichiers du site : cache, puis mise à jour en arrière-plan.
    Les requêtes vers d'autres domaines (sources, YouTube, archives) ne sont pas interceptées. */
-var VERSION = "onrecord-v63";
+var VERSION = "onrecord-v64";
 var SHELL = [
   "./", "index.html", "style.css", "app.js", "contrib.js", "config.js", "data.json", "condamnations.json", "versions.json", "manifest.webmanifest",
-  "admin.html", "admin.js", "robots.txt",
+  "admin.html", "admin.js", "admin-contrib.js", "admin-cats.js", "robots.txt",
   "fonts/anton-latin.woff2",
   "vendor/vis-network.min.js",
   /* vendor/reseau3d.js est chargé seulement si la vue 3D est activée, puis mis en cache par le fetch */

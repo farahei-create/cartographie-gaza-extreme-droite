@@ -73,7 +73,34 @@
   #pub-status{font-weight:650}
   #pending-list, #pending-list a{overflow-wrap:anywhere}
   fieldset{border:0;margin:0;padding:0}
-  [hidden]{display:none !important}
+  /* Catégories : un seul bloc affiché à la fois, menu collé en haut */
+  .cats{
+    position:sticky;top:0;z-index:20;display:flex;gap:6px;margin:12px -16px 14px;padding:12px 16px 10px;
+    padding-top:calc(12px + env(safe-area-inset-top,0px));overflow-x:auto;-webkit-overflow-scrolling:touch;
+    background:#07030f;border-bottom:1px solid rgba(168,85,247,.35);scrollbar-width:none;
+  }
+  .cats::-webkit-scrollbar{display:none}
+  .cats button{
+    position:relative;flex:1 1 auto;min-height:46px;padding:0 4px;border-radius:12px;border:1px solid rgba(168,85,247,.7);
+    background:#1c1230;color:#f7f3ff;font:inherit;font-size:.78rem;font-weight:700;cursor:pointer;white-space:nowrap;
+  }
+  .cats button[aria-selected="true"]{background:#7c3aed;box-shadow:0 0 16px rgba(124,58,237,.55)}
+  .cats .n{position:absolute;top:-7px;right:-3px;min-width:1.3em;padding:1px 5px;border-radius:999px;background:#c084fc;color:#07030f;font-size:.72rem;font-weight:800;line-height:1.3;text-align:center}
+  .cats .n:empty{display:none}
+  .filter{margin:0 0 12px}
+  details.sec{margin:0 0 12px;border-radius:16px;border:1px solid rgba(168,85,247,.45);background:rgba(18,8,28,.6);padding:0 12px}
+  details.sec>summary{font-size:1rem;min-height:48px;display:flex;align-items:center;font-weight:750;cursor:pointer;list-style:none}
+  details.sec>summary::-webkit-details-marker{display:none}
+  details.sec>summary::after{content:"+";margin-left:auto;color:#c084fc;font-size:1.3rem}
+  details.sec[open]>summary::after{content:"–"}
+  details.sec>:not(summary){margin-top:0}
+  details.pv-fold{padding:0 12px}
+  details.pv-fold>summary{min-height:52px;padding:8px 0;display:flex;flex-direction:column;justify-content:center;gap:2px;cursor:pointer;list-style:none}
+  details.pv-fold>summary::-webkit-details-marker{display:none}
+  details.pv-fold>summary strong{font-size:1rem;font-weight:750}
+  details.pv-fold>summary::after{content:none}
+  details.pv-fold[open]{padding-bottom:6px}
+  [hidden],.cat-off{display:none !important}
 </style>
 </head>
 <body class="admin-page" id="admin-app">
@@ -82,35 +109,47 @@
   <h1 class="page-h">Mise à jour</h1>
   <p class="lead">Cette page n’est pas liée depuis le site. Le jeton reste sur cet appareil et ne part que vers api.github.com.</p>
 
-  <section id="versions" class="card">
+  <nav class="cats" id="cats" role="tablist" aria-label="Catégories">
+    <button type="button" role="tab" data-cat="ajouter" aria-selected="true">Ajouter</button>
+    <button type="button" role="tab" data-cat="contributions" aria-selected="false">Contributions<span class="n" id="n-contributions"></span></button>
+    <button type="button" role="tab" data-cat="file" aria-selected="false">File d’attente<span class="n" id="n-file"></span></button>
+    <button type="button" role="tab" data-cat="versions" aria-selected="false">Versions</button>
+  </nav>
+
+  <section id="versions" class="card cat-off" data-cat-pane="versions">
     <h2>Versions du site</h2>
     <p class="hint">Une version est une copie datée du site. Tu peux y revenir plus tard. Rien n’est effacé de l’historique : un retour peut lui-même être annulé.</p>
+    <details class="sec"><summary>Comment faire ?</summary>
     <ol>
       <li>Choisis « Enregistrer la version actuelle », ou « Revenir à cette version ». Pour un retour, le nom est copié.</li>
       <li>La page GitHub s’ouvre. Connecte-toi si on te le demande. Clique <strong>Run workflow</strong>. Pour un retour, colle le nom dans Version et écris <strong>REVENIR</strong>.</li>
       <li>Attends environ une minute. Le site se met à jour tout seul.</li>
     </ol>
     <p class="hint">Un retour remet les pages et les citations à cette version, y compris celles du relevé automatique. Elles ne reviennent pas toutes seules, sauf si le relevé du lendemain les retrouve encore dans les 48 heures. La file d’attente, elle, est gardée. Juste avant le retour, l’état actuel est enregistré.</p>
+    </details>
     <p><a class="btn" href="https://github.com/farahei-create/cartographie-gaza-extreme-droite/actions/workflows/enregistrer-version.yml">Enregistrer la version actuelle</a></p>
+    <label class="filter">Chercher une version <input type="search" data-filter="#version-list" placeholder="Date ou nom" autocomplete="off"></label>
     <div id="version-list">Chargement…</div>
     <p id="version-status" class="hint"></p>
   </section>
 
-  <section id="pending-queue" class="card">
+  <section id="pending-queue" class="card cat-off" data-cat-pane="file">
     <h2>File d’attente du matin</h2>
     <p class="hint">Ce que le relevé automatique n’a pas publié. Ce n’est pas dans l’archive. Une phrase n’y entre que pour être relue.</p>
+    <label class="filter">Chercher dans la file <input type="search" data-filter="#pending-list" placeholder="Nom, mot de la citation…" autocomplete="off"></label>
     <div id="pending-list">Chargement…</div>
   </section>
 
-  <section id="ctb-admin" class="card">
+  <section id="ctb-admin" class="card cat-off" data-cat-pane="contributions">
     <h2>Contributions des lecteurs</h2>
     <p class="hint">Rien ne paraît sans « Publier ». La page utilise le jeton GitHub enregistré plus bas ; le serveur vérifie qu'il ouvre le dépôt en écriture.</p>
     <p><button type="button" class="btn ghost" id="ctb-admin-refresh">Actualiser</button></p>
     <p id="ctb-admin-status" class="hint" aria-live="polite"></p>
+    <label class="filter">Chercher une contribution <input type="search" data-filter="#ctb-admin-list" placeholder="Nom, titre, pseudo…" autocomplete="off"></label>
     <div id="ctb-admin-list">Chargement…</div>
   </section>
 
-  <section id="gate">
+  <section id="gate" data-cat-pane="ajouter">
     <div class="guide">
       <h2>Créer le jeton GitHub</h2>
       <ol>
@@ -131,8 +170,9 @@
     <button type="button" class="btn" id="btn-login">Enregistrer sur cet appareil</button>
   </section>
 
-  <section id="workspace" hidden>
+  <section id="workspace" data-cat-pane="ajouter" hidden>
     <p><button type="button" class="btn ghost" id="btn-logout">Se déconnecter</button></p>
+    <details class="sec rules-box"><summary>Règles à relire avant d’ajouter</summary>
     <div class="rules">
       <h2>Règles</h2>
       <ul>
@@ -145,6 +185,7 @@
         <li>Photo : Wikimedia Commons (CC BY, CC BY-SA, CC0, domaine public) ou portrait officiel réutilisable, avec auteur, licence et lien. Sinon, laisse la photo vide : le monogramme s’affiche.</li>
       </ul>
     </div>
+    </details>
 
     <div class="tabs" role="tablist">
       <button type="button" role="tab" data-tab="person" aria-selected="true">Personne</button>
@@ -262,5 +303,6 @@
 </main>
 <script src="admin.js"></script>
 <script src="admin-contrib.js"></script>
+<script src="admin-cats.js"></script>
 </body>
 </html>
