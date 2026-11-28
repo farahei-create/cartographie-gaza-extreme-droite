@@ -1399,7 +1399,8 @@
     var html = '<p class="qotd-k" id="home-day-title">Le résumé du jour · <time datetime="' + today + '">' + fmtDate(today) + "</time></p>";
     if (cur) {
       html += '<p class="day-count">' + plural(cur.items.length, "nouvelle déclaration versée", "nouvelles déclarations versées") + " aujourd'hui</p>";
-      html += '<ul class="day-list">' + cur.items.map(daySumItem).join("") + "</ul>";
+      html += '<ul class="day-list">' + cur.items.slice(0, 5).map(daySumItem).join("") + "</ul>";
+      if (cur.items.length > 5) html += '<details class="day-arch"><summary>Voir les ' + (cur.items.length - 5) + " autres</summary>" + '<ul class="day-list">' + cur.items.slice(5).map(daySumItem).join("") + "</ul></details>";
     } else {
       html += '<p class="day-count">Rien de nouveau aujourd\'hui.</p>' + (older[0] ? '<p class="qotd-m">Dernier résumé : <time datetime="' + esc(older[0].date) + '">' + fmtDate(older[0].date) + "</time></p>" : "");
     }
